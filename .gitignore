@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Media & miner outputs (large, regenerable)
+*.mp4
+*.mkv
+*.mov
+*.webm
+*_out/
+out/
+frames/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Runner pilot data (student sessions)
+runner/data/
+.pytest_cache/

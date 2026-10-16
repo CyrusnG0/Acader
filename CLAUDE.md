@@ -66,7 +66,7 @@ These come from proposal §3, §8 and §11. Breaking one means building a differ
 
 ## 5. Current focus
 
-**Phase 1: CS viva-coach MVP (module M8, with M7 underneath it).** Acceptance criterion: *one real course assignment completed end-to-end by non-founders.* See [design/code-track-mvp.md](design/code-track-mvp.md) and [docs/STATUS.md](docs/STATUS.md) for the immediate next step.
+**Concierge viva pilot (Approach A), not the full Phase 1 build.** Interview ~5 CS instructors, hand-run one line-level viva on a real assignment, then build only a thin async viva runner. The blind comparison (graph stand-in vs raw pasted notes) tests whether the course graph is a real differentiator. Source: [docs/designs/concierge-viva-pilot.md](docs/designs/concierge-viva-pilot.md) (APPROVED 2026-10-12) and D-011 to D-014 in [docs/DECISIONS.md](docs/DECISIONS.md). The full code track in [design/code-track-mvp.md](design/code-track-mvp.md) is the destination if the pilot succeeds, not the next build. See [docs/STATUS.md](docs/STATUS.md) for the immediate next action.
 
 ## 6. Session protocol (how to leave the repo for the next agent)
 
