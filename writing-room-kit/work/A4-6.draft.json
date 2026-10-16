@@ -1,0 +1,81 @@
+{
+ "version": "0.1",
+ "session_id": "A4-6",
+ "created": "2026-10-16T03:48:58.273Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "What did the 2021 tenancy control ordinance do and not do?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "Did SDU stock shrink after the ordinance?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does research say about supply elasticity under rent caps?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What do tenants themselves say about a cap?",
+   "mark": "MISS",
+   "ts": 6
+  },
+  {
+   "text": "What do landlords say they would do if rents are capped?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What are the legal risks of a hard cap?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "Can the government enforce a tighter cap?",
+   "mark": "MISS",
+   "ts": 9
+  },
+  {
+   "text": "What do NGOs say tenants most need?",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "What is the government likely to propose next?",
+   "mark": "MISS",
+   "ts": 11
+  },
+  {
+   "text": "tenant interview rent cap landlords enforcement compensation",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p3",
+  "D1p4",
+  "D6p1",
+  "D7p1",
+  "D1p3",
+  "D10p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

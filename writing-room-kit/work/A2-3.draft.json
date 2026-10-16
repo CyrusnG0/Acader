@@ -1,0 +1,39 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:23.488Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What is the scale of subdivided housing and who lives in it?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "Does rent control shrink the stock of marginal housing?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What would a tightened cap mean for tenants and enforcement?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does the economic research say about how much stock a hard cap removes?",
+   "mark": "FACT",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p4",
+  "D1p4",
+  "D1p4"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

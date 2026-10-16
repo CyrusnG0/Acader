@@ -1,0 +1,80 @@
+{
+ "version": "0.1",
+ "session_id": "A4-1",
+ "created": "2026-10-16T03:48:51.560Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "subdivided units households",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "what happens to housing stock when rent is capped",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "tenants view on a rent cap",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "landlords exit the market",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Berlin rent cap outcome",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "enforcement and inspection capacity",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "legal risk compensation property rights",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "public housing waiting list queue",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "New York rent stabilisation",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "2021 tenancy control ordinance effect on stock",
+   "mark": "FACT",
+   "ts": 11
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p4",
+  "D1p1",
+  "D1p4",
+  "D7p1",
+  "D11p2",
+  "D9p1",
+  "D1p2",
+  "D8p1",
+  "D2p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

@@ -1,0 +1,96 @@
+{
+ "version": "0.1",
+ "session_id": "ex-hybrid",
+ "created": "2026-10-16T09:00:00Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Start: tighten, hard cap seems humane. After D6: hard caps contract bottom stock - maybe band instead? After D10: enforcement misses newest arrivals, the people the cap is FOR. Position settling: tenure security + light band, not hard cap.",
+ "essay": "Hong Kong faces a severe housing affordability crisis, and subdivided units represent the most visible symptom of this crisis. Rent control is a well-established policy tool used around the world to protect vulnerable tenants from exploitation. A comprehensive tightening of rent regulation on subdivided units would provide immediate relief to over one hundred thousand households, giving them greater financial security and dignity. International experience, from Berlin to New York, demonstrates that thoughtfully designed rent regulation can balance tenant protection with market stability. Critics argue that rent controls reduce housing supply, but modern second-generation policies avoid the mistakes of older first-generation schemes. With proper design, enforcement, and political will, Hong Kong can ensure that no family is forced to live in inhumane conditions while landlords extract excessive profits. The government should act decisively: cap initial rents, strengthen enforcement, and expand support for low-income tenants. Economic evidence shows that well-designed intervention improves welfare for the majority. In conclusion, tightening rent control on subdivided units is both morally necessary and economically sound, and Hong Kong should implement it without further delay.",
+ "queries": [
+  {
+   "text": "what is the per square foot premium for SDU tenants",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "does the 2021 tenancy control ordinance cap initial rents",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "what happens to supply under a hard cap on rent levels",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "supply elasticity evidence in marginal housing stock",
+   "mark": "DEEP",
+   "ts": 4
+  },
+  {
+   "text": "what happened to Berlin listings after the Mietendeckel",
+   "mark": "DEEP",
+   "ts": 5
+  },
+  {
+   "text": "why does enforcement miss the newest arrivals under complaint-driven design",
+   "mark": "DEEP",
+   "ts": 6
+  },
+  {
+   "text": "what would tenants trade rent increases for",
+   "mark": "FACT",
+   "ts": 7
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D6p1",
+  "D6p4",
+  "D7p2",
+  "D8p3",
+  "D10p2",
+  "D10p3",
+  "D11p1",
+  "D2p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p1",
+   "pos": 280
+  },
+  {
+   "passage": "D6p1",
+   "pos": 520
+  },
+  {
+   "passage": "D6p4",
+   "pos": 640
+  },
+  {
+   "passage": "D7p2",
+   "pos": 810
+  },
+  {
+   "passage": "D8p3",
+   "pos": 950
+  },
+  {
+   "passage": "D10p2",
+   "pos": 1120
+  },
+  {
+   "passage": "D10p3",
+   "pos": 1300
+  },
+  {
+   "passage": "D11p1",
+   "pos": 1420
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1560
+  }
+ ],
+ "pasteChars": 2200,
+ "editBursts": 2
+}

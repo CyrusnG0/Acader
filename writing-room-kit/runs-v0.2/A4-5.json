@@ -1,0 +1,106 @@
+{
+ "version": "0.1",
+ "session_id": "A4-5",
+ "created": "2026-10-16T03:48:52.009Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Retrieved evidence on supply, legal, comparative cases.",
+ "essay": "**Tightening Rent Control on Subdivided Units: A Case for Moderation**\n\nHong Kong's 110,000 subdivided unit (SDU) households inhabit the sharpest edge of the city's housing crisis. Carved from larger flats into cubicles with shared facilities, SDUs command rents roughly 30 percent below mainstream private flats in absolute terms—yet 15 to 25 percent *above* them per square foot. [D1p1] Tenants pay this premium not for quality but for desperation: space is priced at its most desperate margin. The question of whether to tighten rent control on this segment is therefore not abstract. It is a question about whether regulation can relieve that desperation without destroying the shelter it depends on. The stock data offer the first clue. SDU numbers rose steadily from 100,800 in 2019 to an estimated 111,200 in 2025—growth that continued straight through the Tenancy Control Ordinance of 2021. [D2p1] That ordinance capped increases within existing tenancies but left initial rents unregulated, and it excluded SDUs with co-living services from key provisions. [D1p3] Moderate regulation, in other words, did not trigger visible stock exit. This is meaningful evidence: the SDU market did not punish the 2021 intervention with the contraction that hard-cap skeptics predict. But it is also limited evidence, because the 2021 ordinance never touched the actual pain point. The initial rent—the number a tenant confronts when signing a lease—remained free. Berlin shows what happens when that number is touched directly. The 2020 rent cap covered roughly 1.5 million flats and sharply reduced reported initial-offer rents for new listings. Within a year, classified-listing supply contracted measurably as owners withheld units or rerouted them to uncontrolled segments. [D7p1] The mechanism is standard rent economics: cap the initial rent below market-clearing level, and some landlords exit, convert, or wait. Whether that shrinkage helps or harms tenants depends on supply elasticity, enforcement capacity, and—crucially—what happens to households if units disappear. In a market where the alternative to an SDU is often homelessness or an overcrowded flat share, stock loss is not a theoretical cost. Hong Kong also faces a legal constraint Berlin did not. A hard cap on initial SDU rents would almost certainly attract compensation claims under the Basic Law's protection of property rights if framed as deprivation of a rental income stream. [D9p1] A cap framed as contractual-term regulation—the 2021 model—sits on firmer legal ground but leaves the initial rent unregulated. New York's long experience points to a middle path: a second-generation scheme, now covering about 44 percent of rental stock, caps increases within tenancies while regulating initial rents and vacancy only lightly. [D8p1] It is imperfect, but it has survived nearly eight decades without collapsing its stock. The evidence therefore supports a narrow tightening rather than a hard cap. Tenure security should be strengthened—longer minimum terms, tighter limits on eviction and re-entry—because stability is the benefit tenants value most and the one least likely to shrink supply. On initial rents, a light band rather than a ceiling is defensible: a cap on how far the first rent may exceed the median for comparable units, enforced through a registry, would target the worst outliers without repricing the entire segment below market. This approach respects the D6-type contraction arithmetic, which warns that aggressive initial-rent caps invite exit, while addressing the revealed preference of tenants themselves, who in survey after survey prioritize security and predictability over nominal price cuts that may cost them their homes. The case against doing nothing is strong: per-square-foot premiums of 15 to 25 percent in the city's most desperate segment are not a market functioning well. The case against a hard cap is equally strong: Berlin's contraction and Hong Kong's own legal exposure warn against overreach. The responsible answer is a calibrated tightening—tenure security plus a light band on initial rents—that relieves tenant pain without giving landlords a reason to take their units off the market. In a housing system this strained, the goal is not to win the argument between tenants and landlords. It is to keep the units standing.",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "What does rent control do to the supply of subdivided units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "Did the 2021 tenancy control ordinance reduce the stock of units?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What do landlords say they will do if rents are capped?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What do tenants themselves say they need most?",
+   "mark": "MISS",
+   "ts": 6
+  },
+  {
+   "text": "Would a cap on initial rent face legal challenge or compensation claims?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "Could the government enforce a tightened cap?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "What happened in New York with rent stabilisation?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What is the net effect on tenants of a 15 percent cut in initial rents?",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "What alternatives to a hard cap exist, like a rent band or tenure security?",
+   "mark": "FACT",
+   "ts": 11
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D1p3",
+  "D7p1",
+  "D9p1",
+  "D8p1",
+  "D1p4",
+  "D11p3"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p1",
+   "pos": 382
+  },
+  {
+   "passage": "D2p1",
+   "pos": 899
+  },
+  {
+   "passage": "D1p3",
+   "pos": 1066
+  },
+  {
+   "passage": "D7p1",
+   "pos": 1774
+  },
+  {
+   "passage": "D9p1",
+   "pos": 2452
+  },
+  {
+   "passage": "D8p1",
+   "pos": 2803
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 11,
+ "arm": "A4",
+ "writer": "deepseek-chat",
+ "struct_rule": "retyped"
+}

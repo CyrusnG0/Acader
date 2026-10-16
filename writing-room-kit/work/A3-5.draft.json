@@ -1,0 +1,81 @@
+{
+ "version": "0.1",
+ "session_id": "A3-5",
+ "created": "2026-10-16T03:48:51.400Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 2
+  },
+  {
+   "text": "what happens to housing stock when rent caps are imposed",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "how much stock is lost when rents are capped elasticity",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "did the 2021 ordinance reduce the number of units",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "what do tenants say about a cap",
+   "mark": "MISS",
+   "ts": 6
+  },
+  {
+   "text": "will landlords leave the market",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "what happened in Berlin",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "legal risk of a hard cap",
+   "mark": "MISS",
+   "ts": 9
+  },
+  {
+   "text": "can the government enforce a cap",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "what do tenants want most, waiting list or rent",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "Berlin rent cap new entrants lesson",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D1p4",
+  "D2p1",
+  "D4p1",
+  "D3p3",
+  "D7p3"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

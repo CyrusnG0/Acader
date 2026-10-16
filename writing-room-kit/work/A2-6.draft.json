@@ -1,0 +1,43 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.718Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What happens to housing stock if rent caps on initial rents are tightened?",
+   "mark": "DEEP",
+   "ts": 1
+  },
+  {
+   "text": "What did the 2021 tenancy control ordinance do and did stock fall?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenants say about a tighter cap?",
+   "mark": "MISS",
+   "ts": 3
+  },
+  {
+   "text": "Is enforcement of a tighter cap feasible?",
+   "mark": "MISS",
+   "ts": 4
+  },
+  {
+   "text": "inspection capacity and enforcement",
+   "mark": "FACT",
+   "ts": 5
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D2p1",
+  "D11p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

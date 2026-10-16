@@ -1,0 +1,85 @@
+{
+ "version": "0.1",
+ "session_id": "A5-1",
+ "created": "2026-10-16T03:45:36.427Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "# Should Hong Kong Tighten Rent Control on Subdivided Units? Any answer must begin with a distinction that the policy debate routinely blurs. Rent control is not one instrument but two. First-generation controls cap rent levels outright; second-generation controls cap increases within an existing tenancy while leaving the initial rent free. The evidence on the two is not the same, and Hong Kong's experience illustrates why. The case for tightening rests on a genuine and well-documented harm. About 110,000 households live in subdivided units, and the pricing they face is regressive in a precise sense. Median SDU rent runs roughly 30 percent below mainstream private flats, yet per square foot tenants pay a premium of 15 to 25 percent. [D1p1] Landlords carve space and charge at its most desperate margin: the smaller and more constrained the unit, the higher the unit price of space. This is not a market failure at the edges; it is the core of how the segment prices. A household that cannot afford a full flat pays more for each square foot of the little it can get. The Tenancy Control Ordinance of 2021 addressed only part of this. It capped increases within an existing tenancy but left the initial rent level uncapped, and it excluded SDUs with co-living services from key provisions. [D1p3] The predictable result is that protection attaches to the tenancy rather than the tenant: a landlord can set the first rent at whatever the market bears, then raise it only within the cap. The D2 index shows a stable stock, which the paper attributes precisely to the ordinance being second-generation. [D6p2] That stability is real, and it is the strongest argument against expecting catastrophe from further tightening. But stability of stock is not the same as relief for tenants. A second-generation cap that never touches the initial rent leaves the per-square-foot premium untouched at the moment of entry, which is when the tenant is most vulnerable and least able to bargain. Tightening could take two forms, and they carry different risks. Extending second-generation controls to currently excluded co-living SDUs closes an avoidance channel and is the lower-risk reform. Moving toward first-generation elements — capping initial rents, or tying them to a formula — would attack the premium directly, but the evidence is consistent that first-generation controls contract supply. In a segment where the alternative to an SDU may be homelessness or an illegal rooftop, contraction is not a neutral cost. There is also a deeper problem that rent control cannot solve. The SDU premium exists because supply of adequate small flats is scarce relative to demand. Capping rents redistributes the scarcity rather than removing it; queues, side payments, or deterioration in quality tend to substitute for price. The 2021 ordinance's stability suggests second-generation tools can avoid the worst of this, but it also suggests they can only do so much. The defensible answer is therefore conditional and sequenced. Hong Kong should tighten rent control on SDUs, but by closing the co-living exclusion and enforcing the existing second-generation cap rigorously, rather than by importing first-generation caps on initial rents. That would extend protection to the tenants currently outside it without inviting the supply contraction the evidence associates with level controls. It should be paired with supply-side measures — rehousing, land release, and standards enforcement — because rent control at its best buys time for tenants, not space. Tightening is justified; tightening in the wrong form would be a costly mistake.",
+ "queries": [
+  {
+   "text": "What does the policy brief recommend regarding rent control for subdivided units in Hong Kong?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What data does the archive provide on the number of subdivided unit households and their median rents?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What did the stakeholder submission argue about the impact of tightening rent control on landlords?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does the legal opinion say about the enforceability of rent control under Hong Kong's current tenancy laws?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What do the minutes record about the government's position on regulating subdivided unit rents?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What comparative cases in the archive involve rent control in other Asian cities with similar housing markets?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What does the NGO report say about living conditions and rent burdens in subdivided units?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What does the working paper conclude about the effect of rent control on housing supply?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "What do the interviews reveal about tenants' experiences with rent increases in subdivided units?",
+   "mark": "FACT",
+   "ts": 9
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p1",
+  "D1p3",
+  "D1p3",
+  "D1p1",
+  "D1p3",
+  "D1p1",
+  "D6p2",
+  "D1p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p1",
+   "pos": 743
+  },
+  {
+   "passage": "D1p3",
+   "pos": 1299
+  },
+  {
+   "passage": "D6p2",
+   "pos": 1609
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 10,
+ "arm": "A5",
+ "writer": "deepseek-chat",
+ "struct_rule": "retyped"
+}

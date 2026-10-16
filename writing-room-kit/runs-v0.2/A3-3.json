@@ -1,0 +1,112 @@
+{
+ "version": "0.1",
+ "session_id": "A3-3",
+ "created": "2026-10-16T03:48:53.654Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "**The Limits of a Hard Cap on Subdivided Flats**\n\nHong Kong's subdivided units, or SDUs, sit at the bottom of the housing market, and the question of whether to tighten rent control on them turns on a simple but uncomfortable trade-off: a cap that meaningfully helps sitting tenants may also erode the stock that future tenants depend on. [D1p4] The evidence suggests a hard cap on initial rents would offer real relief but at a measurable cost, and that the better path is targeted enforcement and supply-side support rather than aggressive controls. The case for tightening rests on conditions that are genuinely severe. SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing, where the average wait has hovered around five and a half years. [D1p2] For these households the SDU is not a choice but a residual option. Mrs Wong, 67, has lived in one for nine years, pays 4,200 dollars, has never received a written tenancy agreement, and reports that the 2021 ordinance changed nothing she can see: her landlord still raises rent by whatever the market of desperate newcomers bears. [D4p1] Her building has four SDU landlords, she says, none of whom would leave the business because the units are effectively their pension. [D4p2] If that characterisation holds broadly, a cap on initial rents would transfer income to tenants without driving landlords out. But the aggregate evidence counsels caution. Estimated SDU stock rose from 100,800 units in 2019 to 111,200 in 2025, continuing to grow through the 2021 ordinance, which suggests moderate regulation did not trigger visible stock exit. [D2p1] That is encouraging, yet it reflects a scheme that was deliberately light at first-rent. [D8p2] Standard theory predicts supply contraction under binding rent ceilings, and the elasticity is an empirical question. In marginal stock, where units are already at the bottom of the market, the long-run elasticity of SDU-type supply to controlled rent levels is estimated at 0.31 to 0.48 in the reviewed literature, meaning a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years. Berlin's 2020 cap on about 1.5 million flats is instructive: initial-offer rents for new listings fell sharply, but classified-listing supply contracted measurably within a year as owners withheld or rerouted flats to non-controlled segments. The decisive question is distributional. A cap protects incumbents such as Mrs Wong, but the 3 to 5 percent of units that exit over five years are lost precisely to the households at the back of the queue. Given that the public housing wait is already around five and a half years and that SDU tenants are waiting in that queue, shrinking residual stock pushes some households toward homelessness or illegal alternatives rather than toward public housing. A policy that helps today's tenants while reducing tomorrow's options is not straightforwardly progressive. A tighter design could improve the trade-off. Capping initial rents while guaranteeing renewal and limiting annual increases would address the sharpest abuse without repricing the entire marginal stock. Enforcement capacity matters as much as the ceiling itself: Mrs Wong's missing written tenancy agreement shows that rules on paper do not bind landlords who operate informally. A cap that is not enforced merely penalises compliant owners and shifts supply further into the unregulated shadows. Pairing controls with measures that keep marginal units viable, such as rates relief or transitional subsidies, would reduce exit. On balance, Hong Kong should tighten rent control on subdivided units, but not through a blunt hard cap on initial rents. The 2021 ordinance's light touch at first-rent is the right instinct; the failure is enforcement and the absence of support for the households at the bottom. A targeted package, firm caps on renewals and increases, mandatory written tenancies, and supply-side measures to keep marginal landlords in the market, would deliver most of the relief Mrs Wong needs while limiting the stock loss that Berlin's experience warns against. The goal should be to make the residual option survivable, not to shrink it.",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "How much supply would shrink if rents were capped harder?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What did the Berlin rent cap do to supply and new tenants?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What do tenants themselves say about a cap versus the waiting list?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Would landlords leave the market if returns fall?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What are the legal risks of a hard cap on initial rent?",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "Could the government actually enforce a tightened cap?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "What does New York's rent stabilisation show about costs?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What middle option do NGOs and the government favour instead of a hard cap?",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "elasticity of supply to controlled rent",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "Berlin rent cap",
+   "mark": "BROAD",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D2p1",
+  "D1p4",
+  "D1p4",
+  "D1p2",
+  "D4p1",
+  "D4p2",
+  "D8p2",
+  "D6p1",
+  "D7p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p4",
+   "pos": 339
+  },
+  {
+   "passage": "D1p2",
+   "pos": 804
+  },
+  {
+   "passage": "D4p1",
+   "pos": 1143
+  },
+  {
+   "passage": "D4p2",
+   "pos": 1284
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1653
+  },
+  {
+   "passage": "D8p2",
+   "pos": 1749
+  }
+ ],
+ "pasteChars": 4339,
+ "editBursts": 3,
+ "arm": "A3",
+ "writer": "deepseek-chat",
+ "struct_rule": "pasted"
+}

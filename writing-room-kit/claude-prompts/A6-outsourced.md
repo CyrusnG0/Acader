@@ -1,0 +1,2 @@
+# A6 — Outsourced floor (sanity check only; not evidence)
+Do NOT read the corpus or call the librarian. Run `python3 scripts/outside.py bare work/A6-<N>.txt`, then create an empty draft (`node scripts/librarian.js work/A6-<N>.draft.json "rent" --id x` is not allowed; instead write `{"version":"0.1","task":"URBP3010-w9-essay","notes":"","queries":[],"retrievals":[],"hooks":[],"essay":""}` to the draft path) and finalise with `--struct pasted --writer deepseek-chat`.

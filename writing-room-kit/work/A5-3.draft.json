@@ -1,0 +1,68 @@
+{
+ "version": "0.1",
+ "session_id": "A5-3",
+ "created": "2026-10-16T03:46:11.822Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What does the policy brief recommend regarding rent control for subdivided units in Hong Kong?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What data does the archive provide on the number of subdivided unit households and their median rents?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenant interviews reveal about rent increases and housing conditions in subdivided units?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What position does the stakeholder submission take on tightening rent control for subdivided units?",
+   "mark": "CONCLUSION",
+   "ts": 4
+  },
+  {
+   "text": "What does the working paper conclude about the effects of rent control on housing supply and quality?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Which comparative cases in the archive involve rent control in subdivided or informal housing markets?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What does the legal opinion say about the legality and enforceability of rent control on subdivided units?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What do the minutes record about government or Legislative Council discussions on regulating subdivided unit rents?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "What does the NGO report recommend regarding rent control and tenant protections for subdivided units?",
+   "mark": "FACT",
+   "ts": 9
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p1",
+  "D1p1",
+  "D6p2",
+  "D1p1",
+  "D1p1",
+  "D1p1",
+  "D1p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

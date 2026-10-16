@@ -1,0 +1,50 @@
+{
+ "version": "0.1",
+ "session_id": "A2-5",
+ "created": "2026-10-16T03:48:24.217Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Lazy run: 4 questions, used D6p1 and D2p1; position: no hard cap, narrow tightening.",
+ "essay": "Should Hong Kong tighten rent control on subdivided units? My position is that it should not impose a hard cap on initial rents, because such a cap risks hurting the very households it is meant to protect. A more cautious approach is better.\n\nThe core issue is the one the course primer raises: does capping the initial rent help tenants, or does it shrink the very stock they depend on? The answer depends on supply elasticity, enforcement capacity and what happens to households if units leave the market. I think the evidence points toward caution on each of these.\n\nStart with supply. Standard theory predicts that binding rent ceilings reduce supply, but how much is an empirical question. The working paper on marginal housing estimates that the long-run elasticity of subdivided-unit supply to controlled rent levels is between 0.31 and 0.48, which means a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years [D6p1]. That may sound small, but these units sit at the very bottom of the market. The people who lose them are the same people the cap is supposed to help. A policy that lowers rent for those who keep their homes while pushing others out of the market is not obviously a gain for the poor as a group.\n\nThere is a fair counterargument, and I want to take it seriously. Supporters of tighter control can point out that Hong Kong already regulates this segment and the stock did not collapse. The stock index shows estimated units rising from 100,800 in 2019 to 107,300 in 2021 and 111,200 in 2025, with growth continuing through the 2021 tenancy control ordinance, suggesting that moderate regulation did not trigger visible stock exit [D2p1]. This is real evidence, and it shows that some regulation is compatible with a stable supply of units.\n\nHowever, I do not think it supports a hard cap. The 2021 ordinance limited increases within an existing tenancy but did not cap the starting rent. It is a much lighter instrument than a cap on initial rents. Stable stock under a light rule says little about what happens under a binding one. The elasticity estimate above is about controlled rent levels, which is exactly what a hard cap would change. So the two pieces of evidence do not conflict: gentle rules have not driven landlords out, but a rule that actually bites on price is the kind that the supply estimate warns about.\n\nSo what should the government do? I would favour a narrow tightening. It could improve security of tenure and it could introduce a light, reviewable guide on initial rents instead of a hard ceiling. This keeps most of the protection that tenants want while limiting the risk of removing units. It also avoids the worst version of the supply problem, because landlords keep a reason to stay in the market.\n\nI should be honest about the limits of my argument. I have only looked at a small part of the archive, and the stock figures are estimates. My conclusion is therefore a judgement under uncertainty: tighten tenure security and consider a light band, but do not adopt a hard cap on initial rents until there is better evidence that supply would hold.",
+ "queries": [
+  {
+   "text": "What happens to housing supply if rent caps on initial rents are tightened?",
+   "mark": "DEEP",
+   "ts": 1
+  },
+  {
+   "text": "Did the 2021 ordinance change SDU stock?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What about enforcement of a tighter cap?",
+   "mark": "MISS",
+   "ts": 3
+  },
+  {
+   "text": "elasticity of supply under rent ceilings",
+   "mark": "FACT",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D2p1",
+  "D6p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D6p1",
+   "pos": 958
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1694
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 9,
+ "arm": "A2",
+ "writer": "claude-worker",
+ "struct_rule": "typed"
+}

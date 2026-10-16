@@ -1,0 +1,103 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.029Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units in Hong Kong and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What rent regulation does Hong Kong currently have for these units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What did the Tenancy Control Ordinance of 2021 do about rent increases?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Did the number of subdivided units fall after the ordinance?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What does economic research say about supply elasticity when rents are capped in marginal housing?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What happened to the estimated stock of SDU units between 2019 and 2025?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "How much does the stock shrink for a given cap-induced rent reduction, and how do hard caps differ from caps on increases?",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "What does the working paper model for a 15 percent cut in initial rents, who gains and who loses?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "What did Berlin's rent cap lead to, and what happened when it was struck down?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What do tenants themselves say they need most?",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "How would a stronger cap be enforced and what capacity exists?",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "Is a hard cap legally risky, and is there a middle option?",
+   "mark": "MISS",
+   "ts": 12
+  },
+  {
+   "text": "What did surveyed households say about queue length and tenure security compared with rent level?",
+   "mark": "FACT",
+   "ts": 13
+  },
+  {
+   "text": "How many inspections can the authority carry out each year on subdivided units?",
+   "mark": "FACT",
+   "ts": 14
+  },
+  {
+   "text": "Would a rent band be defensible against compensation claims under property rights?",
+   "mark": "DEEP",
+   "ts": 15
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p1",
+  "D1p3",
+  "D1p1",
+  "D1p4",
+  "D2p1",
+  "D6p2",
+  "D6p4",
+  "D7p2",
+  "D12p2",
+  "D11p1",
+  "D1p1",
+  "D9p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

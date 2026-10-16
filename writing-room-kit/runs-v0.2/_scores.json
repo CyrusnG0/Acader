@@ -1,0 +1,925 @@
+[
+ {
+  "trace": 100,
+  "cont": 73,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 92,
+  "flags": [],
+  "detail": {
+   "hooks": 9,
+   "verified": 9,
+   "retrievals": 9,
+   "continuityHits": 44,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 10,
+    "DEEP": 3
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 90,
+  "file": "runs/A1-1.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 100,
+  "cont": 60,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 88,
+  "flags": [],
+  "detail": {
+   "hooks": 7,
+   "verified": 7,
+   "retrievals": 7,
+   "continuityHits": 36,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 10,
+    "DEEP": 2
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 85,
+  "file": "runs/A1-2.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 100,
+  "cont": 82,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 95,
+  "flags": [],
+  "detail": {
+   "hooks": 10,
+   "verified": 10,
+   "retrievals": 10,
+   "continuityHits": 49,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 11,
+    "DEEP": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 93,
+  "file": "runs/A1-3.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 100,
+  "cont": 68,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 90,
+  "flags": [],
+  "detail": {
+   "hooks": 10,
+   "verified": 10,
+   "retrievals": 10,
+   "continuityHits": 41,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 11,
+    "DEEP": 3,
+    "BROAD": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 88,
+  "file": "runs/A1-4.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 100,
+  "cont": 67,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 90,
+  "flags": [],
+  "detail": {
+   "hooks": 11,
+   "verified": 11,
+   "retrievals": 7,
+   "continuityHits": 40,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 10,
+    "DEEP": 2
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 88,
+  "file": "runs/A1-5.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 100,
+  "cont": 72,
+  "orphanScore": 91,
+  "struct": 100,
+  "composite": 90,
+  "flags": [],
+  "detail": {
+   "hooks": 12,
+   "verified": 12,
+   "retrievals": 11,
+   "continuityHits": 43,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 12,
+    "DEEP": 2
+   },
+   "pasteChars": 0,
+   "editBursts": 13
+  },
+  "nostruct": 88,
+  "file": "runs/A1-6.json",
+  "arm": "A1"
+ },
+ {
+  "trace": 60,
+  "cont": 35,
+  "orphanScore": 50,
+  "struct": 100,
+  "composite": 59,
+  "flags": [
+   "only 2 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 2,
+   "verified": 2,
+   "retrievals": 4,
+   "continuityHits": 21,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 4
+   },
+   "pasteChars": 0,
+   "editBursts": 10
+  },
+  "nostruct": 49,
+  "file": "runs/A2-1.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 60,
+  "cont": 57,
+  "orphanScore": 50,
+  "struct": 100,
+  "composite": 66,
+  "flags": [
+   "only 2 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 2,
+   "verified": 2,
+   "retrievals": 4,
+   "continuityHits": 34,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 2,
+    "DEEP": 1,
+    "BROAD": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 9
+  },
+  "nostruct": 57,
+  "file": "runs/A2-2.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 80,
+  "cont": 53,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 79,
+  "flags": [
+   "only 4 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 4,
+   "verified": 4,
+   "retrievals": 2,
+   "continuityHits": 32,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 4
+   },
+   "pasteChars": 0,
+   "editBursts": 8
+  },
+  "nostruct": 74,
+  "file": "runs/A2-3.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 60,
+  "cont": 35,
+  "orphanScore": 67,
+  "struct": 100,
+  "composite": 62,
+  "flags": [
+   "only 2 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 2,
+   "verified": 2,
+   "retrievals": 3,
+   "continuityHits": 21,
+   "continuityTerms": 60,
+   "marks": {
+    "DEEP": 1,
+    "FACT": 2,
+    "BROAD": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 9
+  },
+  "nostruct": 52,
+  "file": "runs/A2-4.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 60,
+  "cont": 43,
+  "orphanScore": 67,
+  "struct": 100,
+  "composite": 64,
+  "flags": [
+   "only 2 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 2,
+   "verified": 2,
+   "retrievals": 3,
+   "continuityHits": 26,
+   "continuityTerms": 60,
+   "marks": {
+    "DEEP": 1,
+    "FACT": 2,
+    "BROAD": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 9
+  },
+  "nostruct": 55,
+  "file": "runs/A2-5.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 70,
+  "cont": 37,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 71,
+  "flags": [
+   "only 3 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 3,
+   "verified": 3,
+   "retrievals": 3,
+   "continuityHits": 22,
+   "continuityTerms": 60,
+   "marks": {
+    "DEEP": 1,
+    "FACT": 3,
+    "BROAD": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 9
+  },
+  "nostruct": 63,
+  "file": "runs/A2-6.json",
+  "arm": "A2"
+ },
+ {
+  "trace": 100,
+  "cont": 92,
+  "orphanScore": 67,
+  "struct": 55,
+  "composite": 84,
+  "flags": [
+   "PASTE+4509 chars in one event"
+  ],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 9,
+   "continuityHits": 55,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 1,
+    "FACT": 9,
+    "DEEP": 2
+   },
+   "pasteChars": 4509,
+   "editBursts": 2
+  },
+  "nostruct": 91,
+  "file": "runs/A3-1.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 100,
+  "cont": 68,
+  "orphanScore": 55,
+  "struct": 55,
+  "composite": 75,
+  "flags": [
+   "PASTE+4046 chars in one event"
+  ],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 11,
+   "continuityHits": 41,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 1,
+    "FACT": 10,
+    "DEEP": 1
+   },
+   "pasteChars": 4046,
+   "editBursts": 3
+  },
+  "nostruct": 80,
+  "file": "runs/A3-2.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 100,
+  "cont": 70,
+  "orphanScore": 75,
+  "struct": 55,
+  "composite": 78,
+  "flags": [
+   "PASTE+4339 chars in one event"
+  ],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 8,
+   "continuityHits": 42,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 2,
+    "FACT": 9,
+    "DEEP": 1
+   },
+   "pasteChars": 4339,
+   "editBursts": 3
+  },
+  "nostruct": 84,
+  "file": "runs/A3-3.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 100,
+  "cont": 92,
+  "orphanScore": 67,
+  "struct": 25,
+  "composite": 78,
+  "flags": [
+   "PASTE+4192 chars in one event",
+   "essay arrived in 1 writing burst"
+  ],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 9,
+   "continuityHits": 55,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 2,
+    "FACT": 8,
+    "DEEP": 1
+   },
+   "pasteChars": 4192,
+   "editBursts": 1
+  },
+  "nostruct": 91,
+  "file": "runs/A3-4.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 90,
+  "cont": 75,
+  "orphanScore": 100,
+  "struct": 55,
+  "composite": 80,
+  "flags": [
+   "PASTE+4160 chars in one event",
+   "only 5 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 5,
+   "verified": 5,
+   "retrievals": 5,
+   "continuityHits": 45,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 5,
+    "DEEP": 2,
+    "FACT": 5
+   },
+   "pasteChars": 4160,
+   "editBursts": 2
+  },
+  "nostruct": 86,
+  "file": "runs/A3-5.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 100,
+  "cont": 78,
+  "orphanScore": 55,
+  "struct": 55,
+  "composite": 78,
+  "flags": [
+   "PASTE+4871 chars in one event"
+  ],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 11,
+   "continuityHits": 47,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 1,
+    "FACT": 12
+   },
+   "pasteChars": 4871,
+   "editBursts": 3
+  },
+  "nostruct": 83,
+  "file": "runs/A3-6.json",
+  "arm": "A3"
+ },
+ {
+  "trace": 100,
+  "cont": 73,
+  "orphanScore": 75,
+  "struct": 100,
+  "composite": 88,
+  "flags": [],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 8,
+   "continuityHits": 44,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 1,
+    "FACT": 8,
+    "DEEP": 2
+   },
+   "pasteChars": 0,
+   "editBursts": 10
+  },
+  "nostruct": 85,
+  "file": "runs/A4-1.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 100,
+  "cont": 62,
+  "orphanScore": 67,
+  "struct": 100,
+  "composite": 84,
+  "flags": [],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 9,
+   "continuityHits": 37,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 3,
+    "FACT": 9,
+    "DEEP": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 80,
+  "file": "runs/A4-2.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 100,
+  "cont": 80,
+  "orphanScore": 67,
+  "struct": 100,
+  "composite": 89,
+  "flags": [],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 9,
+   "continuityHits": 48,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 9,
+    "DEEP": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 12
+  },
+  "nostruct": 86,
+  "file": "runs/A4-3.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 100,
+  "cont": 87,
+  "orphanScore": 67,
+  "struct": 100,
+  "composite": 91,
+  "flags": [],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 9,
+   "continuityHits": 52,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 1,
+    "FACT": 9,
+    "DEEP": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 89,
+  "file": "runs/A4-4.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 100,
+  "cont": 73,
+  "orphanScore": 75,
+  "struct": 100,
+  "composite": 88,
+  "flags": [],
+  "detail": {
+   "hooks": 6,
+   "verified": 6,
+   "retrievals": 8,
+   "continuityHits": 44,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 2,
+    "FACT": 9
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 85,
+  "file": "runs/A4-5.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 90,
+  "cont": 58,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 84,
+  "flags": [
+   "only 5 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 5,
+   "verified": 5,
+   "retrievals": 5,
+   "continuityHits": 35,
+   "continuityTerms": 60,
+   "marks": {
+    "BROAD": 3,
+    "FACT": 8,
+    "DEEP": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 80,
+  "file": "runs/A4-6.json",
+  "arm": "A4"
+ },
+ {
+  "trace": 70,
+  "cont": 60,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 78,
+  "flags": [
+   "only 3 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 3,
+   "verified": 3,
+   "retrievals": 3,
+   "continuityHits": 36,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 9
+   },
+   "pasteChars": 0,
+   "editBursts": 10
+  },
+  "nostruct": 72,
+  "file": "runs/A5-1.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 70,
+  "cont": 67,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 80,
+  "flags": [
+   "only 3 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 3,
+   "verified": 3,
+   "retrievals": 3,
+   "continuityHits": 40,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 8,
+    "CONCLUSION": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 74,
+  "file": "runs/A5-2.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 60,
+  "cont": 57,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 73,
+  "flags": [
+   "only 2 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 2,
+   "verified": 2,
+   "retrievals": 2,
+   "continuityHits": 34,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 8,
+    "CONCLUSION": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 10
+  },
+  "nostruct": 66,
+  "file": "runs/A5-3.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 80,
+  "cont": 58,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 80,
+  "flags": [
+   "only 4 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 4,
+   "verified": 4,
+   "retrievals": 4,
+   "continuityHits": 35,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 8,
+    "CONCLUSION": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 10
+  },
+  "nostruct": 76,
+  "file": "runs/A5-4.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 70,
+  "cont": 67,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 80,
+  "flags": [
+   "only 3 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 3,
+   "verified": 3,
+   "retrievals": 3,
+   "continuityHits": 40,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 8,
+    "CONCLUSION": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 9
+  },
+  "nostruct": 74,
+  "file": "runs/A5-5.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 80,
+  "cont": 63,
+  "orphanScore": 100,
+  "struct": 100,
+  "composite": 82,
+  "flags": [
+   "only 4 of 6 required linked citations"
+  ],
+  "detail": {
+   "hooks": 4,
+   "verified": 4,
+   "retrievals": 4,
+   "continuityHits": 38,
+   "continuityTerms": 60,
+   "marks": {
+    "FACT": 8,
+    "CONCLUSION": 1
+   },
+   "pasteChars": 0,
+   "editBursts": 11
+  },
+  "nostruct": 77,
+  "file": "runs/A5-6.json",
+  "arm": "A5"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 55,
+  "composite": 11,
+  "flags": [
+   "PASTE+4413 chars in one event",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 4413,
+   "editBursts": 3
+  },
+  "nostruct": 0,
+  "file": "runs/A6-1.json",
+  "arm": "A6"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 55,
+  "composite": 11,
+  "flags": [
+   "PASTE+4971 chars in one event",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 4971,
+   "editBursts": 3
+  },
+  "nostruct": 0,
+  "file": "runs/A6-2.json",
+  "arm": "A6"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 55,
+  "composite": 11,
+  "flags": [
+   "PASTE+5162 chars in one event",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 5162,
+   "editBursts": 2
+  },
+  "nostruct": 0,
+  "file": "runs/A6-3.json",
+  "arm": "A6"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 25,
+  "composite": 5,
+  "flags": [
+   "PASTE+5741 chars in one event",
+   "essay arrived in 1 writing burst",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 5741,
+   "editBursts": 1
+  },
+  "nostruct": 0,
+  "file": "runs/A6-4.json",
+  "arm": "A6"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 55,
+  "composite": 11,
+  "flags": [
+   "PASTE+5267 chars in one event",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 5267,
+   "editBursts": 3
+  },
+  "nostruct": 0,
+  "file": "runs/A6-5.json",
+  "arm": "A6"
+ },
+ {
+  "trace": 0,
+  "cont": 0,
+  "orphanScore": 0,
+  "struct": 25,
+  "composite": 5,
+  "flags": [
+   "PASTE+5232 chars in one event",
+   "essay arrived in 1 writing burst",
+   "only 0 of 6 required linked citations",
+   "no archive retrievals in this session"
+  ],
+  "detail": {
+   "hooks": 0,
+   "verified": 0,
+   "retrievals": 0,
+   "continuityHits": 0,
+   "continuityTerms": 60,
+   "marks": {},
+   "pasteChars": 5232,
+   "editBursts": 1
+  },
+  "nostruct": 0,
+  "file": "runs/A6-6.json",
+  "arm": "A6"
+ }
+]

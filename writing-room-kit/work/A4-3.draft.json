@@ -1,0 +1,75 @@
+{
+ "version": "0.1",
+ "session_id": "A4-3",
+ "created": "2026-10-16T03:48:55.208Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenants say about a hard rent cap?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Would landlords leave the market if rents were capped?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What does research say about supply elasticity under rent ceilings?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "How does New York rent stabilisation compare?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "Are there legal risks to capping initial rents?",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "Can the government enforce a tighter cap with current inspection capacity?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What alternatives to rent control exist, such as rehousing or public housing waiting times?",
+   "mark": "FACT",
+   "ts": 10
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D1p1",
+  "D4p1",
+  "D6p1",
+  "D7p1",
+  "D8p1",
+  "D1p4",
+  "D10p1",
+  "D1p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

@@ -1,0 +1,84 @@
+{
+ "version": "0.1",
+ "session_id": "A3-3",
+ "created": "2026-10-16T03:48:53.654Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "How much supply would shrink if rents were capped harder?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What did the Berlin rent cap do to supply and new tenants?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What do tenants themselves say about a cap versus the waiting list?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Would landlords leave the market if returns fall?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What are the legal risks of a hard cap on initial rent?",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "Could the government actually enforce a tightened cap?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "What does New York's rent stabilisation show about costs?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What middle option do NGOs and the government favour instead of a hard cap?",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "elasticity of supply to controlled rent",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "Berlin rent cap",
+   "mark": "BROAD",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D2p1",
+  "D1p4",
+  "D1p4",
+  "D1p2",
+  "D4p1",
+  "D4p2",
+  "D8p2",
+  "D6p1",
+  "D7p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

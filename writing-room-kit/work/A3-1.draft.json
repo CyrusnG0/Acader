@@ -1,0 +1,86 @@
+{
+ "version": "0.1",
+ "session_id": "A3-1",
+ "created": "2026-10-16T03:48:51.312Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "subdivided units rent premium",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "did the housing stock shrink after the 2021 ordinance",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "supply elasticity rent cap",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "what happens to new arrivals if initial rent is capped",
+   "mark": "DEEP",
+   "ts": 5
+  },
+  {
+   "text": "Berlin rent cap outcome",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "New York rent stabilisation",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "landlords exit the market",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "enforcement inspection capacity",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "compensation legal risk property rights",
+   "mark": "DEEP",
+   "ts": 10
+  },
+  {
+   "text": "tenant insecurity and waiting list",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "rent band alternative",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p4",
+  "D1p4",
+  "D1p3",
+  "D7p1",
+  "D8p1",
+  "D1p4",
+  "D11p2",
+  "D9p1",
+  "D1p2",
+  "D9p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

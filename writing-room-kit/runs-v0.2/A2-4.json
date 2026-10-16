@@ -1,0 +1,50 @@
+{
+ "version": "0.1",
+ "session_id": "A2-4",
+ "created": "2026-10-16T03:48:24.303Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Asked 4 questions, used 2 passages (D6p2, D1p2); position: oppose hard cap, favour narrow measures.",
+ "essay": "Hong Kong should not adopt a hard cap on initial rents for subdivided units. It should keep to the kind of light, within-tenancy regulation it already has, and put its effort elsewhere. My position is that a hard tightening would hurt the people it is meant to protect.\n\nThe strongest reason is the difference between kinds of rent control. The working paper in the course archive separates first-generation controls, which are hard caps on rent levels, from second-generation controls, which only cap increases within a tenancy. It finds that first-generation controls show consistent contraction effects on stock, while second-generation controls show small or null effects. The 2021 Hong Kong ordinance is second-generation, which the paper says explains why the stock stayed stable [D6p2]. That matters because supporters of tightening sometimes point to the stable stock since 2021 as proof that more control is safe. But the stability belongs to a gentle instrument. A hard cap on initial rents is a different kind of instrument, and the evidence says it behaves differently. We cannot assume that what happened under a light rule will repeat under a binding one.\n\nThe second reason is who lives in this segment and what they need. Subdivided-unit tenants are disproportionately new arrivals, single-parent households and people waiting for public housing, and for them the unit is a residual option while they wait in the queue [D1p2]. If a hard cap makes landlords withdraw or convert units, then the people who lose out are the ones who most need somewhere to live tonight, especially newcomers who are still trying to get in. Tenants already inside a unit might gain some monthly relief, but the people outside would face fewer places to rent. A policy that helps the insiders and shuts out the newcomers is not a fair way to protect vulnerable households.\n\nThere is also the question of what the segment really needs. The housing here is poor, but it is still housing, and the real pressure comes from the long wait for public flats. Tightening the cap on rent treats the price while leaving the cause alone. If the government wants to help, I think it should focus on faster public housing offers, on security of tenure, and on safety standards, rather than on a hard ceiling on what owners may charge.\n\nI admit the case against my view. Tenants do pay a premium per square foot, and the current ordinance leaves the initial rent, the real pain point, unregulated. So doing nothing is not a good answer either. A modest step, such as tenure security with a light guide on initial rents, would respond to that concern without the large risk to supply that a hard cap carries.\n\nIn short, the evidence in the archive supports caution. A hard cap on initial rents risks shrinking the stock that poor and newly arrived households rely on, and the stable record since 2021 comes from a lighter policy that cannot be used to justify a harsher one. Hong Kong should tighten only in narrow, careful ways and should not impose a hard cap on starting rents.",
+ "queries": [
+  {
+   "text": "What happens to housing supply when initial rents are capped?",
+   "mark": "DEEP",
+   "ts": 1
+  },
+  {
+   "text": "What did the 2021 Hong Kong ordinance do and did stock fall?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "How would a tightened cap affect new arrivals versus current tenants?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Can a cap be enforced?",
+   "mark": "MISS",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D6p2",
+  "D1p2"
+ ],
+ "hooks": [
+  {
+   "passage": "D6p2",
+   "pos": 786
+  },
+  {
+   "passage": "D1p2",
+   "pos": 1435
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 9,
+ "arm": "A2",
+ "writer": "claude-worker",
+ "struct_rule": "typed"
+}

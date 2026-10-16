@@ -1,0 +1,39 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.104Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What does the evidence say about rent caps shrinking the supply of subdivided units?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "Did the 2021 tenancy control ordinance reduce the stock of subdivided units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What are the enforcement and legal risks of a hard cap on initial rents?",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "What do tenants say would help most?",
+   "mark": "BROAD",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D10p2",
+  "D1p4"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

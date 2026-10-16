@@ -1,0 +1,38 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.217Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What happens to housing supply if rent caps on initial rents are tightened?",
+   "mark": "DEEP",
+   "ts": 1
+  },
+  {
+   "text": "Did the 2021 ordinance change SDU stock?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What about enforcement of a tighter cap?",
+   "mark": "MISS",
+   "ts": 3
+  },
+  {
+   "text": "elasticity of supply under rent ceilings",
+   "mark": "FACT",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D2p1",
+  "D6p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

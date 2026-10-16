@@ -1,0 +1,103 @@
+{
+ "version": "0.1",
+ "session_id": "A4-3",
+ "created": "2026-10-16T03:48:55.208Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "**The Case Against Tightening SDU Rent Control — For Now**\n\nThe question of whether Hong Kong should tighten rent control on subdivided units (SDUs) is usually framed as a choice between helping tenants and protecting supply. The evidence suggests the honest answer is narrower: a tightened cap would probably do little for tenants like Mrs Wong, and the preconditions for making it work do not yet exist. Hong Kong should not tighten rent control on SDUs until it can enforce and register tenancies — and until it has a credible exit path for the households that would bear the cost of any supply response. Start with what tightening would actually target. The binding constraint on SDU tenants is not the level of rent control but its reach. Mrs Wong has no written tenancy agreement, and the 2021 ordinance \"changed nothing she can see.\" A tighter cap on initial rents would operate through the same informal channel. [D4p1] Standard theory predicts supply contraction under binding ceilings, but the relevant elasticity here is modest: the reviewed literature estimates long-run elasticity of SDU-type supply to controlled rent levels at 0.31 to 0.48, meaning a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years. [D6p1] That is not catastrophic — but it is also not trivial, because the stock at risk is precisely the marginal, lowest-quality end that houses the most vulnerable tenants. Berlin is the cautionary case. When rents on roughly 1.5 million flats were capped in 2020, initial-offer rents fell sharply, but classified-listing supply contracted measurably within a year as owners withheld or rerouted flats to non-controlled segments. [D7p1] Hong Kong's SDU market has a similar escape valve: units can be withdrawn, sold, recombined, or converted to other uses. The 2021 ordinance did not trigger visible stock exit — stock grew from 107,300 units in 2021 to 109,800 in 2023 — but that is evidence about moderate regulation, not about a tightened initial-rent cap, which bites harder on landlord returns. [D2p1] The enforcement problem is decisive. A band-based initial-rent cap requires a certifiable tenancy register, which the Rating and Valuation Department estimates at 40 to 60 staff-years to stand up. Current inspection capacity covers under 6 percent of stock per year. A cap that cannot be inspected is not a cap; it is a signal that compliance is optional, which rewards the landlords most willing to operate informally and punishes those who register. New York's second-generation scheme works partly because it has had 75 years to build institutions — a register, a enforcement bureaucracy, a defined scope covering 44 percent of rental stock. [D8p1] Hong Kong would be attempting a first-generation cap with second-generation ambitions and third-rate inspection capacity. There is also the question of what happens to households if units exit. SDU tenants are disproportionately new arrivals, single-parent households, and residents waiting for public housing, where average waiting time hovers around five and a half years. For these households the SDU is not a choice but a residual option while the queue moves. If a tightened cap removes 3 to 5 percent of stock over five years, the displaced tenants do not disappear — they compete for the remaining units, bid up informal rents, or double up. The per-square-foot premium SDU tenants already pay — 15 to 25 percent above mainstream private flats — is the price of being at the most desperate margin. [D1p1] A cap that shrinks that margin makes the desperation worse, not better. None of this means laissez-faire. The case for tightening rests on the premise that tenants are being exploited at the initial-rent margin, and the per-square-foot premium suggests they are. But the remedy has to match the disease. The priority should be enforcement and registration first: fund the tenancy register, expand inspection capacity beyond 6 percent, and make written agreements mandatory and verifiable. Only then does a tightened initial-rent cap have anything to bite on. In the meantime, the more effective interventions are on the demand side — accelerating public housing supply and shortening the five-and-a-half-year queue — because the SDU market is a residual market, and its rents are set by the desperation of the queue. The question, then, is not whether to tighten in principle, but whether to tighten now. On the current evidence, the answer is no. Tighten the register first; the cap can follow.",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenants say about a hard rent cap?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Would landlords leave the market if rents were capped?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What does research say about supply elasticity under rent ceilings?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "How does New York rent stabilisation compare?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "Are there legal risks to capping initial rents?",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "Can the government enforce a tighter cap with current inspection capacity?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What alternatives to rent control exist, such as rehousing or public housing waiting times?",
+   "mark": "FACT",
+   "ts": 10
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D1p1",
+  "D4p1",
+  "D6p1",
+  "D7p1",
+  "D8p1",
+  "D1p4",
+  "D10p1",
+  "D1p2"
+ ],
+ "hooks": [
+  {
+   "passage": "D4p1",
+   "pos": 921
+  },
+  {
+   "passage": "D6p1",
+   "pos": 1261
+  },
+  {
+   "passage": "D7p1",
+   "pos": 1693
+  },
+  {
+   "passage": "D2p1",
+   "pos": 2064
+  },
+  {
+   "passage": "D8p1",
+   "pos": 2716
+  },
+  {
+   "passage": "D1p1",
+   "pos": 3528
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 12,
+ "arm": "A4",
+ "writer": "deepseek-chat",
+ "struct_rule": "retyped"
+}

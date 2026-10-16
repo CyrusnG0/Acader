@@ -1,0 +1,38 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.303Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What happens to housing supply when initial rents are capped?",
+   "mark": "DEEP",
+   "ts": 1
+  },
+  {
+   "text": "What did the 2021 Hong Kong ordinance do and did stock fall?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "How would a tightened cap affect new arrivals versus current tenants?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Can a cap be enforced?",
+   "mark": "MISS",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p4",
+  "D6p2",
+  "D1p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

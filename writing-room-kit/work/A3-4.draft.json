@@ -1,0 +1,80 @@
+{
+ "version": "0.1",
+ "session_id": "A3-4",
+ "created": "2026-10-16T03:48:51.781Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "subdivided units households",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "rent control supply elasticity",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "did the 2021 tenancy ordinance reduce stock",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "Berlin rent cap",
+   "mark": "BROAD",
+   "ts": 5
+  },
+  {
+   "text": "landlords exit the market",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "enforcement capacity inspection",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "compensation legal risk property rights",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "tenants waiting list public housing",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "first-generation versus second-generation controls effect on stock",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "what would a 15 percent cut in initial rents cost new entrants",
+   "mark": "FACT",
+   "ts": 11
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p4",
+  "D2p1",
+  "D7p1",
+  "D1p4",
+  "D11p2",
+  "D9p1",
+  "D1p2",
+  "D6p2",
+  "D1p3"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

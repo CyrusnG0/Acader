@@ -1,0 +1,115 @@
+{
+ "version": "0.1",
+ "session_id": "A4-3",
+ "created": "2026-10-16T03:48:55.208Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "# Should Hong Kong Tighten Rent Control on Subdivided Units? Any answer must begin with a paradox. Since the 2021 tenancy control ordinance, Hong Kong's subdivided unit (SDU) stock has not shrunk; it has grown—from roughly 100,800 units in 2019 to an estimated 111,200 in 2025. [D2p1] Moderate regulation, in other words, did not trigger the stock exit that textbook theory predicts. That fact is sometimes read as evidence that tighter controls are safe. It is better read as evidence that the current controls are not yet binding enough to test the theory. The case for tightening therefore rests not on the absence of supply effects, but on whether a tighter cap can be enforced, and whether the tenants it protects have anywhere else to go. [D1p4] Start with the economics. The reviewed literature estimates the long-run elasticity of marginal SDU-type supply to controlled rent levels at 0.31 to 0.48: a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years. [D6p1] Applied to 111,200 units, that is 3,300 to 5,600 units lost—households, not abstractions. Berlin offers the cautionary precedent: after the 2020 rent cap, initial-offer rents fell sharply, but classified-listing supply contracted measurably within a year as owners withheld or rerouted flats to uncontrolled segments. [D7p1] A cap that suppresses reported rents while shrinking the stock helps no one. [D8p1] Yet the supply objection is weaker in Hong Kong than it first appears, for two reasons. First, SDUs are a residual market: carved space at the bottom of the housing ladder. The relevant question is not whether a cap reduces SDU supply in the abstract, but whether exiting landlords have a better use for a 100-square-foot cubicle. Many do not; the stock has grown through the existing ordinance. Second, the tenants are precisely those with no exit—new arrivals, single-parent households, and residents waiting an average of five and a half years for public housing. [D1p2] For them the SDU is not a choice but a queue-management device. A 3 to 5 percent stock loss is a serious cost, but so is the status quo, in which tenants like Mrs Wong, nine years in residence with no written agreement, face rents set by \"whatever the market of desperate newcomers bears.\"\n\nThe decisive constraint, however, is not elasticity but enforcement. [D4p1] A tightened cap is only as real as its inspection regime, and current SDU inspection capacity covers under 6 percent of stock per year. A band-based initial-rent cap—the kind that would actually reach Mrs Wong's case—requires a certifiable tenancy register, which the Rating and Valuation Department estimates at 40 to 60 staff-years to stand up. [D10p1] Without that register, tightening the law on paper changes nothing on the ground; Mrs Wong's experience is the proof. Her landlord's conduct is already unlawful in spirit if not in letter, and the ordinance \"changed nothing she can see.\"\n\nSo the answer is conditional, and the condition is sequencing. Hong Kong should not tighten the initial-rent cap before it can enforce one. The priority is the register and the inspectors: build the 40 to 60 staff-year capacity, publish enforcement statistics, and require written tenancy agreements as a precondition for any lawful SDU letting. Once compliance is verifiable, a band-based cap on initial rents—set above the most desperate margin, not at it—becomes defensible, because the elasticity evidence suggests losses of a few percent over five years, not collapse. [D1p1] That is a cost worth bearing if the alternative is a market that prices desperation directly. What Hong Kong should not do is tighten controls as a substitute for supply. The five-and-a-half-year public housing queue is the real rent-setting mechanism; every household that waits is a household that must bid for an SDU. Rent control can redistribute the burden among landlords and tenants at the margin. It cannot shorten the queue. A tighter cap, properly enforced and paired with genuine public housing throughput, would help tenants like Mrs Wong. A tighter cap alone would merely move the desperation somewhere less visible.",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenants say about a hard rent cap?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Would landlords leave the market if rents were capped?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What does research say about supply elasticity under rent ceilings?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "How does New York rent stabilisation compare?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "Are there legal risks to capping initial rents?",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "Can the government enforce a tighter cap with current inspection capacity?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What alternatives to rent control exist, such as rehousing or public housing waiting times?",
+   "mark": "FACT",
+   "ts": 10
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D1p1",
+  "D4p1",
+  "D6p1",
+  "D7p1",
+  "D8p1",
+  "D1p4",
+  "D10p1",
+  "D1p2"
+ ],
+ "hooks": [
+  {
+   "passage": "D2p1",
+   "pos": 278
+  },
+  {
+   "passage": "D1p4",
+   "pos": 745
+  },
+  {
+   "passage": "D6p1",
+   "pos": 1004
+  },
+  {
+   "passage": "D7p1",
+   "pos": 1329
+  },
+  {
+   "passage": "D8p1",
+   "pos": 1413
+  },
+  {
+   "passage": "D1p2",
+   "pos": 1987
+  },
+  {
+   "passage": "D4p1",
+   "pos": 2354
+  },
+  {
+   "passage": "D10p1",
+   "pos": 2708
+  },
+  {
+   "passage": "D1p1",
+   "pos": 3529
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 11,
+ "arm": "A4",
+ "writer": "deepseek-chat",
+ "struct_rule": "retyped"
+}

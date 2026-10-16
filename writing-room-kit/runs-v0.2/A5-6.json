@@ -1,0 +1,88 @@
+{
+ "version": "0.1",
+ "session_id": "A5-6",
+ "created": "2026-10-16T03:47:08.222Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "# Should Hong Kong Tighten Rent Control on Subdivided Units? Any answer must begin by asking what \"tightening\" means, because the evidence suggests the two available instruments do very different things. The first generation — hard caps on rent levels — consistently contracts supply. The second generation — caps on increases within an existing tenancy — shows small or null effects on stock. [D6p2] The 2021 Tenancy Control Ordinance belongs to the second family: it capped increases within a tenancy but left initial rent levels free and carved out SDUs with co-living services. [D1p3] The D2 index's stable stock is therefore not evidence that regulation is costless; it is evidence that Hong Kong has so far regulated the margin that matters least to tenants. That is the central finding of the 440-household survey, and it should reframe the debate. The binding constraint tenants name is not the rent level but queue length and tenancy insecurity. Sixty-one percent would accept a nominal rent increase in exchange for three years of security; seventy-four percent would trade rent for a faster public-housing offer. [D11p1] These are striking numbers. They say that the acute pain of SDU life is not primarily the monthly cheque — painful as it is — but the knowledge that the cheque can rise, or the tenancy can end, at any moment, and that the exit route is a queue measured in years. On that reading, the case for tightening is weaker than it first appears, and the case for redesigning is stronger. A tighter first-generation cap would suppress what little supply exists, and since SDUs are priced at the most desperate margin, tenants would bear the cost through reduced quality, informal side-payments, or displacement into even worse arrangements. The per-square-foot premium of 15 to 25 percent relative to mainstream flats is a symptom of scarcity, not of landlord malice; capping the price does not create the missing square feet. [D1p1] But the status quo is also indefensible. The 2021 ordinance leaves the initial rent uncontrolled, which is precisely where the exploitation happens: a landlord can reset the rent to any level at each new tenancy, so security of tenure is nominal. The co-living exclusion is a loophole wide enough to drive a subdivided flat through, and landlords have every incentive to exploit it. A cap on increases within a tenancy that does not constrain the rent at which the tenancy begins is a cap on a number that can be re-set before it ever binds. The better tightening is therefore not a lower cap on levels but a deeper second-generation design. Three measures follow from the survey evidence. First, extend the ordinance to cover all SDUs, closing the co-living exemption, so that the security it promises is real. Second, regulate the initial rent of a renewed or re-let tenancy by reference to the previous tenancy's rent, so that sitting tenants cannot be priced out at renewal — this converts tenure security from a slogan into a constraint. Third, and most important, treat rent control as a bridge rather than a destination: the 74 percent who would trade rent for a faster public-housing offer are telling policymakers where the real instrument lies. Tightening rent control without accelerating the housing queue merely makes the wait more comfortable while leaving it just as long. There is a case for caution. Second-generation controls have small effects on stock, but they are not free: they reduce landlords' incentive to maintain and upgrade, and in a segment already characterised by poor conditions, that matters. Enforcement is also costly, and a poorly enforced ordinance is worse than none, because it teaches tenants that rights are theoretical. On balance, Hong Kong should tighten — but tighten the right thing. The mistake would be to read the stable D2 stock as vindication of the 2021 approach and simply ratchet the cap down. The evidence points the other way: cap the initial rent at renewal, close the exemptions, and pair the ordinance with a credible path out of the queue. Rent control can buy tenants time. Only housing supply can give them an exit.",
+ "queries": [
+  {
+   "text": "What does the policy brief say about the current rent control regime for subdivided units in Hong Kong?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What data does the archive provide on median rents and rent-to-income ratios for subdivided unit tenants?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What do tenant interviews reveal about the effects of recent rent increases on their living conditions?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What position does the stakeholder submission take on tightening rent control, and what arguments does it make?",
+   "mark": "CONCLUSION",
+   "ts": 4
+  },
+  {
+   "text": "What does the working paper conclude about the economic effects of rent control in comparable cities?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Which comparative cases in the archive involve rent control in subdivided or informal housing markets?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What does the legal opinion say about the feasibility and legal constraints of tightening rent control in Hong Kong?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What do the minutes show about government deliberations or positions on rent control for subdivided units?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "What does the NGO report recommend regarding rent control and tenant protections?",
+   "mark": "FACT",
+   "ts": 9
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p1",
+  "D11p1",
+  "D6p2",
+  "D1p1",
+  "D1p3",
+  "D1p1",
+  "D1p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D6p2",
+   "pos": 394
+  },
+  {
+   "passage": "D1p3",
+   "pos": 582
+  },
+  {
+   "passage": "D11p1",
+   "pos": 1124
+  },
+  {
+   "passage": "D1p1",
+   "pos": 1949
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 11,
+ "arm": "A5",
+ "writer": "deepseek-chat",
+ "struct_rule": "retyped"
+}

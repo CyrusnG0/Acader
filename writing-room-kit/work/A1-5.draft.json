@@ -1,0 +1,85 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.889Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units in Hong Kong and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What rent control does Hong Kong already have for these units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What happened to the number of subdivided units after the 2021 ordinance?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does the stock data show about unit numbers between 2019 and 2025?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What does economic research say about how much housing supply shrinks when rents are capped?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Is there a difference between capping rent levels and capping increases within a tenancy?",
+   "mark": "DEEP",
+   "ts": 6
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What do tenants themselves say about a rent cap?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "How well could a cap be enforced given inspection capacity?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What legal risks come with a hard cap on initial rents?",
+   "mark": "DEEP",
+   "ts": 10
+  },
+  {
+   "text": "What do landlords say they would do and how reliable is their evidence?",
+   "mark": "MISS",
+   "ts": 11
+  },
+  {
+   "text": "What do surveyed households say they want most?",
+   "mark": "MISS",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p3",
+  "D1p1",
+  "D8p2",
+  "D1p4",
+  "D1p3",
+  "D7p1",
+  "D1p1",
+  "D10p1",
+  "D4p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

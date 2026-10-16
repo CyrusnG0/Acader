@@ -1,0 +1,51 @@
+{
+ "version": "0.1",
+ "session_id": "A2-2",
+ "created": "2026-10-16T03:48:24.104Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Lazy run: 4 questions, cited D2p1 and D10p2 only.",
+ "essay": "Should Hong Kong tighten rent control on subdivided units? My position is a cautious yes, but only to a limited degree: Hong Kong should tighten, through a measured instrument, and should not adopt a blunt cap that it cannot enforce.\n\nThe case for caution starts with who lives in these units. About 110,000 households live in subdivided units, and they pay a per-square-foot premium of 15 to 25 percent over mainstream flats, because space is carved and priced at its most desperate margin. That premium is a strong sign the market is failing the people at the bottom. Doing nothing therefore leaves a real harm in place, and I do not think the status quo is defensible.\n\nThe usual objection to rent control is that it shrinks supply, so that the policy hurts the very tenants it is meant to help. This is the classic question of rent economics, and the primer notes that the answer depends on supply elasticity, enforcement capacity and what happens to households if units leave the market. That is a fair worry, but the local evidence so far is reassuring about moderate regulation. The stock index shows that estimated stock rose from 100,800 units in 2019 to 107,300 in 2021, then 109,800 in 2023 and 111,200 in 2025. Growth continued through the 2021 tenancy control ordinance, suggesting that moderate regulation did not trigger visible stock exit [D2p1]. So a measured tightening, one that builds on what Hong Kong already did, has a track record that does not point to a collapse in supply.\n\nThe harder problem is enforcement, and this is why I reject a simple hard cap. A rule is only as good as the ability of tenants to use it. The Housing Authority subcommittee's modelling note records a risk that the public consultation omits: if landlords reprice above-band initial rents, the first instrument tenants hold is complaint, but the tenants least able to complain are those with no written agreement or the newest arrivals, so enforcement would systematically miss the most exploited tail [D10p2]. In other words, a tighter rule written on paper could protect the tenants who are already best placed to protect themselves, while the most vulnerable gain nothing. Any tightening must therefore be designed around that weakness rather than relying on complaints.\n\nWhat does that mean in practice? First, the government should require written tenancy agreements, so that every tenant has something to point to when a landlord reprices. Second, enforcement should be proactive, with inspectors and a register doing the work, rather than waiting for tenants to report. Third, the tightening should be gradual and should be monitored against the stock figures, so that if units start to exit the market the policy can be adjusted before households lose housing.\n\nTo summarise, the evidence supports tightening, because the premium shows a real problem and the stock has stayed stable under moderate regulation. But the evidence also warns that a tighter rule fails if it depends on tenants complaining. A moderate, enforceable tightening is better than either doing nothing or imposing a hard cap that leaves the most exploited tenants outside its protection. I would accept a slower reform that actually reaches the newest arrivals over a stronger one that does not.",
+ "queries": [
+  {
+   "text": "What does the evidence say about rent caps shrinking the supply of subdivided units?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "Did the 2021 tenancy control ordinance reduce the stock of subdivided units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What are the enforcement and legal risks of a hard cap on initial rents?",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "What do tenants say would help most?",
+   "mark": "BROAD",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D10p2",
+  "D1p4"
+ ],
+ "hooks": [
+  {
+   "passage": "D2p1",
+   "pos": 1355
+  },
+  {
+   "passage": "D10p2",
+   "pos": 2002
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 9,
+ "arm": "A2",
+ "writer": "claude-worker",
+ "struct_rule": "typed"
+}

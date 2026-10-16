@@ -1,0 +1,114 @@
+{
+ "version": "0.1",
+ "session_id": "A3-2",
+ "created": "2026-10-16T03:48:51.137Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Used the librarian for evidence, outside AI for the essay.",
+ "essay": "**The Case Against Tightening Rent Control on Subdivided Units**\n\nAny argument for tightening rent control on subdivided units (SDUs) must reckon with a simple fact: the people living in them are not primarily complaining about rent. The 440-household survey cited in the readings found that 61 percent of tenants would accept a nominal rent increase in exchange for three-year security of tenure, and 74 percent would do so for a faster public-housing offer. One tenant, asked what would help most, named the waiting list rather than rent: shorten the queue from five and a half years to three, and he would pay any rent to leave. This is the central problem with a tightened cap. It targets the wrong constraint, and in doing so risks shrinking the very housing stock that shelters people tonight. [D5p2] The standard theory is that binding rent ceilings cause supply to contract, but the readings rightly treat elasticity as an empirical question. The reviewed literature estimates the long-run elasticity of SDU-type supply to controlled rent levels at 0.31 to 0.48—meaning a 10 percent cap-induced rent reduction would remove roughly 3 to 5 percent of stock over five years. [D6p1] That is not catastrophic, but it is not trivial either, and it cuts against the most vulnerable households. The Berlin precedent is instructive: after the 2020 rent cap on roughly 1.5 million flats, initial-offer rents fell sharply, but classified-listing supply contracted measurably within a year as owners withheld units or rerouted them to non-controlled segments. [D7p1] Hong Kong's own experience is more equivocal—SDU stock continued growing through the 2021 tenancy control ordinance, from 107,300 units in 2021 to 109,800 in 2023 and a projected 111,200 in 2025—but that ordinance left initial rents unregulated, which is precisely the pain point a tightened cap would target. [D2p1] Moderate regulation did not trigger visible exit; a hard cap on initial rents might. That distinction matters legally as well as economically. A hard cap on initial SDU rents would almost certainly attract compensation claims under the Basic Law's protection of property rights if framed as a deprivation of a rental income stream. A cap framed as contractual-term regulation, like the 2021 ordinance, sits on firmer ground—but it leaves the actual pain point, the initial rent, untouched. The government appears to understand this: the consultation document expected from the Chief Executive's office will float a \"floor-standard plus rent band\" package rather than a hard cap, explicitly citing Berlin's void order as a cautionary tale. Enforcement is the quieter problem. A tightened cap is only as real as its inspection regime, and current SDU inspection capacity covers under 6 percent of stock per year. A band-based initial-rent cap would require a certifiable tenancy register, which the Rating and Valuation Department estimates at 40 to 60 staff-years to stand up. [D10p1] A cap that cannot be enforced is not a cap; it is a signal that invites evasion and erodes trust in the regulatory framework. None of this means laissez-faire. The readings note that SDU tenants pay a per-square-foot premium of 15 to 25 percent over mainstream private flats—a premium extracted at the most desperate margin of the market. [D1p1] That is a genuine injustice, and floor standards, tenancy security, and enforcement capacity are all worth pursuing. New York's second-generation scheme, which caps increases within tenancies while lightly regulating initial rents, offers a more durable model than a hard cap. But tightening rent control on initial SDU rents would likely reduce stock, invite legal challenge, and leave the waiting list—the constraint tenants themselves name—untouched. The better path is to shorten the queue, strengthen tenure security, and regulate the terms of tenancy rather than the entry price. Housing policy should shelter people, not symbols.",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "subdivided units households tenants",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "Did the 2021 tenancy control ordinance reduce the stock of units?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does the elasticity research say about supply contraction under rent caps?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What happened in Berlin with the rent cap?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What do landlords say they will do if returns fall?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "Can the government enforce a cap, inspection capacity?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What do tenants say they want most, waiting list or rent?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "Legal risk of compensation claims for a hard cap",
+   "mark": "DEEP",
+   "ts": 9
+  },
+  {
+   "text": "What did New York rent stabilisation lead to?",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "What do NGO surveys say about tenure security?",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "What policy package does the government plan to float?",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D6p1",
+  "D7p1",
+  "D5p2",
+  "D10p1",
+  "D3p3",
+  "D9p1",
+  "D8p1",
+  "D11p1",
+  "D12p1"
+ ],
+ "hooks": [
+  {
+   "passage": "D5p2",
+   "pos": 800
+  },
+  {
+   "passage": "D6p1",
+   "pos": 1180
+  },
+  {
+   "passage": "D7p1",
+   "pos": 1556
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1873
+  },
+  {
+   "passage": "D10p1",
+   "pos": 2956
+  },
+  {
+   "passage": "D1p1",
+   "pos": 3303
+  }
+ ],
+ "pasteChars": 4046,
+ "editBursts": 3,
+ "arm": "A3",
+ "writer": "deepseek-chat",
+ "struct_rule": "pasted"
+}

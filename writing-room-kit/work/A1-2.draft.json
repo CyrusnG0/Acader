@@ -1,0 +1,84 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.469Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "How many households live in subdivided units and who are they?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What rent control does Hong Kong already have for these units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What happened to the number of subdivided units after the 2021 ordinance?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "Is there data on the estimated stock of units year by year, 2019 to 2025?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What do economists estimate about supply response when rents are capped in marginal housing?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "Are there differences between types of rent control, such as capping levels versus capping increases?",
+   "mark": "DEEP",
+   "ts": 6
+  },
+  {
+   "text": "What have other cities experienced, for example Berlin?",
+   "mark": "MISS",
+   "ts": 7
+  },
+  {
+   "text": "What do tenants themselves say they want most?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "What would enforcement of a tighter cap require, and is there capacity?",
+   "mark": "FACT",
+   "ts": 9
+  },
+  {
+   "text": "What legal risks arise from a cap on initial rent?",
+   "mark": "DEEP",
+   "ts": 10
+  },
+  {
+   "text": "What do landlords say they would do, and how solid is their evidence?",
+   "mark": "MISS",
+   "ts": 11
+  },
+  {
+   "text": "How did Berlin's rent cap affect listings and new contract rents after it was struck down?",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D1p3",
+  "D1p1",
+  "D2p1",
+  "D6p1",
+  "D1p3",
+  "D1p4",
+  "D10p2",
+  "D7p2"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

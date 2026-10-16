@@ -1,0 +1,79 @@
+{
+ "version": "0.1",
+ "session_id": "A4-4",
+ "created": "2026-10-16T03:48:54.860Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "Has the 2021 tenancy ordinance reduced the stock of subdivided units?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What does research say about supply elasticity under rent caps in marginal housing?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What did tenants say about a hard cap on rents?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What do landlords say they would do if rents are capped?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What does New York's rent stabilisation show?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What are the legal risks of capping initial rent?",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "Could the government actually enforce a tighter cap?",
+   "mark": "MISS",
+   "ts": 9
+  },
+  {
+   "text": "What do tenants actually want most, according to surveys?",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "What policy package is the government likely to propose?",
+   "mark": "FACT",
+   "ts": 11
+  }
+ ],
+ "retrievals": [
+  "D2p1",
+  "D6p1",
+  "D1p1",
+  "D1p3",
+  "D7p1",
+  "D8p2",
+  "D1p4",
+  "D11p1",
+  "D12p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

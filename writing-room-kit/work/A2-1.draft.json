@@ -1,0 +1,39 @@
+{
+ "version": "0.1",
+ "session_id": "draft",
+ "created": "2026-10-16T03:48:24.685Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "What is the scale of subdivided housing and who lives in it?",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "What happened to SDU stock after the 2021 tenancy control ordinance?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "What does the evidence say about supply contraction under a hard cap on initial rents?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What would a tightened cap mean for enforcement and for new arrivals?",
+   "mark": "FACT",
+   "ts": 4
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D6p1",
+  "D6p4"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

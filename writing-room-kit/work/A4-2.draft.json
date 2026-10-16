@@ -1,0 +1,89 @@
+{
+ "version": "0.1",
+ "session_id": "A4-2",
+ "created": "2026-10-16T03:48:52.875Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "What did the 2021 tenancy control ordinance actually cap?",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "Did the housing stock shrink after the 2021 ordinance?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does research say about supply elasticity under rent caps?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What happened in Berlin when rents were capped?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "How does New York rent stabilisation compare?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "What are the legal risks of a hard cap on initial rent?",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "Could the government enforce a tighter cap?",
+   "mark": "MISS",
+   "ts": 8
+  },
+  {
+   "text": "What do tenants themselves say they need most?",
+   "mark": "MISS",
+   "ts": 9
+  },
+  {
+   "text": "What do landlords say they would do?",
+   "mark": "MISS",
+   "ts": 10
+  },
+  {
+   "text": "What policy package is the government likely to float?",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "enforcement inspection capacity",
+   "mark": "FACT",
+   "ts": 12
+  },
+  {
+   "text": "tenure security and the waiting list",
+   "mark": "FACT",
+   "ts": 13
+  }
+ ],
+ "retrievals": [
+  "D1p3",
+  "D1p4",
+  "D6p1",
+  "D7p1",
+  "D8p1",
+  "D4p2",
+  "D12p1",
+  "D11p2",
+  "D3p3"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}

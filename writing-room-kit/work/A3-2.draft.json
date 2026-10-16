@@ -1,0 +1,86 @@
+{
+ "version": "0.1",
+ "session_id": "A3-2",
+ "created": "2026-10-16T03:48:51.137Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "",
+ "essay": "",
+ "queries": [
+  {
+   "text": "--id",
+   "mark": "MISS",
+   "ts": 1
+  },
+  {
+   "text": "subdivided units households tenants",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "Did the 2021 tenancy control ordinance reduce the stock of units?",
+   "mark": "FACT",
+   "ts": 3
+  },
+  {
+   "text": "What does the elasticity research say about supply contraction under rent caps?",
+   "mark": "FACT",
+   "ts": 4
+  },
+  {
+   "text": "What happened in Berlin with the rent cap?",
+   "mark": "FACT",
+   "ts": 5
+  },
+  {
+   "text": "What do landlords say they will do if returns fall?",
+   "mark": "FACT",
+   "ts": 6
+  },
+  {
+   "text": "Can the government enforce a cap, inspection capacity?",
+   "mark": "FACT",
+   "ts": 7
+  },
+  {
+   "text": "What do tenants say they want most, waiting list or rent?",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "Legal risk of compensation claims for a hard cap",
+   "mark": "DEEP",
+   "ts": 9
+  },
+  {
+   "text": "What did New York rent stabilisation lead to?",
+   "mark": "FACT",
+   "ts": 10
+  },
+  {
+   "text": "What do NGO surveys say about tenure security?",
+   "mark": "FACT",
+   "ts": 11
+  },
+  {
+   "text": "What policy package does the government plan to float?",
+   "mark": "FACT",
+   "ts": 12
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D2p1",
+  "D6p1",
+  "D7p1",
+  "D5p2",
+  "D10p1",
+  "D3p3",
+  "D9p1",
+  "D8p1",
+  "D11p1",
+  "D12p1"
+ ],
+ "hooks": [],
+ "pasteChars": 0,
+ "editBursts": 0
+}
