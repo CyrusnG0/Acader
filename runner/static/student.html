@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Practice viva</title><link rel="stylesheet" href="/static/base.css"></head><body><main>
+<h1 id="title">Practice viva</h1><p id="assignment" class="mut" style="white-space:pre-wrap"></p>
+<section id="start">
+<div class="card"><strong>Before you start</strong>
+<p class="mut">This is a practice session and is not graded. Your code is sent to an AI provider (Anthropic) to write questions about it. We store your code and answers for 30 days, then delete them. You can export or delete them yourself at any time. Your instructor sees summary signals (how many questions you answered, answer length, time). They see your full answers only if you tick the second box. If you would rather not, close this page and use your instructor's normal route.</p>
+<div class="row"><input type="checkbox" id="c1"><label style="margin:0;font-weight:400" for="c1">I agree to the processing described above.</label></div>
+<div class="row"><input type="checkbox" id="c2"><label style="margin:0;font-weight:400" for="c2">My instructor may read my full answers (optional).</label></div></div>
+<label>Your code <textarea id="code" style="min-height:220px"></textarea></label>
+<button id="begin">Get my questions</button><p id="msg"></p></section>
+<section id="qa" hidden></section>
+<section id="done" hidden><p><strong>Thanks, your answers are saved.</strong></p><button id="exp">Download my data</button> <button id="del" style="background:var(--warn)">Delete my data</button></section>
+<script>
+const aid=location.pathname.split('/').pop();let S=null,t0=0,times=[];
+fetch('/api/assignments/'+aid+'/public').then(r=>r.json()).then(d=>{title.textContent=d.title;assignment.textContent=d.assignment});
+begin.onclick=async()=>{
+ msg.className='';msg.textContent='';
+ if(!c1.checked){msg.className='err';msg.textContent='Please tick the first box to continue.';return}
+ begin.disabled=true;msg.textContent='Writing your questions...';
+ const r=await fetch('/api/sessions',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({assignment_id:aid,code:code.value,consent_processing:true,consent_transcript:c2.checked})});
+ const d=await r.json();
+ if(!r.ok){begin.disabled=false;msg.className='err';msg.textContent=d.message||d.detail||'Something went wrong.';return}
+ S=d;start.hidden=true;qa.hidden=false;
+ qa.innerHTML=d.questions.map((q,i)=>'<div class="card"><div class="mut">Line '+q.line+': <code></code></div><p></p><textarea data-i="'+i+'"></textarea></div>').join('')+'<button id="send">Submit answers</button>';
+ [...qa.querySelectorAll('.card')].forEach((c,i)=>{c.querySelector('code').textContent=d.questions[i].quote;c.querySelector('p').textContent=d.questions[i].question;
+  c.querySelector('textarea').addEventListener('focus',()=>{t0=Date.now()});c.querySelector('textarea').addEventListener('blur',e=>{times[i]=(times[i]||0)+(Date.now()-t0)/1000})});
+ send.onclick=async()=>{
+  const answers=[...qa.querySelectorAll('textarea')].map((t,i)=>({text:t.value,seconds:times[i]||0}));
+  const r=await fetch('/api/sessions/'+S.session_id+'/answers',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({token:S.token,answers})});
+  if(r.ok){qa.hidden=true;done.hidden=false}};
+};
+exp.onclick=async()=>{const r=await fetch('/api/sessions/'+S.session_id+'/export?token='+encodeURIComponent(S.token));const b=new Blob([JSON.stringify(await r.json(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='my-viva.json';a.click()};
+del.onclick=async()=>{if(!confirm('Delete your code and answers permanently?'))return;await fetch('/api/sessions/'+S.session_id+'?token='+encodeURIComponent(S.token),{method:'DELETE'});done.innerHTML='<p>Deleted.</p>'};
+</script></main></body></html>

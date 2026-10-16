@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Viva report</title><link rel="stylesheet" href="/static/base.css"></head><body><main>
+<h1 id="title">Report</h1><p class="mut" id="note"></p><div id="blind"></div><div id="list"></div>
+<script>
+const aid=location.pathname.split('/').pop(),tok=new URLSearchParams(location.search).get('token');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function load(){
+ const r=await fetch('/api/assignments/'+aid+'/report?token='+encodeURIComponent(tok));
+ if(!r.ok){list.innerHTML='<p class="err">Cannot open report (bad link).</p>';return}
+ const d=await r.json();title.textContent=d.title;note.textContent=d.note;
+ const b=await (await fetch('/api/assignments/'+aid+'/blind-summary?token='+encodeURIComponent(tok))).json();
+ blind.innerHTML=(b.rated+b.unrated)?'<div class="card"><strong>Blind test</strong><br>graph '+b.graph+' / raw '+b.raw+' / tie '+b.tie+' / unrated '+b.unrated+'<br><span class="mut">'+esc(b.rule)+'</span></div>':'';
+ list.innerHTML=d.sessions.length?d.sessions.map(s=>'<div class="card"><strong>Session '+s.session_id+'</strong><br><span class="mut">answered '+s.signals.answered+'/'+s.signals.questions+', avg '+s.signals.avg_answer_chars+' chars, '+s.signals.total_seconds+' s</span>'+
+  '<ol>'+s.questions.map((q,i)=>'<li>Line '+q.line+': '+esc(q.question)+(s.answers?'<br><em>'+esc(s.answers[i]?.text||'(no answer)')+'</em>':'')+'</li>').join('')+'</ol>'+
+  (s.transcript_shared?'':'<span class="mut">Student did not share the full answers.</span>')+
+  (s.blind_set_Y?'<details><summary>Blind comparison: set Y</summary><ol>'+s.blind_set_Y.map(q=>'<li>Line '+q.line+': '+esc(q.question)+'</li>').join('')+'</ol></details><div>Which question set is better? '+['X','Y','tie'].map(w=>'<button style="margin:0 4px 0 0;padding:4px 10px" onclick="rate(\''+s.session_id+'\',\''+w+'\')">'+(w==='tie'?'Tie / cannot tell':'Set '+w)+(s.rated?'':'')+'</button>').join('')+'</div>':'')+'</div>').join(''):'<p>No sessions yet.</p>';
+}
+async function rate(sid,w){await fetch('/api/sessions/'+sid+'/rate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({token:tok,winner:w})});load()}
+load();
+</script></main></body></html>

@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acader Room demo</title>
+<style>
+:root{--bg:#fafaf8;--panel:#fff;--fg:#1b1b1b;--mut:#6b6b6b;--line:#e2e0da;--acc:#2f5fd0;--accbg:#eaf0fd;--ok:#1b7a43;--warn:#a85b00;--bad:#b3261e}
+@media(prefers-color-scheme:dark){:root{--bg:#121212;--panel:#1b1b1b;--fg:#ececec;--mut:#9a9a9a;--line:#333;--acc:#8fb0ff;--accbg:#1d2740;--ok:#6fd49a;--warn:#ffb86b;--bad:#ff8a80}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,sans-serif}
+header{display:flex;gap:12px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+header b{font-size:1.05rem}.pill{font-size:.78rem;padding:2px 8px;border-radius:99px;background:var(--accbg);color:var(--acc)}
+#banner{font-size:.82rem;color:var(--fg);background:var(--accbg);padding:6px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.app{display:grid;grid-template-columns:210px minmax(0,1fr) 380px;gap:0;min-height:calc(100vh - 90px)}
+@media(max-width:1000px){.app{grid-template-columns:1fr}}
+.col{padding:14px 16px;min-width:0}.col+.col{border-left:1px solid var(--line)}
+h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:16px 0 8px}h2:first-child{margin-top:0}
+button{font:inherit;padding:6px 12px;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
+button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}button:disabled{opacity:.5;cursor:default}button.sm{padding:2px 8px;font-size:.8rem}
+.space{display:block;width:100%;text-align:left;margin-bottom:6px}.space.on{border-color:var(--acc);background:var(--accbg)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px}
+.kind{font-size:.7rem;padding:1px 6px;border-radius:5px;border:1px solid var(--line);color:var(--mut);margin-right:6px}.kind.lecture{border-color:var(--acc);color:var(--acc)}
+.src-text{white-space:pre-wrap;color:var(--mut);font-size:.88rem;margin-top:6px}
+textarea,input,select{font:inherit;width:100%;padding:8px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--fg)}
+#draft{min-height:300px;font:16px/1.6 Georgia,serif;resize:vertical}.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.mut{color:var(--mut);font-size:.85rem}.tabs{display:flex;gap:6px;margin-bottom:10px}.tabs button.on{background:var(--accbg);border-color:var(--acc);color:var(--acc)}
+.msg{padding:8px 10px;border-radius:8px;margin-bottom:8px;white-space:pre-wrap}.msg.u{background:var(--accbg)}.msg.a{background:var(--panel);border:1px solid var(--line)}
+.q{border-left:3px solid var(--acc);padding-left:10px}.anchor{font-style:italic;color:var(--mut);margin:4px 0}
+.chip{font-size:.75rem;padding:0 6px;border-radius:5px;background:var(--accbg);color:var(--acc);margin-right:4px}
+.v-supported{color:var(--ok)}.v-partial,.v-unverified{color:var(--warn)}.v-unsupported,.v-not_found{color:var(--bad)}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:8px 14px;border-radius:8px;font-size:.88rem;z-index:9}
+dialog{max-width:720px;width:92vw;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--fg);padding:20px}
+dialog::backdrop{background:rgba(0,0,0,.45)}.tier{font-size:1.25rem;font-weight:700}.err{color:var(--bad)}
+@media print{header,#banner,.col:not(dialog),button{display:none}dialog{border:0;max-width:none;width:100%}}
+</style></head><body>
+<header><b>Acader Room</b><span class="pill">DEMO</span><span id="llm" class="mut"></span><span style="flex:1"></span>
+<label class="mut" style="display:flex;gap:6px;align-items:center">Coach frequency
+<select id="freq" style="width:auto"><option value="off">Off (only on escalation)</option><option value="low" selected>Low</option><option value="high">High</option></select></label>
+<label class="mut" style="display:flex;gap:6px;align-items:center" title="Instructor-approved alternative to typing-only (accessibility). Pasted or dictated text is allowed but triggers more Coach questions and an oral-check recommendation.">
+<input type="checkbox" id="assist" style="width:auto"> Assisted input</label></header>
+<div id="banner"><b>Demo only: never enter real student work.</b> Demo content: the sample sources are fictional. LLM: DeepSeek. Citation checks run against this room's sources only (no live DOI lookup). Your work is saved in this browser only, but your text is sent to DeepSeek to power the Helper and Coach: do not enter real student data.</div>
+<div class="app">
+ <div class="col"><h2>Spaces</h2><div id="spaces"></div><button id="newSpace" class="sm">+ New space</button>
+  <h2>Reset</h2><button id="reset" class="sm">Reset demo data</button></div>
+ <div class="col"><div id="head"></div>
+  <h2>Sources in this room</h2><div id="sources"></div><details><summary class="mut" style="cursor:pointer">+ Add a source</summary><div class="card">
+   <input id="sTitle" placeholder="Title"><div style="height:6px"></div><select id="sKind"><option>lecture</option><option>paper</option><option>handout</option><option selected>note</option></select>
+   <div style="height:6px"></div><textarea id="sText" rows="5" placeholder="Paste the source text (paste is allowed here: sources come in through the Door)"></textarea>
+   <div class="bar"><button id="sAdd" class="pri sm">Add source</button></div></div></details>
+  <h2>Writing sandbox <span class="mut" style="text-transform:none;letter-spacing:0">(typing only; cite sources as [S1])</span></h2>
+  <textarea id="draft" spellcheck="true" placeholder="Start writing here..."></textarea>
+  <div class="bar"><button id="cov">Coverage map</button><button id="cite">Check citations</button><button id="coachNow">Ask me a question</button><button id="sample" title="Fill the sandbox with fictional demo text so you never need to type real work">Use sample text (demo)</button><span style="flex:1"></span><button id="finish" class="pri">Finish: get my Proof</button></div>
+  <div class="mut" id="stats" style="margin-top:6px"></div><div id="out"></div></div>
+ <div class="col"><div class="tabs"><button id="tH" class="on">Helper</button><button id="tC">Coach</button></div>
+  <div id="pH"><div id="hLog"></div><textarea id="hIn" rows="3" placeholder="Ask anything: where did the lecturer cover X? how do I format this citation?"></textarea>
+   <div class="bar"><button id="hSend" class="pri sm">Ask Helper</button><span class="mut">Helps you fight the work; won't write it for you.</span></div></div>
+  <div id="pC" hidden><div id="cBox"></div><h2>Coach record</h2><div id="cLog"></div></div></div>
+</div>
+<dialog id="proof"><div id="proofBody"></div><div class="bar"><button id="pPrint" class="pri">Print / save as PDF</button><button id="pJson">Download JSON</button><button id="pClose">Close</button></div></dialog>
+<script src="/static/seed.js"></script><script src="/static/app.js"></script></body></html>

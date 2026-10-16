@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Viva runner</title><link rel="stylesheet" href="/static/base.css"></head><body><main>
+<h1>Set up a practice viva</h1>
+<p class="mut">Paste an assignment and your reference solution. Students paste their own code and answer line-level questions. This is a practice viva: it gives you signals, not a verdict, and you decide any follow-up.</p>
+<label>Title <input type="text" id="title" value="Assignment 1"></label>
+<label>Assignment text <textarea id="assignment"></textarea></label>
+<label>Reference solution <textarea id="reference"></textarea></label>
+<label>Course context, structured <span class="mut">(concepts, prerequisites, where taught)</span><textarea id="graph"></textarea></label>
+<label>Course notes, raw <span class="mut">(same material, pasted as is; used only in blind-test mode)</span><textarea id="raw"></textarea></label>
+<div class="row"><input type="checkbox" id="blind"><label style="margin:0;font-weight:400" for="blind">Blind-test mode: generate two question sets (X/Y, order randomized) and let me rate which is better per student</label></div>
+<button id="go">Create student link</button><p id="out"></p>
+<script>
+document.getElementById('go').onclick=async()=>{
+ const b=document.getElementById('blind').checked, v=id=>document.getElementById(id).value;
+ const r=await fetch('/api/assignments',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({title:v('title'),assignment:v('assignment'),reference:v('reference'),graph_context:v('graph'),raw_notes:v('raw'),blind:b})});
+ const d=await r.json(), o=document.getElementById('out');
+ if(!r.ok){o.className='err';o.textContent='Error: '+JSON.stringify(d);return}
+ const base=location.origin;o.className='';
+ o.innerHTML='Student link: <code>'+base+d.student_link+'</code><br>Your report (keep private): <code>'+base+d.instructor_link+'</code>';
+}
+</script></main></body></html>
