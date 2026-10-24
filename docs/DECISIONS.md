@@ -255,3 +255,39 @@ Format: **D-xxx · date · title**. Context, then decision, then consequences.
 - **Context:** T-001 left Python dependencies unpinned. D20/D31 promise a byte-identical receipt from the same log and engine stamp, which needs reproducible engine dependencies. Current Vite and Vitest need Node 22.12+.
 - **Decision:** (1) Python dependencies get a lock file (pip-tools or uv) that CI installs, and the lock file's hash goes into the engine stamp. Done inside T-003. (2) Node 22.12+ is the front-end floor.
 - **Consequences:** T-003 scope grows by the lock file and CI install change; the engine stamp includes the lock hash once the stamp exists (M1).
+
+### D-041 · 2026-10-24 · The chain and the receipt's numbers (spike S5, PD-S5-1…4)
+- **Context:** Spike S5 (T-005) built the chain and `verify`, and found four gaps in the spec.
+- **Decision:** (1) `prev_hash` enters the hash as its lowercase hex text (UTF-8). (2) An id in `event_ids` is the event's `seq`. (3) The receipt JSON has no floats: band shares are integer word counts (plus `total_words`) and the renderer rounds, so `receipt_hash` is well defined. (4) The seal covers the record up to submission; later notes and links are chained and dated, not sealed, and "About this receipt" says so. No anchoring of the post-seal head in v1.
+- **Consequences:** event-log.md §3/§6, receipt.md §3/§6 updated. EXPECTATIONS C already carries the caveat. OL-035 closed.
+
+### D-042 · 2026-10-24 · LLM boundary details (T-003 PD-1…4)
+- **Decision:** (1) Per-task output schemas are provisional; each feature task (Coach, receipt, provenance L3, reading aid, mapper) owns its schema and stub fixture and may change them with its prompt, without a new decision. (2) Error mapping: network errors, 408 and 5xx → `LLMTimeout`; 402 → `LLMAuth`; other 4xx (for example a content filter) → `LLMRefusal`. (3) The deepseek backend takes `[system, user]` only, until a task needs multi-turn; then `shared.chat` gains an optional `messages=` keyword (allowed by D22). (4) uv is the lock tool (`prototype/requirements.lock`, universal, hash-checked).
+- **Consequences:** none beyond what T-003 shipped.
+
+### D-043 · 2026-10-24 · PDF parsing: Docling (spike S2, T-006 PD-1…5)
+- **Decision:** (1) Docling is the v1 parser: OCR off, table structure on, in the jobs loop, models baked into the image, one converter per worker. (2) A pypdfium2 text-layer check runs first: < 50 characters per page → status "scan", no model loaded. (3) No PyMuPDF in product code while it is AGPL-3.0. (4) At least 8 GB RAM and one parse at a time; before M2, measure peak memory and time a 300-page reading on the real host, and parse in page ranges if it misses the 300 s cap. (5) GROBID for reference metadata waits (TODOS #12).
+- **Consequences:** reading-aid.md §3, TODOS updated. OL-045 (limitation remarks outside Discussion) stays open.
+
+### D-044 · 2026-10-24 · Editor and replay rules (spike S1, PD-S1-1, 3…7; T-002 PD-1)
+- **Decision:** (1) Node set: `doc`, `paragraph`, `heading` (1–3), `bullet_list`, `ordered_list`, `list_item`, `blockquote`, `hard_break`, `text`, plus marks `em` and `strong`; no tables, images, code, links or footnotes in v1. (2) The step log holds only primitive step types both replays know; the editor flattens `markSet`. (3) `doc_hash = sha256(canonical_json(doc.toJSON()))`. (4) `@tiptap/pm` 3.32.0 and prosemirror-py 0.6.1 are pinned as a pair and recorded in the engine stamp; upgrading either re-runs the S1 parity fixtures. (5) `input_kind` is what the browser reports; the replacement count is a lower bound and the receipt says "reported by the browser". (6) Playwright with a pinned Chromium joins CI at M3.
+- **Consequences:** event-log.md §4/§5, receipt.md §6 (engine stamp) updated. Implemented in T-011 together with D-045, before any golden log exists (D33).
+
+### D-045 · 2026-10-24 · Links to claims belong to paragraphs, not words (replaces S1 PD-S1-2 and T-002 PD-2)
+- **Context:** Spike S1 proposed that typed words inside a linked sentence never carry the claim mark. The founder rejected it: adding "a" or "to", or a sentence of elaboration, shouldn't cut a link; an academic paragraph turns around one unit (claim, evidence, elaboration); word-level links stripe the text and read as micromanagement (law 3). Under the old rules, elaboration sentences with no claim mark also landed in "untraced", which inflates untraced for exactly the students who think while they write (and the H gate).
+- **Decision:**
+  - A link is an attribute of the paragraph: `links: [{claim_id, by, suggestion_id?}]`. A paragraph may link to several claims. The inline `claim` mark leaves the schema. Origin marks stay per character (law 7: record what changed in the text).
+  - Typing, rewording or adding sentences inside a linked paragraph never changes its links; every sentence shares them, so elaboration counts as "linked by the student, not checked" (band 4), not untraced.
+  - Links change only by an explicit student action or by structure: a split keeps the links on both halves, a new empty paragraph has none, a join keeps both sets.
+  - A paragraph link alone never makes a sentence traced, whatever its `by`. D13 still applies per sentence: a sentence ≥ 50% `paste_ext` stays untraced, so a bulk outside paste into a linked paragraph is still shown.
+  - No link breaks because of what a sentence means (that would need a model to rule on the student's text). L3b, if on, names an `added` proposition, which can only become a pillar question.
+- **Consequences:** event-log.md §4, provenance.md §3/§4/§6, workspace.md (claim↔paragraph highlight, suggestions per paragraph; the "Not this" key is settled in M4m), architecture.md, build-plan.md, receipt.md, EXPECTATIONS (C, D, G) updated. Code: T-011 replaces the claim mark in `schema.json`, `schema.ts`, the input plugin and the S1 replay fixtures.
+
+### D-046 · 2026-10-24 · Construction order is never a signal; elaboration is questioned forward, never traced back
+- **Context:** An outside chat proposed a "source-first vs draft-first ratio" (did the card come before the paragraph, or was it added afterwards?). The founder rejected it: a scripted outside-AI workflow fakes the order (open a pin, make a card, then paste), and honest writers often find their structure while drafting. Elaboration raises the same problem: strong students elaborate without cards and often can't explain how; outside AI also writes elaboration; asking where it came from is over-accusation.
+- **Decision:**
+  - Construction order is never computed as a ratio, shown as a signal, or used to pick Coach or receipt questions. Dated thinking moments (provenance §7) stay as facts the student can point to.
+  - Elaboration is taken at face value. The Coach and the receipt's "where to ask" questions test the idea forward through one of the four pillars, grounded in course material (D-038); never "how did you think of this?"
+  - Coach outcomes (answered / revised / disagreed with a reason / declined) and the student's answer are recorded and shown as facts. Nothing grades whether an answer "resolved" the question: that would be a verdict (law 6); the teacher reads it.
+  - **OL-043 answer:** we don't estimate an AI proportion. What tells trails apart is how the student engages with pillar questions, and then the conversation with the teacher (law 5).
+- **Consequences:** provenance.md §5/§8 (two signals dropped), coach-helper.md §3, receipt.md §4, EXPECTATIONS E updated. OL-043 closed.

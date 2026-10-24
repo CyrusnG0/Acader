@@ -46,10 +46,12 @@ Where a line cites a code like `D13`, `9A` or `D-035`, the full reasoning is in 
 - [ ] A sentence that is ≥ 50% pasted never enters "linked by the student" by any link (D13).
 - [ ] A model-proposed link never makes a sentence traced; the mapper never links to source passages (D19).
 - [ ] Links accepted from map suggestions carry `suggestion_id` and show as a sub-count on the receipt (D12).
+- [ ] Links belong to paragraphs: typing or adding sentences in a linked paragraph never removes a link; a paragraph link alone never makes a sentence traced (D-045).
 
 ## E. Coach and Helper (coach-helper.md)
 
 - [ ] Every new idea gets the same treatment, whatever its origin; the Coach never asks where an idea came from (D-038).
+- [ ] Construction order (card before or after the paragraph) is never a signal, trigger or ratio; Coach answers are recorded as outcomes, never graded (D-046).
 - [ ] One pillar question per idea (reading, logic, writing or communication), grounded in the student's own sources or claims.
 - [ ] Never blocks writing, never interrupts, never timed; declining is allowed and recorded.
 - [ ] Budget: at most 1 unprompted question per 10 minutes and 6 per assignment, mapper findings included (17A).
@@ -71,7 +73,7 @@ Where a line cites a code like `D13`, `9A` or `D-035`, the full reasoning is in 
 - [ ] The editor is the anchor; the live map is the left outline; Coach and Helper are on the right; the reader replaces the map rail (1A).
 - [ ] Every string in the workspace.md §3 state table appears exactly as written.
 - [ ] "Show my trail" is off by default; it uses the engine's own bands and matches the L1 receipt (7A, D8).
-- [ ] Only the claim↔sentence highlight moves (150 ms); nothing the system adds animates, pulses or makes a sound (11A).
+- [ ] Only the claim↔paragraph highlight moves (150 ms); nothing the system adds animates, pulses or makes a sound (11A).
 - [ ] Writing is never blocked at any width or zoom level; below 900 px it switches to a one-column mode (15A).
 - [ ] Landmarks, F6 region cycling and a skip link exist; new suggestions and questions are never announced live (16A).
 - [ ] Targets are 44 px on touch and at least 24 px with a pointer; contrast ≥ 4.5:1; the focus ring is always visible.

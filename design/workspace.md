@@ -24,9 +24,9 @@ The student came to write, so the **editor is the anchor**. The live map stays i
 
 - **Order of attention:** (1) the draft, (2) the student's own claims, (3) the Coach.
 - **"Map" in v1 means this outline:** claims in the student's words, each listing its cards, sources and links; declared claims in their own style; unanchored claims shown as "needs a source". The graph view stays deferred (TODOS #7); the outline carries the same data.
-- **Two-way highlight:** selecting a claim highlights its sentences in the editor; placing the cursor in a sentence highlights its claim in the map.
+- **Two-way highlight:** selecting a claim highlights its paragraphs in the editor; placing the cursor in a paragraph highlights its claims in the map. Links belong to paragraphs, so editing inside one never breaks or stripes a link (D-045).
 - **Layout, not cards (10A):** the three columns are divided by 1px hairlines, never boxed panels. The only card shapes in the product are idea cards and the one Coach question.
-- **Motion (11A):** one authored motion only: the claim↔sentence highlight fades in over 150 ms (ease-out) when the student selects; instant under `prefers-reduced-motion`. Map suggestions, Coach questions and status lines appear with no animation, no pulsing badge and no sound.
+- **Motion (11A):** one authored motion only: the claim↔paragraph highlight fades in over 150 ms (ease-out) when the student selects; instant under `prefers-reduced-motion`. Map suggestions, Coach questions and status lines appear with no animation, no pulsing badge and no sound.
 - **The Door** is a top-bar button ("Bring in outside work"), one click away, never inside the editor.
 
 ## 2. Map suggestions (design review 4A, 5A)
@@ -37,9 +37,9 @@ The mapper (D-035) proposes meaning links on each 5-minute batch. The student de
 |---|---|---|
 | Waiting | One quiet line under the map header: "Map updates every few minutes." No spinner, no animation. | — |
 | Suggested | A dotted connector on the claim row, the label "suggested by the map, not checked", and two text buttons: **Yes, link it** · **Not this** | `map.suggestion` (chained; artifact_id + output_hash, D31; eng D3) |
-| Yes | Becomes "linked by the student, not checked" (band 4), counted on the receipt as "accepted from map suggestions" (eng D12). **Never traced.** | `map.answer` yes + claim mark `{claim_id, by: student}` via an editor step (eng D3) |
-| Not this | Gone. Not suggested again for that sentence unless you rewrite it. **Never shown on the receipt.** | `map.answer` no (eng D3); rejection keyed by (claim_id, normalised sentence hash) (eng D11) |
-| Stale | The sentence changed since the suggestion was made (its hash no longer matches at the suggestion's `doc_rev`, span mapped through later steps). It is not shown. | — (eng D14) |
+| Yes | Becomes "linked by the student, not checked" (band 4), counted on the receipt as "accepted from map suggestions" (eng D12). **Never traced.** | `map.answer` yes + paragraph link `{claim_id, by: student, suggestion_id}` via an editor step (eng D3, D-045) |
+| Not this | Gone. Not suggested again for that paragraph. **Never shown on the receipt.** | `map.answer` no (eng D3); rejection keyed by (claim_id, paragraph) (eng D11; exact key settled in M4m, D-045) |
+| Stale | The paragraph was deleted or split since the suggestion was made (mapped through later steps from the suggestion's `doc_rev`), or the student already linked it. It is not shown. | — (eng D14, D-045) |
 | Conflict | The student's own link always wins; the suggestion is dropped. | — |
 | Mapper down | The map simply stops adding suggestions. No error, no banner. | operator alert only |
 | Too many open | At most **3 unanswered suggestions** are shown at once; a newer one replaces the oldest, which expires silently. | — (eng D18) |
@@ -80,7 +80,7 @@ Tested at 1440, 1024 and 375 px plus 200% and 400% zoom (Playwright + axe, M5).
 ## 6. Keyboard and screen readers (design review 16A)
 
 - **Landmarks:** top bar = `banner` with `nav`; map = `complementary` "Your map"; editor = `main`; Coach/Helper = `complementary` "Coach". Skip link "Skip to my draft". **F6 / Shift+F6** cycle the regions.
-- **Map as a tree:** arrow keys move between claims and their cards; Enter highlights the claim's sentences in the editor. On a focused suggestion, **y** = Yes, link it and **n** = Not this (active only while that suggestion has focus, WCAG 2.1.4); the visible buttons do the same.
+- **Map as a tree:** arrow keys move between claims and their cards; Enter highlights the claim's paragraphs in the editor. On a focused suggestion, **y** = Yes, link it and **n** = Not this (active only while that suggestion has focus, WCAG 2.1.4); the visible buttons do the same.
 - **Quiet by default:** new map suggestions and Coach questions are **never announced live**. Their count is in the region name ("Your map, 2 suggestions", "Coach, 1 question"). Only the student's own actions get polite announcements ("Card saved", "Submitted").
 - **Targets** 44 px on touch, at least 24 px with a pointer. **Contrast** ≥ 4.5:1 for text and band labels (the pale bands rely on pattern + label, 12A). **Focus ring** 2 px accent, always visible, never removed.
 - Dictation and assistive input are `typed` (privacy.md §5); no step requires speech, drag or a timer.

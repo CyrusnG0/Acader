@@ -33,9 +33,20 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | F-004 | Add an OpenAI key for the gstack designer (`$D setup`) so mockups can be generated | founder |
 | F-005 | Decide whether the DeepSeek worker may read the repo (it sends code and docs to a China-based provider; no secrets or student data are in the repo) | done (D-039) |
 
-## Next waves (detail is added by the checker when M0 is done)
+## Next: M1 (build-plan.md, ~10-29 → 11-03; written 2026-10-24 after D-041…D-046)
 
-- **M1:** golden YAML + Playwright generator + ingest builder; events (append, staging, 5-min merge, seal, verify); replay + mark check; L1 provenance incl. D12/D13 band rules; receipt compiler + UI + chain view + wording filter + engine stamp.
+| ID | Task | Read first | Done when (EXPECTATIONS) | Depends on | Model | Owner | Status |
+|---|---|---|---|---|---|---|---|
+| T-011 | Paragraph links + node set: replace the inline `claim` mark with a paragraph `links` attribute `[{claim_id, by, suggestion_id?}]`; add the D-044 node set (headings 1–3, lists, blockquote, hard break, `em`, `strong`); link rules (split keeps both, join keeps both, new empty paragraph none, internal paste keeps, typing never changes links); regenerate the S1 parity fixtures (JS and Python `doc_hash` equal) | event-log.md §4, §5; D-044, D-045 | A; C (typed rules); D (paragraph links line) | — | O+S | | ready |
+| T-012 | Events for M1: append API, staging table + one merged `editor.batch` per 5-minute window (timestamps rounded down), checkpoints with `doc_hash`, submit with idempotency key → seal, post-seal whitelist enforced by the store, `verify` endpoint | event-log.md §3, §5, §6; D-041 | A; C (5-min merge, seal, verify) | — | S | | ready |
+| T-013 | Replay + mark check at compile: rebuild the doc from checkpoint + steps (prosemirror-py), replay-mismatch path (D28), check every non-typed run against its origin; a failed run is untraced | provenance.md §4.1; event-log.md §5 | A; C (mark check) | T-011, T-012 | S | | blocked |
+| T-014 | L1 provenance: sentence split, origin mix, chains through paragraph links, bands in order (D13, D27, D-045), receipt facts §7 (no construction-order ratio, D-046), thresholds into the engine stamp | provenance.md §3–§7 | A; C; D | T-013 | O+S | | blocked |
+| T-015 | Golden YAML scripts + Playwright generator + ingest builder (D19); 10 golden sessions incl. forged quote and coach marks and an elaborating honest writer | evaluation.md §2, §2a | A; C | T-008, T-011, T-012 | O+S | | blocked |
+| T-016 | Receipt compiler: JSON with integer counts, `event_ids` = seq, `receipt_hash`; pillar-form question rules with L3e stubbed and "questions pending" mode; wording filter; engine stamp (lock hash, editor pair) | receipt.md §4–§6; D-041, D-044, D-046 | A; B; H (data lines) | T-014 | O+S | | blocked |
+| T-017 | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H; I-M1 | T-010, T-016 | O | | blocked |
+
+## Next waves (detail is added by the checker when M1 is done)
+
 - **M2:** S3 run; L3 jobs with stored outputs; preview; job queue; release rule + cap; walkthrough + blind test.
 - **M3–M4:** editor, reader, cards, workspace layout and states (workspace.md), Door, Coach (one "new idea" case, four pillars), leak sets.
 - **M4b, H, M4m, M5:** see build-plan.md.

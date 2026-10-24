@@ -58,7 +58,9 @@ Cases A (blank page), D (weak reasoning) and E (confident mode) are deferred to 
 
 **Budget.** At most one unprompted question per 10 minutes of writing and at most 6 per assignment before submit. Questions appear in the side panel with a static badge (no pulse, no sound, no animation; design review 11A) and never interrupt typing. **One budget for all questions (design review 17A):** mapper findings (D-035; only `unconnected_paragraph` and `claim_without_source`, recorded as `map.finding`, eng v2 D15) are candidates in the Coach's queue, not a second stream. When a slot opens the Coach asks the highest-priority candidate (case B or C first, then mapper findings). Unasked findings may still feed the receipt's 2–3 "where to ask" questions at compile. The student can always decline; declining is a fact on the receipt. Case C nudges and the declare-at-paste prompt sit behind feature flags so they can be switched off mid-pilot without a deploy.
 
-**Outcomes.** `answered`, `revised`, `disagreed` (with a reason) or `declined`. The answer box records pasted characters; only the typed parts of an answer count as "traced to a Coach exchange" when moved into the draft (D26).
+**Elaboration and order (D-046).** The Coach takes elaboration at face value and tests the idea forward with a pillar question; it never asks how the student thought of it. It never uses which came first (card or paragraph) as a trigger or a signal.
+
+**Outcomes.** `answered`, `revised`, `disagreed` (with a reason) or `declined`. They are facts; nothing grades whether an answer was good enough (law 6; the teacher reads the answer). The answer box records pasted characters; only the typed parts of an answer count as "traced to a Coach exchange" when moved into the draft (D26).
 
 ## 4. Grounding (law 2)
 

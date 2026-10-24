@@ -41,7 +41,7 @@ One log per (student, assignment). It opens when the student accepts consent for
 
 - `seq` is assigned by the server, gap-free per log. Appends are one at a time per log: `BEGIN IMMEDIATE`, read head, insert, with a unique `(log_id, seq)` (CEO-16). `client_seq` lets the server drop duplicates on retry.
 - `ts` is server time. For `editor.batch` it is **rounded down to 5 minutes**. Other events keep seconds (D12). Client timing is never stored.
-- `hash = sha256(prev_hash || canonical_json(envelope without hash))`. Canonical JSON: UTF-8 (no ASCII escaping), sorted keys, no whitespace, no floats in payloads. The genesis event uses `prev_hash = sha256("writing-room/" + log_id)`.
+- `hash = sha256(prev_hash || canonical_json(envelope without hash))`. Canonical JSON: UTF-8 (no ASCII escaping), sorted keys, no whitespace, no floats in payloads. The genesis event uses `prev_hash = sha256("writing-room/" + log_id)`. `prev_hash` enters the hash as its lowercase hex text (UTF-8), and an event's id is its `seq` (D-041).
 
 ### Event types
 
@@ -72,32 +72,40 @@ One log per (student, assignment). It opens when the student accepts consent for
 | `resubmit.open` | teacher | reason | teacher, if allowed |
 | `receipt.issued` | system | receipt_id, receipt_hash, seal_seq, version | compiler |
 | `note.add` | student | span, text, after_release: bool | student receipt view |
-| `link.add` | student | sentence span, claim_id (never changes bands, CEO-17) | student receipt view |
+| `link.add` | student | paragraph, claim_id (never changes bands, CEO-17) | student receipt view |
 | `record.withdrawn` | student | reason (optional) | delete after submit |
-| `map.suggestion` | system (mapper) | suggestion_id, doc_rev, span, sentence_hash, claim_id, artifact_id, output_hash (D-035; eng review v2 D3, D14) | mapper job |
+| `map.suggestion` | system (mapper) | suggestion_id, doc_rev, paragraph, paragraph_hash, claim_id, artifact_id, output_hash (D-035; eng review v2 D3, D14; per paragraph since D-045) | mapper job |
 | `map.finding` | system (mapper) | finding_id, kind: `unconnected_paragraph \| claim_without_source`, span, claim_id (optional), artifact_id, output_hash. Never about a sentence with a `map.answer` no (eng review v2 D15) | mapper job |
-| `map.answer` | student | suggestion_id, answer: `yes \| no`. A yes also applies the claim mark `{claim_id, by: student}` through a normal editor step | live map |
+| `map.answer` | student | suggestion_id, answer: `yes \| no`. A yes also adds the link `{claim_id, by: student, suggestion_id}` to the paragraph through a normal editor step (D-045) | live map |
 
 ## 4. Marks in the editor
 
-Every character carries exactly one `origin` mark `{kind, ref}`. Linked text also carries a `claim` mark `{claim_id, by}` (D17). Both are defined in `web/schema.json`, which the Python replay also loads (D33).
+Every character carries exactly one `origin` mark `{kind, ref}`. **Links to claims belong to paragraphs, not words (D-045):** a paragraph node carries `links: [{claim_id, by, suggestion_id?}]`, and a paragraph may link to more than one claim. Both are defined in `web/schema.json`, which the Python replay also loads (D33).
+
+**Nodes (D-044):** `doc`, `paragraph`, `heading` (levels 1–3), `bullet_list`, `ordered_list`, `list_item`, `blockquote`, `hard_break`, `text`; formatting marks `em` and `strong`. No tables, images, code, links or footnotes in v1. A new node or mark is a schema bump and regenerates the golden logs (D33).
 
 | `origin.kind` | `ref` | When it is applied |
 |---|---|---|
-| `typed` | — | Text the student types, including IME, dictation and autocorrect. `input_kind` (keyboard, ime, dictation, replacement) is kept as counts for accessibility and facts only |
+| `typed` | — | Text the student types, including IME, dictation and autocorrect. `input_kind` (keyboard, ime, dictation, replacement) is kept as counts for accessibility and facts only. It is what the browser reports: dictation can't be told apart, and extension edits that bypass `beforeinput` count as `keyboard`, so the replacement count is a lower bound (D-044) |
 | `paste_ext` | paste_id | Pasted text whose clipboard has no platform marker, and pasted parts of cards or Coach answers moved into the draft (D26) |
 | `quote` | block_id | "Quote this passage" from the reader |
 | `helper` | helper_serve_id | Helper output (mechanics only: references, formatting) |
 | `coach` | q_id | The student's own typed answer to a Coach question, moved into the draft |
 | `import` | import_id | Text from a declared import |
 
-| `claim.by` | Meaning |
+| `link.by` | Meaning |
 |---|---|
-| `student` | The student linked this text to a claim. Shown as "linked by student, not checked" unless L3b confirms it (CEO-17, D27). When the link came from a map suggestion (a `map.answer` yes) the mark also carries `suggestion_id` (schema bump; eng v2 D12) |
-| `coach` / `import` | The text arrived from a Coach answer or import that carries the claim |
+| `student` | The student linked this paragraph to a claim. Shown as "linked by student, not checked" unless L3b confirms it (CEO-17, D27). When the link came from a map suggestion (a `map.answer` yes) it also carries `suggestion_id` (eng v2 D12) |
+| `coach` / `import` | The paragraph was created from a Coach answer or an import that carries the claim |
+
+**Link rules (D-045):**
+- Typing, rewording or adding sentences inside a linked paragraph never changes its links. Natural elaboration stays with its claim.
+- Links change only by an explicit student action (link, unlink, accept a map suggestion) or by structure: splitting a paragraph keeps the links on both halves; a new empty paragraph has none; joining two paragraphs keeps the links of both.
+- No link ever breaks because of what a sentence means; judging that would need a model to rule on the student's text. Where a sentence goes beyond its claim, L3b (if on) lists the `added` proposition (provenance §5).
+- For banding, a paragraph link alone never makes a sentence traced, whatever its `by` (provenance §6).
 
 **Rules:**
-- **Typed text is always `typed`.** Marks are `inclusive: false`, and an input plugin sets `origin=typed` on every text input, including typing inside or at the edge of a marked span (D21).
+- **Typed text is always `typed`.** Origin marks are `inclusive: false`, and an input plugin sets `origin=typed` on every text input, including typing inside or at the edge of a marked span (D21).
 - **Replacements** (spellcheck, autocorrect, browser extensions such as Grammarly) are `typed` with `input_kind: replacement`. That count is a fact on the receipt, never a band.
 - **Internal copy and paste keeps marks.** On copy the editor writes `application/x-writing-room-slice` with the marks and the log_id. A paste with that type and a matching log_id restores the marks (`internal`); anything else is `paste_ext`.
 - **Moves, drag-and-drop inside the document, and undo/redo** keep marks. Drag-and-drop from outside is `paste_ext`.
@@ -110,6 +118,7 @@ Every character carries exactly one `origin` mark `{kind, ref}`. Linked text als
 - The editor sends a batch every ~2 s of activity, on blur, and before submit. The server **acks it into a staging table** (outside the chain, restart-safe).
 - The server appends **one merged `editor.batch` per 5-minute window**, and at every checkpoint and submit (D30). The chain therefore holds no per-burst activity, only what changed in each 5-minute period.
 - Full document snapshots are stored only at `doc.checkpoint` (at most one per 5 minutes of activity, and at submit). Any `doc_rev` can be rebuilt by replaying steps from the nearest checkpoint.
+- **Steps and hashes (D-044):** the step log holds only the primitive step types both replays know (the editor flattens `markSet`; replay rejects any other type). `doc_hash = sha256(canonical_json(doc.toJSON()))`, using the chain's canonical JSON. The editor (`@tiptap/pm` 3.32.0) and replay (prosemirror-py 0.6.1) are pinned as a pair, recorded in the engine stamp; upgrading either requires the S1 parity fixtures (and, from M3, the Chromium pass in CI) to pass again.
 - A background job **replays steps at every checkpoint** with prosemirror-py and compares the result with the client's `doc_hash`. A mismatch alerts the operator; the student is unaffected (D6, D28).
 - Rough volume: a 1,500-word essay is a few thousand steps, well under 5 MB per log **[ASSUMPTION; measure in S1]**.
 - **Single writer.** Only the device holding the edit lease may send (heartbeat 30 s, expiry 90 s); other tabs are read-only with "edit here instead" (D10). A device that lost its lease while offline never applies its queued edits. The student sees that text with "Save as a file" or "Bring it in through the Door" (D32).
@@ -120,6 +129,7 @@ Every character carries exactly one `origin` mark `{kind, ref}`. Linked text als
 - At submit the server flushes staging, writes `doc.checkpoint` and `submit`. **The hash of the `submit` event is the seal.** It is emailed to the student and printed on the receipt (D8).
 - After a seal, only these may append: `receipt.issued`, `note.add`, `link.add`, `record.withdrawn`, `resubmit.open`. An editor batch after submit gets 409 unless a resubmission is open. **Mapper jobs** (D-035) for a log are cancelled at submit; a mapper result (suggestion or finding) that finishes after the seal is discarded, never appended, and counted on the operator page (eng review v2 D4).
 - `verify(log, seal)` recomputes every hash from genesis to the seal, checks the post-seal events against the whitelist, checks that each receipt line's `event_ids` exist at or before its `seal_seq` (or are marked post-seal notes), and checks stored AI output hashes and `receipt_hash`. A CLI and an endpoint expose it. Spike **S5** tests tampering, including an edit after the seal.
+- **The seal covers the record up to submission (D-041).** Notes and links added after it are chained and dated, so a gap in the middle shows, but dropping the newest ones does not. "About this receipt" says so. No anchoring of the post-seal head in v1.
 - The chain is evidence against after-the-fact editing. It is not evidence about what happened outside the platform.
 
 ## 7. Who can read what

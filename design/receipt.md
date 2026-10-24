@@ -51,8 +51,8 @@ Clicking any sentence opens its chain, left to right:
 
 - Each step shows its event ID and date + hour.
 - A broken chain shows where it breaks, in plain rounded words (design review 20A): "no card links here", "came in by paste on 2 Nov (140 words); about half reworded since" (rounded to none / some / about half / most / all), "pasted into a Coach answer", "this label couldn't be confirmed against its source". Exact figures stay in the JSON and the export.
-- Link names (design review 4A) say who linked and whether it was checked: L3b-confirmed links read **"checked against the source"**; student-only links read **"linked by the student, not checked"**, or "linked by the student from a map suggestion" when the mark carries `suggestion_id` (eng review v2 D12; reopens 4A for accepted suggestions only). Mapper suggestions (D-035) **never appear in the bars or the chain**; "About this receipt" shows only their count ("12 links suggested by the map, not checked; none of them counts as traced").
-- "About this receipt" shows the seal ("Record sealed. Check: `verify 3f9a…`"), what this record can't see (§2 item 10), the engine stamp (D20) and, if it applies, "built from the browser's copy (replay mismatch)" (D28).
+- Link names (design review 4A) say who linked and whether it was checked: L3b-confirmed links read **"checked against the source"**; student-only links read **"linked by the student, not checked"**, or "linked by the student from a map suggestion" when the link carries `suggestion_id` (eng review v2 D12; reopens 4A for accepted suggestions only). Mapper suggestions (D-035) **never appear in the bars or the chain**; "About this receipt" shows only their count ("12 links suggested by the map, not checked; none of them counts as traced").
+- "About this receipt" shows the seal ("Record sealed at submission. Check: `verify 3f9a…`" and "Notes added after submission are dated, not sealed.", D-041), what this record can't see (§2 item 10), the engine stamp (D20) and, if it applies, "built from the browser's copy (replay mismatch)" (D28).
 
 ## 4. How the questions are chosen
 
@@ -67,6 +67,8 @@ Candidates, in priority order:
 
 At most 3, at most one per paragraph. Generated with L3e under these rules:
 - About **the idea and the student's choices**, never about the trace ("How does renal clearance connect to your dosage point?", never "Did you write this?").
+- **One of the four pillars** (reading, logic, writing, communication; coach-helper §3), looking forward: test the idea against a reading, a boundary condition, a qualifier or a sceptical reader. Never "how did you think of this?" Elaboration is taken at face value (D-046).
+- Never built from construction order (which came first, card or paragraph), and never from a judgment of whether a Coach answer was good enough (D-046).
 - Must cite grounding: the span plus a block or claim ID. No grounding → rejected (law 2).
 - Answerable in about 30 seconds by someone who did the work.
 - Passes the wording filter (§5) and the leak check.
@@ -92,14 +94,17 @@ Compiled to JSON first, then rendered as HTML with a print stylesheet. **The rec
   "summary": {"text": "...", "event_ids": [...]},
   "questions": [{"q": "...", "span": {"from": 812, "to": 1004}, "why": "untraced_claim",
                  "grounding": ["b81", "c3"], "event_ids": [...], "artifact_ids": ["a_…"]}],
-  "bands": {"by_words": {"traced_source": 0.58, "traced_coach": 0.08, "declared": 0.10, "student_linked": 0.06, "untraced": 0.18},
+  "bands": {"total_words": 1500,
+            "by_words": {"traced_source": 870, "traced_coach": 120, "declared": 150, "student_linked": 90, "untraced": 270},
             "by_claims": {"traced_source": 7, "traced_coach": 1, "declared": 1, "student_linked": 1, "untraced": 2}},
   "moments": [...], "coach": {...}, "reading": {...}, "declared": {...}, "facts": {...},
   "inferred_links": 5, "map_suggestions": 12, "blind_spots": ["retyped", "offline", "undeclared_outside", "understanding"],
-  "engine": {"version": "...", "git_sha": "...", "flags": {"l3b": false}, "thresholds": {...},
+  "engine": {"version": "...", "git_sha": "...", "lock_hash": "...", "editor_pair": "tiptap-pm 3.32.0 / prosemirror-py 0.6.1", "flags": {"l3b": false}, "thresholds": {...},
              "models": {"receipt_question": "deepseek/deepseek-chat"}, "prompt_hashes": {...}}
 }
 ```
+
+**No floats anywhere in the receipt JSON** (D-041): shares are integer word counts and the renderer rounds, so `receipt_hash = sha256(canonical_json(receipt))` is well defined. An id in `event_ids` is the event's `seq`.
 
 Every element carries `event_ids`; AI-derived elements also carry `artifact_ids`. `verify` checks both. Same log + same engine stamp + stored outputs → a byte-identical receipt (D20, D31).
 

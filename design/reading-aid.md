@@ -27,7 +27,9 @@ Licensing **[ASSUMPTION]**: we parse only teacher uploads under the school's lic
 
 Each source becomes **blocks**: `{block_id, page, bbox, section, kind, text}`.
 - `kind` ∈ abstract, introduction, method, results, table, figure_caption, discussion, limitation, conclusion, reference, other.
-- Parser: chosen by spike **S2** among Docling, GROBID and PyMuPDF (text only, `kind` from headings by rule). It runs **hosted, in the jobs loop**.
+- Parser: **Docling** (spike S2, D-043): OCR off, table structure on, models baked into the image, one converter per worker, one parse at a time. It runs **hosted, in the jobs loop**. No PyMuPDF in product code (AGPL-3.0). GROBID for reference metadata is deferred (TODOS).
+- **Text-layer check first:** pypdfium2 (a Docling dependency); fewer than 50 characters per page → status "scan", no model loaded.
+- **Host:** at least 8 GB RAM. Before M2, measure Docling's peak memory and time a 300-page reading on the real host; if it misses the 300 s cap, parse in page ranges.
 - **Caps:** 50 MB, 300 pages, 300 s per parse. Over the cap → rejected with the limit shown.
 - **Status shown to the teacher per reading:** processing, ok, scan (no text layer: "This PDF is a scan; upload a text version"), failed.
 - **Immutable after first student open.** A re-upload creates a new version; existing anchors keep pointing at the old one.

@@ -16,9 +16,9 @@ Receipt and chain view first, on golden sessions; then the writing flow that fee
 - receipt + chain view + questions; engine stamp; stored AI outputs
 - student preview: spans + facts, no question text
 - release at the latest of deadline, submit + 24 h, questions compiled, capped at +48 h
-- editor with origin and claim marks, input plugin, client queue, edit lease
+- editor with origin marks and paragraph links (D-045), input plugin, client queue, edit lease
 - teacher readings with hosted parsing (caps, status, immutability); pins by section kind
-- idea cards + anchors (paste-tracked); claim list with claim marks
+- idea cards + anchors (paste-tracked); claim list with paragraph links
 - the Door (text and files only); Coach cases B and C (paste-tracked answers)
 - leak check (one module; adversarial set on both backends); wording filter
 - roster + scanner-safe magic link; consent; export/delete
@@ -37,7 +37,7 @@ Build days are days with Claude; founder time for outreach, approvals and the wa
 |---|---|---|---|---|
 | **R** | 10-23 | 0.5 | /plan-ceo-review + /plan-eng-review; stack locked (OL-008) | Done 2026-10-23 |
 | **M0** | 10-24 → 10-28 | 4.75 (was 3.25) | Scaffold + CI (incl. the kit's 29 tests, D22). `web/schema.json`. LLM wrapper `complete()` with stub, error classes, boot ping, backend-2 slot. **S1** first (+ widened cases, Python replay parity: D6, D17, D21, D33), then S5 and S2 (+ a scan). Preregister **S3** (≥ 40 pairs) and S4. Design the walkthrough + blind test. Outreach and the processor-approval request | S1 go/no-go written |
-| **M1** | 10-29 → 11-03 | 6.25 (was 3.75) | + Golden YAML scripts, Playwright generator and ingest builder (D19). `engine/events`: append, staging + 5-min merge, seal whitelist, verify (D8, D30). Replay + mark check (D5, D29). L1 provenance with claim marks and the student-linked band (D17, D27). Receipt compiler + UI + chain view + wording filter + engine stamp (D20) | 10 golden receipts render (§ evaluation 2); a person has read them |
+| **M1** | 10-29 → 11-03 | 6.25 (was 3.75) | + Golden YAML scripts, Playwright generator and ingest builder (D19). `engine/events`: append, staging + 5-min merge, seal whitelist, verify (D8, D30). Replay + mark check (D5, D29). L1 provenance with paragraph links (D-045) and the student-linked band (D17, D27). Receipt compiler + UI + chain view + wording filter + engine stamp (D20) | 10 golden receipts render (§ evaluation 2); a person has read them |
 | **✓ 10-30** | checkpoint | — | Named teacher + assignment window? (CEO-11) | Branch on the window start (CEO-23) |
 | **M2** | 11-04 → 11-07 | 3.5 (was 2.75) | **Run S3.** L3b if it passes. L3a/c/e with stored outputs (D31). Preview without question text. Bounded job queue (D23), checkpoint replay jobs + fallback (D28), release rule + cap (D7). **Nursing walkthrough with the blind test and the hard case** | Walkthrough + blind-test result in UPDATE_LOG |
 | **~11-08** | milestone | — | **Engine + receipt + walkthrough ready** | — |

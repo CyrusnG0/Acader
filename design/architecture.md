@@ -8,7 +8,7 @@ Loops: OL-008 (closed by this doc), OL-031, OL-035.
 
 ```
  Browser (student / teacher)
-   editor (TipTap: origin marks + claim marks, input plugin) · reader (PDF.js) · cards/claims (paste-tracked, D26)
+   editor (TipTap: origin marks + paragraph links, input plugin) · reader (PDF.js) · cards/claims (paste-tracked, D26)
    Coach/Helper panel · Door (text + files, never fetches URLs, CEO-9) · receipt (teacher view, student preview)
       │ steps + marks, batched; client queue in IndexedDB; edit lease (D10)          ▲ receipt JSON
       ▼                                                                              │
@@ -29,7 +29,7 @@ Loops: OL-008 (closed by this doc), OL-031, OL-035.
 
 | Component | Responsibility | Spec |
 |---|---|---|
-| **Editor** | Rich-text writing; an origin mark on every character and a claim mark on linked text; input plugin so typed text is always `typed`; emits steps | [event-log.md](event-log.md) §4 |
+| **Editor** | Rich-text writing; an origin mark on every character and links to claims on paragraphs (D-045); input plugin so typed text is always `typed`; emits steps | [event-log.md](event-log.md) §4 |
 | **Reader** | PDFs and text sources with block highlights; pins by section kind; view and anchor events | [reading-aid.md](reading-aid.md) |
 | **Cards and claim map** | Idea cards (paste-tracked) anchored to blocks; claim nodes; claim links as marks | [provenance.md](provenance.md) §3 |
 | **Door** | Declared import of pasted text or files; URLs stored, never fetched | [coach-helper.md](coach-helper.md) §5 |
@@ -70,8 +70,8 @@ Loops: OL-008 (closed by this doc), OL-031, OL-035.
 
 - **Event schema**: versioned (`schema: 1`), defined in [event-log.md](event-log.md) §3. One parser for every consumer.
 - **Editor schema**: `web/schema.json`, shared by the editor and the Python replay. Changing it regenerates golden logs in CI (D33).
-- **Mark kinds**: origin kinds and the claim mark are a closed list in [event-log.md](event-log.md) §4. Adding a kind is a schema bump.
-- **LLM boundary**: `complete(task, messages, schema) -> dict`. Tasks: `claim_extract`, `claim_compare`, `contradiction`, `coach_question`, `receipt_question`, `limitation_tag`, `leak_check`, `map_suggest` (D-035; output = links only, never prose; each link must name an existing claim_id and a span inside the changed paragraphs, else it is dropped, like Coach grounding; uses the configured backend, model choice settled by the D7 eval). Each has a pydantic output schema and a stub fixture. Errors: `LLMTimeout`, `LLMRateLimited`, `LLMAuth`, `LLMRefusal`, `LLMSchema` (D13). A startup ping checks each configured backend.
+- **Mark kinds**: origin kinds, the node set and the paragraph `links` attribute are a closed list in [event-log.md](event-log.md) §4. Adding a kind is a schema bump.
+- **LLM boundary**: `complete(task, messages, schema) -> dict`. Tasks: `claim_extract`, `claim_compare`, `contradiction`, `coach_question`, `receipt_question`, `limitation_tag`, `leak_check`, `map_suggest` (D-035; output = links only, never prose; each link must name an existing claim_id and one of the changed paragraphs, else it is dropped, like Coach grounding; uses the configured backend, model choice settled by the D7 eval). Each has a pydantic output schema and a stub fixture. Errors: `LLMTimeout`, `LLMRateLimited`, `LLMAuth`, `LLMRefusal`, `LLMSchema` (D13). A startup ping checks each configured backend.
 - **`shared/llm.py`**: behaviour unchanged (`chat`, `parse_json`, `NoKey/Upstream/BadOutput`, env vars); only optional keyword params may be added. The kit + web tests (29) run in CI (D22).
 - **Receipt JSON**: data first, then rendered; every line cites `event_ids` (and `artifact_ids` for AI-derived lines); carries the `engine` stamp. See [receipt.md](receipt.md) §6.
 

@@ -12,6 +12,7 @@ Vocabulary for The Writing Room (current direction, D-024). Earlier terms are at
 | **Coach** | The voice that asks questions that make the student's idea stronger, grounded in the sources, lecture and the student's own trail. |
 | **Mapper** | Background role (not the Helper or Coach) that runs a small model on each batch of changes and proposes sentence-to-claim links on the live map (never links to source passages in v1; eng v2 D19). It maps meaning, never trust: its links show to the student as "suggested by the map, not checked", never raise a band, and appear on the receipt only as a count. Its findings reach the student as Coach questions (D-035). |
 | **Live map** | The student's claim map, built bottom-up while they write. The product's main screen; the receipt is its snapshot at submission (D-035). |
+| **Paragraph link** | A student's link from a paragraph to one of their claims (D-045). Every sentence in the paragraph shares it, so editing or elaborating never cuts it. Shown as "linked by the student, not checked"; never makes text traced by itself. |
 | **Four pillars** | The four skills the Coach's questions train: reading, logic, writing, communication. One pillar question per new idea (D-038). |
 | **Coach cases A–E** | When the Coach acts: A blank page, B arrived with outside AI, C untraced text, D weak reasoning, E confident mode. |
 | **Coach outcome** | How a question ended: answered, revised, disagreed (with a reason), declined. |

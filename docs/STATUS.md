@@ -1,6 +1,6 @@
 # Current Status
 
-**Last updated:** 2026-10-24 (M0 code done: T-001…T-006 merged; CI green; D-035 → D-038 this week)
+**Last updated:** 2026-10-24 (M0 code done; founder answered the spike decisions: D-041…D-046; M1 tasks written, T-011 and T-012 launched)
 **Phase:** design finished and reviewed; **building starts with M0**. Work runs as one Opus lead per task, with Sonnet/DeepSeek workers, and one checker conversation (CLAUDE.md §8).
 **Code in repo:**
 - `writing-room-kit/`: simulated experiments v0.1–v0.5 and the hosted static demo (`web/`), **frozen**; 29 tests pass with `ROOM_LLM=stub` (run 2026-10-23)
@@ -20,10 +20,13 @@ A writing platform where the process is the evidence. The student writes beside 
 - **D-036 (design review, 3/10 → 7/10):** [design/workspace.md](../design/workspace.md) (layout, states, access); receipt first screen, one-hue bands, P-15 withdrawal wording.
 - **D-037 (eng review v2, clean):** the mapper is safe to build: chained events, pasted text can't enter the student-linked band, consent and flag fixed per record, eval with recall floor and hold-out; M4m after H; pilot tests the student-built outline.
 - **D-038:** every new idea gets the same Coach treatment: one pillar question, never blocking.
+- **D-041…D-044:** spike outcomes accepted (chain details and integer receipt numbers; LLM boundary details; Docling as the parser; node set and replay rules).
+- **D-045:** links to claims belong to **paragraphs**, not words: editing or elaborating inside a linked paragraph never cuts a link.
+- **D-046:** construction order (card first or paragraph first) is never a signal; elaboration is questioned forward through the pillars; Coach answers are never graded. OL-043 closed.
 
 ## Next action (do this first)
-**Leads:** T-001 is done. Ready now, in parallel: M0 code exit met (scaffold + CI, schema, `complete()`, S1 written). Left in M0: T-007…T-010. Spike S2 recommends Docling (founder to decide). M1 tasks get written once the founder answers the proposed decisions (receipt numbers, node set). T-004 waits for T-002. Pass [EXPECTATIONS.md](../EXPECTATIONS.md) and write a handoff.
-**Founder:** F-001 (schedule option, build-plan §2a), F-002 (named teacher by 10-30), (F-005 approved, D-039; PD-1/PD-2 accepted, D-040).
+**Leads:** M1 is on the board ([TASKS.md](TASKS.md)). T-011 (paragraph links + node set) and T-012 (events) are running in parallel; T-013 → T-014 → T-016 follow. T-015 (golden sessions) waits on T-008; T-017 (receipt UI) waits on T-010 (DESIGN.md). Pass [EXPECTATIONS.md](../EXPECTATIONS.md) and write a handoff.
+**Founder:** F-001 (schedule option), F-002 (named teacher by 10-30); say when to launch T-008/T-009, name a second labeller for T-007, and sit in on T-010 (/design-consultation).
 
 ## Where to read
 - Product: [PRODUCT.md](../PRODUCT.md) §5–7
@@ -41,8 +44,6 @@ A writing platform where the process is the evidence. The student writes beside 
 - OL-036: no committed pilot class (deadline 10-30).
 - OL-037: consent, provider terms, school approval.
 - OL-026: ethics approval (pilot-gate item).
-- OL-043: if guidance makes every trail look alike, what else estimates AI involvement?
-- OL-035: closes after spike S5.
 - OL-013 / OL-014: demand evidence and a named champion.
 
 ## Blockers

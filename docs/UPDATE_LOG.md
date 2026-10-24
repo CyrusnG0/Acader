@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: founder answers on the spike decisions; links per paragraph; M1 wave
+**Summary:** The founder accepted the 21 proposed decisions from T-002…T-006 except S1 PD-S1-2 (typed words inside a linked sentence lose the link). Replaced by D-045: links belong to paragraphs, so editing or elaborating never cuts a link; a paragraph link alone never makes text traced and D13 still holds per sentence. The founder also rejected a "source-first ratio" (fakeable by a scripted outside-AI workflow): D-046 drops construction order as a signal, has elaboration questioned forward through the pillars, and records Coach answers without grading them. M1 tasks T-011…T-017 written; T-011 and T-012 launched.
+**Files touched:** docs/DECISIONS.md (D-041…D-046), design/event-log.md, provenance.md, receipt.md, workspace.md, coach-helper.md, reading-aid.md, architecture.md, build-plan.md, design/README.md, EXPECTATIONS.md (C/D/E/G), TODOS.md (#12 GROBID), docs/GLOSSARY.md, docs/OPEN_LOOPS.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md
+**Loops:** closed OL-043 (D-046), OL-035 (S5 + D-041)
+**Decisions:** D-041, D-042, D-043, D-044, D-045, D-046
+**Next:** review T-011 and T-012 handoffs; founder on F-002 and T-008/T-009/T-010
+
 ## 2026-10-24 — T-004 (spike S1) checked and merged; M0 code exit met
 **Summary:** Spike S1 is GO: typed text is always `typed` (inside and at span edges, keyboard/IME/replacement/extension edits), external paste and drop are `paste_ext` with forged marks stripped, internal copy/paste, drag and undo/redo keep marks, and prosemirror-py replays to the same `doc_hash` as the browser (28 jsdom + 14 Chromium cases). Fixed on the way: ProseMirror undo emits `markSet` steps prosemirror-py lacks; the editor flattens them before recording. Checker: fresh venv from the lock, prototype 200, kit 29, web 63 passed. With T-001…T-006 done, the M0 code exit in EXPECTATIONS I is met.
 **Files touched:** prototype/web/src/editor/, prototype/server/engine/replay/, prototype/spikes/S1/, prototype/fixtures/replay/, tests, prototype/web/package.json (TipTap 3.32.0, prosemirror-model 1.25.12), prototype/pyproject.toml + requirements.lock (prosemirror 0.6.1), docs/handoffs/2026-10-24-T-004-spike-s1.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md

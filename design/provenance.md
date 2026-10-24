@@ -28,28 +28,28 @@ Source ─< Block {page, kind, bbox, text}
 IdeaCard {text (student's words, paste-tracked)} ─ anchor ─> Block
 ClaimNode {text (student's words)} ─ supported_by ─> IdeaCard | DeclaredClaim
 DeclaredClaim {text (import's words), import_id}
-Sentence {range in final doc, origin mix, claim marks} ─ expresses ─> ClaimNode
+Sentence {range in final doc, origin mix, paragraph links} ─ expresses ─> ClaimNode
 Chain(sentence) = Sentence → ClaimNode → IdeaCard → Block      (or broken at the first missing link)
 ```
 
 - The **claim map** is the student's own mind map: claim nodes in their words, linked to cards and to each other.
-- A **sentence→claim link** is a `claim` mark on the words (D17), so it moves with edits. A sentence's claim is the claim mark covering most of its characters; ties list both. `claim.by = student` means the student linked it; `coach`/`import` means the text arrived carrying the claim.
+- A **link to a claim belongs to the paragraph** (D-045; event-log §4): every sentence in a paragraph shares the paragraph's links, so typing, rewording or adding elaboration never cuts a link. `by = student` means the student linked it; `coach`/`import` means the paragraph was created from a Coach answer or import carrying the claim.
 
 ## 4. Pipeline
 
 | Layer | What | Runs | Cost |
 |---|---|---|---|
-| **L0 capture** | Events, origin and claim marks | Browser → staging → chain | ~0 |
-| **L1 deterministic** | Replay steps (prosemirror-py); **mark check** (§4.1); sentence split; origin mix per sentence; chains from claim marks; reading facts; paste stats; Coach outcomes; set-asides | engine/, plain code | ~0 |
+| **L0 capture** | Events, origin marks and paragraph links | Browser → staging → chain | ~0 |
+| **L1 deterministic** | Replay steps (prosemirror-py); **mark check** (§4.1); sentence split; origin mix per sentence; chains from paragraph links; reading facts; paste stats; Coach outcomes; set-asides | engine/, plain code | ~0 |
 | **L3b claim compare** | Only if S3 passed. For each flagged sentence: list its propositions; mark each `in_node` or `added` against the candidate claim node and that node's anchored passages. Candidates: all of the student's claim nodes, or the top 5 by BM25 when there are more than 5 (D1) | Job, LLM | scales with flags |
 | **L3a / L3c / L3e** | Claim extraction from imports; contradiction between paragraph claims; receipt questions | Job, LLM | a few calls |
 
 Every L3 response is stored as a compile artifact (task, prompt hash, body, hash) and cited by the receipt lines it produced (D31). There is **no L2 embedding layer in v1** (D1; TODOS).
 
 **Which sentences are "flagged"** (go to L3b when it is on):
-- no claim mark, and at least 30% of its characters are `typed` or `paste_ext` **[ASSUMPTION: tune on golden sessions; the value is in the receipt's engine stamp, D20]**
+- in a paragraph with no link, and at least 30% of its characters are `typed` or `paste_ext` **[ASSUMPTION: tune on golden sessions; the value is in the receipt's engine stamp, D20]**
 - any sentence whose claim node was edited after the sentence last changed
-- any sentence with a `claim.by = student` mark (CEO-17)
+- any sentence in a paragraph with a `by = student` link (CEO-17)
 - any sentence with ≥ 50% `paste_ext` characters, even if linked
 
 ### 4.1 Mark check (D5, D29)
@@ -66,6 +66,8 @@ A run that fails is treated as untraced, and the chain view says "this label cou
 **The "AI-expanded card" case (OL-040).** The card says "BP drops if the drug is given fast". An outside AI expands it into a paragraph that adds the mechanism. Similarity would call it the student's idea, polished. But the mechanism is the new part, and it's what a nursing teacher wants to ask about.
 
 L3b works per proposition: it lists the propositions, marks each `in_node` or `added`, and the receipt names the added proposition, not the whole sentence.
+
+**Elaboration is not a trace problem (D-046).** Students who think while they write add reasoning their cards don't hold, and often can't say how they got there. An `added` proposition is therefore never an accusation and never changes a link: the sentence stays in its band, and the proposition can only become an idea question in one of the four pillars (receipt §4), never "where did this come from?".
 
 ```json
 {"sentence_id": "s14", "node_id": "c3",
@@ -84,7 +86,7 @@ Each sentence (and each claim) gets exactly one band. Rules apply in order:
 | 1 | **Declared outside help** | ≥ 50% of characters carry a checked `import` mark, or the sentence's claim is a `DeclaredClaim` never re-anchored to a source by the student |
 | 2 | **Traced to a source or lecture** | A chain ends in a Block, every mark on the way passed the check, the link is not student-only (or L3b confirmed it), and there are no `added` propositions |
 | 3 | **Traced to a Coach exchange** | The chain ends in the student's own typed Coach answer (checked `coach` mark, or a card via `coach_answer`) |
-| 4 | **Linked by student, not checked** | The sentence's claim link is `by: student` and L3b did not confirm it (L3b off, or not flagged). Its own segment, never merged into traced (D27). **A sentence with ≥ 50% `paste_ext` characters never enters this band by any link** (hand-made or accepted from the map); it stays untraced with the note "pasted; linked by the student, not checked" (eng review v2 D13) |
+| 4 | **Linked by student, not checked** | The sentence's paragraph links to a claim and L3b did not confirm it (L3b off, or not flagged). A paragraph link counts here whatever its `by`; it never makes a sentence traced by itself (D-045). Its own segment, never merged into traced (D27). **A sentence with ≥ 50% `paste_ext` characters never enters this band by any link** (hand-made or accepted from the map); it stays untraced with the note "pasted; linked by the student, not checked" (eng review v2 D13) |
 | 5 | **Untraced** | None of the above, including failed marks, pasted parts of cards or Coach answers, and reworded text L3b hasn't confirmed ("reworded after tracing; not checked", CEO-13). Partly untraced sentences report their `added` propositions |
 
 - **A model-proposed link never makes a sentence traced.** The v1 mapper links sentences to the student's claims only, never to source passages (eng review v2 D19).
@@ -118,6 +120,8 @@ Each sentence (and each claim) gets exactly one band. Rules apply in order:
 | AI-style word lists, stylometry | **Drop** | Track the model, not the student; penalise second-language writers (v0.5) |
 | Citation correctness as process evidence | **Drop** | Outside AI cites accurately (v0.4); feedback to the student only |
 | Set-aside reason vs. relied-on source | Keep, as a question | Only on comparable metadata |
+| Construction order (card before paragraph, or after; "source-first ratio") | **Drop** (D-046) | A scripted outside-AI workflow fakes it (open a pin, make a card, then paste); honest writers often find their structure while drafting. Dated thinking moments (§7) stay as facts, never as a ratio |
+| Grading a Coach answer ("did it resolve the question?") | **Drop** (D-046) | A verdict on the student (law 6). Outcomes and the answer are shown; the teacher judges |
 | Voice as proof | **Drop** | Biometric; accessibility input only |
 | "100%" or "impossible to spoof" | **Drop the wording** | Contradicted by §2 |
 

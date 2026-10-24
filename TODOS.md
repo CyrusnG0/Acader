@@ -17,6 +17,7 @@ Context: the CEO review chose a receipt-first thin slice for one class by 2026-1
 | 0 | Blackboard LTI 1.3 launch + roster sync (CEO-8, D9.1) | Needs the university's LMS admin to register the tool; can't fit 13 days | Pilot school's IT contact found; first post-pilot item, raise early | L | P1 |
 | 9 | Further pilot classes | One class first (CEO-1) | First class completes one assignment | S per class | P1 |
 | 10 | L2 embeddings for candidate claim nodes (eng D1) | Needs an embedding provider (another processor) and pgvector; L3b can take all claim nodes or the BM25 top 5 | Real claim maps exceed ~30 nodes per essay | M | P3 |
+| 12 | GROBID for reference metadata in citation help (S2 PD-5, D-043) | Docling covers v1 parsing; structured authors/title/DOI only matter for citation help | Citation help needs structured references | M | P3 |
 | 11 | Move to Postgres (eng D3, D35) | SQLite on one machine fits one class | More than one class or more than one app machine. Steps: same SQLAlchemy schema; append = unique (log_id, seq) + retry; jobs via SELECT … FOR UPDATE SKIP LOCKED; managed backups; name the DB host in consent | M | P2 |
 
 ## Runner (viva pilot)
