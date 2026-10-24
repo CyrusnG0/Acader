@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-004 (spike S1) checked and merged; M0 code exit met
+**Summary:** Spike S1 is GO: typed text is always `typed` (inside and at span edges, keyboard/IME/replacement/extension edits), external paste and drop are `paste_ext` with forged marks stripped, internal copy/paste, drag and undo/redo keep marks, and prosemirror-py replays to the same `doc_hash` as the browser (28 jsdom + 14 Chromium cases). Fixed on the way: ProseMirror undo emits `markSet` steps prosemirror-py lacks; the editor flattens them before recording. Checker: fresh venv from the lock, prototype 200, kit 29, web 63 passed. With T-001…T-006 done, the M0 code exit in EXPECTATIONS I is met.
+**Files touched:** prototype/web/src/editor/, prototype/server/engine/replay/, prototype/spikes/S1/, prototype/fixtures/replay/, tests, prototype/web/package.json (TipTap 3.32.0, prosemirror-model 1.25.12), prototype/pyproject.toml + requirements.lock (prosemirror 0.6.1), docs/handoffs/2026-10-24-T-004-spike-s1.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md
+**Loops:** none
+**Decisions:** none. Proposed PD-S1-1…7 (node set, typed text carries no claim mark, basic step types only, doc_hash rule, TipTap/prosemirror-py pinned as a pair, replacement count is a lower bound, Chromium pass in CI at M3).
+**Next:** founder answers the open proposals; then the checker writes the M1 wave.
+
+---
+
 ## 2026-10-24 — T-006 (spike S2, PDF parser) checked and merged
 **Summary:** Spike S2 compared Docling, GROBID (CRF image) and PyMuPDF on three CC BY readings plus a synthetic scan. Docling (OCR off) is the only one passing the S2 bar on all three; GROBID fails on tables and the scan; PyMuPDF is AGPL-3.0. Checker re-ran prototype 119 / kit 29 (spike adds no product code); no PDFs committed; Docling numbers not reproduced by the checker (2.6 GB install).
 **Files touched:** prototype/spikes/S2/ (RESULT.md, run_s2.py, blocks.py, fetch.py, scancheck.py, corpus.json, gold.json), docs/handoffs/2026-10-24-T-006-spike-s2.md, docs/TASKS.md, docs/OPEN_LOOPS.md, docs/STATUS.md

@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: editor input plugin (`web/src/editor/`) and Python replay (`engine/replay/`) with browser parity (spike S1, T-004; GO). Spikes S2 (`spikes/S2/`, PDF parsers) and S5 result notes.
 - 2026-10-24: `prototype/server/app/llm.py`: `complete(task, messages, schema)` boundary with stub, D13 error classes, backend-2 slot and boot ping (T-003).
 - 2026-10-24: `prototype/web/schema.json` and `src/schema.ts`: origin and claim marks with closed lists, loaded into ProseMirror (T-002).
 - 2026-10-24: `engine/events/`: hash chain, seal, post-seal whitelist, SQLite append store, `verify` and `python -m engine verify` (spike S5, T-005; GO).
