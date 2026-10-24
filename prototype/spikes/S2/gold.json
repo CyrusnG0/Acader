@@ -1,0 +1,28 @@
+{
+  "_note": "Hand-labelled from the PDFs on 2026-10-24 by lead-opus-T006. Reference counts for socsci and cs are approximate (counted by year pattern, checked by eye). Probes are phrases that cross a hyphenated line break in the PDF; a parser passes a probe if some block contains it after whitespace is collapsed.",
+  "nursing": {
+    "headings": ["Abstract", "Introduction", "Method", "Design", "Target ICU", "CNS efforts", "Data collection", "Measurements", "Data analysis", "Ethical considerations", "Results", "Characteristics of patients", "Relationship between presence of CNS ICU head nurse and patient outcomes", "Discussion", "Conclusion", "References"],
+    "kinds": ["abstract", "introduction", "method", "results", "discussion", "conclusion", "reference", "table"],
+    "tables": 3,
+    "references": 28,
+    "limitation": {"phrase": "The main limitation of this study is that it was based in a single institution", "ok_kinds": ["limitation", "discussion"]},
+    "probes": ["the CNS designation in the", "these areas, facilitators are needed"]
+  },
+  "socsci": {
+    "headings": ["Abstract", "Introduction", "Background", "Data", "Empirical Strategy", "Instrumental Variable Design", "Results", "Effects on Water Quality", "Robustness Checks", "Conclusion", "References"],
+    "kinds": ["abstract", "introduction", "method", "results", "conclusion", "reference", "table"],
+    "tables": 21,
+    "references": 68,
+    "limitation": {"phrase": "due to data limitations", "ok_kinds": ["limitation", "discussion", "results"]},
+    "probes": ["constructed latrines accumulate a large", "to insufficient infrastructure, a growing"]
+  },
+  "cs": {
+    "headings": ["Abstract", "Introduction", "Related Work", "Dataset", "Hallucination Characterization", "Methodology", "Hallucination Dynamics", "Interpreting Hallucination Dynamics", "Conclusion", "Limitations", "References"],
+    "kinds": ["abstract", "introduction", "method", "limitation", "conclusion", "reference", "table"],
+    "tables": 3,
+    "references": 25,
+    "limitation": {"phrase": "Our analysis has several limitations", "ok_kinds": ["limitation"]},
+    "probes": ["consequence of uncertainty. Instead, we", "a reliability failure phenomenon that"]
+  },
+  "scan": {"expect_status": "scan"}
+}

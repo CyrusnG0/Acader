@@ -1,0 +1,35 @@
+[
+  {
+    "id": "nursing",
+    "role": "nursing paper with tables",
+    "title": "Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes",
+    "citation": "Fukuda T, Sakurai H, Kashiwagi M. PLOS ONE 15(2): e0228458 (2020). doi:10.1371/journal.pone.0228458",
+    "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0228458&type=printable",
+    "licence": "CC BY 4.0 (all PLOS ONE content)"
+  },
+  {
+    "id": "socsci",
+    "role": "social-science working paper",
+    "title": "Unintended Consequences of Sanitation Investment: Negative Externalities on Water Quality and Health in India",
+    "citation": "arXiv:2607.29371v1 [econ.GN] (2026)",
+    "url": "https://arxiv.org/pdf/2607.29371v1",
+    "licence": "CC BY 4.0 (arXiv abs page links http://creativecommons.org/licenses/by/4.0/)"
+  },
+  {
+    "id": "cs",
+    "role": "CS paper",
+    "title": "Tracing Recurrent and Emergent Hallucination Patterns in Decomposed Text-to-SQL Generation",
+    "citation": "arXiv:2610.27720v1 [cs.CL] (2026)",
+    "url": "https://arxiv.org/pdf/2610.27720v1",
+    "licence": "CC BY 4.0 (arXiv abs page links http://creativecommons.org/licenses/by/4.0/)"
+  },
+  {
+    "id": "scan",
+    "role": "scanned PDF (no text layer)",
+    "title": "First 4 pages of 'nursing', rasterised at 150 dpi (greyscale) with the text layer removed",
+    "citation": "Derived from doi:10.1371/journal.pone.0228458 by make_scan() in fetch.py",
+    "url": null,
+    "derived_from": "nursing",
+    "licence": "CC BY 4.0 (derivative of the nursing paper; attribution above)"
+  }
+]
