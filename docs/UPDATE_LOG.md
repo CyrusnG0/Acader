@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-016 receipt compiler merged
+**Summary:** T-016 reviewed and merged: D-050 "mechanics" in L1, then the receipt compiler (JSON, whole numbers, `receipt_hash`, byte-identical recompile, verify agreement), pillar-form question text through `complete()` with stored artifacts and a "questions pending" mode, the wording filter on every string, and the replay-mismatch status. 639 prototype tests and the kit's 29 pass; the lead broke the code in 18 places and each broke a test. T-017 still waits on T-010 (DESIGN.md).
+**Files touched:** engine/receipt/*, app/receipt_service.py, app/llm.py (receipt_question schema), engine/provenance/bands.py, three test files, docs/handoffs, docs/TASKS.md
+**Loops:** none
+**Decisions:** none yet (T-016 PD 1–9 pending)
+**Next:** review T-015; founder on T-016 PDs and T-010
+
 ## 2026-10-24 — Checker: T-008 merged; founder answers on T-011…T-014 recorded
 **Summary:** T-008 (golden set sources, D19 session format, 15 draft mapper-label seeds) reviewed and merged; it was written by a Codex lead directly in the main checkout, so I committed it on its branch and merged it. The founder said yes to every pending point from T-011, T-012, T-013 and T-014 (and option b on PD-T014-9): recorded as D-047 to D-050; D-051 records the T-008 source choices. event-log.md §4/§5 updated. T-015 and T-016 are ready.
 **Files touched:** docs/DECISIONS.md, docs/TASKS.md, design/event-log.md, prototype/fixtures/*, design/evaluation.md, docs/handoffs/2026-10-24-T-008-golden-set.md

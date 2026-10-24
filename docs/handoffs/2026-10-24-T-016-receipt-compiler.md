@@ -117,3 +117,9 @@ Not touched: `prototype/web/`, `schema.json`, `engine/events/`, `engine/replay/`
 - **PD-T016-7: rejected attempts are cited too.** A question cites every LLM attempt for it, rejected ones included, so the record is complete. *Recommend:* accept.
 - **PD-T016-8: map-finding spans** are positions at the finding's doc_rev, which may have shifted by the final document. Today they are matched by `span.from` against the final paragraphs. *Recommend:* `map.finding` carries `paragraph` + `paragraph_hash`, as `map.suggestion` does (mapper task). Low urgency: the mapper is off.
 - **PD-T016-9: the git sha in the stamp** changes on every commit, so golden receipts regenerate per commit. *Recommend:* accept (that is D20), and pin `ROOM_GIT_SHA` in golden runs.
+
+## Checker review (2026-10-24): passed, merged to `main`
+- Re-ran in a fresh locked venv: prototype 639 passed; kit 29 passed. Diff touches `engine/receipt/` (new), `app/receipt_service.py`, the `receipt_question` schema and stub in `app/llm.py`, the D-050 mechanics change in `engine/provenance/bands.py`, tests and docs; web, schema, events, replay, `shared/`, `design/`, kit, dependencies untouched.
+- Read the user-facing copy (`copy.py`) and the question prompt: neutral wording, no banned words, no construction-order or "where did it come from" questions, forward-looking pillar form (D-046). The prompt tells the model to ignore instructions inside the student's text.
+- EXPECTATIONS A, B (law 2, law 6 wording), H data lines ticked; C: byte-identical receipt and verify agreement ticked. Not covered: priority rules 2–4 (need L3b/L3c), the leak check (`coach/leak.py` does not exist yet), persistence of receipts.
+- PD-T016-1…9 go to the founder. Recommend yes on 1–4 and 6–9; **PD-5 ("Written on N days") recommend dropping**: it is derived from edit timing and the pitch is thinking, never time. provenance.md §6 still needs the "mechanics" line (checker edit, done with the next decisions batch).
