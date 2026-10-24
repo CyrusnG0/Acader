@@ -1,0 +1,536 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "forged-marks",
+ "editor_actions_sha256": "e6795d17d4f7dcf133fd1fa31e6113c620e199e46c8a99a1e9e4c6248a0e03a0",
+ "actions": [
+  {
+   "index": 3,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The data suggest that "
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "db57913cf84084154951dda9461b6cfed39954981d8600633b8b05809f6567ba",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 4,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 23,
+     "to": 23,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "a CNS halves ICU mortality in every hospital"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "da20eabd8bf3a86e83fe23633f1539fc6f27ff46ce20b5080688b7b28299d30a",
+   "paste_id": null,
+   "at": 23
+  },
+  {
+   "index": 5,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 67,
+     "to": 67,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ". That is a strong result."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "55291e90909a802b4b81e394a638a1c560f3263e75cd300c9c46f3022cbf91dc",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 6,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "2dd9392a8361a16b48cd8886a1be51e3319ec030c3c539d30a4a52c8021b6c42",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The data suggest that "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "a CNS halves ICU mortality in every hospital"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ". That is a strong result."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 9,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 93,
+     "to": 93,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 95,
+     "to": 95,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "Intensivist-led units always do better than nurse-led ones."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 6,
+   "doc_hash": "7e5b40ac2f5d69ded25ddb2159db75701790094cdcbde832f1e67185c76232de",
+   "paste_id": null,
+   "at": 95
+  },
+  {
+   "index": 10,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 154,
+     "to": 154,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 156,
+     "to": 156,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues found it was "
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 8,
+   "doc_hash": "a3da2561c94b32d459ecbaf4c3433c01730de9723057a92b77a652b7cf1861dd",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 11,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 191,
+     "to": 191,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 9,
+   "doc_hash": "02dc5bf2ce2c0847a02d9e12bf864d4e6504a36f44963e37c3f97459b6e03983",
+   "paste_id": null,
+   "at": 191
+  },
+  {
+   "index": 12,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 226,
+     "to": 226,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 10,
+   "doc_hash": "e96fba362ff851d394f52dca7347fa60895f03ef315b9991c7e167855938f1b1",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The data suggest that "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "a CNS halves ICU mortality in every hospital"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ". That is a strong result."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "Intensivist-led units always do better than nurse-led ones."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues found it was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

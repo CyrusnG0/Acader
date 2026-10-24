@@ -1,0 +1,91 @@
+# Golden session (T-015). Simulated: the student text is invented test text.
+schema_version: 1
+session_id: elaborating-honest
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  D-045: an honest writer with one card for the first idea keeps elaborating
+  inside the linked paragraph (a phrase in the middle, two more sentences at the
+  end) without cards for the elaboration, and disagrees with a Coach question
+  with a reason. Every sentence stays "linked by the student, not checked";
+  nothing is untraced.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "Fewer ICU patients needed ventilation after the CNS appointment."}
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - {minute: 1, action: view_blocks, source_id: nursing, block_ids: [nursing.p1.abstract-results, nursing.p4.characteristics]}
+  - minute: 2
+    action: create_card
+    card_id: card1
+    text: "Fewer ventilated patients after the CNS appointment."
+    anchor: {source_id: nursing, block_ref: nursing.p1.abstract-results, quote: "fewer patients receiving mechanical ventilation in the ICU"}
+  - {minute: 3, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - {minute: 5, action: type_paragraph, paragraph_id: p1, text: "After the CNS appointment, fewer patients needed mechanical ventilation."}
+  - {minute: 5, action: link, paragraph_id: p1, claim_id: c1, by: student}
+  - {minute: 6, action: checkpoint}
+  - {minute: 10, action: type, paragraph_id: p1, text: " One reason may be that the CNS helped plan earlier weaning with the intensivists. That would also explain shorter ICU stays."}
+  - {minute: 11, action: type, paragraph_id: p1, after: "After the CNS appointment,", text: " in this one ICU,", keys: true}
+  - minute: 12
+    action: coach_ask
+    q_id: q1
+    case: B
+    pillar: reading
+    grounding_ids: [c1, nursing.p4.characteristics]
+    question: "The paper links some of the change to more planned surgeries. How does that sit with your weaning explanation?"
+  - minute: 13
+    action: coach_outcome
+    q_id: q1
+    outcome: disagreed
+    parts: [{text: "Planned surgeries explain part of it, but the drop in ventilator days is too large for that alone.", kind: typed}]
+  - {minute: 15, action: type_paragraph, paragraph_id: p2, text: "Ventilator days also fell in the later period."}
+  - {minute: 15, action: link, paragraph_id: p2, claim_id: c1, by: student}
+  - {minute: 16, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+  - batch_id: b10
+    window_start_minute: 10
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+  - batch_id: b15
+    window_start_minute: 15
+    changed_paragraph_ids: [p2]
+    expected_links: [{paragraph_id: p2, claim_id: c1}]
+
+# Why these numbers:
+# All text is typed in paragraphs the student linked to c1. Elaboration inside a linked paragraph
+# keeps the link (D-045), so every sentence is student_linked: s1 13 (9 + "in this one ICU,"),
+# s2 14, s3 7, s4 8. Nothing is untraced. Moment: Coach q1 disagreed with a written reason.
+expected_receipt:
+  status: complete
+  mechanics_words: 0
+  total_words: 42
+  bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 42, untraced: 0}
+  bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 1, untraced: 0}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["student_linked 13", "student_linked 14", "student_linked 7"]
+    p2: ["student_linked 8"]
+  claim_units: {c1: student_linked}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 0}
+  unconfirmed_marks: []
+  moments:
+    - {kind: coach_disagreed, q_id: q1}
+  question_targets: ["s1 p1 student_link", "s2 p1 student_link", "s3 p1 student_link", "s4 p2 student_link"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: student_linked_claim, grounding: [c1]}

@@ -1,0 +1,593 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "pasted-rewritten",
+ "editor_actions_sha256": "29c7dac94f38358bd4dc574f55dedc9961d7922eb539b4c7403baff8e554f192",
+ "actions": [
+  {
+   "index": 3,
+   "action": "paste",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Hospitals that appoint specialist nurses as unit leaders often see better patient results. These leaders bridge the gap between doctors and bedside staff. Their clinical judgment shapes daily decisions in the unit."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "352ec68a452c27569dd78b419b008c312aee9d8197f62c2a955cc53e02c51948",
+   "paste_id": "paste_1",
+   "at": 1
+  },
+  {
+   "index": 4,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "d17ebabf70689627d81a3d79c18b9374bf471a7eb7a1b92484fb137e4b9d5e56",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Hospitals that appoint specialist nurses as unit leaders often see better patient results. These leaders bridge the gap between doctors and bedside staff. Their clinical judgment shapes daily decisions in the unit."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 6,
+   "action": "replace",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 92,
+     "to": 154,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "In my view, head nurses who are also specialists can translate between intensivists and the nurses at the bedside"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "e67fafa1483dd96fcb1f3152e54ca145149d9ac30bb6ebf0b842935896b4a7fe",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 7,
+   "action": "replace",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 231,
+     "to": 253,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "g"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 232,
+     "to": 232,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "u"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 233,
+     "to": 233,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 234,
+     "to": 234,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 235,
+     "to": 235,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 236,
+     "to": 236,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 237,
+     "to": 237,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 238,
+     "to": 238,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 239,
+     "to": 239,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 240,
+     "to": 240,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 241,
+     "to": 241,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 242,
+     "to": 242,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "p"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 243,
+     "to": 243,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "l"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 244,
+     "to": 244,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 245,
+     "to": 245,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 246,
+     "to": 246,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 16,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 19,
+   "doc_hash": "1af8e9c4ef08cb7d8ec780cf3d6fa3b49dc82d631cb72a3ad8e9bb2b6e47654b",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Hospitals that appoint specialist nurses as unit leaders often see better patient results. "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "In my view, head nurses who are also specialists can translate between intensivists and the nurses at the bedside"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": ". Their clinical judgment "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "guides the plans"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": " in the unit."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

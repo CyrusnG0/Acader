@@ -1,0 +1,101 @@
+# Golden session (T-015). Simulated: the student text is invented test text.
+schema_version: 1
+session_id: forged-marks
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  Eng v2 D5: a tampered client sends a quote mark whose text is not in its block
+  and a coach mark whose text is not in the student's typed Coach answer. Both
+  fail the mark check at compile and count as unconfirmed (untraced, with "this
+  label couldn't be confirmed against its source"). A genuine quote in the same
+  draft is still traced.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "A CNS head nurse lowers ICU mortality."}
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - minute: 1
+    action: create_card
+    card_id: card1
+    text: "Lower ICU mortality with a CNS head nurse."
+    anchor: {source_id: nursing, block_ref: nursing.p1.abstract-results, quote: "associated with lower ICU mortality"}
+  - {minute: 2, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - {minute: 5, action: type_paragraph, paragraph_id: p1, text: "The data suggest that "}
+  - minute: 5
+    action: insert
+    paragraph_id: p1
+    runs: [{text: "a CNS halves ICU mortality in every hospital", kind: quote, ref: nursing.p1.abstract-results, forged: true}]
+  - {minute: 6, action: type, paragraph_id: p1, text: ". That is a strong result."}
+  - {minute: 6, action: link, paragraph_id: p1, claim_id: c1, by: student}
+  - minute: 8
+    action: coach_ask
+    q_id: q1
+    case: B
+    pillar: reading
+    grounding_ids: [c1, nursing.p1.abstract-results]
+    question: "Which hospitals does the paper's sample cover?"
+  - minute: 9
+    action: coach_outcome
+    q_id: q1
+    outcome: answered
+    parts: [{text: "Only one ICU in Tokyo, so the result is local.", kind: typed}]
+  - minute: 10
+    action: insert
+    paragraph_id: p2
+    runs: [{text: "Intensivist-led units always do better than nurse-led ones.", kind: coach, ref: q1}]
+  - {minute: 11, action: type_paragraph, paragraph_id: p3, text: "Fukuda and colleagues found it was "}
+  - minute: 11
+    action: insert
+    paragraph_id: p3
+    runs: [{text: "associated with lower ICU mortality", kind: quote, ref: nursing.p1.abstract-results}]
+  - {minute: 11, action: type, paragraph_id: p3, text: "."}
+  - {minute: 12, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+  - batch_id: b10
+    window_start_minute: 10
+    changed_paragraph_ids: [p2, p3]
+    expected_links: [{paragraph_id: p3, claim_id: c1}]
+
+# Why these numbers:
+# s1: 44 of 67 characters carry the forged quote, which fails (not_in_block) and counts like a
+#    paste (D-050 (5)) -> untraced in a linked paragraph, note label_not_confirmed (no paste_ext,
+#    so no D13 note), 12 words. s2 typed, linked -> student_linked 5.
+# s3 (p2): forged coach mark (not_in_answer), unlinked -> untraced 8, label_not_confirmed.
+# s4 (p3): genuine checked quote -> traced_source 11; "mortality." ends with a typed period, so 4 quoted words.
+# Units: c1 12 untraced vs 5 -> untraced; p2 untraced; p3 traced_source.
+# Targets: s3 has no typed or pasted characters, so it is not an "unlinked" target;
+#    s4 is 36 of 71 characters typed (>= 30%), so it is.
+expected_receipt:
+  status: complete
+  mechanics_words: 0
+  total_words: 36
+  bands_by_words: {declared: 0, traced_source: 11, traced_coach: 0, student_linked: 5, untraced: 20}
+  bands_by_claims: {declared: 0, traced_source: 1, traced_coach: 0, student_linked: 0, untraced: 2}
+  quoted_words: 4
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["untraced 12", "student_linked 5"]
+    p2: ["untraced 8"]
+    p3: ["traced_source 11"]
+  claim_units: {c1: untraced, p2: untraced, p3: traced_source}
+  notes: {label_not_confirmed: 2, pasted_linked_not_checked: 0}
+  unconfirmed_marks: ["quote nursing.p1.abstract-results not_in_block", "coach q1 not_in_answer"]
+  moments: []
+  question_targets: ["s1 p1 student_link", "s2 p1 student_link", "s4 p3 unlinked"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: untraced_claim, grounding: [c1]}

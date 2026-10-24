@@ -1,0 +1,273 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "accepted-suggestion-paste",
+ "editor_actions_sha256": "8ec584ea56e6829a1be46f8730350a2cc7a42d6b7225276a11de12da011ae765",
+ "actions": [
+  {
+   "index": 3,
+   "action": "paste",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Sanitation subsidies can backfire when sludge has nowhere safe to go. Rivers downstream of new latrines become more contaminated over time."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "67e0f0b17201c462d1eabd1f2b36d15b215a8fad532df2833cacbf8b1f5a2190",
+   "paste_id": "paste_1",
+   "at": 1
+  },
+  {
+   "index": 4,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 140,
+     "to": 140,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 142,
+     "to": 142,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The paper finds river contamination rose by 72% under the policy."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "34b95993c843d118c33404c6c390d8022a61e8102a99b7a22205e0b49ccace49",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 5,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 141,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "88fe60d18b5355ce3da14f756e80c39d725d6a1481701c70a36daffb88fb8590",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Sanitation subsidies can backfire when sludge has nowhere safe to go. Rivers downstream of new latrines become more contaminated over time."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The paper finds river contamination rose by 72% under the policy."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 8,
+   "action": "accept_suggestion",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student",
+       "suggestion_id": "sg1"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 5,
+   "doc_hash": "dd80dd7ada545b8e631b3c20fc27b7dfb2d00144b20bb88da37a366dbdf1ed3d",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student",
+         "suggestion_id": "sg1"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "Sanitation subsidies can backfire when sludge has nowhere safe to go. Rivers downstream of new latrines become more contaminated over time."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The paper finds river contamination rose by 72% under the policy."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

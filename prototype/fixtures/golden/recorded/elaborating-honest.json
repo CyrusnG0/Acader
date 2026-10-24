@@ -1,0 +1,714 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "elaborating-honest",
+ "editor_actions_sha256": "105a7314e17baa1e01d9d9b2caccfb2de10ec5e670e156258ea01f1546141deb",
+ "actions": [
+  {
+   "index": 4,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "After the CNS appointment, fewer patients needed mechanical ventilation."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "080331466d82617e1bc3063438bf677e7757fb74d9d8cd971d0fd3e26818a729",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 5,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "770889b17941d10725ad03fbf71e9dad65b9387a2bfdb6812a93ef1def756acf",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "After the CNS appointment, fewer patients needed mechanical ventilation."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 7,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 73,
+     "to": 73,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " One reason may be that the CNS helped plan earlier weaning with the intensivists. That would also explain shorter ICU stays."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "84376ac42ece45f7317a71750dd659a482a0b4774b01081a71c56e7c2299bf43",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 8,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 27,
+     "to": 27,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 28,
+     "to": 28,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 29,
+     "to": 29,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 30,
+     "to": 30,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 31,
+     "to": 31,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 32,
+     "to": 32,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 33,
+     "to": 33,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 34,
+     "to": 34,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 35,
+     "to": 35,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 36,
+     "to": 36,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 37,
+     "to": 37,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 38,
+     "to": 38,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 39,
+     "to": 39,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 40,
+     "to": 40,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 41,
+     "to": 41,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "C"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 42,
+     "to": 42,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "U"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 43,
+     "to": 43,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ","
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 17,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 20,
+   "doc_hash": "91142e3e51dd5bcfe09d196fc29db2daf0178f4af0e2213453e9d65dd5d52b1e",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "After the CNS appointment, in this one ICU, fewer patients needed mechanical ventilation. One reason may be that the CNS helped plan earlier weaning with the intensivists. That would also explain shorter ICU stays."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 11,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 215,
+     "to": 215,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 217,
+     "to": 217,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Ventilator days also fell in the later period."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 22,
+   "doc_hash": "87c170acce4086bd8ae7153b64ea3d51ee6953823a6ef9bc802be351a3ad00ee",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 12,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 216,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 23,
+   "doc_hash": "6e90b28f157e04c3cafacd8875835c37c4519b9793e063d1f10de78fbf8ee690",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "After the CNS appointment, in this one ICU, fewer patients needed mechanical ventilation. One reason may be that the CNS helped plan earlier weaning with the intensivists. That would also explain shorter ICU stays."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Ventilator days also fell in the later period."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

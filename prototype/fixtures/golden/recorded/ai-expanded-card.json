@@ -1,0 +1,310 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "ai-expanded-card",
+ "editor_actions_sha256": "2043720876a4abb8e80f78fbe54c46b48e3722be48be6a2ed485bd0901edbdd2",
+ "actions": [
+  {
+   "index": 3,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "CNS leads conferences"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 22,
+     "to": 22,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "card1-paste"
+          }
+         }
+        ],
+        "text": " that bring physicians, nurses and therapists together to set shared goals for long-stay patients."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "912ce07ba26fba883ca1bf6a635ba5140f8e63fef63cde3843aa74cd903f24ee",
+   "paste_id": null,
+   "at": 1
+  },
+  {
+   "index": 4,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "61fbbdbf0920af9fc8d90fe4be34cb07db6ee4b59b1d778508ca2a2f0fded4a8",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 5,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 120,
+     "to": 120,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " This shows leadership in practice."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "3bf7103ffeafeaa86dc72256616555155c5030aeaf1a6d65cff75a982c4df700",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 6,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 155,
+     "to": 155,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 157,
+     "to": 157,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The conferences also gave nurses a voice in ethical cases."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 6,
+   "doc_hash": "87ba4432ad7a22b30ba56cbc9dfb8923b16745ce91dfecb4c7651871ad6eaa4e",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 7,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 156,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 7,
+   "doc_hash": "fecd9b1fa0f0e7fab27651b0b1d6f4652d839891141ef4cacb3fddaa87d7066b",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "CNS leads conferences"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "card1-paste"
+          }
+         }
+        ],
+        "text": " that bring physicians, nurses and therapists together to set shared goals for long-stay patients."
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " This shows leadership in practice."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The conferences also gave nurses a voice in ethical cases."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

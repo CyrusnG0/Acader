@@ -1,0 +1,76 @@
+# Golden session (T-015). Simulated: the student text is invented test text; the references are
+# Helper-formatted citations of the two pinned sources.
+schema_version: 1
+session_id: reference-list
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  D-050: an honest short draft followed by a reference list the Helper
+  formatted. Confirmed Helper-only sentences leave the word and claim counts
+  and show as mechanics, including after compiling the receipt.
+source_ids: [nursing, socsci]
+claims:
+  - {claim_id: c1, text: "A CNS head nurse was associated with lower ICU mortality in one ICU."}
+helper_outputs:
+  h1: "Fukuda T, Sakurai H, Kashiwagi M. Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes. PLoS ONE. 2020;15(2):e0228458."
+  h2: "Motohashi K. Unintended consequences of sanitation investment: negative externalities on water quality and health in India. arXiv:2607.29371v1 [econ.GN]. 2026."
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - minute: 1
+    action: create_card
+    card_id: card1
+    text: "Lower ICU mortality with a CNS head nurse."
+    anchor: {source_id: nursing, block_ref: nursing.p1.abstract-results, quote: "associated with lower ICU mortality"}
+  - {minute: 2, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - {minute: 5, action: type_paragraph, paragraph_id: p1, text: "A CNS head nurse was linked to lower ICU mortality in one Japanese ICU."}
+  - {minute: 5, action: link, paragraph_id: p1, claim_id: c1, by: student}
+  - {minute: 8, action: helper_serve, serve_id: h1, request_kind: format_reference}
+  - minute: 8
+    action: insert
+    paragraph_id: p2
+    runs: [{text: "Fukuda T, Sakurai H, Kashiwagi M. Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes. PLoS ONE. 2020;15(2):e0228458.", kind: helper, ref: h1}]
+  - {minute: 9, action: helper_serve, serve_id: h2, request_kind: format_reference}
+  - minute: 9
+    action: insert
+    paragraph_id: p3
+    runs: [{text: "Motohashi K. Unintended consequences of sanitation investment: negative externalities on water quality and health in India. arXiv:2607.29371v1 [econ.GN]. 2026.", kind: helper, ref: h2}]
+  - {minute: 10, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1, p2, p3]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+# D-050: p1 is student-linked (14 words). The confirmed Helper references are
+# mechanics (24 + 2 + 1 words in p2; 18 + 1 words in p3), outside word/claim counts.
+# Neither reference paragraph is a question target or a claim unit.
+expected_receipt:
+  status: complete
+  total_words: 14
+  mechanics_words: 46
+  bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 14, untraced: 0}
+  bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 1, untraced: 0}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["student_linked 14"]
+    p2: ["mechanics 24", "mechanics 2", "mechanics 1"]
+    p3: ["mechanics 18", "mechanics 1"]
+  claim_units: {c1: student_linked}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 0}
+  unconfirmed_marks: []
+  moments: []
+  question_targets: ["s1 p1 student_link"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 46
+  question_targets:
+    - {paragraph_id: p1, why: student_linked_claim, grounding: [c1]}

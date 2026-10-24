@@ -1,0 +1,63 @@
+# Golden session (T-015). Simulated: the student text is invented test text, not student data.
+schema_version: 1
+session_id: thin-honest
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  A thin but honest draft: one anchored card, one claim, one short linked
+  paragraph and a one-line unlinked closing paragraph. Everything is typed.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "A CNS head nurse was associated with lower ICU mortality."}
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - {minute: 1, action: view_blocks, source_id: nursing, block_ids: [nursing.p1.abstract-results, nursing.p2.design]}
+  - minute: 3
+    action: create_card
+    card_id: card1
+    text: "Lower ICU mortality after the CNS became head nurse."
+    anchor: {source_id: nursing, block_ref: nursing.p1.abstract-results, quote: "associated with lower ICU mortality"}
+  - {minute: 4, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - {minute: 6, action: type_paragraph, paragraph_id: p1, text: "The study links a CNS head nurse to lower ICU mortality. I think this matters for staffing.", keys: true}
+  - {minute: 7, action: link, paragraph_id: p1, claim_id: c1, by: student}
+  - {minute: 8, action: type_paragraph, paragraph_id: p2, text: "More research is needed."}
+  - {minute: 9, action: submit}
+
+batches:
+  - batch_id: b1
+    window_start_minute: 5
+    changed_paragraph_ids: [p1, p2]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+# Why these numbers (checked by hand, T-015 handoff):
+# p1 is linked by the student and fully typed, so both sentences are band 4
+# (11 + 6 words). p2 has no link and is typed: untraced (4 words).
+expected_receipt:
+  status: complete
+  mechanics_words: 0
+  total_words: 21
+  bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 17, untraced: 4}
+  bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 1, untraced: 1}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["student_linked 11", "student_linked 6"]
+    p2: ["untraced 4"]
+  claim_units: {c1: student_linked, p2: untraced}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 0}
+  unconfirmed_marks: []
+  moments: []
+  question_targets: ["s1 p1 student_link", "s2 p1 student_link", "s3 p2 unlinked"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p2, why: untraced_claim, grounding: [c1]}
+    - {paragraph_id: p1, why: student_linked_claim, grounding: [c1]}

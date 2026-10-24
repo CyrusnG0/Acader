@@ -1,0 +1,2172 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "thin-honest",
+ "editor_actions_sha256": "acc412c2a7e02952ed383c170e65988c5543b049bb0adbd052bcda82df863751",
+ "actions": [
+  {
+   "index": 4,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "T"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 7,
+     "to": 7,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "u"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "y"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "l"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 12,
+     "to": 12,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 13,
+     "to": 13,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 14,
+     "to": 14,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "k"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 15,
+     "to": 15,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 16,
+     "to": 16,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 17,
+     "to": 17,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 18,
+     "to": 18,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 19,
+     "to": 19,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "C"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 20,
+     "to": 20,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "N"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 21,
+     "to": 21,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "S"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 22,
+     "to": 22,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 23,
+     "to": 23,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 24,
+     "to": 24,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 25,
+     "to": 25,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 26,
+     "to": 26,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 27,
+     "to": 27,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 28,
+     "to": 28,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 29,
+     "to": 29,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "u"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 30,
+     "to": 30,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 31,
+     "to": 31,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 32,
+     "to": 32,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 33,
+     "to": 33,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 34,
+     "to": 34,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 35,
+     "to": 35,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 36,
+     "to": 36,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 37,
+     "to": 37,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "l"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 38,
+     "to": 38,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 39,
+     "to": 39,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 40,
+     "to": 40,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 41,
+     "to": 41,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 42,
+     "to": 42,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 43,
+     "to": 43,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 44,
+     "to": 44,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "C"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 45,
+     "to": 45,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "U"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 46,
+     "to": 46,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 47,
+     "to": 47,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "m"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 48,
+     "to": 48,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 49,
+     "to": 49,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 50,
+     "to": 50,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 51,
+     "to": 51,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 52,
+     "to": 52,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "l"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 53,
+     "to": 53,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 54,
+     "to": 54,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 55,
+     "to": 55,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "y"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 56,
+     "to": 56,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "."
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 57,
+     "to": 57,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 58,
+     "to": 58,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 59,
+     "to": 59,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 60,
+     "to": 60,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 61,
+     "to": 61,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 62,
+     "to": 62,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 63,
+     "to": 63,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 64,
+     "to": 64,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "k"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 65,
+     "to": 65,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 66,
+     "to": 66,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 67,
+     "to": 67,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 68,
+     "to": 68,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 69,
+     "to": 69,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 70,
+     "to": 70,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 71,
+     "to": 71,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "m"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 72,
+     "to": 72,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 73,
+     "to": 73,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 74,
+     "to": 74,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 75,
+     "to": 75,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 76,
+     "to": 76,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 77,
+     "to": 77,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 78,
+     "to": 78,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 79,
+     "to": 79,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 80,
+     "to": 80,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 81,
+     "to": 81,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 82,
+     "to": 82,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 83,
+     "to": 83,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 84,
+     "to": 84,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 85,
+     "to": 85,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 86,
+     "to": 86,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 87,
+     "to": 87,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 88,
+     "to": 88,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 89,
+     "to": 89,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 90,
+     "to": 90,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "g"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 91,
+     "to": 91,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 91,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 91,
+   "doc_hash": "ea15bddbade8f9293df18d3b22fa58e633260ec914a8e886ea1263e8b6bed7c6",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 5,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 92,
+   "doc_hash": "08007e62579da94c8cfe9896e43f1fdb6bf13f13370997d12802ab16a16f7803",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 6,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 92,
+     "to": 92,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 94,
+     "to": 94,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "More research is needed."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 94,
+   "doc_hash": "a497b8f2b02bbb0af20da37c8819fee51a8c539a9e3145cd4728aa52edd9225c",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The study links a CNS head nurse to lower ICU mortality. I think this matters for staffing."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "More research is needed."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

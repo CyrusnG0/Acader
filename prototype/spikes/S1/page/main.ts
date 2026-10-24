@@ -3,7 +3,7 @@
 // drag-and-drop, extension-style DOM edits).
 import { createEditor } from "../../../web/src/editor/editor";
 import { insertMarked, originKey } from "../../../web/src/editor/origin";
-import { linkParagraph, paragraphPosAt, unlinkParagraph, type Link } from "../../../web/src/editor/links";
+import { acceptSuggestion, linkParagraph, paragraphPosAt, unlinkParagraph, type Link } from "../../../web/src/editor/links";
 import { toggleBulletList } from "../../../web/src/editor/formatting";
 import { recordKey, replaySteps } from "../../../web/src/editor/record";
 import { docHash } from "../../../web/src/editor/canonical";
@@ -83,6 +83,22 @@ function links() {
   paragraphPos: (pos?: number) => paragraphPosAt(view.state, pos),
   link: (pos: number, l: Link) => linkParagraph(pos, l)(view.state, view.dispatch),
   unlink: (pos: number, claimId: string) => unlinkParagraph(pos, claimId)(view.state, view.dispatch),
+  insertMarked(text: string, kind: string, ref: string | null) {
+    insertMarked(view, text, { kind, ref });
+  },
+  /** Every textblock in document order with its positions. */
+  blocks() {
+    const out: { before: number; start: number; end: number; text: string; type: string }[] = [];
+    view.state.doc.descendants((node, pos) => {
+      if (!node.isTextblock) return true;
+      out.push({ before: pos, start: pos + 1, end: pos + 1 + node.content.size, text: node.textContent, type: node.type.name });
+      return false;
+    });
+    return out;
+  },
+  accept: (pos: number, claim_id: string, suggestion_id: string) =>
+    acceptSuggestion(pos, claim_id, suggestion_id)(view.state, view.dispatch),
+  pasteCount: () => n,
   select(from: number, to = from) {
     editor.commands.focus();
     editor.commands.setTextSelection({ from, to });

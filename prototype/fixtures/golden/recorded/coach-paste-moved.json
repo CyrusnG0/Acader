@@ -1,0 +1,139 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
+ "session_id": "coach-paste-moved",
+ "editor_actions_sha256": "b0dcc732a105298ba6dd2a9c95c5762824aacaa4fd79559438c62bfe0d4bc21d",
+ "actions": [
+  {
+   "index": 4,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "I think the effect depends on who runs the ICU."
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 48,
+     "to": 48,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "q1-paste"
+          }
+         }
+        ],
+        "text": " Units without intensivists rely more on nurse leaders to coordinate complex care decisions."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "aa40801b26c7600eb13cc6d4eb20915f6da110a1dd555c43dabd520c81d9839e",
+   "paste_id": null,
+   "at": 1
+  },
+  {
+   "index": 5,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "coach"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "00a655e28ede92e0357eb7b13f8961df6c817cbbcc15fda5ceb2984ae7f0e8b4",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "coach"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "I think the effect depends on who runs the ICU."
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "q1-paste"
+          }
+         }
+        ],
+        "text": " Units without intensivists rely more on nurse leaders to coordinate complex care decisions."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
