@@ -1,0 +1,6 @@
+# Spike-only dependencies for S2. Not part of prototype/requirements.txt.
+# Versions are the ones measured on 2026-10-24.
+pymupdf==2.0
+docling==2.142.1
+requests
+# GROBID runs as a service: docker run --rm -p 8070:8070 grobid/grobid:0.8.2-crf
