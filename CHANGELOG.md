@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: L1 deterministic provenance (`engine/provenance/`: sentence split, origin mix, chains via paragraph links, bands, receipt facts, thresholds config) (T-014).
 - 2026-10-24: compile-time replay with checkpoint hash checks and the provenance mark check (`engine/provenance/`, `engine/replay/rebuild.py`, `app/compile_service.py`) (T-013).
 - 2026-10-24: paragraph links and the D-044 node set in the editor schema, replay and fixtures (T-011); the inline `claim` mark is removed.
 - 2026-10-24: events layer for M1 (`app/events_service.py`, `routes_events.py`, `engine/events/merge.py`): staging, 5-minute merge, checkpoints, idempotent submit and seal, post-seal 409, verify endpoint, edit lease (T-012).

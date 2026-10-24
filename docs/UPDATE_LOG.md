@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-014 L1 provenance merged
+**Summary:** T-014 reviewed and merged: sentence split, origin mix, chains through paragraph links, the five bands in order (D13, D27, D19, D-045), integer counts by words and claims, receipt facts without any order ratio or answer grading (D-046), one thresholds config for the engine stamp. 525 prototype tests and the kit's 29 pass. The lead broke the code in 20 places; each broke a test. T-016 is on the board as ready but held until the founder answers PD-T014-9 (reference lists come out untraced).
+**Files touched:** engine/provenance/{sentences,trail,bands,facts,l1}.py, three test files, docs/handoffs, docs/TASKS.md
+**Loops:** none
+**Decisions:** none yet (T-014 PD 1–11 pending)
+**Next:** founder answers on PD-T014-9, then launch T-016
+
 ## 2026-10-24 — Checker: T-013 replay and mark check merged
 **Summary:** T-013 reviewed and merged: replay from checkpoints with per-checkpoint hash checks (replay_mismatch path, operator alerts), and the provenance §4.1 mark check for quote, coach, import and helper runs behind a `ProvenanceSources` interface. 453 prototype tests and the kit's 29 pass. T-014 is now ready.
 **Files touched:** engine/replay/rebuild.py, engine/provenance/*, app/compile_service.py, two test files, docs/handoffs, docs/TASKS.md
