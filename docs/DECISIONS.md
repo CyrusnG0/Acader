@@ -245,3 +245,13 @@ Format: **D-xxx · date · title**. Context, then decision, then consequences.
   - **Never blocking:** the student writes the idea freely; the question comes later in the panel; declining is a recorded fact.
   - The record is unchanged: declared help still shows as declared on the receipt, so declaring keeps paying off (law 4).
 - **Consequences:** coach-helper.md §3 (pillar table), event-log.md (`coach.ask` gains trigger_ref and pillar), PRODUCT.md §5 step 5, GLOSSARY ("Four pillars") updated.
+
+### D-039 · 2026-10-24 · DeepSeek workers may read the repo (F-005)
+- **Context:** The multi-agent flow (CLAUDE.md §8) uses DeepSeek workers for mechanical pieces. A DeepSeek worker sends repo code and docs to a China-based provider. The repo holds no secrets and no student data.
+- **Decision:** Approved by the founder. Tasks marked **D** in TASKS.md may use DeepSeek workers.
+- **Consequences:** Limits stay: DeepSeek workers never receive `.env` or anything outside the repo, and no student data ever enters the repo. F-005 done.
+
+### D-040 · 2026-10-24 · Locked Python dependencies; Node 22.12+ for the front end (T-001 PD-1, PD-2)
+- **Context:** T-001 left Python dependencies unpinned. D20/D31 promise a byte-identical receipt from the same log and engine stamp, which needs reproducible engine dependencies. Current Vite and Vitest need Node 22.12+.
+- **Decision:** (1) Python dependencies get a lock file (pip-tools or uv) that CI installs, and the lock file's hash goes into the engine stamp. Done inside T-003. (2) Node 22.12+ is the front-end floor.
+- **Consequences:** T-003 scope grows by the lock file and CI install change; the engine stamp includes the lock hash once the stamp exists (M1).

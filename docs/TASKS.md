@@ -14,7 +14,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 |---|---|---|---|---|---|---|---|
 | T-001 | Scaffold `prototype/` per architecture.md §6 (server/app, engine, sources, coach, mapper, trail, tests; web Vite+TS; fixtures; spikes) + CI that runs prototype tests and the kit's 29 | architecture.md §4, §6 | A; I-M0 (scaffold + CI) | — | D/S | lead-opus-T001 | done |
 | T-002 | `web/schema.json`: origin marks (closed list), claim mark `{claim_id, by}` with optional `suggestion_id` | event-log.md §4 | A; C (typed rules) | T-001 | S | | ready |
-| T-003 | LLM boundary `complete(task, messages, schema)` wrapping `shared/llm.py`: stub, error classes, boot ping, backend-2 slot, task enum incl. `map_suggest` | architecture.md §5 | A (shared/llm.py unchanged) | T-001 | S | | ready |
+| T-003 | LLM boundary `complete(task, messages, schema)` wrapping `shared/llm.py`: stub, error classes, boot ping, backend-2 slot, task enum incl. `map_suggest`; plus a Python lock file that CI installs (D-040) | architecture.md §5 | A (shared/llm.py unchanged) | T-001 | S | | ready |
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | | blocked |
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | | ready |
 | T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | | ready |
@@ -31,7 +31,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | F-002 | Teacher outreach; named teacher, class and assignment window (deadline checkpoint 10-30) | founder |
 | F-003 | Processor approval, provider approval, ethics request | founder |
 | F-004 | Add an OpenAI key for the gstack designer (`$D setup`) so mockups can be generated | founder |
-| F-005 | Decide whether the DeepSeek worker may read the repo (it sends code and docs to a China-based provider; no secrets or student data are in the repo) | founder |
+| F-005 | Decide whether the DeepSeek worker may read the repo (it sends code and docs to a China-based provider; no secrets or student data are in the repo) | done (D-039) |
 
 ## Next waves (detail is added by the checker when M0 is done)
 

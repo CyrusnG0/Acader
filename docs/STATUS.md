@@ -19,7 +19,7 @@ A writing platform where the process is the evidence. The student writes beside 
 
 ## Next action (do this first)
 **Leads:** T-001 is done. Ready now, in parallel: T-002 (schema), T-003 (`complete()`), T-005 (S5), T-006 (S2), T-007…T-010. T-004 waits for T-002. Pass [EXPECTATIONS.md](../EXPECTATIONS.md) and write a handoff.
-**Founder:** F-001 (schedule option, build-plan §2a), F-002 (named teacher by 10-30), confirm F-005 (relayed as approved in the T-001 handoff); push `main` so CI runs; PD-1 (lock Python deps) and PD-2 (Node 22.12+).
+**Founder:** F-001 (schedule option, build-plan §2a), F-002 (named teacher by 10-30), (F-005 approved, D-039; PD-1/PD-2 accepted, D-040).
 
 ## Where to read
 - Product: [PRODUCT.md](../PRODUCT.md) §5–7

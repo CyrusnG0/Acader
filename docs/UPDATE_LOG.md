@@ -18,8 +18,8 @@ Template:
 **Summary:** Checker re-ran T-001 from a clean checkout: prototype 13 passed, kit 29 passed, web typecheck/test/build clean. Section A ticked; I-M0 scaffold ticked, "CI green" open until the first GitHub Actions run. Merged to main; T-002, T-003, T-005, T-006 unblocked.
 **Files touched:** prototype/ (scaffold), .github/workflows/ci.yml, .gitignore, docs/TASKS.md, docs/handoffs/2026-10-24-T-001-scaffold.md, docs/STATUS.md, CHANGELOG.md
 **Loops:** none
-**Decisions:** none. Proposed to the founder: PD-1 (lock Python deps, lock hash in the engine stamp), PD-2 (Node 22.12+ floor); F-005 approval to confirm.
-**Next:** push main so CI runs; leads take T-002/T-003/T-005/T-006 (plus T-007…T-010).
+**Decisions:** D-039 (DeepSeek workers may read the repo, F-005), D-040 (Python lock file in T-003 with its hash in the engine stamp; Node 22.12+).
+**Next:** check the first CI run; leads take T-002/T-003/T-005/T-006 (plus T-007…T-010).
 
 ---
 
