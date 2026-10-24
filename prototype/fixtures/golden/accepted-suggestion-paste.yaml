@@ -48,6 +48,7 @@ batches:
 # Sub-counts: inferred_links 1 (p1's link carries sg1), map_suggestions 1. Paste: 69 + 1 + 69 = 139.
 expected_receipt:
   status: complete
+  mechanics_words: 0
   total_words: 32
   bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 11, untraced: 21}
   bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 0, untraced: 1}
@@ -64,3 +65,11 @@ expected_receipt:
   question_targets: ["s1 p1 pasted,student_link", "s2 p1 pasted,student_link", "s3 p2 student_link"]
   facts: {editor_pastes: 1, paste_surviving_chars: 139, cards_with_paste: 0, coach_answers_with_paste: 0,
           declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: untraced_claim, grounding: [c1]}

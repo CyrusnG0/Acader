@@ -15,6 +15,7 @@ def project(l1: dict, compile_json: dict) -> dict:
     return {
         "status": l1["status"],
         "total_words": bands["total_words"],
+        "mechanics_words": bands["mechanics"],
         "bands_by_words": dict(bands["by_words"]),
         "bands_by_claims": dict(bands["by_claims"]),
         "quoted_words": bands["quoted_words"],
@@ -38,4 +39,17 @@ def project(l1: dict, compile_json: dict) -> dict:
             "declared_claims": facts["declared"]["declared_claims"],
             "declared_claims_anchored": facts["declared"]["declared_claims_anchored"],
         },
+    }
+
+
+def project_compiled(receipt: dict) -> dict:
+    """Stable, human-reviewed targets from the actual T-016 receipt, separate from L1."""
+    return {
+        "status": receipt["status"],
+        "questions_pending": receipt["questions_pending"],
+        "mechanics": receipt["bands"]["mechanics"],
+        "question_targets": [
+            {"paragraph_id": q["paragraph_id"], "why": q["why"],
+             "grounding": q["grounding"]} for q in receipt["questions"]
+        ],
     }

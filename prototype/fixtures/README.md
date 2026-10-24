@@ -58,7 +58,7 @@ expected_receipt:
   question_targets: []
 ```
 
-The sample illustrates the shape only; its illustrative anchors, receipt counts and question labels are not a frozen golden. A real session must use block references generated from the pinned source fixture and independently checked expected receipt values. The initial 15 paragraph-link label seeds are in [mapper_seed_labels.yaml](mapper_seed_labels.yaml); they are draft labels and need a second-person review before they count as frozen gold. The executable session scripts and five held-out cases still need to be authored; holdout labels must come from someone other than the prompt author before use to tune or gate the mapper.
+The sample illustrates the shape only; its illustrative anchors, receipt counts and question labels are not a frozen golden. A real session must use block references generated from the pinned source fixture and independently checked expected receipt values. The initial 15 paragraph-link label seeds are in [mapper_seed_labels.yaml](mapper_seed_labels.yaml); they are draft labels and need a second-person review before they count as frozen gold. The executable session scripts and five held-out cases still need to be authored; holdout labels must come from someone other than the prompt author before use to gate the mapper. Held-out sessions must never be used for tuning.
 
 ## Labeling rules
 
@@ -73,11 +73,11 @@ The sample illustrates the shape only; its illustrative anchors, receipt counts 
 
 The sessions live in [golden/](golden/), one `<session_id>.yaml` each. The pipeline has three parts:
 
-1. **Recorder** (`prototype/web/golden/record.mjs`, Playwright, needs Chromium, not run in CI). It drives the real editor page (the S1 page, `prototype/spikes/S1/page/`) through every *editor* action of a script and writes `golden/recorded/<session_id>.json`: the ProseMirror steps, `input_kind` counts and `doc_hash` the browser produced for each editor action. These recordings are committed.
+1. **Recorder** (`prototype/web/golden/record.mjs`, Playwright, needs Chromium, runs locally and in CI). It drives the real editor page (the S1 page, `prototype/spikes/S1/page/`) through every *editor* action of a script and writes `golden/recorded/<session_id>.json`: the ProseMirror steps, `input_kind` counts and `doc_hash` the browser produced for each editor action. These recordings are committed.
 2. **Ingest builder** (`prototype/server/golden/`). It walks the script in order with an injected clock and posts everything through the real ingest path: student events, batches, checkpoints and submit through the T-012 HTTP API (`create_app` + `TestClient`); server-side events (`coach.ask`, `helper.serve`, `claim.extracted`, `map.suggestion`) through the same `EventService` the API uses, with their real actors. The result is one sealed log per session.
-3. **Golden test** (`prototype/server/tests/test_golden_sessions.py`, runs in CI's python job). It rebuilds every log from the YAML plus its recording, runs the real pipeline (replay, mark check, L1), projects the result and compares it with the frozen `expected_receipt` in the YAML. It also checks that each recording replays in Python to the browser's `doc_hash` and that two builds give the same chain hashes.
+3. **Golden test** (`prototype/server/tests/test_golden_sessions.py`, runs in CI's python job). It rebuilds every log from the YAML plus its recording, runs the real pipeline (replay, mark check, L1, receipt compiler), projects the result and compares it with the frozen `expected_receipt` and `expected_compiled_receipt` in the YAML. It also checks that each recording replays in Python to the browser's `doc_hash` and that two builds give the same chain hashes.
 
-Regenerate after a change to the editor, `web/schema.json` or a script's editor actions: from `prototype/web`, `npm i --no-save playwright-core@1.56.1 && node golden/record.mjs` (all sessions) or `node golden/record.mjs <session_id>`. The test fails with "recording is stale" when a script's editor actions no longer match its recording.
+Regenerate after a change to the editor, `web/schema.json` or a script's editor actions: from `prototype/web`, `npm ci && npx playwright-core install chromium && node golden/record.mjs` (all sessions) or `node golden/record.mjs <session_id>`. The test fails with "recording is stale" when a script's editor actions no longer match its recording.
 
 ### Script fields
 
@@ -95,7 +95,7 @@ imports: {imp1: {tool_name: ChatGPT, text: "..."}}   # optional: import_id -> Do
 actions: [...]                   # below; `minute` is an int >= 0 and never decreases
 batches: [...]                   # optional mapper labels (format above)
 expected_receipt: {...}          # frozen; see "Expected receipt"
-pending: {...}                   # optional: an expectation that the code does not meet yet (strict xfail)
+expected_compiled_receipt: {...} # frozen selected question targets and mechanics from the receipt compiler
 ```
 
 Block references are the ids in [golden/blocks.json](golden/blocks.json). A quote's text must be an exact substring of its block.
@@ -150,6 +150,7 @@ The mark check reads its origins from the session: block text from `blocks.json`
 expected_receipt:
   status: complete                # complete | replay_mismatch
   total_words: 0
+  mechanics_words: 0              # confirmed Helper-only text, outside the five bands
   bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 0, untraced: 0}
   bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 0, untraced: 0}
   quoted_words: 0
@@ -165,10 +166,23 @@ expected_receipt:
           declared_claims: 0, declared_claims_anchored: 0}
 ```
 
-`question_targets` are the L1 candidates for "where to ask" (provenance §5); the receipt compiler (T-016) picks the 2–3 questions from them. Mapper labels (`batches`) are draft and need a second-person review (see above).
+The L1 `question_targets` list is the L3b comparison queue, not the receipt compiler's selected questions. The compiler applies receipt.md §4, grounding checks, and its cap independently. Its stable selections are frozen separately:
+
+```yaml
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: student_linked_claim, grounding: [c1]}
+```
+
+These expectations are authored from the scenario before checking actual output. Tests also check complete receipt bytes and hashes across builds, stored-artifact recompilation without another model call, pending questions, and chain verification with the issued receipt and its artifacts. The golden stamp fixes its Git identifier; the real lock hash and editor pair are retained. Stub question text is for engineering only and is not evidence of question quality. Mapper labels (`batches`) remain draft and need independent review.
 
 ## Current limitations
 
-- The golden set has the 11 M1 sessions (T-015). The 15–20 session mapper set, the five held-out sessions with independent labels, and the second-person review of every label remain before the mapper evaluation can gate `mapper_enabled` (see `design/evaluation.md` §2a).
+- The golden set has 12 M1 sessions (T-015), including editing above a linked paragraph and the D-050 reference-list case. The 15–20 session mapper set, the five held-out sessions with independent labels, and the second-person review of every label remain before the mapper evaluation can gate `mapper_enabled` (see `design/evaluation.md` §2a).
 - Block references are hand-defined over the S2 corpus because the Docling parser is not installed in this environment; see the note in `golden/blocks.json`.
-- The recorder needs Chromium, so CI uses the committed recordings; CI does not re-record when the editor changes (S1 PD-S1-7: Playwright in CI from M3).
+- The Chromium recorder runs locally and in CI. CI regenerates every recording, checks for differences from the committed files, and reruns the golden tests. Expected receipt assertions are never regenerated.
+- The selected open textbook has not yet been used in an executable session; this remains a corpus-completeness gap under D-051.
+- Receipt rendering and a human reading the rendered receipts remain T-017 and the M1 exit review.

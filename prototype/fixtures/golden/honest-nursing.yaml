@@ -97,6 +97,7 @@ batches:
 # reason; Coach q1 revised.
 expected_receipt:
   status: complete
+  mechanics_words: 0
   total_words: 61
   bands_by_words: {declared: 0, traced_source: 34, traced_coach: 11, student_linked: 8, untraced: 8}
   bands_by_claims: {declared: 0, traced_source: 2, traced_coach: 0, student_linked: 0, untraced: 1}
@@ -118,3 +119,11 @@ expected_receipt:
   question_targets: ["s1 p1 student_link", "s2 p1 student_link", "s3 p2 student_link", "s5 p4 unlinked"]
   facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
           declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p4, why: untraced_claim, grounding: [c1]}

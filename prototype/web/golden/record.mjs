@@ -1,13 +1,13 @@
 // Golden-session recorder (T-015). Drives the real editor (the S1 page) in
 // Chromium through every editor action of each golden script and writes
-// fixtures/golden/recorded/<session_id>.json. Not part of CI.
+// fixtures/golden/recorded/<session_id>.json; CI regenerates these recordings.
 // Run from prototype/web:
 //   npm i --no-save playwright-core@1.56.1 && node golden/record.mjs [session_id ...]
-// Env: CHROMIUM (browser path), GOLDEN_PYTHON, GOLDEN_ACTIONS_JSON (test only).
+// Env: GOLDEN_PYTHON, GOLDEN_ACTIONS_JSON (test only).
+// CHROMIUM overrides the pinned bundled browser for debugging only; do not freeze that output.
 import { createRequire } from "node:module";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -20,17 +20,6 @@ const require = createRequire(join(web, "package.json"));
 const { createServer } = await import(require.resolve("vite"));
 const { chromium } = require("playwright-core");
 const pwVersion = require("playwright-core/package.json").version;
-
-function defaultChromium() {
-  const cache = join(homedir(), "Library/Caches/ms-playwright");
-  if (!existsSync(cache)) return undefined;
-  const dirs = readdirSync(cache).filter((d) => /^chromium-\d+$/.test(d)).sort().reverse();
-  for (const d of dirs) {
-    const p = join(cache, d, "chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing");
-    if (existsSync(p)) return p;
-  }
-  return undefined;
-}
 
 const EDITOR_ACTIONS = new Set(["type_paragraph", "type", "insert", "paste", "replace", "delete", "link", "accept_suggestion"]);
 const MOD = "ControlOrMeta";
@@ -60,8 +49,8 @@ const server = await createServer({
 });
 await server.listen();
 const url = "http://localhost:5198/spikes/S1/page/index.html";
-const browser = await chromium.launch({ executablePath: process.env.CHROMIUM ?? defaultChromium(), headless: true });
-const context = await browser.newContext({ permissions: ["clipboard-read", "clipboard-write"] });
+let browser;
+let context;
 
 const call = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), [fn, args]);
 
@@ -199,8 +188,8 @@ async function record(sessionId) {
   await page.close();
   mkdirSync(outDir, { recursive: true });
   const body = {
-    "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
-    browser: `Chromium (playwright-core ${pwVersion}, headless)`,
+    "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+    browser: `Chromium ${browser.version()} (playwright-core ${pwVersion}, headless)`,
     session_id: sessionId,
     editor_actions_sha256: spec.editor_actions_sha256,
     actions: entries,
@@ -212,6 +201,8 @@ async function record(sessionId) {
 
 let failed = false;
 try {
+  browser = await chromium.launch({ executablePath: process.env.CHROMIUM, headless: true });
+  context = await browser.newContext({ permissions: ["clipboard-read", "clipboard-write"] });
   for (const s of sessions) {
     try {
       if (!(await record(s))) failed = true;
@@ -221,7 +212,7 @@ try {
     }
   }
 } finally {
-  await browser.close();
+  await browser?.close();
   await server.close();
 }
 process.exit(failed ? 1 : 0);

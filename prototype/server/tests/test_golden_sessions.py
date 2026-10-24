@@ -6,10 +6,11 @@ import functools
 
 import pytest
 
-from engine.events import canonical_json
+from engine.events import canonical_json, sha256_hex, verify
 from engine.replay import EMPTY_DOC, doc_hash, load_schema, replay_steps
+from engine.receipt import compile_receipt
 from golden.build import (BuildError, StaleRecording, build_session, load_recording)
-from golden.project import project
+from golden.project import project, project_compiled
 from golden.script import (EDITOR_ACTIONS, RECORDED_DIR, ScriptError, editor_actions, editor_actions_sha256,
                            list_sessions, load_blocks, load_script, validate_script)
 
@@ -54,16 +55,78 @@ def test_golden_receipt(sid):
     compare(SCRIPTS[sid]["expected_receipt"], project(res.l1, res.compile))
 
 
-PENDING = [pytest.param(s, id=s, marks=pytest.mark.xfail(strict=True,
-                                                         reason=SCRIPTS[s]["pending"]["reason"]))
-           for s in SESSIONS if "pending" in SCRIPTS[s]]
-
-
-@pytest.mark.parametrize("sid", PENDING)
-def test_golden_pending(sid):
-    need_recording(sid)
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_compiled_receipt_targets(sid):
     res = built(sid)
-    compare(SCRIPTS[sid]["pending"]["expected_receipt"], project(res.l1, res.compile))
+    script = SCRIPTS[sid]
+    compare(script["expected_compiled_receipt"], project_compiled(res.receipt))
+    compare_compiled_counts(script["expected_receipt"], res.receipt)
+
+
+def compare_compiled_counts(expected: dict, receipt: dict) -> None:
+    """Check actual compiler forwarding against the independently authored L1 gold."""
+    compare({
+        "total_words": expected["total_words"],
+        "by_words": expected["bands_by_words"],
+        "by_claims": expected["bands_by_claims"],
+        "quoted_words": expected["quoted_words"],
+        "mechanics": expected["mechanics_words"],
+        "inferred_links": expected["inferred_links"],
+        "map_suggestions": expected["map_suggestions"],
+    }, {
+        **{k: receipt["bands"][k] for k in
+           ("total_words", "by_words", "by_claims", "quoted_words", "mechanics")},
+        "inferred_links": receipt["inferred_links"],
+        "map_suggestions": receipt["map_suggestions"],
+    })
+
+
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_compiled_receipt_verifies(sid):
+    res = built(sid)
+    assert res.receipt_hash == sha256_hex(canonical_json(res.receipt))
+    issued = res.receipt_events[-1]
+    assert issued["type"] == "receipt.issued"
+    assert issued["payload"]["receipt_hash"] == res.receipt_hash
+    checked = verify(res.receipt_events, res.seal, receipt=res.receipt, artifacts=res.artifacts)
+    assert checked.ok, checked.problems
+    assert all(q["q"] is not None and q["grounding"] for q in res.receipt["questions"])
+
+
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_stored_receipt_recompile_makes_no_llm_calls(sid):
+    res = built(sid)
+
+    def forbidden(_):
+        raise AssertionError("stored receipt replay attempted an LLM call")
+
+    replayed = compile_receipt(
+        events=res.receipt_events, l1=res.l1, doc=res.doc, log_id=sid,
+        seal_hash=res.seal, sources=res.sources, stamp=res.stamp,
+        ask=forbidden, stored=res.artifacts)
+    assert canonical_json(replayed.receipt) == canonical_json(res.receipt)
+    assert replayed.receipt_hash == res.receipt_hash
+    offline = compile_receipt(
+        events=res.receipt_events, l1=res.l1, doc=res.doc, log_id=sid,
+        seal_hash=res.seal, sources=res.sources, stamp=res.stamp,
+        ask=None, stored=res.artifacts)
+    assert canonical_json(offline.receipt) == canonical_json(res.receipt)
+
+
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_questions_pending_preserves_selected_targets(sid):
+    res = built(sid)
+    pending = build_session(sid, ask=None)
+    assert [q["paragraph_id"] for q in pending.receipt["questions"]] == [
+        q["paragraph_id"] for q in res.receipt["questions"]]
+    assert [q["why"] for q in pending.receipt["questions"]] == [
+        q["why"] for q in res.receipt["questions"]]
+    assert all(q["q"] is None for q in pending.receipt["questions"])
+    expected = bool(res.receipt["questions"])
+    assert pending.receipt["questions_pending"] is expected
+    assert pending.receipt["status"] == ("questions_pending" if expected else "complete")
+    assert verify(pending.receipt_events, pending.seal, receipt=pending.receipt,
+                  artifacts=pending.artifacts).ok
 
 
 @pytest.mark.parametrize("sid", SESSIONS)
@@ -93,6 +156,10 @@ def test_build_is_deterministic(sid):
     a, b = build_session(sid), build_session(sid)
     assert [e["hash"] for e in a.events] == [e["hash"] for e in b.events]
     assert canonical_json(a.l1) == canonical_json(b.l1)
+    assert canonical_json(a.receipt) == canonical_json(b.receipt)
+    assert a.receipt_hash == b.receipt_hash
+    assert a.artifacts == b.artifacts
+    assert [e["hash"] for e in a.receipt_events] == [e["hash"] for e in b.receipt_events]
 
 
 @pytest.mark.parametrize("sid", SESSIONS)
@@ -260,3 +327,53 @@ def test_unit_forged_quote_skips_substring_check_but_not_block_ref():
     with pytest.raises(ScriptError, match="unknown block"):
         validate_script(unit_script({"minute": 0, "action": "insert", "paragraph_id": "p1",
                                      "runs": [run]}, SUBMIT), "unit")
+
+
+def test_builder_refuses_live_llm_mode(monkeypatch):
+    monkeypatch.delenv("ROOM_LLM", raising=False)
+    with pytest.raises(BuildError, match="require ROOM_LLM=stub"):
+        build_session("honest-nursing")
+
+
+def test_receipt_verification_rejects_missing_mapper_artifact():
+    res = built("accepted-suggestion-paste")
+    missing = {k: v for k, v in res.artifacts.items() if k != "artifact-sg1"}
+    checked = verify(res.receipt_events, res.seal, receipt=res.receipt, artifacts=missing)
+    assert not checked.ok
+    assert "artifact artifact-sg1 is not stored" in checked.problems
+
+
+def test_receipt_verification_rejects_changed_receipt():
+    res = built("honest-nursing")
+    changed = {**res.receipt, "summary": {**res.receipt["summary"], "text": "Changed."}}
+    assert not verify(res.receipt_events, res.seal, receipt=changed,
+                      artifacts=res.artifacts).ok
+
+
+@pytest.mark.parametrize("field", ["expected_receipt", "expected_compiled_receipt"])
+def test_show_cli_fails_on_either_projection_mismatch(monkeypatch, capsys, field):
+    import copy
+    from golden import __main__ as cli
+
+    script = copy.deepcopy(SCRIPTS["honest-nursing"])
+    script[field]["status"] = "incorrect_expected_status"
+    monkeypatch.setattr(cli, "load_script", lambda sid: script)
+    assert cli.main(["show", "honest-nursing"]) == 1
+    assert f"DIFF {field}.status" in capsys.readouterr().out
+
+
+def test_actions_cli_does_not_need_stub_mode(monkeypatch, capsys):
+    from golden import __main__ as cli
+
+    monkeypatch.delenv("ROOM_LLM", raising=False)
+    assert cli.main(["actions", "honest-nursing"]) == 0
+    assert "type_paragraph" in capsys.readouterr().out
+
+
+def test_compiled_count_assertion_rejects_misforwarded_band():
+    import copy
+
+    receipt = copy.deepcopy(built("honest-nursing").receipt)
+    receipt["bands"]["by_words"]["traced_source"] += 1
+    with pytest.raises(AssertionError, match="by_words"):
+        compare_compiled_counts(SCRIPTS["honest-nursing"]["expected_receipt"], receipt)

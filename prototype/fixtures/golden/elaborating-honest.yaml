@@ -63,6 +63,7 @@ batches:
 # s2 14, s3 7, s4 8. Nothing is untraced. Moment: Coach q1 disagreed with a written reason.
 expected_receipt:
   status: complete
+  mechanics_words: 0
   total_words: 42
   bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 42, untraced: 0}
   bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 1, untraced: 0}
@@ -80,3 +81,11 @@ expected_receipt:
   question_targets: ["s1 p1 student_link", "s2 p1 student_link", "s3 p1 student_link", "s4 p2 student_link"]
   facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
           declared_claims: 0, declared_claims_anchored: 0}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: student_linked_claim, grounding: [c1]}

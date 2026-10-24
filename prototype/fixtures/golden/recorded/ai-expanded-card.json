@@ -1,6 +1,6 @@
 {
- "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
- "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
  "session_id": "ai-expanded-card",
  "editor_actions_sha256": "2043720876a4abb8e80f78fbe54c46b48e3722be48be6a2ed485bd0901edbdd2",
  "actions": [

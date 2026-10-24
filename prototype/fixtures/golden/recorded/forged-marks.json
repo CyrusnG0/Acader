@@ -1,6 +1,6 @@
 {
- "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
- "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs. Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium 141.0.7390.37 (playwright-core 1.56.1, headless)",
  "session_id": "forged-marks",
  "editor_actions_sha256": "e6795d17d4f7dcf133fd1fa31e6113c620e199e46c8a99a1e9e4c6248a0e03a0",
  "actions": [

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
@@ -14,6 +15,7 @@ from fastapi.testclient import TestClient
 
 from app.compile_service import load_snapshot_fn
 from app.main import create_app
+from app.receipt_service import build_stamp, issue_receipt, llm_ask
 from engine.events import canonical_json
 from engine.provenance import (InMemorySources, coach_answer_from_runs, compile_marks,
                                l1_from_compile)
@@ -51,6 +53,13 @@ class BuildResult:
     l1: dict
     checkpoints_skipped: int
     verify: dict
+    receipt: dict
+    artifacts: dict
+    receipt_hash: str
+    receipt_events: list
+    stamp: dict
+    doc: object
+    sources: InMemorySources
 
 
 def _sha(text: str) -> str:
@@ -94,8 +103,9 @@ def _runs_from(item: dict, where: str) -> tuple[str, list[dict]]:
 
 
 class _Builder:
-    def __init__(self, session_id: str, script: dict, recording: dict):
+    def __init__(self, session_id: str, script: dict, recording: dict, *, ask):
         self.id = session_id
+        self.ask = ask
         self.script = script
         self.rec = recording
         self.blocks = load_blocks()
@@ -113,6 +123,7 @@ class _Builder:
         self.seal = None
         self.seal_seq = None
         self.where = ""
+        self.artifacts: dict = {}
         self.claims = {c["claim_id"]: c["text"] for c in script.get("claims") or []}
 
     # ---- plumbing --------------------------------------------------------------------------
@@ -296,6 +307,12 @@ class _Builder:
             "output_hash": _sha(outputs[a["serve_id"]])})
 
     def do_map_suggestion(self, a):
+        # The scripted mapper event has always hashed the suggestion id as its
+        # synthetic output. Retain that exact body so receipt verification can
+        # resolve the event's artifact without inventing a live mapper call.
+        aid = "artifact-" + a["suggestion_id"]
+        self.artifacts[aid] = {"artifact_id": aid, "task": "map_suggest",
+                               "body": a["suggestion_id"], "hash": _sha(a["suggestion_id"])}
         e = self.need_doc("map_suggestion")
         doc = (self.latest_doc_entry or e)["doc"]
         node = _paragraph_node(doc, a["paragraph_id"])
@@ -345,8 +362,16 @@ class _Builder:
         verify = self.call("GET", f"/logs/{self.id}/verify")
         if not verify.get("ok"):
             raise BuildError(f"verify failed: {verify}")
+        # Pin only the commit component: the stamp still fingerprints the actual lock,
+        # editor pair and prompt. Fixture expectations never depend on the checkout SHA.
+        stamp = build_stamp(git_sha="golden-fixtures-v1")
+        receipt, _ = issue_receipt(
+            self.svc, self.id, sources, ask=self.ask, stamp=stamp,
+            block_kinds={k: b["kind"] for k, b in self.blocks.items()})
         return BuildResult(self.id, events, self.seal, self.seal_seq, result.to_json(), l1,
-                           self.skipped, verify)
+                           self.skipped, verify, receipt.receipt, {**self.artifacts, **receipt.artifacts},
+                           receipt.receipt_hash, self.svc.events(self.id), stamp,
+                           result.replay.doc, sources)
 
 
 def load_recording(session_id: str) -> dict:
@@ -355,11 +380,22 @@ def load_recording(session_id: str) -> dict:
 
 
 def build_session(session_id: str, *, recording: dict | None = None,
-                  script: dict | None = None) -> BuildResult:
+                  script: dict | None = None, ask=llm_ask) -> BuildResult:
+    if os.environ.get("ROOM_LLM") != "stub":
+        raise BuildError("golden sessions require ROOM_LLM=stub; live calls are not allowed")
     script = load_script(session_id) if script is None else script
     if recording is None:
         recording = load_recording(session_id)
     if recording.get("editor_actions_sha256") != editor_actions_sha256(script):
         raise StaleRecording(f"recording is stale for {session_id}: rerun "
                              f"`node golden/record.mjs {session_id}` from prototype/web")
-    return _Builder(session_id, script, recording).run()
+    builder = _Builder(session_id, script, recording, ask=ask)
+    try:
+        return builder.run()
+    finally:
+        # TestClient is deliberately not entered: entering starts the app's LLM
+        # boot ping. Close its transport and the in-memory SQLite service ourselves.
+        if builder.client is not None:
+            builder.client.close()
+        if builder.svc is not None:
+            builder.svc.close()

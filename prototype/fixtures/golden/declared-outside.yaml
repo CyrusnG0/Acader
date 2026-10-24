@@ -72,6 +72,7 @@ batches:
 # Targets: p1's link is by import (no student_link reason, nothing pasted); p2, p3 student_link.
 expected_receipt:
   status: complete
+  mechanics_words: 0
   total_words: 42
   bands_by_words: {declared: 19, traced_source: 0, traced_coach: 0, student_linked: 23, untraced: 0}
   bands_by_claims: {declared: 1, traced_source: 0, traced_coach: 0, student_linked: 2, untraced: 0}
@@ -89,3 +90,12 @@ expected_receipt:
   question_targets: ["s3 p2 student_link", "s4 p3 student_link"]
   facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
           declared_claims: 2, declared_claims_anchored: 1}
+
+# Expected compiled question targets authored from the scenario and receipt rules.
+expected_compiled_receipt:
+  status: complete
+  questions_pending: false
+  mechanics: 0
+  question_targets:
+    - {paragraph_id: p1, why: declared_not_anchored, grounding: [d1]}
+    - {paragraph_id: p3, why: student_linked_claim, grounding: [d2]}

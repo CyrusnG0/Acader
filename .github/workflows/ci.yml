@@ -32,3 +32,32 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+  golden:
+    runs-on: ubuntu-latest
+    env:
+      ROOM_LLM: stub
+      GOLDEN_PYTHON: python
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/web/package-lock.json
+      - run: pip install --require-hashes -r prototype/requirements.lock
+      - run: npm ci
+        working-directory: prototype/web
+      - name: install pinned Chromium
+        run: npx --no-install playwright-core install --with-deps chromium
+        working-directory: prototype/web
+      - name: regenerate browser recordings
+        run: node golden/record.mjs
+        working-directory: prototype/web
+      - name: recordings match the committed fixtures
+        run: git diff --exit-code -- prototype/fixtures/golden/recorded
+      - name: receipts from regenerated recordings match frozen expectations
+        run: python -m pytest -q server/tests/test_golden_sessions.py
+        working-directory: prototype
