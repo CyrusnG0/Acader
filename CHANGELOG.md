@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: `prototype/web/schema.json` and `src/schema.ts`: origin and claim marks with closed lists, loaded into ProseMirror (T-002).
 - 2026-10-24: `engine/events/`: hash chain, seal, post-seal whitelist, SQLite append store, `verify` and `python -m engine verify` (spike S5, T-005; GO).
 - 2026-10-24: `prototype/` scaffold (server packages, FastAPI `/healthz`, engine CLI stub, Vite + TS web, fixtures, spikes) and `.github/workflows/ci.yml` running prototype, kit and web checks (T-001).
 - 2026-10-24: `EXPECTATIONS.md` (checklist every task must pass), `docs/TASKS.md` (task board, M0 tasks), `docs/handoffs/` (handoff template); CLAUDE.md §8 lead/worker/checker flow.

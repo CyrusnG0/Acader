@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-002 (schema.json) checked and merged
+**Summary:** Checker re-ran T-002: prototype 21, kit 29, web 30 passed; typecheck and build clean; after merge, prototype 69 passed. Schema matches event-log.md §4 (six origin kinds, claim.by student/coach/import, optional suggestion_id, inclusive false). T-004 unblocked. Also fixed a checker mistake: agent worktrees under `.claude/worktrees/` had been committed as gitlinks; untracked and ignored (733c45d).
+**Files touched:** prototype/web/schema.json, prototype/web/src/schema.ts, schema tests, prototype/web/package.json (+prosemirror-model 1.25.4), tsconfig.json, docs/handoffs/2026-10-24-T-002-schema.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md, .gitignore
+**Loops:** none
+**Decisions:** none. Proposed: node set (doc/paragraph/text only for now; full set decided in T-004 before golden logs), one claim per span.
+**Next:** T-004 (spike S1) lead launched; founder decides PD-S5-1…4 and the T-002 proposals.
+
+---
+
 ## 2026-10-24 — T-005 (spike S5) checked and merged; CI green
 **Summary:** First GitHub CI run green (prototype 13, kit 29, web). Leads now run as background Opus agents launched by the checker, one worktree each (T-002, T-003, T-005, T-006). T-005 re-run by the checker: 61 + 29 passed, whitelist matches event-log.md §6. Spike S5 is GO. EXPECTATIONS C clarified: the seal covers the record up to submission; dropping the newest post-seal events doesn't show.
 **Files touched:** prototype/server/engine/events/, prototype/server/engine/__main__.py, prototype/server/tests/test_events_s5.py, prototype/spikes/S5/RESULT.md, docs/handoffs/2026-10-24-T-005-spike-s5.md, docs/TASKS.md, EXPECTATIONS.md, docs/STATUS.md, CHANGELOG.md
