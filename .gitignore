@@ -22,3 +22,6 @@ frames/
 # Runner pilot data (student sessions)
 runner/data/
 .pytest_cache/
+
+node_modules/
+dist/
