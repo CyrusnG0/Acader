@@ -55,3 +55,10 @@
 - **PD-2: the error mapping for codes D13 does not name.** D13 lists five classes but not every status code. I chose: network errors, 408 and 5xx → `LLMTimeout` (transient; same rescue as a timeout); 402 (payment or quota) → `LLMAuth` (account problem: alert the operator); other 4xx, such as a provider content filter → `LLMRefusal`. Recommended: accept. The alternative is a sixth class, `LLMUnavailable`, for 5xx.
 - **PD-3: the deepseek backend accepts only `[system, user]` messages.** `shared.chat` takes exactly one system and one user string, and D22 forbids changing its behaviour. Recommended: keep this until a task needs multi-turn calls. At that point, add an optional `messages=` keyword to `shared.chat` (allowed by D22 as an optional keyword param).
 - **PD-4: lock tool = uv; `requirements.txt` removed.** The lock is universal (any OS), Python 3.12 and hash-checked. Recommended: accept. The alternative, pip-tools, needs one lock per platform for the same guarantee.
+
+## Checker review (2026-10-24): passed, merged to `main`
+- Fresh venv, `pip install --require-hashes -r prototype/requirements.lock`: prototype `119 passed`, kit `29 passed`. `shared/` unchanged; no banned words; no keys.
+- Task enum, error classes, stub fixtures and boot ping match architecture.md §5.
+- **A:** all lines ticked (incl. "shared/llm.py unchanged").
+- Note for M1: `ReceiptQuestion.event_ids` is `list[str]`; if the founder accepts PD-S5-2 (event id = `seq`), it becomes `list[int]` when the receipt compiler owns that schema.
+- PD-1…PD-4 go to the founder.

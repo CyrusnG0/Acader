@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-003 (LLM boundary + lock file) checked and merged
+**Summary:** Checker installed `prototype/requirements.lock` with `--require-hashes` into a fresh venv: prototype 119, kit 29 passed; `shared/` unchanged; task list matches architecture.md §5. `requirements.txt` replaced by the uv lock (D-040); CI installs it.
+**Files touched:** prototype/server/app/llm.py, prototype/server/app/main.py, prototype/server/tests/test_llm.py, prototype/requirements.lock (new), prototype/requirements.txt (removed), prototype/pyproject.toml, prototype/README.md, .github/workflows/ci.yml, docs/handoffs/2026-10-24-T-003-llm-boundary.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md
+**Loops:** none
+**Decisions:** none. Proposed: per-task output schemas are provisional and owned by each feature task; HTTP code mapping (5xx/408/network → Timeout, 402 → Auth, other 4xx → Refusal); deepseek backend takes [system, user] only; uv as the lock tool.
+**Next:** check the CI run on 3.12; T-004 adds prosemirror-py to the lock.
+
+---
+
 ## 2026-10-24 — T-002 (schema.json) checked and merged
 **Summary:** Checker re-ran T-002: prototype 21, kit 29, web 30 passed; typecheck and build clean; after merge, prototype 69 passed. Schema matches event-log.md §4 (six origin kinds, claim.by student/coach/import, optional suggestion_id, inclusive false). T-004 unblocked. Also fixed a checker mistake: agent worktrees under `.claude/worktrees/` had been committed as gitlinks; untracked and ignored (733c45d).
 **Files touched:** prototype/web/schema.json, prototype/web/src/schema.ts, schema tests, prototype/web/package.json (+prosemirror-model 1.25.4), tsconfig.json, docs/handoffs/2026-10-24-T-002-schema.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md, .gitignore

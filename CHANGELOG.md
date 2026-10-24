@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: `prototype/server/app/llm.py`: `complete(task, messages, schema)` boundary with stub, D13 error classes, backend-2 slot and boot ping (T-003).
 - 2026-10-24: `prototype/web/schema.json` and `src/schema.ts`: origin and claim marks with closed lists, loaded into ProseMirror (T-002).
 - 2026-10-24: `engine/events/`: hash chain, seal, post-seal whitelist, SQLite append store, `verify` and `python -m engine verify` (spike S5, T-005; GO).
 - 2026-10-24: `prototype/` scaffold (server packages, FastAPI `/healthz`, engine CLI stub, Vite + TS web, fixtures, spikes) and `.github/workflows/ci.yml` running prototype, kit and web checks (T-001).
@@ -16,6 +17,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 - 2026-10-23: `docs/designs/ceo-review-v1.md` (CEO review record, D-032); TODOS.md deferrals for v1.
 
 ### Changed
+- 2026-10-24: Python deps for `prototype/` locked with hashes in `requirements.lock` (uv); `requirements.txt` removed; CI installs the lock (D-040, T-003).
 - 2026-10-24: D-038: Coach cases B and C run as one "new idea" case with one pillar question (reading, logic, writing, communication); coach-helper.md §3, event-log.md, PRODUCT.md §5, GLOSSARY.
 - 2026-10-24: /plan-eng-review v2 (D-037): mapper events, band rules, payload/consent, budget, eval and M4m written into design/; PRODUCT.md §5/§7 say the pilot tests the student-built outline; OL-044 closed.
 - 2026-10-24: /plan-design-review (D-036): receipt first screen, submissions list, band colours, chain wording, student preview and P-15 wording set; wording filter now covers every surface; /design-consultation gate added to the build plan.
