@@ -1,7 +1,7 @@
 # Provenance: chains, bands and the cheap pipeline
 
-Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-23
-Implements: D-025 (proportions are about recorded traces, never "% AI"), law 5; CEO-3, CEO-13, CEO-14, CEO-17; D1, D5, D17, D20, D26, D27, D29, D31 ([eng record](../docs/designs/eng-review-v1.md)). Answers OL-031 (derivation half) and OL-040.
+Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-25
+Implements: D-025 (proportions are about recorded traces, never "% AI"), law 5; D-050 (confirmed Helper mechanics); CEO-3, CEO-13, CEO-14, CEO-17; D1, D5, D17, D20, D26, D27, D29, D31 ([eng record](../docs/designs/eng-review-v1.md)). Answers OL-031 (derivation half) and OL-040.
 
 ## 1. The professor's question
 
@@ -79,7 +79,7 @@ S3 (≥ 40 pairs, independent labeller, preregistered false-traced bar) must pas
 
 ## 6. Bands
 
-Each sentence (and each claim) gets exactly one band. Rules apply in order:
+Before applying the five bands, sentences made entirely of confirmed Helper text are labelled **mechanics** and excluded from the word and claim counts (D-050). Claim units containing only mechanics sentences are excluded too. The receipt shows their integer word count separately. All other sentences (and claims) get exactly one band. Rules apply in order:
 
 | Order | Band | Rule |
 |---|---|---|
@@ -92,7 +92,7 @@ Each sentence (and each claim) gets exactly one band. Rules apply in order:
 - **A model-proposed link never makes a sentence traced.** The v1 mapper links sentences to the student's claims only, never to source passages (eng review v2 D19).
 - There is **no "polish only" band in v1** (CEO-3; TODOS).
 - `quote` text counts as traced to its block and is also counted as "quoted".
-- `helper` text counts with its sentence (mechanics only; the leak check enforces that).
+- Mixed sentences containing `helper` text remain in the ordinary counts; only entirely confirmed Helper sentences qualify for mechanics. The leak check remains required for Helper output.
 - **Proportions are shown two ways, by words and by claims**, always together.
 - The human-session stop rule (CEO-18) and the "no untraced wall" gate (CEO-24) use the **untraced** share; the student-linked share is reported beside it (D27).
 

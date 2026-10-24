@@ -50,3 +50,19 @@ All results below are synthetic engineering checks, not results about students.
 ## Proposed decisions
 
 No new product decisions. Original PD-T015-4's temporary xfail is resolved by the already-approved D-050 and merged T-016 implementation. Original PD-T015-7's deferred CI proposal is superseded in this branch by implementing evaluation.md §2's browser-regeneration requirement now. All other outstanding founder proposals remain with the checker.
+
+## Checker review — 2026-10-25
+
+**Passed for T-015's M1 engineering scope.** An independent subagent reviewed the complete branch diff, and another independently ran all checks. This does not close the M1 rendering/human-review milestone or the mapper gate.
+
+- [x] A1 scope: twelve sessions exceed the ten requested; real editor/ingest and frozen expectations present.
+- [x] A2 tests: prototype **777**, goldens **138**, kit **29**, web **118**; typecheck/build passed; all twelve recordings regenerated without diff. Locked applicable package versions match; pip check passed.
+- [x] A3 regression checks: forged quote/Coach marks, pasted linked text, mechanics, shifted downstream positions, compiler count forwarding, artifact verification, determinism and pending mode.
+- [x] A4 shared client unchanged; A5 no secrets or real student data introduced; A6–A7 no new product claims or banned user-facing copy; source text and code identifiers are distinct from product copy.
+- [x] A8–A9: D-050 mechanics synchronized into provenance.md and its design index row; both handoffs retained.
+- [x] C1–C5: browser-origin/replay fixtures, mark checks, editor/card/Coach paste scenarios, rounded merge timestamps, seal and post-seal issuance verification.
+- [x] C6–C7: same inputs/stored outputs yield identical receipts; receipt tampering/missing artifacts rejected, with existing store/verify tests covering chain edits/deletion/reordering and whitelist rules.
+- [x] D: declared/source/Coach/student-linked/untraced scenarios preserve band precedence; paragraph and accepted-suggestion links never elevate pasted text; source links survive an edit above them.
+- [ ] I-M1: receipt UI and human reading remain T-017/the milestone exit.
+
+Non-blocking follow-ups are now explicit: OL-046 (full corpus and independent labels) and OL-047 (founder proposals). Local checks used Python 3.14.5/Node 25.9.0; Ubuntu/Python 3.12/Node 22 CI execution remains unobserved here. No proposals were approved by the checker.

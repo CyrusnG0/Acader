@@ -9,7 +9,7 @@ Status values: **validated** (tested) · **reviewed** (passed gstack review) · 
 |---|---|---|---|---|
 | 1 | [architecture.md](architecture.md) | Components, data flow, recommended stack, prototype layout, non-functional targets | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
 | 2 | [event-log.md](event-log.md) | Event envelope and types, origin marks, batching, hash chain, sealing, who reads what | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
-| 3 | [provenance.md](provenance.md) | Chains, the claim map model, pipeline layers L0–L3, claim-level comparison, bands, signal register | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
+| 3 | [provenance.md](provenance.md) | Chains, the claim map model, pipeline layers L0–L3, claim-level comparison, bands, signal register | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046; D-050 mechanics | 2026-10-25 |
 | 4 | [receipt.md](receipt.md) | Receipt layout, submissions list, chain view, question selection, wording filter, JSON format, student preview, P-15, nursing example | reviewed (CEO + eng + design; eng v2); D-041–D-046 | 2026-10-24 |
 | 4a | [workspace.md](workspace.md) | The student workspace and the live map: layout, map suggestions, states, trail toggle, widths, keyboard and screen readers | reviewed (design + eng v2); DESIGN.md pending; D-041–D-046 | 2026-10-24 |
 | 5 | [reading-aid.md](reading-aid.md) | Source origins, parsing into blocks, reading pins, reader actions, citation help | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
