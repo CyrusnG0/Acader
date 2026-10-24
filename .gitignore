@@ -25,3 +25,6 @@ runner/data/
 
 node_modules/
 dist/
+
+# Agent worktrees
+.claude/worktrees/
