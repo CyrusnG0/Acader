@@ -10,7 +10,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r prototype/requirements.txt
+      # Locked, hash-checked dependencies (D-040). To regenerate, see prototype/README.md.
+      - run: pip install --require-hashes -r prototype/requirements.lock
       - name: prototype tests
         run: cd prototype && ROOM_LLM=stub python -m pytest -q
       - name: kit tests (29)
