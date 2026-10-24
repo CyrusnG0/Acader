@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-006 (spike S2, PDF parser) checked and merged
+**Summary:** Spike S2 compared Docling, GROBID (CRF image) and PyMuPDF on three CC BY readings plus a synthetic scan. Docling (OCR off) is the only one passing the S2 bar on all three; GROBID fails on tables and the scan; PyMuPDF is AGPL-3.0. Checker re-ran prototype 119 / kit 29 (spike adds no product code); no PDFs committed; Docling numbers not reproduced by the checker (2.6 GB install).
+**Files touched:** prototype/spikes/S2/ (RESULT.md, run_s2.py, blocks.py, fetch.py, scancheck.py, corpus.json, gold.json), docs/handoffs/2026-10-24-T-006-spike-s2.md, docs/TASKS.md, docs/OPEN_LOOPS.md, docs/STATUS.md
+**Loops:** opened OL-045 (limitation remarks outside Discussion are missed)
+**Decisions:** none. Proposed: Docling as the v1 parser; text-layer scan check first; no PyMuPDF in product code (AGPL); ≥ 8 GB RAM and one parse at a time; GROBID for reference metadata later.
+**Next:** founder decides the S2 proposals; T-004 lands.
+
+---
+
 ## 2026-10-24 — T-003 (LLM boundary + lock file) checked and merged
 **Summary:** Checker installed `prototype/requirements.lock` with `--require-hashes` into a fresh venv: prototype 119, kit 29 passed; `shared/` unchanged; task list matches architecture.md §5. `requirements.txt` replaced by the uv lock (D-040); CI installs it.
 **Files touched:** prototype/server/app/llm.py, prototype/server/app/main.py, prototype/server/tests/test_llm.py, prototype/requirements.lock (new), prototype/requirements.txt (removed), prototype/pyproject.toml, prototype/README.md, .github/workflows/ci.yml, docs/handoffs/2026-10-24-T-003-llm-boundary.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md
