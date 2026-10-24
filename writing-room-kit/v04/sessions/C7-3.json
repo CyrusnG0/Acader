@@ -1,0 +1,438 @@
+{
+ "name": "C7-3",
+ "id": "C7-3",
+ "arm": "C7",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "hey, starting on this subdivided-units rent question. can you pull me some sources? i need stuff on rent control generally, and anything on HK specifically",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point you anywhere: what job does this source need to do in your essay \u2014 back up a specific claim you're making, give you a counter-view, or supply a definition or case you can't otherwise get? And which claim is it for?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "it's for the main argument \u2014 i'm leaning toward saying no to a hard cap on initial rents. so i need: rent-control supply effects (the elasticity stuff), the HK 2021 ordinance experience, and something on enforcement. maybe a tenant-side view too. can you shortlist?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal enforcement minute from a housing authority subcommittee, focused on inspection capacity and register feasibility.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing supply-elasticity literature and distinguishing first- and second-generation rent controls.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting SDU rent and stock index estimates from 2019 to 2025 with caveats.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020\u20132021 rent freeze and its aftermath.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report based on a tenant survey, arguing for tenure security over hard rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "all five map to the argument angles I listed",
+   "docs": [
+    "D6",
+    "D2",
+    "D7",
+    "D11",
+    "D10"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "say",
+   "text": "hmm ok the news digest keeps coming up - D12? and there's a legal opinion and an NGO one I haven't pulled. can I get sources on the enforcement side, and that Wong/Chan interview thing?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 22,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named a few things you're still deciding between, so let's pin down the job first: what would the enforcement-side source need to *show* in your essay \u2014 is it evidence for a claim you're already making, or a counter-view you need to answer?\n\nAnd for the Wong/Chan interview specifically, what would that first-hand account be doing that the other sources can't?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "say",
+   "text": "enforcement one is for a claim i'm already making - inspection capacity, that kind of thing. the interview... i want the human voice, what tenants actually say they need. can i just see what's out there? sources on enforcement + the interview",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying SDU households, arguing against hard caps and for rehousing and tenure security.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal draft minute of a Housing Authority enforcement subcommittee, focused on inspection capacity and enforcement design.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion from counsel assessing judicial review and compensation risk of rent-cap designs.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). First-person tenant interview with a long-term Sham Shui Po SDU resident, offering her views and interviewer-noted contradictions.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person tenant interview from a Kwai Chung cubicle dweller, giving lived experience and stated priorities.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "pick",
+   "text": "enforcement capacity plus tenant voices, both needed",
+   "docs": [
+    "D10",
+    "D11",
+    "D4",
+    "D3"
+   ]
+  },
+  {
+   "i": 26,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)), D11 (NGO Report: Rehousing Pathways First), D4 (Tenant Interview: Mrs Wong, Sham Shui Po), D3 (Tenant Interview: Mr Chan, Kwai Chung). You can now read their passages by id, for example D10p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p2"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p3"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D7",
+     "D11"
+    ],
+    [
+     "D6",
+     "D2",
+     "D10",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D10",
+    "D6",
+    "D2",
+    "D7",
+    "D11"
+   ],
+   "picked": [
+    "D10",
+    "D11",
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "reason": "all five map to the argument angles I listed"
+  },
+  {
+   "open_turn": 21,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D10",
+     "D9",
+     "D11",
+     "D12",
+     "D4"
+    ],
+    [
+     "D10",
+     "D11",
+     "D3",
+     "D4",
+     "D9"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 24,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D10",
+    "D9",
+    "D4",
+    "D3"
+   ],
+   "picked": [
+    "D10",
+    "D11",
+    "D3",
+    "D4"
+   ],
+   "reason": "enforcement capacity plus tenant voices, both needed"
+  }
+ ],
+ "unlocked_docs": [
+  "D6",
+  "D2",
+  "D7",
+  "D11",
+  "D10",
+  "D4",
+  "D3"
+ ],
+ "read_passages": [
+  "D6p1",
+  "D6p2",
+  "D6p3",
+  "D2p1",
+  "D6p4",
+  "D11p1",
+  "D10p1",
+  "D10p2",
+  "D10p3",
+  "D11p2",
+  "D4p1",
+  "D3p3",
+  "D4p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D6",
+    "D2",
+    "D7",
+    "D11",
+    "D10"
+   ],
+   "reason": "all five map to the argument angles I listed"
+  },
+  {
+   "turn": 25,
+   "docs": [
+    "D10",
+    "D11",
+    "D4",
+    "D3"
+   ],
+   "reason": "enforcement capacity plus tenant voices, both needed"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 21,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 23,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D10",
+  "D9",
+  "D4",
+  "D3"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "id": "C2-4",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should tighten rent control on subdivided units, but carefully. My main reason is that the people living in these flats have very little choice, and the numbers show they are still being squeezed.\n\nFirst, who lives in subdivided units? About 110,000 households do, and the flats are carved into small cubicles, often with shared kitchens and bathrooms [D1p1]. Even though the median rent is about 30 percent lower than a normal private flat, tenants actually pay 15 to 25 percent more per square foot [D1p1]. So the cheap headline rent hides a bad deal. On top of that, the tenants are mostly new arrivals, single-parent households and people waiting for public housing, and the average wait is around five and a half years [D1p2]. For them a subdivided unit is not a real choice. It is what they have while they wait in the queue. People with no alternatives cannot bargain with a landlord, which is the usual reason to have rent rules at all.\n\nSecond, the current rules have not stopped rents from rising quickly. Rent per square foot in these units went up 6.8 percent in 2019 to 2021 and another 3.1 percent in 2021 to 2023, while general private rent grew only 2.4 and 1.7 percent in the same periods [D2p2]. The 2021 ordinance seems to have slowed the rise, but subdivided rents still grew faster than the rest of the market. Also, the share of income spent on rent got worse for these households, going from 31 to 34 percent [D2p2]. That means tenants who are already poor are losing more of their money to rent.\n\nThe usual argument against stricter control is that landlords will leave the market and the supply of units will shrink. The data I read does not show that so far. The estimated stock went from 100,800 units in 2019 to 111,200 in 2025, and it kept growing through the 2021 ordinance [D2p1]. I should be honest that this does not prove the rules were harmless. The stock could have grown for other reasons, such as high demand from people stuck in the queue, and I only read a short excerpt. A tighter rule than the 2021 one might also act differently from a moderate one. So I am not saying the numbers prove safety. I am saying they give no sign yet that moderate control caused landlords to leave.\n\nBecause of this, I think the sensible step is a measured tightening, for example a limit on how much rent can rise between tenancies, and not a hard cap that is very strict. The reasoning is simple. Tenants have few options, they pay a premium for their space, and their rent burden is getting heavier. At the same time, the supply risk is real but not visible in the evidence I have. A moderate change lets the government check the stock figures each year and step back if units start to disappear.\n\nIn conclusion, Hong Kong should tighten rent control on subdivided units in a moderate way. The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept growing under the current rules [D2p1].",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 362
+  },
+  {
+   "pid": "D1p1",
+   "pos": 511
+  },
+  {
+   "pid": "D1p2",
+   "pos": 734
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1216
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1442
+  },
+  {
+   "pid": "D2p1",
+   "pos": 1814
+  },
+  {
+   "pid": "D1p1",
+   "pos": 2880
+  },
+  {
+   "pid": "D1p2",
+   "pos": 2886
+  },
+  {
+   "pid": "D2p2",
+   "pos": 2950
+  },
+  {
+   "pid": "D2p1",
+   "pos": 3015
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 9
+ },
+ "drafts": [
+  {
+   "turn": 14,
+   "text": "I think Hong Kong should tighten rent control on subdivided units. Tenants pay a lot for very little space [D1p1]. The stock of units kept growing after the 2021 rules [D2p1], so control did not seem to cause landlords to leave.\n",
+   "struct": "typed"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What would that source need to do for your rent essay \u2014 back up a claim you're making, show a counter-view, or give a first-hand case? And which claim is it for?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "not sure, just something about subdivided units and rent control, to back me up",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said it's for subdivided units and rent control, and that it should back you up \u2014 what's the actual claim you're making there that needs backing?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "I think rent control should be tighter because tenants are being squeezed. just give me some sources please",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over time, with caveats on post-2023 figures.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission arguing against hard initial-rent caps, with self-reported data limits.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing for tenure security over hard caps, opposing strict rent control.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided units, outlining debate and existing limited rent control.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply effects, distinguishing control types and welfare trade-offs.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "overview plus actual data",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "confident",
+   "text": "Rent control should be tighter because SDU rents still rise faster than normal flats and the stock did not shrink under the 2021 rules, so more control looks safe.",
+   "paste": false
+  },
+  {
+   "i": 13,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You said earlier you just wanted sources \"to back me up\" \u2014 now you're drawing a conclusion from D2's stock numbers. What in D2 tells you the stock held steady *because* of the 2021 rules, rather than alongside them?",
+   "policy": "COACH"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [],
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    false,
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D5",
+    "D11",
+    "D1",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "overview plus actual data"
+  }
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "overview plus actual data"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p1",
+  "D1p2",
+  "D2p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 1
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 541
+ }
+}

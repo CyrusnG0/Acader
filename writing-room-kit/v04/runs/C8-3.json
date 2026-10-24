@@ -1,0 +1,829 @@
+{
+ "id": "C8-3",
+ "arm": "C8",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "# Should Hong Kong Tighten Rent Control on Subdivided Units?\n\n**Position: No \u2014 not with a hard cap on initial rents. Hong Kong should tighten tenure security and conditions, plus a light indexed rent band, while treating the public-housing queue as the real instrument.**\n\nThe case for tightening is intuitive. SDU tenants pay a 15\u201325 percent per-square-foot premium for the worst housing in the city [D1p1], and real rent burden has worsened from 31 to 34 percent of income [D2p2]. Mrs Wong, nine years in a unit with no written agreement, says the 2021 ordinance \"changed nothing she can see\" [D4p1]. Mr Chan's landlord evicted him with two weeks' notice for requesting a window repair [D3p1]. Something plainly needs to change.\n\nBut the archive distinguishes two kinds of tightening, and only one is defensible. The 2021 Tenancy Control Ordinance was second-generation: it capped increases within a tenancy but left initial rents untouched [D1p3]. The academic literature finds first-generation controls (hard caps on levels) show consistent supply contraction, while second-generation controls show small or null stock effects [D6p2]. The stable SDU stock \u2014 100,800 units in 2019 rising to 111,200 in 2025, through the ordinance [D2p1] \u2014 is therefore evidence that *moderate* regulation is survivable, not that a binding cap is safe. As one think-tank piece notes, that stability may be \"an artifact of a non-binding instrument\" [D12p2].\n\nThe contraction arithmetic for a hard cap is uncomfortable. The reviewed elasticity of marginal SDU-type supply is 0.31\u20130.48: a 10 percent cap-induced cut removes roughly 3\u20135 percent of stock over five years [D6p1]. Modelled for a Hong Kong-like market, a 15 percent initial-rent cut transfers about HK$900 a month to incumbents while leaving 3,000\u20134,000 households a year unable to enter the segment \u2014 mostly new arrivals and newly formed households [D6p4]. Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down a backlog of suppressed increases released above the pre-cap trend line [D7p1][D7p2]. The tenants a cap protects are those already inside; the bill goes to those still outside [D7p3].\n\nThe enforcement problem is equally decisive. Inspection capacity covers under 6 percent of stock annually, and a band-based initial-rent cap would require a certifiable tenancy register costing an estimated 40\u201360 staff-years [D10p1]. Worse, the tenants least able to complain \u2014 those with no written agreement, like Mrs Wong [D4p1], or the newest arrivals \u2014 are precisely the ones enforcement would miss, so a cap would \"systematically miss the most exploited tail\" [D10p2]. The subcommittee could not identify any design under which the newest-arrival tail is protected first rather than last [D10p3]. A hard cap also invites compensation claims and judicial review that would outlast a Council term [D9p1][D9p3].\n\nWhat, then? Three measures fit the evidence. First, tenure security. The NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer [D11p1]. Mr Chan himself, offered a hard cap, named the waiting list instead: \"If the queue were three years instead of five and a half, he would accept any rent to leave\" [D3p3]. Second, a light indexed band on initial rents \u2014 defensible as rate-capping rather than confiscation [D9p2] \u2014 accepting that it will not reach the most exploited tail, and pairing it with the register investment that makes enforcement possible. Third, redirect enforcement capacity to conditions: fire, partition, ventilation, where harm is documented and immediate [D11p2].\n\nThe deeper point is that rent caps treat the price symptom of a quantity problem: the segment is tight because the queue is long [D11p2]. Mrs Wong's confidence that landlords \"would not leave the business\" [D4p2] sits awkwardly beside her own report of two flats converted to storage in her stairwell [D4p3] \u2014 and the Association, representing 18,000 units, commits to exit if returns fall below mortgage cost [D5p2], albeit on thin, self-reported evidence [D5p3]. The government's expected \"floor-standard + rent band\" package [D12p1] is the right shape. Tighten tenure and conditions; band initial rents lightly; and treat shortening the five-and-a-half-year queue [D1p2] as the policy that actually houses people. A hard cap would help those already inside at the expense of those still outside \u2014 the very households the policy claims to protect.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 401
+  },
+  {
+   "pid": "D2p2",
+   "pos": 475
+  },
+  {
+   "pid": "D4p1",
+   "pos": 595
+  },
+  {
+   "pid": "D3p1",
+   "pos": 688
+  },
+  {
+   "pid": "D1p3",
+   "pos": 943
+  },
+  {
+   "pid": "D6p2",
+   "pos": 1131
+  },
+  {
+   "pid": "D2p1",
+   "pos": 1233
+  },
+  {
+   "pid": "D12p2",
+   "pos": 1433
+  },
+  {
+   "pid": "D6p1",
+   "pos": 1651
+  },
+  {
+   "pid": "D6p4",
+   "pos": 1894
+  },
+  {
+   "pid": "D7p1",
+   "pos": 2114
+  },
+  {
+   "pid": "D7p2",
+   "pos": 2120
+  },
+  {
+   "pid": "D7p3",
+   "pos": 2218
+  },
+  {
+   "pid": "D10p1",
+   "pos": 2452
+  },
+  {
+   "pid": "D4p1",
+   "pos": 2552
+  },
+  {
+   "pid": "D10p2",
+   "pos": 2693
+  },
+  {
+   "pid": "D10p3",
+   "pos": 2821
+  },
+  {
+   "pid": "D9p1",
+   "pos": 2928
+  },
+  {
+   "pid": "D9p3",
+   "pos": 2934
+  },
+  {
+   "pid": "D11p1",
+   "pos": 3182
+  },
+  {
+   "pid": "D3p3",
+   "pos": 3354
+  },
+  {
+   "pid": "D9p2",
+   "pos": 3462
+  },
+  {
+   "pid": "D11p2",
+   "pos": 3727
+  },
+  {
+   "pid": "D11p2",
+   "pos": 3866
+  },
+  {
+   "pid": "D4p2",
+   "pos": 3943
+  },
+  {
+   "pid": "D4p3",
+   "pos": 4038
+  },
+  {
+   "pid": "D5p2",
+   "pos": 4147
+  },
+  {
+   "pid": "D5p3",
+   "pos": 4194
+  },
+  {
+   "pid": "D12p1",
+   "pos": 4265
+  },
+  {
+   "pid": "D1p2",
+   "pos": 4404
+  }
+ ],
+ "struct": {
+  "kind": "retyped",
+  "paste_chars": 0,
+  "bursts": 12
+ },
+ "drafts": [],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I need to work through the sources for an essay on Hong Kong rent control for subdivided units. Can you pull up the source that documents the per-square-foot premium SDU tenants pay for the worst housing in the city?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named a specific figure you want documented \u2014 the per-square-foot premium SDU tenants pay. Before I help you find anything, what would that source need to do for your essay: stand as the evidence for a claim you're already making, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "It needs to stand as evidence for a claim I'm already making: that SDU tenants pay a 15\u201325 percent per-square-foot premium for the worst housing in the city. That's the anchor for why tightening looks intuitive before I get to the counter-arguments. Can you pull up a source that documents that premium?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy brief perspective, with limits of a different jurisdiction and short duration.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting an SDU rent and stock index from 2019 to 2025, with voluntary reporting caveats.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report based on a survey of 440 SDU households, arguing against a hard cap and for tenure security.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control and supply elasticity, arguing that first-generation caps cause contraction.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided housing in Hong Kong, covering definitions, demographics, and rent control debate.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "primer source for the 15-25 percent premium anchor and the queue length",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "say",
+   "text": "I have D1's cited passages: the per-square-foot premium SDU tenants pay (D1p1), the five-and-a-half-year public housing queue (D1p2), and the fact that the 2021 ordinance was second-generation \u2014 capping increases within a tenancy but leaving initial rents untouched (D1p3). That third point is the hinge of my whole argument: it tells me the stable SDU stock can only show that moderate, non-binding regulation is survivable, not that a hard initial-rent cap is safe. I want to build on that. Can I get the sources on the current SDU stock trend and the government's expected package \u2014 the primer's companion data piece and the think-tank note on the floor-standard-plus-rent-band proposal?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named what D1's third point does for your argument. Before I point you anywhere, tell me: for the new source you want, what exactly should it show \u2014 a number on the current stock trend, a counter-view to your \"non-binding\" reading, or something else \u2014 and which specific claim of yours would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "say",
+   "text": "I want two things. First, the companion data piece on SDU stock: I need the actual trend \u2014 the 2019 figure and the latest figure \u2014 because the stable stock is the only hard evidence I have that the ordinance didn't shrink the segment, and I want to state it precisely rather than vaguely. Second, the think-tank note on the floor-standard-plus-rent-band proposal: I want its own characterization of why the stock stayed stable, because if it calls that stability an artifact of a non-binding instrument, that's exactly the counter to anyone who reads the flat stock as proof a hard cap is safe. So: a stock number and the think-tank's own reading of it.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 22,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity; distinguishes first- and second-generation controls; argues binding caps contract marginal stock.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt giving SDU stock and rent index 2019-2025, with survey-extrapolation caveat for post-2023 figures.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households; argues rent caps treat symptom, favors tenure security over hard cap.\n- D12: News Digest: Policy Signals, January\u2013June 2026 (News digest). News digest summarizing 2026 policy signals, consultation expectations, and competing think-tank readings of the stable stock.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 Mietendeckel, describing its enactment, court voiding, and aftermath.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "pick",
+   "text": "All five are cited by the essay and each carries a passage I still need to read.",
+   "docs": [
+    "D2",
+    "D12",
+    "D6",
+    "D11",
+    "D7"
+   ]
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D12 (News Digest: Policy Signals, January\u2013June 2026), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "pick",
+   "text": "all five cited, each carries an unread passage I still need",
+   "docs": [
+    "D6",
+    "D2",
+    "D11",
+    "D12",
+    "D7"
+   ]
+  },
+  {
+   "i": 31,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D11 (NGO Report: Rehousing Pathways First), D12 (News Digest: Policy Signals, January\u2013June 2026), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "pick",
+   "text": "all cited, all carry unread passages I need",
+   "docs": [
+    "D6",
+    "D2",
+    "D12"
+   ]
+  },
+  {
+   "i": 34,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D12 (News Digest: Policy Signals, January\u2013June 2026). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 42,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 44,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p2"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "say",
+   "text": "I still need the remaining sources the essay cites: D3 (the tenant case notes on Mr Chan), D4 (the NGO tenant interviews with Mrs Wong), D5 (the landlord association statement), D9 (the legal opinion on compensation and judicial review), and D10 (the enforcement capacity and tenancy register study). Please add whichever of these you can.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 48,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I don't have any documents here, so I can't add those sources \u2014 but I can help you work out what each one needs to do.\n\nYou've named five: case notes, tenant interviews, a landlord statement, a legal opinion, and an enforcement study. Which single claim in your essay is still unsupported, and what would a source need to show to carry it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "say",
+   "text": "D3 is the tenant case notes on Mr Chan. I've cited four passages from it: his two-week eviction after requesting a window repair, the subcommittee's inability to find a design protecting the newest-arrival tail first, his own preference for the waiting list over a hard cap, and the legal-exposure point about compensation and judicial review. Please add D3 so I can read those passages directly.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 50,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've told me what D3 contains, but not yet what job it does in your argument. Which one of those four passages is load-bearing for a claim you're making \u2014 and what would that passage need to show for the claim to hold?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "say",
+   "text": "Let me be concrete about D3's job. Mr Chan is my case-study hinge: the tenant who was actually harmed is the one who says the waiting list, not a rent cap, is what would let him leave. I need D3p1 for the eviction trigger (two weeks after a repair request) and D3p3 for his stated preference, plus D3p2 for the subcommittee's point that no design protects the newest-arrival tail first, and D3p4 for the compensation/judicial-review exposure. Please add D3.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 52,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person tenant interview notes; Mr Chan speaks, with subcommittee and legal points reported; single case, Kwai Chung cubicle.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Draft internal enforcement subcommittee minute; officials speaking candidly; notes enforcement limits and register costs; marked not for circulation.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper; economic modelling and literature review; distinguishes first- and second-generation controls; Hong Kong-like scenario.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion; counsel's risk assessment; addresses compensation and judicial review; notes missing survey infrastructure.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report; survey of 440 SDU households; tenant preferences and policy argument; supports narrow tightening, opposes hard cap.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "pick",
+   "text": "the three remaining sources my argument leans on",
+   "docs": [
+    "D3",
+    "D10",
+    "D9"
+   ]
+  },
+  {
+   "i": 54,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D3 (Tenant Interview: Mr Chan, Kwai Chung), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)), D9 (Legal Opinion: Compensation and Judicial Review Risk). You can now read their passages by id, for example D3p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D2",
+    "D11",
+    "D6",
+    "D1"
+   ],
+   "picked": [
+    "D1"
+   ],
+   "reason": "primer source for the 15-25 percent premium anchor and the queue length"
+  },
+  {
+   "open_turn": 19,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D2",
+     "D12",
+     "D6",
+     "D11",
+     "D9"
+    ],
+    [
+     "D2",
+     "D12",
+     "D6",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 22,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D2",
+    "D11",
+    "D12",
+    "D7"
+   ],
+   "picked": [
+    "D11",
+    "D12",
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "reason": "All five are cited by the essay and each carries a passage I still need to read."
+  },
+  {
+   "open_turn": 47,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [
+     "D3",
+     "D4",
+     "D5",
+     "D9",
+     "D10"
+    ],
+    [
+     "D3",
+     "D10",
+     "D9",
+     "D5",
+     "D11"
+    ],
+    [
+     "D3",
+     "D10",
+     "D11",
+     "D6",
+     "D9"
+    ]
+   ],
+   "need_history": [
+    true,
+    true,
+    true
+   ],
+   "served_turn": 52,
+   "served_after_cap": false,
+   "shortlist": [
+    "D3",
+    "D10",
+    "D6",
+    "D9",
+    "D11"
+   ],
+   "picked": [
+    "D10",
+    "D3",
+    "D9"
+   ],
+   "reason": "the three remaining sources my argument leans on"
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1"
+   ],
+   "reason": "primer source for the 15-25 percent premium anchor and the queue length"
+  },
+  {
+   "turn": 23,
+   "docs": [
+    "D2",
+    "D12",
+    "D6",
+    "D11",
+    "D7"
+   ],
+   "reason": "All five are cited by the essay and each carries a passage I still need to read."
+  },
+  {
+   "turn": 30,
+   "docs": [
+    "D6",
+    "D2",
+    "D11",
+    "D12",
+    "D7"
+   ],
+   "reason": "all five cited, each carries an unread passage I still need"
+  },
+  {
+   "turn": 33,
+   "docs": [
+    "D6",
+    "D2",
+    "D12"
+   ],
+   "reason": "all cited, all carry unread passages I need"
+  },
+  {
+   "turn": 53,
+   "docs": [
+    "D3",
+    "D10",
+    "D9"
+   ],
+   "reason": "the three remaining sources my argument leans on"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D12",
+  "D6",
+  "D11",
+  "D7",
+  "D3",
+  "D10",
+  "D9"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D1p3",
+  "D2p1",
+  "D2p2",
+  "D6p1",
+  "D6p2",
+  "D6p4",
+  "D6p3",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D11p1",
+  "D12p2",
+  "D11p2",
+  "D3p1",
+  "D3p2",
+  "D3p3"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 19,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 21,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 47,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 49,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 51,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [
+   "D10p1",
+   "D10p2",
+   "D10p3",
+   "D12p1",
+   "D4p1",
+   "D4p2",
+   "D4p3",
+   "D5p2",
+   "D5p3",
+   "D9p1",
+   "D9p2",
+   "D9p3"
+  ],
+  "unknown_passage": [],
+  "words": 715
+ }
+}

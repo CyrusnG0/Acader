@@ -1,0 +1,25 @@
+# Tightening Rent Control on Subdivided Units: A Case for Tenure Security Over Hard Caps
+
+Hong Kong's 110,000 subdivided-unit households face a housing crisis defined less by price than by precarity. The question of whether to tighten rent control on SDUs admits no clean answer, but the archive points toward a defensible position: Hong Kong should tighten regulation, but not through a hard cap on initial rents. Instead, it should pursue tenure security paired with a light, indexed rent band—an instrument that addresses the harm tenants actually name while avoiding the contraction arithmetic that hard caps reliably produce.
+
+## The Case Against a Hard Cap
+
+The strongest evidence against a hard initial-rent cap comes from the elasticity literature. The reviewed studies estimate long-run supply elasticity for marginal SDU-type stock at 0.31 to 0.48, meaning a 10 percent cap-induced reduction removes roughly 3 to 5 percent of stock over five years [D6p1]. The modelled Hong Kong scenario is starker: a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment—"mostly new arrivals and newly formed households" [D6p4]. This is the cruel arithmetic of first-generation controls: the tenants protected are those already inside, and the bill is handed to those still outside [D7p3].
+
+The distinction between first- and second-generation controls is decisive here. Hard caps on levels show consistent contraction effects; caps on increases within tenancies show small or null effects [D6p2]. Hong Kong's 2021 ordinance is second-generation, which explains why stock grew from 100,800 units in 2019 to 111,200 in 2025 even under regulation [D2p1]. The stable stock is not evidence that binding caps are safe—it is evidence that the current instrument is non-binding on the initial rent, the actual pain point [D9p1].
+
+## The Case for Tightening—Differently
+
+Yet the status quo fails tenants measurably. Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance "changed nothing" for tenants like Mrs Wong, who has no written agreement and faces rent increases "by whatever the market of desperate newcomers bears" [D4p1]. Mr Chan's experience is equally telling: his worst problem is not price but insecurity, having been evicted with two weeks' notice after requesting a window repair [D3p1].
+
+Crucially, tenants themselves prioritize differently than the policy debate assumes. The NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year tenure security, and 74 percent for a faster public-housing offer [D11p1]. Mr Chan does not name rent when asked what would help—he names the waiting list [D3p3]. This revealed preference matters: the segment is tight because the queue is long, not merely because rents are high [D11p2].
+
+## A Defensible Middle Path
+
+The legal opinion offers a workable instrument: cap initial rent by reference to a published per-square-foot band, indexed and reviewable, defensible as rate-capping rather than confiscation [D9p2]. This avoids the compensation and judicial-review risk that a hard cap would almost certainly attract under Basic Law property protections [D9p1]. Pairing this with tenure security directly addresses the insecurity tenants name.
+
+Two caveats are essential. First, enforcement capacity is currently inadequate: inspections cover under 6 percent of stock annually, and a band-based cap requires a certifiable tenancy register costing 40 to 60 staff-years [D10p1]. Second, the subcommittee's own modelling concedes that no enforcement design protects the newest-arrival tail first rather than last [D10p3]—a risk the public consultation omits [D10p2]. Any tightening must therefore be sequenced: build the register, then the band.
+
+## Conclusion
+
+Hong Kong should tighten rent control on SDUs—but through tenure security and a light, indexed initial-rent band, not a hard cap. The contraction evidence [D6p1][D6p4] and the Berlin cautionary tale [D7p1][D7p2] argue against first-generation controls. The stable stock under the 2021 ordinance [D2p1] shows that moderate regulation need not trigger exit, but only because it leaves initial rents untouched [D6p2]. The path forward is to regulate what tenants actually fear—insecurity—while building the enforcement infrastructure that makes any cap real rather than symbolic. A hard cap would protect incumbents and punish entrants; a band plus tenure security protects both, if the government is willing to fund the machinery.

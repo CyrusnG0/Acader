@@ -1,0 +1,10 @@
+{
+ "id": "C14-5",
+ "arm": "C14",
+ "student_turns": 18,
+ "chars_typed": 2927,
+ "reads": 8,
+ "distinct_passages": 8,
+ "check_rounds": 1,
+ "outside_calls": 19
+}

@@ -1,0 +1,237 @@
+{
+ "id": "C6-5",
+ "arm": "C6",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.142857142857143,
+  "F14b parentage": 0.36363636363636365,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Student needs to work through the sources the essay cites",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests a shortlist of documents covering SDU rent premiums and tenant conditions",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on the 2021 Tenancy Control Ordinance",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on SDU stock figures",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on landlord exit evidence",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on the Berlin Mietendeckel",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on enforcement capacity",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests documents on supply elasticity",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Least certain claim is that a binding cap on initial rents would shrink supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "A source would need to give an elasticity estimate or model of marginal-stock response",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Requests shortlist on supply elasticity and modelled effects of cutting initial rents",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Essay needs elasticity and modelled supply effects",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 9,
+   "unit": "All are cited in the essay and cover its main claims",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Has already read the needed passages from D6, D2, and D7",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Still needs the Landlord Association submission D5 and the NGO report D11",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Requests D5 passages on exit threats and unit counts",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Requests D11 passages on what tenants say about tenure security versus rent caps",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "D5 is meant to be a counter-view partly discounted and partly conceded",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "D5 offers an exit threat and a real unit count, weak in data quality but non-zero in supply",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "D11 is first-hand tenant preference evidence backing a claim already made",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Tenants would trade rent increases for tenure security or a faster public-housing offer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Counter-view exit threat plus tenant preference evidence",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Student needs to work through the sources the essay cites\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests a shortlist of documents covering SDU rent premiums and tenant conditions\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on the 2021 Tenancy Control Ordinance\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on SDU stock figures\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on landlord exit evidence\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on the Berlin Mietendeckel\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on enforcement capacity\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests documents on supply elasticity\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Least certain claim is that a binding cap on initial rents would shrink supply\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"A source would need to give an elasticity estimate or model of marginal-stock response\". How did you get there?"
+  },
+  {
+   "turn": 9,
+   "question": "At turn 9 you said: \"All are cited in the essay and cover its main claims\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Has already read the needed passages from D6, D2, and D7\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Still needs the Landlord Association submission D5 and the NGO report D11\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Tenants would trade rent increases for tenure security or a faster public-housing offer\". How did you get there?"
+  }
+ ]
+}

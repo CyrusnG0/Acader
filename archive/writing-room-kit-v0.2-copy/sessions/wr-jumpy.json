@@ -1,0 +1,126 @@
+{
+ "version": "0.3",
+ "session_id": "wr-jumpy",
+ "created": "2026-10-16T15:00:00Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Human-shaped session: opens threads, drops them, comes back later, re-asks the same thread from a new angle. Jumps between topics mid-session. Aliveness profile should read 'weave'; composite should not be punished for the mess.",
+ "essay": "Hong Kong should tighten SDU rent control — but with tenure security and a light, indexed band, not a hard cap on initial rents. The instinct behind a hard cap is decent: cubicle tenants pay fifteen to twenty-five percent more per square foot than mainstream flats, and the 2021 ordinance capped increases within a tenancy but left the initial rent — the actual pain point — untouched. The supply evidence keeps pointing the same way. In marginal stock, a binding ceiling on rent levels contracts supply by three to five percent for every ten percent cut, and a fifteen percent cut transfers nine hundred dollars a month to incumbents while three to four thousand households a year, mostly new arrivals, can no longer enter the segment. I keep returning to that arithmetic because it inverts the policy: the households that lose units are the same population the cap intends to protect. Berlin shows the mechanism, not just the theory: the freeze pulled listed rents down, classified-listing supply contracted within a year as owners withheld flats, and when the constitutional court struck the law down a backlog of suppressed increases landed on new entrants. Enforcement is the quieter failure. Inspection capacity covers under six percent of stock a year, and complaint-driven design protects tenants with written agreements first — the newest arrivals, the people the cap is for, are served last. What tenants themselves would trade confirms the diagnosis: sixty-one percent would accept a nominal rent increase for three-year security of tenure, and the binding constraint they name is the queue, not the rent. New York's second-generation scheme is light at first rent and has held stock roughly stable — the same pattern the SDU index shows since 2021, though maintenance incentives fall with regulated returns. Tenure security answers the insecurity tenants actually name; a light indexed band answers the price injury without the contraction arithmetic. The queue, not the rent, is the binding constraint.",
+ "queries": [
+  {
+   "text": "does the 2021 tenancy control ordinance cap initial rents",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "what is the per square foot premium for SDU tenants",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "what happens to supply under a hard cap on rent levels",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "why does enforcement miss the newest arrivals under complaint-driven design",
+   "mark": "DEEP",
+   "ts": 4
+  },
+  {
+   "text": "how does the supply elasticity differ in marginal stock",
+   "mark": "DEEP",
+   "ts": 5
+  },
+  {
+   "text": "what happened to Berlin listings after the Mietendeckel",
+   "mark": "DEEP",
+   "ts": 6
+  },
+  {
+   "text": "why does the supply effect differ between newer and older stock",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "what would tenants trade rent increases for",
+   "mark": "DEEP",
+   "ts": 8
+  },
+  {
+   "text": "what did the enforcement subcommittee strike from the public version",
+   "mark": "DEEP",
+   "ts": 9
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D6p1",
+  "D10p3",
+  "D7p1",
+  "D6p4",
+  "D10p2",
+  "D11p1",
+  "D8p3",
+  "D2p1",
+  "D1p3",
+  "D6p3",
+  "D7p2",
+  "D11p3"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p3",
+   "pos": 190
+  },
+  {
+   "passage": "D1p1",
+   "pos": 300
+  },
+  {
+   "passage": "D6p1",
+   "pos": 430
+  },
+  {
+   "passage": "D6p3",
+   "pos": 560
+  },
+  {
+   "passage": "D6p4",
+   "pos": 700
+  },
+  {
+   "passage": "D7p1",
+   "pos": 830
+  },
+  {
+   "passage": "D7p2",
+   "pos": 950
+  },
+  {
+   "passage": "D10p2",
+   "pos": 1030
+  },
+  {
+   "passage": "D10p3",
+   "pos": 1130
+  },
+  {
+   "passage": "D11p1",
+   "pos": 1260
+  },
+  {
+   "passage": "D11p3",
+   "pos": 1390
+  },
+  {
+   "passage": "D8p3",
+   "pos": 1520
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1660
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 9
+}

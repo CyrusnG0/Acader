@@ -1,13 +1,12 @@
-# Acader
+# The Writing Room (Acader)
 
-**Understanding infrastructure for schools in the AI era.**
-*Learn from how the world teaches. Built to make you think, not to think for you.*
+**A writing platform where the process is the evidence.**
 
-Schools upload the materials they already post, and we mine every lecture into a teaching knowledge graph. Students write and code inside a Room guarded by a coach. Each submission earns a portable **Proof of Understanding**.
+Students read, plan and write their assignments here. The platform records where each part of the work came from: a source passage, a lecture, a Coach exchange, declared outside-AI help, or nowhere it can see. Teachers get a one-page receipt that shows **where to ask**, never a verdict.
 
-- Product vision and full brief: [ultimate-proposal.md](ultimate-proposal.md)
-- Current status: [docs/STATUS.md](docs/STATUS.md)
-- Technical designs: [design/](design/README.md)
+- What we build and why: [PRODUCT.md](PRODUCT.md)
+- How it's built: [design/](design/README.md)
+- Where things stand: [docs/STATUS.md](docs/STATUS.md)
 - Contributors and AI agents: start with [CLAUDE.md](CLAUDE.md)
 
-Stage: **Phase 0 complete** (lecture-mining prototype validated). **Phase 1** (CS viva-coach MVP) is next.
+**Stage:** prototype v1 designed and reviewed (CEO, eng, design: 2026-10-22 → 10-24); building starts with M0. Task board: [docs/TASKS.md](docs/TASKS.md); the checklist every task must pass: [EXPECTATIONS.md](EXPECTATIONS.md). Earlier simulated experiments and a static demo are in [writing-room-kit/](writing-room-kit/).

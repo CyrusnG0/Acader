@@ -1,0 +1,42 @@
+{
+ "id": "C6-3",
+ "arm": "C6",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.5,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "The most load-bearing claim is the supply elasticity figure: a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of the stock over five years.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "That figure needs a number from the academic literature on first-generation controls.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Open with the essay's first two evidence clusters.",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  }
+ ],
+ "leaps": []
+}

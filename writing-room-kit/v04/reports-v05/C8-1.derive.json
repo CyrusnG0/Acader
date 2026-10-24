@@ -1,0 +1,138 @@
+{
+ "id": "C8-1",
+ "arm": "C8",
+ "split": "dev",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.4444444444444444,
+  "F14b parentage": 0.6153846153846154,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student is building an argument against a hard cap on SDU initial rents, in favor of tenure security plus a light indexed rent band.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source carries the thesis sentence: a hard cap transfers modest gains to incumbents while shrinking stock available to new arrivals, single-parent families, and public-housing waiters.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "All five sources are cited in the essay and cover the thesis, elasticity, stock data, and comparative cases.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student needs sources behind the enforcement and landlord-behaviour sections.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The landlord-behaviour section makes a narrow claim: the Association's exit threat is weak evidence because it is self-reported and concedes no margin data.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs the source to show the counter-view and its limits.",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs the tenant interview material for the Mrs Wong and Mr Chan points.",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The essay's enforcement and remedy paragraphs rest on the enforcement capacity note, alternative-instrument note, and 2026 consultation document.",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student needs tenant interviews, landlord submission, and enforcement minute for cited claims.",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "The student still needs D12, the consultation document the essay's alternative package comes from.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D12 is the consultation document that floats the 'floor-standard + rent band' package.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D12 is the source for the final constructive claim that the indexed-band alternative is on the table for 2026.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "The source is for the final constructive claim about the 2026 consultation.",
+   "parent": {
+    "type": "student",
+    "turn": 44
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student is building an argument against a hard cap on SDU initial rents, in favor of tenure security plus a light indexed rent band.\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"The student needs sources behind the enforcement and landlord-behaviour sections.\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"The landlord-behaviour section makes a narrow claim: the Association's exit threat is weak evidence because it is self-reported and concedes no margin data.\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"The student still needs D12, the consultation document the essay's alternative package comes from.\". How did you get there?"
+  },
+  {
+   "turn": 44,
+   "question": "At turn 44 you said: \"D12 is the consultation document that floats the 'floor-standard + rent band' package.\". How did you get there?"
+  }
+ ]
+}

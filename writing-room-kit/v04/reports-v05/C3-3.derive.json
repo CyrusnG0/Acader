@@ -1,0 +1,25 @@
+{
+ "id": "C3-3",
+ "arm": "C3",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "n/a"
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "The source should show evidence for rent control.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  }
+ ],
+ "leaps": []
+}

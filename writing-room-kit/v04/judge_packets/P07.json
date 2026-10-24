@@ -1,0 +1,82 @@
+{
+ "packet": "P07",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units only moderately."
+  },
+  {
+   "n": 2,
+   "claim": "The best policy is to strengthen tenure security and add a light band on initial rents."
+  },
+  {
+   "n": 3,
+   "claim": "A hard cap on rent levels would backfire."
+  },
+  {
+   "n": 4,
+   "claim": "Tenants face serious harms, including high rent burden and insecurity."
+  },
+  {
+   "n": 5,
+   "claim": "Mr Chan pays HK$5,800 for 120 square feet, about a third of household income."
+  },
+  {
+   "n": 6,
+   "claim": "Mrs Wong has lived in a subdivided unit for nine years with no written agreement."
+  },
+  {
+   "n": 7,
+   "claim": "Real rent burden for SDU households worsened from 31 to 34 percent even after the 2021 ordinance."
+  },
+  {
+   "n": 8,
+   "claim": "Landlords say a hard cap is confiscatory and they will convert or empty units."
+  },
+  {
+   "n": 9,
+   "claim": "The landlords' exit threat is not proven because its evidence is weak."
+  },
+  {
+   "n": 10,
+   "claim": "A binding cap would reduce marginal SDU-type stock by roughly 3 to 5 percent over five years."
+  },
+  {
+   "n": 11,
+   "claim": "A 15 percent cut in initial rents would transfer about HK$900 per month to incumbents but block 3,000 to 4,000 households per year."
+  },
+  {
+   "n": 12,
+   "claim": "Berlin shows that caps protect those already inside while harming those still outside."
+  },
+  {
+   "n": 13,
+   "claim": "Enforcement capacity covers under 6 percent of stock per year."
+  },
+  {
+   "n": 14,
+   "claim": "A band-based cap requires a certifiable tenancy register estimated at 40 to 60 staff-years."
+  },
+  {
+   "n": 15,
+   "claim": "Enforcement would systematically miss the most exploited tenants, such as those without written agreements."
+  },
+  {
+   "n": 16,
+   "claim": "A hard cap framed as deprivation of income would invite compensation claims and judicial review."
+  },
+  {
+   "n": 17,
+   "claim": "A light band on initial rents with three-year tenure security protects tenants while keeping landlords in the market."
+  },
+  {
+   "n": 18,
+   "claim": "The landlords' exit threat should be taken seriously but not accepted at face value."
+  },
+  {
+   "n": 19,
+   "claim": "Policy should be reviewed with better data because current figures are partly extrapolated."
+  }
+ ],
+ "statements": "[0] (typed) Hi, I know nothing about this topic. Can you offer me some sources from the course archive about subdivided units and rent control in Hong Kong?\n[2] (typed) My first guess is that rent control should be tightened because tenants in subdivided units are vulnerable. I need a source with evidence on rents and conditions, and one counter-view about landlords or supply.\n[4] (typed) The counter-view is harder. For evidence, it would need to show rents per square foot are high and that people have little space or choice. Can you list sources now?\n[6] (pick reason) D1 gives background and definitions, D2 gives rent data for my evidence, D5 is the landlord counter-view I found harder to find.\n[15] (typed) I read D1p1, D2p2 and D5p2. SDU tenants pay a 15 to 25 percent premium per square foot, but landlords say they will leave if returns fall. I think a moderate tightening, like capping initial rent growth, is better than a hard cap.\n[17] (typed) D2p1 shows stock kept growing after the 2021 ordinance, so moderate regulation did not make landlords leave. That supports my moderate position. What should I watch out for?\n[19] (typed) The weakness is D5 is a landlord group with a stake, and D2 only covers a short period. Is there anything else I should check?\n[23] (typed) D2p3 says post-2023 figures are extrapolated from voluntary reporting, so the stock growth is weaker proof. D5p3 says the landlords have no margin data and a self-reported survey with a 34 percent response rate. So their exit threat is not well backed.\n[25] (typed) Hong Kong should tighten rent control moderately: cap rent increases on new tenancies and extend the ordinance to co-living SDUs, not a hard cap. Tenants pay a 15 to 25 percent per sq ft premium and have no alternative while waiting about five and a half years for public housing (D1p1, D1p2). Stock kept growing after 2021 (D2p1) though the data is partly extrapolated (D2p3), and the landlord exit threat rests on weak self-reported data (D5p3).\n[27] (pick reason) D6 models supply effects of different control types, which tests my moderate position; D11 is tenant survey evidence arguing for tenure security, a counter-view I need to answer.\n[35] (typed) After reading D6p2 and D11p3 I am changing my mind a bit. A hard cap on initial rents shrinks stock (D6p1), but a narrow tightening with tenure security and a light band on initial rents seems supported. D11p1 says tenants care more about security than rent level. So I will argue for tenure security plus a light band, not a hard cap."
+}

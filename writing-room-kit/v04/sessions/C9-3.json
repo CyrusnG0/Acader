@@ -1,0 +1,625 @@
+{
+ "name": "C9-3",
+ "id": "C9-3",
+ "arm": "C9",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I want to understand the debate over rent control for subdivided flats in Hong Kong \u2014 the arguments on both sides, what tenants actually face, what landlords say, and what the evidence shows. Can you pull together some sources for me to start from?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named four things you want: both sides' arguments, tenants' experience, landlords' view, and the evidence. Which one of those is the claim you're actually making in this essay, and what would a source need to show for that specific claim?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm not sure yet which claim I'll end up making \u2014 that's part of what I want the sources to settle. Could you start by pulling anything you have on the general state of subdivided units in Hong Kong: how many there are, who lives in them, and how the current tenancy rules came about? That should give me a baseline before I take a position.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving baseline definitions, demographics, and history of tenancy rules.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Leaked internal enforcement minute from officials, focused on inspection capacity limits.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report presenting tenant survey preferences and arguing against hard caps.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over 2019-2025 with caveats.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "Baseline facts on stock, demographics, and how the current tenancy rules came about",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "say",
+   "text": "I have the primer and the stock index. Before I read further, I want to be careful about one thing: the primer's headline numbers and the index's trend could tell very different stories depending on how you slice them. Let me start with the primer's framing passages.",
+   "paste": false,
+   "intent": "reading_help"
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Good instinct to separate the two documents' framings before comparing them. In D1, the baseline numbers are in D1p1 (household count, rent levels) and D1p2 (who lives in them, waiting times). The history of the current rules is in D1p3. Which of those three passages do you want to look at first?",
+   "policy": "P-READ"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm trying to understand the debate over rent control for subdivided flats in Hong Kong. Can you pull together some sources on the housing conditions and the policy background?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 36,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named two things you want covered: housing conditions and policy background. Before I go looking, which claim in your essay would a source be supporting \u2014 and should it give you evidence, a counter-view, a definition, or a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "say",
+   "text": "It would be evidence on the policy background and the state of the stock \u2014 anything showing what regulation has actually done to the number of subdivided units over time. Can you pull a few sources on that? I don't have a view yet, I just want to see the numbers.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 38,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing for tenure security over hard caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on SDU conditions and rent-control debate background.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent cap and its aftermath.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control and supply elasticity.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "pick",
+   "text": "policy background and stock numbers first",
+   "docs": [
+    "D2",
+    "D1"
+   ]
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 42,
+   "who": "student",
+   "kind": "say",
+   "text": "Good \u2014 I have the primer and the stock/rent index. Before I read anything, can you pull the other sources the debate keeps pointing to: the academic work on supply, the Berlin comparison, the NGO survey, and the tenant and landlord accounts? I want the whole landscape before I form a view.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 43,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named four kinds of material, but not yet what each one has to do for your argument. Pick one of them \u2014 say the Berlin comparison or the NGO survey \u2014 and tell me: what claim of yours would it be evidence for, or what counter-view would it have to answer?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 44,
+   "who": "student",
+   "kind": "say",
+   "text": "Fair enough \u2014 let me start narrower. I want the Berlin comparison because the debate keeps invoking it as a warning about what happens when a rent cap is lifted. What would a source like that have to show for it to count as evidence either way?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 45,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenant preferences, arguing against hard caps and for tenure security.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting rent and stock index with caveats on post-2023 figures.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission opposing hard rent caps, citing member costs and exit threats.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's rent cap, its supply effects and court rejection.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "pick",
+   "text": "Berlin comparison and supply elasticity evidence",
+   "docs": [
+    "D7",
+    "D6"
+   ]
+  },
+  {
+   "i": 47,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D7p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D1",
+     "D3",
+     "D5",
+     "D11"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D1",
+    "D10",
+    "D11",
+    "D2",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "Baseline facts on stock, demographics, and how the current tenancy rules came about"
+  },
+  {
+   "open_turn": 35,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D2",
+     "D6",
+     "D1",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 38,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D1",
+    "D7",
+    "D2",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "policy background and stock numbers first"
+  },
+  {
+   "open_turn": 42,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D7",
+     "D11",
+     "D3",
+     "D5"
+    ],
+    [
+     "D7",
+     "D6",
+     "D2",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 45,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D6",
+    "D2",
+    "D5",
+    "D7"
+   ],
+   "picked": [
+    "D6",
+    "D7"
+   ],
+   "reason": "Berlin comparison and supply elasticity evidence"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D7",
+  "D6"
+ ],
+ "read_passages": [
+  "D1p2",
+  "D1p1",
+  "D1p3",
+  "D2p1",
+  "D7p2",
+  "D6p2",
+  "D6p1",
+  "D6p4",
+  "D7p1",
+  "D6p3"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "Baseline facts on stock, demographics, and how the current tenancy rules came about"
+  },
+  {
+   "turn": 39,
+   "docs": [
+    "D2",
+    "D1"
+   ],
+   "reason": "policy background and stock numbers first"
+  },
+  {
+   "turn": 46,
+   "docs": [
+    "D7",
+    "D6"
+   ],
+   "reason": "Berlin comparison and supply elasticity evidence"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "broad"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 19,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 35,
+   "kind": "broad"
+  },
+  {
+   "turn": 37,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 42,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 44,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D6",
+  "D2",
+  "D5",
+  "D7"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

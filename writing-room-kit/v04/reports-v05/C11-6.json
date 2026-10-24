@@ -1,0 +1,340 @@
+{
+ "id": "C11-6",
+ "arm": "C11",
+ "components": {
+  "claim": 0.0,
+  "source": 100.0,
+  "cite": 75.0,
+  "change": 33.333333333333336,
+  "struct": 100.0,
+  "claim_v2": 0.0
+ },
+ "composite": 51.25,
+ "composite_nostruct": 42.64705882352941,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The current regime has slowed rent growth but has not gone far enough.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants still pay a large per-square-foot premium.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants' rent burden has worsened under the existing ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The stock of SDU units has kept growing, so stronger controls would not cause landlords to exit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Around 110,000 households live in SDUs.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Median SDU rent is about 30 percent below mainstream private flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The per-square-foot premium shows the market is not working for tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"SDU rent per square foot rose 6.8 percent in 2019\u20132021 and 3.1 percent in 2021\u20132023 under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rent growth was 2.4 and 1.7 percent in the same windows.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"SDU rents still grew faster than general private rents under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The real rent burden for SDU households worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Estimated SDU stock rose from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Stock growth continued through the 2021 tenancy control ordinance, suggesting moderate regulation did not trigger stock exit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The average public housing wait has hovered around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Tighter controls such as a lower cap on per-square-foot increases and stronger enforcement would target rent extraction directly.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Tighter controls will not fix the root cause, which is the public housing queue and overall land supply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Tightening rent control on SDUs is proportionate, backed by the numbers, and protects the most vulnerable households.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"When tenants have no bargaining power and no exit option, a lightly regulated market will keep extracting the premium described in [D1p1].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence shows controls can slow rents [D2p2]\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "The current regime has slowed rent growth but has not gone far enough.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "SDU tenants still pay a large per-square-foot premium.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "SDU tenants' rent burden has worsened under the existing ordinance.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "The stock of SDU units has kept growing, so stronger controls would not cause landlords to exit.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Around 110,000 households live in SDUs.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Median SDU rent is about 30 percent below mainstream private flats.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants pay a per-square-foot premium of 15 to 25 percent.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The per-square-foot premium shows the market is not working for tenants.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "SDU rent per square foot rose 6.8 percent in 2019\u20132021 and 3.1 percent in 2021\u20132023 under the ordinance.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "General private rent growth was 2.4 and 1.7 percent in the same windows.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "SDU rents still grew faster than general private rents under the ordinance.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The real rent burden for SDU households worsened from 31 to 34 percent of income.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Estimated SDU stock rose from 100,800 units in 2019 to 111,200 in 2025.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Stock growth continued through the 2021 tenancy control ordinance, suggesting moderate regulation did not trigger stock exit.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "The average public housing wait has hovered around five and a half years.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Tighter controls such as a lower cap on per-square-foot increases and stronger enforcement would target rent extraction directly.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Tighter controls will not fix the root cause, which is the public housing queue and overall land supply.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Tightening rent control on SDUs is proportionate, backed by the numbers, and protects the most vulnerable households.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "Around 110,000 households live in SDUs, which are flats carved into small cubicles with shared kitchens and bathrooms [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The median SDU rent is about 30 percent below mainstream private flats, but per square foot tenants pay a premium of 15 to 25 percent, because space is \"priced at its most desperate margin\" [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Median SDU rent per square foot rose 6.8 percent in 2019\u20132021, then 3.1 percent in 2021\u20132023 under the ordinance, compared with general private rent growth of 2.4 and 1.7 percent in the same windows [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "But SDU rents still grew faster than general private rents, and the real rent burden for SDU households worsened from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Estimated SDU stock rose from 100,800 units in 2019 to 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Growth continued through the 2021 tenancy control ordinance, which suggests moderate regulation did not trigger visible stock exit [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing, where the average wait has hovered around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "For these households the SDU is not a choice but a residual option while the queue moves [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "When tenants have no bargaining power and no exit option, a lightly regulated market will keep extracting the premium described in [D1p1].",
+   "supports": "no"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "The evidence shows controls can slow rents [D2p2]",
+   "supports": "no"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].",
+   "supports": "partial"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 2
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 42.64705882352941,
+ "composite_v2_struct": 51.25,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The current regime has slowed rent growth but has not gone far enough.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants still pay a large per-square-foot premium.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants' rent burden has worsened under the existing ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The stock of SDU units has kept growing, so stronger controls would not cause landlords to exit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Around 110,000 households live in SDUs.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Median SDU rent is about 30 percent below mainstream private flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The per-square-foot premium shows the market is not working for tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"SDU rent per square foot rose 6.8 percent in 2019\u20132021 and 3.1 percent in 2021\u20132023 under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rent growth was 2.4 and 1.7 percent in the same windows.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"SDU rents still grew faster than general private rents under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The real rent burden for SDU households worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Estimated SDU stock rose from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Stock growth continued through the 2021 tenancy control ordinance, suggesting moderate regulation did not trigger stock exit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The average public housing wait has hovered around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Tighter controls such as a lower cap on per-square-foot increases and stronger enforcement would target rent extraction directly.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Tighter controls will not fix the root cause, which is the public housing queue and overall land supply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Tightening rent control on SDUs is proportionate, backed by the numbers, and protects the most vulnerable households.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"When tenants have no bargaining power and no exit option, a lightly regulated market will keep extracting the premium described in [D1p1].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence shows controls can slow rents [D2p2]\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

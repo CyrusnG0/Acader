@@ -1,0 +1,11 @@
+feature                       honest   executor  acc    verdict
+F1 aliveness (returns+reasks) 1.26     0.00      0.84   STAY (honest-high)
+F2 hook-variant verbatim      0.92     0.86      0.78   REMOVE/WEAK
+F7 form diversity             0.65     0.00      0.99   STAY (honest-high)
+F8 waste rate                 0.24     0.00      0.89   STAY (honest-high)
+F3 trajectory                 51.70    50.00     0.70   REMOVE/WEAK
+F4 spread                     51.49    53.50     0.42   REMOVE/WEAK
+F6 continuity                 74.34    88.20     0.17   REMOVE/WEAK
+
+hybrid continuity mean=12.3 vs honest 74.34 (hybrid separation 62 pts — the hybrid kill-signal)
+results.json written

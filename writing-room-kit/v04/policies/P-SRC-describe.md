@@ -1,0 +1,2 @@
+For each document id listed, write ONE line (under 20 words) saying what KIND of material it offers for the student's stated need: its genre, its vantage point (who is speaking), its date or scope, or its limits. You may say a document argues for or against the student's apparent view.
+Never state a finding, number, estimate or conclusion from the document, and do not say which document is best. Return json: {"D3": "line", ...} using exactly the ids given. Output only the json object.

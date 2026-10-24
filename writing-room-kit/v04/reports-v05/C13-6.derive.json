@@ -1,0 +1,569 @@
+{
+ "id": "C13-6",
+ "arm": "C13",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.6956521739130435,
+  "F14b parentage": 0.7096774193548387,
+  "F14c grounded chains": 0.3
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student is trying to understand Hong Kong's rent control for subdivided units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student wants sources on how rent caps affect housing supply.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student wants sources on what alternatives exist.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student's claim is that a hard cap on initial rents would shrink SDU supply and hurt the newest tenants most.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "A source would need to show a measured or modelled supply response to a rent cut.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source should ideally have numbers for Hong Kong.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source should include a real-world case like Berlin.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants something on alternatives, like a rent band instead of a hard cap.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The Hong Kong numbers are doing the heavier work because a local elasticity or modelled scenario shows the effect on this exact market.",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The outside case can only illustrate the mechanism.",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The source should give an estimated supply elasticity or a modelled household-displacement figure for Hong Kong itself.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "Hong Kong elasticity numbers, the Berlin case, stock data, the legal alternative, and the NGO survey all directly support the supply and alternatives claims.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student wants to check the enforcement side next: how many units inspectors actually reach.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student wants to know whether the most vulnerable tenants (no written agreement, newest arrivals) are the ones the system misses.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student asks for documents on inspection capacity or a tenancy register.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs a document showing inspectors' actual reach over the stock.",
+   "parent": {
+    "type": "assistant",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs something on why tenants without written agreements or the newest arrivals are least likely to complain.",
+   "parent": {
+    "type": "assistant",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Anything on a tenancy register or inspection capacity would help.",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student needs inspection capacity and vulnerable tenant evidence.",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "The student notes that the inspection capacity and vulnerable tenant evidence are already unlocked.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student still needs the other sources the draft leans on that they haven't opened.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the Berlin-style listing effects source.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the New York first-rent regulation and 2019 tightening source.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the Basic Law compensation risk source.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the Association's submission.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the consultation document's rent-band package.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "The student lists the primer's point on who the newcomers are.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The claim that most needs backing is that a hard cap would push out the very people it's meant to protect: new arrivals and newly formed households.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "A source would need to show who actually gets displaced when supply contracts, ideally with numbers on arrivals or household formation.",
+   "parent": {
+    "type": "assistant",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The student asks whether there is a policy brief or overview laying out who the SDU population actually is.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Before displacement numbers mean anything, the student needs the overview establishing who the SDU population actually is.",
+   "parent": {
+    "type": "assistant",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The overview should establish whether the SDU population is mostly new arrivals and newly formed households.",
+   "parent": {
+    "type": "assistant",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The student asks for a primer or policy brief on SDU demographics.",
+   "parent": {
+    "type": "student",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The student notes that all the needed sources are already unlocked and needed for the displacement and demographics claims.",
+   "parent": {
+    "type": "student",
+    "turn": 30
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "Still needs sources on Berlin listing effects, New York first-rent regulation and 2019 tightening, Basic Law compensation risk, the Association's submission, the consultation document's rent-band package, and someone speaking to new arrivals' willingness to accept any rent for a shorter queue",
+   "parent": {
+    "type": "student",
+    "turn": 30
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "For Berlin, the claim is that a hard cap shrinks listings rather than protecting renters because owners move flats to uncontrolled segments",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "The Berlin source would need to show initial-offer rents falling while the count of regulated listings drops within a year or so",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "Needs Berlin listing effects, New York first-rent and 2019 tightening, and compensation risk",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs the consultation document floating the floor-standard plus rent band package",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs the Association submission arguing compensation risk",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs the Basic Law compensation passages",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs the tenant who says he'd accept any rent for a shorter queue",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "The consultation document is for the claim that a banded approach has political legs",
+   "parent": {
+    "type": "student",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "The Association's submission is for the litigation risk point",
+   "parent": {
+    "type": "student",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "The Basic Law passages are for the same legal claim",
+   "parent": {
+    "type": "student",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "The tenant quote is for the point that quantity, not price, is the binding constraint",
+   "parent": {
+    "type": "student",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "All four cited documents are needed for the political, legal and queue claims",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The legal opinion argues a published, indexed per-square-foot band on initial rents can be defended as rate-capping rather than confiscation",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The NGO report backs tenure security plus a light band on initial rents while opposing a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The NGO survey found 61 percent would trade a nominal rent increase for three-year tenure security and 74 percent for a faster public-housing offer",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "A band needs survey infrastructure that doesn't exist yet, and enforcement lags without a register, but both are buildable",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The working paper's displaced households are mostly new arrivals and newly formed households",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "That displaced group is exactly the group the policy is meant to protect",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Wants to confirm the working paper really says the displaced are mostly new arrivals and newly formed households",
+   "parent": {
+    "type": "student",
+    "turn": 66
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Wants to confirm D1p2 backs the idea that's the group policy is meant to protect",
+   "parent": {
+    "type": "student",
+    "turn": 66
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "Wants to re-read D1p2 to see exactly what it says about who lives in SDUs and why",
+   "parent": {
+    "type": "assistant",
+    "turn": 69
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "D1p2 is just the primer describing who lives in SDUs and why they end up there",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "D1p2 doesn't say anything about who a policy is 'meant to protect'; that was the student's inference",
+   "parent": {
+    "type": "assistant",
+    "turn": 71
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "Should drop or reword that sentence rather than pretend D1p2 supports it",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "D6p4 does name the 3,000\u20134,000 a year as mostly new arrivals and newly formed households, so that part stands",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "Will mark it as the student's own inference: displaced households are mostly new arrivals and newly formed households, and protecting those newcomers is the aim the student would argue for",
+   "parent": {
+    "type": "assistant",
+    "turn": 73
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "Everything else in the essay is now grounded in what the student actually read",
+   "parent": {
+    "type": "student",
+    "turn": 72
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student is trying to understand Hong Kong's rent control for subdivided units.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants sources on how rent caps affect housing supply.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants sources on what alternatives exist.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student's claim is that a hard cap on initial rents would shrink SDU supply and hurt the newest tenants most.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student wants something on alternatives, like a rent band instead of a hard cap.\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"Hong Kong elasticity numbers, the Berlin case, stock data, the legal alternative, and the NGO survey all directly support the supply and alternatives claims.\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"The student wants to check the enforcement side next: how many units inspectors actually reach.\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"The student wants to know whether the most vulnerable tenants (no written agreement, newest arrivals) are the ones the system misses.\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"The student asks for documents on inspection capacity or a tenancy register.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student still needs the other sources the draft leans on that they haven't opened.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student lists the New York first-rent regulation and 2019 tightening source.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student lists the Basic Law compensation risk source.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student lists the Association's submission.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student lists the consultation document's rent-band package.\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"The student lists the primer's point on who the newcomers are.\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"The student asks whether there is a policy brief or overview laying out who the SDU population actually is.\". How did you get there?"
+  },
+  {
+   "turn": 66,
+   "question": "At turn 66 you said: \"That displaced group is exactly the group the policy is meant to protect\". How did you get there?"
+  },
+  {
+   "turn": 72,
+   "question": "At turn 72 you said: \"Should drop or reword that sentence rather than pretend D1p2 supports it\". How did you get there?"
+  }
+ ]
+}

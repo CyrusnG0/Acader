@@ -1,0 +1,116 @@
+{
+ "version": "0.3",
+ "session_id": "ex-honest",
+ "created": "2026-10-16T09:00:00Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Start: tighten, hard cap seems humane. After D6: hard caps contract bottom stock - maybe band instead? After D10: enforcement misses newest arrivals, the people the cap is FOR. Position settling: tenure security + light band, not hard cap.",
+ "essay": "Hong Kong should not tighten SDU rent control by adding a hard cap on initial rents; it should strengthen the 2021 ordinance with tenure security and a light, indexed band. The case for a hard cap rests on a real injustice: cubicle tenants pay a per-square-foot premium of fifteen to twenty-five percent for the worst housing in the city, and the 2021 ordinance left initial rents untouched. But the strongest evidence in the archive points the other way. The supply-elasticity literature finds that in marginal stock a binding ceiling on rent levels contracts supply by three to five percent for every ten percent cut, and models a Hong Kong-like market in which a fifteen percent cut transfers nine hundred dollars a month to incumbent tenants while three to four thousand households a year, mostly new arrivals, can no longer enter the segment. Berlin illustrates the same mechanism: the freeze cut listed rents, listings then contracted, and when the court voided the law a backlog of increases landed on the very entrants the freeze was meant to protect. New York shows the alternative works: second-generation regulation that is light at first rent has held stock roughly stable, exactly the pattern in the SDU index since 2021. Enforcement seals the argument. The enforcement subcommittee's own minute records inspection capacity below six percent of stock a year and concedes that the newest arrivals — those without written agreements — are protected last under any complaint-driven design, however much the public version omits it. A hard cap that protects incumbents and fails the desperate tail is the wrong instrument. Tenure security answers the insecurity tenants actually name, and a light band avoids the contraction arithmetic. The queue, not the rent, is the binding constraint.",
+ "queries": [
+  {
+   "text": "what is the per square foot premium for SDU tenants",
+   "mark": "FACT",
+   "ts": 1
+  },
+  {
+   "text": "does the 2021 tenancy control ordinance cap initial rents",
+   "mark": "FACT",
+   "ts": 2
+  },
+  {
+   "text": "what happens to supply under a hard cap on rent levels",
+   "mark": "DEEP",
+   "ts": 3
+  },
+  {
+   "text": "supply elasticity evidence in marginal housing stock",
+   "mark": "DEEP",
+   "ts": 4
+  },
+  {
+   "text": "what happened to Berlin listings after the Mietendeckel",
+   "mark": "DEEP",
+   "ts": 5
+  },
+  {
+   "text": "why does the supply effect differ between newer and older stock",
+   "mark": "DEEP",
+   "ts": 6
+  },
+  {
+   "text": "why does enforcement miss the newest arrivals under complaint-driven design",
+   "mark": "DEEP",
+   "ts": 7
+  },
+  {
+   "text": "does the ordinance cover initial rents or only increases within a tenancy",
+   "mark": "FACT",
+   "ts": 8
+  },
+  {
+   "text": "what would tenants trade rent increases for",
+   "mark": "FACT",
+   "ts": 9
+  }
+ ],
+ "retrievals": [
+  "D1p1",
+  "D6p1",
+  "D6p4",
+  "D7p2",
+  "D8p3",
+  "D10p2",
+  "D10p3",
+  "D11p1",
+  "D2p1",
+  "D6p3",
+  "D1p3"
+ ],
+ "hooks": [
+  {
+   "passage": "D1p1",
+   "pos": 280
+  },
+  {
+   "passage": "D6p1",
+   "pos": 520
+  },
+  {
+   "passage": "D6p4",
+   "pos": 640
+  },
+  {
+   "passage": "D7p2",
+   "pos": 810
+  },
+  {
+   "passage": "D8p3",
+   "pos": 950
+  },
+  {
+   "passage": "D10p2",
+   "pos": 1120
+  },
+  {
+   "passage": "D10p3",
+   "pos": 1300
+  },
+  {
+   "passage": "D11p1",
+   "pos": 1420
+  },
+  {
+   "passage": "D2p1",
+   "pos": 1560
+  },
+  {
+   "passage": "D6p3",
+   "pos": 760
+  },
+  {
+   "passage": "D1p3",
+   "pos": 330
+  }
+ ],
+ "pasteChars": 0,
+ "editBursts": 14
+}

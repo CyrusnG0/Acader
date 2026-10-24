@@ -1,0 +1,376 @@
+{
+ "id": "C6-4",
+ "arm": "C6",
+ "components": {
+  "claim": 10.0,
+  "source": 50.0,
+  "cite": 85.71428571428571,
+  "change": 25.0,
+  "struct": 100.0
+ },
+ "composite": 45.107142857142854,
+ "composite_nostruct": 35.42016806722689,
+ "mismatches": [
+  "Paragraph 2 says: \"Hong Kong should tighten regulation of subdivided units, but the instrument should be tenancy security and habitability, not the initial rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A hard cap on initial rents is the intervention that the evidence most clearly warns against.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The binding constraint named by tenants is queue length and insecurity, not price.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Real rent burden has worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Long-run elasticity of SDU-type supply is estimated at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A 15 percent cut in initial rents transfers about HK$900 per month to incumbents while leaving 3,000\u20134,000 households per year unable to enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Berlin illustrates that initial-offer rents fell but listing supply contracted, and when the Mietendeckel fell, suppressed increases released above the pre-cap trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The 2021 Tenancy Control Ordinance capped increases within tenancies but not initial rents, and excluded co-living SDUs.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The SDU stock grew from 100,800 to 111,200 units across 2019\u20132025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The working paper states that the stable stock reflects a second-generation, non-binding instrument, while first-generation controls on levels show consistent contraction effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A hard cap invites judicial review and compensation claims if framed as deprivation of income, and the litigation timeline would outlast a Council term.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Mr Chan says the worst part is insecurity\u2014two weeks' notice after asking for a window repair\u2014and he would accept any rent to leave if the queue were three years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The NGO survey finds 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The legal opinion's middle instrument\u2014a published, indexed per-square-foot band defensible as rate-capping rather than confiscation\u2014is compatible with this approach if paired with the missing register and inspection capacity.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"The strongest objection is that a light band leaves the initial rent\u2014the actual pain point\u2014unregulated.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"Tightening rent control on SDUs in the form of a hard initial-rent cap would help some incumbents and hurt more outsiders.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D10, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D12, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D3, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D9, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats [D1p1], and the median tenant is a new arrival, single parent, or public-housing w\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"These are precisely the households the cap intends to protect [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin illustrates the mechanism: initial-offer rents fell, but listing supply contracted as owners withheld or rerouted flats, and when the Mietendeckel fell, \" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin illustrates the mechanism: initial-offer rents fell, but listing supply contracted as owners withheld or rerouted flats, and when the Mietendeckel fell, \" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"More damningly, the subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last [D10p3]; enfo\" cites D10p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A hard cap also invites judicial review and compensation claims if framed as deprivation of income [D9p1], and the litigation timeline alone would outlast a Cou\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A hard cap also invites judicial review and compensation claims if framed as deprivation of income [D9p1], and the litigation timeline alone would outlast a Cou\" cites D9p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan says the worst part is not price but insecurity\u2014two weeks' notice after asking for a window repair [D3p1]\u2014and he would accept any rent to leave if the q\" cites D3p3. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 2,
+   "claim": "Hong Kong should tighten regulation of subdivided units, but the instrument should be tenancy security and habitability, not the initial rent level.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "A hard cap on initial rents is the intervention that the evidence most clearly warns against.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "The binding constraint named by tenants is queue length and insecurity, not price.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats.",
+   "ancestor": 2
+  },
+  {
+   "para": 3,
+   "claim": "The median SDU tenant is a new arrival, single parent, or public-housing waiter facing a five-and-a-half-year queue.",
+   "ancestor": 2
+  },
+  {
+   "para": 3,
+   "claim": "Real rent burden has worsened from 31 to 34 percent of income.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Long-run elasticity of SDU-type supply is estimated at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A 15 percent cut in initial rents transfers about HK$900 per month to incumbents while leaving 3,000\u20134,000 households per year unable to enter the segment.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Berlin illustrates that initial-offer rents fell but listing supply contracted, and when the Mietendeckel fell, suppressed increases released above the pre-cap trend.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies but not initial rents, and excluded co-living SDUs.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The SDU stock grew from 100,800 to 111,200 units across 2019\u20132025.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The working paper states that the stable stock reflects a second-generation, non-binding instrument, while first-generation controls on levels show consistent contraction effects.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "Inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A hard cap invites judicial review and compensation claims if framed as deprivation of income, and the litigation timeline would outlast a Council term.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "Mr Chan says the worst part is insecurity\u2014two weeks' notice after asking for a window repair\u2014and he would accept any rent to leave if the queue were three years.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "The NGO survey finds 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "The legal opinion's middle instrument\u2014a published, indexed per-square-foot band defensible as rate-capping rather than confiscation\u2014is compatible with this approach if paired with the missing register and inspection capacity.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "The strongest objection is that a light band leaves the initial rent\u2014the actual pain point\u2014unregulated.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "Tightening rent control on SDUs in the form of a hard initial-rent cap would help some incumbents and hurt more outsiders.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats [D1p1], and the median tenant is a new arrival, single parent, or public-housing waiter facing a five-and-a-half-year queue [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats [D1p1], and the median tenant is a new arrival, single parent, or public-housing waiter facing a five-and-a-half-year queue [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Real rent burden has worsened from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong's account of a landlord who \"raises rent by whatever the market of desperate newcomers bears\" is damning [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The reviewed literature estimates long-run elasticity of SDU-type supply at 0.31\u20130.48, meaning a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The modelled Hong Kong scenario is starker: a 15 percent cut in initial rents transfers about HK$900 per month to incumbents while leaving 3,000\u20134,000 households per year unable to enter the segment, \"mostly new arrivals and newly formed households\" [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "These are precisely the households the cap intends to protect [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "Berlin illustrates the mechanism: initial-offer rents fell, but listing supply contracted as owners withheld or rerouted flats, and when the Mietendeckel fell, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "Berlin illustrates the mechanism: initial-offer rents fell, but listing supply contracted as owners withheld or rerouted flats, and when the Mietendeckel fell, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The Berlin lesson is explicit: \"the tenants the cap protects are those already inside, and the bill is handed to those still outside\" [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The Tenancy Control Ordinance capped increases within tenancies but not initial rents, and excluded co-living SDUs [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stock grew from 100,800 to 111,200 units across 2019\u20132025 [D2p1], but the working paper is clear that this stability reflects a second-generation, non-binding instrument; first-generation controls on levels show \"consistent contraction effects\" [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The stock grew from 100,800 to 111,200 units across 2019\u20132025 [D2p1], but the working paper is clear that this stability reflects a second-generation, non-binding instrument; first-generation controls on levels show \"consistent contraction effects\" [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D12p2",
+   "sentence": "The think-tank argument that stable stock proves capacity for more control [D12p2]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years to stand up [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "More damningly, the subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last [D10p3]; enforcement would \"systematically miss the most exploited tail\" [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "More damningly, the subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last [D10p3]; enforcement would \"systematically miss the most exploited tail\" [D10p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong's nine years without a written agreement [D4p1]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "A hard cap also invites judicial review and compensation claims if framed as deprivation of income [D9p1], and the litigation timeline alone would outlast a Council term [D9p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p3",
+   "sentence": "A hard cap also invites judicial review and compensation claims if framed as deprivation of income [D9p1], and the litigation timeline alone would outlast a Council term [D9p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan says the worst part is not price but insecurity\u2014two weeks' notice after asking for a window repair [D3p1]\u2014and he would accept any rent to leave if the queue were three years [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan says the worst part is not price but insecurity\u2014two weeks' notice after asking for a window repair [D3p1]\u2014and he would accept any rent to leave if the queue were three years [D3p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The NGO survey finds 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "It supports tenure security plus a light band on initial rents, opposing a hard cap on the contraction arithmetic and tenants' own revealed preference [D11p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "The legal opinion's middle instrument\u2014a published, indexed per-square-foot band defensible as rate-capping rather than confiscation [D9p2]\u2014is compatible with this approach, provided it is paired with the register and inspection capacity the minute says is missing [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "The legal opinion's middle instrument\u2014a published, indexed per-square-foot band defensible as rate-capping rather than confiscation [D9p2]\u2014is compatible with this approach, provided it is paired with the register and inspection capacity the minute says is missing [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "The strongest objection is that a light band leaves the initial rent\u2014\"the actual pain point\"\u2014unregulated [D9p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "But the archive's welfare arithmetic is uncomfortable precisely because the alternative imposes its costs on people who never appear in the consultation: the 3,000\u20134,000 households per year priced out of the segment [D6p4].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 8,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D10",
+  "D12",
+  "D3",
+  "D4",
+  "D9"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 3
+  },
+  "served_after_cap": 0
+ }
+}

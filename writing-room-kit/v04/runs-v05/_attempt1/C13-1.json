@@ -1,0 +1,334 @@
+{
+ "name": "C13-1",
+ "id": "C13-1",
+ "arm": "C13",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm trying to understand Hong Kong's subdivided flats problem \u2014 specifically how rents work and whether rent control helps. Can you show me some sources on this?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named two things you want to understand \u2014 how rents work, and whether rent control helps. Which of those is the claim your essay is actually making, and what would a source need to show for that claim: evidence of how rents are set, a counter-view on rent control, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I think the claim I'm leaning toward is that rent control on subdivided flats is a second-best fix and could backfire \u2014 so what I most need are sources on how rents get set (the initial-rent margin, premiums tenants pay) and on what actually happens when rent caps bind, both in Hong Kong and somewhere like Berlin. Can you pull up sources on those?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official-style statistical index excerpt tracking SDU stock and rents 2019-2025, with data caveats noted.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 Mietendeckel, describing cap effects and court annulment.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of 440 SDU households arguing caps treat a symptom, favoring tenure security.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy primer giving background on SDU tenants, rents, and the 2021 Tenancy Control Ordinance.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent-control supply elasticity, distinguishing first- and second-generation controls.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "these cover rent setting, cap effects, and stock data I need",
+   "docs": [
+    "D2",
+    "D7",
+    "D11",
+    "D1",
+    "D6"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First), D1 (Subdivided Housing in Hong Kong: A Primer), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "say",
+   "text": "The Berlin note is useful but I also need the rest of it \u2014 the part about what happened when the law was struck down \u2014 plus the local voices: a landlord and a tenant in Hong Kong, and the legal analysis of whether a cap could be challenged. Can you pull those up?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named four things you want: the aftermath of the law being struck down, a landlord's voice, a tenant's voice, and legal analysis of a challenge. Before I go looking, which one claim in your essay are these meant to support \u2014 and for that claim, is the landlord and tenant material there to show what the cap did, or to give a counter-view to it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "say",
+   "text": "They're for one claim: that a hard cap on rents would backfire and be legally shaky. The landlord and tenant voices show what a binding cap actually does to people, and the legal analysis shows whether a challenge could undo it. So please pull up the rest of the Berlin note (the aftermath after it was struck down), a landlord's view, a tenant's view, and the legal analysis of a challenge.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 17,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's rent cap, describing its aftermath after being struck down; author's analytical vantage, not local testimony.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects; theoretical/empirical literature review, not a Hong Kong stakeholder voice.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association representing SDU owners, arguing against a hard cap; self-interested advocacy with acknowledged data limits.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). Interview with a retired Sham Shui Po tenant in a subdivided unit, supporting a hard cap; single first-person local voice with interviewer-noted contradictions.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion assessing compensation and judicial review risk for rent-cap instruments; counsel's analysis, not empirical evidence.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "pick",
+   "text": "all four are cited in the essay and cover Berlin aftermath, landlord, tenant, and legal risk",
+   "docs": [
+    "D7",
+    "D5",
+    "D4",
+    "D9"
+   ]
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D5 (Submission: Landlords Association of Hong Kong), D4 (Tenant Interview: Mrs Wong, Sham Shui Po), D9 (Legal Opinion: Compensation and Judicial Review Risk). You can now read their passages by id, for example D7p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D7",
+     "D1",
+     "D2",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D7",
+    "D11",
+    "D1",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D11",
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "reason": "these cover rent setting, cap effects, and stock data I need"
+  },
+  {
+   "open_turn": 14,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D7",
+     "D3",
+     "D4",
+     "D9",
+     "D6"
+    ],
+    [
+     "D7",
+     "D5",
+     "D4",
+     "D9",
+     "D6"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 17,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D6",
+    "D5",
+    "D4",
+    "D9"
+   ],
+   "picked": [
+    "D4",
+    "D5",
+    "D7",
+    "D9"
+   ],
+   "reason": "all four are cited in the essay and cover Berlin aftermath, landlord, tenant, and legal risk"
+  }
+ ],
+ "unlocked_docs": [
+  "D2",
+  "D7",
+  "D11",
+  "D1",
+  "D6",
+  "D5",
+  "D4",
+  "D9"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p3",
+  "D6p2",
+  "D2p2",
+  "D2p1",
+  "D6p1",
+  "D6p4",
+  "D7p1",
+  "D7p2",
+  "D4p1"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D2",
+    "D7",
+    "D11",
+    "D1",
+    "D6"
+   ],
+   "reason": "these cover rent setting, cap effects, and stock data I need"
+  },
+  {
+   "turn": 18,
+   "docs": [
+    "D7",
+    "D5",
+    "D4",
+    "D9"
+   ],
+   "reason": "all four are cited in the essay and cover Berlin aftermath, landlord, tenant, and legal risk"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 14,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 16,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D7",
+  "D6",
+  "D5",
+  "D4",
+  "D9"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

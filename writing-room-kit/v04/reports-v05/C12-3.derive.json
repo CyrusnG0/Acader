@@ -1,0 +1,76 @@
+{
+ "id": "C12-3",
+ "arm": "C12",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.2,
+  "F14b parentage": 0.5,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "The essay argues Hong Kong should not impose a hard cap on initial SDU rents but should tighten in a narrower way.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student needs actual numbers on who lives in the units and how many.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Needs base demographics and stock numbers first.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 7,
+   "unit": "Wants base demographics and stock numbers.",
+   "parent": {
+    "type": "student",
+    "turn": 4
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Wants the demographic and stock passages.",
+   "parent": {
+    "type": "student",
+    "turn": 7
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Needs supply elasticity and tenant survey sources.",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The essay argues Hong Kong should not impose a hard cap on initial SDU rents but should tighten in a narrower way.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student needs actual numbers on who lives in the units and how many.\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Needs supply elasticity and tenant survey sources.\". How did you get there?"
+  }
+ ]
+}

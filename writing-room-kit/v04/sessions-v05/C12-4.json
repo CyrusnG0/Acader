@@ -1,0 +1,333 @@
+{
+ "name": "C12-4",
+ "id": "C12-4",
+ "arm": "C12",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so i'm writing on the SDU rent control debate \u2014 need sources. can you pull me something on how many households are in subdivided units and what they're actually paying?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said what you want the numbers to cover \u2014 households in subdivided units and what they pay. Before I point you anywhere: what would those figures be doing in your essay \u2014 backing a specific claim about the debate, or giving the reader background?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "background mostly, but it'll end up backing the claim that tenants pay a premium \u2014 need households count + per-sq-ft premium. throw me sources",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving background definitions, household counts and per-square-foot premium framing.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report arguing against hard caps and for tenure security over rent limits.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person tenant interview offering anecdotal lived experience, not statistical evidence.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent caps.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt time series on SDU stock and rents, with stated extrapolation caveats.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "household counts and rent premium data",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "pick",
+   "text": "need tenant voices and elasticity evidence",
+   "docs": [
+    "D3",
+    "D6"
+   ]
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D3 (Tenant Interview: Mr Chan, Kwai Chung), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D3p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D3"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D3"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D1",
+    "D11",
+    "D3",
+    "D6",
+    "D2"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "household counts and rent premium data"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D3",
+  "D6"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D1p3",
+  "D2p1",
+  "D2p2",
+  "D3p1",
+  "D3p2",
+  "D3p3",
+  "D6p1",
+  "D6p2",
+  "D6p4"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "household counts and rent premium data"
+  },
+  {
+   "turn": 19,
+   "docs": [
+    "D3",
+    "D6"
+   ],
+   "reason": "need tenant voices and elasticity evidence"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D1",
+  "D11",
+  "D3",
+  "D6",
+  "D2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

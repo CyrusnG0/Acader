@@ -1,0 +1,86 @@
+{
+ "packet": "P23",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "SDU tenants pay a 15\u201325 percent per-square-foot premium due to desperation."
+  },
+  {
+   "n": 2,
+   "claim": "Real rent burden worsened from 31 to 34 percent of income under the 2021 ordinance."
+  },
+  {
+   "n": 3,
+   "claim": "The 2021 ordinance capped increases within tenancies but not initial rent levels."
+  },
+  {
+   "n": 4,
+   "claim": "First-generation rent controls (hard caps on levels) consistently cause supply contraction."
+  },
+  {
+   "n": 5,
+   "claim": "Second-generation rent controls (caps on increases) have small or null effects on supply."
+  },
+  {
+   "n": 6,
+   "claim": "The 2021 ordinance is second-generation, explaining stock growth from 100,800 units in 2019 to 111,200 in 2025."
+  },
+  {
+   "n": 7,
+   "claim": "The estimated elasticity of SDU-type supply to controlled rent levels is 0.31\u20130.48."
+  },
+  {
+   "n": 8,
+   "claim": "A 10 percent cap-induced reduction removes 3\u20135 percent of stock over five years."
+  },
+  {
+   "n": 9,
+   "claim": "A modelled 15 percent cut in initial rents transfers about HK$900 per month to incumbents."
+  },
+  {
+   "n": 10,
+   "claim": "A 15 percent cut leaves 3,000\u20134,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 11,
+   "claim": "Berlin's Mietendeckel shows caps protect incumbents while the bill goes to those outside."
+  },
+  {
+   "n": 12,
+   "claim": "When the Mietendeckel fell, suppressed increases released and new-contract rents jumped above the pre-cap trend."
+  },
+  {
+   "n": 13,
+   "claim": "A hard cap framed as deprivation of income stream would likely attract compensation claims under the Basic Law."
+  },
+  {
+   "n": 14,
+   "claim": "A band-based instrument requires survey infrastructure that does not exist."
+  },
+  {
+   "n": 15,
+   "claim": "A certifiable tenancy register would cost 40\u201360 staff-years."
+  },
+  {
+   "n": 16,
+   "claim": "Current inspection covers under 6 percent of stock per year."
+  },
+  {
+   "n": 17,
+   "claim": "Enforcement would systematically miss the most exploited tail\u2014tenants with no written agreement."
+  },
+  {
+   "n": 18,
+   "claim": "61 percent of tenants would trade a nominal rent increase for three-year security of tenure."
+  },
+  {
+   "n": 19,
+   "claim": "74 percent of tenants would trade a nominal rent increase for a faster public-housing offer."
+  },
+  {
+   "n": 20,
+   "claim": "The better package is tenure security plus a light, indexed band on initial rents."
+  }
+ ],
+ "statements": "[0] (typed) I need to build this essay from primary and secondary sources on Hong Kong's subdivided unit rent control debate. Please pull up the key documents the argument will rest on: the tenant cost/premium data, the official 2021 ordinance review with rent-burden statistics, and the tenant interviews. Start with those.\n[2] (typed) All three carry different loads, but let's start with the scale-of-the-problem source: the tenant cost/premium data that shows SDU tenants pay a per-square-foot premium out of desperation. That's the empirical anchor for why something should change. Please pull up that document.\n[4] (pick reason) scale-of-problem anchors plus ordinance review and tenant survey\n[11] (pick reason) the three load-bearing sources named already\n[19] (typed) I've got D1, D2, and D11 worked through. But the essay leans on three other sources I haven't touched: the tenant interview (Mr Chan / Mrs Wong), the think-tank brief, and the legal/enforcement material. Can I get the tenant-voice source first?\n[21] (typed) It's lived-experience evidence for a claim I'm already making. Mrs Wong's account shows the 2021 ordinance capped increases within tenancies but left initial rent levels untouched, and Mr Chan's own ranking of what would help most is a check on the rent-cap case. So I need the tenant interview source to ground both the grievance and the counter-consideration. Can I get it?\n[23] (pick reason) essay cites all four directly\n[38] (typed) D6 and D10 are the two I still need to finish exhausting. Let me pull the remaining passages: D6p3 (I have p1, p2, p4 but the elasticity table's tail is in p3, which I need to be sure the 3-5 percent stock figure is mine to use), and D10p2 and D10p3 (the enforcement coverage number and the subcommittee's failure to find any design protecting the newest-arrival tail first). Read both now.\n[42] (typed) Fair question. D10p2's coverage number is evidence for my third argument\u2014that enforcement would miss the most exploited tail\u2014so it supports the point that a hard cap cannot be reliably enforced. D10p3, the subcommittee's failure to find any design protecting the newest-arrival tail first, is also supporting my position, not a counter-view: it shows even the body tasked with designing enforcement could not solve the problem. Now read D10p2 and D10p3.\n[44] (pick reason) need remaining cited passages D10p2, D10p3, D6p3 to finish exhausting these two sources"
+}

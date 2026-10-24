@@ -1,0 +1,210 @@
+{
+ "id": "C12-6",
+ "arm": "C12",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.7142857142857144,
+  "F14b parentage": 0.3157894736842105,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student is working on a project about subdivided flats in Hong Kong and rent control.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student needs to see the sources.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student asks for documents on the basic situation of subdivided units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants raw numbers on how many households are in subdivided units and what they pay.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants a tenant's own account.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student wants numbers plus tenant accounts first.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The student needs supply evidence and stock figures.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The student needs the legal side and enforcement.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The student wants material on compensation claims from a hard cap.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The student wants material on inspection capacity.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "The student recalls the sources as a lawyer's memo and a subcommittee note.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The memo should back up that a hard cap risks compensation claims.",
+   "parent": {
+    "type": "student",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "An indexed per-square-foot band can be defended as rate-capping.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The subcommittee note should back up that enforcement is too thin.",
+   "parent": {
+    "type": "student",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Inspection is under 6% a year.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "A register would cost 40-60 staff-years.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Enforcement would miss tenants with no written agreement and newest arrivals.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The point is that enforcement can't protect the tail.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Legal compensation risk and enforcement capacity are both needed for the hard-cap objection.",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student is working on a project about subdivided flats in Hong Kong and rent control.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student needs to see the sources.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student asks for documents on the basic situation of subdivided units.\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"The student needs supply evidence and stock figures.\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"The student needs the legal side and enforcement.\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"The student wants material on compensation claims from a hard cap.\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"The student wants material on inspection capacity.\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"The student recalls the sources as a lawyer's memo and a subcommittee note.\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"An indexed per-square-foot band can be defended as rate-capping.\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"Inspection is under 6% a year.\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"A register would cost 40-60 staff-years.\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"Enforcement would miss tenants with no written agreement and newest arrivals.\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"The point is that enforcement can't protect the tail.\". How did you get there?"
+  }
+ ]
+}

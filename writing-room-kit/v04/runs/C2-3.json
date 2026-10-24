@@ -1,0 +1,253 @@
+{
+ "id": "C2-3",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Should Hong Kong tighten rent control on subdivided units? I think it should tighten protection for tenants, but a hard rent cap is the wrong tool. The evidence I looked at in the course archive points to tenure security as the bigger problem, and to real risks if the rules are too blunt.\n\nStart with the tenant's side. Mr Chan is a delivery driver who lives with his wife and two children in a 120 square foot cubicle. He pays 5,800 dollars in rent, about a third of the household income [D3p1]. That is a heavy burden and it shows why people want a cap. But he says the worst part is not the price. It is insecurity. His last landlord ended the tenancy with two weeks notice after he asked for a leaking window to be repaired [D3p1]. So a tenant who complains can lose his home, and a rent cap alone does nothing about that.\n\nMr Chan is also split on the cap itself. He says a hard cap could free up around 800 dollars a month, which is about a month of food [D3p2]. Yet he worries that landlords would rather turn cubicles back into storage rooms than deal with regulated tenants, and he has seen two units on his floor emptied and locked for a year [D3p2]. This is only one interview, but I take it seriously.\n\nThe Berlin case supports his worry. Berlin capped rents on about 1.5 million flats in 2020. Asking rents for new listings fell sharply, which looks like a success at first. But the supply of listed flats shrank within a year because owners held flats back or moved them into segments that were not controlled [D7p1]. For a city like Hong Kong where subdivided units are already scarce, losing supply would hurt the very people the policy is meant to help.\n\nThe Berlin story also has a second lesson. The court struck the law down in 2021 for legal reasons about federal powers, not because of the economics [D7p2]. When the cap fell, suppressed increases came back and rents for new contracts jumped above the earlier trend [D7p2]. So a cap that is hard and temporary can leave tenants worse off than before. I should be careful here, because the court case says little about whether the cap worked. But the rebound shows that a freeze can store up pressure rather than remove it.\n\nPutting this together, my position is that Hong Kong should tighten rules for subdivided units, but it should focus on security of tenure rather than a hard cap. That means longer notice periods and protection for tenants who ask for repairs, which is exactly what Mr Chan said went wrong for him [D3p1]. A softer limit on rent increases could sit alongside this, so that landlords are not pushed to lock units away [D3p2].\n\nThere are limits to my argument. I only read two sources, one interview and one comparison with a very different city. I did not look at the data or the economic papers, so I cannot say how big the supply effect would be in Hong Kong. But on the evidence I have, tightening protection without a hard cap seems the safer path.",
+ "citations": [
+  {
+   "pid": "D3p1",
+   "pos": 490
+  },
+  {
+   "pid": "D3p1",
+   "pos": 729
+  },
+  {
+   "pid": "D3p2",
+   "pos": 962
+  },
+  {
+   "pid": "D3p2",
+   "pos": 1154
+  },
+  {
+   "pid": "D7p1",
+   "pos": 1525
+  },
+  {
+   "pid": "D7p2",
+   "pos": 1823
+  },
+  {
+   "pid": "D7p2",
+   "pos": 1940
+  },
+  {
+   "pid": "D3p1",
+   "pos": 2495
+  },
+  {
+   "pid": "D3p2",
+   "pos": 2614
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 9
+ },
+ "drafts": [
+  {
+   "turn": 14,
+   "text": "I think Hong Kong should tighten protection for tenants in subdivided units, but not with a hard rent cap. Mr Chan pays 5,800 dollars for a cubicle [D3p1]. A cap might free up some money [D3p2], but he fears landlords would lock units up. Berlin shows supply can fall [D7p1].\n",
+   "struct": "typed"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What job would this source need to do in your rent essay \u2014 back up a specific claim, give a counter-view, or something else? And which claim is it for?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "just something to back up my main point, I think rent control is probably good",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Got it \u2014 your main point is that rent control is probably good. What would you want the source to show for that: that rent control helps the people it's meant to help, that its downsides are smaller than people claim, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "that it helps tenants I guess. just give me some sources",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants; argues against hard caps, favoring tenure security and light rent bands.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt with stock and rent index; notes caveats and covers 2019\u20132025.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity; distinguishes control types and notes welfare trade-offs.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's rent freeze; describes supply effects and court rejection.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant in marginal housing; presents mixed views on rent control.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "tenant voice and case",
+   "docs": [
+    "D3",
+    "D7"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D3 (Tenant Interview: Mr Chan, Kwai Chung), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D3p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so the sources are mixed, I think tenure security matters more than a hard cap",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 13,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said tenure security matters more to you than a hard cap. Which of the sources you've unlocked speaks to that, and what would you want it to show?",
+   "policy": "P-CLM"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [],
+    [
+     "D6",
+     "D2",
+     "D11",
+     "D7",
+     "D5"
+    ],
+    [
+     "D6",
+     "D2",
+     "D3",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    false,
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D2",
+    "D6",
+    "D7",
+    "D3"
+   ],
+   "picked": [
+    "D3",
+    "D7"
+   ],
+   "reason": "tenant voice and case"
+  }
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D3",
+    "D7"
+   ],
+   "reason": "tenant voice and case"
+  }
+ ],
+ "unlocked_docs": [
+  "D3",
+  "D7"
+ ],
+ "read_passages": [
+  "D3p1",
+  "D3p2",
+  "D7p1",
+  "D7p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 1
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 12,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 540
+ }
+}

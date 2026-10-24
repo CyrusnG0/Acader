@@ -1,0 +1,22 @@
+{
+ "id": "C1-5",
+ "assistant_turns": 17,
+ "law1_violations": [
+  {
+   "turn": 54,
+   "violation": true,
+   "quote": "Document D6, the working paper on rent control and supply elasticity, argues that the stability you rely on is an artifact of a non-binding instrument \u2014 a first-generation cap on initial rent levels behaves differently from the second-generation increase cap you are defending, so D2's flat stock tells you little about your own proposal."
+  }
+ ],
+ "law1_rate": 0.058823529411764705,
+ "src_leak": {
+  "clarify_leaks": [],
+  "serve_rule_violations": [],
+  "clarify_echoes_raw": 1
+ },
+ "turns_to_shortlist": [
+  3,
+  2,
+  2
+ ]
+}

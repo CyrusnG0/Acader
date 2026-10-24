@@ -1,0 +1,757 @@
+{
+ "id": "C13-4",
+ "arm": "C13",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.5454545454545454,
+  "F14b parentage": 0.7380952380952381,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student wants sources on how rent caps affect housing supply.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student wants sources on what tenants actually want.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student's current focus is supply: whether capping rents makes landlords pull flats off the market or stop building.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "A source would need to compare places with hard rent caps against places without them or against lighter caps.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source should show what happened to the number of units available.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Ideally the source would separate effects on sitting tenants from effects on people looking for a new place.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "All five sources bear on supply and tenant preferences.",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "The student wants to check whether the working paper says hard caps on rent levels shrink supply while caps on increases within a tenancy barely do.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "The student wants the paper's estimate of what a binding cut does to stock and to who gets pushed out.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "The student wants the actual Hong Kong stock numbers to see whether supply moved while the ordinance was in force.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student wants to read the passage on the cap distinction.",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student wants to read the passage on the binding cut and who gets pushed out.",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The student wants to read the passage on the Hong Kong stock numbers.",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs cap-type evidence, binding-cut estimates, and Hong Kong stock numbers.",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student now needs the enforcement side: how much stock inspections actually cover.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student wants to know whether a tenancy register would be feasible.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student wants to know whether enforcement would reach the worst-off tenants or miss them.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student wants the tenant voices: the man on the waiting list and the woman without a written agreement.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The coverage gap comes first: how little of the stock inspections actually reach.",
+   "parent": {
+    "type": "assistant",
+    "turn": 23
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student wants to know whether a register could even be stood up.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Then who enforcement ends up missing.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student wants the two tenant voices: the man on the waiting list and the woman with no written agreement.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The student wants figures on inspection coverage \u2014 what share of the stock gets inspected in a year.",
+   "parent": {
+    "type": "assistant",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The student wants to know how many staff it would take to run a tenancy register.",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Then who enforcement ends up missing.",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The student wants the two tenant voices: the man on the waiting list and the woman with no written agreement.",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "The student needs enforcement capacity, register staffing, and the two tenant voices.",
+   "parent": {
+    "type": "student",
+    "turn": 26
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The student still needs the legal side: whether a hard cap on initial rents could be challenged as taking away landlords' income.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The student wants to know how long such litigation would run.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The student wants to know whether a lighter indexed band would be defensible instead.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The student wants the landlords' own submission and how solid their cost figures are.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "The source would support the claim that a hard cap on the first rent could be challenged in court as taking away landlords' income and that a case could run for years.",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "It would need to show the legal basis for such a challenge.",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "It would need to show roughly how long litigation would take.",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "It would need to show that a lighter indexed band on rents would be defensible as rate-capping rather than confiscation.",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "The landlords' submission is separate: the student wants to see whether their compliance-cost numbers are solid or just self-reported.",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "The student needs landlord cost figures and legal challenge evidence.",
+   "parent": {
+    "type": "student",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "The working paper distinguishes first-generation hard caps on rent levels from second-generation caps on increases within tenancies.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "First-generation controls show supply contraction; second-generation show small or null effects.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "Berlin's rent freeze caused listings to shrink within a year as owners withheld flats.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "When Berlin's law was struck down, suppressed increases released and new-contract rents jumped above the pre-cap trend.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "New York's scheme stays light on first rents, which is why its stock contraction is modest.",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p2"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "Tightening first rents would push Hong Kong toward the Berlin situation.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "Hong Kong should not impose a hard cap on initial SDU rents.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "A narrower package of tenure security, an indexed rent band, enforcement investment, and a shorter public-housing queue is the better route.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 54,
+   "unit": "The Berlin point came from D7's passages on listings shrinking within a year and rents jumping above trend after the cap fell.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "The student wants independent backing for the same supply-contraction claim, ideally from the working paper's own modelling rather than just the Berlin case.",
+   "parent": {
+    "type": "assistant",
+    "turn": 55
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "An estimate of how much stock a binding cap actually removes would strengthen the claim.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 58,
+   "unit": "The student wants the working paper's own modelling estimate of how much stock a binding cap removes.",
+   "parent": {
+    "type": "student",
+    "turn": 56
+   }
+  },
+  {
+   "turn": 60,
+   "unit": "The student wants the working paper's own modelling of stock removed by a binding cap.",
+   "parent": {
+    "type": "student",
+    "turn": 58
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "The student has already read D6's passages on the control-type distinction, the 10 percent removal estimate, and the 15 percent simulation.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "The student wants to check the Berlin figures against the source itself before leaning on them.",
+   "parent": {
+    "type": "student",
+    "turn": 54
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "The Berlin figures are evidence for the claim that a hard cap shrinks the supply of flats newcomers can find.",
+   "parent": {
+    "type": "student",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "The Berlin figures are evidence that lifting the cap releases suppressed rents.",
+   "parent": {
+    "type": "student",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "The student wants to read the Berlin passage on what happened to listings once the freeze was in force.",
+   "parent": {
+    "type": "student",
+    "turn": 62
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The student wants the Berlin note itself to confirm listing contraction and the post-cap rent jump.",
+   "parent": {
+    "type": "student",
+    "turn": 64
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "The student has already read the Berlin passages on listings shrinking, rents jumping above trend, and caps binding differently on entrants than incumbents.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "The student wants to nail down why a narrower package (tenure security, light indexed band, enforcement investment, shorter queue) beats a straight hard cap.",
+   "parent": {
+    "type": "student",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "The student wants the source that argues for that package directly.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "The source should supply evidence that the package actually works.",
+   "parent": {
+    "type": "assistant",
+    "turn": 69
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "The source should show tenants would take tenure security and a faster queue over a nominal rent freeze, with survey numbers on what households would trade for what.",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "The student now has the Berlin and New York comparisons and the enforcement minute.",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "The student wants the tenants' own view: what they would trade for what and what they say would help most.",
+   "parent": {
+    "type": "student",
+    "turn": 70
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "The student wants a survey or interview source on tenant views.",
+   "parent": {
+    "type": "student",
+    "turn": 70
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "The NGO survey of 440 households and the interviews with Mr Chan and Mrs Wong are the sources for the tenants' own view.",
+   "parent": {
+    "type": "assistant",
+    "turn": 71
+   }
+  },
+  {
+   "turn": 76,
+   "unit": "The tenants' view supports two claims: tenants would give up a nominal rent freeze for tenure security or a faster flat offer, and their stated priority is the waiting list rather than rent.",
+   "parent": {
+    "type": "assistant",
+    "turn": 75
+   }
+  },
+  {
+   "turn": 76,
+   "unit": "The student wants the survey trade-off numbers and what Mr Chan says would help most.",
+   "parent": {
+    "type": "student",
+    "turn": 74
+   }
+  },
+  {
+   "turn": 78,
+   "unit": "The student has the trade-off numbers and Mr Chan's priority already.",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 78,
+   "unit": "The student still needs a source arguing directly for the narrow package over a hard cap.",
+   "parent": {
+    "type": "student",
+    "turn": 76
+   }
+  },
+  {
+   "turn": 80,
+   "unit": "Survey trade-offs, enforcement capacity, and tenant priorities all underpin the recommendation.",
+   "parent": {
+    "type": "student",
+    "turn": 78
+   }
+  },
+  {
+   "turn": 82,
+   "unit": "The NGO survey shows tenants would trade a nominal rent increase for tenure security and a faster flat offer.",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 82,
+   "unit": "The enforcement minute shows the register and inspection problem.",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 82,
+   "unit": "The student still needs to state the core reason: elasticity evidence cuts against a hard cap while a light band is safer.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 84,
+   "unit": "A hard cap on the first rent acts on the margin where new tenants enter, shrinking supply of new subdivided flats and pushing the newest households out.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 84,
+   "unit": "A light cap on increases inside a tenancy barely touches supply.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 84,
+   "unit": "D6p2 carries the core reason: first-generation hard caps show consistent supply contraction while second-generation caps show small or null effects.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 86,
+   "unit": "D6p2 already does the job for the core reason, so nothing more is needed there.",
+   "parent": {
+    "type": "student",
+    "turn": 84
+   }
+  },
+  {
+   "turn": 86,
+   "unit": "The student never put the headline recommendation (no hard cap, narrow package instead) into their own words.",
+   "parent": {
+    "type": "student",
+    "turn": 78
+   }
+  },
+  {
+   "turn": 86,
+   "unit": "The student never put the Berlin and New York comparisons into their own words.",
+   "parent": {
+    "type": "student",
+    "turn": 78
+   }
+  },
+  {
+   "turn": 88,
+   "unit": "The recommendation needs a source weighing a hard cap against a lighter package; the elasticity paper and enforcement minute together push toward the narrower package.",
+   "parent": {
+    "type": "student",
+    "turn": 86
+   }
+  },
+  {
+   "turn": 88,
+   "unit": "Berlin needs a source on what happened to listings under the Mietendeckel and what happened when it was struck down.",
+   "parent": {
+    "type": "student",
+    "turn": 86
+   }
+  },
+  {
+   "turn": 88,
+   "unit": "New York needs a source on how a light first-rent scheme behaves compared with a tight one.",
+   "parent": {
+    "type": "student",
+    "turn": 86
+   }
+  },
+  {
+   "turn": 90,
+   "unit": "The Berlin source should cover both the drop in listings under the Mietendeckel and the rebound in new-contract rents after it was struck down.",
+   "parent": {
+    "type": "assistant",
+    "turn": 89
+   }
+  },
+  {
+   "turn": 90,
+   "unit": "The Berlin evidence supports the claim that a hard cap binds differently on entrants than incumbents, so the bill lands on people still outside the segment.",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants sources on how rent caps affect housing supply.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants sources on what tenants actually want.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"A source would need to compare places with hard rent caps against places without them or against lighter caps.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The source should show what happened to the number of units available.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Ideally the source would separate effects on sitting tenants from effects on people looking for a new place.\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"The student wants to check whether the working paper says hard caps on rent levels shrink supply while caps on increases within a tenancy barely do.\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"The student wants the paper's estimate of what a binding cut does to stock and to who gets pushed out.\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"The student wants the actual Hong Kong stock numbers to see whether supply moved while the ordinance was in force.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student now needs the enforcement side: how much stock inspections actually cover.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student wants to know whether a tenancy register would be feasible.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student wants to know whether enforcement would reach the worst-off tenants or miss them.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student wants the tenant voices: the man on the waiting list and the woman without a written agreement.\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"The student still needs the legal side: whether a hard cap on initial rents could be challenged as taking away landlords' income.\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"The student wants to know how long such litigation would run.\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"The student wants to know whether a lighter indexed band would be defensible instead.\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"The student wants the landlords' own submission and how solid their cost figures are.\". How did you get there?"
+  },
+  {
+   "turn": 52,
+   "question": "At turn 52 you said: \"Tightening first rents would push Hong Kong toward the Berlin situation.\". How did you get there?"
+  },
+  {
+   "turn": 52,
+   "question": "At turn 52 you said: \"Hong Kong should not impose a hard cap on initial SDU rents.\". How did you get there?"
+  },
+  {
+   "turn": 52,
+   "question": "At turn 52 you said: \"A narrower package of tenure security, an indexed rent band, enforcement investment, and a shorter public-housing queue is the better route.\". How did you get there?"
+  },
+  {
+   "turn": 56,
+   "question": "At turn 56 you said: \"An estimate of how much stock a binding cap actually removes would strengthen the claim.\". How did you get there?"
+  },
+  {
+   "turn": 68,
+   "question": "At turn 68 you said: \"The student wants the source that argues for that package directly.\". How did you get there?"
+  },
+  {
+   "turn": 82,
+   "question": "At turn 82 you said: \"The student still needs to state the core reason: elasticity evidence cuts against a hard cap while a light band is safer.\". How did you get there?"
+  }
+ ]
+}

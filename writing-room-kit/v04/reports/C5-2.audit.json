@@ -1,0 +1,25 @@
+{
+ "id": "C5-2",
+ "assistant_turns": 31,
+ "law1_violations": [
+  {
+   "turn": 88,
+   "violation": true,
+   "quote": "Document D11, the NGO report \"Rehousing Pathways First,\" argues against your narrow position: it says rent caps treat a price symptom of a quantity problem, that tenants themselves would trade rent increases for security of tenure and a faster housing offer, and that enforcement capacity spent on rents is capacity not spent on fire and ventilation harms."
+  }
+ ],
+ "law1_rate": 0.03225806451612903,
+ "src_leak": {
+  "clarify_leaks": [],
+  "serve_rule_violations": [],
+  "clarify_echoes_raw": 1
+ },
+ "turns_to_shortlist": [
+  4,
+  2,
+  2,
+  2,
+  3,
+  2
+ ]
+}

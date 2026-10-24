@@ -1,0 +1,7 @@
+# Tightening Rent Control on Subdivided Units: A Case for Targeted Tenure Reform Over Hard Caps
+
+Hong Kong's 110,000 subdivided-unit households face rents that extract a 15–25 percent per-square-foot premium over mainstream flats, precisely because they are priced at the margin of desperation [D1p1]. The question is whether tightening rent control would help them or shrink the stock they depend on. I argue that Hong Kong should tighten regulation—but through tenure security and indexed rent bands, not a hard cap on initial rents. A hard cap would produce measurable stock contraction, systematically fail the most exploited tenants, and leave the underlying quantity problem untouched. The evidence points toward a narrower instrument.
+
+**The case against a hard cap**
+
+The strongest evidence against a hard cap is the supply arithmetic. The reviewed literature estimates the long-run elasticity of marginal SDU-type supply at 0.31–0.48, meaning a 10 percent cap-induced rent reduction removes roughly 3–5 percent of stock over five years [D6p1]. The modelled Hong Kong scenario is starker: a 15 percent cut in initial rents yields a net transfer of about $900 per month to incumbents, against 3,000–4,000 households per year unable to enter the segment—mostly new arrivals and newly formed households [D6p4]. This is the welfare trap at the heart of the debate: the households priced out are the same population the cap intends to protect [D6p3].

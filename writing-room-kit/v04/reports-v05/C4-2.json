@@ -1,0 +1,352 @@
+{
+ "id": "C4-2",
+ "arm": "C4",
+ "components": {
+  "claim": 83.33333333333333,
+  "source": 55.55555555555556,
+  "cite": 81.25,
+  "change": 90.0,
+  "struct": 100.0,
+  "claim_v2": 83.33333333333333
+ },
+ "composite": 80.96527777777777,
+ "composite_nostruct": 77.60620915032679,
+ "mismatches": [
+  "Paragraph 3 says: \"The households excluded by a cap are the same population that D1 identifies as the segment's core tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin shows that caps bind differently on entrants than incumbents, with the bill handed to those still outside.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Mr Chan says he would accept any rent to leave if the public-housing queue fell from five and a half years to three.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D1, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D12, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D7, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"The stability of SDU stock under the 2021 ordinance, 100,800 units in 2019 to 111,200 in 2025 [D2p1], is not evidence that a binding cap is safe.\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"One think-tank piece cited in the news digest makes exactly the wrong inference from this data [D12p2].\" cites D12p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan says the worst part is not price but insecurity, a landlord ending his tenancy with two weeks' notice [D3p1], and that he would \"accept any rent to leav\" cites D3p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The NGO report is written by a group that wants tenure security, so I do not rely on it alone, but the academic paper reaches a similar view on hard caps [D11p3\" cites D11p3. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial rents for subdivided units.",
+   "ancestor": 25,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten security of tenure instead, with at most a light band on starting rents.",
+   "ancestor": 36,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The stable SDU stock under the 2021 ordinance is not evidence that a binding cap is safe.",
+   "ancestor": 21,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The stable stock shows that a non-binding instrument does not bind.",
+   "ancestor": 21,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "First-generation hard caps cause consistent contraction, while second-generation increase caps have small or null effects.",
+   "ancestor": 21,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Long-run supply elasticity for marginal SDU-type stock is 0.31 to 0.48, so a 10% cap-induced rent cut removes 3-5% of stock over five years.",
+   "ancestor": 27,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "A 15% cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000-4,000 households per year cannot enter the segment.",
+   "ancestor": 27,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The households excluded by a cap are the same population that D1 identifies as the segment's core tenants.",
+   "ancestor": null,
+   "birth": 48,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Berlin shows that caps bind differently on entrants than incumbents, with the bill handed to those still outside.",
+   "ancestor": null,
+   "birth": 48,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Tenure security addresses the harm tenants actually name, which is insecurity rather than price.",
+   "ancestor": 25,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mr Chan says he would accept any rent to leave if the public-housing queue fell from five and a half years to three.",
+   "ancestor": null,
+   "birth": 48,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "An NGO survey of 440 households found 61% would trade a nominal rent increase for three-year security of tenure, and 74% for a faster housing offer.",
+   "ancestor": 36,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The Landlords Association's threat of mass exit is weakly evidenced because it concedes no data on actual margins and its compliance-cost figures come from a self-reported survey with a 34% response rate.",
+   "ancestor": 29,
+   "birth": 48,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The exit threat is credible for hard caps but not a reason to avoid limits on rent increases.",
+   "ancestor": 40,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The NGO report is written by a group that wants tenure security, so it is not relied on alone, but the academic paper reaches a similar view on hard caps.",
+   "ancestor": 40,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Rent burden for these households worsened from 31% to 34%, and figures after 2023 rely on survey extrapolation, so doing nothing is not enough.",
+   "ancestor": 38,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "A hard rent cap would help those who already have a unit and hurt those trying to get one.",
+   "ancestor": 27,
+   "birth": 42,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "Tighter security of tenure gives tenants what they say they want without the supply loss.",
+   "ancestor": 31,
+   "birth": 42,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D2p1",
+   "sentence": "The stability of SDU stock under the 2021 ordinance, 100,800 units in 2019 to 111,200 in 2025 [D2p1], is not evidence that a binding cap is safe.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The working paper is explicit: first-generation hard caps show consistent contraction; second-generation increase caps show small or null effects, \"which explains the stable stock in the D2 index\" [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D12p2",
+   "sentence": "One think-tank piece cited in the news digest makes exactly the wrong inference from this data [D12p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The academic literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31 to 0.48: a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "A 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000 to 4,000 households per year, \"mostly new arrivals and newly formed households,\" cannot enter the segment at all [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "That is the same population D1 identifies as the segment's core tenants [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "Berlin reinforces the point: caps bind differently on entrants than incumbents, and \"the bill is handed to those still outside\" [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan says the worst part is not price but insecurity, a landlord ending his tenancy with two weeks' notice [D3p1], and that he would \"accept any rent to leave\" if the public-housing queue fell from five and a half years to three [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan says the worst part is not price but insecurity, a landlord ending his tenancy with two weeks' notice [D3p1], and that he would \"accept any rent to leave\" if the public-housing queue fell from five and a half years to three [D3p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p3",
+   "sentence": "Mrs Wong's own building shows landlords do sometimes exit, with two flats converted to storage [D4p3], but the Landlords Association's threat of mass exit is weakly evidenced: it concedes no data on actual margins, and its compliance-cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "Mrs Wong's own building shows landlords do sometimes exit, with two flats converted to storage [D4p3], but the Landlords Association's threat of mass exit is weakly evidenced: it concedes no data on actual margins, and its compliance-cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The Landlords Association says owners will leave the segment if returns fall below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "The NGO report is written by a group that wants tenure security, so I do not rely on it alone, but the academic paper reaches a similar view on hard caps [D11p3].",
+   "supports": "no"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Also, rent burden for these households still worsened from 31 to 34 percent [D2p2], and figures after 2023 rely on survey extrapolation [D2p3], so doing nothing is not enough.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "Also, rent burden for these households still worsened from 31 to 34 percent [D2p2], and figures after 2023 rely on survey extrapolation [D2p3], so doing nothing is not enough.",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    42,
+    48
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    42,
+    48
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    42,
+    48
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [
+  "D1",
+  "D12",
+  "D4",
+  "D7"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 2,
+   "own_thinking": 11
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 77.60620915032679,
+ "composite_v2_struct": 80.96527777777777,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 3 says: \"The households excluded by a cap are the same population that D1 identifies as the segment's core tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin shows that caps bind differently on entrants than incumbents, with the bill handed to those still outside.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Mr Chan says he would accept any rent to leave if the public-housing queue fell from five and a half years to three.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D1, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D12, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D7, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"The stability of SDU stock under the 2021 ordinance, 100,800 units in 2019 to 111,200 in 2025 [D2p1], is not evidence that a binding cap is safe.\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"One think-tank piece cited in the news digest makes exactly the wrong inference from this data [D12p2].\" cites D12p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan says the worst part is not price but insecurity, a landlord ending his tenancy with two weeks' notice [D3p1], and that he would \"accept any rent to leav\" cites D3p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The NGO report is written by a group that wants tenure security, so I do not rely on it alone, but the academic paper reaches a similar view on hard caps [D11p3\" cites D11p3. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

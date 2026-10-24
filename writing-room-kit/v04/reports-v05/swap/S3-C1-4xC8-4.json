@@ -1,0 +1,368 @@
+{
+ "id": "S3-C1-4xC8-4",
+ "group": "S3",
+ "essay_owner": "C1-4",
+ "arm": "C1",
+ "components": {
+  "claim": 15.0,
+  "source": 57.142857142857146,
+  "cite": 95.23809523809524,
+  "change": 25.0,
+  "struct": 100.0
+ },
+ "composite": 49.714285714285715,
+ "composite_nostruct": 40.840336134453786,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units but only narrowly.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"It should strengthen the cap on rent increases, give tenants security of tenure, and consider a light, published band on starting rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"It should not impose a hard cap on the initial rent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit residents are new arrivals, single parents, and people waiting around five and a half years for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Rent burden worsened from 31 to 34 percent of income even after the 2021 ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Subdivided unit stock grew from about 107,300 units in 2021 to about 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A working paper says hard caps on rent levels cause consistent contraction, while caps on increases have small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The households that lose units due to a hard cap are the same people the cap is meant to protect.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"After Berlin's 2020 rent cap, new listings fell as owners withheld flats or moved them to uncontrolled segments.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"When Berlin's rent cap was struck down, rents on new contracts jumped above the earlier trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The landlords' association argues that members will leave the segment if returns fall below mortgage cost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The landlords' association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band could be defended as rate-capping.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The survey system a band needs does not exist yet, and judicial review could take longer than a Council term.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"In a survey of 440 households, 61 percent would accept a nominal rent rise for three years of secure tenure, and 74 percent for a faster public housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Enforcement effort spent policing rents is effort not spent on inspecting fire safety and ventilation, where harm is documented and immediate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"The archive gives no number for how large a light band should be, so it should be much smaller than the 10 percent cut in the supply estimate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D5, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D7, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D9, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"The archive supports this middle position better than either doing nothing or capping hard [D11p3].\" cites D11p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band coul\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units but only narrowly.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "It should strengthen the cap on rent increases, give tenants security of tenure, and consider a light, published band on starting rents.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "It should not impose a hard cap on the initial rent.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than tenants in mainstream flats.",
+   "ancestor": 2
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit residents are new arrivals, single parents, and people waiting around five and a half years for public housing.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Rent burden worsened from 31 to 34 percent of income even after the 2021 ordinance.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases inside a tenancy but did not cap the initial rent.",
+   "ancestor": 21
+  },
+  {
+   "para": 3,
+   "claim": "Subdivided unit stock grew from about 107,300 units in 2021 to about 111,200 in 2025.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A working paper says hard caps on rent levels cause consistent contraction, while caps on increases have small or null effects on stock.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 38
+  },
+  {
+   "para": 4,
+   "claim": "The households that lose units due to a hard cap are the same people the cap is meant to protect.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "After Berlin's 2020 rent cap, new listings fell as owners withheld flats or moved them to uncontrolled segments.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "When Berlin's rent cap was struck down, rents on new contracts jumped above the earlier trend.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The landlords' association argues that members will leave the segment if returns fall below mortgage cost.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The landlords' association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band could be defended as rate-capping.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "The survey system a band needs does not exist yet, and judicial review could take longer than a Council term.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "In a survey of 440 households, 61 percent would accept a nominal rent rise for three years of secure tenure, and 74 percent for a faster public housing offer.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "Enforcement effort spent policing rents is effort not spent on inspecting fire safety and ventilation, where harm is documented and immediate.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "The archive gives no number for how large a light band should be, so it should be much smaller than the 10 percent cut in the supply estimate.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D11p3",
+   "sentence": "The archive supports this middle position better than either doing nothing or capping hard [D11p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, which are flats carved into small cubicles, and per square foot they pay 15 to 25 percent more than tenants in mainstream flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many are new arrivals, single parents and people waiting for public housing, where the wait is around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rent burden also got worse, from 31 to 34 percent of income, even after the 2021 ordinance [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance capped increases inside a tenancy but did not cap the initial rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Stock kept growing afterwards, from about 107,300 units in 2021 to about 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "It says hard caps on rent levels cause consistent contraction, while caps on increases have small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The same paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "That matters because the households that lose units are the same people the cap is meant to protect [D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, new listings fell as owners withheld flats or moved them to uncontrolled segments [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the court struck the law down, rents on new contracts jumped above the earlier trend [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The lesson was that tenants already inside gain, and the bill goes to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords' association argues that members will leave the segment if returns fall below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band could be defended as rate-capping [D9p1][D9p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band could be defended as rate-capping [D9p1][D9p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "But the survey system a band needs does not exist yet [D9p2], and judicial review could take longer than a Council term [D9p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p3",
+   "sentence": "But the survey system a band needs does not exist yet [D9p2], and judicial review could take longer than a Council term [D9p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "In a survey of 440 households, 61 percent would accept a nominal rent rise for three years of secure tenure, and 74 percent for a faster public housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The same report says enforcement effort spent policing rents is effort not spent on inspecting fire safety and ventilation, where harm is documented and immediate [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "Recent figures in the rent index also rely on survey extrapolation [D2p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    34
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    34
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    34,
+    45
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    34,
+    45
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    34,
+    45
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  },
+  {
+   "para": 8,
+   "window": [
+    45,
+    59
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D5",
+  "D7",
+  "D9"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 4,
+   "own_thinking": 2
+  },
+  "served_after_cap": 0
+ }
+}

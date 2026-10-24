@@ -1,0 +1,14 @@
+{
+ "id": "DRY-1",
+ "assistant_turns": 13,
+ "law1_violations": [],
+ "law1_rate": 0.0,
+ "src_leak": {
+  "clarify_leaks": [],
+  "serve_rule_violations": []
+ },
+ "turns_to_shortlist": [
+  2,
+  2
+ ]
+}

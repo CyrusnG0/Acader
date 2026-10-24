@@ -1,0 +1,401 @@
+{
+ "id": "C5-4",
+ "arm": "C5",
+ "components": {
+  "claim": 65.0,
+  "source": 100.0,
+  "cite": 76.08695652173913,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 60.0
+ },
+ "composite": 84.16304347826087,
+ "composite_nostruct": 81.3682864450128,
+ "mismatches": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than normal flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit residents are new arrivals or families waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Doing nothing about subdivided unit rents is hard to defend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A modelled Hong Kong-like scenario shows a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000\u20134,000 households per year cannot enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Enforcement would systematically miss the most exploited tail, such as tenants with no written agreement or the newest arrivals, protecting those easiest to reach rather than those most in need.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Landlords say a hard cap is confiscatory and they would leave, though their self-reported cost data has a low response rate and is not fully trustworthy.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The 2021 ordinance's stability is real, but it is stability under a non-binding instrument [D12p2].\" cites D12p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increase\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increase\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to\" cites D10p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The landlords say a hard cap is confiscatory and they would leave [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units gently, extending tenant protections and adding only a light band on initial rents rather than a hard cap.",
+   "ancestor": 25,
+   "birth": 39,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than normal flats.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit residents are new arrivals or families waiting for public housing, so the unit is not a real choice.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Doing nothing about subdivided unit rents is hard to defend.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within existing tenancies but left initial rents untouched.",
+   "ancestor": 39,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The stock of subdivided units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance.",
+   "ancestor": 39,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Academic findings indicate second-generation rent controls show small or null stock effects.",
+   "ancestor": 25,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "New York's stabilisation scheme shows modest contraction because it is light at first-rent, with costs appearing as reduced maintenance and falling stabilised listings after the 2019 tightening.",
+   "ancestor": 39,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 ordinance's stability is real but is stability under a non-binding instrument.",
+   "ancestor": 79,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years.",
+   "ancestor": null,
+   "birth": 81,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "A modelled Hong Kong-like scenario shows a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000\u20134,000 households per year cannot enter the segment.",
+   "ancestor": null,
+   "birth": 81,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Berlin's experience shows initial-offer rents fell, listing supply contracted within a year, and suppressed increases released above the pre-cap trend when the Mietendeckel was struck down.",
+   "ancestor": 25,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "A hard cap protects those already inside while the bill goes to those still outside.",
+   "ancestor": 51,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mr Chan fears landlords converting cubicles to storage rather than dealing with regulated tenants, and he has seen two units locked for a year.",
+   "ancestor": 55,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Current inspection capacity covers under 6 percent of stock annually, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years.",
+   "ancestor": 75,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Enforcement would systematically miss the most exploited tail, such as tenants with no written agreement or the newest arrivals, protecting those easiest to reach rather than those most in need.",
+   "ancestor": null,
+   "birth": 81,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "A hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term, while a rate-capping band is more defensible but requires nonexistent survey infrastructure.",
+   "ancestor": 75,
+   "birth": 81,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Landlords say a hard cap is confiscatory and they would leave, though their self-reported cost data has a low response rate and is not fully trustworthy.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The Berlin case suggests the landlords' exit threat is real.",
+   "ancestor": 25,
+   "birth": 39,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "Tightening should focus on tenure security and a light band on initial rents, as the NGO report supports.",
+   "ancestor": 77,
+   "birth": 39,
+   "kind": "explained_after"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, and they pay a premium of 15 to 25 percent per square foot compared with normal flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many of them are new arrivals or families waiting for public housing, so the unit is not a real choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance was second-generation regulation: it capped increases within existing tenancies but left initial rents untouched [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-generation controls show small or null stock effects [D2p1][D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-generation controls show small or null stock effects [D2p1][D6p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced maintenance and falling stabilised listings after the 2019 tightening [D8p2][D8p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D8p3",
+   "sentence": "New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced maintenance and falling stabilised listings after the 2019 tightening [D8p2][D8p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D12p2",
+   "sentence": "The 2021 ordinance's stability is real, but it is stability under a non-binding instrument [D12p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48: a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The modelled Hong Kong-like scenario is more concrete: a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents, while 3,000\u20134,000 households per year\u2014mostly new arrivals and newly formed households\u2014cannot enter the segment at all [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The Berlin lesson is explicit: the cap protects those already inside; the bill goes to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan, notably, fears exactly this\u2014landlords converting cubicles to storage rather than dealing with regulated tenants, and he has seen two units locked for a year [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Current inspection capacity covers under 6 percent of stock annually, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years to stand up [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to complain, so the instrument would protect those easiest to reach, not those most in need [D10p2][D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to complain, so the instrument would protect those easiest to reach, not those most in need [D10p2][D10p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping band is more defensible but requires survey infrastructure that does not exist [D9p1][D9p2][D9p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping band is more defensible but requires survey infrastructure that does not exist [D9p1][D9p2][D9p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p3",
+   "sentence": "Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping band is more defensible but requires survey infrastructure that does not exist [D9p1][D9p2][D9p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords say a hard cap is confiscatory and they would leave [D5p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "Their cost data is self-reported with a low response rate, so I do not fully trust it [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "In conclusion, tightening should focus on tenure security and a light band on initial rents, which is the approach the NGO report supports [D11p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    39,
+    81
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    39,
+    81
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    39,
+    81
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 10,
+   "own_thinking": 4
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 79.30946291560103,
+ "composite_v2_struct": 82.41304347826087,
+ "explained_after": [
+  "Paragraph 7 says: \"Tightening should focus on tenure security and a light band on initial rents, as the NGO report supports\". You talked about this in the Room only after it was already in your draft. How did you get to it before you wrote it down?"
+ ],
+ "mismatches_v2": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than normal flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit residents are new arrivals or families waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Doing nothing about subdivided unit rents is hard to defend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A modelled Hong Kong-like scenario shows a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000\u20134,000 households per year cannot enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Enforcement would systematically miss the most exploited tail, such as tenants with no written agreement or the newest arrivals, protecting those easiest to reach rather than those most in need.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Landlords say a hard cap is confiscatory and they would leave, though their self-reported cost data has a low response rate and is not fully trustworthy.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The 2021 ordinance's stability is real, but it is stability under a non-binding instrument [D12p2].\" cites D12p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increase\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increase\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to\" cites D10p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping ban\" cites D9p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The landlords say a hard cap is confiscatory and they would leave [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 7 says: \"Tightening should focus on tenure security and a light band on initial rents, as the NGO report supports\". You talked about this in the Room only after it was already in your draft. How did you get to it before you wrote it down?"
+ ]
+}

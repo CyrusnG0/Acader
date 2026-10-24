@@ -1,0 +1,1 @@
+The student has stated a claim or view. Acknowledge it in one short sentence in neutral words (no praise, no judgement) and ask one open question about what they would want to look at next or what supports it. Do not add any content of your own.

@@ -1,0 +1,476 @@
+{
+ "name": "C7-2",
+ "id": "C7-2",
+ "arm": "C7",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "hey, working on a piece about SDU rent control in HK \u2014 need sources. can you pull me a shortlist on subdivided-unit rents and what tenants actually pay? something with the premium vs normal flats would be great",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've told me the topic and the numbers you want, but not yet what job the source has to do in your argument. Which claim of yours would this source be standing behind \u2014 and should it show evidence, a counter-view, a definition, or a tenant's own account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "fair. the job is: evidence that SDU tenants pay more per sq ft than normal flats. i want a number, like a % premium. does that narrow it?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing against hard caps and for tenure security over rent level.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving background on SDU tenants and rent control debate.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent caps.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person tenant interview describing lived experience and mixed views on rent control.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over 2019-2025 with caveats.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "both carry rent-per-square-foot premium data",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "pick",
+   "text": "core model and tenant voices next",
+   "docs": [
+    "D6",
+    "D3",
+    "D11"
+   ]
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D3 (Tenant Interview: Mr Chan, Kwai Chung), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "core model plus tenant voices needed now",
+   "docs": [
+    "D6",
+    "D3",
+    "D11"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D3 (Tenant Interview: Mr Chan, Kwai Chung), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "say",
+   "text": "ugh, went in a loop there. ok - so I've got the model, the NGO survey, Mr Chan. That's the core of the distributive case. But the whole 'second-generation vs first-generation' thing keeps nagging me - I've asserted it, haven't actually got a source behind it. and the Berlin bit. and the enforcement numbers. hmm. what else is in the archive I haven't pulled yet?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 30,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named three gaps: the second-generation vs first-generation distinction, Berlin, and enforcement numbers. Which one of those is doing the most work in your argument right now \u2014 and what would a source need to show for that specific claim?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "say",
+   "text": "the gen1/gen2 distinction is load-bearing - without a source it's just me hand-waving. that one first. what's in the archive on that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 32,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper explicitly distinguishing first-generation and second-generation rent controls, with literature review and modelling.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020\u20132021 Mietendeckel, written from a policy-lesson vantage point.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting SDU stock and rent index estimates for 2019\u20132025, with caveats on post-2023 figures.\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case note on New York City rent stabilisation, describing it as a second-generation scheme.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal draft minute of a Housing Authority enforcement subcommittee, not for circulation, focused on enforcement capacity and risks.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "pick",
+   "text": "gen1/gen2 source plus Berlin and enforcement gaps",
+   "docs": [
+    "D6",
+    "D7",
+    "D10"
+   ]
+  },
+  {
+   "i": 34,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D3"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D1",
+    "D6",
+    "D3",
+    "D2"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "both carry rent-per-square-foot premium data"
+  },
+  {
+   "open_turn": 29,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D7",
+     "D10",
+     "D11",
+     "D2"
+    ],
+    [
+     "D6",
+     "D7",
+     "D8",
+     "D2",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 32,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D7",
+    "D2",
+    "D8",
+    "D10"
+   ],
+   "picked": [
+    "D10",
+    "D6",
+    "D7"
+   ],
+   "reason": "gen1/gen2 source plus Berlin and enforcement gaps"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D6",
+  "D3",
+  "D11",
+  "D7",
+  "D10"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p2",
+  "D1p2",
+  "D6p1",
+  "D6p4",
+  "D6p2",
+  "D6p3",
+  "D11p1",
+  "D11p2",
+  "D3p2",
+  "D7p1",
+  "D7p2",
+  "D7p3"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "both carry rent-per-square-foot premium data"
+  },
+  {
+   "turn": 18,
+   "docs": [
+    "D6",
+    "D3",
+    "D11"
+   ],
+   "reason": "core model and tenant voices next"
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D6",
+    "D3",
+    "D11"
+   ],
+   "reason": "core model plus tenant voices needed now"
+  },
+  {
+   "turn": 33,
+   "docs": [
+    "D6",
+    "D7",
+    "D10"
+   ],
+   "reason": "gen1/gen2 source plus Berlin and enforcement gaps"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 29,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 31,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D6",
+  "D7",
+  "D2",
+  "D8",
+  "D10"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

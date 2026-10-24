@@ -1,0 +1,244 @@
+{
+ "id": "C2-5",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should tighten rent control on subdivided units, but in a moderate and targeted way. My view is that control helps tenants a lot and, if it is designed carefully, it does not push landlords out of the market. The evidence in the course archive supports this, although it also shows that the current rules leave some gaps.\n\nThe first point is about supply. A common worry is that rent control makes landlords sell up or stop renting, so there are fewer homes. The archive's index of subdivided units does not show this. The estimated stock was 100,800 units in 2019, 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1]. That growth carried on after the 2021 tenancy control ordinance, so the data suggests that moderate regulation did not cause a visible exit of stock. For me this is the strongest reason not to fear a tighter but still moderate rule.\n\nThe second point is that tenants still face heavy pressure. Median rent per square foot in these units rose 6.8 percent in 2019 to 2021, then 3.1 percent in 2021 to 2023 under the ordinance, while general private rents rose 2.4 and 1.7 percent in the same periods [D2p2]. So rents in subdivided units still grew faster than the general market even with the ordinance. Also, the rent burden for these households got worse, from 31 to 34 percent of income [D2p2]. This tells me the present control is not enough to protect people, which is why I say it should be tightened.\n\nThe third point is about learning from other places. New York has regulated rents since 1947 and now covers about 44 percent of its rental stock [D8p1]. Its scheme is called second generation, because increases are capped inside a tenancy while first rents and vacancy are only lightly regulated [D8p1]. The note says stock contraction there is modest because the scheme is light at first rent [D8p2]. That is a useful lesson for Hong Kong, because the note says our 2021 ordinance also left that first-rent point untouched [D8p2]. So tightening does not have to mean a hard cap on everything. It could mean keeping the moderate approach while looking more carefully at how rents are set at the start.\n\nThere are costs I should admit. The New York note says regulated units show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents [D8p2]. That could be unfair to people who are looking for a first home and cannot get into a regulated unit. I do not think this cancels my argument, but it means the policy should not be pushed too far.\n\nIn conclusion, I support tighter but moderate rent control on subdivided units. Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can work without big stock losses [D8p2]. The government should tighten the rules step by step and watch the stock numbers as it does so.",
+ "citations": [
+  {
+   "pid": "D2p1",
+   "pos": 629
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1135
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1325
+  },
+  {
+   "pid": "D8p1",
+   "pos": 1589
+  },
+  {
+   "pid": "D8p1",
+   "pos": 1740
+  },
+  {
+   "pid": "D8p2",
+   "pos": 1838
+  },
+  {
+   "pid": "D8p2",
+   "pos": 1968
+  },
+  {
+   "pid": "D8p2",
+   "pos": 2322
+  },
+  {
+   "pid": "D2p1",
+   "pos": 2653
+  },
+  {
+   "pid": "D2p2",
+   "pos": 2690
+  },
+  {
+   "pid": "D8p2",
+   "pos": 2795
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 8
+ },
+ "drafts": [
+  {
+   "turn": 12,
+   "text": "I think Hong Kong should tighten rent control on subdivided units, but only in a moderate way. Rent control helps tenants and it does not seem to make landlords leave the market.\n\nThe data shows that the number of subdivided units kept growing. In 2019 there were about 100,800 units and by 2025 there were 111,200 [D2p1]. This growth continued after the 2021 tenancy control ordinance, so moderate regulation did not cause visible stock exit.\n\nBut rents are still a problem. Rents per square foot in these units rose faster than general private rents [D2p2].\n",
+   "struct": "typed"
+  },
+  {
+   "turn": 12,
+   "text": "Hong Kong should tighten rent control on subdivided units, but in a moderate and targeted way. My view is that control helps tenants a lot and, if it is designed carefully, it does not push landlords out of the market. The evidence in the course archive supports this, although it also shows that the current rules leave some gaps.\n\nThe first point is about supply. A common worry is that rent control makes landlords sell up or stop renting, so there are fewer homes. The archive's index of subdivided units does not show this. The estimated stock was 100,800 units in 2019, 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1]. That growth carried on after the 2021 tenancy control ordinance, so the data suggests that moderate regulation did not cause a visible exit of stock. For me this is the strongest reason not to fear a tighter but still moderate rule.\n\nThe second point is that tenants still face heavy pressure. Median rent per square foot in these units rose 6.8 percent in 2019 to 2021, then 3.1 percent in 2021 to 2023 under the ordinance, while general private rents rose 2.4 and 1.7 percent in the same periods [D2p2]. So rents in subdivided units still grew faster than the general market even with the ordinance. Also, the rent burden for these households got worse, from 31 to 34 percent of income [D2p2]. This tells me the present control is not enough to protect people, which is why I say it should be tightened.\n\nThe third point is about learning from other places. New York has regulated rents since 1947 and now covers about 44 percent of its rental stock [D8p1]. Its scheme is called second generation, because increases are capped inside a tenancy while first rents and vacancy are only lightly regulated [D8p1]. The note says stock contraction there is modest because the scheme is light at first rent [D8p2]. That is a useful lesson for Hong Kong, because the note says our 2021 ordinance also left that first-rent point untouched [D8p2]. So tightening does not have to mean a hard cap on everything. It could mean keeping the moderate approach while looking more carefully at how rents are set at the start.\n\nThere are costs I should admit. The New York note says regulated units show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents [D8p2]. That could be unfair to people who are looking for a first home and cannot get into a regulated unit. I do not think this cancels my argument, but it means the policy should not be pushed too far.\n\nIn conclusion, I support tighter but moderate rent control on subdivided units. Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can work without big stock losses [D8p2]. The government should tighten the rules step by step and watch the stock numbers as it does so.\n",
+   "struct": "typed"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What should this source do for your rent essay \u2014 back up a specific claim, give a counter-view, or define something? And which point in your argument would it sit next to?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "just back up my claim, I think rent control helps tenants. need a source",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, argues against hard caps and for tenure security, based on 440 households.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt from an index, 2019\u20132025, showing stock and rent trends with caveats.\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case note on New York City rent stabilisation, describing its second-generation scheme and effects.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020\u20132021 rent cap, detailing its implementation and aftermath.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling supply elasticity and welfare under rent control, distinguishing control types.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "real example and data",
+   "docs": [
+    "D8",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D8 (Comparative Note: New York City Rent Stabilisation), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D8p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "say",
+   "text": "ok thanks, I think moderate control is fine since stock kept growing",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 9,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You're saying moderate control is fine because stock kept growing. Which passage made you read the stock trend that way, and does it say anything about what happened to rents at the same time?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D1",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D2",
+     "D8",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    false,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D2",
+    "D8",
+    "D7",
+    "D6"
+   ],
+   "picked": [
+    "D2",
+    "D8"
+   ],
+   "reason": "real example and data"
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D8",
+    "D2"
+   ],
+   "reason": "real example and data"
+  }
+ ],
+ "unlocked_docs": [
+  "D8",
+  "D2"
+ ],
+ "read_passages": [
+  "D8p1",
+  "D2p1",
+  "D8p2",
+  "D2p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 1
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 8,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 509
+ }
+}

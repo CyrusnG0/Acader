@@ -1,0 +1,307 @@
+{
+ "id": "C14-6",
+ "arm": "C14",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.727272727272727,
+  "F14b parentage": 0.4666666666666667,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student wants to understand the debate over rent control for subdivided flats in Hong Kong.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student asks for sources on how the caps work and who they affect.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants to start with how the caps actually work.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student is trying to figure out whether a rent cap keeps rents down or just changes who gets in and who is pushed out.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student wants the theory of how caps work, the Berlin comparison, and the stock data.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "The student wants to look at the enforcement angle.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "The student wants to look at what tenants themselves say would help most.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "The student wants to do enforcement first.",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "The student wants a source on whether authorities could catch landlords who break the rules, covering inspection capacity and where enforcement falls short.",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "The student wants enforcement capacity, tenants' own preferences, and a first-person account.",
+   "parent": {
+    "type": "student",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student reached the thesis by working through the archive rather than starting with it.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The first- versus second-generation distinction in D6 made the student realize the 2021 ordinance only capped increases within tenancies and never touched initial rents.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Because the ordinance never touched initial rents, the stable stock numbers do not prove a hard cap is safe.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The working paper's contraction estimates applied specifically to a binding cap on initial rents.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The thesis statement followed from the evidence instead of coming first.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The interview with Mr Chan and the NGO survey both show tenants care most about the public-housing queue and security, not the rent level.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The rent started to look like a symptom of a deeper problem.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The working paper's point that a cap mainly shifts costs onto new entrants.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The cap never touches the real constraint, which is the queue.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The working paper's model shows a 15 percent cut in initial rents would block 3,000 to 4,000 households a year from entering the segment, mostly new arrivals and newly formed households.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The primer's point that these groups are the segment's core tenants.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The people shut out are exactly the ones with the fewest alternatives.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The student framed it as the households most in need bearing the cost of contraction.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "Source D1 describes how the 2021 Tenancy Control Ordinance only capped rent increases within an existing tenancy and did not regulate the initial rent at the start of a new one.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "The student used it in paragraph 3 because it sets up the first- versus second-generation distinction from D6p2.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "The point was not in earlier Room work; the student added it later once D6 framed the ordinance as a second-generation, non-binding control.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "The student got the figure from source D2 and added it during drafting rather than from earlier Room discussion.",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "The student used it to show stock kept growing under the 2021 ordinance.",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "The student argues the growth is misleading because the cap wasn't binding on initial rents.",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "It is the student's own reading of the source, not something from the tutor's feedback.",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants to understand the debate over rent control for subdivided flats in Hong Kong.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student asks for sources on how the caps work and who they affect.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student is trying to figure out whether a rent cap keeps rents down or just changes who gets in and who is pushed out.\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"The student wants to look at the enforcement angle.\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"The student wants to look at what tenants themselves say would help most.\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"The student reached the thesis by working through the archive rather than starting with it.\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"Because the ordinance never touched initial rents, the stable stock numbers do not prove a hard cap is safe.\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"The thesis statement followed from the evidence instead of coming first.\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"The interview with Mr Chan and the NGO survey both show tenants care most about the public-housing queue and security, not the rent level.\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"The rent started to look like a symptom of a deeper problem.\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"The cap never touches the real constraint, which is the queue.\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"The primer's point that these groups are the segment's core tenants.\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"The people shut out are exactly the ones with the fewest alternatives.\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"The student framed it as the households most in need bearing the cost of contraction.\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"Source D1 describes how the 2021 Tenancy Control Ordinance only capped rent increases within an existing tenancy and did not regulate the initial rent at the start of a new one.\". How did you get there?"
+  },
+  {
+   "turn": 28,
+   "question": "At turn 28 you said: \"It is the student's own reading of the source, not something from the tutor's feedback.\". How did you get there?"
+  }
+ ]
+}

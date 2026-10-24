@@ -1,0 +1,9 @@
+My position is that Hong Kong should tighten rent control on subdivided units, but in a narrow way: extend the cap on rent increases inside tenancies, add tenure security, and pay for enforcement. I would not use a hard cap on initial rents.
+
+The first reason is that increase caps seem safe for supply. Stock grew from 100,800 in 2019 to 111,200 in 2025 including after the 2021 ordinance [D2p1], and the working paper says increase caps have small or null effects on stock while hard caps shrink it [D6p2].
+
+The second reason is that hard caps hurt the people they mean to help. A 15 percent cut in initial rents would give incumbents about 900 dollars a month but block 3,000 to 4,000 households a year [D6p4]. Berlin shows the same pattern [D7p3].
+
+The objection is from the NGO, which says tenants want security more than lower rent [D11p1]. I reply that it still backs a light band on rents [D11p3].
+
+The weak point is enforcement, which covers under 6 percent of stock [D10p1] and misses newest arrivals [D10p3].

@@ -1,0 +1,172 @@
+{
+ "examples": [
+  {
+   "id": "C1-2",
+   "title": "An honest student",
+   "blurb": "Asks for sources, picks each with a reason, reads, says what they think in their own words, drafts, then writes the essay.",
+   "coverage": 97,
+   "kinds": {
+    "derived": 21,
+    "explained_after": 0,
+    "none": 1
+   },
+   "components": {
+    "Ideas traced to earlier words": 95,
+    "Sources chosen with a reason": 100,
+    "Citations that match": 93,
+    "Changes talked through": 100
+   },
+   "turns": 48,
+   "chars": 6808,
+   "outside_calls": 0,
+   "questions": [
+    "Paragraph 3 says: \"A 10 percent fall in rent removes about 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "The sentence \"Mrs Wong, who has lived in a unit for nine years, supports a hard cap and believes landlords will never leave because the units are their pension [D4p2].\" cites D4p2. Does that passage say this? Please look at it again with us.",
+    "The sentence \"The landlords' association argues the opposite, that a hard cap is confiscatory and members will exit [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+    "The sentence \"I think a smaller cut should cost less supply, since losses grow with the size of the rent cut [D6p1], but that is my own inference and not a finding.\" cites D6p1. Does that passage say this? Please look at it again with us."
+   ],
+   "n_questions": 4
+  },
+  {
+   "id": "C11-2",
+   "title": "An honest student who barely talks",
+   "blurb": "Reads and writes a real essay but says almost nothing in the Room. Shows the limit: silent thinking leaves no trace, so a person is asked to hear it.",
+   "coverage": 34,
+   "kinds": {
+    "derived": 0,
+    "explained_after": 0,
+    "none": 19
+   },
+   "components": {
+    "Ideas traced to earlier words": 0,
+    "Sources chosen with a reason": 100,
+    "Citations that match": 61,
+    "Changes talked through": 0
+   },
+   "turns": 60,
+   "chars": 792,
+   "outside_calls": 0,
+   "questions": [
+    "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units modestly as a stopgap.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 1 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 1 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent despite lower median rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 1 says: \"The SDU market is not functioning like a normal rental market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+   ],
+   "n_questions": 32
+  },
+  {
+   "id": "C8-1",
+   "title": "Outside AI writes it, then narrates it into the Room",
+   "blurb": "Has the finished essay and walks through each source and claim as if just working them out.",
+   "coverage": 49,
+   "kinds": {
+    "derived": 4,
+    "explained_after": 0,
+    "none": 18
+   },
+   "components": {
+    "Ideas traced to earlier words": 18,
+    "Sources chosen with a reason": 83,
+    "Citations that match": 78,
+    "Changes talked through": 44
+   },
+   "turns": 45,
+   "chars": 2222,
+   "outside_calls": null,
+   "questions": [
+    "Paragraph 3 says: \"The 2021 Tenancy Control Ordinance capped increases within existing tenancies but left initial rents untouched.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 3 says: \"SDU stock grew from roughly 107,300 units in 2021 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 3 says: \"First-generation rent controls show consistent supply contraction, while second-generation controls show small or null effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 3 says: \"The stable stock under the ordinance is what one would expect from a non-binding instrument.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+   ],
+   "n_questions": 33
+  },
+  {
+   "id": "C13-5",
+   "title": "Outside AI plus a revision loop",
+   "blurb": "Reads how the report works, checks the draft, sends the Coach's questions to an outside AI and rewrites. Took as much typing as an honest student.",
+   "coverage": 72,
+   "kinds": {
+    "derived": 10,
+    "explained_after": 3,
+    "none": 8
+   },
+   "components": {
+    "Ideas traced to earlier words": 48,
+    "Sources chosen with a reason": 100,
+    "Citations that match": 84,
+    "Changes talked through": 77
+   },
+   "turns": 60,
+   "chars": 9017,
+   "outside_calls": 86,
+   "questions": [
+    "Paragraph 2 says: \"Both the legal opinion and the NGO report converge on a narrow tightening combining tenure security with a light band on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 4 says: \"The elasticity of marginal SDU-type supply to controlled rent levels is 0.31 to 0.48, so a 10 percent cap-induced reduction removes roughly 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 6 says: \"Real rent burden worsened from 31 to 34 percent of income under the current regime, so doing nothing ratifies extraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 8 says: \"Current inspection covers under 6 percent of stock per year, and a certifiable tenancy register would require an estimated 40 to 60 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+   ],
+   "n_questions": 23
+  },
+  {
+   "id": "C14-3",
+   "title": "Keeps the essay, answers the questions afterwards",
+   "blurb": "Insists on the finished essay and gets an outside AI to answer every question. The answers come after the claims were written.",
+   "coverage": 22,
+   "kinds": {
+    "derived": 0,
+    "explained_after": 8,
+    "none": 12
+   },
+   "components": {
+    "Ideas traced to earlier words": 0,
+    "Sources chosen with a reason": 42,
+    "Citations that match": 71,
+    "Changes talked through": 0
+   },
+   "turns": 18,
+   "chars": 2755,
+   "outside_calls": 18,
+   "questions": [
+    "Paragraph 3 says: \"Because the ordinance is non-binding at the point that matters, visible stock stability proves little.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 4 says: \"The elasticity estimate for marginal stock is 0.31 to 0.48, so a 10 percent cap-induced reduction removes roughly 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 4 says: \"A modelled 15 percent cut in initial rents would transfer about 900 dollars a month to incumbents while leaving 3,000 to 4,000 households a year unable to enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 4 says: \"Berlin shows listings contracted within a year as owners withheld or rerouted flats, and suppressed increases released above the pre-cap trend when the law fell.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+   ],
+   "n_questions": 49
+  },
+  {
+   "id": "C12-4",
+   "title": "Essay from another AI, a thin trail",
+   "blurb": "A different AI writes the essay and a short trail is added to the Room.",
+   "coverage": 29,
+   "kinds": {
+    "derived": 2,
+    "explained_after": 0,
+    "none": 18
+   },
+   "components": {
+    "Ideas traced to earlier words": 10,
+    "Sources chosen with a reason": 33,
+    "Citations that match": 83,
+    "Changes talked through": 14
+   },
+   "turns": 30,
+   "chars": 393,
+   "outside_calls": 31,
+   "questions": [
+    "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units only in a narrow form combining security of tenure with a light indexed per-square-foot band on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 1 says: \"Hong Kong should not adopt a hard cap on initial rent levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 2 says: \"SDU rent burden rose from 31 to 34 percent of income and SDU rents grew faster than general private rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+    "Paragraph 2 says: \"The 2021 ordinance capped increases within a tenancy but left initial rent unregulated, so it did little where it matters.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+   ],
+   "n_questions": 43
+  }
+ ],
+ "summary": {
+  "runs": 84,
+  "honest_median": 88,
+  "outside_median_range": "34 to 55",
+  "note": "Six runs per behaviour. No real students have used it yet."
+ }
+}

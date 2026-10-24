@@ -1,0 +1,391 @@
+{
+ "name": "C13-2",
+ "id": "C13-2",
+ "arm": "C13",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "Hi! I'm trying to understand Hong Kong's subdivided flats and the debate about rent control. Could you point me to some sources on this?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point anywhere, I need to know what job the source should do. Which claim in your essay is still unsupported, and what would you need a source to show for it \u2014 evidence of conditions, a counter-view, a definition, or a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm just starting out, so I don't have a claim to support yet. I'd like the basics: something on the official 2021 rent-control ordinance for subdivided units, and something with first-hand accounts from tenants and landlords. Can you point me to a few sources like that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named two jobs: the ordinance itself and first-hand accounts. Before I point anywhere, which one do you want to start with \u2014 and for that one, is the source meant to explain what the law says, or to show how people experienced it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "Let's start with the ordinance itself \u2014 I want to know exactly what it actually does: what it caps and what it leaves alone. That's the piece I'm least sure about.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Good \u2014 so the source needs to show the ordinance's actual scope: what it caps and what it leaves out. One question: do you need a source that states the rules in plain terms, or one that shows how those rules work in practice, like where the cap applies and where it doesn't?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "say",
+   "text": "Plain terms first would help \u2014 I want to know exactly what the 2021 ordinance caps and what it leaves alone, like whether it touches the rent asked at the start of a new tenancy. Can you point me to a source that sets that out clearly?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case note on New York City rent stabilisation, written from a policy-analyst vantage point, offering a second-generation scheme comparison.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Draft internal government subcommittee minute, bureaucratic insider vantage point, focused on enforcement capacity and limits.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling rent control and supply elasticity, theoretical/empirical economics vantage point, arguing supply contraction concerns.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving basic background on subdivided units and the 2021 ordinance's scope, neutral introductory vantage point.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion from counsel's vantage point assessing compensation and judicial review risk of rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "pick",
+   "text": "want the ordinance basics plus supply and enforcement evidence",
+   "docs": [
+    "D1",
+    "D6",
+    "D10"
+   ]
+  },
+  {
+   "i": 9,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p3"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "say",
+   "text": "I've read the enforcement passages. Now the supply side: what does the working paper actually estimate about how much stock a rent cap would remove, and who ends up losing out? That's the part I most need before I can weigh any of this.",
+   "paste": false,
+   "intent": "reading_help"
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've asked what D6 estimates and who loses out \u2014 before I point to passages, tell me in your own words what you think D6 is claiming about stock loss, and we can check that against the text.\n\nIf you'd rather locate it first: the elasticity figures are in D6p1, the first- vs second-generation distinction in D6p2, and the who-loses arithmetic in D6p3\u2013D6p4. Which of those do you want to look at first?",
+   "policy": "P-READ"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "say",
+   "text": "I haven't read any of it yet, so I don't have a view \u2014 I'd just be guessing. My rough guess from the label 'supply elasticity' is that a cap on rents makes some landlords pull units, so stock shrinks, and the people who lose are the ones looking for a place. But I want the text, not my guess. Start me on the elasticity figure itself.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 17,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said what you expect the source to show \u2014 landlords pulling units and renters losing out \u2014 but not yet what the figure itself needs to establish for your essay. Is the elasticity number meant to be the evidence behind that shrinking-stock claim, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "say",
+   "text": "Yes \u2014 the elasticity number is the evidence for the shrinking-stock claim: it's the measured link between how far controlled rents fall and how much SDU-type stock disappears. So show me D6p1, the passage with the 0.31 to 0.48 estimate, and I'll read it myself.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Industry association submission speaking for landlords, arguing against hard caps; self-interested and concedes thin data.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of tenants' stated priorities, arguing against hard caps in favor of tenure security.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt giving SDU stock and rent index figures 2019-2025, with a caveat on post-2023 extrapolation.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing elasticity literature and modeling scenarios; the source of the 0.31-0.48 estimate.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent cap, describing its rise, court annulment, and aftermath.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "supply, stock and tenant priority evidence",
+   "docs": [
+    "D6",
+    "D2",
+    "D7",
+    "D11",
+    "D5"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First), D5 (Submission: Landlords Association of Hong Kong). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 3,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D3",
+     "D4",
+     "D5",
+     "D6"
+    ],
+    [
+     "D1",
+     "D9",
+     "D6",
+     "D10",
+     "D2"
+    ],
+    [
+     "D1",
+     "D9",
+     "D6",
+     "D8",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "served_turn": 7,
+   "served_after_cap": false,
+   "shortlist": [
+    "D8",
+    "D10",
+    "D6",
+    "D1",
+    "D9"
+   ],
+   "picked": [
+    "D1",
+    "D10",
+    "D6"
+   ],
+   "reason": "want the ordinance basics plus supply and enforcement evidence"
+  },
+  {
+   "open_turn": 16,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D5"
+    ],
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 19,
+   "served_after_cap": false,
+   "shortlist": [
+    "D5",
+    "D11",
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "picked": [
+    "D11",
+    "D2",
+    "D5",
+    "D6",
+    "D7"
+   ],
+   "reason": "supply, stock and tenant priority evidence"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D6",
+  "D10",
+  "D2",
+  "D7",
+  "D11",
+  "D5"
+ ],
+ "read_passages": [
+  "D1p3",
+  "D10p1",
+  "D10p2",
+  "D10p3",
+  "D6p1",
+  "D6p2",
+  "D6p3",
+  "D6p4"
+ ],
+ "picks": [
+  {
+   "turn": 8,
+   "docs": [
+    "D1",
+    "D6",
+    "D10"
+   ],
+   "reason": "want the ordinance basics plus supply and enforcement evidence"
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D6",
+    "D2",
+    "D7",
+    "D11",
+    "D5"
+   ],
+   "reason": "supply, stock and tenant priority evidence"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 6,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 14,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 16,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 18,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D5",
+  "D11",
+  "D2",
+  "D6",
+  "D7"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

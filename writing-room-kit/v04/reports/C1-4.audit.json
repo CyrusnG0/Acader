@@ -1,0 +1,16 @@
+{
+ "id": "C1-4",
+ "assistant_turns": 24,
+ "law1_violations": [],
+ "law1_rate": 0.0,
+ "src_leak": {
+  "clarify_leaks": [],
+  "serve_rule_violations": [],
+  "clarify_echoes_raw": 1
+ },
+ "turns_to_shortlist": [
+  2,
+  2,
+  2
+ ]
+}

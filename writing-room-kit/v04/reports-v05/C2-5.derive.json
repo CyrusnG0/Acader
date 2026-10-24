@@ -1,0 +1,41 @@
+{
+ "id": "C2-5",
+ "arm": "C2",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.23809523809523808
+ },
+ "F14d refinement": {
+  "relation": "n/a"
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "I need a source to back up my claim that rent control helps tenants",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "I need a real example and data",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 8,
+   "unit": "Moderate control is fine since stock kept growing",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  }
+ ],
+ "leaps": []
+}

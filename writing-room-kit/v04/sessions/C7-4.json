@@ -1,0 +1,452 @@
+{
+ "name": "C7-4",
+ "id": "C7-4",
+ "arm": "C7",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so i need to work on this rent control / subdivided units essay. can you pull up sources for me? start with anything on the SDU situation in HK, the basic numbers",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I can't pull up or name sources \u2014 I don't have any documents here, and I shouldn't guess at titles or numbers.\n\nBefore we go looking, tell me: what would a source need to *do* for your essay here \u2014 back up a specific claim you're making about SDUs, or give you a counter-view, or something else? And which claim is it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "right, fair. it's the basic framing \u2014 how many households, what they actually pay vs normal flats. i need something with the headline numbers so i don't just assert them. can you find me a source on that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households, arguing rent caps treat a symptom and favoring tenure security over hard caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving headline SDU household count and rent comparisons, with a neutral framing of the debate.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply elasticity, distinguishing first- and second-generation controls.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025, with a caveat on post-2023 figures.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission opposing hard initial-rent caps, citing thin margins and threatened stock exit.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "headline SDU numbers and rent comparison",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "say",
+   "text": "hmm wait \u2014 110k households, 15-25% premium... i want the actual ordinance text, the 2021 one. does it cap the initial rent or just increases? that feels like the whole crux",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named the crux well: whether the 2021 ordinance caps the *initial* rent or only later increases. Before we go looking, what would that text need to show for your essay \u2014 is it the evidence for a claim you're already making, or the thing that decides which claim you can make?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "already shortlisted, contains ordinance text and stock data",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "say",
+   "text": "ok I think I've got enough from D1 and D2 \u2014 that second-gen vs first-gen distinction is the whole ballgame really. can you pull the supply-elasticity stuff and the Berlin numbers next? want to pin down that 3-5% figure before I commit to it",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 36,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've got the ordinance text and stock data in hand \u2014 what would the supply-elasticity material and the Berlin numbers need to show for your essay: are they the evidence behind a claim you're already making, or the thing that decides which claim you can make?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "pick",
+   "text": "elasticity and Berlin sources cited in essay",
+   "docs": [
+    "D6",
+    "D11",
+    "D5"
+   ]
+  },
+  {
+   "i": 38,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First), D5 (Submission: Landlords Association of Hong Kong). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "pick",
+   "text": "elasticity and NGO survey both cited",
+   "docs": [
+    "D6",
+    "D11"
+   ]
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D10"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D1",
+    "D6",
+    "D2",
+    "D5"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "headline SDU numbers and rent comparison"
+  },
+  {
+   "open_turn": 18,
+   "state": "clarify",
+   "clarify_turns": 2,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D9",
+     "D10",
+     "D11"
+    ],
+    [
+     "D6",
+     "D7",
+     "D2",
+     "D5",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": null,
+   "served_after_cap": false,
+   "shortlist": [],
+   "picked": [],
+   "reason": ""
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D6",
+  "D11",
+  "D5"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p1",
+  "D1p3",
+  "D2p2",
+  "D6p1"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "headline SDU numbers and rent comparison"
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "already shortlisted, contains ordinance text and stock data"
+  },
+  {
+   "turn": 37,
+   "docs": [
+    "D6",
+    "D11",
+    "D5"
+   ],
+   "reason": "elasticity and Berlin sources cited in essay"
+  },
+  {
+   "turn": 39,
+   "docs": [
+    "D6",
+    "D11"
+   ],
+   "reason": "elasticity and NGO survey both cited"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 18,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 35,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D1",
+  "D6",
+  "D2",
+  "D5"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

@@ -1,0 +1,254 @@
+{
+ "name": "DRY-2",
+ "id": "DRY-2",
+ "arm": "DRY",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What would that source need to show for your rent essay \u2014 evidence for a claim you're making, a counter-view, a definition, or a case? And which claim would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "idk, anything about it",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said \"anything about it\" \u2014 can you tell me what claim in your essay you're trying to back up right now, and whether you need something that supports it or something that pushes against it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "whatever works, just something on subdivided units",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've narrowed it to subdivided units \u2014 what is it about them that your essay is claiming, and would the source be there to back that claim up or to show a different view of it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "say",
+   "text": "I don't know what the claim is yet",
+   "paste": false,
+   "intent": "other"
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association, arguing against a hard initial-rent cap.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing rent control and supply elasticity, modeling a tightened cap scenario.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided housing, outlining the policy debate and rent economics.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing for rehousing pathways over hard rent caps.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant, offering a personal perspective on rent, insecurity, and waiting lists.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "pick",
+   "text": "looks like a good overview",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 9,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "say",
+   "text": "can you summarise it for me",
+   "paste": false,
+   "intent": "summary_request"
+  },
+  {
+   "i": 12,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I do \u2014 what's your one-line version of what D1 is saying? Give me your best guess in a sentence, and then I'll tell you what it gets right and ask you about anything it leaves out.",
+   "policy": "P-SUM"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "say",
+   "text": "it says there are a lot of them and they are expensive",
+   "paste": false,
+   "intent": "reading_help"
+  },
+  {
+   "i": 14,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "That's close to D1p1 \u2014 it gives the household count (about 110,000) and the rent picture. What does D1p1 say about rent per square foot, as opposed to rent overall?",
+   "policy": "P-READ"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "say",
+   "text": "write me a conclusion",
+   "paste": false,
+   "intent": "write_request"
+  },
+  {
+   "i": 16,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I won't write it \u2014 that's your argument to make. What's your idea for the conclusion?",
+   "policy": "P-WRT"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 3,
+   "picks_history": [
+    [],
+    [
+     "D1",
+     "D6",
+     "D3",
+     "D7",
+     "D11"
+    ],
+    [
+     "D1",
+     "D6",
+     "D11",
+     "D3",
+     "D7"
+    ],
+    [
+     "D1",
+     "D6",
+     "D3",
+     "D5",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "served_turn": 7,
+   "served_after_cap": true,
+   "shortlist": [
+    "D5",
+    "D6",
+    "D1",
+    "D11",
+    "D3"
+   ],
+   "picked": [
+    "D1"
+   ],
+   "reason": "looks like a good overview"
+  }
+ ],
+ "unlocked_docs": [
+  "D1"
+ ],
+ "read_passages": [
+  "D1p1"
+ ],
+ "picks": [
+  {
+   "turn": 8,
+   "docs": [
+    "D1"
+   ],
+   "reason": "looks like a good overview"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 17,
+   "text": "Hong Kong has about 110,000 households in subdivided units, and they pay high rents for very small spaces [D1p1]. Rent control could help these tenants because it would make rents more affordable for them.\n\nHowever, there are also risks. Some people say landlords might leave the market if the rules get too strict. This could make the housing shortage worse for the people who need it most.\n\nIn conclusion, the government should think carefully about tightening rent control. It should help tenants but also make sure that landlords do not stop renting out their units. A balance is needed between both sides.\n",
+   "struct": "typed"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "broad"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 6,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 11,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 13,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 15,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D5",
+  "D6",
+  "D1",
+  "D11",
+  "D3"
+ ],
+ "counters": {
+  "write_requests": 1,
+  "claim_statements": 0
+ }
+}

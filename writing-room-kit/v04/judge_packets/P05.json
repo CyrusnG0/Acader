@@ -1,0 +1,78 @@
+{
+ "packet": "P05",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial rents for subdivided units."
+  },
+  {
+   "n": 2,
+   "claim": "Hong Kong should tighten security of tenure instead, with at most a light band on starting rents."
+  },
+  {
+   "n": 3,
+   "claim": "The stable SDU stock under the 2021 ordinance is not evidence that a binding cap is safe."
+  },
+  {
+   "n": 4,
+   "claim": "The stable stock shows that a non-binding instrument does not bind."
+  },
+  {
+   "n": 5,
+   "claim": "First-generation hard caps cause consistent contraction, while second-generation increase caps have small or null effects."
+  },
+  {
+   "n": 6,
+   "claim": "Long-run supply elasticity for marginal SDU-type stock is 0.31 to 0.48, so a 10% cap-induced rent cut removes 3-5% of stock over five years."
+  },
+  {
+   "n": 7,
+   "claim": "A 15% cut in initial rents transfers about 900 dollars monthly to incumbents while 3,000-4,000 households per year cannot enter the segment."
+  },
+  {
+   "n": 8,
+   "claim": "The households excluded by a cap are the same population that D1 identifies as the segment's core tenants."
+  },
+  {
+   "n": 9,
+   "claim": "Berlin shows that caps bind differently on entrants than incumbents, with the bill handed to those still outside."
+  },
+  {
+   "n": 10,
+   "claim": "Tenure security addresses the harm tenants actually name, which is insecurity rather than price."
+  },
+  {
+   "n": 11,
+   "claim": "Mr Chan says he would accept any rent to leave if the public-housing queue fell from five and a half years to three."
+  },
+  {
+   "n": 12,
+   "claim": "An NGO survey of 440 households found 61% would trade a nominal rent increase for three-year security of tenure, and 74% for a faster housing offer."
+  },
+  {
+   "n": 13,
+   "claim": "The Landlords Association's threat of mass exit is weakly evidenced because it concedes no data on actual margins and its compliance-cost figures come from a self-reported survey with a 34% response rate."
+  },
+  {
+   "n": 14,
+   "claim": "The exit threat is credible for hard caps but not a reason to avoid limits on rent increases."
+  },
+  {
+   "n": 15,
+   "claim": "The NGO report is written by a group that wants tenure security, so it is not relied on alone, but the academic paper reaches a similar view on hard caps."
+  },
+  {
+   "n": 16,
+   "claim": "Rent burden for these households worsened from 31% to 34%, and figures after 2023 rely on survey extrapolation, so doing nothing is not enough."
+  },
+  {
+   "n": 17,
+   "claim": "A hard rent cap would help those who already have a unit and hurt those trying to get one."
+  },
+  {
+   "n": 18,
+   "claim": "Tighter security of tenure gives tenants what they say they want without the supply loss."
+  }
+ ],
+ "statements": "[0] (typed) I know nothing about this topic. What sources does the archive have on subdivided units and rent control in Hong Kong?\n[2] (typed) I guess I want a source that shows what rent control does to tenants living in subdivided units, and one that shows the other side, like landlords or supply. My rough claim is that tighter rent control probably helps tenants but I'm not sure. Can you offer a list of sources?\n[4] (typed) I need to show whether tenants actually gained something, like lower rents or more security, or whether the gains were small. Please show me the list of sources the archive has.\n[6] (pick reason) D3 is a real tenant's experience, D2 gives rent numbers to check if tenants gained, D5 is the landlord side, D6 is academic evidence on supply effects\n[21] (typed) I read the passages. My thinking changed: a hard cap seems to shrink supply, but the 2021 rule that only limits increases didn't. I now lean towards not tightening with a hard cap.\n[23] (typed) Mr Chan says insecurity and the waiting list matter more than rent, and he fears landlords will empty units. Does that fit with the stock data?\n[25] (typed) Hong Kong should not add a hard initial-rent cap on subdivided units. The 2021 ordinance limited increases and stock still grew [D2p1] [D6p2], while hard caps shrink supply and the tenants who lose units are the ones the cap is meant to help [D6p3]. Better to tighten security of tenure than the rent level, as Mr Chan says insecurity is his worst problem [D3p1].\n[27] (typed) The D6 elasticity estimate would test his fear best, since it covers hard caps, while D2 only covers the milder rule. D6p4 settles it for me because 900 dollars for those who stay is outweighed by 3,000 to 4,000 households a year who cannot get in.\n[29] (typed) The landlord paper D5 is weaker evidence because it admits no margin data in D5p3, but D5p2 matches D6. I will argue against a hard cap but for tenure security.\n[31] (pick reason) It argues for tenure security and surveyed tenants, which supports my alternative to a hard cap\n[36] (typed) D11 backs me: 61 percent of surveyed tenants would take three-year security over a rent rise [D11p1]. So my position is no hard cap, but tenure security and a light band on initial rents.\n[38] (typed) One weakness is that the NGO also has a view to push, and D2 has a data caveat after 2023 [D2p3]. I will say that in the essay.\n[40] (typed) On the landlord point: D5 has no margin data [D5p3], but its exit threat is plausible and D6 supports it for hard caps, so I accept it against a hard cap but not against limits on increases. For the caveats I will handle the NGO bias by pointing out that D6 independently agrees.\n[42] (typed) I will write the landlord answer first, using D6p2 for the point that exit is a hard-cap effect and not an increase-limit effect. Draft saved.\n[44] (typed) The part I still find hard is the enforcement side, so I am keeping that out of my main claim.\n[46] (typed) I think my position is settled: no hard cap, yes to tenure security and a light band on initial rents."
+}

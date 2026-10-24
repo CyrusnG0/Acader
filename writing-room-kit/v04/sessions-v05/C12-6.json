@@ -1,0 +1,459 @@
+{
+ "name": "C12-6",
+ "id": "C12-6",
+ "arm": "C12",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so i'm working on this thing about subdivided flats in HK and rent control \u2014 need to actually see the sources. can you pull up some docs for me to start? anything on the basic situation of subdivided units",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point you anywhere, what do you need a source to *do* here \u2014 back up a specific claim you're making about the situation, or give you a first-hand account, or something else? And which claim would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "hmm fair question. two things really \u2014 i want the raw numbers on how many households are in subdivided units and what they're paying, plus i guess a tenant's own account? not sure yet. just give me whatever's out there on the basic situation first and i'll sort it",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling rent control and supply elasticity, arguing theory predicts contraction but magnitude is empirical.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt giving SDU stock and rent index time series 2019-2025 with stated data caveats.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving overview of SDU situation, tenant profile, and rent-control debate framing.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person tenant interview with a Kwai Chung delivery driver, dated to current policy debate.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). First-person tenant interview with an elderly Sham Shui Po tenant, including interviewer-noted contradictions.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "want numbers plus tenant accounts first",
+   "docs": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D3 (Tenant Interview: Mr Chan, Kwai Chung), D4 (Tenant Interview: Mrs Wong, Sham Shui Po). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p2"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "pick",
+   "text": "need supply evidence and stock figures",
+   "docs": [
+    "D6",
+    "D2"
+   ]
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p3"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "say",
+   "text": "ok last gap \u2014 the legal side and enforcement. anything on compensation claims from a hard cap, and inspection capacity? think it was a lawyer's memo and a subcommittee note",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 33,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named the two things you want covered \u2014 compensation claims and inspection capacity \u2014 but not yet what each must prove for your argument. Which claim in your essay would each of those sources be there to support?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "say",
+   "text": "right, sorry \u2014 what i need is: the memo to back up that a hard cap risks compensation claims while an indexed per-sq-ft band can be defended as rate-capping; and the subcommittee note to back up that enforcement is too thin (inspection under 6% a year, register costing 40-60 staff-years) and that it'd miss the tenants with no written agreement / newest arrivals. so like supporting the 'enforcement can't protect the tail' point",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 35,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity; distinguishes first- vs second-generation controls and projects contraction effects.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report from tenant survey; argues against hard caps, favoring tenure security and light banding.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). First-person tenant interview; elderly long-term SDU resident describing no written agreement and landlord behavior.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal subcommittee minute (draft); enforcement vantage on inspection capacity, register costs, and missed tail.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Lawyer's legal opinion; assesses compensation and judicial review risk of hard cap versus indexed per-sq-ft band.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "pick",
+   "text": "legal compensation risk and enforcement capacity, both needed for the hard-cap objection",
+   "docs": [
+    "D9",
+    "D10"
+   ]
+  },
+  {
+   "i": 37,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D9 (Legal Opinion: Compensation and Judicial Review Risk), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D9p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p1"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p2"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D3",
+     "D11"
+    ],
+    [
+     "D1",
+     "D2",
+     "D3",
+     "D4",
+     "D6"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D2",
+    "D1",
+    "D3",
+    "D4"
+   ],
+   "picked": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+   ],
+   "reason": "want numbers plus tenant accounts first"
+  },
+  {
+   "open_turn": 32,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D9",
+     "D10",
+     "D6",
+     "D5",
+     "D11"
+    ],
+    [
+     "D9",
+     "D10",
+     "D6",
+     "D4",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 35,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D11",
+    "D4",
+    "D10",
+    "D9"
+   ],
+   "picked": [
+    "D10",
+    "D9"
+   ],
+   "reason": "legal compensation risk and enforcement capacity, both needed for the hard-cap objection"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "D6",
+  "D9",
+  "D10"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D1p3",
+  "D3p1",
+  "D3p2",
+  "D3p3",
+  "D4p1",
+  "D4p2",
+  "D6p1",
+  "D6p2",
+  "D6p4",
+  "D2p1",
+  "D2p2",
+  "D2p3",
+  "D9p1",
+  "D9p2",
+  "D10p1"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+   ],
+   "reason": "want numbers plus tenant accounts first"
+  },
+  {
+   "turn": 23,
+   "docs": [
+    "D6",
+    "D2"
+   ],
+   "reason": "need supply evidence and stock figures"
+  },
+  {
+   "turn": 36,
+   "docs": [
+    "D9",
+    "D10"
+   ],
+   "reason": "legal compensation risk and enforcement capacity, both needed for the hard-cap objection"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 32,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 34,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D6",
+  "D11",
+  "D4",
+  "D10",
+  "D9"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

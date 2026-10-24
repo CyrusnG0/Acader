@@ -1,0 +1,86 @@
+{
+ "packet": "P12",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten SDU rules focusing on security of tenure and a light limit on rent increases, not a hard cap on rent levels."
+  },
+  {
+   "n": 2,
+   "claim": "SDU tenants pay a premium of 15 to 25 percent per square foot compared with ordinary flats."
+  },
+  {
+   "n": 3,
+   "claim": "Most SDU tenants are new arrivals or people waiting for public housing, making SDUs a last option."
+  },
+  {
+   "n": 4,
+   "claim": "Rent burden for SDU households rose from 31 to 34 percent of income."
+  },
+  {
+   "n": 5,
+   "claim": "The 2021 ordinance capped increases inside a tenancy but not the initial rent."
+  },
+  {
+   "n": 6,
+   "claim": "Hard caps on rent levels consistently shrink supply, while caps on increases within a tenancy have small or null effects."
+  },
+  {
+   "n": 7,
+   "claim": "The stock of SDUs grew from 100,800 in 2019 to 111,200 in 2025."
+  },
+  {
+   "n": 8,
+   "claim": "The harm of shrinking supply falls on the same poor households the cap is meant to help."
+  },
+  {
+   "n": 9,
+   "claim": "Berlin's 2020 rent cap led to fewer listings and owners moving flats to uncontrolled segments."
+  },
+  {
+   "n": 10,
+   "claim": "Landlords' cost figures come from a self-reported survey with a 34 percent response rate and no data on actual margins."
+  },
+  {
+   "n": 11,
+   "claim": "In a survey of 440 households, the main problem named was queue length and insecurity of tenure, not rent level."
+  },
+  {
+   "n": 12,
+   "claim": "61 percent of surveyed tenants would accept a small rent rise for three years of security."
+  },
+  {
+   "n": 13,
+   "claim": "Inspections cover under 6 percent of SDU stock each year."
+  },
+  {
+   "n": 14,
+   "claim": "Enforcement depends on complaints, but the tenants least able to complain are those with no written agreement and the newest arrivals."
+  },
+  {
+   "n": 15,
+   "claim": "The law should presume a tenancy after a set time, even with no paper, and ban eviction as punishment for complaints."
+  },
+  {
+   "n": 16,
+   "claim": "The root problem is the queue, which is about five and a half years."
+  },
+  {
+   "n": 17,
+   "claim": "A heavy initial-rent register would be expensive, with one estimate of 40 to 60 staff-years."
+  },
+  {
+   "n": 18,
+   "claim": "The archive does not tell how many tenants have no written agreement."
+  },
+  {
+   "n": 19,
+   "claim": "An internal minute admits that nobody found an enforcement design that protects the newest arrivals first rather than last."
+  },
+  {
+   "n": 20,
+   "claim": "The position is to tighten carefully: cap increases more firmly, protect tenants from retaliation, presume a tenancy without paper, keep any initial-rent band light, and treat the waiting list as the real long-term fix."
+  }
+ ],
+ "statements": "[0] (typed) I think Hong Kong should tighten rent control on subdivided units. Reasons: (1) tenants in tiny subdivided flats are poor and have little bargaining power, so landlords can raise rent easily; (2) housing is a basic need and rents should not eat most of a poor family's income; (3) controls can come with minimum safety standards so living conditions improve.\n[2] (typed) Honestly I am not sure rent control alone makes landlords meet standards. Maybe it needs inspections too. Can you show me sources about subdivided units, rents and rent control in Hong Kong so I can test this?\n[4] (typed) I want all three if possible, but first evidence on whether rent control changed landlord behaviour or rents in Hong Kong, and a counter-view that argues against it.\n[6] (pick reason) D2 has actual rent and stock numbers so I can see what happened to rents; D6 is an academic paper on whether rent control shrinks supply, which is the main argument against my view; D5 is the landlords' side so I can hear the counter-view directly.\n[17] (typed) After reading: my position is refined, not dropped. D2p1 and D6p2 say the 2021 second-generation control (caps on increases) did not shrink stock, so mild tightening looks safe. But D6p1 and D6p3 warn hard caps on rent levels would remove units, and D5p2 says landlords would leave. So I now think: tighten increase-caps and enforcement, but not a hard level cap. D5p3 shows the landlords have weak data, so I give their threat less weight. D2p2 says rent burden still got worse (31 to 34 percent), so the current control is not enough. Can you give me sources on inspections and enforcement, and one on tenants' own experience?\n[19] (typed) Tenant source: evidence the current control is too weak or that tenants fear eviction if they complain. Enforcement source: it should support my claim that a tighter increase-cap only works if someone actually checks landlords follow it.\n[21] (pick reason) D10 is about inspection capacity so it tests my enforcement claim; D3 is a tenant who fears eviction and has a split view on tightening; D11 surveys many tenants and talks about enforcement trade-offs, which could challenge me.\n[32] (typed) This changes my view a lot. D11p1 says tenants care more about tenure security and queue length than rent level, and D3p1 shows eviction after asking for a repair. D10p1 says inspections cover under 6 percent of stock, and D10p2 says the people who most need protection can't complain. So a rent-cap tightening alone would mostly not reach the worst cases. I now think: tighten, but make the tightening about security of tenure (protection from retaliation) plus a light cap on increases, not a lower rent level. A possible objection from D11p2 is that enforcement money should go to safety inspection instead of policing rent. I answer: security of tenure is cheap to enforce through the courts and it makes complaints possible, so it helps both goals. Can you give me structure options for the essay?\n[34] (typed) I pick option 1, claim, evidence, objection, reply, because my position changed into a specific claim and the strongest objection (D11p2 and the landlord exit threat in D5p2) needs a direct answer.\n[36] (typed) Good question. I think they are two objections. Landlord exit I answer with D2p1 and D6p2 (moderate second-generation control did not shrink stock) and D5p3 (their numbers are self-reported with a 34 percent response rate). The funding trade-off I answer with the court route. But D3p2 says Mr Chan has seen units emptied, so the exit fear is not made up. Can I look at the sources about newly arrived tenants and tenants with no written agreement, to see if my tenure idea actually reaches them?\n[38] (typed) A counter-view, honestly: I want it to show whether those groups are NOT covered, because that is where my idea could fail. Any numbers on how many tenants have no written agreement would help.\n[40] (pick reason) D1 gives background and tenant demographics, maybe numbers on newcomers; D4 is a tenant with no written agreement, who supports a hard cap, so she disagrees with me and shows what an uncovered tenant says.\n[48] (typed) D4p1 is a problem for my idea: Mrs Wong has no written agreement and says the 2021 ordinance changed nothing for her, so a tenure rule only works if it covers people without paperwork. D1p3 says the 2021 law did not cap initial rent, which is a gap newcomers fall into (D1p2 says SDU tenants are mostly new arrivals). So I refine again: the tenure protection must apply by law even with no written agreement (a tenancy is presumed after a set time), and a light band on initial rents should go with it, as D11p3 says. D4p2 says hard cap, but D4p3 shows her own stairwell lost two flats, so her belief that landlords cannot exit is contradicted by her own account. I keep my position, now narrower.\n[50] (typed) I checked D1 and D11: neither gives a figure for how many tenants lack written agreements, so I will say that is a gap in the evidence. On D4p1, my reply is that the ordinance failed her because it relied on a written tenancy and on her complaining, which is what D10p2 predicts. So presuming a tenancy by law fixes the exact failure she describes.\n[52] (typed) One more weakness I should admit: D10p3 says the subcommittee could not find any enforcement design that protects the newest arrivals first. My answer is only partial: tenure by presumption helps people who stay, but not someone who just arrived. Is there anything left in the archive on this that I have not seen?\n[54] (pick reason) D7 is a real case of a hard rent cap in Berlin, so it tests my claim that hard caps backfire, which is the part of my argument I have only seen from one working paper.\n[59] (typed) D7 supports me: D7p1 says Berlin's cap cut listings, and D7p3 says the cap helps those already inside and hurts those still outside, which matches D10p3's worry about new arrivals. But Berlin was a very different market (1.5 million flats, ordinary housing) so I should say it is only a loose comparison. It also tells me a light band on initial rents is a risk for newcomers, so I will keep the band light and say that clearly. I think I am ready to write the essay.\n[61] (typed) I partly agree with D11p2: the queue is the root problem and safety inspection matters. But tenure security does not need many inspectors, because it is enforced by tenants going to a tribunal, so it does not take much from inspection staff. And I would not spend the 40 to 60 staff-years in D10p1 on a rent register; I would drop the heavy initial-rent band and keep it light. So I accept the point about priorities and narrow my claim."
+}

@@ -1,0 +1,84 @@
+{
+ "version": "0.2",
+ "session_id": "mx-honest",
+ "created": "2026-10-16T10:00:00Z",
+ "task": "MATH2010-w3-matrix",
+ "b": [
+  3,
+  4,
+  5
+ ],
+ "budget": 4,
+ "probes": [
+  {
+   "x": [
+    1,
+    0,
+    0
+   ],
+   "predicted": [
+    2,
+    1,
+    0
+   ],
+   "actual": [
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "x": [
+    0,
+    1,
+    0
+   ],
+   "predicted": [
+    0,
+    3,
+    1
+   ],
+   "actual": [
+    0,
+    3,
+    1
+   ]
+  },
+  {
+   "x": [
+    0,
+    0,
+    1
+   ],
+   "predicted": [
+    1,
+    0,
+    4
+   ],
+   "actual": [
+    1,
+    0,
+    4
+   ]
+  },
+  {
+   "x": [
+    1,
+    1,
+    1
+   ],
+   "predicted": [
+    3,
+    4,
+    5
+   ],
+   "actual": [
+    3,
+    4,
+    5
+   ]
+  }
+ ],
+ "explanation": "From my three basis probes the columns of A are (2,1,0), (0,3,1) and (1,0,4). So Ax=b has a solution iff (3,4,5) is a combination a(2,1,0)+c(0,3,1)+d(1,0,4). Solving 2a+d=3, a+3c=4, c+4d=5 gives a=1, c=1, d=1, so x=(1,1,1). My verification probe A(1,1,1)=(3,4,5) confirms it.",
+ "notes": ""
+}

@@ -1,0 +1,455 @@
+{
+ "name": "DRY-1",
+ "id": "DRY-1",
+ "arm": "DRY",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm starting the rent control essay and I know nothing about subdivided units. Can you find me a source to start?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What would you need that source to show for your essay \u2014 for example, evidence for a specific claim, a counter-view, a definition, or a first-hand account \u2014 and which claim would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "Mostly I need to understand the basic situation first: who lives in these units and what the rents are like.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving basic SDU context: who lives there, rent levels, and policy debate.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025, with caveats.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant describing his living situation, rent, and views.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants and arguing for rehousing pathways over hard rent caps.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control effects on supply and welfare.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "D1 is a primer so I can learn the basics, and D3 is a tenant's own account so I get a real person's view of rent and income",
+   "docs": [
+    "D1",
+    "D3"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D3 (Tenant Interview: Mr Chan, Kwai Chung). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "say",
+   "text": "I think SDU tenants pay a high share of their income on rent, so there is a case for some cap. Mr Chan pays about a third of his household income.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 9,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You're noting that Mr Chan spends about a third of household income on rent, and that this supports a case for some cap. What would you want to check next \u2014 for instance, whether a third is typical across SDU tenants, or what a cap would do to the rent he pays?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "say",
+   "text": "Can you find me a source with the other side, like what landlords or economists say about caps?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 12,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want \"the other side\" from landlords or economists. Before I point anywhere, what would that source need to show for your essay \u2014 is it evidence against a claim you're making, or a counter-view you plan to answer?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "say",
+   "text": "I want to know whether landlords would really leave the market if rents are capped, and whether the data shows it.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 14,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing against hard caps and for tenure security instead.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity, distinguishing first- and second-generation rent controls.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020\u20132021 rent cap and its aftermath.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt from an index tracking SDU stock and rents from 2019 to 2025.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlords association opposing hard rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "pick",
+   "text": "D5 is the landlords' own claim that they would leave, and D2 has rent and unit numbers to check whether that happened",
+   "docs": [
+    "D5",
+    "D2"
+   ]
+  },
+  {
+   "i": 16,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p2"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "say",
+   "text": "The stock kept growing from 2019 to 2025 even after a 2021 control. So I think the landlord exit threat is weaker than they say.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You're reading the 2019\u20132025 stock trend as evidence that the exit threat is weaker than the landlords' submission claims. What would you want to check in D2 or D5 next \u2014 for example, whether the index counts units or buildings, or what the landlords say specifically about exiting?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "say",
+   "text": "Who argues against that? I'd like to hear the strongest objection.",
+   "paste": false,
+   "intent": "counter_request"
+  },
+  {
+   "i": 22,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Document D6, the working paper on rent control and supply elasticity, argues that the stable stock you're pointing to may be an artifact of the 2021 ordinance being a non-binding, second-generation instrument \u2014 and that a binding cap on initial rent levels behaves differently, with contraction effects that the current stability would not reveal.\n\nHow do you answer this?",
+   "policy": "P-CTR"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "say",
+   "text": "I would say the 2021 control was mild, and a hard cap is a different thing, so the data may not carry over. I need a source on what a hard cap would do to the number of units.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said the 2021 control was mild and a hard cap is different, so that data may not carry over. For the claim you want to make about a hard cap and the number of units, what would a source need to show you \u2014 evidence of a hard cap's effect, a counter-view, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "pick",
+   "text": "D6 is the academic working paper on whether caps shrink supply, which is the objection I have to answer",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 26,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "say",
+   "text": "How could I structure the essay? I have a position and two kinds of evidence.",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 29,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Three tracks you could try:\n\n- Claim, evidence, objection, reply \u2014 good if you want your cap argument to lead and D6 to be answered directly.\n- Problem, cause, response \u2014 good if you want to start from tenant rent burden and build to a policy fix.\n- Compare and contrast \u2014 good if you want the 2021 mild control and a hard cap set side by side throughout.\n\nWhich one fits what you want to say, and why?",
+   "policy": "P-STR"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "say",
+   "text": "I'll take the first one, claim then evidence then objection then reply. My claim: tightening in a measured way is defensible, but a hard cap is risky.",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 31,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've picked claim, evidence, objection, reply, with the claim that measured tightening is defensible but a hard cap is risky. Where in that track does Mr Chan's one-third-of-income figure do its work \u2014 is it part of the claim, or the evidence for it?",
+   "policy": "P-STR"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D3",
+     "D7",
+     "D11"
+    ],
+    [
+     "D1",
+     "D3",
+     "D2",
+     "D6",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D1",
+    "D2",
+    "D3",
+    "D11",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D3"
+   ],
+   "reason": "D1 is a primer so I can learn the basics, and D3 is a tenant's own account so I get a real person's view of rent and income"
+  },
+  {
+   "open_turn": 11,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D5",
+     "D6",
+     "D7",
+     "D9",
+     "D11"
+    ],
+    [
+     "D6",
+     "D5",
+     "D2",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 14,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D6",
+    "D7",
+    "D2",
+    "D5"
+   ],
+   "picked": [
+    "D2",
+    "D5"
+   ],
+   "reason": "D5 is the landlords' own claim that they would leave, and D2 has rent and unit numbers to check whether that happened"
+  },
+  {
+   "open_turn": 23,
+   "state": "clarify",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D7",
+     "D2",
+     "D5",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true
+   ],
+   "served_turn": null,
+   "served_after_cap": false,
+   "shortlist": [],
+   "picked": [],
+   "reason": ""
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D3",
+  "D5",
+  "D2",
+  "D6"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D3p1",
+  "D3p2",
+  "D5p2",
+  "D2p1",
+  "D6p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D3"
+   ],
+   "reason": "D1 is a primer so I can learn the basics, and D3 is a tenant's own account so I get a real person's view of rent and income"
+  },
+  {
+   "turn": 15,
+   "docs": [
+    "D5",
+    "D2"
+   ],
+   "reason": "D5 is the landlords' own claim that they would leave, and D2 has rent and unit numbers to check whether that happened"
+  },
+  {
+   "turn": 25,
+   "docs": [
+    "D6"
+   ],
+   "reason": "D6 is the academic working paper on whether caps shrink supply, which is the objection I have to answer"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 32,
+   "text": "Hong Kong can tighten rent control on subdivided units, but it should do so in a measured way and avoid a hard cap on initial rents.\n\nThe case for acting starts with the tenants. Mr Chan pays 5,800 dollars for a 120 sq ft cubicle, about a third of his household income [D3p1]. Across the market, SDU tenants pay a premium of 15 to 25 percent per square foot compared with mainstream flats [D1p1].\n\nThe landlords warn that members will leave the market if returns fall below mortgage cost [D5p2]. The stock numbers do not show that so far: the estimated stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 tenancy control [D2p1].\n\nThe strongest objection is that the 2021 control was mild, so that growth says little about a hard cap. The working paper argues exactly this, and estimates that a binding cap would cost the market part of its stock over five years [D6p2]. I accept that, which is why I would tighten gradually and watch the stock figures before going further.\n",
+   "struct": "typed"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 8,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 11,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 13,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 19,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 21,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 23,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 28,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 30,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D6",
+  "D7",
+  "D2",
+  "D5"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 2
+ }
+}

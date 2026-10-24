@@ -1,0 +1,557 @@
+{
+ "name": "C11-3",
+ "id": "C11-3",
+ "arm": "C11",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I know nothing about this topic yet and have no essay. Could you give me some sources on rent control and subdivided units in Hong Kong? I'm not sure what position to take, so I'd like a range of views.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want \"a range of views\" and you're not sure of your position yet. Before any source can help, what would it need to do for you \u2014 for example, give you evidence about conditions in subdivided units, show a counter-view on rent control, or define what counts as a subdivided unit?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "All three would help, but let's start with evidence about the actual living conditions in subdivided units, since I can't judge whether tighter rent control is needed without knowing what the housing situation is like. Then I'd like a counter-view on rent control afterwards.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've narrowed it to evidence on living conditions first, because you say you \"can't judge whether tighter rent control is needed\" without it. What claim would that evidence be supporting \u2014 for example, that conditions are bad enough to justify tighter control, or something else you'd want it to show?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "I want the evidence to help me judge whether conditions in subdivided units are bad enough that tenants need stronger protection from rent increases. So look for sources showing how bad the living conditions are and whether tenants are vulnerable to sharp rent hikes.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply effects; theoretical/empirical economics vantage, argues against hard caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer describing SDU conditions, tenants, and rent-control debate; neutral overview framing both sides.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents 2019-2025; quantitative index with stated data caveats.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households; tenant-preference vantage, opposes hard caps favoring tenure security.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). First-person tenant interview, elderly SDU resident; anecdotal single case supporting hard initial-rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "Start with the neutral primer to understand what subdivided units are and both sides of the debate before judging.",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "pick",
+   "text": "I want to see specific evidence about SDU living conditions and rent-hike vulnerability before deciding my position",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need evidence on actual SDU living conditions and tenant vulnerability before judging whether tighter control is needed",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 42,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 44,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 61,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 62,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 63,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 64,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 65,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need evidence on actual living conditions in subdivided units before I can decide whether tighter rent control is needed.",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 66,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D11",
+     "D7",
+     "D3"
+    ],
+    [
+     "D1",
+     "D3",
+     "D4",
+     "D6",
+     "D11"
+    ],
+    [
+     "D1",
+     "D2",
+     "D4",
+     "D6",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D1",
+    "D2",
+    "D11",
+    "D4"
+   ],
+   "picked": [
+    "D1"
+   ],
+   "reason": "Start with the neutral primer to understand what subdivided units are and both sides of the debate before judging."
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D6"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D6p1",
+  "D6p2"
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D1"
+   ],
+   "reason": "Start with the neutral primer to understand what subdivided units are and both sides of the debate before judging."
+  },
+  {
+   "turn": 23,
+   "docs": [
+    "D6"
+   ],
+   "reason": "I want to see specific evidence about SDU living conditions and rent-hike vulnerability before deciding my position"
+  },
+  {
+   "turn": 41,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I need evidence on actual SDU living conditions and tenant vulnerability before judging whether tighter control is needed"
+  },
+  {
+   "turn": 65,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I need evidence on actual living conditions in subdivided units before I can decide whether tighter rent control is needed."
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 4,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D6",
+  "D1",
+  "D2",
+  "D11",
+  "D4"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

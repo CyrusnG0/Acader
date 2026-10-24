@@ -1,0 +1,308 @@
+{
+ "id": "C5-6",
+ "arm": "C5",
+ "components": {
+  "claim": 52.63157894736842,
+  "source": 100.0,
+  "cite": 85.71428571428571,
+  "change": 100.0,
+  "struct": 100.0
+ },
+ "composite": 81.2781954887218,
+ "composite_nostruct": 77.97434763379036,
+ "mismatches": [
+  "Paragraph 2 says: \"In a survey of 440 households, 61 percent would accept a small rent increase for three years of secure tenure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The report says caps treat the price symptom of a queue problem.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents but leaves 3,000 to 4,000 households per year unable to enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"When Berlin's law fell, suppressed increases released above the pre-cap trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Caps on increases show small or null stock effects, while caps on levels show consistent contraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A band-based cap would require a certifiable tenancy register costing 40 to 60 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The subcommittee could not identify any design under which the newest-arrival tail is protected first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Landlords' association says a hard cap is confiscatory and owners will leave the market if returns fall below mortgage cost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"is not anecdotal noise; Berlin's Mietendeckel shows listing supply contracting within a year as owners withheld or rerouted flats, and when the law fell, suppre\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The Tenancy Control Ordinance capped increases within existing tenancies but left initial rents\u2014the actual pain point\u2014unregulated [D1p3][D9p1].\" cites D1p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"And the stable stock cited by those who want more control [D2p1]\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Worse, enforcement would systematically miss the most exploited tail: the tenants least able to complain are those with no written agreement or the newest arriv\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Their association says a hard cap is confiscatory and that owners will leave the market if returns fall below mortgage cost [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten protection for subdivided unit tenants through security of tenure and inspections rather than a hard rent cap.",
+   "ancestor": 20
+  },
+  {
+   "para": 2,
+   "claim": "In a survey of 440 households, 61 percent would accept a small rent increase for three years of secure tenure.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "The report says caps treat the price symptom of a queue problem.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The academic literature estimates the long-run supply elasticity of marginal housing at 0.31 to 0.48.",
+   "ancestor": 24
+  },
+  {
+   "para": 3,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents but leaves 3,000 to 4,000 households per year unable to enter the segment.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Berlin's Mietendeckel shows listing supply contracting within a year as owners withheld or rerouted flats.",
+   "ancestor": 20
+  },
+  {
+   "para": 3,
+   "claim": "When Berlin's law fell, suppressed increases released above the pre-cap trend.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 ordinance.",
+   "ancestor": 10
+  },
+  {
+   "para": 5,
+   "claim": "Mrs Wong has lived nine years in an SDU with no written tenancy agreement and reports the 2021 ordinance changed nothing she can see.",
+   "ancestor": 53
+  },
+  {
+   "para": 5,
+   "claim": "The Tenancy Control Ordinance capped increases within existing tenancies but left initial rents unregulated.",
+   "ancestor": 22
+  },
+  {
+   "para": 5,
+   "claim": "Real rent burden worsened from 31 to 34 percent of income even under the ordinance.",
+   "ancestor": 22
+  },
+  {
+   "para": 5,
+   "claim": "Caps on increases show small or null stock effects, while caps on levels show consistent contraction.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "Current inspection covers under 6 percent of stock annually.",
+   "ancestor": 22
+  },
+  {
+   "para": 6,
+   "claim": "A band-based cap would require a certifiable tenancy register costing 40 to 60 staff-years.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "Enforcement would systematically miss the most exploited tail: tenants least able to complain.",
+   "ancestor": 22
+  },
+  {
+   "para": 6,
+   "claim": "The subcommittee could not identify any design under which the newest-arrival tail is protected first rather than last.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "Landlords' association says a hard cap is confiscatory and owners will leave the market if returns fall below mortgage cost.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "A legal opinion says a rent band can be defended as rate-capping.",
+   "ancestor": 55
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D11p1",
+   "sentence": "In a survey of 440 households, 61 percent would accept a small rent increase for three years of secure tenure [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The report says caps treat the price symptom of a queue problem [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The academic literature estimates the long-run supply elasticity of marginal housing at 0.31 to 0.48, meaning a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "Modelled for a Hong Kong-like market, a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents but leaves 3,000 to 4,000 households per year unable to enter the segment\u2014mostly new arrivals and newly formed households [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan's fear that landlords would rather convert cubicles to storage than deal with regulated tenants [D3p2]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "is not anecdotal noise; Berlin's Mietendeckel shows listing supply contracting within a year as owners withheld or rerouted flats, and when the law fell, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "is not anecdotal noise; Berlin's Mietendeckel shows listing supply contracting within a year as owners withheld or rerouted flats, and when the law fell, suppressed increases released above the pre-cap trend [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The bill for protecting insiders is handed to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong has lived nine years in an SDU with no written tenancy agreement, and reports the 2021 ordinance changed nothing she can see [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The Tenancy Control Ordinance capped increases within existing tenancies but left initial rents\u2014the actual pain point\u2014unregulated [D1p3][D9p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "The Tenancy Control Ordinance capped increases within existing tenancies but left initial rents\u2014the actual pain point\u2014unregulated [D1p3][D9p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Real rent burden worsened from 31 to 34 percent of income even under the ordinance [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "And the stable stock cited by those who want more control [D2p1]",
+   "supports": "no"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "is precisely what theory predicts from a non-binding, second-generation instrument: caps on increases show small or null stock effects, while caps on levels show consistent contraction [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Current inspection covers under 6 percent of stock annually, and a band-based cap would require a certifiable tenancy register costing 40 to 60 staff-years [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Worse, enforcement would systematically miss the most exploited tail: the tenants least able to complain are those with no written agreement or the newest arrivals [D10p2]\u2014the very population named as the policy's intended beneficiary [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Worse, enforcement would systematically miss the most exploited tail: the tenants least able to complain are those with no written agreement or the newest arrivals [D10p2]\u2014the very population named as the policy's intended beneficiary [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "The subcommittee could not identify any design under which the newest-arrival tail is protected first rather than last [D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "Their association says a hard cap is confiscatory and that owners will leave the market if returns fall below mortgage cost [D5p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "That is why I back a published rent band and not a hard cap, since a legal opinion says a band can be defended as rate-capping [D9p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    22
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    22
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    22
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    22
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    22,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    22,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    22,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    22,
+    57
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 5,
+   "own_thinking": 6
+  },
+  "served_after_cap": 0
+ }
+}

@@ -1,0 +1,452 @@
+{
+ "id": "C5-6",
+ "arm": "C5",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.1333333333333333,
+  "F14b parentage": 0.5957446808510638,
+  "F14c grounded chains": 0.47368421052631576
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 20
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Tighter rent control would help SDU tenants stay in their homes",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs sources backing the claim and a source showing the other side",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D11 surveys tenants and discusses tenure security, fitting the claim about staying in homes",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 has rent and stock numbers to ground the claim in data",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "Tenants care more about security of tenure than rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "Tightening should focus on tenure security, not hard caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "D2 shows stock kept growing after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "D5 is the landlord side",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "D7 is Berlin's rent cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "D5 and D7 show the opposing case about supply shrinking that must be answered",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Hong Kong should tighten protection for SDU tenants through tenure security and inspection, not a hard rent cap",
+   "parent": {
+    "type": "student",
+    "turn": 10
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "D11 says tenants would trade rent for security and the real problem is queue length",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "D7 shows Berlin's cap shrank listings",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "D2 shows stock kept growing under the moderate 2021 ordinance",
+   "parent": {
+    "type": "student",
+    "turn": 10
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Rent burden rose from 31 to 34 percent even under the ordinance, which only capped increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "This shows the ordinance was too weak on initial rents, not that caps are the answer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "A hard cap on initial rents would shrink supply, hurting people still outside",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Doing nothing is not acceptable because tenants have no written agreements and the ordinance left initial rents alone",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Enforcement would miss the most exploited tenants since inspection covers little of the stock",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D6 gives the supply elasticity numbers behind the claim that a hard cap shrinks supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D4 is a tenant with no written agreement for the claim that doing nothing is not acceptable",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D10 is the enforcement minute for the claim that inspection would miss the most exploited tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Landlords would convert cubicles to storage rather than take regulated tenants, which a landlord voice should confirm",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "The 2021 ordinance capped increases but left initial rents unregulated",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "The people the ordinance was meant to protect are new arrivals",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "The ordinance text should show it only capped increases within a tenancy and not initial rents",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "The consultation should show who the policy targets, which is new arrivals",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "The consultation should show any package the government signalled",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "The landlord interview should show landlords converting units to storage instead of renting to regulated tenants",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "D1 should show the 2021 ordinance capped increases but not initial rents and who it targets",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "D12 should show the policy package the government signalled in the consultation",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "A landlord voice is still missing, ideally an interview with a landlord named Mr Chan",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "The legal text or ruling on whether an initial rent band counts as rate-capping rather than confiscation is still missing",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "The landlord account should come first",
+   "parent": {
+    "type": "assistant",
+    "turn": 44
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "The landlord source needs to show a landlord saying he would convert cubicles to storage rather than rent to regulated tenants",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "The legal source needs to show a published per-square-foot band on initial rents is rate-capping rather than confiscation",
+   "parent": {
+    "type": "student",
+    "turn": 43
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D3 is Mr Chan, a tenant, so I will check what he says about landlords and the waiting list",
+   "parent": {
+    "type": "assistant",
+    "turn": 46
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D9 is the legal opinion on whether a per-square-foot band is rate-capping rather than confiscation",
+   "parent": {
+    "type": "assistant",
+    "turn": 46
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "A hard cap would shrink supply and the cost lands on people outside, per D6, D7 and Mr Chan's fear in D3",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Doing nothing is also bad because Mrs Wong has no written tenancy and the ordinance left initial rents alone, per D4, D1, D9",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Enforcement would miss the most exploited tenants because inspection covers under 6 percent and those with no agreement cannot complain, per D10",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "I partly agree with D5, which is why I do not back a hard cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 54
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D9 says a hard cap risks compensation claims",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D6 shows contraction",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D2 shows stock kept growing under the second-generation ordinance",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D9 says a published band is defensible as rate-capping",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "A band plus tenure security answers the exit worry better than a hard cap or doing nothing",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Tighter rent control would help SDU tenants stay in their homes\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs sources backing the claim and a source showing the other side\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D11 surveys tenants and discusses tenure security, fitting the claim about staying in homes\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 has rent and stock numbers to ground the claim in data\". How did you get there?"
+  },
+  {
+   "turn": 10,
+   "question": "At turn 10 you said: \"Tightening should focus on tenure security, not hard caps\". How did you get there?"
+  },
+  {
+   "turn": 14,
+   "question": "At turn 14 you said: \"D5 is the landlord side\". How did you get there?"
+  },
+  {
+   "turn": 14,
+   "question": "At turn 14 you said: \"D7 is Berlin's rent cap\". How did you get there?"
+  },
+  {
+   "turn": 14,
+   "question": "At turn 14 you said: \"D5 and D7 show the opposing case about supply shrinking that must be answered\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"This shows the ordinance was too weak on initial rents, not that caps are the answer\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"A hard cap on initial rents would shrink supply, hurting people still outside\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Doing nothing is not acceptable because tenants have no written agreements and the ordinance left initial rents alone\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Enforcement would miss the most exploited tenants since inspection covers little of the stock\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D6 gives the supply elasticity numbers behind the claim that a hard cap shrinks supply\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D4 is a tenant with no written agreement for the claim that doing nothing is not acceptable\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D10 is the enforcement minute for the claim that inspection would miss the most exploited tenants\". How did you get there?"
+  },
+  {
+   "turn": 33,
+   "question": "At turn 33 you said: \"Landlords would convert cubicles to storage rather than take regulated tenants, which a landlord voice should confirm\". How did you get there?"
+  },
+  {
+   "turn": 33,
+   "question": "At turn 33 you said: \"The 2021 ordinance capped increases but left initial rents unregulated\". How did you get there?"
+  },
+  {
+   "turn": 33,
+   "question": "At turn 33 you said: \"The people the ordinance was meant to protect are new arrivals\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"The consultation should show any package the government signalled\". How did you get there?"
+  }
+ ]
+}

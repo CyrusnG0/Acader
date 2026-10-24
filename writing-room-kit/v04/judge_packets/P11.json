@@ -1,0 +1,102 @@
+{
+ "packet": "P11",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units by making tenants harder to push out and limiting rent rises within a tenancy, but not by imposing a hard cap on starting rents."
+  },
+  {
+   "n": 2,
+   "claim": "The 2021 ordinance limits rises inside a tenancy, but rents for subdivided units still rose 3.1 percent from 2021 to 2023, while general private rents rose only 1.7 percent, and the share of income spent on rent increased from 31 to 34 percent."
+  },
+  {
+   "n": 3,
+   "claim": "The current rule has not protected tenants enough."
+  },
+  {
+   "n": 4,
+   "claim": "The problem is about security more than price."
+  },
+  {
+   "n": 5,
+   "claim": "Mr Chan, a delivery driver, says the worst part is insecurity, as his landlord ended his previous tenancy with two weeks notice after he asked for a leaking window to be repaired."
+  },
+  {
+   "n": 6,
+   "claim": "A survey of 440 households found that 61 percent would accept a nominal rent increase in return for three years of security, and 74 percent would trade for a faster public housing offer."
+  },
+  {
+   "n": 7,
+   "claim": "The strongest objection is that rent control shrinks the supply of the cheapest housing."
+  },
+  {
+   "n": 8,
+   "claim": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 9,
+   "claim": "The households who lose units are the same people the cap is supposed to help."
+  },
+  {
+   "n": 10,
+   "claim": "Landlords say they would leave the market if returns fell below their mortgage cost."
+  },
+  {
+   "n": 11,
+   "claim": "New York shows a second kind of cost: after its rules were tightened in 2019, available stabilised listings fell and owners had less reason to maintain units."
+  },
+  {
+   "n": 12,
+   "claim": "Counsel thinks a hard cap on initial rents would almost certainly bring compensation claims under the Basic Law, while rules on tenancy terms are on firmer ground."
+  },
+  {
+   "n": 13,
+   "claim": "The objection does not defeat the narrower tightening I support."
+  },
+  {
+   "n": 14,
+   "claim": "The same working paper separates caps on rent levels from caps on increases within tenancies, finding consistent contraction for the first and small or null effects on stock for the second."
+  },
+  {
+   "n": 15,
+   "claim": "Hong Kong's own data fits this: the stock of these units grew from 100,800 in 2019 to 107,300 in 2021 and 111,200 in 2025, through the ordinance."
+  },
+  {
+   "n": 16,
+   "claim": "New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first rents."
+  },
+  {
+   "n": 17,
+   "claim": "The landlords' association says its members will leave, but it admits it has no data on members' actual margins, and its compliance cost figures come from a self-reported survey with a 34 percent response rate."
+  },
+  {
+   "n": 18,
+   "claim": "The risk of landlords leaving is still real, because the units that disappear house someone tonight, so my proposal keeps the burden on landlords modest."
+  },
+  {
+   "n": 19,
+   "claim": "Mr Chan says that if the queue for public housing were three years instead of five and a half, he would accept any rent in order to leave."
+  },
+  {
+   "n": 20,
+   "claim": "Rent rules cannot fix a queue."
+  },
+  {
+   "n": 21,
+   "claim": "The data has a weakness: figures after 2023 depend on survey extrapolation because reporting of new tenancies is voluntary below the ordinance threshold."
+  },
+  {
+   "n": 22,
+   "claim": "The first step should be to extend the rule to small tenancies and gather proper data."
+  },
+  {
+   "n": 23,
+   "claim": "My recommendation is a staged one: first, strengthen tenure security and lower the permitted rise within tenancies; second, build the survey data; only then consider a published, indexed per-square-foot band for starting rents."
+  },
+  {
+   "n": 24,
+   "claim": "Counsel thinks a published, indexed per-square-foot band for starting rents could be defended as rate-capping rather than confiscation, but it needs survey infrastructure that does not yet exist."
+  }
+ ],
+ "statements": "[0] (typed) I think Hong Kong should tighten rent control on subdivided units. Reasons I expect to hold up: (1) tenants in these units are poor and have no bargaining power, so landlords can raise rents freely; (2) the living conditions are unsafe and crowded, and affordable alternatives are scarce; (3) a rent cap can be paired with safety rules so that it protects people rather than just cutting supply.\n[2] (typed) My idea is that if landlords have to meet safety rules, they also need some money back, so the cap should be set high enough to allow that, but still stop sudden big rises. I am not sure it works though. Can you show me sources from the archive?\n[4] (typed) The shakier half is that a cap stops big rises. I would like a source about a case where a cap played out in Hong Kong, and also a counter-view that caps make landlords leave or cut supply.\n[6] (pick reason) D6 is a model of whether caps cut supply with Hong Kong-like cases, D2 is actual rent data so I can check if rises happened, and D5 is the landlords' counter-view I asked for.\n[17] (typed) I read D6, D2 and D5. My position is refined: the existing Hong Kong rule only limits rises inside a tenancy (D6p2) and stock kept growing (D2p1), so a moderate tightening looks safe, but a hard cap on starting rent looks risky (D6p1, D5p2). Rents still rose faster than general rents (D2p2) and burden got worse, so the current rule is not enough. The landlords' evidence is weak though (D5p3). What is the strongest opposing view to my position?\n[19] (typed) I agree a binding hard cap would hurt the people it is meant to help (D6p3), so I would not do that. My answer is to tighten the second-generation type: lower the allowed rise inside tenancies and make the rule cover small tenancies too, since D2p3 says reporting is voluntary below the threshold. That keeps the protection without forcing exits. But I still need to know if tenants actually gain, so I want another view, maybe the NGO or Berlin.\n[21] (typed) Mostly longer tenancies and fewer forced moves, because a poor tenant mainly fears being pushed out, plus rents that stay affordable relative to income. Please show me sources on that.\n[23] (pick reason) D8 is about a second-generation scheme over the long run, which is the type I favour; D3 is a real tenant's view on insecurity; D11 surveys tenants on tenure security, which is my measure of gain.\n[34] (typed) These change my position. I still say tighten, but the tightening should be about security of tenure (D3p1, D11p1) and the tenancy rise limit (D8p2), not rent levels. Tenants themselves care more about the queue and not being thrown out (D3p3, D11p1) than about cheaper rent. New York shows a cost too: less upkeep and fewer listings after tightening (D8p3). So I keep the direction but change the target. Can you give me structure options for the essay?\n[36] (typed) I pick option 1, claim, evidence, objection, reply, because my position is a refined one and the main task is to defend it against the supply-loss objection from D6 and the landlords.\n[38] (typed) The objection carries both: D6 supply loss and the D8 upkeep and listing cost. The landlords' weak evidence goes in the reply, as a reason not to take their exit threat at full face value, though I still accept the risk is real. I think I have enough turns of thinking; one more check: is there anything in the archive on enforcement or inspection that I should use?\n[40] (typed) It would need to show the threat is real but manageable, for example that inspection and tenure rules can be enforced cheaply. Please list what the archive has.\n[42] (pick reason) D9 is a legal opinion on compensation risk, which tests whether my tightening is legally manageable. I am skipping D10 because it is marked draft and not for circulation, so I should not rely on it in an essay.\n[47] (typed) D9 supports my refined view: a hard cap on starting rent risks compensation claims (D9p1), while rules on tenancy terms are on firmer ground. A light band could be a later step but needs survey data that does not exist yet (D9p2). So I will recommend tenure security and a tighter rise limit first, and a band only after data is built."
+}

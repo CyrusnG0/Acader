@@ -1,0 +1,262 @@
+{
+ "id": "C2-2",
+ "arm": "C2",
+ "components": {
+  "claim": 44.0,
+  "source": 100.0,
+  "cite": 83.33333333333333,
+  "change": 28.571428571428573,
+  "struct": 100.0
+ },
+ "composite": 67.18571428571428,
+ "composite_nostruct": 61.39495798319328,
+ "mismatches": [
+  "Paragraph 2 says: \"Standard theory says a binding rent ceiling will make landlords supply less housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The working paper says the supply question is empirical and puts numbers on it.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For bottom-of-market housing, supply responds to controlled rent levels with an elasticity of 0.31 to 0.48.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A 10 percent rent cut from a cap removes about 3 to 5 percent of the stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"First-generation controls are hard caps on rent levels and show consistent contraction effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Second-generation controls only cap increases within a tenancy and show small or no effects on the stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The paper says the 2021 Hong Kong ordinance is second-generation, explaining why the stock stayed stable in the rent index.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The NGO report surveyed 440 subdivided unit households.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Tenants named the long public-housing queue and tenancy insecurity as bigger problems than the rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Sixty-one percent would accept a small nominal rent increase for three years of security of tenure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Seventy-four percent would accept a small nominal rent increase for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Even a second-generation control might change landlord behaviour over a longer time.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Landlords could raise starting rents to make up for limited increases later.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The supply numbers argue against hard caps, the control-type distinction shows a safer path, and the tenant survey shows security matters more than a lower rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The supply numbers argue against hard caps [D6p1], the distinction between control types shows a safer path [D6p2], and the tenant survey shows that security ma\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The supply numbers argue against hard caps [D6p1], the distinction between control types shows a safer path [D6p2], and the tenant survey shows that security ma\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a narrow way.",
+   "ancestor": 9
+  },
+  {
+   "para": 1,
+   "claim": "The government should strengthen limits on rent increases inside a tenancy.",
+   "ancestor": 9
+  },
+  {
+   "para": 1,
+   "claim": "The government should not bring in hard caps on rent levels.",
+   "ancestor": 9
+  },
+  {
+   "para": 1,
+   "claim": "Narrow tightening keeps tenants safer without shrinking the small supply of cheap housing.",
+   "ancestor": 9
+  },
+  {
+   "para": 2,
+   "claim": "The main worry with any rent control is supply.",
+   "ancestor": 9
+  },
+  {
+   "para": 2,
+   "claim": "Standard theory says a binding rent ceiling will make landlords supply less housing.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "The working paper says the supply question is empirical and puts numbers on it.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "For bottom-of-market housing, supply responds to controlled rent levels with an elasticity of 0.31 to 0.48.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "A 10 percent rent cut from a cap removes about 3 to 5 percent of the stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "The supply cost is why the author does not support hard caps.",
+   "ancestor": 9
+  },
+  {
+   "para": 3,
+   "claim": "First-generation controls are hard caps on rent levels and show consistent contraction effects.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Second-generation controls only cap increases within a tenancy and show small or no effects on the stock.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The paper says the 2021 Hong Kong ordinance is second-generation, explaining why the stock stayed stable in the rent index.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Hong Kong can strengthen its current rules without repeating the supply loss that comes with hard caps.",
+   "ancestor": 9
+  },
+  {
+   "para": 4,
+   "claim": "The NGO report surveyed 440 subdivided unit households.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Tenants named the long public-housing queue and tenancy insecurity as bigger problems than the rent level.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Sixty-one percent would accept a small nominal rent increase for three years of security of tenure.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Seventy-four percent would accept a small nominal rent increase for a faster public-housing offer.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Rules limiting increases inside a tenancy and giving stability are closer to what tenants want than a rent ceiling.",
+   "ancestor": 9
+  },
+  {
+   "para": 5,
+   "claim": "Even a second-generation control might change landlord behaviour over a longer time.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Landlords could raise starting rents to make up for limited increases later.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Hard caps carry a clear supply cost, while within-tenancy limits seem to carry little.",
+   "ancestor": 9
+  },
+  {
+   "para": 6,
+   "claim": "Hong Kong should tighten rent control on subdivided units in the narrow second-generation form.",
+   "ancestor": 9
+  },
+  {
+   "para": 6,
+   "claim": "The supply numbers argue against hard caps, the control-type distinction shows a safer path, and the tenant survey shows security matters more than a lower rent level.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A narrow tightening answers what the evidence shows and avoids making the housing shortage worse.",
+   "ancestor": 9
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D6p1",
+   "sentence": "In plain terms, a 10 percent cut in rent caused by a cap removes about 3 to 5 percent of the stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Second-generation controls only cap increases within a tenancy, and these show small or no effects on the stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "Sixty-one percent said they would accept a small nominal rent increase in return for three years of security of tenure, and 74 percent would do so for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The supply numbers argue against hard caps [D6p1], the distinction between control types shows a safer path [D6p2], and the tenant survey shows that security matters more to residents than a lower rent level [D11p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The supply numbers argue against hard caps [D6p1], the distinction between control types shows a safer path [D6p2], and the tenant survey shows that security matters more to residents than a lower rent level [D11p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The supply numbers argue against hard caps [D6p1], the distinction between control types shows a safer path [D6p2], and the tenant survey shows that security matters more to residents than a lower rent level [D11p1].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    11
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    11
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    11,
+    11
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    11,
+    11
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    11,
+    11
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    11,
+    11
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    11,
+    11
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 1,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ }
+}

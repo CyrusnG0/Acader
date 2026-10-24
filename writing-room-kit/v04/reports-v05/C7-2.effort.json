@@ -1,0 +1,10 @@
+{
+ "id": "C7-2",
+ "arm": "C7",
+ "student_turns": 34,
+ "chars_typed": 1009,
+ "reads": 26,
+ "distinct_passages": 13,
+ "check_rounds": 0,
+ "outside_calls": null
+}

@@ -1,0 +1,149 @@
+{
+ "id": "C7-3",
+ "arm": "C7",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.3333333333333335,
+  "F14b parentage": 0.5714285714285714,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Needs sources on rent control generally",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Needs sources on Hong Kong specifically",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Essay's main argument leans toward opposing a hard cap on initial rents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs rent-control supply effects / elasticity material",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs the HK 2021 ordinance experience",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs something on enforcement",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants a tenant-side view",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "All five sources map to the argument angles listed",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Wants sources on the enforcement side",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Wants the Wong/Chan interview",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Enforcement source supports a claim already being made about inspection capacity",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Wants the interview for the human voice \u2014 what tenants say they need",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Needs enforcement capacity sources",
+   "parent": {
+    "type": "student",
+    "turn": 21
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Needs tenant voices sources",
+   "parent": {
+    "type": "student",
+    "turn": 21
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Needs sources on rent control generally\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Needs sources on Hong Kong specifically\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Essay's main argument leans toward opposing a hard cap on initial rents\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs something on enforcement\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Wants a tenant-side view\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"Wants the Wong/Chan interview\". How did you get there?"
+  }
+ ]
+}

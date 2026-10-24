@@ -1,0 +1,94 @@
+{
+ "packet": "P10",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten regulation of subdivided units by targeting tenancy security and habitability, not by capping initial rents."
+  },
+  {
+   "n": 2,
+   "claim": "A hard first-rent cap would transfer income to incumbents while shrinking entry at the bottom."
+  },
+  {
+   "n": 3,
+   "claim": "A tenure-and-standards package addresses the constraint tenants themselves name and avoids legal and enforcement traps."
+  },
+  {
+   "n": 4,
+   "claim": "Mr Chan, a delivery driver, says the waiting list, not rent, is what would help most."
+  },
+  {
+   "n": 5,
+   "claim": "An NGO survey of 440 households found 61% would trade a nominal rent increase for three-year security of tenure."
+  },
+  {
+   "n": 6,
+   "claim": "The same survey found 74% would trade a nominal rent increase for a faster public-housing offer."
+  },
+  {
+   "n": 7,
+   "claim": "Mrs Wong's experience shows that a cap without enforcement infrastructure is decorative."
+  },
+  {
+   "n": 8,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies but not initial rents, and the estimated SDU stock grew from 107,300 in 2021 to 111,200 in 2025."
+  },
+  {
+   "n": 9,
+   "claim": "Academic literature warns that the stability is an artifact of a non-binding instrument: second-generation controls show small or null stock effects, while first-generation caps on levels show consistent contraction."
+  },
+  {
+   "n": 10,
+   "claim": "The elasticity estimate for marginal SDU-type stock is 0.31 to 0.48, meaning a 10% cap-induced rent reduction removes roughly 3 to 5% of stock over five years."
+  },
+  {
+   "n": 11,
+   "claim": "A Hong Kong-like model shows a 15% cut in initial rents yields about 900 dollars per month to incumbents, against 3,000 to 4,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 12,
+   "claim": "Berlin's Mietendeckel capped rents on roughly 1.5 million flats; initial-offer rents fell, but classified-listing supply contracted within a year."
+  },
+  {
+   "n": 13,
+   "claim": "When Berlin's court struck the law down, suppressed increases released and new-contract rents jumped above the pre-cap trend."
+  },
+  {
+   "n": 14,
+   "claim": "New York's second-generation scheme shows modest stock contraction but falling maintenance incentives and a measurable fall in available stabilised listings after the 2019 tightening."
+  },
+  {
+   "n": 15,
+   "claim": "The tenants a hard cap protects are those already inside; the bill goes to those still outside."
+  },
+  {
+   "n": 16,
+   "claim": "A hard cap framed as deprivation of rental income invites compensation claims under the Basic Law."
+  },
+  {
+   "n": 17,
+   "claim": "A band-based middle instrument requires survey infrastructure that does not exist, and the Rating and Valuation Department estimates 40 to 60 staff-years to stand up a certifiable tenancy register."
+  },
+  {
+   "n": 18,
+   "claim": "Enforcement would systematically miss the most exploited tail: tenants with no written agreement or the newest arrivals least able to complain."
+  },
+  {
+   "n": 19,
+   "claim": "The subcommittee could not identify any design under which the newest-arrival tail is protected first rather than last."
+  },
+  {
+   "n": 20,
+   "claim": "The alternative is to spend political capital on tenure security, a written-agreement mandate, and condition inspection."
+  },
+  {
+   "n": 21,
+   "claim": "The NGO report supports a narrow tightening of tenure security plus a light band on initial rents, and opposition to a hard cap."
+  },
+  {
+   "n": 22,
+   "claim": "If the queue is the binding constraint, the highest-return intervention is to shorten it and make the waiting period survivable, not to cap a price."
+  }
+ ],
+ "statements": "[0] (typed) I need to work through the sources this essay cites. Let's start with the tenant testimony side \u2014 can you pull up the source on Mr Chan, the delivery driver in Kwai Chung, with the rent cap and the public housing queue?\n[2] (typed) No problem \u2014 let me ask for the source properly. Please give me the document that contains Mr Chan's testimony. In the essay it's cited as D3, with his quote about accepting any rent if the queue were three years instead of five and a half. I need to see the passages that cover his situation and his views on the cap.\n[4] (pick reason) These give the tenant-side evidence the essay's first argument rests on\n[17] (typed) I've got the tenant-side sources. Before I read them, let me also pull the supply-side and legal materials the argument needs: the academic working paper on rent-control supply elasticity, the Berlin and New York evidence, and the Basic Law and enforcement analysis. Can you shortlist those?\n[20] (typed) It's doing two jobs at once: the elasticity paper is the load-bearing evidence for my claim that a first-rent cap shrinks entry, and Berlin/New York are the cases I'm using to show the mechanism in the wild. The legal/enforcement material is there to show why a cap is the wrong instrument even if I wanted it. So let's start with the supply side \u2014 can you shortlist the academic working paper on rent-control supply elasticity, plus the Berlin and New York sources and the Basic Law/enforcement analysis?\n[22] (pick reason) all five carry the supply, comparative, and legal claims the essay builds on\n[38] (typed) I have the supply-side and comparative evidence covered. The remaining cited sources are the legal and enforcement documents D9 and D10. Please pull those up.\n[40] (typed) I need D9 and D10 for two specific things. From D9 I want the legal analysis: how a hard cap on initial rents would be characterized \u2014 whether it looks like a deprivation of rental income triggering Basic Law compensation, versus a cap framed as regulation of contractual terms that would survive but leave first rents untouched \u2014 and also the band-based middle option and what infrastructure it would need. From D10 I want the enforcement side: the Rating and Valuation Department's staffing estimate for a certifiable tenancy register, and evidence about which tenants enforcement would miss. Please ask for D9 and D10.\n[42] (pick reason) the two remaining sources the argument still needs, legal characterisation and enforcement capacity\n[55] (typed) I've got the legal and enforcement sources open now. Before I write, one more thing I want to nail down: the supply-side mechanism the argument leans on. I've read the elasticity working paper but I want to check whether the landlord association's submission actually engages with the supply argument or just makes a fairness claim \u2014 that distinction matters for how I frame the counterargument. Can you pull the relevant source for me?\n[57] (typed) How it would count as engaging: I'd want to see whether it offers its own supply evidence or a direct response to the elasticity estimate, rather than just a fairness or hardship claim. Please pull the landlord/property-sector submission so I can check which it is.\n[59] (pick reason) landlord submission tests whether supply argument is engaged or merely asserted"
+}

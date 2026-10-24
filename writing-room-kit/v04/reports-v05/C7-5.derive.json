@@ -1,0 +1,202 @@
+{
+ "id": "C7-5",
+ "arm": "C7",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2,
+  "F14b parentage": 0.2777777777777778,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student is working on an essay about rent control and the SDU market.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student requests sources on the 2021 Tenancy Control Ordinance and the SDU market generally, starting broad.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source should back up a claim.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student argues the 2021 ordinance is too weak.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The ordinance caps increases inside a tenancy but leaves the initial rent free.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Landlords jack up the first offer, which is the whole complaint.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student wants core data plus elasticity and tenant survey.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The elasticity numbers are the spine of the essay.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student wants material on what tenants actually say they want, such as surveys or a named tenant to quote.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The tenant material is the counterweight because the student's numbers all come from supply.",
+   "parent": {
+    "type": "assistant",
+    "turn": 21
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student needs the demand side: what tenants themselves say, surveys, a named tenant, anything with a voice.",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student asks to bring back the doc with an NGO survey from the last list.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student wants tenant-side voices and the NGO survey.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "The student notes the first shortlist was mostly tenant stuff.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "The student wants the other camp: landlord side or academic modeling.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "The student wants the landlord association one and the elasticity paper.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "The student wants to see what the landlord side claims about margins and whether the modeling backs the contraction story.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "The student wants landlord claims and elasticity modeling, the other camp.",
+   "parent": {
+    "type": "student",
+    "turn": 39
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student is working on an essay about rent control and the SDU market.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student requests sources on the 2021 Tenancy Control Ordinance and the SDU market generally, starting broad.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student argues the 2021 ordinance is too weak.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The ordinance caps increases inside a tenancy but leaves the initial rent free.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Landlords jack up the first offer, which is the whole complaint.\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"The student wants core data plus elasticity and tenant survey.\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"The elasticity numbers are the spine of the essay.\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"The student wants material on what tenants actually say they want, such as surveys or a named tenant to quote.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student asks to bring back the doc with an NGO survey from the last list.\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"The student notes the first shortlist was mostly tenant stuff.\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"The student wants the other camp: landlord side or academic modeling.\". How did you get there?"
+  },
+  {
+   "turn": 39,
+   "question": "At turn 39 you said: \"The student wants the landlord association one and the elasticity paper.\". How did you get there?"
+  },
+  {
+   "turn": 39,
+   "question": "At turn 39 you said: \"The student wants to see what the landlord side claims about margins and whether the modeling backs the contraction story.\". How did you get there?"
+  }
+ ]
+}

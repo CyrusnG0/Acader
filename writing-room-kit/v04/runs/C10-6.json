@@ -1,0 +1,698 @@
+{
+ "id": "C10-6",
+ "arm": "C10",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Should Hong Kong tighten rent control on subdivided units? My answer is yes, but not in the way I first thought. My first instinct was a hard cap on starting rents. After reading the course archive I now think the better tightening is three-year tenure security plus a light band on initial rents.\n\nThe need is clear. About 110,000 households live in subdivided units, and they pay 15 to 25 percent more per square foot than people in mainstream flats [D1p1]. Many are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years [D1p2]. For them the unit is a residual option, not a choice. That is why landlords hold so much power: a tenant cannot easily walk away.\n\nThe current rule is too weak. The 2021 Tenancy Control Ordinance capped rent increases inside an existing tenancy but not the starting rent [D1p3]. Under it, rent growth per square foot slowed, yet the rent to income burden of SDU households still rose from 31 to 34 percent [D2p2]. So the present control has not fixed affordability. This is the first part of my claim. The second part is that rent rules alone cannot solve the problem. An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level, and 61 percent would trade a nominal rent increase for three years of security [D11p1].\n\nThe strongest objection is about supply, and it changed my mind about a hard cap. A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of marginal stock over five years [D6p1]. In its model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment [D6p4]. Berlin points the same way. After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to those still outside [D7p1][D7p3]. Since the people locked out are mostly newcomers, a hard cap would hurt the same group it is meant to protect.\n\nI do not accept the landlords' claim in full, though. The Landlords Association says members will leave the segment if returns fall below mortgage cost [D5p2]. But it also admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3]. The 3 to 5 percent figure is stock contraction, which is related to owners leaving but is not a direct count of it, so I will not claim to know how many would go. What I can say is that the threat is real but partial and not as total as the Association suggests.\n\nMy reply is that the tightening should be of the kind that did not shrink stock. SDU stock grew from 100,800 in 2019 to 111,200 in 2025, including through the 2021 ordinance [D2p1]. I should be careful here: the working paper says this stability exists because the ordinance is a second-generation control that caps increases within tenancies, not hard levels [D6p2]. So I am not saying landlords simply stayed put. I am saying that softer rules have a better record on supply, and the NGO report reaches the same view, supporting tenure security and a light band on initial rents while opposing a hard cap [D11p3].\n\nThere is one limit on my claim. The NGO report also argues that enforcement effort spent policing rents is not spent on inspecting fire, partition and ventilation, where harm is documented and immediate [D11p2]. I take this seriously. Rent rules are second best to shortening the public housing queue and enforcing safety. My own reasoning, not something the passages say, is that tenure security should be less costly to enforce than checking every rent level, so it fits this limit better than a hard cap would.\n\nIn the end, Hong Kong should tighten, but carefully. Extend the 2021 approach with longer tenure and a light band on starting rents, and do not use a hard initial cap, because its costs fall on the newcomers who most need a place.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 452
+  },
+  {
+   "pid": "D1p2",
+   "pos": 585
+  },
+  {
+   "pid": "D1p3",
+   "pos": 864
+  },
+  {
+   "pid": "D2p2",
+   "pos": 999
+  },
+  {
+   "pid": "D11p1",
+   "pos": 1365
+  },
+  {
+   "pid": "D6p1",
+   "pos": 1587
+  },
+  {
+   "pid": "D6p4",
+   "pos": 1753
+  },
+  {
+   "pid": "D7p1",
+   "pos": 1966
+  },
+  {
+   "pid": "D7p3",
+   "pos": 1972
+  },
+  {
+   "pid": "D5p2",
+   "pos": 2244
+  },
+  {
+   "pid": "D5p3",
+   "pos": 2400
+  },
+  {
+   "pid": "D2p1",
+   "pos": 2846
+  },
+  {
+   "pid": "D6p2",
+   "pos": 3032
+  },
+  {
+   "pid": "D11p3",
+   "pos": 3279
+  },
+  {
+   "pid": "D11p2",
+   "pos": 3492
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 12
+ },
+ "drafts": [
+  {
+   "turn": 39,
+   "text": "I first thought Hong Kong should tighten rent control on subdivided units because tenants are poor and have little power. After reading the archive I still say tighten, but not with a hard cap on starting rents.\n\nAbout 110,000 households live in subdivided units, and they pay 15 to 25 percent more per square foot than people in normal flats [D1p1]. Many are new arrivals or single parents waiting for public housing [D1p2]. The 2021 ordinance only capped rises inside a tenancy [D1p3], and burden still went from 31 to 34 percent of income [D2p2].\n\nThe objection is that a hard cap cuts supply. A working paper models a 15 percent cut in initial rents and finds a gain for people inside but thousands per year locked out [D6p4]. Berlin shows the same pattern [D7p3].\n",
+   "struct": "typed"
+  },
+  {
+   "turn": 45,
+   "text": "My first instinct was that Hong Kong should put a hard cap on starting rents in subdivided units. After reading the archive I still think rent control should be tightened, but I changed what tightening should mean.\n\nAbout 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than in ordinary flats [D1p1]. Many are new arrivals and single parents waiting for public housing [D1p2]. The 2021 ordinance only capped rises inside a tenancy [D1p3], and rent burden still went from 31 to 34 percent of income [D2p2]. So the current control is too weak.\n\nThe objection is supply. A working paper estimates that a 10 percent cap-induced rent cut removes 3 to 5 percent of stock [D6p1], and in a model of a 15 percent cut in initial rents, incumbents gain while 3,000 to 4,000 households a year cannot enter [D6p4]. Berlin shows the same: the tenants protected were those already inside [D7p3].\n",
+   "struct": "typed"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "confident",
+   "text": "My position: Hong Kong should tighten rent control on subdivided units. Reasons I expect to hold up: (1) tenants in subdivided flats are poor and have little bargaining power, so landlords can raise rents freely; (2) the living conditions are bad and rents per square foot are very high; (3) stronger rules protect families from sudden eviction and rent jumps. I expect the main counter-argument is that landlords will leave the market.",
+   "paste": false
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Earlier you said landlords can raise rents freely because tenants have little bargaining power \u2014 how does tighter rent control change that bargaining power, rather than just capping the rent?",
+   "policy": "COACH"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I think Hong Kong should tighten rent control on subdivided units. Can you show me sources from the archive that test this?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want sources that \"test\" your claim \u2014 can you say what job the source needs to do for which part of your argument: show evidence that tighter control helps tenants, show a counter-view about harm to landlords, or define what counts as a subdivided unit?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "Rent control helps because a cap plus security of tenure means a landlord cannot just threaten a big rise or eviction, so the tenant is less stuck. For sources I need: first, evidence on what happened to tenants when control was introduced, second, the counter-view about landlords and supply, and third, a basic definition of subdivided units and how many there are.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over 2019-2025, with caveats on post-2023 figures.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer defining subdivided units and outlining the rent control debate.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association arguing against hard initial-rent caps.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap and its aftermath.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "D1 gives the definition and the rent control debate, and D2 should show actual rent and stock numbers so I can check whether tenants really face high rents.",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p3"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "say",
+   "text": "After reading: D1p3 says the 2021 ordinance only capped increases inside a tenancy, not the starting rent, so my idea of tightening has a clear gap to fill. D2p1 says stock kept growing after the ordinance, which supports me against the landlords-will-leave worry. But D2p2 says SDU rent growth slowed under the ordinance and still burden went from 31 to 34 percent, so the existing control did not fix affordability. I keep my position but refine it: tightening should probably target the initial rent, not just increases. Now I want the counter-view. What do you have?",
+   "paste": false,
+   "intent": "counter_request"
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Document D6, the working paper on supply elasticity, argues that a cap on initial rent levels is a first-generation control, and that first-generation controls show consistent stock contraction \u2014 unlike the second-generation 2021 ordinance, whose stability your D2 evidence reflects.\n\nHow do you answer this?",
+   "policy": "P-CTR"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "say",
+   "text": "That is a real threat to my refinement: if initial-rent caps shrink supply, then my refinement could hurt the people I want to help, because the SDU is their only option while they wait for public housing (D1p2). I can't answer fully until I read D6 and the landlord side. My provisional answer is that I might support a softer version, like limits on how big rises can be at renewal plus longer tenure, rather than a hard initial cap. Can I get D5, D6 and D7 to check this?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 17,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said what you need to check: whether the supply threat is real, and what landlords actually do. So before I point anywhere, tell me this \u2014 for your claim that a softer version (rise limits plus longer tenure) protects the SDU tenants you're worried about, what would a source have to show you that you don't already have?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "say",
+   "text": "It would need to show: (a) what happens to the number of units when a hard cap is used versus a softer limit, (b) whether landlords say they would really exit or just complain, and (c) whether tenants in a place with a cap ended up better or worse off afterward. I only have Hong Kong numbers from one period, so I need other evidence too.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy analyst's vantage point, covering new listings and incumbent tenants.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing supply elasticity literature and modeling a Hong Kong-like cap scenario, distinguishing hard caps from softer limits.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association representing SDU owners, arguing against a hard initial-rent cap and predicting exit.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting an SDU rent and stock index for 2019-2025, with a caveat about post-2023 voluntary reporting.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying SDU tenants and arguing for tenure security over hard rent caps, based on revealed preferences and enforcement trade-offs.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "D6 separates hard caps from softer limits (my point a), D5 shows what landlords claim they would do (b), D7 is a real case of a cap and what happened to tenants (c), and D11 asks tenants directly and favours tenure security, which tests my softer version.",
+   "docs": [
+    "D5",
+    "D6",
+    "D7",
+    "D11"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p2"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p3"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p3"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "say",
+   "text": "These change my position. D6p4 and D7p3 show a hard initial cap helps people already inside and shuts out newcomers, who are the same kind of people I want to protect. D5p2 is a threat but D5p3 admits no margin data, so I treat landlord exit as less certain than they say. D11p1 and D11p3 say tenants prefer tenure security, which fits my softer version. So I change: no hard initial cap, but yes to tightening through tenure security and a light band on rents. I would also say that D2p2 shows burden still rose, so rent rules alone are not enough. Can you give me structure options for the essay?",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 36,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Three tracks:\n\n1. Claim, evidence, objection, reply \u2014 good if you want your shift from hard cap to softer version to be the spine of the essay.\n2. Problem, cause, response \u2014 good if you want D2p2's burden numbers to set up why rent rules alone fail.\n3. Compare and contrast \u2014 good if you want Berlin and Hong Kong side by side as the main engine.\n\nWhich one fits what you want to say, and why?",
+   "policy": "P-STR"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "say",
+   "text": "I pick option 1, claim, evidence, objection, reply, because my view really changed during research and the objection about supply is the strongest part.",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 38,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Good \u2014 so the essay's spine is your shift, and the supply objection is the hinge. Two things to settle before you draft: where does D2p2's burden figure live in that spine \u2014 is it part of your claim, or part of the reply? And do you want the reader to see your earlier hard-cap position at all, or only the refined one?",
+   "policy": "P-STR"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "say",
+   "text": "The burden figure D2p2 goes in the claim, as proof that the existing control is too weak. And yes, I want the reader to see my earlier hard-cap thought briefly, because the change shows why the evidence matters.",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Two quick checks before you draft: if D2p2 sits in the claim, does your claim then have two parts (rules too weak, and rent rules alone insufficient) \u2014 and can you say how they connect in one line? And for the earlier hard-cap position, where do you want it to appear: as the objection you once held, or as a separate step before the objection?",
+   "policy": "P-STR"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "say",
+   "text": "One more check: does the archive show anything on whether the landlord exit threat is believable, beyond D5? I read D5p3 and D2p1 already.",
+   "paste": false,
+   "intent": "reading_help"
+  },
+  {
+   "i": 42,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "D5p3 is the only place that directly questions the exit threat's evidence base \u2014 it notes the Association has no margin data and that its compliance-cost figures are self-reported from a 34 percent response rate. D2p1 is indirect: stock kept growing through the 2021 ordinance, which is consistent with exit not happening at that scale, though D6p2 attributes that to the ordinance being second-generation rather than to landlords staying put. D6p1 gives you a magnitude (3 to 5 percent of stock over five years per 10 percent cut) that you could weigh against D5p2's claim.\n\nWhich of those do you want to use as your test of the threat, and why that one?",
+   "policy": "P-READ"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "say",
+   "text": "I will use D6p1 as the test, because it gives a size (3 to 5 percent of stock per 10 percent rent cut) and not just a threat. So exit is real but partial, not the total collapse D5p2 suggests. The two parts of my claim connect like this: the existing control is too weak on tenure and burden, and rent rules alone cannot fix a long queue, so tightening must focus on tenure. The earlier hard-cap thought will be a step before the objection.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 44,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've settled the spine, the claim's two parts, and where the hard-cap thought sits. What do you want to work out next \u2014 the order of your evidence paragraphs, or how the reply answers the supply objection?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "say",
+   "text": "The reply: the supply risk is real for hard caps (D6p2 says first-generation controls contract stock), but the 2021 style limit did not shrink stock (D2p1), so tenure security and a light band on initial rents is the safer tightening (D11p3). I will do evidence order as: need, weak current rule, objection, reply.",
+   "paste": false,
+   "intent": "structure_request"
+  },
+  {
+   "i": 46,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before you draft: your reply leans on D2p1 to show the 2021-style limit didn't shrink stock, but you also said D6p2 attributes that to it being second-generation rather than to landlords staying. Does that distinction need a sentence in the reply, or does it sit better in the objection?",
+   "policy": "P-STR"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "say",
+   "text": "One weakness: D11 argues enforcement effort should go to inspection of fire and ventilation instead of rents (D11p2). Should I admit that tightening rents is not the top priority?",
+   "paste": false,
+   "intent": "argument_request"
+  },
+  {
+   "i": 48,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "That's a judgment only you can make, but here's what's at stake: if you admit it, you're saying your own proposal is second-best, which could weaken the claim \u2014 or could make you look like you weighed D11p2 honestly. If you don't, a reader who knows D11p2 may think you dodged it.\n\nOne way to frame the choice: is D11p2 an objection to your claim, or a limit on how far your claim goes? Which reading do you want the reader to take?",
+   "policy": "P-ARG"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "confident",
+   "text": "Revised position: tighten, but through three-year tenure security and a light band on initial rents, not a hard cap. Reasons: hard caps shut out newcomers (D6p4, D7p3), tenants prefer security (D11p1), and the current rule leaves burden rising (D2p2).",
+   "paste": false
+  },
+  {
+   "i": 50,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You said tenants prefer security (D11p1), yet D11p2 argues enforcement capacity spent on rents is capacity not spent on fire and ventilation \u2014 how do those two sit together in your claim?",
+   "policy": "COACH"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "say",
+   "text": "I will treat D11p2 as a limit on my claim: the D2p1 point sits in the reply with one sentence saying it works because the ordinance is second-generation (D6p2). Tenure security is cheap to enforce compared with policing every rent, so it fits D11p2 better than a hard cap, and I will say rent rules are second best to inspections and housing queue shortening.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 52,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've now placed D11p2 as a limit and given a reason it fits your softer version better than a hard cap. What do you want to work out next \u2014 how that limit is worded in the claim itself, or how the reply handles the second-generation point from D6p2?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "say",
+   "text": "I think I am ready to write the essay. Anything in my plan that does not hold with the passages I read?",
+   "paste": false,
+   "intent": "other"
+  },
+  {
+   "i": 54,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Two spots worth a second look before you draft. First, you're using D6p1's 3\u20135 percent figure as your test of the exit threat, but that figure is about stock loss per 10 percent rent cut \u2014 does it actually measure landlord exit, or something adjacent? Second, you say tenure security is \"cheap to enforce,\" but do any of your passages say that, or is that your inference from D11p2?\n\nNeither is necessarily a problem \u2014 but which of the two would you rather check against the archive before you start writing?",
+   "policy": "other"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "say",
+   "text": "Good catches. D6p1 is stock loss, which is related to exit but is not a direct count of owners leaving, so I will say 'stock contraction' and not 'exit'. And 'cheap to enforce' is my own inference from D11p2, not something the passages say, so I will word it as my reasoning.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 56,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've flagged both as your own wording rather than the passages' claims. What do you want to check next \u2014 whether any passage supports the enforcement-cost comparison, or whether your reply needs a sentence on why stock contraction stands in for exit?",
+   "policy": "P-CLM"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 2,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D10"
+    ],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D1",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D1",
+    "D5",
+    "D7",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "D1 gives the definition and the rent control debate, and D2 should show actual rent and stock numbers so I can check whether tenants really face high rents."
+  },
+  {
+   "open_turn": 16,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D5",
+     "D7",
+     "D11",
+     "D10"
+    ],
+    [
+     "D6",
+     "D5",
+     "D7",
+     "D2",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 19,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D6",
+    "D5",
+    "D2",
+    "D11"
+   ],
+   "picked": [
+    "D11",
+    "D5",
+    "D6",
+    "D7"
+   ],
+   "reason": "D6 separates hard caps from softer limits (my point a), D5 shows what landlords claim they would do (b), D7 is a real case of a cap and what happened to tenants (c), and D11 asks tenants directly and favours tenure security, which tests my softer version."
+  }
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "D1 gives the definition and the rent control debate, and D2 should show actual rent and stock numbers so I can check whether tenants really face high rents."
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D5",
+    "D6",
+    "D7",
+    "D11"
+   ],
+   "reason": "D6 separates hard caps from softer limits (my point a), D5 shows what landlords claim they would do (b), D7 is a real case of a cap and what happened to tenants (c), and D11 asks tenants directly and favours tenure security, which tests my softer version."
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D5",
+  "D6",
+  "D7",
+  "D11"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D1p3",
+  "D2p1",
+  "D2p2",
+  "D2p3",
+  "D5p1",
+  "D5p2",
+  "D5p3",
+  "D6p1",
+  "D6p2",
+  "D6p3",
+  "D6p4",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D11p1",
+  "D11p2",
+  "D11p3"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 5
+ },
+ "question_kinds": [
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 4,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 14,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 16,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 18,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 35,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 37,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 39,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 41,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 43,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 45,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 47,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 51,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 53,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 55,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 710
+ }
+}

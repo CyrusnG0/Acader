@@ -1,0 +1,15 @@
+Hong Kong should not impose a hard cap on starting rents in subdivided units. It should tighten regulation narrowly, with security of tenure and a light, indexed band on starting rents, because a hard cap could hurt the households it is meant to help.
+
+The case for a hard cap rests on real hardship. Tenants pay a 15 to 25 percent premium per square foot [D1p1], and real rent burden has gone from 31 to 34 percent of income [D2p2]. Mr Chan pays about a third of his income for 120 sq ft [D3p1]. Mrs Wong has no written agreement and says the ordinance changed nothing [D4p1]. These are real harms.
+
+But a hard cap may shrink the stock tenants rely on. The literature estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1]. The paper models a 15 percent cut as a transfer of about 900 dollars a month to incumbents, against 3,000 to 4,000 households a year unable to enter [D6p4]. The 2021 ordinance only limits increases, and such controls show small or null stock effects [D6p2], which fits stock growing from 100,800 to 111,200 [D2p1]. Berlin shows the difference: listings contracted within a year and rents jumped when the cap fell [D7p1][D7p2].
+
+New York keeps most of its stock because it is light on first rents [D8p2]. When it tightened in 2019 available stabilised listings fell as owners shifted units to other uses [D8p3]. This is an association, not proof, but it points the same way.
+
+Enforcement makes a hard cap worse. Inspection covers under 6 percent of stock per year, and a band cap needs a tenancy register that would take 40 to 60 staff-years [D10p1]. Tenants with no written agreement, like Mrs Wong [D4p1], are least able to complain, so enforcement would miss the most exploited [D10p2]. A hard cap would also invite compensation claims and judicial review, and litigation would outlast a Council term [D9p1][D9p3].
+
+The landlords say owners will exit if returns fall below mortgage cost [D5p2]. That is a real risk for a hard cap, though Mrs Wong thinks her landlords would stay because the units are their pension [D4p2].
+
+Tenants themselves name the queue and insecurity more than rent. Mr Chan would accept any rent if the wait were three years [D3p3], and 61 percent in the NGO survey would trade a small rent rise for three-year tenure [D11p1].
+
+So the defensible path is tenure security plus a published per-square-foot band that regulators can defend as rate-capping [D9p2].

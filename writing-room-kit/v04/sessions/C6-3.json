@@ -1,0 +1,228 @@
+{
+ "name": "C6-3",
+ "id": "C6-3",
+ "arm": "C6",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "Please provide the sources relevant to this essay on rent control for subdivided units. I need the documents cited as D1 through D12, including the demographic profile of SDU tenants, the 2021 ordinance stock and rent figures, the think-tank commentary, the academic literature on first- and second-generation controls, the landlord association and tenant testimony (Mr Chan, Mrs Wong), the Berlin and New York cases, the enforcement and judicial-review analyses, and the NGO survey.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've listed a lot of pieces you want the sources to cover. Before I help you think about what to look for, which one claim in your essay is the most load-bearing \u2014 the one that falls apart if you don't have a source behind it? And what would that source need to show: a number, a counter-view, a definition, or someone's first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "The most load-bearing claim is the supply elasticity figure: that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of the stock over five years. That needs a number from the academic literature on first-generation controls. Please retrieve the relevant sources.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over time, with a caveat on post-2023 survey extrapolation.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020\u20132021 rent cap, its supply effects, and its court annulment.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal enforcement subcommittee minute, draft and not for circulation, on inspection capacity and enforcement gaps.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing supply elasticity literature and distinguishing first- and second-generation controls.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households, arguing caps treat a price symptom of a quantity problem.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "open with the essay's first two evidence clusters",
+   "docs": [
+    "D6",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D11",
+     "D7",
+     "D10"
+    ],
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D7",
+    "D10",
+    "D6",
+    "D11"
+   ],
+   "picked": [
+    "D2",
+    "D6"
+   ],
+   "reason": "open with the essay's first two evidence clusters"
+  }
+ ],
+ "unlocked_docs": [
+  "D6",
+  "D2"
+ ],
+ "read_passages": [
+  "D2p1",
+  "D2p2",
+  "D6p1",
+  "D6p2",
+  "D6p4",
+  "D6p3"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D6",
+    "D2"
+   ],
+   "reason": "open with the essay's first two evidence clusters"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 18,
+   "text": "**Tighten the Tenancy, Not the Rent: A Case Against a Hard Cap on Subdivided Units**\n\nHong Kong should not tighten rent control on subdivided units (SDUs) by capping initial rents. It should instead tighten tenure security and enforcement of living conditions, paired at most with a light, indexed band on first rents. The archive points consistently to one conclusion: a hard cap on initial rent levels would transfer income to today's incumbents while shrinking the residual stock on which tomorrow's most vulnerable households depend, and it would do so through an enforcement apparatus that cannot reach the tenants it claims to protect.",
+   "struct": "retyped"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D2",
+  "D7",
+  "D10",
+  "D6",
+  "D11"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

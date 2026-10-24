@@ -1,0 +1,347 @@
+{
+ "id": "C8-3",
+ "arm": "C8",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.9166666666666665,
+  "F14b parentage": 0.5428571428571428,
+  "F14c grounded chains": 0.15
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Needs sources for an essay on Hong Kong rent control for subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants the source documenting the per-square-foot premium SDU tenants pay",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The source must stand as evidence for a claim already being made: SDU tenants pay a 15\u201325 percent per-square-foot premium",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The premium is the anchor for why tightening looks intuitive before counter-arguments",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Wants the primer source for the 15-25 percent premium anchor",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Wants the primer source for the queue length",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D1p1 gives the per-square-foot premium SDU tenants pay",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D1p2 gives the five-and-a-half-year public housing queue",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D1p3 shows the 2021 ordinance was second-generation, capping increases within a tenancy but leaving initial rents untouched",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The second-generation point is the hinge of the argument: stable SDU stock shows only that moderate, non-binding regulation is survivable, not that a hard initial-rent cap is safe",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Wants the companion data piece on the current SDU stock trend",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Wants the think-tank note on the floor-standard-plus-rent-band proposal",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Needs the actual stock trend \u2014 the 2019 figure and the latest figure \u2014 stated precisely",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The stable stock is the only hard evidence that the ordinance didn't shrink the segment",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Wants the think-tank's own characterization of why the stock stayed stable",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "If the think-tank calls the stability an artifact of a non-binding instrument, that counters reading flat stock as proof a hard cap is safe",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "All five sources are cited by the essay and each carries a passage still unread",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "All five cited, each carries an unread passage still needed",
+   "parent": {
+    "type": "student",
+    "turn": 23
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "All cited, all carry unread passages needed",
+   "parent": {
+    "type": "student",
+    "turn": 30
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs D3, the tenant case notes on Mr Chan",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs D4, the NGO tenant interviews with Mrs Wong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs D5, the landlord association statement",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs D9, the legal opinion on compensation and judicial review",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Still needs D10, the enforcement capacity and tenancy register study",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "D3 is the tenant case notes on Mr Chan",
+   "parent": {
+    "type": "student",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Cited passage: his two-week eviction after requesting a window repair",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Cited passage: the subcommittee's inability to find a design protecting the newest-arrival tail first",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Cited passage: his own preference for the waiting list over a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Cited passage: the legal-exposure point about compensation and judicial review",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Mr Chan is the case-study hinge: the tenant actually harmed says the waiting list, not a rent cap, is what would let him leave",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Needs D3p1 for the eviction trigger (two weeks after a repair request)",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Needs D3p3 for his stated preference",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Needs D3p2 for the subcommittee's point that no design protects the newest-arrival tail first",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Needs D3p4 for the compensation/judicial-review exposure",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Wants the three remaining sources the argument leans on",
+   "parent": {
+    "type": "student",
+    "turn": 47
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Needs sources for an essay on Hong Kong rent control for subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants the source documenting the per-square-foot premium SDU tenants pay\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The premium is the anchor for why tightening looks intuitive before counter-arguments\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"Wants the primer source for the queue length\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Wants the companion data piece on the current SDU stock trend\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Wants the think-tank note on the floor-standard-plus-rent-band proposal\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"All five sources are cited by the essay and each carries a passage still unread\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Still needs D3, the tenant case notes on Mr Chan\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Still needs D4, the NGO tenant interviews with Mrs Wong\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Still needs D5, the landlord association statement\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Still needs D9, the legal opinion on compensation and judicial review\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Still needs D10, the enforcement capacity and tenancy register study\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"Cited passage: his two-week eviction after requesting a window repair\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"Cited passage: the subcommittee's inability to find a design protecting the newest-arrival tail first\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"Cited passage: his own preference for the waiting list over a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"Cited passage: the legal-exposure point about compensation and judicial review\". How did you get there?"
+  }
+ ]
+}

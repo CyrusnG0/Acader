@@ -1,0 +1,346 @@
+{
+ "id": "C11-4",
+ "arm": "C11",
+ "components": {
+  "claim": 14.285714285714286,
+  "source": 100.0,
+  "cite": 83.33333333333333,
+  "change": 71.42857142857143,
+  "struct": 100.0,
+  "claim_v2": 14.285714285714286
+ },
+ "composite": 63.21428571428571,
+ "composite_nostruct": 56.72268907563025,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units only through second-generation caps on increases within tenancies.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Tenant-side pressure justifies doing more, while the supply-collapse objection applies mainly to a different kind of control.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A rent control regime that leaves the per-square-foot premium intact is not doing its job.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Standard theory predicts binding rent ceilings shrink supply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"In marginal stock like SDUs, a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The supply cost is real and should shape policy design rather than be dismissed.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"First-generation hard caps on rent levels show consistent supply contraction effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Second-generation controls capping increases within tenancies show small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The 2021 Hong Kong ordinance is second-generation, which explains the stable stock in the D2 index.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The supply objection is strongest against exactly the policy Hong Kong has not adopted.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin capped rents on about 1.5 million flats in 2020, and classified-listing supply contracted measurably within a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin's mechanism was a hard cap on levels, producing withholding and rerouting of flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin does not show that capping increases within an existing tenancy produces the same result.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The tenant-side numbers are bad enough to justify tightening second-generation controls.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The supply cost of tightening in second-generation form is small or null.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Policy should tighten increase caps and enforcement while monitoring stock and resisting drift toward hard caps on levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The elasticity estimates are for SDU-type supply generally, not Hong Kong specifically, so the 3 to 5 percent figure is a guide, not a prediction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Even taken at face value, the 3 to 5 percent figure describes first-generation effects, and second-generation evidence is reassuring.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"That is precisely the first-generation pattern the elasticity literature flags [D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-gen\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-gen\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units only through second-generation caps on increases within tenancies.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "Tenant-side pressure justifies doing more, while the supply-collapse objection applies mainly to a different kind of control.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units with shared kitchens and bathrooms.",
+   "ancestor": 31,
+   "birth": 67,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Median SDU rent is roughly 30 percent below mainstream flats, but per square foot SDU tenants pay a 15 to 25 percent premium.",
+   "ancestor": 31,
+   "birth": 67,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The per-square-foot premium is the clearest sign of tenants' bargaining weakness.",
+   "ancestor": 31,
+   "birth": 67,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "A rent control regime that leaves the per-square-foot premium intact is not doing its job.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Standard theory predicts binding rent ceilings shrink supply.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "In marginal stock like SDUs, a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The supply cost is real and should shape policy design rather than be dismissed.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "First-generation hard caps on rent levels show consistent supply contraction effects.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Second-generation controls capping increases within tenancies show small or null effects on stock.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The 2021 Hong Kong ordinance is second-generation, which explains the stable stock in the D2 index.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The supply objection is strongest against exactly the policy Hong Kong has not adopted.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Berlin capped rents on about 1.5 million flats in 2020, and classified-listing supply contracted measurably within a year.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Berlin's mechanism was a hard cap on levels, producing withholding and rerouting of flats.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Berlin does not show that capping increases within an existing tenancy produces the same result.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The tenant-side numbers are bad enough to justify tightening second-generation controls.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The supply cost of tightening in second-generation form is small or null.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Policy should tighten increase caps and enforcement while monitoring stock and resisting drift toward hard caps on levels.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "The elasticity estimates are for SDU-type supply generally, not Hong Kong specifically, so the 3 to 5 percent figure is a guide, not a prediction.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "Even taken at face value, the 3 to 5 percent figure describes first-generation effects, and second-generation evidence is reassuring.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in SDUs, small cubicles with shared kitchens and bathrooms [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "Median SDU rent is roughly 30 percent below mainstream flats, but per square foot SDU tenants pay a premium of 15 to 25 percent, because space is priced at its most desperate margin [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "Standard theory predicts that binding rent ceilings shrink supply, and the reviewed literature estimates that in marginal stock like SDUs, a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "First-generation controls, which are hard caps on rent levels, show consistent contraction effects; second-generation controls, which cap increases within tenancies, show small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The 2021 Hong Kong ordinance is second-generation, which explains the stable stock in the D2 index [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "Berlin capped rents on about 1.5 million flats in 2020; initial-offer rents for new listings fell sharply, and classified-listing supply contracted measurably within a year as owners withheld or rerouted flats to non-controlled segments [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "That is precisely the first-generation pattern the elasticity literature flags [D6p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-generation form is small or null [D6p2], and the dramatic contraction story belongs to a policy design Hong Kong has not chosen [D7p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-generation form is small or null [D6p2], and the dramatic contraction story belongs to a policy design Hong Kong has not chosen [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-generation form is small or null [D6p2], and the dramatic contraction story belongs to a policy design Hong Kong has not chosen [D7p1].",
+   "supports": "no"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "One caveat: the elasticity estimates are for SDU-type supply generally, not for Hong Kong specifically [D6p1], so the 3 to 5 percent figure should be treated as a guide, not a prediction.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "But even taking it at face value, it describes first-generation effects, and the second-generation evidence is reassuring [D6p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 3,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 56.72268907563025,
+ "composite_v2_struct": 63.21428571428571,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units only through second-generation caps on increases within tenancies.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Tenant-side pressure justifies doing more, while the supply-collapse objection applies mainly to a different kind of control.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A rent control regime that leaves the per-square-foot premium intact is not doing its job.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Standard theory predicts binding rent ceilings shrink supply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"In marginal stock like SDUs, a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The supply cost is real and should shape policy design rather than be dismissed.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"First-generation hard caps on rent levels show consistent supply contraction effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Second-generation controls capping increases within tenancies show small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The 2021 Hong Kong ordinance is second-generation, which explains the stable stock in the D2 index.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The supply objection is strongest against exactly the policy Hong Kong has not adopted.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin capped rents on about 1.5 million flats in 2020, and classified-listing supply contracted measurably within a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin's mechanism was a hard cap on levels, producing withholding and rerouting of flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin does not show that capping increases within an existing tenancy produces the same result.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The tenant-side numbers are bad enough to justify tightening second-generation controls.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The supply cost of tightening in second-generation form is small or null.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Policy should tighten increase caps and enforcement while monitoring stock and resisting drift toward hard caps on levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The elasticity estimates are for SDU-type supply generally, not Hong Kong specifically, so the 3 to 5 percent figure is a guide, not a prediction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Even taken at face value, the 3 to 5 percent figure describes first-generation effects, and second-generation evidence is reassuring.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"That is precisely the first-generation pattern the elasticity literature flags [D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-gen\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"So the fair reading of the archive is this: the tenant-side numbers are bad enough to justify tightening [D1p1], the supply cost of tightening in the second-gen\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

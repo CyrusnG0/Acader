@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Writing Room — Git for Essay Thinking (Interactive Demo)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    html { font-size: clamp(14px, 0.7vw + 6px, 19px); }
+    body { font-family: 'Inter', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .diff-del { background-color: #ffe4e6; color: #be123c; text-decoration: line-through; padding: 1px 4px; border-radius: 4px; }
+    .diff-ins { background-color: #d1fae5; color: #065f46; font-weight: 500; padding: 1px 4px; border-radius: 4px; border-bottom: 2px solid #10b981; }
+    .token-fog { background-color: #f3e8ff; color: #6b21a8; border-bottom: 2px dashed #9333ea; padding: 1px 4px; border-radius: 4px; font-weight: 600; }
+    .surgical-lock { background-color: #dbeafe; color: #1e40af; border: 1px solid #3b82f6; padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+    button:focus-visible { outline: 3px solid #4f46e5; outline-offset: 2px; }
+    @keyframes pulse-bar { 0%, 100% { height: 8px; } 50% { height: 28px; } }
+    .wave-bar { animation: pulse-bar 1s infinite ease-in-out; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen lg:h-screen flex flex-col lg:overflow-hidden select-none">
+
+  <!-- ================= TOP HEADER BAR ================= -->
+  <header class="bg-slate-900 text-white px-5 py-3 flex flex-wrap xl:flex-nowrap gap-2 items-center justify-between border-b border-slate-700 shrink-0 z-20">
+    <div class="flex items-center space-x-3">
+      <div class="bg-indigo-600 text-white font-bold px-2.5 py-1 rounded text-sm tracking-tight flex items-center gap-1.5">
+        <span>⚡</span> The Writing Room
+      </div>
+      <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded border border-slate-700 mono hidden 2xl:inline-block">
+        git-for-essay-thinking v3.2
+      </span>
+      <span class="text-xs bg-emerald-950 text-emerald-300 border border-emerald-700 px-2 py-0.5 rounded font-medium hidden 2xl:inline-block">
+        ✓ WCAG 2.2 AA Accessible
+      </span>
+    </div>
+
+    <!-- 3 SCENARIO SWITCHER PILLS -->
+    <div class="flex items-center bg-slate-800 p-1 rounded-lg border border-slate-700 space-x-1">
+      <button onclick="selectCase(0)" id="case-btn-0" class="px-3 py-1.5 rounded-md text-sm font-semibold transition min-h-[40px]">
+        1. Honest Builder (0 → 1)
+      </button>
+      <button onclick="selectCase(1)" id="case-btn-1" class="px-3 py-1.5 rounded-md text-sm font-semibold transition min-h-[40px]">
+        2. Full AI Paste (Coherence Collapse)
+      </button>
+      <button onclick="selectCase(2)" id="case-btn-2" class="px-3 py-1.5 rounded-md text-sm font-semibold transition min-h-[40px]">
+        3. "Super-Prompt" (Caught on Receipt)
+      </button>
+    </div>
+
+    <!-- RIGHT ACTION MODALS -->
+    <div class="flex items-center space-x-2">
+      <span class="text-xs text-slate-300 mono font-semibold hidden 2xl:inline-block" id="step-counter-badge">Step 1 of 5</span>
+      <button onclick="toggleModal('receipt-modal')" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold shadow transition min-h-[36px]">
+        📋 Teacher's 60s Summary
+      </button>
+      <button onclick="toggleModal('viva-modal')" class="bg-rose-600 hover:bg-rose-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold shadow transition min-h-[36px]">
+        🎙️ 90s Voice Check
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN 3-COLUMN WORKSPACE ================= -->
+  <main class="flex-1 grid grid-cols-12 gap-4 p-4 lg:overflow-hidden min-h-0">
+
+    <!-- COLUMN 1 (LEFT 3 COLS): SOURCE TRIAD & SKIPPED LOG -->
+    <section class="col-span-12 lg:col-span-3 max-lg:max-h-[70vh] bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col overflow-hidden">
+      <div class="px-3.5 py-2.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700">📚 Source Triad Library</h2>
+          <p class="text-xs text-slate-500">SOC-304: Remote Work & Innovation (1,000w max)</p>
+        </div>
+      </div>
+
+      <div class="p-3 space-y-2.5 overflow-y-auto flex-1">
+        <!-- SOURCE 1 -->
+        <div id="src-card-1" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">S1 • Supporting</span>
+            <span id="s1-status" class="text-xs font-semibold text-slate-500">Unlinked</span>
+          </div>
+          <p class="text-sm font-bold text-slate-800">Bloom et al. (2023) — NBER</p>
+          <p class="text-sm text-slate-600 mt-1 bg-white p-1.5 rounded border border-slate-200">
+            <span class="mono font-semibold text-emerald-700">[S1-Quote]:</span> "Full-time remote staff showed a <strong>+13.5% output increase</strong> due to quiet focus and zero commute."
+          </p>
+          <p class="text-xs text-slate-500 mt-1 italic">
+            🔬 <strong>Study Details:</strong> Single-company study; N = 1,000 routine call-center & data-entry staff.
+          </p>
+        </div>
+
+        <!-- SOURCE 2 -->
+        <div id="src-card-2" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">S2 • Challenging Data</span>
+            <span id="s2-status" class="text-xs font-semibold text-slate-500">Unlinked</span>
+          </div>
+          <p class="text-sm font-bold text-slate-800">Gibbs, Mengel & Siemroth (2024) — JPE</p>
+          <p class="text-sm text-slate-600 mt-1">
+            Hours worked rose +18%, but net output stayed flat.
+          </p>
+          <div class="mt-1.5 bg-white rounded border border-amber-300 overflow-hidden">
+            <div class="bg-amber-50 px-2 py-1 text-xs font-bold text-amber-900 border-b border-amber-200">
+              📊 [S2-Table 3]: Results by Experience Level
+            </div>
+            <table class="w-full text-xs text-left">
+              <thead class="bg-slate-50 text-slate-600 border-b">
+                <tr><th class="p-1">Group</th><th class="p-1">Output</th><th class="p-1">Mentoring</th></tr>
+              </thead>
+              <tbody>
+                <tr class="border-b"><td class="p-1">Senior (&gt;5y)</td><td class="p-1 text-emerald-700 font-semibold">+4.2%</td><td class="p-1">-8%</td></tr>
+                <tr class="bg-rose-50/70 font-bold text-rose-900"><td class="p-1">Junior (&lt;2y)</td><td class="p-1">-11.4%</td><td class="p-1">-42.0% (p&lt;.01)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-500 mt-1 italic">
+            🔬 <strong>Study Details:</strong> Single-company study; N = 1,200 R&D software engineers.
+          </p>
+        </div>
+
+        <!-- SOURCE 3 -->
+        <div id="src-card-3" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">S3 • Mechanism</span>
+            <span id="s3-status" class="text-xs font-semibold text-slate-500">Unlinked</span>
+          </div>
+          <p class="text-sm font-bold text-slate-800">Pentland (2022) — MIT Media Lab</p>
+          <p class="text-sm text-slate-600 mt-1 bg-white p-1.5 rounded border border-slate-200">
+            <span class="mono font-semibold text-indigo-700">[S3-Quote]:</span> "New cross-team patents correlate <strong>3.2x more strongly</strong> with unscheduled in-person hallway chats than scheduled Zoom calls."
+          </p>
+        </div>
+
+        <!-- SKIPPED SOURCES LOG (GRAVEYARD) -->
+        <div id="skipped-box" class="p-2.5 rounded-lg border border-dashed border-slate-300 bg-slate-50">
+          <div class="text-xs font-bold text-slate-600 uppercase flex items-center justify-between">
+            <span>🗂️ Skipped Sources Log</span>
+            <span id="skipped-badge" class="text-xs bg-slate-200 px-1.5 py-0.5 rounded">0 Skipped</span>
+          </div>
+          <p id="skipped-content" class="text-xs text-slate-500 mt-1">
+            If you choose not to use a source, log your reason here so your teacher sees your selection criteria.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLUMN 2 (CENTER 5 COLS): ESSAY EDITOR & GIT DIFF CANVAS -->
+    <section class="col-span-12 lg:col-span-5 max-lg:min-h-[60vh] bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col overflow-hidden">
+      <!-- Editor Subheader -->
+      <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-200 flex flex-wrap gap-2 items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <span class="mono text-xs bg-slate-200 text-slate-800 px-2 py-0.5 rounded font-semibold whitespace-nowrap" id="commit-hash-badge">commit 101a</span>
+          <span id="coherence-badge" class="whitespace-nowrap text-sm font-bold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800">
+            ✓ Logic Aligned
+          </span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-xs text-slate-500 mono whitespace-nowrap" id="word-budget-badge">840 / 1,000 words</span>
+          <button onclick="toggleCleanView()" id="diff-toggle-btn" class="whitespace-nowrap text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-2.5 py-1 rounded font-semibold transition">
+            🔍 Showing: Changes & Highlights
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Alert Banner Slot (Coherence Collapse / Quick Inline Edit Nudge) -->
+      <div id="canvas-alert-slot" class="px-4 pt-3 empty:hidden"></div>
+
+      <!-- Essay Paragraphs Container -->
+      <div id="essay-canvas" class="p-4 space-y-3 overflow-y-auto flex-1 text-base leading-relaxed text-slate-800">
+      </div>
+    </section>
+
+    <!-- COLUMN 3 (RIGHT 4 COLS): VERSION HISTORY & 4-PILLAR COACH REVIEW -->
+    <section class="col-span-12 lg:col-span-4 flex flex-col gap-4 lg:overflow-hidden max-lg:min-h-[80vh]">
+      
+      <!-- Top Half: Git Version History -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col lg:h-[36%] overflow-hidden">
+        <div class="px-3.5 py-2 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700">🌿 Git Version History (Commit Log)</h2>
+          <span class="text-xs text-slate-500">Tracks Thinking Evolution</span>
+        </div>
+        <div id="commit-log-list" class="p-3 space-y-2 overflow-y-auto flex-1">
+        </div>
+      </div>
+
+      <!-- Bottom Half: Socratic Coach PR Review -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col lg:h-[64%] overflow-hidden">
+        <div class="px-3.5 py-2 bg-indigo-50/80 border-b border-indigo-100 flex items-center justify-between">
+          <div>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-indigo-900">🤖 Coach Review (PR Check)</h2>
+            <p class="text-xs text-indigo-600">Never writes sentences for you • Only asks questions</p>
+          </div>
+          <span id="pillar-badge" class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-600 text-white">
+            📖 READING
+          </span>
+        </div>
+
+        <div class="p-3.5 flex-1 flex flex-col justify-between overflow-y-auto">
+          <div id="coach-card-body" class="space-y-2.5">
+          </div>
+
+          <!-- Override / Disagree Button -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between mt-2">
+            <span class="text-xs text-slate-400">Think the Coach misread your point?</span>
+            <button onclick="triggerDisagree()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded font-medium transition">
+              ✋ Disagree with Coach (Log 15w Defense)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= BOTTOM VIDEO-PLAYER WALKTHROUGH BAR ================= -->
+  <footer class="bg-slate-900 text-white px-6 py-3.5 border-t border-slate-700 shrink-0 z-20">
+    <div class="mx-auto flex flex-wrap items-center justify-between gap-4 lg:gap-6">
+      <!-- Left Playback Buttons -->
+      <div class="flex items-center space-x-2 shrink-0">
+        <button onclick="prevStep()" id="prev-btn" class="bg-slate-800 hover:bg-slate-700 text-white px-3.5 py-2 rounded-lg text-sm font-bold border border-slate-600 transition min-h-[44px]">
+          ◀ Prev Step
+        </button>
+        <button onclick="toggleAutoPlay()" id="play-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition min-h-[44px] flex items-center gap-1.5">
+          <span id="play-icon">▶</span> <span id="play-text">Auto-Play Walkthrough</span>
+        </button>
+        <button onclick="nextStep()" id="next-btn" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition min-h-[44px]">
+          Next Step ▶
+        </button>
+      </div>
+
+      <!-- Center 5-Step Interactive Timeline Scrubber -->
+      <div id="timeline-steps" class="flex-1 min-w-[280px] grid grid-cols-2 sm:grid-cols-5 gap-2">
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL 1: TEACHER'S 60-SECOND X-RAY SUMMARY ================= -->
+  <div id="receipt-modal" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm hidden items-center justify-center p-6 z-50">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between">
+        <div>
+          <h3 class="text-base font-bold">📋 Teacher's 60-Second Review Summary (X-Ray Receipt)</h3>
+          <p class="text-xs text-slate-300">Zero fake "AI % scores" — shows version history, source consistency, and 3 follow-up questions.</p>
+        </div>
+        <button onclick="toggleModal('receipt-modal')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg text-xs font-bold">✕ Close</button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-5 text-sm">
+        <!-- Quick Case Switcher inside Modal -->
+        <div class="flex items-center justify-between bg-slate-100 p-2.5 rounded-xl">
+          <span class="text-xs font-bold text-slate-600 uppercase px-2">Compare Student Profiles:</span>
+          <div class="flex space-x-2">
+            <button onclick="selectCase(0)" class="px-3 py-1 rounded bg-white border text-xs font-semibold hover:bg-indigo-50">Case 1: Honest Builder</button>
+            <button onclick="selectCase(1)" class="px-3 py-1 rounded bg-white border text-xs font-semibold hover:bg-indigo-50">Case 2: Full Paste → Rebuilt</button>
+            <button onclick="selectCase(2)" class="px-3 py-1 rounded bg-rose-600 text-white text-xs font-semibold">Case 3: "Super-Prompt" Double-Standard</button>
+          </div>
+        </div>
+
+        <!-- Block 1: Double-Standard Boomerang Check -->
+        <div class="p-4 rounded-xl border-2 border-rose-500 bg-rose-50/70">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold uppercase tracking-wider bg-rose-600 text-white px-2.5 py-0.5 rounded">
+              ⚡ Source Consistency Cross-Check (Caught in Case 3)
+            </span>
+            <span class="text-xs font-bold text-rose-800">Double-Standard Detected</span>
+          </div>
+          <p class="text-sm text-rose-950 font-semibold mt-2">
+            The student used an AI-generated excuse to skip Challenging Source S2, but broke their own rule in Paragraph 1:
+          </p>
+          <div class="grid grid-cols-2 gap-3 mt-2.5 text-xs">
+            <div class="bg-white p-3 rounded-lg border border-rose-200">
+              <div class="font-bold text-rose-700">🗑️ Why They Skipped Gibbs (2024) in Log:</div>
+              <p class="mt-1 italic text-slate-700">"Excluded Gibbs because a <strong>single-company study of N=1,200</strong> is too narrow to generalize across the tech industry."</p>
+            </div>
+            <div class="bg-white p-3 rounded-lg border border-rose-200">
+              <div class="font-bold text-emerald-700">✓ What They Used in Paragraph 1 (Bloom 2023):</div>
+              <p class="mt-1 text-slate-700">Built their entire opening argument on Bloom (2023)—which is <strong>ALSO a single-company study (N=1,000 call-center staff)</strong>!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: Rough Commit Notes vs Final Polished Prose -->
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+          <h4 class="text-xs font-bold uppercase text-slate-700 mb-2">🔍 Seed-to-Prose Lineage (Proving Authorship in Case 1)</h4>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="bg-white p-3 rounded border">
+              <div class="font-bold text-indigo-700">Student's Rough Commit Note (Commit #2):</div>
+              <p class="mt-1 text-slate-600">"Bloom only tested call centers; Gibbs tested R&D. Remote work is a 'Seniority Tax'—seniors get quiet focus (+4.2%), juniors lose mentoring (-42%)."</p>
+            </div>
+            <div class="bg-white p-3 rounded border">
+              <div class="font-bold text-emerald-700">Final Essay Paragraph 2 (Polished with AI):</div>
+              <p class="mt-1 text-slate-600">"Full-time remote mandates function as an asymmetric 'Seniority Tax,' subsidizing senior deep-work execution (+4.2%) while liquidating junior apprenticeship (-42%)."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3: 3 Targeted Follow-Up Questions -->
+        <div class="p-4 rounded-xl border border-indigo-200 bg-indigo-50/50">
+          <div class="flex items-center justify-between mb-2">
+            <h4 class="text-xs font-bold uppercase text-indigo-950">🎯 3 Auto-Generated Questions for Office Hours / Voice Check</h4>
+            <button onclick="toggleModal('receipt-modal'); toggleModal('viva-modal');" class="bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded hover:bg-rose-500">
+              🎙️ Launch 90s Voice Bot Now
+            </button>
+          </div>
+          <ol class="list-decimal list-inside space-y-1.5 text-sm text-slate-800 font-medium">
+            <li><strong>(Source Double-Standard):</strong> "You rejected Gibbs (N=1,200) for being a single-company study, yet relied on Bloom (N=1,000), which is also a single-company study. Why did your filter apply only to challenging evidence?"</li>
+            <li><strong>(Table 3 Mechanism):</strong> "In Gibbs Table 3, why did senior engineers gain +4.2% output from home while junior engineers dropped -11.4%?"</li>
+            <li><strong>(Counterfactual Stress-Test):</strong> "If the company's goal shifts from daily ticket closure to 3-year R&D patents, which paragraph of your essay breaks first under Pentland's 3.2x hallway finding?"</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL 2: 90-SECOND VOICE CHECK (WITH WORKING TTS) ================= -->
+  <div id="viva-modal" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm hidden items-center justify-center p-6 z-50">
+    <div class="bg-slate-900 text-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-700 space-y-5">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-bold uppercase tracking-wider bg-rose-600 px-2.5 py-1 rounded">🎙️ 90-Second Targeted Voice Check</span>
+        <button onclick="stopSpeech(); toggleModal('viva-modal')" class="text-slate-400 hover:text-white text-xs font-bold">✕ Close</button>
+      </div>
+
+      <p class="text-xs text-slate-300">
+        "Kids in the future will be great presenters because AI prepared their slides—until the coach asks a real-time question about their trade-offs."
+      </p>
+
+      <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
+        <div class="flex items-center justify-between text-xs text-indigo-300">
+          <span>Target: Skipped Source Double-Standard</span>
+          <span class="mono font-bold text-amber-400">⏱️ 01:30 Remaining</span>
+        </div>
+        <p id="viva-question-text" class="text-sm font-semibold leading-relaxed text-white">
+          "In your skipped sources log, you disqualified the Gibbs study because it only looked at a single company of 1,200 workers. Why did you build your opening paragraph on the Bloom study, which also looked at just a single company of 1,000 workers?"
+        </p>
+      </div>
+
+      <!-- Audio Waveform Animation -->
+      <div class="flex items-center justify-center space-x-1.5 h-10 bg-slate-950 rounded-lg border border-slate-800 px-4">
+        <div class="w-1.5 bg-indigo-500 rounded wave-bar" style="animation-delay: 0.1s"></div>
+        <div class="w-1.5 bg-indigo-400 rounded wave-bar" style="animation-delay: 0.3s"></div>
+        <div class="w-1.5 bg-rose-500 rounded wave-bar" style="animation-delay: 0.2s"></div>
+        <div class="w-1.5 bg-indigo-400 rounded wave-bar" style="animation-delay: 0.4s"></div>
+        <div class="w-1.5 bg-emerald-400 rounded wave-bar" style="animation-delay: 0.15s"></div>
+        <span class="text-xs text-slate-400 ml-3 mono" id="tts-status">Click below to play voice question out loud</span>
+      </div>
+
+      <div class="flex space-x-3">
+        <button onclick="speakVivaQuestion()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg transition">
+          🔊 Play Question Out Loud (Laptop Speakers)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STATE ENGINE & STORY SCRIPTS ================= -->
+  <script>
+    let currentCase = 0;
+    let currentStep = 0;
+    let cleanView = false;
+    let autoPlayTimer = null;
+
+    const CASES = [
+      // ==================== CASE 1: HONEST BUILDER ====================
+      {
+        name: "Case 1: Honest Builder",
+        steps: [
+          {
+            label: "1. Reading Data",
+            hash: "commit 101a",
+            words: "180 / 1,000 words",
+            coherence: { text: "✓ Hunch Logged", cls: "bg-slate-200 text-slate-800" },
+            pillar: "📖 1. READING",
+            s1: "✓ Linked in Para 1", s2: "⚠️ Unaddressed Table 3", s3: "Unlinked",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Initial Hunch [Linked: S1-Quote]",
+                html: `Remote work is great for tech companies because workers save two hours of commuting every day and can focus at home. As Bloom et al. (2023) showed, full-time remote staff achieved a <span class="diff-ins">+13.5% productivity increase [Anchor: S1-Quote]</span>.`
+              }
+            ],
+            commits: [
+              { hash: "101a", tag: "Initial Hunch", msg: "Stated initial idea: remote work boosts output (+13.5% in Bloom)." }
+            ],
+            coachTitle: "Checking the Full Picture",
+            coachQuestion: "You linked Bloom (+13.5% output) in Paragraph 1, but look at Gibbs (2024) Table 3 on the left: Junior engineer output dropped -11.4% and mentoring fell -42%. How can both studies be true at the same time?"
+          },
+          {
+            label: "2. Logic Trade-Off",
+            hash: "commit 102b",
+            words: "460 / 1,000 words",
+            coherence: { text: "✓ Logic Aligned", cls: "bg-emerald-100 text-emerald-800" },
+            pillar: "⚖️ 2. LOGIC",
+            s1: "✓ Linked in Para 1", s2: "✓ Linked: Table 3", s3: "⚠️ Unaddressed",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Narrowing the Boundary [Linked: S1-Quote & Study Details]",
+                html: `<span class="diff-del">Remote work is universally great for tech companies.</span> <span class="diff-ins">While full-time remote work boosts routine call-center execution by +13.5% [S1], applying it across R&D engineering acts as a hidden "Seniority Tax."</span>`
+              },
+              {
+                title: "Paragraph 2 — The Experience Split [Linked: S2-Table 3]",
+                html: `<span class="diff-ins">Gibbs et al. (2024) Table 3 proves that senior engineers (&gt;5 yrs) gain +4.2% output in quiet home offices, whereas junior engineers (&lt;2 yrs) suffer a -42.0% collapse in unscheduled mentoring and an -11.4% output drop [Anchor: S2-Table3].</span>`
+              }
+            ],
+            commits: [
+              { hash: "102b", tag: "★ Strong Human Pivot", msg: "Found sample difference (call center vs R&D). Narrowed thesis to 'Seniority Tax' using Gibbs Table 3." },
+              { hash: "101a", tag: "Initial Hunch", msg: "Stated initial idea: remote work boosts output (+13.5% in Bloom)." }
+            ],
+            coachTitle: "Testing the Mechanism",
+            coachQuestion: "Strong pivot! Now test your logic chain: Why can't a company fix that -42% junior mentoring drop simply by scheduling more daily Zoom meetings? Check Source 3 (Pentland) to explain the mechanism."
+          },
+          {
+            label: "3. Wording Audit",
+            hash: "commit 103c",
+            words: "690 / 1,000 words",
+            coherence: { text: "☁️ 1 Vague Phrase Flagged", cls: "bg-purple-100 text-purple-800" },
+            pillar: "✍️ 3. WORDING",
+            s1: "✓ Linked in Para 1", s2: "✓ Linked: Table 3", s3: "✓ Linked in Para 3",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: `<div class="bg-purple-50 border border-purple-300 text-purple-950 px-3.5 py-2 rounded-lg text-xs flex items-center justify-between">
+              <span><strong>☁️ Vague Wording Alert:</strong> LLMs use diplomatic hedging to avoid taking a side. Replace the purple phrase with a clear verb showing who pays the cost.</span>
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Routine Execution vs. R&D [Linked: S1]",
+                html: `While full-time remote work boosts routine call-center execution by +13.5% [S1], applying it across R&D engineering acts as a hidden "Seniority Tax."`
+              },
+              {
+                title: "Paragraph 2 — Auditing Vague Wording [Linked: S2-Table 3]",
+                html: `Gibbs et al. (2024) Table 3 shows senior engineers gain +4.2% output while juniors lose -42% mentoring. Thus, remote work <span class="token-fog" title="Vague AI hedging">[☁️ navigates a multifaceted interplay between]</span> senior autonomy and junior onboarding.`
+              },
+              {
+                title: "Paragraph 3 — Why Scheduled Zoom Fails [Linked: S3-Quote]",
+                html: `<span class="diff-ins">Scheduled Zoom calls cannot fix this gap because Pentland (2022) shows breakthrough patents rely 3.2x more on unscheduled hallway collisions than planned meetings [Anchor: S3]—juniors don't know what questions to schedule in advance.</span>`
+              }
+            ],
+            commits: [
+              { hash: "103c", tag: "Added Mechanism", msg: "Integrated Pentland (3.2x hallway collisions)." },
+              { hash: "102b", tag: "★ Strong Human Pivot", msg: "Narrowed thesis to 'Seniority Tax'." }
+            ],
+            coachTitle: "Removing Vague 'Token-Fog' Wording",
+            coachQuestion: "In Paragraph 2, the phrase 'navigates a multifaceted interplay' sounds academic, but says nothing concrete. Edit just those 6 words to state clearly which group subsidizes the other."
+          },
+          {
+            label: "4. Multi-Perspective",
+            hash: "commit 104d",
+            words: "830 / 1,000 words",
+            coherence: { text: "✓ Sharp Stance", cls: "bg-emerald-100 text-emerald-800" },
+            pillar: "🗣️ 4. PERSPECTIVE",
+            s1: "✓ Linked in Para 1", s2: "✓ Linked: Table 3", s3: "✓ Linked in Para 3",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Routine vs. R&D [Linked: S1]",
+                html: `While full-time remote work boosts routine call-center execution by +13.5% [S1], applying it across R&D engineering acts as a hidden "Seniority Tax."`
+              },
+              {
+                title: "Paragraph 2 — Sharp Wording Committed [Linked: S2-Table 3]",
+                html: `Gibbs et al. (2024) Table 3 shows senior engineers gain +4.2% output while juniors lose -42% mentoring. Thus, remote work <span class="diff-del">navigates a multifaceted interplay</span> <span class="diff-ins">harvests short-term senior speed by mortgaging</span> the unscheduled apprenticeship juniors need to grow.`
+              },
+              {
+                title: "Paragraph 3 — Multi-Perspective Synthesis [Linked: S3-Quote]",
+                html: `Because Pentland (2022) proves patents rely 3.2x more on physical collisions [S3], pure remote work starves R&D. <span class="diff-ins">Yet forcing 5-day commutes unfairly burdens junior staff with high transit costs; instead, firms should mandate 2 co-located mentoring days paired with 3 remote deep-work days.</span>`
+              }
+            ],
+            commits: [
+              { hash: "104d", tag: "★ Upgraded Stance", msg: "Replaced vague verb and added commuting junior's perspective." },
+              { hash: "103c", tag: "Added Mechanism", msg: "Integrated Pentland (3.2x hallway collisions)." }
+            ],
+            coachTitle: "Adding Competing Real-World Perspectives",
+            coachQuestion: "By acknowledging the commuting cost for junior hires while defending 2 in-person mentoring days, your conclusion now addresses both R&D executives and employees."
+          },
+          {
+            label: "5. Final Verified",
+            hash: "commit 105e (Merged)",
+            words: "865 / 1,000 words",
+            coherence: { text: "✓ Authorship Verified", cls: "bg-emerald-600 text-white" },
+            pillar: "✅ READY FOR TEACHER",
+            s1: "✓ Verified", s2: "✓ Verified", s3: "✓ Verified",
+            skipped: { count: "0 Skipped", text: "All 3 Triad sources integrated." },
+            alertHTML: `<div class="bg-emerald-50 border border-emerald-300 text-emerald-950 px-3.5 py-2 rounded-lg text-xs font-medium">
+              ✓ <strong>Lineage Verified:</strong> Core thesis ("Seniority Tax") and Table 3 reconciliation originated in Commit 102b. Final grammar polish does not compromise student authorship.
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Construct Boundary [Linked: S1]",
+                html: `Treating remote work as a universal panacea conflates routine execution with generative R&D. While Bloom et al. (2023) documented a +13.5% remote output gain among 1,000 call-center staff [S1], extrapolating routine metrics to engineering teams obscures a structural "Seniority Tax."`
+              },
+              {
+                title: "Paragraph 2 — The Seniority Tax [Linked: S2-Table 3]",
+                html: `Longitudinal data from Gibbs et al. (2024) Table 3 exposes this divergence across 1,200 R&D engineers: senior staff (>5 yrs) gained +4.2% output in isolation, whereas junior hires (<2 yrs) suffered a -42.0% collapse in unscheduled mentoring and an -11.4% output drop [S2-Table3].`
+              },
+              {
+                title: "Paragraph 3 — Hybrid Architecture [Linked: S3]",
+                html: `Because cross-team patents correlate 3.2x more strongly with unscheduled physical collisions than scheduled Zoom standups (Pentland, 2022) [S3], replacing offices with video calls starves junior osmosis. A 2-day synchronized studio protocol balances junior commuting costs against long-term R&D survival.`
+              }
+            ],
+            commits: [
+              { hash: "105e", tag: "Final Merge", msg: "Polished academic transitions while preserving all source links." },
+              { hash: "104d", tag: "★ Upgraded Stance", msg: "Added commuting junior's perspective." }
+            ],
+            coachTitle: "All 4 Pillars Passed — Ready for Teacher Review",
+            coachQuestion: "Your paper is coherent, linked to exact table data, and free of vague hedging. You are ready to answer any real-time question from your instructor."
+          }
+        ]
+      },
+
+      // ==================== CASE 2: FULL AI PASTE ====================
+      {
+        name: "Case 2: Full Paste -> Rebuilt",
+        steps: [
+          {
+            label: "1. 1-Shot AI Paste",
+            hash: "unstaged paste",
+            words: "850 / 1,000 words",
+            coherence: { text: "⚠️ 0% Source Linked", cls: "bg-amber-100 text-amber-900" },
+            pillar: "📖 1. READING CHECK",
+            s1: "Unlinked (Text Only)", s2: "🚨 Ignored Table 3!", s3: "⚠️ Misquoted",
+            skipped: { count: "0 Skipped", text: "Student pasted full essay without logging sources." },
+            alertHTML: `<div class="bg-amber-50 border border-amber-300 text-amber-950 px-3.5 py-2 rounded-lg text-xs">
+              <strong>Unstaged Full Paste Detected:</strong> No accusations—to submit this draft, link your claims to the sources on the left and answer the Coach's data check on Gibbs Table 3.
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Pasted AI Claim (Unlinked)",
+                html: `In the modern digital economy, transitioning to full-time remote work <strong>universally enhances corporate productivity and innovation across all engineering levels</strong>. Bloom et al. (2023) proved remote workers are 13.5% more productive.`
+              },
+              {
+                title: "Paragraph 2 — Pasted AI Claim (Unlinked)",
+                html: `Furthermore, Gibbs et al. (2024) showed remote engineers work 18% more hours. Through cloud tools and virtual mentorship, remote teams <strong>seamlessly maintain knowledge sharing across both senior and junior staff</strong>.`
+              },
+              {
+                title: "Paragraph 3 — Pasted AI Conclusion (Unlinked)",
+                html: `Drawing on Pentland (2022), scheduled daily Zoom standups ensure continuous ideation. Therefore, firms can permanently close physical offices with <strong>zero structural downsides to long-term R&D</strong>.`
+              }
+            ],
+            commits: [
+              { hash: "unstaged", tag: "1-Shot Dump", msg: "Pasted 850 words at once. 0% anchored to library spans." }
+            ],
+            coachTitle: "Data Confrontation: How Does Paragraph 2 Survive Table 3?",
+            coachQuestion: "Your Paragraph 2 claims remote teams 'seamlessly maintain knowledge sharing for junior staff.' However, Gibbs (2024) Table 3 on the left shows Junior mentoring dropped -42%. Link Table 3 and update Paragraph 2 to account for this."
+          },
+          {
+            label: "2. Coherence Collapse!",
+            hash: "commit 201a",
+            words: "880 / 1,000 words",
+            coherence: { text: "🚨 LOGIC CONFLICT!", cls: "bg-rose-600 text-white animate-pulse" },
+            pillar: "⚖️ 2. LOGIC CONFLICT",
+            s1: "Unlinked", s2: "✓ Linked: Table 3", s3: "⚠️ Contradicts Para 2",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: `<div class="bg-rose-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold shadow-md">
+              🚨 GLOBAL COHERENCE COLLAPSE: Your patched Paragraph 2 (admitting remote work slashes junior mentoring by -42% and output by -11.4%) directly contradicts your Paragraph 1 thesis ("universally enhances innovation across all levels") and Paragraph 3 conclusion ("zero structural downsides")!
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Contradicts Patched Paragraph 2!",
+                html: `In the modern digital economy, transitioning to full-time remote work <span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">universally enhances corporate productivity and innovation across all engineering levels</span>.`
+              },
+              {
+                title: "Paragraph 2 — Lazy AI Patch [Linked: S2-Table 3]",
+                html: `<span class="diff-del">Remote teams seamlessly maintain knowledge sharing across junior staff.</span> <span class="diff-ins">However, Gibbs et al. (2024) Table 3 proves that full-time remote work severely harms junior engineers (&lt;2 yrs), slashing unscheduled mentoring by -42.0% and reducing output by -11.4% [Anchor: S2-Table3].</span>`
+              },
+              {
+                title: "Paragraph 3 — Contradicts Patched Paragraph 2!",
+                html: `Therefore, firms can permanently close physical offices with <span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">zero structural downsides to long-term R&D</span>.`
+              }
+            ],
+            commits: [
+              { hash: "201a", tag: "⚠️ Broken Patch", msg: "Patched Para 2 with Gibbs Table 3 (-42% junior drop), breaking coherence with Para 1 & 3." }
+            ],
+            coachTitle: "Premise Collision: Your Paragraphs Are Fighting Each Other",
+            coachQuestion: "Patching Paragraph 2 broke your paper's logic. How can remote work 'universally enhance all engineering levels' (Para 1) and have 'zero downsides' (Para 3) if it slashes junior mentoring by -42% (Para 2)? You must revise Para 1 and Para 3."
+          },
+          {
+            label: "3. Quick Inline Edit",
+            hash: "commit 202b",
+            words: "845 / 1,000 words",
+            coherence: { text: "🛡️ Quick-Edit Mode", cls: "bg-blue-100 text-blue-900" },
+            pillar: "✍️ 3. INLINE NUDGE",
+            s1: "✓ Linked", s2: "✓ Linked: Table 3", s3: "⚠️ Still Misquoted",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: `<div class="bg-blue-50 border-2 border-blue-400 text-blue-950 px-3.5 py-2 rounded-lg text-xs flex items-center justify-between">
+              <span><strong>🛡️ Quick Inline Edit Nudge:</strong> 85% of your source links are already locked in. Pasting a whole new paragraph from outside will reset your anchors! Edit the highlighted span directly to keep your progress (Takes ~15s).</span>
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Forced to Read S1 Study Details [Linked: S1]",
+                html: `In the modern digital economy, full-time remote work <span class="diff-del">universally enhances innovation across all engineering levels</span> <span class="surgical-lock">✏️ accelerates routine call-center tasks (+13.5% in Bloom), but creates sharp trade-offs in complex R&D [Anchor: S1]</span>.`
+              },
+              {
+                title: "Paragraph 2 — Aligned with Paragraph 1 [Linked: S2-Table 3]",
+                html: `Specifically, Gibbs et al. (2024) Table 3 proves that while senior engineers gain +4.2% output remotely, junior engineers suffer a -42.0% drop in mentoring and -11.4% output loss [Anchor: S2-Table3].`
+              },
+              {
+                title: "Paragraph 3 — Remaining Conflict with Source 3",
+                html: `Drawing on Pentland (2022), <span class="token-fog">[☁️ holistic virtual standups seamlessly replicate]</span> hallway ideation, meaning closing offices has zero downsides.`
+              }
+            ],
+            commits: [
+              { hash: "202b", tag: "★ Inline Human Fix", msg: "Read Bloom study details and edited Para 1 inline to match Para 2." },
+              { hash: "201a", tag: "⚠️ Broken Patch", msg: "Patched Para 2 with Gibbs Table 3." }
+            ],
+            coachTitle: "Next Domino: Check Source 3 in Paragraph 3",
+            coachQuestion: "Paragraphs 1 and 2 now align! But look at Paragraph 3: your initial AI draft claimed Pentland (2022) supports daily Zoom standups. Read [S3-Quote] on the left—Pentland actually found the exact opposite (3.2x advantage for physical hallways)."
+          },
+          {
+            label: "4. Domino Rewrite",
+            hash: "commit 203c",
+            words: "870 / 1,000 words",
+            coherence: { text: "✓ Coherence Restored", cls: "bg-emerald-100 text-emerald-800" },
+            pillar: "🗣️ 4. PERSPECTIVE",
+            s1: "✓ Linked", s2: "✓ Linked", s3: "✓ Linked: 3.2x Hallways",
+            skipped: { count: "0 Skipped", text: "No sources skipped." },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Reconstructed Premise [Linked: S1]",
+                html: `In the modern digital economy, full-time remote work accelerates routine call-center tasks (+13.5% in Bloom), but creates sharp tenure trade-offs in R&D engineering [Anchor: S1].`
+              },
+              {
+                title: "Paragraph 2 — Reconstructed Evidence [Linked: S2-Table 3]",
+                html: `Specifically, Gibbs et al. (2024) Table 3 proves that while senior engineers gain +4.2% output remotely, junior engineers suffer a -42.0% drop in mentoring and -11.4% output loss [Anchor: S2-Table3].`
+              },
+              {
+                title: "Paragraph 3 — Reconstructed Conclusion [Linked: S3-Quote]",
+                html: `<span class="diff-del">Scheduled daily Zoom standups ensure continuous ideation with zero downsides.</span> <span class="diff-ins">Because Pentland (2022) proves cross-team patents rely 3.2x more on unscheduled physical hallway chats than scheduled Zoom calls [Anchor: S3], firms cannot close offices without starving junior talent; instead, they need structured hybrid mentoring days.</span>`
+              }
+            ],
+            commits: [
+              { hash: "203c", tag: "★ Rebuilt Para 3", msg: "Fixed AI misquote of Pentland and rewrote conclusion." },
+              { hash: "202b", tag: "★ Inline Human Fix", msg: "Edited Para 1 inline to distinguish routine work from R&D." }
+            ],
+            coachTitle: "Global Coherence Restored Across 3 Revisions",
+            coachQuestion: "By resolving the conflicts between Paragraphs 1, 2, and 3, you have replaced generic AI filler with a concrete, evidence-backed argument."
+          },
+          {
+            label: "5. Welcome to AI Era",
+            hash: "commit 204d (Merged)",
+            words: "870 / 1,000 words",
+            coherence: { text: "✓ Learned by Auditing", cls: "bg-emerald-600 text-white" },
+            pillar: "🎯 GOAL ACHIEVED",
+            s1: "✓ Verified", s2: "✓ Verified", s3: "✓ Verified",
+            skipped: { count: "0 Skipped", text: "All 3 sources reconciled." },
+            alertHTML: `<div class="bg-indigo-950 text-white px-4 py-2.5 rounded-lg text-xs font-medium">
+              🎓 <strong>"Welcome to the AI Era":</strong> The student started by pasting a 1-shot AI essay, but to pass our Git coherence and wording checks, they had to dismantle 85% of it—learning the core thesis, data tables, and trade-offs along the way.
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Routine vs. R&D Split [Linked: S1]",
+                html: `In the modern digital economy, full-time remote work accelerates routine call-center tasks (+13.5% in Bloom), but creates sharp tenure trade-offs in R&D engineering [Anchor: S1].`
+              },
+              {
+                title: "Paragraph 2 — Tenure Bifurcation [Linked: S2-Table 3]",
+                html: `Specifically, Gibbs et al. (2024) Table 3 proves that while senior engineers gain +4.2% output remotely, junior engineers (<2 yrs) suffer a -42.0% drop in mentoring and -11.4% output loss [Anchor: S2-Table3].`
+              },
+              {
+                title: "Paragraph 3 — Hybrid Mentoring Protocol [Linked: S3-Quote]",
+                html: `Because Pentland (2022) proves cross-team patents rely 3.2x more on unscheduled physical hallway chats than scheduled Zoom calls [Anchor: S3], firms must pair remote deep work with co-located mentoring days for junior hires.`
+              }
+            ],
+            commits: [
+              { hash: "204d", tag: "Final Merge", msg: "85% of initial 1-shot paste rewritten across 4 iterations." },
+              { hash: "203c", tag: "★ Rebuilt Para 3", msg: "Fixed Pentland mechanism." }
+            ],
+            coachTitle: "Self-Grading Complete — Ready for Teacher's Summary",
+            coachQuestion: "The Teacher's 60s Summary logs the initial unverified paste alongside the 4 corrective iterations that rebuilt the paper."
+          }
+        ]
+      },
+
+      // ==================== CASE 3: SUPER-PROMPT ====================
+      {
+        name: "Case 3: Super-Prompt",
+        steps: [
+          {
+            label: "1. Cherry-Picking",
+            hash: "commit 301a",
+            words: "790 / 1,000 words",
+            coherence: { text: "⚠️ One-Sided Sources", cls: "bg-amber-100 text-amber-900" },
+            pillar: "📖 1. SOURCE SELECTION",
+            s1: "✓ Linked in Para 1", s2: "Unlinked", s3: "Unlinked",
+            skipped: { count: "0 Skipped", text: "No skipped sources logged yet." },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Relying Exclusively on Bloom [Linked: S1]",
+                html: `Empirical evidence decisively favors permanent remote transitions: Bloom et al. (2023) established a +13.5% productivity surge among full-time remote personnel [Anchor: S1].`
+              },
+              {
+                title: "Paragraph 2 — Dodging Challenging Data",
+                html: `With modern cloud workflows, engineering teams can maintain high velocity from anywhere without needing physical office leases.`
+              }
+            ],
+            commits: [
+              { hash: "301a", tag: "Anchored S1", msg: "Built opening thesis on Bloom (2023) +13.5% productivity gain." }
+            ],
+            coachTitle: "Unaddressed Challenging Data: Source 2 (Gibbs Table 3)",
+            coachQuestion: "You haven't addressed Source 2 (Gibbs 2024 Table 3). You must either integrate Table 3 or log a valid methodological reason in the Skipped Sources Log."
+          },
+          {
+            label: "2. AI Excuse in Log",
+            hash: "commit 302b",
+            words: "810 / 1,000 words",
+            coherence: { text: "🕵️ Skipped S2 Logged", cls: "bg-amber-100 text-amber-900" },
+            pillar: "⚖️ 2. SKIPPED LOG",
+            s1: "✓ Linked in Para 1", s2: "🗑️ Skipped (See Log)", s3: "Unlinked",
+            skipped: {
+              count: "1 Skipped (S2)",
+              text: "🗑️ Skipped S2 (Gibbs 2024): 'Excluded because a single-company study of N=1,200 workers is too narrow to generalize.'"
+            },
+            alertHTML: `<div class="bg-amber-50 border border-amber-300 text-amber-950 px-3.5 py-2 rounded-lg text-xs">
+              <strong>Skipped Source Logged:</strong> Student discarded Source 2 (Gibbs 2024) citing "Single-company sample size (N=1,200) lacks external validity."
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Relying Exclusively on Bloom [Linked: S1]",
+                html: `Empirical evidence decisively favors permanent remote transitions: Bloom et al. (2023) established a +13.5% productivity surge among full-time remote personnel [Anchor: S1].`
+              },
+              {
+                title: "Paragraph 2 — Unchanged One-Sided Claim",
+                html: `Because single-company counter-studies lack industry-wide generalizability, technology firms can confidently adopt full-time remote mandates across all engineering tiers.`
+              }
+            ],
+            commits: [
+              { hash: "302b", tag: "Skipped S2", msg: "Discarded Gibbs (2024) due to single-company sample limitation." },
+              { hash: "301a", tag: "Anchored S1", msg: "Built opening thesis on Bloom (2023)." }
+            ],
+            coachTitle: "Skipped Source Reason Recorded for Cross-Audit",
+            coachQuestion: "You logged a methodological filter to reject Source 2. Proceeding to check whether your accepted sources meet this same standard."
+          },
+          {
+            label: "3. Surface Smooth",
+            hash: "commit 303c",
+            words: "840 / 1,000 words",
+            coherence: { text: "🕵️ Auditing Standards...", cls: "bg-amber-100 text-amber-900" },
+            pillar: "✍️ 3. FINALIZING",
+            s1: "✓ Linked in Para 1", s2: "🗑️ Skipped (See Log)", s3: "✓ Superficial Link",
+            skipped: {
+              count: "1 Skipped (S2)",
+              text: "🗑️ Skipped S2 (Gibbs 2024): 'Excluded because a single-company study is too narrow.'"
+            },
+            alertHTML: "",
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Relying on Bloom [Linked: S1]",
+                html: `Empirical evidence decisively favors permanent remote transitions: Bloom et al. (2023) established a +13.5% productivity surge among full-time remote personnel [Anchor: S1].`
+              },
+              {
+                title: "Paragraph 2 — Dismissing Counter-Data",
+                html: `Because single-company counter-studies lack industry-wide generalizability, technology firms can confidently adopt full-time remote mandates.`
+              },
+              {
+                title: "Paragraph 3 — Superficial Mention of S3 [Linked: S3]",
+                html: `While Pentland (2022) notes the value of hallway interactions [Anchor: S3], AI-powered Slack bots will easily replicate those collisions remotely.`
+              }
+            ],
+            commits: [
+              { hash: "303c", tag: "Finalized Draft", msg: "Added S3 citation and concluded AI bots replace hallways." }
+            ],
+            coachTitle: "Running Positive-vs-Negative Space Cross-Audit...",
+            coachQuestion: "Comparing the methodological standard in your Skipped Sources Log against the Study Details of your primary source in Paragraph 1..."
+          },
+          {
+            label: "4. Boomerang Caught!",
+            hash: "commit 303c (Flagged)",
+            words: "840 / 1,000 words",
+            coherence: { text: "⚡ DOUBLE-STANDARD CAUGHT", cls: "bg-rose-600 text-white animate-pulse" },
+            pillar: "🚨 4. CROSS-AUDIT",
+            s1: "⚡ N=1,000 Single-Firm!", s2: "🗑️ Rejected N=1,200 Single-Firm!", s3: "✓ Linked",
+            skipped: {
+              count: "⚡ Contradiction!",
+              text: "🚨 Rejected Gibbs (Single-Firm N=1,200) while accepting Bloom (Single-Firm N=1,000)!"
+            },
+            alertHTML: `<div class="bg-rose-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold shadow-md">
+              ⚡ EPISTEMIC DOUBLE-STANDARD CAUGHT: In your Skipped Log, you disqualified Gibbs (2024) for being a "single-company study (N=1,200)." Yet Paragraph 1 relies entirely on Bloom (2023), which is ALSO a single-company study (N=1,000)!
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Relies on Single-Company Study (N=1,000)!",
+                html: `Empirical evidence decisively favors permanent remote transitions: <span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">Bloom et al. (2023) established a +13.5% productivity surge [Study Details: Single-company study, N=1,000]</span>.`
+              },
+              {
+                title: "Paragraph 2 — Contradicts Own Skipped Source Filter!",
+                html: `<span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">Because single-company counter-studies (Gibbs, N=1,200) lack generalizability</span>, technology firms can confidently adopt full-time remote mandates.`
+              }
+            ],
+            commits: [
+              { hash: "AUDIT", tag: "🚨 Double-Standard", msg: "System flagged contradiction between Skipped Log (Gibbs N=1,200) and Para 1 (Bloom N=1,000)." }
+            ],
+            coachTitle: "Double-Standard Logged on Teacher's 60-Second Summary",
+            coachQuestion: "You applied a strict methodological filter to discard challenging evidence (N=1,200) while excusing supporting evidence with the exact same limitation (N=1,000). This discrepancy has been added to your Teacher's Summary."
+          },
+          {
+            label: "5. Live Voice Check",
+            hash: "Receipt Generated",
+            words: "840 / 1,000 words",
+            coherence: { text: "🎙️ Viva Triggered", cls: "bg-rose-600 text-white" },
+            pillar: "📋 TEACHER RECEIPT",
+            s1: "⚡ Flagged on Receipt", s2: "🗑️ Flagged on Receipt", s3: "✓ Linked",
+            skipped: {
+              count: "📋 Sent to Teacher",
+              text: "Double-standard highlighted on Teacher's 60s Summary + 90s Voice Check."
+            },
+            alertHTML: `<div class="bg-slate-900 text-white px-4 py-3 rounded-lg text-xs flex items-center justify-between shadow-lg">
+              <span>🎯 <strong>Demo Finale Action:</strong> Click the red <strong>[🎙️ 90s Voice Check]</strong> button to hear the system ask the student about this exact double-standard out loud!</span>
+              <button onclick="toggleModal('viva-modal')" class="bg-rose-600 hover:bg-rose-500 text-white font-bold px-3 py-1.5 rounded shrink-0 ml-3">🎙️ Open Voice Check</button>
+            </div>`,
+            paragraphs: [
+              {
+                title: "Paragraph 1 — Flagged on Teacher's 60s Summary",
+                html: `Empirical evidence decisively favors permanent remote transitions: <span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">Bloom et al. (2023) established a +13.5% productivity surge [Single-company, N=1,000]</span>.`
+              },
+              {
+                title: "Paragraph 2 — Flagged on Teacher's 60s Summary",
+                html: `<span class="bg-rose-100 text-rose-900 font-bold px-1 rounded border border-rose-400">Because single-company counter-studies (Gibbs, N=1,200) lack generalizability</span>, technology firms can confidently adopt full-time remote mandates.`
+              }
+            ],
+            commits: [
+              { hash: "RECEIPT", tag: "🎙️ 3 Viva Questions Ready", msg: "Generated 60-second Teacher Summary and 90-second Voice Check." }
+            ],
+            coachTitle: "Teacher's 60-Second Summary & Voice Check Ready",
+            coachQuestion: "Question #1 queued for live Voice Check: 'Why did you disqualify Gibbs for being a single-company study of 1,200 engineers, while basing Paragraph 1 on Bloom, a single-company study of 1,000 call-center workers?'"
+          }
+        ]
+      }
+    ];
+
+    function renderAll() {
+      const c = CASES[currentCase];
+      const s = c.steps[currentStep];
+
+      // Update Top Scenario Buttons
+      [0, 1, 2].forEach(idx => {
+        const btn = document.getElementById(`case-btn-${idx}`);
+        if (idx === currentCase) {
+          btn.className = "px-3 py-1.5 rounded-md text-sm font-bold bg-indigo-600 text-white shadow transition min-h-[40px]";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-md text-sm font-semibold text-slate-300 hover:bg-slate-700 transition min-h-[40px]";
+        }
+      });
+
+      // Update Presenter Hint
+      document.getElementById("step-counter-badge").textContent = `${c.name} • Step ${currentStep + 1} of 5`;
+
+      // Update Left Sources Status
+      document.getElementById("s1-status").textContent = s.s1;
+      document.getElementById("s2-status").textContent = s.s2;
+      document.getElementById("s3-status").textContent = s.s3;
+      document.getElementById("skipped-badge").textContent = s.skipped.count;
+      document.getElementById("skipped-content").textContent = s.skipped.text;
+
+      // Update Center Header Badges
+      document.getElementById("commit-hash-badge").textContent = s.hash;
+      document.getElementById("word-budget-badge").textContent = s.words;
+      const coh = document.getElementById("coherence-badge");
+      coh.textContent = s.coherence.text;
+      coh.className = `whitespace-nowrap text-sm font-bold px-2.5 py-0.5 rounded ${s.coherence.cls}`;
+
+      // Update Center Alert Banner
+      document.getElementById("canvas-alert-slot").innerHTML = s.alertHTML;
+
+      // Update Essay Paragraphs
+      const canvas = document.getElementById("essay-canvas");
+      canvas.innerHTML = s.paragraphs.map(p => {
+        let bodyHTML = p.html;
+        if (cleanView) {
+          bodyHTML = bodyHTML.replace(/<span class="diff-del">.*?<\/span>/g, "");
+        }
+        return `
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-1.5">
+            <div class="text-sm font-bold uppercase tracking-wider text-indigo-700 mono">${p.title}</div>
+            <p class="text-base text-slate-800 leading-relaxed">${bodyHTML}</p>
+          </div>
+        `;
+      }).join("");
+
+      // Update Right Top: Commit History
+      const commitList = document.getElementById("commit-log-list");
+      commitList.innerHTML = s.commits.map((cm, i) => `
+        <div class="flex items-start space-x-2.5 p-2 rounded-lg ${i === 0 ? 'bg-indigo-50/70 border border-indigo-200' : 'bg-slate-50 border border-slate-200'}">
+          <span class="mono text-xs font-bold px-1.5 py-0.5 rounded bg-slate-800 text-white shrink-0">${cm.hash}</span>
+          <div class="text-sm">
+            <span class="font-bold text-indigo-900">${cm.tag}:</span>
+            <span class="text-slate-700"> ${cm.msg}</span>
+          </div>
+        </div>
+      `).join("");
+
+      // Update Right Bottom: Coach PR Card
+      document.getElementById("pillar-badge").textContent = s.pillar;
+      document.getElementById("coach-card-body").innerHTML = `
+        <div class="text-sm font-bold text-slate-900">${s.coachTitle}</div>
+        <div class="p-3 rounded-xl bg-indigo-50/60 border border-indigo-200 text-sm text-slate-800 leading-relaxed font-medium">
+          "${s.coachQuestion}"
+        </div>
+      `;
+
+      // Update Bottom 5-Step Scrubber Bar
+      const timeline = document.getElementById("timeline-steps");
+      timeline.innerHTML = c.steps.map((st, idx) => {
+        const active = idx === currentStep;
+        const passed = idx < currentStep;
+        return `
+          <button onclick="goToStep(${idx})" class="px-2.5 py-2 rounded-lg text-left border transition min-h-[38px] flex items-center justify-between ${
+            active
+              ? 'bg-indigo-600 border-indigo-400 text-white font-bold shadow-md'
+              : passed
+              ? 'bg-slate-800 border-emerald-600/50 text-emerald-300 font-medium hover:bg-slate-700'
+              : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-slate-800'
+          }">
+            <span class="text-sm leading-tight">${st.label}</span>
+            <span class="text-xs mono ml-1">${active ? '●' : passed ? '✓' : ''}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function selectCase(caseIdx) {
+      stopAutoPlay();
+      currentCase = caseIdx;
+      currentStep = 0;
+      renderAll();
+    }
+
+    function goToStep(stepIdx) {
+      stopAutoPlay();
+      currentStep = stepIdx;
+      renderAll();
+    }
+
+    function nextStep() {
+      const maxSteps = CASES[currentCase].steps.length;
+      if (currentStep < maxSteps - 1) {
+        currentStep++;
+        renderAll();
+      } else if (currentCase < CASES.length - 1) {
+        currentCase++;
+        currentStep = 0;
+        renderAll();
+      } else {
+        stopAutoPlay();
+      }
+    }
+
+    function prevStep() {
+      stopAutoPlay();
+      if (currentStep > 0) {
+        currentStep--;
+        renderAll();
+      } else if (currentCase > 0) {
+        currentCase--;
+        currentStep = CASES[currentCase].steps.length - 1;
+        renderAll();
+      }
+    }
+
+    function toggleCleanView() {
+      cleanView = !cleanView;
+      const btn = document.getElementById("diff-toggle-btn");
+      btn.textContent = cleanView ? "📄 Showing: Clean Prose" : "🔍 Showing: Changes & Highlights";
+      renderAll();
+    }
+
+    function toggleAutoPlay() {
+      if (autoPlayTimer) {
+        stopAutoPlay();
+      } else {
+        document.getElementById("play-icon").textContent = "⏸";
+        document.getElementById("play-text").textContent = "Pause Walkthrough";
+        autoPlayTimer = setInterval(() => {
+          const isLastStep = currentStep === CASES[currentCase].steps.length - 1;
+          if (isLastStep) {
+            stopAutoPlay();
+          } else {
+            nextStep();
+          }
+        }, 4200);
+      }
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+      document.getElementById("play-icon").textContent = "▶";
+      document.getElementById("play-text").textContent = "Auto-Play Walkthrough";
+    }
+
+    function toggleModal(id) {
+      const el = document.getElementById(id);
+      if (el.classList.contains("hidden")) {
+        el.classList.remove("hidden");
+        el.classList.add("flex");
+      } else {
+        el.classList.add("hidden");
+        el.classList.remove("flex");
+      }
+    }
+
+    function triggerDisagree() {
+      const reason = prompt(
+        "Disagree with Coach Check (15+ words):\nExplain why your nuance is valid. This logs a ★ Gold-Star Critical Thinking Moment on your Teacher's 60s Summary:",
+        "Bloom's call-center sample still isolates home acoustics, which I only use to support individual focus before addressing team R&D in Para 2."
+      );
+      if (reason) {
+        alert("✓ Logged on Teacher's 60s Summary as a [★ Gold-Star Critical Thinking Override]!\nEven when the AI Coach is challenged, defending your reasoning proves you own the paper.");
+      }
+    }
+
+    function speakVivaQuestion() {
+      if (!('speechSynthesis' in window)) {
+        alert("Browser Speech Synthesis not supported in this browser.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const text = document.getElementById("viva-question-text").innerText;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.98;
+      document.getElementById("tts-status").textContent = "🔊 Speaking question out loud...";
+      utterance.onend = () => {
+        document.getElementById("tts-status").textContent = "✓ Question spoken — Student has 90s to respond";
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    }
+
+    // Keyboard navigation (Left / Right arrows)
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") nextStep();
+      if (e.key === "ArrowLeft") prevStep();
+    });
+
+    // Initial render
+    renderAll();
+  </script>
+</body>
+</html>

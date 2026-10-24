@@ -1,0 +1,32 @@
+{
+ "version": "0.2",
+ "session_id": "wr-executor",
+ "created": "2026-10-16T14:00:00Z",
+ "task": "URBP3010-w9-essay",
+ "notes": "Simulated ATTACK (user-specified): outsider AI pre-writes essay + full process script (queries, passages, argument flow); student only executes. Script interleaves typing with queries to mimic natural rhythm. Best-case version of the attack.",
+ "essay": "A hard cap on initial rents is the wrong instrument for Hong Kong's subdivided units. The policy goal is real: cubicle tenants pay a per-square-foot premium of fifteen to twenty-five percent, and the 2021 ordinance left first rents untouched, so the injustice at move-in is genuine. But the archive's supply evidence is decisive against the blunt tool. In marginal stock, a binding ceiling contracts supply by three to five percent for every ten percent cut, so the households a cap claims to help are the ones it keeps out. The Berlin record shows the mechanism operating in a comparable market: the freeze pulled listed rents down, listings then thinned, and when the court voided the law a backlog of increases landed on the newest entrants. New York's second-generation rules show the workable alternative: light regulation at first rent has held stock roughly stable, the same pattern the SDU index shows since 2021. Enforcement is the quieter failure. The subcommittee minute records inspection capacity below six percent of stock a year, and complaint-driven design protects written agreements first — the newest arrivals, who lack them, are served last. Tenants themselves say what they would trade for security, and it is not a lower first rent at the cost of never complaining. The queue, not the rent, is the binding constraint; tenure security plus a light indexed band answers the actual injury without the contraction arithmetic.",
+ "queries": [
+  {"text": "what is a subdivided unit and how many exist", "mark": "FACT", "ts": 1},
+  {"text": "does the 2021 tenancy control ordinance cap initial rents", "mark": "FACT", "ts": 2},
+  {"text": "what is the per square foot premium for SDU tenants", "mark": "FACT", "ts": 3},
+  {"text": "how many households lack written tenancy agreements", "mark": "FACT", "ts": 4},
+  {"text": "what happens to supply under a hard cap on rent levels", "mark": "DEEP", "ts": 5},
+  {"text": "what happened to Berlin listings after the Mietendeckel", "mark": "DEEP", "ts": 6},
+  {"text": "why does enforcement miss the newest arrivals under complaint-driven design", "mark": "DEEP", "ts": 7},
+  {"text": "what would tenants trade rent increases for", "mark": "DEEP", "ts": 8}
+ ],
+ "retrievals": ["D2p1", "D1p1", "D6p1", "D6p4", "D7p2", "D8p3", "D10p2", "D10p3", "D11p1"],
+ "hooks": [
+  {"passage": "D2p1", "pos": 210},
+  {"passage": "D1p1", "pos": 300},
+  {"passage": "D6p1", "pos": 560},
+  {"passage": "D6p4", "pos": 690},
+  {"passage": "D7p2", "pos": 860},
+  {"passage": "D8p3", "pos": 1010},
+  {"passage": "D10p2", "pos": 1190},
+  {"passage": "D10p3", "pos": 1330},
+  {"passage": "D11p1", "pos": 1470}
+ ],
+ "pasteChars": 0,
+ "editBursts": 5
+}

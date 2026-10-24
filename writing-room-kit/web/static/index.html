@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Acader Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a calm two-pane workspace (conversation | sources and draft), with a report page and a comparison page. Ink-blue accent; amber and rose are signal colours only. */
+:root{--bg:#f3f5f8;--panel:#ffffff;--ink:#101a2b;--ink2:#52607a;--line:#dbe1ea;--accent:#2347c5;--accent-ink:#ffffff;--accent-soft:#e8edfb;
+--good:#17794a;--good-soft:#e5f4ec;--warn:#9a5b00;--warn-soft:#fff1d9;--bad:#b0302b;--bad-soft:#fbe9e7;--code:#eef1f6;--shadow:0 1px 2px rgba(16,26,43,.06),0 6px 20px rgba(16,26,43,.05);
+--display:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;--body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1320;--panel:#151d2e;--ink:#e8edf7;--ink2:#9aa8c2;--line:#27324a;--accent:#7f9bff;--accent-ink:#0d1320;--accent-soft:#1b2748;--good:#6fd39b;--good-soft:#12291f;--warn:#f0b35a;--warn-soft:#2e2412;--bad:#ff958d;--bad-soft:#331a19;--code:#1a2438;--shadow:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1320;--panel:#151d2e;--ink:#e8edf7;--ink2:#9aa8c2;--line:#27324a;--accent:#7f9bff;--accent-ink:#0d1320;--accent-soft:#1b2748;--good:#6fd39b;--good-soft:#12291f;--warn:#f0b35a;--warn-soft:#2e2412;--bad:#ff958d;--bad-soft:#331a19;--code:#1a2438;--shadow:none;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);padding-inline:16px}
+button,textarea,input{font:inherit;color:inherit}
+html,body{overflow-x:hidden}
+.app{max-width:1240px;margin:0 auto;padding-block:14px 40px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding-block:6px 14px}
+.brand{font:700 1.35rem/1 var(--display);letter-spacing:-.01em}
+.brand small{font:500 .7rem/1 var(--mono);color:var(--ink2);letter-spacing:.06em;text-transform:uppercase;margin-left:8px}
+nav.tabs{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+nav.tabs button,.stabs button{border:0;background:transparent;padding:7px 14px;border-radius:7px;cursor:pointer;color:var(--ink2);font-weight:500}
+nav.tabs button[aria-selected=true],.stabs button[aria-selected=true]{background:var(--accent);color:var(--accent-ink)}
+.spacer{flex:1}
+.ghost{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:7px 12px;cursor:pointer;color:var(--ink2)}
+.ghost:hover{color:var(--ink);border-color:var(--ink2)}
+.q{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.q b{font:500 .7rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.q span{font:600 1.02rem/1.35 var(--display)}
+.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.pad{padding:16px 18px}
+h2{font:700 1.05rem/1.2 var(--display);margin:0 0 8px}
+h3{font:600 .72rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);margin:18px 0 8px}
+.note{color:var(--ink2);font-size:.88rem}
+/* conversation */
+.chat{display:flex;flex-direction:column;height:min(66vh,640px);min-height:420px}
+.msgs{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:92%;padding:9px 13px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word}
+.m small{display:block;font:500 .66rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px;opacity:.75}
+.m.you{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:3px}
+.m.assistant{align-self:flex-start;background:var(--code);border-bottom-left-radius:3px}
+.m.assistant.coach{background:var(--accent-soft)}
+.m.note{align-self:center;background:transparent;color:var(--ink2);font:.8rem var(--mono);padding:2px}
+.typing{align-self:flex-start;color:var(--ink2);font-size:.9rem}
+.typing::after{content:"";display:inline-block;width:1.2em;text-align:left;animation:dots 1.2s steps(4,end) infinite}
+@keyframes dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+@media (prefers-reduced-motion:reduce){.typing::after{animation:none;content:"..."}}
+.composer{border-top:1px solid var(--line);padding:12px;display:grid;gap:8px}
+textarea,input[type=text]{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:9px;padding:9px 11px;resize:vertical}
+textarea:focus,input:focus,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{border:0;background:var(--accent);color:var(--accent-ink);padding:8px 15px;border-radius:9px;cursor:pointer;font-weight:600}
+.btn.alt{background:var(--accent-soft);color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:default}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 11px;font-size:.84rem;cursor:pointer;color:var(--ink2)}
+.chip:hover{color:var(--ink);border-color:var(--ink2)}
+/* side */
+.stabs{display:flex;gap:4px;padding:8px 10px 0}
+.stabs button{padding:6px 12px}
+.pane{padding:14px 18px 18px}
+.docrow{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
+.docrow:last-child{border-bottom:0}
+.docrow b{display:block}
+.tag{font:500 .68rem/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+details.doc{border:1px solid var(--line);border-radius:9px;margin:7px 0;background:var(--bg)}
+details.doc summary{cursor:pointer;padding:8px 12px;font-weight:600}
+details.doc .pp{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 11px}
+.pb{font:500 .8rem var(--mono);border:1px solid var(--line);background:var(--panel);border-radius:7px;padding:4px 9px;cursor:pointer}
+.pb.read{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.reader{border-left:3px solid var(--accent);background:var(--accent-soft);padding:10px 14px;border-radius:0 9px 9px 0;margin-top:10px}
+.reader .id{font:500 .72rem var(--mono);color:var(--accent)}
+.empty{color:var(--ink2);padding:6px 0}
+.coach-box{margin-top:12px}
+.coach-box p{background:var(--accent-soft);padding:9px 12px;border-radius:9px;margin:6px 0}
+#draft{min-height:260px;line-height:1.6}
+/* report */
+.kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.kind{padding:12px 14px;border-radius:10px;border:1px solid var(--line)}
+.kind b{font:700 1.8rem/1 var(--display);display:block}
+.kind.good{background:var(--good-soft);border-color:var(--good)} .kind.warn{background:var(--warn-soft);border-color:var(--warn)} .kind.bad{background:var(--bad-soft);border-color:var(--bad)}
+.bar{height:8px;border-radius:99px;background:var(--code);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.comp{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:4px 12px;align-items:center;margin:8px 0}
+.comp .bar{grid-column:1/-1}
+.stack{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--code)}
+.stack i{display:block;height:100%}
+.s-good{background:var(--good)} .s-warn{background:var(--warn)} .s-bad{background:var(--bad)}
+.claim{border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin:8px 0;background:var(--panel)}
+.claim .st{font:500 .68rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:5px;margin-right:8px;white-space:nowrap}
+.claim .st.derived{background:var(--good-soft);color:var(--good)} .claim .st.explained_after{background:var(--warn-soft);color:var(--warn)} .claim .st.none{background:var(--bad-soft);color:var(--bad)}
+.claim blockquote{margin:7px 0 0;padding-left:11px;border-left:2px solid var(--line);color:var(--ink2);font-size:.9rem}
+ul.qs{padding-left:1.1em} ul.qs li{margin:.5em 0}
+.stat{display:flex;flex-wrap:wrap;gap:6px 18px;font:.82rem var(--mono);color:var(--ink2)}
+.legal{background:var(--code);border-radius:9px;padding:9px 13px;font-size:.88rem;color:var(--ink2)}
+/* examples */
+.ex{margin:14px 0}
+.ex .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.big{font:700 1.7rem/1 var(--display)}
+.ex ul{margin:.4em 0 0;padding-left:1.1em;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+/* overlay + toast */
+.ov{position:fixed;inset:0;background:rgba(10,16,28,.55);display:grid;place-items:center;padding:16px;z-index:9}
+.ov[hidden]{display:none}
+.ov .card{max-width:420px;width:100%}
+#toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:9px;max-width:92vw;z-index:10}
+#toast[hidden]{display:none}
+footer{margin-top:26px;color:var(--ink2);font-size:.82rem}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand">Acader Room<small>demo</small></div>
+  <nav class="tabs" role="tablist" aria-label="Pages">
+    <button role="tab" data-view="room" aria-selected="true">Room</button>
+    <button role="tab" data-view="report" aria-selected="false">Report</button>
+    <button role="tab" data-view="compare" aria-selected="false">How it compares</button>
+  </nav>
+  <div class="spacer"></div>
+  <button class="ghost" id="newBtn">New session</button>
+</header>
+
+<section id="view-room">
+  <div class="q"><b>Essay question</b><span id="question"></span></div>
+  <div class="grid">
+    <div class="card chat">
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+      <div class="composer">
+        <div class="chips" id="starters"></div>
+        <textarea id="say" rows="3" placeholder="Ask the assistant, or say what you think. It helps you think and does not write for you."></textarea>
+        <div class="row">
+          <button class="btn" id="askBtn">Ask the assistant</button>
+          <button class="btn alt" id="claimBtn" title="State a claim and your argument yourself. The Coach replies with one question.">State my own claim</button>
+          <span class="note" id="callsNote"></span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="stabs" role="tablist"><button role="tab" data-side="src" aria-selected="true">Sources</button><button role="tab" data-side="draft" aria-selected="false">Draft</button></div>
+      <div class="pane" id="side-src"></div>
+      <div class="pane" id="side-draft" hidden>
+        <h2>Your draft</h2>
+        <p class="note">Cite passages you have read like <code>[D3p2]</code>. Typing is the normal way to work here. Pasted text is allowed and recorded as part of the trail.</p>
+        <textarea id="draft" placeholder="Write your essay here, in your own words."></textarea>
+        <div class="row" style="margin-top:8px">
+          <span class="note" id="wc">0 words</span><span class="note" id="pc"></span><span class="spacer"></span>
+          <button class="ghost" id="saveBtn">Save draft</button>
+          <button class="btn alt" id="checkBtn">Ask the Coach about it</button>
+          <button class="btn" id="submitBtn">Submit and see the report</button>
+        </div>
+        <div class="coach-box" id="coach"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="view-report" hidden></section>
+<section id="view-compare" hidden></section>
+
+<footer>A research demo. Your messages go to an AI service, so do not enter personal or real student data. The report asks questions for a person to ask; it is not a verdict and no consequence follows from it.</footer>
+</div>
+
+<div class="ov" id="codeOv" hidden><div class="card pad"><h2>Access code</h2><p class="note">This demo is shared by invitation.</p><input type="text" id="codeIn" autocomplete="off" placeholder="Code"><div class="row" style="margin-top:10px"><button class="btn" id="codeBtn">Enter</button></div></div></div>
+<div id="toast" hidden></div>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const qfix = q => String(q).replace('.".', '".');
+const pl = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let S = null, busy = false, lastPassage = null, needsCode = false, pasted = 0;
+const store = { get(k){ try { return localStorage.getItem(k) } catch { return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch {} }, del(k){ try { localStorage.removeItem(k) } catch {} } };
+let code = store.get("room_code") || "";
+
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 5200); }
+async function api(path, body){
+  const r = await fetch(path, { method: body ? "POST" : "GET", headers: { "content-type": "application/json", "x-demo-code": code }, body: body ? JSON.stringify(body) : undefined });
+  const j = await r.json().catch(() => ({}));
+  if (r.status === 401) { $("#codeOv").hidden = false; throw new Error("Access code needed."); }
+  if (!r.ok) throw new Error(j.detail || "Something went wrong. Please try again.");
+  return j;
+}
+async function act(path, body){
+  if (busy) return null; busy = true; render();
+  try { const j = await api(path, { sid: S.sid, ...body }); S = j; return j; }
+  catch (e) { toast(e.message); return null; }
+  finally { busy = false; render(); }
+}
+
+/* ---------- room ---------- */
+const STARTERS = ["Find me a source on how rents moved in subdivided units", "I think a hard cap on starting rents would backfire, because…", "What would a source need to show for my argument?"];
+function renderChat(){
+  const m = $("#msgs"), atEnd = m.scrollHeight - m.scrollTop - m.clientHeight < 80;
+  m.innerHTML = S.chat.map(c => {
+    if (c.role === "note") return `<div class="m note">${esc(c.text)}</div>`;
+    if (c.role === "you") return `<div class="m you"><small>${c.kind === "confident" ? "Your claim" : c.kind === "pick" ? "Your pick" : c.kind === "answer" ? "Your answer" : "You"}</small>${esc(c.text)}${c.docs ? `<br><span class="tag">${esc(c.docs.join(", "))}</span>` : ""}</div>`;
+    const coach = /COACH/.test(c.kind);
+    return `<div class="m assistant ${coach ? "coach" : ""}"><small>${coach ? "Coach" : "Assistant"}</small>${esc(c.text)}</div>`;
+  }).join("") + (busy ? `<div class="typing">Thinking</div>` : "");
+  if (!S.chat.length && !busy) m.innerHTML = `<div class="empty">Start by asking for a source, or say what you already think about the question. The assistant will ask what you need before it offers sources.</div>`;
+  if (atEnd || busy) m.scrollTop = m.scrollHeight;
+  $("#starters").innerHTML = S.chat.length ? "" : STARTERS.map(t => `<button class="chip">${esc(t)}</button>`).join("");
+  $$("#starters .chip").forEach(b => b.onclick = () => { $("#say").value = b.textContent; $("#say").focus(); });
+  $("#callsNote").textContent = `${S.calls_used} of ${S.calls_cap} model calls used in this session`;
+}
+function renderSources(){
+  const p = $("#side-src"); let h = "";
+  if (S.shortlist.length) {
+    h += `<h2>Offered sources</h2><p class="note">In no particular order. Choose one or more and say why. The reason becomes part of your trail.</p>`;
+    h += S.shortlist.map(d => `<label class="docrow"><input type="checkbox" class="pk" value="${d.id}"><span><b>${esc(d.title)}</b><span class="tag">${esc(d.id)} · ${esc(d.type)}</span></span></label>`).join("");
+    h += `<input type="text" id="reason" placeholder="Why do you want these? In your own words." style="margin-top:8px"><div class="row" style="margin-top:8px"><button class="btn" id="pickBtn">Pick</button></div>`;
+  }
+  h += `<h3>Unlocked documents</h3>`;
+  h += S.docs.length ? S.docs.map(d => `<details class="doc" ${d.passages.some(x => x.read) ? "open" : ""}><summary>${esc(d.title)} <span class="tag">${esc(d.id)}</span></summary><div class="pp">${d.passages.map(x => `<button class="pb ${x.read ? "read" : ""}" data-pid="${x.pid}">${x.pid}</button>`).join("")}</div></details>`).join("")
+                    : `<div class="empty">Nothing unlocked yet. Ask the assistant for a source, then pick from its list.</div>`;
+  if (lastPassage) h += `<div class="reader"><div class="id">${esc(lastPassage.pid)}</div>${esc(lastPassage.text)}</div>`;
+  p.innerHTML = h;
+  const pk = $("#pickBtn"); if (pk) pk.onclick = async () => { const ids = $$(".pk:checked").map(x => x.value); if (!ids.length) return toast("Choose at least one source."); const j = await act("/api/pick", { ids, reason: $("#reason").value }); if (j && j.notice) toast(j.notice); };
+  $$(".pb").forEach(b => b.onclick = async () => { const pid = b.dataset.pid; if (S.read[pid]) { lastPassage = { pid, text: S.read[pid] }; return renderSources(); } const j = await act("/api/read", { pid }); if (j && j.passage) { lastPassage = { pid, text: S.read[pid] || j.passage }; renderSources(); } else if (j && j.notice) toast(j.notice); });
+}
+function renderDraft(){ const w = $("#draft").value.trim().split(/\s+/).filter(Boolean).length; $("#wc").textContent = `${w} words`; $("#pc").textContent = pasted ? `${pasted} characters pasted` : ""; }
+function render(){
+  if (!S) return;
+  $("#question").textContent = S.question;
+  renderChat(); if (!busy || true) { const keep = lastPassage; renderSources(); }
+  renderDraft();
+  $$("#view-room button.btn,#view-room .ghost").forEach(b => b.disabled = busy);
+  renderReport();
+}
+function side(name){ $$(".stabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.side === name)); $("#side-src").hidden = name !== "src"; $("#side-draft").hidden = name !== "draft"; }
+function view(name){ $$("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === name)); ["room","report","compare"].forEach(v => $("#view-" + v).hidden = v !== name); if (name === "compare") renderCompare(); if (name === "report") renderReport(); }
+
+/* ---------- report ---------- */
+const LAB = { derived: ["Built in the room", "good"], explained_after: ["Explained after", "warn"], none: ["No earlier trace", "bad"] };
+function renderReport(){
+  const el = $("#view-report"); if (!S) return; const r = S.report;
+  if (!r) { el.innerHTML = `<div class="card pad"><h2>Trace report</h2><p>Nothing to show yet. When you submit your essay, the report lists each idea in it and where, if anywhere, you first said it in the room. It turns the gaps into questions for a person to ask.</p><button class="btn" id="toDraft">Go to my draft</button></div>`; $("#toDraft").onclick = () => { view("room"); side("draft"); }; return; }
+  const k = r.kinds, n = k.derived + k.explained_after + k.none || 1;
+  el.innerHTML = `<div class="card pad"><h2>Trace report: questions for a person to ask</h2>
+  <div class="legal">This is not a verdict about you or your work. It shows where an idea in your essay has no earlier step in the room, so a person can ask you about it. A person decides what, if anything, follows.</div>
+  <div class="kinds"><div class="kind good"><b>${k.derived}</b>ideas you built in the room first</div><div class="kind warn"><b>${k.explained_after}</b>ideas you explained only after writing them</div><div class="kind bad"><b>${k.none}</b>ideas with no earlier trace</div></div>
+  <div class="stack"><i class="s-good" style="width:${100*k.derived/n}%"></i><i class="s-warn" style="width:${100*k.explained_after/n}%"></i><i class="s-bad" style="width:${100*k.none/n}%"></i></div>
+  <h3>What the report looked at</h3>${Object.entries(r.components).map(([a,v]) => `<div class="comp"><span>${esc(a)}</span><b>${Math.round(v)}%</b><div class="bar"><i style="width:${v}%"></i></div></div>`).join("")}
+  <h3>Questions (${r.n_questions})</h3>${r.questions.length ? `<ul class="qs">${r.questions.map(q => `<li>${esc(qfix(q))}</li>`).join("")}</ul>` : `<p class="empty">No open questions.</p>`}
+  <h3>Idea by idea</h3>${r.claims.map(c => `<div class="claim"><span class="st ${c.kind}">${LAB[c.kind][0]}</span>${esc(c.claim)}${c.ancestor_text ? `<blockquote>${c.kind === "derived" ? "First said by you" : "You described it"} at message ${c.ancestor}: “${esc(c.ancestor_text)}”</blockquote>` : ""}</div>`).join("")}
+  <h3>Your session</h3><div class="stat"><span>${pl(r.session.student_turns, "message")}</span><span>${pl(r.session.picks, "source pick")}</span><span>${pl(r.session.reads, "passage")} read</span><span>${pl(r.session.drafts, "saved draft")}</span><span>${pl(r.session.words, "word")}</span><span>${pl(r.session.citations, "citation")}</span><span>${r.session.pasted_chars} characters pasted</span></div>
+  </div>`;
+}
+
+/* ---------- compare ---------- */
+let EX = null;
+async function renderCompare(){
+  const el = $("#view-compare");
+  if (!EX) { try { EX = await api("/api/examples"); } catch (e) { toast(e.message); return; } }
+  const s = EX.summary || {};
+  el.innerHTML = `<div class="card pad"><h2>How different ways of working look in the report</h2>
+  <p>We ran ${esc(s.runs || "")} simulated students, an AI playing each behaviour, through this same room. Honest work with visible thinking scored about ${esc(s.honest_median || "")} out of 100. The routes that lean on an outside AI had medians of ${esc(s.outside_median_range || "")}. ${esc(s.note || "")}</p>
+  <p class="note">Each card is one real simulated run. The bar shows how its ideas split between built in the room, explained after, and no earlier trace. The questions are what a person would ask next.</p></div>
+  <div class="cols">${(EX.examples || []).map(e => { const k = e.kinds, n = k.derived + k.explained_after + k.none || 1; return `<div class="card pad ex"><div class="top"><div><h2>${esc(e.title)}</h2><span class="tag">run ${esc(e.id)}</span></div><div class="big">${e.coverage}<span class="note">/100</span></div></div>
+  <p class="note">${esc(e.blurb)}</p>
+  <div class="stack"><i class="s-good" style="width:${100*k.derived/n}%"></i><i class="s-warn" style="width:${100*k.explained_after/n}%"></i><i class="s-bad" style="width:${100*k.none/n}%"></i></div>
+  <div class="stat" style="margin-top:8px"><span>${k.derived} built here</span><span>${k.explained_after} explained after</span><span>${k.none} no trace</span></div>
+  <div class="stat" style="margin-top:4px"><span>${e.turns} messages</span><span>${e.chars.toLocaleString()} characters typed</span>${e.outside_calls != null ? `<span>${e.outside_calls} outside-AI calls</span>` : ""}</div>
+  <h3>Questions it would ask (${e.n_questions})</h3><ul>${e.questions.map(q => `<li>${esc(qfix(q))}</li>`).join("")}</ul></div>`; }).join("")}</div>`;
+}
+
+/* ---------- wiring ---------- */
+$("#askBtn").onclick = async () => { const t = $("#say").value.trim(); if (!t) return; const keep = t; $("#say").value = ""; const j = await act("/api/say", { text: keep }); if (!j) $("#say").value = keep; };
+$("#claimBtn").onclick = async () => { const t = $("#say").value.trim(); if (!t) return toast("Write your claim and argument first."); $("#say").value = ""; const j = await act("/api/confident", { text: t }); if (!j) $("#say").value = t; };
+$("#say").addEventListener("keydown", e => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) $("#askBtn").click(); });
+$("#draft").addEventListener("input", renderDraft);
+$("#draft").addEventListener("paste", e => { pasted += (e.clipboardData?.getData("text") || "").length; setTimeout(renderDraft, 0); });
+$("#saveBtn").onclick = async () => { const t = $("#draft").value; if (!t.trim()) return; const j = await act("/api/draft", { text: t }); if (j && j.notice) toast(j.notice); };
+$("#checkBtn").onclick = async () => { const t = $("#draft").value; if (!t.trim()) return toast("Write something first."); const j = await act("/api/check", { text: t }); if (j && j.coach) $("#coach").innerHTML = j.coach.length ? `<h3>The Coach asks</h3>${j.coach.map(q => `<p>${esc(q)}</p>`).join("")}` : `<p class="note">No open questions on this draft.</p>`; };
+$("#submitBtn").onclick = async () => { const t = $("#draft").value; if (t.trim().split(/\s+/).length < 40) return toast("Write at least a short essay (about 40 words) before submitting."); const j = await act("/api/submit", { text: t, paste_chars: pasted }); if (j && j.report) view("report"); };
+$$("nav.tabs button").forEach(b => b.onclick = () => view(b.dataset.view));
+$$(".stabs button").forEach(b => b.onclick = () => side(b.dataset.side));
+$("#newBtn").onclick = async () => { store.del("room_sid"); lastPassage = null; pasted = 0; $("#draft").value = ""; $("#coach").innerHTML = ""; await boot(true); view("room"); };
+$("#codeBtn").onclick = async () => { code = $("#codeIn").value.trim(); store.set("room_code", code); $("#codeOv").hidden = true; await boot(); };
+
+async function boot(fresh){
+  try {
+    const cfg = await api("/api/config"); needsCode = cfg.needs_code;
+    if (needsCode && !code) { $("#codeOv").hidden = false; return; }
+    const sid = !fresh && (new URLSearchParams(location.search).get("sid") || store.get("room_sid"));
+    if (sid) { try { S = await api("/api/state?sid=" + sid); } catch { S = null; } }
+    if (!S || fresh) { S = await api("/api/start", {}); store.set("room_sid", S.sid); }
+    render();
+  } catch (e) { toast(e.message); }
+}
+side("src");
+boot().then(() => { const h = location.hash.slice(1); if (h === "report" || h === "compare") view(h); if (h === "draft") side("draft"); });
+</script>
+</body>
+</html>

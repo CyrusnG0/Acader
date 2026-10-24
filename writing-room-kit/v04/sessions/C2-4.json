@@ -1,0 +1,208 @@
+{
+ "name": "C2-4",
+ "id": "C2-4",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What would that source need to do for your rent essay \u2014 back up a claim you're making, show a counter-view, or give a first-hand case? And which claim is it for?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "not sure, just something about subdivided units and rent control, to back me up",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said it's for subdivided units and rent control, and that it should back you up \u2014 what's the actual claim you're making there that needs backing?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "I think rent control should be tighter because tenants are being squeezed. just give me some sources please",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents over time, with caveats on post-2023 figures.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission arguing against hard initial-rent caps, with self-reported data limits.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing for tenure security over hard caps, opposing strict rent control.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided units, outlining debate and existing limited rent control.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply effects, distinguishing control types and welfare trade-offs.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "overview plus actual data",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "confident",
+   "text": "Rent control should be tighter because SDU rents still rise faster than normal flats and the stock did not shrink under the 2021 rules, so more control looks safe.",
+   "paste": false
+  },
+  {
+   "i": 13,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You said earlier you just wanted sources \"to back me up\" \u2014 now you're drawing a conclusion from D2's stock numbers. What in D2 tells you the stock held steady *because* of the 2021 rules, rather than alongside them?",
+   "policy": "COACH"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [],
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    false,
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D5",
+    "D11",
+    "D1",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "overview plus actual data"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p1",
+  "D1p2",
+  "D2p2"
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "overview plus actual data"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 14,
+   "text": "I think Hong Kong should tighten rent control on subdivided units. Tenants pay a lot for very little space [D1p1]. The stock of units kept growing after the 2021 rules [D2p1], so control did not seem to cause landlords to leave.\n",
+   "struct": "typed"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D2",
+  "D5",
+  "D11",
+  "D1",
+  "D6"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 1
+ }
+}

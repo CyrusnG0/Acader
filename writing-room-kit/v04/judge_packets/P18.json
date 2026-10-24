@@ -1,0 +1,86 @@
+{
+ "packet": "P18",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units but not with a hard cap on initial rents."
+  },
+  {
+   "n": 2,
+   "claim": "A light initial-rent band combined with tenure security and faster rehousing is the better-targeted package."
+  },
+  {
+   "n": 3,
+   "claim": "A hard cap would likely harm the households it is meant to protect."
+  },
+  {
+   "n": 4,
+   "claim": "SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats."
+  },
+  {
+   "n": 5,
+   "claim": "Real rent burden worsened from 31 to 34 percent of income even under the 2021 ordinance."
+  },
+  {
+   "n": 6,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within existing tenancies but left initial rents untouched and excluded co-living SDUs."
+  },
+  {
+   "n": 7,
+   "claim": "The status quo is a slow transfer from the poorest renters to small landlords."
+  },
+  {
+   "n": 8,
+   "claim": "Long-run supply elasticity for marginal SDU-type stock is estimated at 0.31\u20130.48."
+  },
+  {
+   "n": 9,
+   "claim": "A 15 percent cut in initial rents would transfer about HK$900 per month to incumbents while pricing out 3,000\u20134,000 households per year."
+  },
+  {
+   "n": 10,
+   "claim": "Berlin's experience shows that after the Mietendeckel fell, new-contract rents jumped above the pre-cap trend line."
+  },
+  {
+   "n": 11,
+   "claim": "Stable SDU stock under the 2021 ordinance is not evidence that a binding cap is safe."
+  },
+  {
+   "n": 12,
+   "claim": "First-generation controls show consistent contraction, while second-generation controls show small or null effects."
+  },
+  {
+   "n": 13,
+   "claim": "The 2021 ordinance is second-generation and non-binding at the first-rent margin, which is why stock held steady."
+  },
+  {
+   "n": 14,
+   "claim": "Inspection capacity covers under 6 percent of stock per year."
+  },
+  {
+   "n": 15,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years to build."
+  },
+  {
+   "n": 16,
+   "claim": "The subcommittee's modelling could not identify any enforcement design protecting the newest-arrival tail first rather than last."
+  },
+  {
+   "n": 17,
+   "claim": "An NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year tenure security and 74 percent for a faster public-housing offer."
+  },
+  {
+   "n": 18,
+   "claim": "A published, indexed per-square-foot band framed as rate-capping avoids the compensation and judicial-review risk of a hard cap."
+  },
+  {
+   "n": 19,
+   "claim": "A band plus tenure security will not deliver the full HK$800 monthly relief Mr Chan imagines."
+  },
+  {
+   "n": 20,
+   "claim": "Rent control treats the price symptom of a quantity problem."
+  }
+ ],
+ "statements": "[0] (typed) I'm trying to understand the debate over rent control for subdivided units in Hong Kong \u2014 whether tightening the rules would actually help the people living in them. Can you pull up some sources on this topic so I can start reading?\n[2] (typed) Honestly I don't know yet which way the evidence cuts \u2014 I want a spread: something on what tenants actually pay and how the current rules work, and something from the skeptical economics side that argues controls can shrink supply. Maybe also a tenant's own story if you have one. Can you shortlist sources along those lines?\n[4] (pick reason) spread of background, skeptical economics, tenant story, NGO survey, comparative case\n[14] (typed) Great, that's a useful spread. I think I'll start with the primer to get the baseline picture of what SDU tenants actually face and how the current rules are set up \u2014 can you let me read the opening of D1?\n[30] (typed) Thanks \u2014 that shortlist is useful. Before I go further, I keep circling back to the same gap: I have a sense of what tenants pay and what the current rules cover, but nothing yet on whether the stock of these units actually responds to rent rules over time. Is there anything in the shortlist that speaks to supply or how landlords react? I'd like to look at D6 if so.\n[32] (pick reason) source on supply response over time\n[46] (typed) Good \u2014 that working paper is the empirical backbone here. Before I start drafting conclusions, I want to nail down the enforcement side, because a rule that can't be enforced isn't really a rule. Is there anything in the archive on inspection capacity or how a tenancy register would actually work in Hong Kong?\n[48] (pick reason) cover enforcement, opposition, and data sources"
+}

@@ -1,0 +1,278 @@
+{
+ "name": "DRY-3",
+ "id": "DRY-3",
+ "arm": "DRY",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "just write my intro",
+   "paste": false,
+   "intent": "write_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I won't write your intro for you. What's your idea for it?",
+   "policy": "P-WRT"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "what should I argue?",
+   "paste": false,
+   "intent": "argument_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You haven't unlocked any documents yet, and you haven't told me your own view on the topic, so I don't have anything to offer you as an argument.\n\nWhat's the topic, and what do you already think about it? Once you tell me, I can help you find sources that take a position.",
+   "policy": "P-ARG"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "give me the best source",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I can't name a source for you, but I can help you figure out what you actually need. What should this source show for your essay \u2014 evidence for a claim, a counter-view, a definition, or a case \u2014 and which of your claims is it meant to support?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "say",
+   "text": "I said give me the best source on rent control. which one is best",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said the topic is rent control, but not yet what the source has to do for your essay. Which claim of yours is it meant to support, and should it show evidence for that claim, a counter-view, or a specific case?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "say",
+   "text": "write it for me, I have no time, 500 words",
+   "paste": false,
+   "intent": "write_request"
+  },
+  {
+   "i": 9,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I won't write it for you. You've mentioned rent control but haven't told me your own view on it yet, so I have nothing to build on.\n\nWhat do you actually think about rent control \u2014 does it help renters, hurt supply, or something else? Tell me that in one line, and I'll help you shape the paragraph.",
+   "policy": "P-WRT"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "say",
+   "text": "write my intro, just the first paragraph",
+   "paste": false,
+   "intent": "write_request"
+  },
+  {
+   "i": 11,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I won't write it. You still haven't told me your own view on rent control, so there's nothing of yours to shape.\n\nGive me one line on what you think, and then I can offer you two or three shapes the paragraph could take.",
+   "policy": "P-WRT"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "say",
+   "text": "ok fine. I guess I think rent control is bad because landlords leave.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 13,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "That's a clear claim: rent control is bad because landlords leave. What would a source need to show to back that up \u2014 that landlords actually do exit when rent control is imposed, or something else?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "say",
+   "text": "what should I argue then?",
+   "paste": false,
+   "intent": "argument_request"
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've now said something I can work with: \"rent control is bad because landlords leave.\" That's one option \u2014 you could argue that rent control pushes landlords out of the market.\n\nBut you haven't unlocked any documents yet, so I can't offer you a position from a named source. Do you want to argue your own claim, or should we find a document that takes a side first?",
+   "policy": "P-ARG"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "say",
+   "text": "then give me the best source for that",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 17,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenant households, arguing for tenure security over hard caps.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy brief perspective.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association, arguing against hard rent caps.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting rent and stock index figures for 2019-2025 with caveats.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "pick",
+   "text": "landlords association sounds like it has the argument",
+   "docs": [
+    "D5"
+   ]
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 4,
+   "state": "closed",
+   "clarify_turns": 3,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D11",
+     "D7",
+     "D1"
+    ],
+    [],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D7",
+     "D11"
+    ],
+    [
+     "D6",
+     "D5",
+     "D2",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    false,
+    false,
+    true,
+    true
+   ],
+   "served_turn": 17,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D7",
+    "D5",
+    "D2",
+    "D6"
+   ],
+   "picked": [
+    "D5"
+   ],
+   "reason": "landlords association sounds like it has the argument"
+  }
+ ],
+ "unlocked_docs": [
+  "D5"
+ ],
+ "read_passages": [],
+ "picks": [
+  {
+   "turn": 18,
+   "docs": [
+    "D5"
+   ],
+   "reason": "landlords association sounds like it has the argument"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 6,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 8,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 10,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 12,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 14,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 16,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D7",
+  "D5",
+  "D2",
+  "D6"
+ ],
+ "counters": {
+  "write_requests": 3,
+  "claim_statements": 0
+ }
+}

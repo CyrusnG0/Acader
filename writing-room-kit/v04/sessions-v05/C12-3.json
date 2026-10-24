@@ -1,0 +1,392 @@
+{
+ "name": "C12-3",
+ "id": "C12-3",
+ "arm": "C12",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so I'm working on this essay about rent caps on subdivided units in HK \u2014 need to get my sources in order. can you pull up what's in the archive on this?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I can't pull anything up \u2014 I don't have documents in front of me, and I shouldn't name sources I can't see. Before we go looking, what should a source do for your essay here: is it meant to show evidence for a specific claim you're making, or give a counter-view, a definition, a case, or a first-hand account? And which claim would it be serving?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "right, sorry \u2014 it's the evidence base. I'm arguing HK shouldn't do a hard cap on initial SDU rents but should tighten in a narrower way. So I need the actual numbers on who lives in these units and how many \u2014 that's the base of everything.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official-style statistical data excerpt, 2019-2025, with stated survey-extrapolation caveat for post-2023 figures.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Leaked internal government enforcement minute, draft and not for circulation, focused on inspection capacity and enforcement gaps.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper offering theoretical and modelled elasticity analysis, distinguishing first- versus second-generation controls.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of 440 households, tenant-voiced revealed preferences, arguing against a hard cap and for narrow tightening.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving background demographics and framing the rent-economics debate, not original data.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "need base demographics and stock numbers first",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "pick",
+   "text": "base demographics and stock numbers",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 8,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p3"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "pick",
+   "text": "want the demographic and stock passages",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 22,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "pick",
+   "text": "need supply elasticity and tenant survey sources",
+   "docs": [
+    "D6",
+    "D11",
+    "D10"
+   ]
+  },
+  {
+   "i": 27,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D11",
+     "D7",
+     "D10"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D10",
+    "D6",
+    "D11",
+    "D1"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "need base demographics and stock numbers first"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D6",
+  "D11",
+  "D10"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p1",
+  "D1p2",
+  "D2p2",
+  "D2p3",
+  "D6p1",
+  "D6p2",
+  "D6p4",
+  "D11p1"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "need base demographics and stock numbers first"
+  },
+  {
+   "turn": 7,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "base demographics and stock numbers"
+  },
+  {
+   "turn": 21,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "want the demographic and stock passages"
+  },
+  {
+   "turn": 26,
+   "docs": [
+    "D6",
+    "D11",
+    "D10"
+   ],
+   "reason": "need supply elasticity and tenant survey sources"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 18,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 18,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 19,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 24,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.\n\nStart with who lives in these units. About 110,000 households occupy SDUs, and they are disproportionately new arrivals, single-parent households and people waiting for public housing, where the wait averages around five and a half years [D1p1][D1p2]. For them the SDU is a residual option while the queue moves. That matters because any policy that shrinks the stock lands hardest on exactly this group.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 25,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 29,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.\n\nStart with who lives in these units. About 110,000 households occupy SDUs, and they are disproportionately new arrivals, single-parent households and people waiting for public housing, where the wait averages around five and a half years [D1p1][D1p2]. For them the SDU is a residual option while the queue moves. That matters because any policy that shrinks the stock lands hardest on exactly this group.",
+   "struct": "retyped"
+  },
+  {
+   "turn": 33,
+   "text": "Hong Kong should not adopt a hard cap on initial rents for subdivided units, but it should tighten in a narrower way: a floor standard, security of tenure, and a light, indexed rent band. The strongest case against a hard cap is that its costs fall on the very people it is meant to help, and the evidence in the archive points consistently in that direction.\n\nStart with who lives in these units. About 110,000 households occupy SDUs, and they are disproportionately new arrivals, single-parent households and people waiting for public housing, where the wait averages around five and a half years [D1p1][D1p2]. For them the SDU is a residual option while the queue moves. That matters because any policy that shrinks the stock lands hardest on exactly this group.",
+   "struct": "retyped"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D2",
+  "D10",
+  "D6",
+  "D11",
+  "D1"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

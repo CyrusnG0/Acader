@@ -1,0 +1,66 @@
+# AUDIT-5
+
+Task: for each claim from the essay, the judge named an earlier student turn as its ancestor (or none). Mark each row: **correct** (the turn really states, chooses or defends that point in the student's own words), **wrong ancestor**, **missed ancestor** (none given, but one exists in the transcript), or **correctly none**.
+
+| # | Para | Claim | Ancestor turn (kind) | Student's words at that turn | Your mark |
+|---|---|---|---|---|---|
+| 1 | 1 | Hong Kong should tighten rules on subdivided units narrowly, strengthening tenure security and adding a light band on initial rents. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 2 | 1 | Hong Kong should not set a hard cap on rent levels because it risks hurting the people it is meant to help. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 3 | 2 | About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than ordinary flats. | 15 (say) | From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I' | |
+| 4 | 2 | Many subdivided unit tenants are new arrivals, single parents, and people waiting for public housing, with an average wait of about five and a half years. | 15 (say) | From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I' | |
+| 5 | 2 | For these tenants, subdivided units are not a choice but a temporary place while waiting for public housing. | 15 (say) | From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I' | |
+| 6 | 3 | The 2021 Tenancy Control Ordinance capped rent increases within a tenancy but did not cap starting rents. | 15 (say) | From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I' | |
+| 7 | 3 | After the 2021 ordinance, the number of subdivided units grew from 107,300 in 2021 to 111,200 in 2025. | 15 (say) | From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I' | |
+| 8 | 3 | Hard caps on rent levels consistently reduce housing supply, while caps on rent increases have small or no effects on stock. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 9 | 4 | A 10 percent fall in rent removes about 3 to 5 percent of housing stock over five years. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 10 | 4 | In Berlin, a rent cap on about 1.5 million flats led to a fall in listing supply within a year as owners held back flats. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 11 | 4 | When Berlin's rent cap was struck down, rents for new contracts jumped above the earlier trend. | none | (none) | |
+| 12 | 4 | Rent caps protect tenants already inside but impose costs on people still outside the market. | 36 (say) | Reading D7p3 and D3p2, I see the opposing view: a cap really helps people already inside, and Mr Chan would save 800 dollars. I answer that D3p2 also says he fears landlords emptying units, and D6p3 says the losers are the same people the cap is meant to prote | |
+| 13 | 5 | A hard cap would help people already inside, such as Mr Chan who says it would free about 800 dollars a month. | 36 (say) | Reading D7p3 and D3p2, I see the opposing view: a cap really helps people already inside, and Mr Chan would save 800 dollars. I answer that D3p2 also says he fears landlords emptying units, and D6p3 says the losers are the same people the cap is meant to prote | |
+| 14 | 5 | Mr Chan fears landlords would rather turn cubicles back into storage rooms, and he has seen two units on his floor emptied and locked. | 36 (say) | Reading D7p3 and D3p2, I see the opposing view: a cap really helps people already inside, and Mr Chan would save 800 dollars. I answer that D3p2 also says he fears landlords emptying units, and D6p3 says the losers are the same people the cap is meant to prote | |
+| 15 | 5 | The households that lose units due to a cap are the same population the cap is meant to protect. | 36 (say) | Reading D7p3 and D3p2, I see the opposing view: a cap really helps people already inside, and Mr Chan would save 800 dollars. I answer that D3p2 also says he fears landlords emptying units, and D6p3 says the losers are the same people the cap is meant to prote | |
+| 16 | 6 | When asked what would help most, Mr Chan named the waiting list, not rent, and said he would accept any rent if the queue were three years instead of five and a half. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 17 | 6 | An NGO survey of 440 households found that 61 percent would trade a nominal rent rise for three years of tenure security, and 74 percent for a faster public housing offer. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 18 | 6 | The NGO argues that rent caps treat the price symptom of a quantity problem, and enforcement effort is better spent on inspecting fire and ventilation. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 19 | 7 | The recommended policy is a narrow tightening: strengthen tenure security, add a light band on initial rents once real margin data is collected, and avoid a hard cap on rent levels. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+| 20 | 7 | The evidence indicates that a hard cap saves a few insiders money while costing the people who are already worst off. | 34 (confident) | My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tena | |
+
+## Full student transcript (student turns only)
+
+- [0] (say) I know nothing about this topic. Can you give me some sources about subdivided units and rent control in Hong Kong?
+- [2] (say) I need a definition of what subdivided units are and who lives in them, plus evidence about what rent control does to rents and housing supply. I don't have a claim yet, I want to find out first.
+- [4] (pick) D1 gives me the definition and tenant profile, D2 has the actual rent and stock numbers, and D6 should explain what rent control does to supply.
+- [6] (read) D1p1
+- [7] (read) D1p2
+- [8] (read) D1p3
+- [9] (read) D2p1
+- [10] (read) D2p2
+- [11] (read) D2p3
+- [12] (read) D6p1
+- [13] (read) D6p2
+- [14] (read) D6p3
+- [15] (say) From D1p1 and D1p2 I learned SDU tenants are mostly people stuck waiting for public housing, and they pay more per square foot than mainstream flats. D2p1 shows the stock kept growing after the 2021 ordinance. I think that means a mild rule did no harm, but I'm not sure it proves anything about a to
+- [17] (say) D6p2 seems to split hard caps from caps on increases. So 'tighten' could mean two different things. Can you help me see what I'm missing?
+- [19] (say) I think the essay is about both, but the hard cap is the risky one. I'd want to check what happened where a hard cap was tried, and what tenants themselves say they need. Can I get a counter-view and a real-world case?
+- [21] (say) The case should show whether a hard cap on rent levels actually shrank supply or pushed tenants out. The counter-view should argue what policy tenants need instead of a cap, for example security of tenure or rehousing, or argue that a cap is still worth it.
+- [23] (pick) D7 is the real-world hard cap case, D11 gives the NGO tenant-survey counter-view about tenure security, and D3 gives a tenant's own voice so I am not only reading institutions.
+- [25] (read) D7p1
+- [26] (read) D7p2
+- [27] (read) D7p3
+- [28] (read) D11p1
+- [29] (read) D11p2
+- [30] (read) D11p3
+- [31] (read) D3p1
+- [32] (read) D3p2
+- [33] (read) D3p3
+- [34] (confident) My claim: Hong Kong should tighten, but narrowly. It should strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels. Hard caps shrink supply (D6p1, D7p1) and the people who lose are the outsiders waiting for a unit. Tenants like Mr Chan and the NGO survey say 
+- [36] (say) Reading D7p3 and D3p2, I see the opposing view: a cap really helps people already inside, and Mr Chan would save 800 dollars. I answer that D3p2 also says he fears landlords emptying units, and D6p3 says the losers are the same people the cap is meant to protect. Can you show me options for how to s
+- [38] (say) I pick option 3, compare two rules, because my essay is really hard cap versus light band. On your question: the band on initial rents mostly stops the worst jumps for new entrants, but honestly D11p1 says tenants value tenure more, so the band is the smaller part and tenure is the main part. I shou
+- [40] (say) The comparison will be weighted toward tenure, and I'll say so openly. I'll put the objection inside the hard cap section, since that is where the cap's benefit to insiders matters. Can I get a source from the landlord side, to check my supply worry isn't one-sided?
+- [42] (say) A landlord's own account of how they would respond to a cap, ideally with some numbers on how many would exit, so I can compare it to the 3 to 5 percent estimate in D6p1.
+- [44] (pick) D5 is the landlords' own account, which is what I asked for to test my supply claim.
+- [46] (read) D5p1
+- [47] (read) D5p2
+- [48] (read) D5p3
+- [49] (say) D5 agrees with my worry but I should be careful. D5p3 says they have no margin data and the survey had a 34 percent response rate, so it is self-interested and weak. D5p2 and D3p2 do match each other though, since Mr Chan saw units emptied. I'll use D5 as a warning, not as proof, and lean on D6p1 fo
+- [51] (say) My answer: owners do face real costs (D5p1), and that is part of why I reject the hard cap and only want a light band on initial rents. But D5p3 shows their numbers are self-reported, so I would not accept 'confiscatory' without margin data. I would ask for that data before any band is set.

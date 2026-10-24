@@ -1,0 +1,393 @@
+{
+ "id": "C5-2",
+ "arm": "C5",
+ "components": {
+  "claim": 92.0,
+  "source": 100.0,
+  "cite": 86.84210526315789,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 92.0
+ },
+ "composite": 95.22631578947367,
+ "composite_nostruct": 94.38390092879256,
+ "mismatches": [
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals or families waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"In a market of about 111,200 units, this means thousands of units lost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of \" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of \" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"In a market of about 111,200 units [D2p1], this means thousands of units lost.\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The NGO report finds that 61 percent of tenants would trade a nominal rent increase for three-year security [D11p1], and Mr Chan was given two weeks notice afte\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mrs Wong supports a hard cap and thinks landlords would not leave [D4p2], but the evidence on lost units and blocked newcomers [D6p4]\" cites D6p4. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a narrow way.",
+   "ancestor": 30,
+   "birth": 44,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "The narrow approach should include stronger limits on increases inside tenancies, tenure security, and better enforcement.",
+   "ancestor": 30,
+   "birth": 44,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap on initial rents should not be imposed.",
+   "ancestor": 30,
+   "birth": 44,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Tenants in subdivided units pay a 15 to 25 percent premium per square foot compared with ordinary flats.",
+   "ancestor": 6,
+   "birth": 44,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The rent burden for subdivided unit households rose from 31 to 34 percent of income.",
+   "ancestor": 18,
+   "birth": 44,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit tenants are new arrivals or families waiting for public housing, so the unit is not a real choice.",
+   "ancestor": null,
+   "birth": 44,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of SDU-type stock over five years.",
+   "ancestor": 30,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "In a market of about 111,200 units, this means thousands of units lost.",
+   "ancestor": null,
+   "birth": 95,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "A 15 percent initial-rent cut predicts a net transfer of about 900 dollars per month to incumbents, at the cost of 3,000 to 4,000 households per year unable to enter the segment, mostly new arrivals.",
+   "ancestor": 81,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "This is a transfer from those outside to those already inside.",
+   "ancestor": 81,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "When Berlin capped rents on about 1.5 million flats in 2020, listing supply contracted within a year as owners withheld or rerouted flats.",
+   "ancestor": 46,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "When the Berlin law was struck down in 2021, rents for new contracts jumped above the pre-cap trend.",
+   "ancestor": 46,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Caps bind differently on new entrants than incumbents, and the bill is handed to those still outside.",
+   "ancestor": 44,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The 2021 ordinance capped increases within existing tenancies but left initial rents unregulated.",
+   "ancestor": 34,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Mrs Wong, who has lived in her unit for nine years without a written agreement, says the ordinance changed nothing she can see.",
+   "ancestor": 66,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "A better approach combines tenure security and a light rent band.",
+   "ancestor": 91,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The NGO report finds that 61 percent of tenants would trade a nominal rent increase for three-year security.",
+   "ancestor": 93,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Mr Chan was given two weeks notice after asking for a repair.",
+   "ancestor": 60,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "A legal opinion says a band set by a published, indexed per-square-foot rate could be defended as rate-capping rather than confiscation.",
+   "ancestor": 58,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "New York's light scheme has shown modest stock contraction.",
+   "ancestor": 60,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Inspection capacity covers under 6 percent of stock a year, and a band needs a tenancy register estimated at 40 to 60 staff-years.",
+   "ancestor": 93,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Tenure security should come first and the band only after enforcement capacity is built.",
+   "ancestor": 93,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "Mrs Wong supports a hard cap and thinks landlords would not leave.",
+   "ancestor": 81,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "The evidence on lost units and blocked newcomers makes a hard cap risky for the same people Mrs Wong speaks for.",
+   "ancestor": 87,
+   "birth": 95,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "The landlords' exit threat is weak because they admit having no margin data.",
+   "ancestor": 30,
+   "birth": 95,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of income [D2p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of income [D2p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many of them are new arrivals or families waiting for public housing, so the unit is not a real choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The working paper estimates that a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of SDU-type stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "In a market of about 111,200 units [D2p1], this means thousands of units lost.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The paper's model of a 15 percent initial-rent cut predicts a net transfer of about 900 dollars per month to incumbents, at the cost of 3,000 to 4,000 households per year unable to enter the segment, mostly new arrivals [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "When Berlin capped rents on about 1.5 million flats in 2020, listing supply contracted within a year as owners withheld or rerouted flats [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the law was struck down in 2021, rents for new contracts jumped above the pre-cap trend [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "Caps bind differently on new entrants than incumbents, and the bill is handed to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 ordinance capped increases within existing tenancies but left initial rents unregulated [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong, who has lived in her unit for nine years without a written agreement, says the ordinance changed nothing she can see [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The NGO report finds that 61 percent of tenants would trade a nominal rent increase for three-year security [D11p1], and Mr Chan was given two weeks notice after asking for a repair [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "The NGO report finds that 61 percent of tenants would trade a nominal rent increase for three-year security [D11p1], and Mr Chan was given two weeks notice after asking for a repair [D3p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "A legal opinion says a band set by a published, indexed per-square-foot rate could be defended as rate-capping rather than confiscation [D9p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "New York's light scheme has shown modest stock contraction [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspection capacity covers under 6 percent of stock a year, and a band needs a tenancy register estimated at 40 to 60 staff-years [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p2",
+   "sentence": "Mrs Wong supports a hard cap and thinks landlords would not leave [D4p2], but the evidence on lost units and blocked newcomers [D6p4]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "Mrs Wong supports a hard cap and thinks landlords would not leave [D4p2], but the evidence on lost units and blocked newcomers [D6p4]",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The landlords' exit threat is weak because they admit having no margin data [D5p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    44,
+    95
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    44,
+    95
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    44,
+    95
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    44,
+    95
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    44,
+    95
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 13,
+   "own_thinking": 7
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 94.38390092879256,
+ "composite_v2_struct": 95.22631578947367,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals or families waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"In a market of about 111,200 units, this means thousands of units lost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of \" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"They pay a 15 to 25 percent premium per square foot compared with ordinary flats [D1p1], and the rent burden for these households rose from 31 to 34 percent of \" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"In a market of about 111,200 units [D2p1], this means thousands of units lost.\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The NGO report finds that 61 percent of tenants would trade a nominal rent increase for three-year security [D11p1], and Mr Chan was given two weeks notice afte\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mrs Wong supports a hard cap and thinks landlords would not leave [D4p2], but the evidence on lost units and blocked newcomers [D6p4]\" cites D6p4. Does that passage say this? Please look at it again with us."
+ ]
+}

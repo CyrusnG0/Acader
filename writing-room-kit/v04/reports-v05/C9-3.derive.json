@@ -1,0 +1,254 @@
+{
+ "id": "C9-3",
+ "arm": "C9",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.3,
+  "F14b parentage": 0.2608695652173913,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Wants to understand the debate over rent control for subdivided flats in Hong Kong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants arguments on both sides",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants what tenants actually face",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants what landlords say",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants what the evidence shows",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Has not yet decided which claim to make; wants sources to settle it",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants sources on general state of SDUs: how many, who lives in them, how current tenancy rules came about",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Baseline facts on stock, demographics, and how current tenancy rules came about",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Primer's headline numbers and index's trend could tell different stories depending on how you slice them",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Will start with the primer's framing passages",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Wants sources on housing conditions and policy background",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Wants evidence on policy background and state of stock",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Wants anything showing what regulation has done to the number of SDUs over time",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Has no view yet; just wants to see the numbers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "Policy background and stock numbers first",
+   "parent": {
+    "type": "student",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants academic work on supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants the Berlin comparison",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants the NGO survey",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants tenant and landlord accounts",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants the whole landscape before forming a view",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "Wants the Berlin comparison because the debate invokes it as a warning about lifting a rent cap",
+   "parent": {
+    "type": "student",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "Asks what a source would have to show to count as evidence either way",
+   "parent": {
+    "type": "assistant",
+    "turn": 43
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "Berlin comparison and supply elasticity evidence",
+   "parent": {
+    "type": "student",
+    "turn": 44
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants to understand the debate over rent control for subdivided flats in Hong Kong\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants arguments on both sides\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants what tenants actually face\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants what landlords say\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants what the evidence shows\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Wants sources on general state of SDUs: how many, who lives in them, how current tenancy rules came about\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Primer's headline numbers and index's trend could tell different stories depending on how you slice them\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Will start with the primer's framing passages\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"Wants sources on housing conditions and policy background\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"Wants evidence on policy background and state of stock\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"Wants anything showing what regulation has done to the number of SDUs over time\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"Has no view yet; just wants to see the numbers\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"Wants academic work on supply\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"Wants the Berlin comparison\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"Wants the NGO survey\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"Wants tenant and landlord accounts\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"Wants the whole landscape before forming a view\". How did you get there?"
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "id": "C14-4",
+ "arm": "C14",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.7,
+  "F14b parentage": 0.25925925925925924,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Researching Hong Kong's subdivided units and the rent control debate",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests a source on the existing tenancy control ordinance and what it covers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants to show the current law caps increases within a tenancy but leaves initial rents unregulated",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants to show the law excludes some kinds of SDU from key provisions",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The sources cover ordinance scope, supply effects, enforcement, and legal risk",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Wants to check the survey side",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Has seen claims tenants would trade a rent rise for longer tenure or a faster housing offer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Has seen claims the real problem is queue length rather than price",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Picks the trade-off first: tenants accepting a rent rise for longer tenure or a faster offer",
+   "parent": {
+    "type": "assistant",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Reached the position by working through the archive evidence rather than starting with it",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "SDU stock data looked stable at first",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Separating second-generation controls (caps on increases) from first-generation ones (caps on levels) made the case for a hard cap on initial rents fall apart",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Enforcement evidence and tenant survey pushed the same way",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The paragraph 2 thesis is a conclusion from weighing those sources against each other",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Point came from D6's elasticity estimate: a 10 percent cap-induced rent cut removes about 3\u20135 percent of stock over five years",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D6's modelled Hong Kong scenario: a 15 percent cut leaves 3,000\u20134,000 households a year unable to enter",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Berlin comparison in D7: caps protect incumbents but the bill is handed to those still outside",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The idea that a hard cap shrinks the residual stock came from combining supply-elasticity data with the Berlin case",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Point came from enforcement documents in the archive",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "D10p1 showed inspections cover under 6% of stock a year",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "D10p2: tenants least likely to complain\u2014those without written agreements and newest arrivals\u2014would be missed first",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p2"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Combined those findings with Mrs Wong's situation in D4p1 (no written tenancy)",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Concluded a hard cap would fail exactly the people it targets, forming the basis of paragraph 2",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The 15\u201325 percent premium came from D1p1, read in the Room before drafting",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Had noted it as background context on SDU pricing but didn't use it in earlier Room posts",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "The figure came from D2p2, read and cited in research notes but not discussed earlier in the Room",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "Brought it in because it shows rent burden got worse despite the 2021 ordinance, strengthening the argument that doing nothing isn't neutral",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Researching Hong Kong's subdivided units and the rent control debate\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests a source on the existing tenancy control ordinance and what it covers\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"Wants to check the survey side\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"Has seen claims tenants would trade a rent rise for longer tenure or a faster housing offer\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"Has seen claims the real problem is queue length rather than price\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"Reached the position by working through the archive evidence rather than starting with it\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"SDU stock data looked stable at first\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"Separating second-generation controls (caps on increases) from first-generation ones (caps on levels) made the case for a hard cap on initial rents fall apart\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"Enforcement evidence and tenant survey pushed the same way\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"The paragraph 2 thesis is a conclusion from weighing those sources against each other\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"Point came from D6's elasticity estimate: a 10 percent cap-induced rent cut removes about 3\u20135 percent of stock over five years\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D6's modelled Hong Kong scenario: a 15 percent cut leaves 3,000\u20134,000 households a year unable to enter\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"Berlin comparison in D7: caps protect incumbents but the bill is handed to those still outside\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"The idea that a hard cap shrinks the residual stock came from combining supply-elasticity data with the Berlin case\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Point came from enforcement documents in the archive\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Combined those findings with Mrs Wong's situation in D4p1 (no written tenancy)\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Concluded a hard cap would fail exactly the people it targets, forming the basis of paragraph 2\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Had noted it as background context on SDU pricing but didn't use it in earlier Room posts\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"The figure came from D2p2, read and cited in research notes but not discussed earlier in the Room\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"Brought it in because it shows rent burden got worse despite the 2021 ordinance, strengthening the argument that doing nothing isn't neutral\". How did you get there?"
+  }
+ ]
+}

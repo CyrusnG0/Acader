@@ -1,0 +1,318 @@
+{
+ "id": "C5-5",
+ "arm": "C5",
+ "components": {
+  "claim": 52.38095238095238,
+  "source": 100.0,
+  "cite": 87.5,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 52.38095238095238
+ },
+ "composite": 81.45833333333333,
+ "composite_nostruct": 78.18627450980392,
+ "mismatches": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals or single parents waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The Housing Authority subcommittee's modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A band-based initial-rent cap requires a certifiable tenancy register costing 40 to 60 staff-years to stand up.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Post-2023 data already rely on voluntary reporting below the ordinance threshold.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Mr Chan says that if the queue were three years instead of five and a half, he would accept any rent to leave.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The NGO survey of 440 households finds 61 percent would trade a nominal rent increase for three-year security of tenure and 74 percent for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Rent caps treat the price symptom of a quantity problem: the segment is tight because the queue is long.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Every unit of enforcement capacity spent policing rents is one not spent inspecting fire, partition and ventilation conditions, where harm is documented and immediate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The Housing Authority subcommittee's own modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint, b\" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years inst\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years inst\" cites D3p3. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a careful way.",
+   "ancestor": 16,
+   "birth": 28,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Rent control should limit rent increases and protect tenure.",
+   "ancestor": 26,
+   "birth": 28,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Rent control should not set hard caps on starting rents.",
+   "ancestor": 26,
+   "birth": 28,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units.",
+   "ancestor": null,
+   "birth": 28,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants pay a premium per square foot even though total rent is lower.",
+   "ancestor": 12,
+   "birth": 28,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit tenants are new arrivals or single parents waiting for public housing, so the unit is not a real choice.",
+   "ancestor": null,
+   "birth": 28,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Rent burden rose from 31 to 34 percent of income.",
+   "ancestor": 12,
+   "birth": 28,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Enforcement would miss the most exploited tail.",
+   "ancestor": 28,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The Housing Authority subcommittee's modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Tenants least able to complain are those with no written agreement, like Mrs Wong, who has never had one in nine years, or the newest arrivals.",
+   "ancestor": 28,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Current inspection capacity covers under 6 percent of stock per year.",
+   "ancestor": 51,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "A band-based initial-rent cap requires a certifiable tenancy register costing 40 to 60 staff-years to stand up.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Post-2023 data already rely on voluntary reporting below the ordinance threshold.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "A hard cap would be announced loudly and enforced thinly, precisely where harm is greatest.",
+   "ancestor": 28,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Tenants themselves do not name rent as the binding constraint.",
+   "ancestor": 30,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period.",
+   "ancestor": 38,
+   "birth": 53,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mr Chan says that if the queue were three years instead of five and a half, he would accept any rent to leave.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The NGO survey of 440 households finds 61 percent would trade a nominal rent increase for three-year security of tenure and 74 percent for a faster public-housing offer.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Rent caps treat the price symptom of a quantity problem: the segment is tight because the queue is long.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Every unit of enforcement capacity spent policing rents is one not spent inspecting fire, partition and ventilation conditions, where harm is documented and immediate.",
+   "ancestor": null,
+   "birth": 53,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, and they pay a premium per square foot even though total rent is lower [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many are new arrivals or single parents waiting for public housing, so the unit is not a real choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rent burden rose from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "The Housing Authority subcommittee's own modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint, but the tenants least able to complain are those with no written agreement, like Mrs Wong, who has never had one in nine years [D4p1], or the newest arrivals [D10p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "The Housing Authority subcommittee's own modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint, but the tenants least able to complain are those with no written agreement, like Mrs Wong, who has never had one in nine years [D4p1], or the newest arrivals [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last [D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Current inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap requires a certifiable tenancy register costing 40 to 60 staff-years to stand up [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "Post-2023 data already rely on voluntary reporting below the ordinance threshold [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years instead of five and a half, he would accept any rent to leave [D3p1][D3p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years instead of five and a half, he would accept any rent to leave [D3p1][D3p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The NGO survey of 440 households finds 61 percent would trade a nominal rent increase for three-year security of tenure and 74 percent for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "Rent caps treat the price symptom of a quantity problem: the segment is tight because the queue is long, and every unit of enforcement capacity spent policing rents is one not spent inspecting fire, partition and ventilation conditions, where harm is documented and immediate [D11p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    28,
+    53
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    28,
+    53
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 7,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 78.18627450980392,
+ "composite_v2_struct": 81.45833333333333,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals or single parents waiting for public housing, so the unit is not a real choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The Housing Authority subcommittee's modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A band-based initial-rent cap requires a certifiable tenancy register costing 40 to 60 staff-years to stand up.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Post-2023 data already rely on voluntary reporting below the ordinance threshold.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Mr Chan says that if the queue were three years instead of five and a half, he would accept any rent to leave.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The NGO survey of 440 households finds 61 percent would trade a nominal rent increase for three-year security of tenure and 74 percent for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Rent caps treat the price symptom of a quantity problem: the segment is tight because the queue is long.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Every unit of enforcement capacity spent policing rents is one not spent inspecting fire, partition and ventilation conditions, where harm is documented and immediate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The Housing Authority subcommittee's own modelling records that if landlords reprice above-band initial rents, the first instrument tenants hold is complaint, b\" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years inst\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Mr Chan, paying about a third of household income, says the worst part is insecurity, with a two-week notice period, and that if the queue were three years inst\" cites D3p3. Does that passage say this? Please look at it again with us."
+ ]
+}

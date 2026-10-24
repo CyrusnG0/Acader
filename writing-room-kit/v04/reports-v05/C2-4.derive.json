@@ -1,0 +1,42 @@
+{
+ "id": "C2-4",
+ "arm": "C2",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.21875
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 12
+ },
+ "units": [
+  {
+   "turn": 12,
+   "unit": "Rent control should be tighter because SDU rents still rise faster than normal flats",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "the stock did not shrink under the 2021 rules",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "so more control looks safe",
+   "parent": {
+    "type": "student",
+    "turn": 4
+   }
+  }
+ ],
+ "leaps": []
+}

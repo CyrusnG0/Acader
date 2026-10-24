@@ -1,0 +1,356 @@
+{
+ "id": "C2-3",
+ "arm": "C2",
+ "components": {
+  "claim": 13.636363636363637,
+  "source": 100.0,
+  "cite": 83.33333333333333,
+  "change": 12.5,
+  "struct": 100.0,
+  "claim_v2": 13.636363636363637
+ },
+ "composite": 54.14772727272727,
+ "composite_nostruct": 46.05614973262032,
+ "mismatches": [
+  "Paragraph 1 says: \"Blunt rent control rules carry real risks.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan pays $5,800 in rent, about a third of his household income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan's worst problem is insecurity, not the rent price.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan's last landlord ended the tenancy with two weeks' notice after he requested a repair.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A rent cap alone does not address tenants' insecurity.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan says a hard cap could free up around $800 a month, about a month of food.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan worries landlords would rather turn cubicles into storage than rent to regulated tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan has seen two units on his floor emptied and locked for a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Berlin capped rents on about 1.5 million flats in 2020.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"After Berlin's cap, asking rents for new listings fell sharply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The supply of listed flats in Berlin shrank within a year because owners held flats back or moved them to uncontrolled segments.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Losing supply in Hong Kong's already scarce subdivided unit market would hurt the intended beneficiaries.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin's rent cap was struck down in 2021 for legal reasons about federal powers, not economics.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"After Berlin's cap fell, suppressed increases returned and new contract rents jumped above the earlier trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A hard and temporary rent cap can leave tenants worse off than before.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Longer notice periods and protection for tenants who request repairs are needed.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A softer limit on rent increases could accompany tenure protections to avoid landlords locking units away.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The argument is limited by relying on only two sources: one interview and one comparison with a very different city.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The author did not examine data or economic papers, so cannot estimate the supply effect in Hong Kong.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"That means longer notice periods and protection for tenants who ask for repairs, which is exactly what Mr Chan said went wrong for him [D3p1].\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A softer limit on rent increases could sit alongside this, so that landlords are not pushed to lock units away [D3p2].\" cites D3p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten protection for tenants but not impose a hard rent cap.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Tenure security is a bigger problem than rent prices.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Blunt rent control rules carry real risks.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan pays $5,800 in rent, about a third of his household income.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan's worst problem is insecurity, not the rent price.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan's last landlord ended the tenancy with two weeks' notice after he requested a repair.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "A rent cap alone does not address tenants' insecurity.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Mr Chan says a hard cap could free up around $800 a month, about a month of food.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Mr Chan worries landlords would rather turn cubicles into storage than rent to regulated tenants.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Mr Chan has seen two units on his floor emptied and locked for a year.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Berlin capped rents on about 1.5 million flats in 2020.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "After Berlin's cap, asking rents for new listings fell sharply.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The supply of listed flats in Berlin shrank within a year because owners held flats back or moved them to uncontrolled segments.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Losing supply in Hong Kong's already scarce subdivided unit market would hurt the intended beneficiaries.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Berlin's rent cap was struck down in 2021 for legal reasons about federal powers, not economics.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "After Berlin's cap fell, suppressed increases returned and new contract rents jumped above the earlier trend.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "A hard and temporary rent cap can leave tenants worse off than before.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Hong Kong should focus on security of tenure rather than a hard cap.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Longer notice periods and protection for tenants who request repairs are needed.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "A softer limit on rent increases could accompany tenure protections to avoid landlords locking units away.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "The argument is limited by relying on only two sources: one interview and one comparison with a very different city.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "The author did not examine data or economic papers, so cannot estimate the supply effect in Hong Kong.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D3p1",
+   "sentence": "He pays 5,800 dollars in rent, about a third of the household income [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "His last landlord ended the tenancy with two weeks notice after he asked for a leaking window to be repaired [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "He says a hard cap could free up around 800 dollars a month, which is about a month of food [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Yet he worries that landlords would rather turn cubicles back into storage rooms than deal with regulated tenants, and he has seen two units on his floor emptied and locked for a year [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "But the supply of listed flats shrank within a year because owners held flats back or moved them into segments that were not controlled [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "The court struck the law down in 2021 for legal reasons about federal powers, not because of the economics [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the cap fell, suppressed increases came back and rents for new contracts jumped above the earlier trend [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "That means longer notice periods and protection for tenants who ask for repairs, which is exactly what Mr Chan said went wrong for him [D3p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "A softer limit on rent increases could sit alongside this, so that landlords are not pushed to lock units away [D3p2].",
+   "supports": "no"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    14
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 2,
+   "own_thinking": 2
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 46.05614973262032,
+ "composite_v2_struct": 54.14772727272727,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Blunt rent control rules carry real risks.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan pays $5,800 in rent, about a third of his household income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan's worst problem is insecurity, not the rent price.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan's last landlord ended the tenancy with two weeks' notice after he requested a repair.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A rent cap alone does not address tenants' insecurity.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan says a hard cap could free up around $800 a month, about a month of food.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan worries landlords would rather turn cubicles into storage than rent to regulated tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan has seen two units on his floor emptied and locked for a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Berlin capped rents on about 1.5 million flats in 2020.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"After Berlin's cap, asking rents for new listings fell sharply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The supply of listed flats in Berlin shrank within a year because owners held flats back or moved them to uncontrolled segments.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Losing supply in Hong Kong's already scarce subdivided unit market would hurt the intended beneficiaries.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Berlin's rent cap was struck down in 2021 for legal reasons about federal powers, not economics.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"After Berlin's cap fell, suppressed increases returned and new contract rents jumped above the earlier trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A hard and temporary rent cap can leave tenants worse off than before.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Longer notice periods and protection for tenants who request repairs are needed.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A softer limit on rent increases could accompany tenure protections to avoid landlords locking units away.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The argument is limited by relying on only two sources: one interview and one comparison with a very different city.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The author did not examine data or economic papers, so cannot estimate the supply effect in Hong Kong.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"That means longer notice periods and protection for tenants who ask for repairs, which is exactly what Mr Chan said went wrong for him [D3p1].\" cites D3p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A softer limit on rent increases could sit alongside this, so that landlords are not pushed to lock units away [D3p2].\" cites D3p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

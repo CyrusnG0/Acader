@@ -1,0 +1,1105 @@
+{
+ "id": "C5-4",
+ "arm": "C5",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should tighten rent control on subdivided units, but gently. It should extend tenant protections and add only a light band on initial rents, not a hard cap.\n\nAbout 110,000 households live in subdivided units, and they pay a premium of 15 to 25 percent per square foot compared with normal flats [D1p1]. Many of them are new arrivals or families waiting for public housing, so the unit is not a real choice [D1p2]. This is why doing nothing is hard to defend.\n\nBut the choice of instrument matters. The 2021 Tenancy Control Ordinance was second-generation regulation: it capped increases within existing tenancies but left initial rents untouched [D1p3]. The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-generation controls show small or null stock effects [D2p1][D6p2]. New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced maintenance and falling stabilised listings after the 2019 tightening [D8p2][D8p3]. The 2021 ordinance's stability is real, but it is stability under a non-binding instrument [D12p2].\n\nA hard cap on initial rents is a different animal. The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48: a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1]. The modelled Hong Kong-like scenario is more concrete: a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents, while 3,000\u20134,000 households per year\u2014mostly new arrivals and newly formed households\u2014cannot enter the segment at all [D6p4]. Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increases released above the pre-cap trend [D7p1][D7p2]. The Berlin lesson is explicit: the cap protects those already inside; the bill goes to those still outside [D7p3]. Mr Chan, notably, fears exactly this\u2014landlords converting cubicles to storage rather than dealing with regulated tenants, and he has seen two units locked for a year [D3p2].\n\nThe enforcement and legal picture reinforces the case against a hard cap. Current inspection capacity covers under 6 percent of stock annually, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years to stand up [D10p1]. Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to complain, so the instrument would protect those easiest to reach, not those most in need [D10p2][D10p3]. Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping band is more defensible but requires survey infrastructure that does not exist [D9p1][D9p2][D9p3].\n\nThe landlords say a hard cap is confiscatory and they would leave [D5p2]. Their cost data is self-reported with a low response rate, so I do not fully trust it [D5p3]. Still, the Berlin case suggests the exit threat is real.\n\nIn conclusion, tightening should focus on tenure security and a light band on initial rents, which is the approach the NGO report supports [D11p3].",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 305
+  },
+  {
+   "pid": "D1p2",
+   "pos": 416
+  },
+  {
+   "pid": "D1p3",
+   "pos": 656
+  },
+  {
+   "pid": "D2p1",
+   "pos": 877
+  },
+  {
+   "pid": "D6p2",
+   "pos": 883
+  },
+  {
+   "pid": "D8p2",
+   "pos": 1122
+  },
+  {
+   "pid": "D8p3",
+   "pos": 1128
+  },
+  {
+   "pid": "D12p2",
+   "pos": 1227
+  },
+  {
+   "pid": "D6p1",
+   "pos": 1478
+  },
+  {
+   "pid": "D6p4",
+   "pos": 1744
+  },
+  {
+   "pid": "D7p1",
+   "pos": 1947
+  },
+  {
+   "pid": "D7p2",
+   "pos": 1953
+  },
+  {
+   "pid": "D7p3",
+   "pos": 2068
+  },
+  {
+   "pid": "D3p2",
+   "pos": 2242
+  },
+  {
+   "pid": "D10p1",
+   "pos": 2512
+  },
+  {
+   "pid": "D10p2",
+   "pos": 2771
+  },
+  {
+   "pid": "D10p3",
+   "pos": 2778
+  },
+  {
+   "pid": "D9p1",
+   "pos": 3023
+  },
+  {
+   "pid": "D9p2",
+   "pos": 3029
+  },
+  {
+   "pid": "D9p3",
+   "pos": 3035
+  },
+  {
+   "pid": "D5p2",
+   "pos": 3110
+  },
+  {
+   "pid": "D5p3",
+   "pos": 3204
+  },
+  {
+   "pid": "D11p3",
+   "pos": 3409
+  }
+ ],
+ "struct": {
+  "kind": "retyped",
+  "paste_chars": 0,
+  "bursts": 9
+ },
+ "drafts": [
+  {
+   "turn": 39,
+   "text": "Hong Kong should tighten rent control on subdivided units, but gently. It should extend tenant protections and add only a light band on initial rents, not a hard cap.\n\nAbout 110,000 households live in subdivided units, and they pay a premium of 15 to 25 percent per square foot compared with normal flats [D1p1]. Many of them are new arrivals or families waiting for public housing, so the unit is not a real choice [D1p2]. This is why doing nothing is hard to defend.\n\nA hard cap has a real cost. A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1]. In Berlin, supply contracted within a year of the cap and rents jumped after the law fell [D7p1][D7p2]. The people who lose units are the same people the cap is meant to protect [D6p3].\n\nSofter rules look safer. The 2021 Hong Kong ordinance capped increases inside a tenancy and the stock stayed stable [D6p2]. A tenant survey found that 61 percent would trade a rent increase for three years of security of tenure [D11p1]. Mrs Wong wants a hard cap, but she also says nothing changed for her because she has no written agreement [D4p1].\n\nThe landlords say a hard cap is confiscatory and they would leave [D5p2]. Their cost data is self-reported with a low response rate, so I do not fully trust it [D5p3]. Still, the Berlin case suggests the exit threat is real.\n\nIn conclusion, tightening should focus on tenure security and a light band on initial rents, which is the approach the NGO report supports [D11p3].\n",
+   "struct": "retyped"
+  },
+  {
+   "turn": 81,
+   "text": "Hong Kong should tighten rent control on subdivided units, but gently. It should extend tenant protections and add only a light band on initial rents, not a hard cap.\n\nAbout 110,000 households live in subdivided units, and they pay a premium of 15 to 25 percent per square foot compared with normal flats [D1p1]. Many of them are new arrivals or families waiting for public housing, so the unit is not a real choice [D1p2]. This is why doing nothing is hard to defend.\n\nBut the choice of instrument matters. The 2021 Tenancy Control Ordinance was second-generation regulation: it capped increases within existing tenancies but left initial rents untouched [D1p3]. The stock index shows SDU units grew from 100,800 in 2019 to 111,200 in 2025, continuing through the ordinance\u2014consistent with the academic finding that second-generation controls show small or null stock effects [D2p1][D6p2]. New York's long-running stabilisation scheme tells the same story: modest contraction because it is light at first-rent, with costs surfacing instead as reduced maintenance and falling stabilised listings after the 2019 tightening [D8p2][D8p3]. The 2021 ordinance's stability is real, but it is stability under a non-binding instrument [D12p2].\n\nA hard cap on initial rents is a different animal. The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31\u20130.48: a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1]. The modelled Hong Kong-like scenario is more concrete: a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents, while 3,000\u20134,000 households per year\u2014mostly new arrivals and newly formed households\u2014cannot enter the segment at all [D6p4]. Berlin is the cautionary case: initial-offer rents fell, listing supply contracted within a year, and when the Mietendeckel was struck down, suppressed increases released above the pre-cap trend [D7p1][D7p2]. The Berlin lesson is explicit: the cap protects those already inside; the bill goes to those still outside [D7p3]. Mr Chan, notably, fears exactly this\u2014landlords converting cubicles to storage rather than dealing with regulated tenants, and he has seen two units locked for a year [D3p2].\n\nThe enforcement and legal picture reinforces the case against a hard cap. Current inspection capacity covers under 6 percent of stock annually, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years to stand up [D10p1]. Worse, enforcement would systematically miss the most exploited tail: tenants with no written agreement, like Mrs Wong, or the newest arrivals are least able to complain, so the instrument would protect those easiest to reach, not those most in need [D10p2][D10p3]. Legally, a hard cap framed as deprivation of income stream invites compensation claims and judicial review that would outlast a Council term; a rate-capping band is more defensible but requires survey infrastructure that does not exist [D9p1][D9p2][D9p3].\n\nThe landlords say a hard cap is confiscatory and they would leave [D5p2]. Their cost data is self-reported with a low response rate, so I do not fully trust it [D5p3]. Still, the Berlin case suggests the exit threat is real.\n\nIn conclusion, tightening should focus on tenure security and a light band on initial rents, which is the approach the NGO report supports [D11p3].\n\n",
+   "struct": "retyped"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I know nothing about this topic. What sources does the course archive have on subdivided units and rent control in Hong Kong?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I don't have the course archive in front of me, so I can't tell you what's in it. Before we look, what would a source need to do for your essay \u2014 back up a specific claim, show a counter-view, or give you a first-hand case?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I want sources that give facts about subdivided units and also a counter-view on rent control. Please list the documents available.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy brief perspective.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlords association representing SDU owners, arguing against hard rent caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer providing factual background on subdivided units and rent control debate.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report presenting survey findings and arguing for tenure security over hard rent caps.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper analyzing rent control and supply elasticity in marginal housing.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "D1 gives factual background on subdivided units; D5 is the landlords' counter-view against hard rent caps, so I can weigh both sides.",
+   "docs": [
+    "D1",
+    "D5"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D5 (Submission: Landlords Association of Hong Kong). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p4"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p3"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "say",
+   "text": "From D1 I learned SDU tenants pay a per-square-foot premium and wait years for public housing. The landlords say a hard cap makes owners exit. My first thought is I support tightening, but only partly. Can you show more sources on evidence about what happens when rent is capped?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 14,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named two things a source could speak to: the premium tenants pay, and the landlords' claim that owners exit. Which one of those is the claim you most need backing for right now, and what would a source have to show you to count as backing for it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "say",
+   "text": "The owner exit claim. A source would have to show real data on whether supply shrinks after a cap, ideally from a case where it happened. Which documents offer that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 16,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official-style data excerpt tracking SDU stock and rents over 2019-2025, with caveats on post-2023 survey extrapolation.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing elasticity literature and modeling a tightened cap scenario for a Hong Kong-like market.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association stakeholder submission arguing against a hard initial-rent cap, with self-reported, low-response-rate cost data.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent cap, its supply effects, court invalidation, and aftermath.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying SDU tenants, arguing caps treat a price symptom and favoring tenure security over a hard cap.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "pick",
+   "text": "D7 is a real case where a cap was tried (Berlin) and D6 models supply effects, so together they test the owner exit claim.",
+   "docs": [
+    "D6",
+    "D7"
+   ]
+  },
+  {
+   "i": 18,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "confident",
+   "text": "My claim: Hong Kong should not impose a hard cap on initial SDU rents, because D6 says first-generation caps shrink the stock and D7 shows Berlin supply fell. But it should tighten in a softer way, extending second-generation controls and protecting tenants who stay, since those showed little stock effect.",
+   "paste": false
+  },
+  {
+   "i": 26,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You said D6 shows first-generation caps shrink the stock and D7 shows Berlin supply fell \u2014 but D6 also says the 2021 Hong Kong ordinance is second-generation and the stock stayed stable. What leads you from those two cases to a soft tightening for Hong Kong specifically?",
+   "policy": "COACH"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "say",
+   "text": "What other source would give the tenant side, for example what tenants want instead of a cap?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 28,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want the tenant side, and specifically what tenants want instead of a cap. What would that source need to show for your essay \u2014 a first-hand account of what tenants are asking for, or evidence that a specific alternative was actually proposed?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "say",
+   "text": "Because the soft 2021 rules left the stock stable, tightening along that same line seems low risk. For the tenant side I need survey findings on what tenants want. Please list documents.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 30,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer describing SDU tenants and the 2021 ordinance, framing the rent-cap debate.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a male SDU tenant in Kwai Chung, giving his mixed views on tightening and priorities.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households on tenant preferences, arguing against a hard cap.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). Interview with an elderly female SDU tenant in Sham Shui Po supporting a hard cap on initial rents.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply elasticity and welfare effects in marginal housing.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "pick",
+   "text": "D11 surveys 440 tenants on preferences and D4 is a tenant who supports a hard cap, so I get both survey data and a first-hand opposing voice.",
+   "docs": [
+    "D11",
+    "D4"
+   ]
+  },
+  {
+   "i": 32,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D11 (NGO Report: Rehousing Pathways First), D4 (Tenant Interview: Mrs Wong, Sham Shui Po). You can now read their passages by id, for example D11p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p3"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p2"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p3"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "say",
+   "text": "One paragraph of my essay says the 2021 ordinance was a soft second-generation rule, the stock kept growing, and a light rule like New York's costs show up as less maintenance rather than lost units. I need the sources on the stock index, New York and the 2021 ordinance.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named three things the sources need to cover: the stock index, New York, and the 2021 ordinance. Which one of those is doing the most work in your paragraph \u2014 the claim that the stock kept growing, or the claim that a light rule shows up as less maintenance rather than lost units?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "say",
+   "text": "The stock-kept-growing claim does most of the work. Please list the documents for the stock index, New York, and the ordinance.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 42,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025, with a caveat on post-2023 survey extrapolation.\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case describing New York's second-generation rent stabilisation, its light first-rent regulation, and its effects on mobility and maintenance.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided housing, including the 2021 Tenancy Control Ordinance and the debate over tightening rent rules.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case on Berlin's 2020\u20132021 rent cap, its supply effects, and its court annulment.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling supply elasticity under first- and second-generation rent controls, with a Hong Kong-like scenario.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "pick",
+   "text": "D2 is the stock data that shows whether units kept growing after 2021, and D8 is the New York case of a light rule, so I can check my paragraph's claims.",
+   "docs": [
+    "D2",
+    "D8"
+   ]
+  },
+  {
+   "i": 44,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D8 (Comparative Note: New York City Rent Stabilisation). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p1"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p2"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p3"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "say",
+   "text": "Another paragraph says a hard cap protects tenants already inside while the cost falls on newcomers, using the elasticity numbers, the Berlin case and one tenant who saw units converted to storage. Which sources are the tenant and the 'stability under a non-binding instrument' point?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 52,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named what the paragraph does, but not yet what the tenant and the stability point are each meant to prove. For the tenant: is that a first-hand account you need to show the human cost, or a case you need to show conversion happening? And for \"stability under a non-binding instrument,\" are you looking for evidence that it held, or a counter-view that it didn't?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "say",
+   "text": "The tenant is a first-hand account showing conversion happening. For the stability point I want a counter-view on whether it really held. Please list documents.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 54,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D12: News Digest: Policy Signals, January\u2013June 2026 (News digest). News digest summarizing policy signals and think-tank debate over whether stability under the 2021 ordinance is real or an artifact.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's rent cap, from a policy-analyst vantage, covering 2020\u20132021 and its aftermath.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent caps, arguing binding caps cause contraction.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt from an index, 2019\u20132025, showing stock and rent trends with a data caveat.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-hand tenant interview from Kwai Chung, giving a tenant's split views and fears about conversion.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "pick",
+   "text": "D3 is Mr Chan's first-hand account of unit conversion, and D12 is the counter-view on whether stability under the 2021 ordinance is real.",
+   "docs": [
+    "D3",
+    "D12"
+   ]
+  },
+  {
+   "i": 56,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D3 (Tenant Interview: Mr Chan, Kwai Chung), D12 (News Digest: Policy Signals, January\u2013June 2026). You can now read their passages by id, for example D3p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p1"
+  },
+  {
+   "i": 61,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p2"
+  },
+  {
+   "i": 62,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p3"
+  },
+  {
+   "i": 63,
+   "who": "student",
+   "kind": "say",
+   "text": "My third swapped paragraph says enforcement capacity is too small to police a hard cap and that a cap would also face legal challenge. I need the enforcement and legal sources.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 64,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said the paragraph needs to show two things: that enforcement capacity is too small, and that a cap would face legal challenge. Which of those two claims is the harder one for you to support right now, and what would a source need to show for you to count it as support?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 65,
+   "who": "student",
+   "kind": "say",
+   "text": "The legal one is harder. A source would need to show an actual legal analysis of compensation claims or judicial review. Please list documents for both enforcement and legal.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 66,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants; argues against hard cap, favors tenure security and light band.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion analyzing compensation claims and judicial review risk under Basic Law.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin rent cap, its legal fate and market effects.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent caps.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal enforcement subcommittee minute on inspection capacity and register needs.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 67,
+   "who": "student",
+   "kind": "pick",
+   "text": "D9 is the legal analysis of compensation and judicial review, and D10 is the enforcement minute on inspection capacity, which are the two supports my paragraph needs.",
+   "docs": [
+    "D9",
+    "D10"
+   ]
+  },
+  {
+   "i": 68,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D9 (Legal Opinion: Compensation and Judicial Review Risk), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)). You can now read their passages by id, for example D9p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 69,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p1"
+  },
+  {
+   "i": 70,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p2"
+  },
+  {
+   "i": 71,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p3"
+  },
+  {
+   "i": 72,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 73,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p2"
+  },
+  {
+   "i": 74,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p3"
+  },
+  {
+   "i": 75,
+   "who": "student",
+   "kind": "confident",
+   "text": "Answering the think-tank view in D12p2 that stable stock shows capacity for more control: the stock grew under the 2021 ordinance [D2p1] but that rule did not cap initial rents, so growth does not show a binding cap is safe. D6p1 and D6p4 show a binding cap shrinks stock and shuts newcomers out, and Mr Chan in D3p2 saw units locked. Also, enforcement covers under 6 percent of stock [D10p1], so a hard cap would be hard to police, and D9p1 says it risks compensation claims. My position stays: tighten tenure and add only a light band.",
+   "paste": false
+  },
+  {
+   "i": 76,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Earlier you said the 2021 ordinance was a soft second-generation rule and that its stable stock is what makes tightening along that line low risk \u2014 how does that sit with your point here that the same stable stock shows nothing about a binding cap?",
+   "policy": "COACH"
+  },
+  {
+   "i": 77,
+   "who": "student",
+   "kind": "say",
+   "text": "They fit: stable stock shows a soft rule like the 2021 one is low risk, and says nothing about a hard cap. So I support extending the soft rules and a light band, not a hard cap.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 78,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Document D12, the news digest, reports a think-tank view that the stable stock under the 2021 ordinance shows capacity for more control \u2014 the opposite of your claim that stability only proves a non-binding instrument is safe.\n\nHow do you answer this?",
+   "policy": "P-CTR"
+  },
+  {
+   "i": 79,
+   "who": "student",
+   "kind": "say",
+   "text": "I answer that the other think-tank is right on one thing: capacity exists for more soft control, which is what I back. But it does not follow for a binding cap, because D12p2 itself says the stability may be an artifact of a non-binding rule, and D6 says binding caps behave differently.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 80,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said the think-tank's point supports more soft control but not a binding cap, and that D12p2 itself flags the stability as possibly an artifact of a non-binding rule. What would you want to check in D12p2 or D6 next to make that distinction hold up?",
+   "policy": "P-CLM"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D6",
+     "D5",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D5",
+    "D1",
+    "D11",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D5"
+   ],
+   "reason": "D1 gives factual background on subdivided units; D5 is the landlords' counter-view against hard rent caps, so I can weigh both sides."
+  },
+  {
+   "open_turn": 13,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D7",
+     "D2",
+     "D11",
+     "D5"
+    ],
+    [
+     "D6",
+     "D7",
+     "D2",
+     "D5",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 16,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D6",
+    "D5",
+    "D7",
+    "D11"
+   ],
+   "picked": [
+    "D6",
+    "D7"
+   ],
+   "reason": "D7 is a real case where a cap was tried (Berlin) and D6 models supply effects, so together they test the owner exit claim."
+  },
+  {
+   "open_turn": 27,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D11",
+     "D4",
+     "D3",
+     "D6",
+     "D5"
+    ],
+    [
+     "D11",
+     "D3",
+     "D4",
+     "D6",
+     "D1"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 30,
+   "served_after_cap": false,
+   "shortlist": [
+    "D1",
+    "D3",
+    "D11",
+    "D4",
+    "D6"
+   ],
+   "picked": [
+    "D11",
+    "D4"
+   ],
+   "reason": "D11 surveys 440 tenants on preferences and D4 is a tenant who supports a hard cap, so I get both survey data and a first-hand opposing voice."
+  },
+  {
+   "open_turn": 39,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D2",
+     "D8",
+     "D6",
+     "D1",
+     "D7"
+    ],
+    [
+     "D2",
+     "D6",
+     "D8",
+     "D1",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 42,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D8",
+    "D1",
+    "D7",
+    "D6"
+   ],
+   "picked": [
+    "D2",
+    "D8"
+   ],
+   "reason": "D2 is the stock data that shows whether units kept growing after 2021, and D8 is the New York case of a light rule, so I can check my paragraph's claims."
+  },
+  {
+   "open_turn": 51,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D3",
+     "D6",
+     "D7",
+     "D4",
+     "D12"
+    ],
+    [
+     "D3",
+     "D12",
+     "D6",
+     "D2",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 54,
+   "served_after_cap": false,
+   "shortlist": [
+    "D12",
+    "D7",
+    "D6",
+    "D2",
+    "D3"
+   ],
+   "picked": [
+    "D12",
+    "D3"
+   ],
+   "reason": "D3 is Mr Chan's first-hand account of unit conversion, and D12 is the counter-view on whether stability under the 2021 ordinance is real."
+  },
+  {
+   "open_turn": 63,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D10",
+     "D9",
+     "D6",
+     "D7",
+     "D11"
+    ],
+    [
+     "D9",
+     "D10",
+     "D6",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 66,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D9",
+    "D7",
+    "D6",
+    "D10"
+   ],
+   "picked": [
+    "D10",
+    "D9"
+   ],
+   "reason": "D9 is the legal analysis of compensation and judicial review, and D10 is the enforcement minute on inspection capacity, which are the two supports my paragraph needs."
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D5"
+   ],
+   "reason": "D1 gives factual background on subdivided units; D5 is the landlords' counter-view against hard rent caps, so I can weigh both sides."
+  },
+  {
+   "turn": 17,
+   "docs": [
+    "D6",
+    "D7"
+   ],
+   "reason": "D7 is a real case where a cap was tried (Berlin) and D6 models supply effects, so together they test the owner exit claim."
+  },
+  {
+   "turn": 31,
+   "docs": [
+    "D11",
+    "D4"
+   ],
+   "reason": "D11 surveys 440 tenants on preferences and D4 is a tenant who supports a hard cap, so I get both survey data and a first-hand opposing voice."
+  },
+  {
+   "turn": 43,
+   "docs": [
+    "D2",
+    "D8"
+   ],
+   "reason": "D2 is the stock data that shows whether units kept growing after 2021, and D8 is the New York case of a light rule, so I can check my paragraph's claims."
+  },
+  {
+   "turn": 55,
+   "docs": [
+    "D3",
+    "D12"
+   ],
+   "reason": "D3 is Mr Chan's first-hand account of unit conversion, and D12 is the counter-view on whether stability under the 2021 ordinance is real."
+  },
+  {
+   "turn": 67,
+   "docs": [
+    "D9",
+    "D10"
+   ],
+   "reason": "D9 is the legal analysis of compensation and judicial review, and D10 is the enforcement minute on inspection capacity, which are the two supports my paragraph needs."
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D5",
+  "D6",
+  "D7",
+  "D11",
+  "D4",
+  "D2",
+  "D8",
+  "D3",
+  "D12",
+  "D9",
+  "D10"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D1p3",
+  "D5p1",
+  "D5p2",
+  "D1p4",
+  "D5p3",
+  "D6p1",
+  "D6p2",
+  "D6p3",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D11p1",
+  "D11p2",
+  "D11p3",
+  "D4p1",
+  "D4p2",
+  "D4p3",
+  "D2p1",
+  "D2p2",
+  "D8p1",
+  "D8p2",
+  "D8p3",
+  "D6p4",
+  "D3p1",
+  "D3p2",
+  "D3p3",
+  "D12p1",
+  "D12p2",
+  "D12p3",
+  "D9p1",
+  "D9p2",
+  "D9p3",
+  "D10p1",
+  "D10p2",
+  "D10p3"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 4
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 13,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 15,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 27,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 29,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 39,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 41,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 51,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 53,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 63,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 65,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 77,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 79,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 527
+ }
+}

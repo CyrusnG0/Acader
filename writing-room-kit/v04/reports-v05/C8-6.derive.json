@@ -1,0 +1,117 @@
+{
+ "id": "C8-6",
+ "arm": "C8",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.3333333333333335,
+  "F14b parentage": 0.4,
+  "F14c grounded chains": 0.1111111111111111
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Needs peer-reviewed work measuring how binding rent ceilings affect supply of subdivided or informal rental stock",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants elasticity estimates",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants a distinction between controls on rent levels versus controls on increases within a tenancy",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The ordinance capped increases within a tenancy but left the initial rent untouched",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "That is why it is called second-generation",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The instrument was never binding at the point that matters",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "The weakest claim is that a hard cap on initial rents would shrink the stock enough to shut out new households",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "Berlin shows this happening in practice",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "Needs the stock-elasticity paper with its first- vs second-generation distinction",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "Needs the Berlin case study",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs peer-reviewed work measuring how binding rent ceilings affect supply of subdivided or informal rental stock\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Wants elasticity estimates\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Wants a distinction between controls on rent levels versus controls on increases within a tenancy\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The ordinance capped increases within a tenancy but left the initial rent untouched\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The instrument was never binding at the point that matters\". How did you get there?"
+  },
+  {
+   "turn": 41,
+   "question": "At turn 41 you said: \"Needs the Berlin case study\". How did you get there?"
+  }
+ ]
+}

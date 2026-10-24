@@ -1,0 +1,169 @@
+{
+ "id": "DRY-1",
+ "arm": "DRY",
+ "components": {
+  "claim": 87.5,
+  "source": 100.0,
+  "cite": 100.0,
+  "change": 100.0,
+  "struct": 100.0
+ },
+ "composite": 95.625,
+ "composite_nostruct": 94.8529411764706,
+ "mismatches": [
+  "Paragraph 2 says: \"Mr Chan pays 5,800 dollars for a 120 sq ft cubicle.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a premium of 15 to 25 percent per square foot compared with mainstream flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong can tighten rent control on subdivided units.",
+   "ancestor": 8
+  },
+  {
+   "para": 1,
+   "claim": "Rent control should be done in a measured way.",
+   "ancestor": 30
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap on initial rents should be avoided.",
+   "ancestor": 30
+  },
+  {
+   "para": 2,
+   "claim": "The case for acting starts with the tenants.",
+   "ancestor": 8
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan pays 5,800 dollars for a 120 sq ft cubicle.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan's rent is about a third of his household income.",
+   "ancestor": 8
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants pay a premium of 15 to 25 percent per square foot compared with mainstream flats.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Landlords warn that members will leave the market if returns fall below mortgage cost.",
+   "ancestor": 15
+  },
+  {
+   "para": 3,
+   "claim": "The stock numbers do not show landlords leaving so far.",
+   "ancestor": 19
+  },
+  {
+   "para": 3,
+   "claim": "The estimated stock grew from 100,800 units in 2019 to 111,200 in 2025.",
+   "ancestor": 19
+  },
+  {
+   "para": 3,
+   "claim": "The stock grew even after the 2021 tenancy control.",
+   "ancestor": 19
+  },
+  {
+   "para": 4,
+   "claim": "The strongest objection is that the 2021 control was mild, so that growth says little about a hard cap.",
+   "ancestor": 23
+  },
+  {
+   "para": 4,
+   "claim": "The working paper argues that hard caps on levels show consistent contraction effects.",
+   "ancestor": 25
+  },
+  {
+   "para": 4,
+   "claim": "The working paper argues that the 2021 ordinance caps increases and so shows small or null effects.",
+   "ancestor": 25
+  },
+  {
+   "para": 4,
+   "claim": "The author accepts the objection.",
+   "ancestor": 30
+  },
+  {
+   "para": 4,
+   "claim": "The author would tighten gradually and watch the stock figures before going further.",
+   "ancestor": 30
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan pays 5,800 dollars for a 120 sq ft cubicle, about a third of his household income [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "Across the market, SDU tenants pay a premium of 15 to 25 percent per square foot compared with mainstream flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords warn that members will leave the market if returns fall below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stock numbers do not show that so far: the estimated stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 tenancy control [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The working paper argues exactly this: hard caps on levels show consistent contraction effects, while the 2021 ordinance caps increases and so shows small or null effects [D6p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    32
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    32
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    32
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    32
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 5,
+   "own_thinking": 5
+  },
+  "served_after_cap": 0
+ }
+}

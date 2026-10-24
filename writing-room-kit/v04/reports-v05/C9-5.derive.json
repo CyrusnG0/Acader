@@ -1,0 +1,224 @@
+{
+ "id": "C9-5",
+ "arm": "C9",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.6428571428571428,
+  "F14b parentage": 0.6956521739130435,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Topic is Hong Kong's subdivided flats and the housing policy debate around them",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants a broad descriptive overview of who lives in subdivided units and why",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "It is for an essay setting up who ends up in subdivided units and why they are there",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Has no claim yet; wants a descriptive source to anchor the opening",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "Wants a descriptive overview plus a first-hand tenant account to anchor the opening",
+   "parent": {
+    "type": "student",
+    "turn": 4
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Wants a large-scale survey of SDU tenants with numbers on what they would trade for security or a faster housing offer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Wants a document laying out the supply picture and elasticity estimates",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Tenant-side piece should quantify with percentages what households would accept for security or a faster offer",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Supply side should give elasticity estimates, ideally a range, showing responsiveness of stock to rent",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Wants to test whether the interviewed tenant's waiting-list framing is idiosyncratic or representative",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Needs survey trade-offs, supply elasticity, and stock data for tenant-side and supply-side claims",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Needs a tenant trade-off survey and a supply elasticity paper",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Needs a Berlin case study for comparative evidence",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "Still needs Hong Kong enforcement and legal material: inspection capacity and legal opinion on instruments",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Inspection-capacity piece supports a practical objection that a tightened cap could not be enforced across the stock",
+   "parent": {
+    "type": "student",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Legal opinion is meant to show what instrument a careful lawyer thinks is defensible instead",
+   "parent": {
+    "type": "student",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "For inspection capacity needs evidence of how much of the stock inspectors actually reach",
+   "parent": {
+    "type": "student",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "For the legal opinion needs a definition of the instruments and their legal footing",
+   "parent": {
+    "type": "student",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Needs enforcement capacity and legal instrument footing",
+   "parent": {
+    "type": "student",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "Wants one last source on the landlord side and actual margin economics",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "Keeps hearing that owners can't absorb anything",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "Wants a landlord's own account in plain terms of what they can and can't absorb",
+   "parent": {
+    "type": "student",
+    "turn": 62
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "Wants to test the claim that owners can't take any cut against a real voice rather than a slogan",
+   "parent": {
+    "type": "student",
+    "turn": 62
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Topic is Hong Kong's subdivided flats and the housing policy debate around them\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Wants a large-scale survey of SDU tenants with numbers on what they would trade for security or a faster housing offer\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Wants a document laying out the supply picture and elasticity estimates\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"Needs a Berlin case study for comparative evidence\". How did you get there?"
+  },
+  {
+   "turn": 45,
+   "question": "At turn 45 you said: \"Still needs Hong Kong enforcement and legal material: inspection capacity and legal opinion on instruments\". How did you get there?"
+  },
+  {
+   "turn": 62,
+   "question": "At turn 62 you said: \"Wants one last source on the landlord side and actual margin economics\". How did you get there?"
+  },
+  {
+   "turn": 62,
+   "question": "At turn 62 you said: \"Keeps hearing that owners can't absorb anything\". How did you get there?"
+  }
+ ]
+}

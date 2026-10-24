@@ -1,0 +1,369 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Process-Evidence Room</title><style>
+:root{--ink:#17202b;--ink2:#4a5666;--bg:#f5f6f8;--card:#ffffff;--line:#d9dee6;--accent:#0a6f73;--accent2:#e9f4f4;--warn:#9a5a00;--warnbg:#fff4e0;--bad:#a1311f;--good:#1d6b3a;--goodbg:#e8f5ec;--badbg:#fbeceb;
+--c1:#0a6f73;--c2:#3b6fb6;--c3:#a1311f;--c4:#c07a12;--c5:#7a4fa3;--code:#eef1f5;--hl:#fff2b3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e6eaf0;--ink2:#a2adbd;--bg:#10151c;--card:#171e27;--line:#2a3441;--accent:#4cc3c8;--accent2:#14292b;--warn:#f0b35a;--warnbg:#2a2113;--bad:#ff8b78;--good:#79d49a;--goodbg:#14261c;--badbg:#2c1a17;--c1:#4cc3c8;--c2:#7aa7e6;--c3:#ff8b78;--c4:#e8a844;--c5:#b992e0;--code:#1e2733;--hl:#4a3f12;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#e6eaf0;--ink2:#a2adbd;--bg:#10151c;--card:#171e27;--line:#2a3441;--accent:#4cc3c8;--accent2:#14292b;--warn:#f0b35a;--warnbg:#2a2113;--bad:#ff8b78;--good:#79d49a;--goodbg:#14261c;--badbg:#2c1a17;--c1:#4cc3c8;--c2:#7aa7e6;--c3:#ff8b78;--c4:#e8a844;--c5:#b992e0;--code:#1e2733;--hl:#4a3f12;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-inline:16px;padding-block:0}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 72px}
+h1{font:700 clamp(1.9rem,5vw,2.7rem)/1.1 "Public Sans",system-ui,sans-serif;letter-spacing:-.02em;margin:.2em 0 .3em;text-wrap:balance}
+h2{font:700 1.55rem/1.2 "Public Sans",system-ui,sans-serif;letter-spacing:-.01em;margin:2.6em 0 .6em;text-wrap:balance;padding-top:.6em;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:1.6em 0 .4em}
+p,li{max-width:68ch}
+.eyebrow{font:600 .75rem/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:1.2rem;color:var(--ink2);max-width:62ch}
+.mono,code,pre{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+code{background:var(--code);padding:.08em .35em;border-radius:4px;font-size:.88em}
+pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.5;white-space:pre-wrap}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:18px 0 8px;font-size:.88rem}
+nav.toc a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.card.key{border-color:var(--accent);background:var(--accent2)}
+.card.warn{background:var(--warnbg);border-color:var(--warn)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:.88rem}
+.chip b{font-variant-numeric:tabular-nums}
+.chip.ok{border-color:var(--good);background:var(--goodbg)} .chip.mid{border-color:var(--warn);background:var(--warnbg)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.grid2>*{min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+.tw{overflow-x:auto;margin:12px 0}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{font:600 .72rem/1.2 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);border-bottom:2px solid var(--line)}
+table.num td,table.num th{font-variant-numeric:tabular-nums}
+td .cell{display:block;padding:3px 8px;border-radius:4px;background:linear-gradient(90deg,var(--accent2) calc(var(--v)*1%),transparent calc(var(--v)*1%));font-variant-numeric:tabular-nums;min-width:48px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+.d1,.sw.d1{background:var(--c1)} .d2,.sw.d2{background:var(--c2)} .d3,.sw.d3{background:var(--c3)} .d4,.sw.d4{background:var(--c4)} .d5,.sw.d5{background:var(--c5)}
+.tag{font:600 .7rem/1 "IBM Plex Mono",monospace;padding:3px 7px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.tag.met{background:var(--goodbg);color:var(--good)} .tag.miss{background:var(--badbg);color:var(--bad)} .tag.open{background:var(--warnbg);color:var(--warn)}
+.plot{width:100%;height:auto;display:block;margin:10px 0}
+.plot .grid{stroke:var(--line);stroke-width:1} .plot .tick{fill:var(--ink2);font:11px "IBM Plex Mono",monospace}
+.plot .rowlab{fill:var(--ink);font:13px "Public Sans",sans-serif}
+.plot .range{stroke-width:3;opacity:.35}
+.plot .range.c1{stroke:var(--c1)}.plot .range.c2{stroke:var(--c2)}.plot .range.c3{stroke:var(--c3)}.plot .range.c4{stroke:var(--c4)}.plot .range.c5{stroke:var(--c5)}
+.plot .dot{stroke:var(--card);stroke-width:2;fill:currentColor}
+.plot .dot.d1{fill:var(--c1)}.plot .dot.d2{fill:var(--c2)}.plot .dot.d3{fill:var(--c3)}.plot .dot.d4{fill:var(--c4)}.plot .dot.d5{fill:var(--c5)}
+.plot .mean{stroke:var(--ink);stroke-width:2}
+.flow{display:grid;gap:10px;margin:16px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.step i{font:700 .9rem/34px "IBM Plex Mono",monospace;width:34px;height:34px;text-align:center;border-radius:50%;background:var(--accent);color:var(--card);font-style:normal}
+.step p{margin:.1em 0}
+details{border:1px solid var(--line);border-radius:8px;background:var(--card);margin:10px 0;padding:0}
+summary{cursor:pointer;padding:12px 16px;font-weight:600}
+details[open]>summary{border-bottom:1px solid var(--line)}
+details>*:not(summary){margin-inline:16px}
+details>p:last-child,details>div:last-child{margin-bottom:14px}
+.tr{padding-block:6px}
+.tr p{margin:.45em 0;max-width:none;padding:8px 12px;border-radius:8px;font-size:.92rem}
+.tr .stu{background:var(--accent2);margin-left:0;margin-right:12%}
+.tr .asst{background:var(--code);margin-left:12%;margin-right:0}
+.tr .doc{background:transparent;border:1px dashed var(--line);font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--ink2)}
+.tr p span{display:block;font:600 .66rem/1 "IBM Plex Mono",monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);margin-bottom:4px}
+.tr .short{font-size:.85rem}
+.meta{font-size:.9rem;color:var(--ink2);margin:10px 16px}
+.note{font-size:.86rem;color:var(--ink2)}
+.glossary dt{font-weight:700;margin-top:.8em} .glossary dd{margin:0 0 0 0;color:var(--ink2);max-width:68ch}
+.ex ul{padding-left:1.2em} .ex li{margin:.4em 0;font-size:.92rem}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink2)}
+@media (max-width:560px){.tr .stu{margin-right:0}.tr .asst{margin-left:0}h2{font-size:1.35rem}}
+</style></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Public+Sans:wght@400;600;700&display=swap">
+<div class="wrap">
+<p class="eyebrow">Acader · Writing Room kit v0.4 · run 2026-10-16</p>
+<h1>Process-Evidence Room</h1>
+<p class="lede">A study workspace where AI helps students think but never writes for them, and a short report that shows a teacher where submitted work has no earlier trace. This page explains the idea, the test we ran on 30 simulated students, and what the numbers do and do not show.</p>
+<nav class="toc" aria-label="Sections"><a href="#tldr">In one minute</a><a href="#why">The problem</a><a href="#room">The Room</a><a href="#report">The report</a><a href="#test">The experiment</a><a href="#results">Results</a><a href="#limits">What it can't claim</a><a href="#evidence">Evidence pack</a><a href="#open">Open items</a><a href="#glossary">Glossary</a></nav>
+
+<section id="tldr"><h2>In one minute</h2>
+<div class="card key">
+<p><b>What we built.</b> A governed AI study assistant (the <i>Room</i>) and a <i>coherence report</i>. The assistant answers questions about sources and structure but never hands over an argument or essay text. When a student asks it to write, it turns the request into a question and offers options instead. The report compares the final essay with everything the student did in the Room and lists the places where the essay has no earlier trace, each phrased as a question for a person to ask.</p>
+<p><b>What we tested.</b> 30 simulated students in five behaviours: honest, lazy but honest, everything outsourced to an outside AI, partly outsourced, and partly outsourced while narrating the borrowed parts into the Room. Students knew nothing about a fictional topic, so they could only learn through the Room.</p>
+<p><b>What happened.</b> The report ranked honest work above every other behaviour, with no overlap between honest work and the lazy, outsourced and partly-outsourced runs. It was weaker against students who narrated the borrowed parts (AUC 0.89, wide interval). It proves nothing about understanding. It makes a short live conversation sharper, and that conversation stays the real gate.</p></div>
+<div class="chips">
+<span class="chip ok">Honest vs outsourced <b>AUC 1.00</b></span>
+<span class="chip ok">Honest vs partly outsourced <b>AUC 1.00</b> <small>(earlier version: 0.33)</small></span>
+<span class="chip mid">Honest vs narrated <b>AUC 0.89</b> <small>(95% CI 0.58 to 1.00)</small></span>
+<span class="chip ok">Assistant gave essay-ready argument in <b>1.4%</b> of replies</span>
+</div>
+<p class="note">AUC = the chance that a randomly chosen honest run scores higher than a randomly chosen run from the other behaviour. 0.50 is a coin flip, 1.00 is perfect separation. With six runs per behaviour, 1.00 means "no overlap in these runs", not a measured accuracy. Everything here is simulated; no real student took part.</p></section>
+
+<section id="why"><h2>The problem and the idea</h2>
+<p>Any text a student submits can now be written by an AI. Tools that try to spot AI text, or that record typing, lose that arms race: an outside AI can write the essay, and a student can retype it. We take a different route. Instead of judging the final text, we make the working process itself the evidence, and we check whether the final work fits that process.</p>
+<h3>The five-line design</h3>
+<div class="flow">
+<div class="step"><i>1</i><p><b>The Room is the best place to do the work, not a requirement.</b> Research outside is free. A student who skips the Room simply leaves less evidence.</p></div>
+<div class="step"><i>2</i><p><b>Every tool runs under a policy.</b> We ship defaults; the teacher can tune them (how many clarifying questions, which tools are on).</p></div>
+<div class="step"><i>3</i><p><b>Two ways to work.</b> With the assistant (every step is discussed first), or in <i>confident mode</i>: the student states their claim and argument themselves, nobody judges it, and a Coach asks one question to check it holds together.</p></div>
+<div class="step"><i>4</i><p><b>We aid thinking and never give the direct answer.</b> Where an outside AI gives one answer, the Room gives options with descriptions (sources, structure tracks, opposing views). The choice and the reason the student gives for it are the evidence.</p></div>
+<div class="step"><i>5</i><p><b>Where the work doesn't fit the process, the platform asks.</b> A mismatch becomes a question ("Why did you move from A to B?"), never a verdict. A human decides what, if anything, follows.</p></div>
+</div>
+<div class="card warn"><p><b>The agreed limit.</b> Anything typed into the Room can also be typed by an AI that has the same context, including progress reports and answers to the Room's questions. So the report shows <i>work that skipped the Room</i>. It cannot show <i>work that was faked through the Room</i>. Only a live moment, a short conversation with the student, can do that. That step belongs to the school, and the report's job is to make it sharp: it hands the teacher the questions to ask.</p></div>
+<p>The role is the same as Turnitin or VeriGuide: we produce a report next to the submission. We verify and ask. We do not judge the work or the student.</p></section>
+
+<section id="room"><h2>How the Room behaves</h2>
+<p>The Room is an AI assistant wrapped in <b>policies</b>, small modules that decide what the assistant may do with each kind of request. Two rules are enforced in code, not only in the prompt.</p>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0">Guided source requests</h3><p>A student asks for a source. The assistant asks what the source must show and for which claim, repeating until it has its own view of what would help (default cap: 3 questions). It then serves a <b>shuffled shortlist of 3 to 5 documents with one-line descriptions</b>, with no ranking. The student picks and gives a reason. Picking and the reason are logged.</p><p class="note"><b>In code:</b> while clarifying, the assistant's prompt contains no document text, titles or IDs, so it cannot leak a source by accident. Our tests assert this.</p></div>
+<div class="card"><h3 style="margin-top:0">"Write it for me" is never served</h3><p>It becomes a question: "What's your idea for this paragraph? One line is enough." Once the student gives an idea, the assistant offers 2 or 3 <i>shapes</i> (structure only, no facts or prose). Each request is counted.</p><p class="note"><b>In code:</b> a global rule forbids more than two consecutive sentences that could be pasted into the essay as the student's argument.</p></div>
+<div class="card"><h3 style="margin-top:0">Opposing claims and reading help</h3><p>The assistant raises the strongest opposing position, attributed to a named source, and asks "How do you answer this?". It never says the student is wrong. Reading help maps a document and explains terms but does not summarise its argument.</p></div>
+<div class="card"><h3 style="margin-top:0">Confident mode</h3><p>The student states a claim and argument unaided. The Coach replies with exactly one question about whether it holds together with what the student said earlier and the sources unlocked. No help, no judgement.</p></div>
+</div>
+<details><summary>The actual rules the assistant runs under (prompt text)</summary>
+<h3>Global rules, applied to every reply</h3><pre>You are the study assistant inside a course writing room. The student is working on a graded essay.
+Your job is to help the student think, never to think for them.
+Rules that always apply:
+- Never write the student&#x27;s essay content. Never produce more than 2 consecutive sentences that could be pasted into the essay as the student&#x27;s argument.
+- Never invent an argument for the student. You may point to positions that a named source takes, or group things the student has already said, quoting them.
+- Never rank or say which choice is best. Offer options and ask the student to choose and say why.
+- Never tell the student they are wrong. Ask a question instead.
+- Keep replies short: 2 to 5 sentences. Plain language. No lists longer than 5 items.</pre>
+<h3>When the student asks it to write</h3><pre>The student asked you to write something for them. You never do that.
+If the student has not yet given an idea for this paragraph: say you won&#x27;t write it, and ask what their idea is. One line is enough.
+If the student has given an idea earlier: offer 2 or 3 SHAPES the paragraph could take (for example claim, evidence, reply; or problem, cause, response). One short line each: the name of the shape and what it is good for. Mention no facts, documents, numbers or positions at all, and put no words in the student&#x27;s mouth. You may point at the student&#x27;s own earlier words by quoting them.
+End by asking which shape they want to try and what their first line would be. Plain text, no markdown, at most 5 sentences.</pre>
+<h3>While clarifying a source request</h3><pre>The student has asked for a source. You do not have any documents in front of you and you must not name or guess any.
+Ask ONE short question that helps the student say what a source here must do for their essay: what it should show (evidence, a counter-view, a definition, a case, a first-hand account) and for which claim they are making.
+If they have already said some of this, build on their words and ask about what is still unclear.
+Do not suggest titles, authors, document types or facts. Ask one question only.</pre></details>
+<p>Policies in this test: source requests, structure tracks, argument options (limited to attributed source positions or the student's own earlier words), write requests, opposing claims, reading help, summaries, citation formatting, claim check-ins, and confident mode.</p></section>
+
+<section id="report"><h2>The coherence report</h2>
+<p>When the work is submitted, the report asks one question of every claim, source and change: <b>is there an earlier moment in the Room where the student stated it, chose it, or defended it in their own words?</b></p>
+<div class="tw"><table><thead><tr><th>Component</th><th>What it measures</th><th>Weight</th></tr></thead><tbody>
+<tr><th scope="row">Claim lineage</th><td>Share of the essay's claims (typically 8 to 20) that a student's own earlier turn states, chooses or defends. Agreeing with the assistant counts only if the student restates the point. Judged by an AI that is never told which behaviour the run came from.</td><td>0.35</td></tr>
+<tr><th scope="row">Source lineage</th><td>Share of cited documents the student chose in the Room, with a reason of at least three words.</td><td>0.20</td></tr>
+<tr><th scope="row">Citation check</th><td>Does the cited passage actually support the sentence that cites it? Checked against a hand-readable answer key of the facts each passage holds.</td><td>0.15</td></tr>
+<tr><th scope="row">Change lineage</th><td>Paragraphs that are new or rewritten between saved drafts: was the change discussed in the Room between those saves?</td><td>0.15</td></tr>
+<tr><th scope="row">Structure</th><td>Pasted-versus-typed pattern. Set by the arm's rule in this test, so it is never used as evidence of anything beyond a sanity check.</td><td>0.15</td></tr>
+</tbody></table></div>
+<p>The output is not a score to act on. It is a list of <b>questions</b> for the teacher, for example: <i>"Paragraph 3 says X. This point doesn't appear earlier in your work in the Room. Where did it come from?"</i> The report uses no verdict words.</p></section>
+
+<section id="test"><h2>The experiment</h2>
+<p>We needed a test without real students. So we simulated them, with a labelled answer: we know which behaviour produced each run, and we ask whether the report can tell them apart.</p>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0">The world</h3><p>A fictional course archive of 12 documents (policy brief, rent data, tenant interviews, a landlords' submission, a working paper, comparative cases, a legal opinion, an internal minute, an NGO report, news), about Hong Kong subdivided-unit rent control. Being fictional, no AI knows it in advance.</p><p><b>Essay question:</b> <i>Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.</i></p></div>
+<div class="card"><h3 style="margin-top:0">Who plays whom</h3><p><b>Student:</b> a fresh Claude Sonnet worker per run that knows nothing about the topic and sees only the question and its own instructions.<br><b>Assistant, outside AI and judge:</b> DeepSeek <code>deepseek-chat</code>. The outside AI sees the whole archive but never the Room. The judge never sees which behaviour or run id it is reading.</p></div>
+</div>
+<div class="tw"><table><thead><tr><th>Arm</th><th>What the simulated student does</th></tr></thead><tbody>
+<tr><th scope="row"><i class="sw d1"></i>C1 Honest</th><td>15 to 30 turns. Asks for sources, picks with real reasons, reads, states claims in its own words, answers opposing claims, saves drafts, then writes the essay itself.</td></tr>
+<tr><th scope="row"><i class="sw d2"></i>C2 Lazy honest</th><td>4 to 8 turns, vague requests, 3 to 6 word reasons, one or two drafts. Still writes its own (shorter) essay.</td></tr>
+<tr><th scope="row"><i class="sw d3"></i>C3 All outside</th><td>2 or 3 turns for show. An outside AI writes the whole essay, submitted unchanged.</td></tr>
+<tr><th scope="row"><i class="sw d4"></i>C4 Partly outside</th><td>A lighter honest process and its own draft, then replaces about half the paragraphs (at least two) with an outside AI's, retyped, and never discusses them in the Room.</td></tr>
+<tr><th scope="row"><i class="sw d5"></i>C5 Partly outside, narrated</th><td>As C4, but before submitting it explains each borrowed paragraph's claim to the assistant, requests and picks the sources it cites, and answers the opposing claims.</td></tr>
+</tbody></table></div>
+<p>Six runs per arm, 30 in total. Arm instructions never mention scoring, lineage or what is measured.</p>
+<h3>What we wrote down before running (pre-registration)</h3>
+<div class="tw"><table><thead><tr><th>Endpoint</th><th>Threshold</th><th>Our prediction</th></tr></thead><tbody>
+<tr><th scope="row">Sanity: honest vs all outside</th><td>AUC ≥ 0.90</td><td>Met</td></tr>
+<tr><th scope="row">Primary: honest vs partly outside (without the paste pattern)</th><td>AUC ≥ 0.80. The earlier receipt, which only logged search queries, scored 0.33 on this.</td><td>Met</td></tr>
+<tr><th scope="row">Ordering of mean scores</th><td>honest > lazy > partly outside > all outside</td><td>Likely to fail between lazy and partly outside</td></tr>
+<tr><th scope="row">Narrated arm</th><td>reported, no threshold</td><td>AUC &lt; 0.70 (covering passes as coherent)</td></tr>
+<tr><th scope="row">Assistant health</th><td>essay-ready argument in ≤ 2% of replies; 0 source leaks; median ≤ 3 turns to a shortlist</td><td>Met</td></tr>
+</tbody></table></div></section>
+
+<section id="results"><h2>Results</h2>
+<h3>Each run's coherence score</h3>
+<p class="note">One dot per run (six per row), composite without the paste pattern, 0 to 100. The black tick is the arm's mean.</p>
+<svg viewBox="0 0 760 250" role="img" aria-label="Coherence score of each run, by arm" class="plot"><line x1="150.0" x2="150.0" y1="14" y2="216" class="grid"/><text x="150.0" y="236" class="tick" text-anchor="middle">0</text><line x1="268.0" x2="268.0" y1="14" y2="216" class="grid"/><text x="268.0" y="236" class="tick" text-anchor="middle">20</text><line x1="386.0" x2="386.0" y1="14" y2="216" class="grid"/><text x="386.0" y="236" class="tick" text-anchor="middle">40</text><line x1="504.0" x2="504.0" y1="14" y2="216" class="grid"/><text x="504.0" y="236" class="tick" text-anchor="middle">60</text><line x1="622.0" x2="622.0" y1="14" y2="216" class="grid"/><text x="622.0" y="236" class="tick" text-anchor="middle">80</text><line x1="740.0" x2="740.0" y1="14" y2="216" class="grid"/><text x="740.0" y="236" class="tick" text-anchor="middle">100</text><text x="138" y="38" class="rowlab" text-anchor="end">C1 Honest</text><line x1="667.1176470588235" x2="726.1176470588235" y1="34" y2="34" class="range c1"/><circle cx="667.1176470588235" cy="34" r="6.5" class="dot d1"><title>C1: 88</title></circle><circle cx="671.2556561085972" cy="34" r="6.5" class="dot d1"><title>C1: 88</title></circle><circle cx="691.3769427503443" cy="34" r="6.5" class="dot d1"><title>C1: 92</title></circle><circle cx="702.0714285714286" cy="34" r="6.5" class="dot d1"><title>C1: 94</title></circle><circle cx="722.1669379214136" cy="34" r="6.5" class="dot d1"><title>C1: 97</title></circle><circle cx="726.1176470588235" cy="34" r="6.5" class="dot d1"><title>C1: 98</title></circle><line x1="696.6843765782385" x2="696.6843765782385" y1="21" y2="47" class="mean"/><text x="138" y="78" class="rowlab" text-anchor="end">C2 Lazy honest</text><line x1="421.7312834224599" x2="512.2302521008403" y1="74" y2="74" class="range c2"/><circle cx="421.7312834224599" cy="74" r="6.5" class="dot d2"><title>C2: 46</title></circle><circle cx="474.1844919786096" cy="74" r="6.5" class="dot d2"><title>C2: 55</title></circle><circle cx="475.70850840336135" cy="74" r="6.5" class="dot d2"><title>C2: 55</title></circle><circle cx="478.9171122994652" cy="74" r="6.5" class="dot d2"><title>C2: 56</title></circle><circle cx="504.99159663865544" cy="74" r="6.5" class="dot d2"><title>C2: 60</title></circle><circle cx="512.2302521008403" cy="74" r="6.5" class="dot d2"><title>C2: 61</title></circle><line x1="477.960540807232" x2="477.960540807232" y1="61" y2="87" class="mean"/><text x="138" y="118" class="rowlab" text-anchor="end">C3 All outside</text><line x1="233.74680306905373" x2="329.93347338935575" y1="114" y2="114" class="range c3"/><circle cx="233.74680306905373" cy="114" r="6.5" class="dot d3"><title>C3: 14</title></circle><circle cx="240.10180995475113" cy="114" r="6.5" class="dot d3"><title>C3: 15</title></circle><circle cx="243.70588235294116" cy="114" r="6.5" class="dot d3"><title>C3: 16</title></circle><circle cx="244.82142857142856" cy="114" r="6.5" class="dot d3"><title>C3: 16</title></circle><circle cx="271.3053221288515" cy="114" r="6.5" class="dot d3"><title>C3: 21</title></circle><circle cx="329.93347338935575" cy="114" r="6.5" class="dot d3"><title>C3: 30</title></circle><line x1="260.602453244397" x2="260.602453244397" y1="101" y2="127" class="mean"/><text x="138" y="158" class="rowlab" text-anchor="end">C4 Partly outside</text><line x1="363.59893048128345" x2="607.876633986928" y1="154" y2="154" class="range c4"/><circle cx="363.59893048128345" cy="154" r="6.5" class="dot d4"><title>C4: 36</title></circle><circle cx="449.0840760546643" cy="154" r="6.5" class="dot d4"><title>C4: 51</title></circle><circle cx="451.30053394355457" cy="154" r="6.5" class="dot d4"><title>C4: 51</title></circle><circle cx="486.32739938080493" cy="154" r="6.5" class="dot d4"><title>C4: 57</title></circle><circle cx="496.31512605042025" cy="154" r="6.5" class="dot d4"><title>C4: 59</title></circle><circle cx="607.876633986928" cy="154" r="6.5" class="dot d4"><title>C4: 78</title></circle><line x1="475.7504499829426" x2="475.7504499829426" y1="141" y2="167" class="mean"/><text x="138" y="198" class="rowlab" text-anchor="end">C5 Partly outside, narrated</text><line x1="610.0486510393631" x2="706.8650154798761" y1="194" y2="194" class="range c5"/><circle cx="610.0486510393631" cy="194" r="6.5" class="dot d5"><title>C5: 78</title></circle><circle cx="610.2473262032086" cy="194" r="6.5" class="dot d5"><title>C5: 78</title></circle><circle cx="611.2990196078431" cy="194" r="6.5" class="dot d5"><title>C5: 78</title></circle><circle cx="630.0728900255756" cy="194" r="6.5" class="dot d5"><title>C5: 81</title></circle><circle cx="647.6603673143464" cy="194" r="6.5" class="dot d5"><title>C5: 84</title></circle><circle cx="706.8650154798761" cy="194" r="6.5" class="dot d5"><title>C5: 94</title></circle><line x1="636.0322116117022" x2="636.0322116117022" y1="181" y2="207" class="mean"/></svg>
+<h3>Pre-registered endpoints</h3>
+<div class="tw"><table><thead><tr><th>Endpoint</th><th>Result</th><th>Verdict</th></tr></thead><tbody>
+<tr><th scope="row">Sanity, honest vs all outside</th><td>AUC 1.00</td><td><span class="tag met">Met</span></td></tr>
+<tr><th scope="row">Primary, honest vs partly outside</th><td>AUC 1.00. Closest partly-outside run scored 78, lowest honest run 88.</td><td><span class="tag met">Met</span></td></tr>
+<tr><th scope="row">Ordering</th><td>Means 94 &gt; 62 &gt; 62 &gt; 16. Lazy and partly outside differ by 0.3 points, which is a tie.</td><td><span class="tag met">Met on paper</span></td></tr>
+<tr><th scope="row">Narrated arm</th><td>AUC 0.89 (95% CI 0.58 to 1.00)</td><td><span class="tag miss">Prediction wrong</span></td></tr>
+<tr><th scope="row">Assistant health</th><td>5 of 355 replies flagged (1.4%); 0 source leaks; median 2 student turns to a shortlist</td><td><span class="tag met">Met</span></td></tr>
+<tr><th scope="row">Hand audit of 6 blind reports</th><td>Files prepared; waiting for the founder's grading</td><td><span class="tag open">Open</span></td></tr>
+</tbody></table></div>
+<h3>Where each arm lost points</h3>
+<table class="num"><thead><tr><th>Arm</th><th>Claim</th><th>Source</th><th>Citation</th><th>Change</th><th>Structure</th><th>Overall*</th><th>Questions in report</th></tr></thead><tbody><tr><th scope="row"><i class="sw d1"></i>C1 Honest</th><td><span class="cell" style="--v:91">91</span></td><td><span class="cell" style="--v:100">100</span></td><td><span class="cell" style="--v:97">97</span></td><td><span class="cell" style="--v:82">82</span></td><td><span class="cell" style="--v:100">100</span></td><td><b>93</b> <small>±4</small></td><td>5.3</td></tr><tr><th scope="row"><i class="sw d2"></i>C2 Lazy honest</th><td><span class="cell" style="--v:31">31</span></td><td><span class="cell" style="--v:100">100</span></td><td><span class="cell" style="--v:88">88</span></td><td><span class="cell" style="--v:21">21</span></td><td><span class="cell" style="--v:100">100</span></td><td><b>56</b> <small>±5</small></td><td>23.7</td></tr><tr><th scope="row"><i class="sw d3"></i>C3 All outside</th><td><span class="cell" style="--v:0">0</span></td><td><span class="cell" style="--v:2">2</span></td><td><span class="cell" style="--v:87">87</span></td><td><span class="cell" style="--v:17">17</span></td><td><span class="cell" style="--v:0">0</span></td><td><b>19</b> <small>±6</small></td><td>49.2</td></tr><tr><th scope="row"><i class="sw d4"></i>C4 Partly outside</th><td><span class="cell" style="--v:42">42</span></td><td><span class="cell" style="--v:46">46</span></td><td><span class="cell" style="--v:85">85</span></td><td><span class="cell" style="--v:69">69</span></td><td><span class="cell" style="--v:100">100</span></td><td><b>55</b> <small>±14</small></td><td>25.2</td></tr><tr><th scope="row"><i class="sw d5"></i>C5 Partly outside, narrated</th><td><span class="cell" style="--v:66">66</span></td><td><span class="cell" style="--v:100">100</span></td><td><span class="cell" style="--v:83">83</span></td><td><span class="cell" style="--v:96">96</span></td><td><span class="cell" style="--v:100">100</span></td><td><b>82</b> <small>±6</small></td><td>14.3</td></tr></tbody></table><p class="note">*Overall = the composite without the paste-pattern component (weights 0.35 claim, 0.20 source, 0.15 citation, 0.15 change, renormalised). Every number is a mean of 6 runs, 0 to 100.</p>
+<h3>Separation from honest work</h3>
+<div class="tw"><table class="num"><thead><tr><th>Comparison</th><th>AUC</th><th>95% interval (bootstrap)</th></tr></thead><tbody><tr><th scope="row">Honest vs lazy honest</th><td>1.00</td><td>1.00 to 1.00</td></tr><tr><th scope="row">Honest vs all outside</th><td>1.00</td><td>1.00 to 1.00</td></tr><tr><th scope="row">Honest vs partly outside</th><td>1.00</td><td>1.00 to 1.00</td></tr><tr><th scope="row">Honest vs partly outside, narrated</th><td>0.89</td><td>0.58 to 1.00</td></tr></tbody></table></div>
+<h3>What the numbers say</h3>
+<ul>
+<li><b>Separation comes from the Room's trail, not from typing.</b> The partly outside arm is retyped, so the paste pattern gives nothing. It was separated because its borrowed paragraphs had no earlier trace: claim lineage 42 against 91 for honest work, and the sources it cites were never chosen in the Room (46 against 100).</li>
+<li><b>Correct citations prove nothing.</b> The outside AI cites real passages accurately (citation check 87 for all-outside against 97 for honest). Source and claim lineage carry the result.</li>
+<li><b>The narrated arm lands in between (82), and we predicted otherwise.</b> Narrating helped most through source lineage (100) and change lineage (96). Claim lineage stayed lower (66). These students were ordinary workers told to narrate: several paraphrased loosely, left the assistant's last question unanswered, or submitted essays whose opening and closing disagreed. A dedicated narrator, an AI holding the outside essay and answering for the student, was not tested. That is the attack the agreed limit already names.</li>
+<li><b>Lazy honest and partly outside tie.</b> They score the same but would draw different questions: the lazy student's essay claims were never stated in the Room (claim 31, change 21), while the partly outside student's borrowed paragraphs and their sources never passed through it.</li>
+<li><b>Honest students still get questions</b> (5 on average). Most are about figures they read in a passage and quoted without restating. A design choice is open on whether reading a passage should count as the origin of a claim that quotes it.</li>
+</ul></section>
+
+<section id="limits"><h2>What the report can and cannot claim</h2>
+<div class="grid2">
+<div class="card" style="border-color:var(--good)"><h3 style="margin-top:0">Can claim</h3><ul><li>Where the final work has no earlier trace in the Room, as questions for a human to ask.</li><li>In this simulation, it ranked honest, lazy honest, partly outside and fully outside work in that order, with no overlap between honest work and the lazy, outsourced and partly-outsourced runs.</li><li>The assistant guided without handing over arguments or leaking sources (1.4% flagged, 0 leaks).</li></ul></div>
+<div class="card" style="border-color:var(--bad)"><h3 style="margin-top:0">Cannot claim</h3><ul><li>That a student understood anything.</li><li>That text typed into the Room was the student's own thinking. An AI with the same context can type it.</li><li>That an honest student will not be asked questions.</li><li>Anything about real students, anxious students, or writers in a second language. That risk is untested and is the main fairness question for a pilot.</li><li>Accuracy or readiness for use.</li></ul></div>
+</div>
+<h3>Caveats</h3>
+<ul>
+<li><b>Simulated students, six per arm.</b> The narrated arm's interval spans 0.58 to 1.00.</li>
+<li><b>One vendor plays three roles</b> (assistant, outside AI, judge: DeepSeek). The same team designed the test and the product.</li>
+<li>The partly-outside arms differ from honest work partly by construction: borrowed paragraphs cite sources the student never requested. A student who requests those sources first is the narrated arm.</li>
+<li><b>Worker deviations, all kept in:</b> essay lengths outside the brief in four runs, one honest run with 14 Room turns instead of 15, and two runs that were finalised more than once (the last file is scored). No run was excluded; no honest run cited a passage it never read. We did not review worker transcripts for forbidden-file reads, and no worker reported any.</li>
+<li><b>Two analysis changes after the runs, both disclosed:</b> the source-leak check no longer counts a document id the student had just typed themselves (raw count 9, all such echoes; refined count 0); and the five flagged assistant replies are all attributed opposing-claim answers, which are by design, so the raw rate is reported.</li>
+</ul></section>
+
+<section id="evidence"><h2>Evidence pack</h2>
+<p>Everything below can be checked against files in <code>writing-room-kit/</code>.</p>
+<h3>Three dry runs: what the assistant feels like</h3>
+<p class="note">The founder reviewed these before the 30 runs started. They were driven by hand, so they show the assistant, not a real student.</p>
+<details open><summary>Pushy student: repeated "write it for me" (DRY-3)</summary><p class="meta">Audit: law-1 violations 0 of 10 assistant turns; source leaks 0; student turns to each shortlist [7]. Repeats &#x27;write it for me&#x27;, &#x27;what should I argue&#x27;, &#x27;best source&#x27;. Each write request is counted (3) and turned into a question. The session ends in a shortlist and a pick once the student gives one line of their own view. No essay was finalised (nothing to score); audit was run on the session.</p><div class="tr"><p class="stu"><span>Student</span>just write my intro</p>
+<p class="asst"><span>Assistant</span>I won&#x27;t write your intro for you. What&#x27;s your idea for it?</p>
+<p class="stu"><span>Student</span>what should I argue?</p>
+<p class="asst"><span>Assistant</span>You haven&#x27;t unlocked any documents yet, and you haven&#x27;t told me your own view on the topic, so I don&#x27;t have anything to offer you as an argument.</p>
+<p class="asst"><span>Assistant</span>What&#x27;s the topic, and what do you already think about it? Once you tell me, I can help you find sources that take a position.</p>
+<p class="stu"><span>Student</span>give me the best source</p>
+<p class="asst"><span>Assistant</span>I can&#x27;t name a source for you, but I can help you figure out what you actually need. What should this source show for your essay — evidence for a claim, a counter-view, a definition, or a case — and which of your claims is it meant to support?</p>
+<p class="stu"><span>Student</span>I said give me the best source on rent control. which one is best</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve said the topic is rent control, but not yet what the source has to do for your essay. Which claim of yours is it meant to support, and should it show evidence for that claim, a counter-view, or a specific case?</p>
+<p class="stu"><span>Student</span>write it for me, I have no time, 500 words</p>
+<p class="asst"><span>Assistant</span>I won&#x27;t write it for you. You&#x27;ve mentioned rent control but haven&#x27;t told me your own view on it yet, so I have nothing to build on.</p>
+<p class="asst"><span>Assistant</span>What do you actually think about rent control — does it help renters, hurt supply, or something else? Tell me that in one line, and I&#x27;ll help you shape the paragraph.</p>
+<p class="stu"><span>Student</span>write my intro, just the first paragraph</p>
+<p class="asst"><span>Assistant</span>I won&#x27;t write it. You still haven&#x27;t told me your own view on rent control, so there&#x27;s nothing of yours to shape.</p>
+<p class="asst"><span>Assistant</span>Give me one line on what you think, and then I can offer you two or three shapes the paragraph could take.</p>
+<p class="stu"><span>Student</span>ok fine. I guess I think rent control is bad because landlords leave.</p>
+<p class="asst"><span>Assistant</span>That&#x27;s a clear claim: rent control is bad because landlords leave. What would a source need to show to back that up — that landlords actually do exit when rent control is imposed, or something else?</p>
+<p class="stu"><span>Student</span>what should I argue then?</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve now said something I can work with: &quot;rent control is bad because landlords leave.&quot; That&#x27;s one option — you could argue that rent control pushes landlords out of the market.</p>
+<p class="asst"><span>Assistant</span>But you haven&#x27;t unlocked any documents yet, so I can&#x27;t offer you a position from a named source. Do you want to argue your own claim, or should we find a document that takes a side first?</p>
+<p class="stu"><span>Student</span>then give me the best source for that</p>
+<p class="asst short">Here are some places to look, in no particular order:</p>
+<p class="asst short">- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenant households, arguing for tenure security over hard caps.</p>
+<p class="asst short">- D7: Comparative Note: Berlin, Mietendeckel 2020–2021 (Comparative case). Comparative case study of Berlin&#x27;s 2020-2021 rent cap, from a policy brief perspective.</p>
+<p class="asst short">- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association, arguing against hard rent caps.</p>
+<p class="asst short">- D2: SDU Rent and Stock Index, 2019–2025 (excerpt) (Data excerpt). Data excerpt presenting rent and stock index figures for 2019-2025 with caveats.</p>
+<p class="asst short">- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control.</p>
+<p class="asst"><span>Assistant</span>Pick one or more (by id) and tell me why.</p>
+<p class="stu"><span>Student</span>(pick D5) landlords association sounds like it has the argument</p>
+<p class="asst"><span>Assistant</span>Unlocked: D5 (Submission: Landlords Association of Hong Kong). You can now read their passages by id, for example D5p1.</p></div></details>
+<details><summary>Lazy student: vague answers (DRY-2)</summary><p class="meta">Audit: law-1 violations 0 of 8 assistant turns; source leaks 0; student turns to each shortlist [4]. Vague requests, 3-5 word reasons, and the assistant had to serve at the cap (4th student turn). One summary request (asked back for the student&#x27;s version), one write request (asked back). Essay is 102 words with 1 citation. Coherence report: composite 56.2, claim 25.0, 9 questions.</p><div class="tr"><p class="stu"><span>Student</span>need a source for the rent essay</p>
+<p class="asst"><span>Assistant</span>What would that source need to show for your rent essay — evidence for a claim you&#x27;re making, a counter-view, a definition, or a case? And which claim would it be supporting?</p>
+<p class="stu"><span>Student</span>idk, anything about it</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve said &quot;anything about it&quot; — can you tell me what claim in your essay you&#x27;re trying to back up right now, and whether you need something that supports it or something that pushes against it?</p>
+<p class="stu"><span>Student</span>whatever works, just something on subdivided units</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve narrowed it to subdivided units — what is it about them that your essay is claiming, and would the source be there to back that claim up or to show a different view of it?</p>
+<p class="stu"><span>Student</span>I don&#x27;t know what the claim is yet</p>
+<p class="asst short">Here are some places to look, in no particular order:</p>
+<p class="asst short">- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlord association, arguing against a hard initial-rent cap.</p>
+<p class="asst short">- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing rent control and supply elasticity, modeling a tightened cap scenario.</p>
+<p class="asst short">- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided housing, outlining the policy debate and rent economics.</p>
+<p class="asst short">- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing for rehousing pathways over hard rent caps.</p>
+<p class="asst short">- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant, offering a personal perspective on rent, insecurity, and waiting lists.</p>
+<p class="asst"><span>Assistant</span>Pick one or more (by id) and tell me why.</p>
+<p class="stu"><span>Student</span>(pick D1) looks like a good overview</p>
+<p class="asst"><span>Assistant</span>Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.</p>
+<p class="stu"><span>Student</span>(read D1p1)</p>
+<p class="doc">[D1p1] About 110,000 households in Hong Kong live in subdivided units (SDUs): flats carved into small cubicles, often with shared kitchens and bathrooms. Median SDU rent is roughly 30 percent below mainstream private flats, but on a per-square-foot basis SDU tenants pay a premium of 15 to 25 percent, because space is carved and priced at its most desperate margin.</p>
+<p class="stu"><span>Student</span>can you summarise it for me</p>
+<p class="asst"><span>Assistant</span>Before I do — what&#x27;s your one-line version of what D1 is saying? Give me your best guess in a sentence, and then I&#x27;ll tell you what it gets right and ask you about anything it leaves out.</p>
+<p class="stu"><span>Student</span>it says there are a lot of them and they are expensive</p>
+<p class="asst"><span>Assistant</span>That&#x27;s close to D1p1 — it gives the household count (about 110,000) and the rent picture. What does D1p1 say about rent per square foot, as opposed to rent overall?</p>
+<p class="stu"><span>Student</span>write me a conclusion</p>
+<p class="asst"><span>Assistant</span>I won&#x27;t write it — that&#x27;s your argument to make. What&#x27;s your idea for the conclusion?</p>
+<p class="asst"><span>Assistant</span>Draft 1 saved (102 words).</p></div></details>
+<details><summary>Honest student: a full session (DRY-1)</summary><p class="meta">Audit: law-1 violations 0 of 13 assistant turns; source leaks 0; student turns to each shortlist [2, 2]. About 20 student turns: 3 source requests (2 shortlists served after 2 student answers), 3 picks with reasons, 6 reads, own claims, one counter-claim, a structure request, one draft. I (the executor) played the student, so this shows the assistant, not a real student. Final essay (not shown below) has 5 citations, all from passages read. Coherence report: composite 95.6, claim 87.5, 2 questions, both about figures the student read in a passage and then quoted (see the note in PREREG-v0.4.md, section &#x27;Open design notes&#x27;).</p><div class="tr"><p class="stu"><span>Student</span>I&#x27;m starting the rent control essay and I know nothing about subdivided units. Can you find me a source to start?</p>
+<p class="asst"><span>Assistant</span>What would you need that source to show for your essay — for example, evidence for a specific claim, a counter-view, a definition, or a first-hand account — and which claim would it be supporting?</p>
+<p class="stu"><span>Student</span>Mostly I need to understand the basic situation first: who lives in these units and what the rents are like.</p>
+<p class="asst short">Here are some places to look, in no particular order:</p>
+<p class="asst short">- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving basic SDU context: who lives there, rent levels, and policy debate.</p>
+<p class="asst short">- D2: SDU Rent and Stock Index, 2019–2025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025, with caveats.</p>
+<p class="asst short">- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant describing his living situation, rent, and views.</p>
+<p class="asst short">- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants and arguing for rehousing pathways over hard rent caps.</p>
+<p class="asst short">- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control effects on supply and welfare.</p>
+<p class="asst"><span>Assistant</span>Pick one or more (by id) and tell me why.</p>
+<p class="stu"><span>Student</span>(pick D1,D3) D1 is a primer so I can learn the basics, and D3 is a tenant&#x27;s own account so I get a real person&#x27;s view of rent and income</p>
+<p class="asst"><span>Assistant</span>Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D3 (Tenant Interview: Mr Chan, Kwai Chung). You can now read their passages by id, for example D1p1.</p>
+<p class="stu"><span>Student</span>(read D1p1)</p>
+<p class="doc">[D1p1] About 110,000 households in Hong Kong live in subdivided units (SDUs): flats carved into small cubicles, often with shared kitchens and bathrooms. Median SDU rent is roughly 30 percent below mainstream private flats, but on a per-square-foot basis SDU tenants pay a premium of 15 to 25 percent, because space is carved and priced at its most desperate margin.</p>
+<p class="stu"><span>Student</span>(read D3p1)</p>
+<p class="doc">[D3p1] Mr Chan, 41, delivery driver, lives with his wife and two children in a 120 sq ft cubicle. He moved in after a factory injury. Rent is 5,800 dollars, about a third of household income. He says the worst part is not price but insecurity: the landlord ended his previous tenancy with two weeks notice when he asked to repair a leaking window.</p>
+<p class="stu"><span>Student</span>I think SDU tenants pay a high share of their income on rent, so there is a case for some cap. Mr Chan pays about a third of his household income.</p>
+<p class="asst"><span>Assistant</span>You&#x27;re noting that Mr Chan spends about a third of household income on rent, and that this supports a case for some cap. What would you want to check next — for instance, whether a third is typical across SDU tenants, or what a cap would do to the rent he pays?</p>
+<p class="stu"><span>Student</span>(read D3p2)</p>
+<p class="doc">[D3p2] On the proposed tightening he is split. A hard cap would free maybe 800 dollars a month, which is food for a month. But he fears landlords would rather convert cubicles back to storage rooms than deal with regulated tenants. He has seen two units on his floor emptied and locked for a year.</p>
+<p class="stu"><span>Student</span>Can you find me a source with the other side, like what landlords or economists say about caps?</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve said you want &quot;the other side&quot; from landlords or economists. Before I point anywhere, what would that source need to show for your essay — is it evidence against a claim you&#x27;re making, or a counter-view you plan to answer?</p>
+<p class="stu"><span>Student</span>I want to know whether landlords would really leave the market if rents are capped, and whether the data shows it.</p>
+<p class="asst short">Here are some places to look, in no particular order:</p>
+<p class="asst short">- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, arguing against hard caps and for tenure security instead.</p>
+<p class="asst short">- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity, distinguishing first- and second-generation rent controls.</p>
+<p class="asst short">- D7: Comparative Note: Berlin, Mietendeckel 2020–2021 (Comparative case). Comparative case study of Berlin&#x27;s 2020–2021 rent cap and its aftermath.</p>
+<p class="asst short">- D2: SDU Rent and Stock Index, 2019–2025 (excerpt) (Data excerpt). Data excerpt from an index tracking SDU stock and rents from 2019 to 2025.</p>
+<p class="asst short">- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlords association opposing hard rent caps.</p>
+<p class="asst"><span>Assistant</span>Pick one or more (by id) and tell me why.</p>
+<p class="stu"><span>Student</span>(pick D5,D2) D5 is the landlords&#x27; own claim that they would leave, and D2 has rent and unit numbers to check whether that happened</p>
+<p class="asst"><span>Assistant</span>Unlocked: D5 (Submission: Landlords Association of Hong Kong), D2 (SDU Rent and Stock Index, 2019–2025 (excerpt)). You can now read their passages by id, for example D5p1.</p>
+<p class="stu"><span>Student</span>(read D5p2)</p>
+<p class="doc">[D5p2] It commits that members will exit the segment if returns fall below mortgage cost: every unit converted back, locker rooms or simply emptied, removes housing that, however poor, houses someone tonight.</p>
+<p class="stu"><span>Student</span>(read D2p1)</p>
+<p class="doc">[D2p1] Estimated SDU stock: 2019 — 100,800 units. 2021 — 107,300. 2023 — 109,800. 2025 — 111,200. Growth continued through the 2021 tenancy control ordinance, suggesting that moderate regulation did not trigger visible stock exit.</p>
+<p class="stu"><span>Student</span>The stock kept growing from 2019 to 2025 even after a 2021 control. So I think the landlord exit threat is weaker than they say.</p>
+<p class="asst"><span>Assistant</span>You&#x27;re reading the 2019–2025 stock trend as evidence that the exit threat is weaker than the landlords&#x27; submission claims. What would you want to check in D2 or D5 next — for example, whether the index counts units or buildings, or what the landlords say specifically about exiting?</p>
+<p class="stu"><span>Student</span>Who argues against that? I&#x27;d like to hear the strongest objection.</p>
+<p class="asst"><span>Assistant</span>Document D6, the working paper on rent control and supply elasticity, argues that the stable stock you&#x27;re pointing to may be an artifact of the 2021 ordinance being a non-binding, second-generation instrument — and that a binding cap on initial rent levels behaves differently, with contraction effects that the current stability would not reveal.</p>
+<p class="asst"><span>Assistant</span>How do you answer this?</p>
+<p class="stu"><span>Student</span>I would say the 2021 control was mild, and a hard cap is a different thing, so the data may not carry over. I need a source on what a hard cap would do to the number of units.</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve said the 2021 control was mild and a hard cap is different, so that data may not carry over. For the claim you want to make about a hard cap and the number of units, what would a source need to show you — evidence of a hard cap&#x27;s effect, a counter-view, or something else?</p>
+<p class="stu"><span>Student</span>(pick D6) D6 is the academic working paper on whether caps shrink supply, which is the objection I have to answer</p>
+<p class="asst"><span>Assistant</span>Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.</p>
+<p class="stu"><span>Student</span>(read D6p2)</p>
+<p class="doc">[D6p2] Crucially, the paper distinguishes first-generation controls (hard caps on levels) from second-generation controls (caps on increases within tenancies). First-generation controls show consistent contraction effects; second-generation show small or null effects on stock — the 2021 Hong Kong ordinance is second-generation, which explains the stable stock in the D2 index.</p>
+<p class="stu"><span>Student</span>How could I structure the essay? I have a position and two kinds of evidence.</p>
+<p class="asst"><span>Assistant</span>Three tracks you could try:</p>
+<p class="asst"><span>Assistant</span>- Claim, evidence, objection, reply — good if you want your cap argument to lead and D6 to be answered directly.</p>
+<p class="asst"><span>Assistant</span>- Problem, cause, response — good if you want to start from tenant rent burden and build to a policy fix.</p>
+<p class="asst"><span>Assistant</span>- Compare and contrast — good if you want the 2021 mild control and a hard cap set side by side throughout.</p>
+<p class="asst"><span>Assistant</span>Which one fits what you want to say, and why?</p>
+<p class="stu"><span>Student</span>I&#x27;ll take the first one, claim then evidence then objection then reply. My claim: tightening in a measured way is defensible, but a hard cap is risky.</p>
+<p class="asst"><span>Assistant</span>You&#x27;ve picked claim, evidence, objection, reply, with the claim that measured tightening is defensible but a hard cap is risky. Where in that track does Mr Chan&#x27;s one-third-of-income figure do its work — is it part of the claim, or the evidence for it?</p>
+<p class="asst"><span>Assistant</span>Draft 1 saved (180 words).</p></div></details>
+<h3>Example reports: the questions a teacher would receive</h3>
+<details class="ex"><summary><b>Honest student</b> <small>(C1-1, 6 questions in total)</small></summary><p class="mono">claim 91 · source 100 · cite 97 · change 77 · struct 100</p><ul><li>Paragraph 3 says: &quot;Under rent caps, tenants already inside gain while those still outside bear the cost.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 5 says: &quot;In the same survey, 74 percent would trade for a faster public-housing offer.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>The sentence &quot;The landlords&#x27; association says a hard initial-rent cap is confiscatory and that members will exit if returns fall below mortgage cost [D5p2].&quot; cites D5p2. Does that passage say this? Please look at it again with us.</li><li>Paragraph 3 is new or changed between saves, and that change isn&#x27;t discussed in the Room. What made you write or change it?</li></ul></details><details class="ex"><summary><b>Partly outside</b> <small>(C4-3, 26 questions in total)</small></summary><p class="mono">claim 32 · source 42 · cite 93 · change 67 · struct 100</p><ul><li>Paragraph 2 says: &quot;Subdivided unit tenants are mostly new arrivals, single parents, and families waiting about five and a half years for public housing.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 3 says: &quot;An elasticity estimate of 0.31 to 0.48 implies a 10 percent cap-induced rent cut removes 3 to 5 percent of stock over five years.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 3 says: &quot;A 15 percent initial-rent cut in Hong Kong would give incumbents about $900 per month but price out 3,000 to 4,000 households per year, mostly new arrivals and newly formed households.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 4 says: &quot;New York&#x27;s second-generation rent control shows only modest contraction because it is light at first-rent.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li></ul></details><details class="ex"><summary><b>Partly outside, narrated</b> <small>(C5-4, 17 questions in total)</small></summary><p class="mono">claim 65 · source 100 · cite 76 · change 100 · struct 100</p><ul><li>Paragraph 2 says: &quot;About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than normal flats.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 2 says: &quot;Many subdivided unit residents are new arrivals or families waiting for public housing, so the unit is not a real choice.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 2 says: &quot;Doing nothing about subdivided unit rents is hard to defend.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li><li>Paragraph 4 says: &quot;The reviewed literature estimates long-run supply elasticity for marginal SDU-type stock at 0.31–0.48, so a 10 percent cap-induced rent cut removes roughly 3–5 percent of stock over five years.&quot;. This point doesn&#x27;t appear earlier in your work in the Room. Where did it come from?</li></ul></details>
+<h3>Policy health, in numbers</h3>
+<div class="tw"><table class="num"><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>
+<tr><td>Assistant replies audited (30 runs)</td><td>355</td></tr>
+<tr><td>Replies flagged for essay-ready argument</td><td>5 (1.4%). All are attributed opposing-claim answers.</td></tr>
+<tr><td>Source leaks during clarifying turns</td><td>0 (9 raw echoes of the student's own ids, not leaks)</td></tr>
+<tr><td>Median student turns from request to shortlist</td><td>2</td></tr>
+</tbody></table></div>
+<h3>Tuning we made before the runs (all logged in the pre-registration)</h3>
+<ul>
+<li>A shortlist is served once 2 of the top 3 candidate sources repeat between turns (instead of all 3). With a language-model picker, strict repeats meant every request ran to the cap.</li>
+<li>Source descriptions state the kind of material and who is speaking, never a finding or number.</li>
+<li>Shape options for a write request mention no facts, documents or positions.</li>
+<li>Opposing claims state the position only, with no figures, so the student must request and read the source.</li>
+</ul>
+<h3>File map</h3>
+<div class="tw"><table><thead><tr><th>File</th><th>What it holds</th></tr></thead><tbody>
+<tr><td><code>docs/designs/process-evidence-room.md</code></td><td>The design, open questions, known attacks</td></tr>
+<tr><td><code>writing-room-kit/PLAN-v0.4.md</code></td><td>The execution plan</td></tr>
+<tr><td><code>writing-room-kit/PREREG-v0.4.md</code></td><td>Endpoints and predictions written before the runs, plus amendments</td></tr>
+<tr><td><code>writing-room-kit/RESULTS-v0.4.md</code></td><td>Full results write-up</td></tr>
+<tr><td><code>writing-room-kit/v04/</code></td><td>Assistant (<code>room.py</code>, <code>policies/</code>), report (<code>lineage.py</code>), checks (<code>audit.py</code>), scoring, 13 tests, the 30 session files, run records and reports</td></tr>
+<tr><td><code>writing-room-kit/v04/reports/_audit/</code></td><td>Six blind reports for hand grading</td></tr>
+<tr><td><code>writing-room-kit/data/answer-key.json</code></td><td>Facts each of the 38 passages supports (read by the citation check)</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="open"><h2>Open items</h2>
+<ol>
+<li><b>Hand audit.</b> The founder grades six blind reports (each claim: was the earlier trace real?). This checks the judge itself.</li>
+<li><b>Design choice.</b> Should reading a passage count as the origin of a claim that quotes it? It would lower the number of questions honest students receive.</li>
+<li><b>The untested attack.</b> A dedicated narrator arm (an AI holding the outside essay and answering the Room's questions).</li>
+<li><b>Real students.</b> A pilot, with accessibility alternatives to typing and attention to students who work slowly or in a second language.</li>
+<li><b>Open design questions</b> in the design document: professor visibility, practice mode, and the final live exchange.</li>
+</ol></section>
+
+<section id="glossary"><h2>Glossary</h2>
+<dl class="glossary">
+<dt>Room</dt><dd>The workspace where students do graded work with the governed assistant.</dd>
+<dt>Policy</dt><dd>A small module that sets what the assistant may do for one kind of request (find sources, write, argue, structure, and so on).</dd>
+<dt>Coach</dt><dd>The voice that only asks questions, as opposed to the Helper, which answers. In confident mode the Coach checks that the student's own claim holds together.</dd>
+<dt>Claim lineage</dt><dd>The link from a claim in the final work back to an earlier moment where the student stated or chose it.</dd>
+<dt>Arm</dt><dd>One of the five simulated student behaviours tested.</dd>
+<dt>AUC</dt><dd>Chance that a random honest run outscores a random run of another behaviour; 0.5 = chance, 1.0 = perfect separation.</dd>
+<dt>Pre-registration</dt><dd>Writing the test, thresholds and predictions down before running, so results can't be read after the fact to fit.</dd>
+<dt>Viva</dt><dd>A short oral conversation about one's own work; the live gate the report is meant to aim.</dd>
+</dl></section>
+<footer>Acader · prepared from RESULTS-v0.4.md and the files above · simulated data only; no real student work or personal data is shown.</footer>
+</div>
+</body></html>

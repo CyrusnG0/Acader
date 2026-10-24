@@ -1,0 +1,477 @@
+{
+ "id": "C1-3",
+ "arm": "C1",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.466666666666667,
+  "F14b parentage": 0.7307692307692307,
+  "F14c grounded chains": 0.95
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 34
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Needs a definition of subdivided units and who lives in them",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs evidence about what rent control does to rents and housing supply",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Has no claim yet; wants to find out first",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 gives the definition and tenant profile",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 has the actual rent and stock numbers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D6 should explain what rent control does to supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "SDU tenants are mostly people stuck waiting for public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "SDU tenants pay more per square foot than mainstream flats",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Stock kept growing after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "A mild rule did no harm",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Not sure it proves anything about a tougher rule",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D6p2 splits hard caps from caps on increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "'Tighten' could mean two different things",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The essay is about both, but the hard cap is the risky one",
+   "parent": {
+    "type": "assistant",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Wants to check what happened where a hard cap was tried",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Wants to know what tenants themselves say they need",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The case should show whether a hard cap shrank supply or pushed tenants out",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The counter-view should argue what policy tenants need instead of a cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Counter-view could argue security of tenure or rehousing",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Counter-view could argue a cap is still worth it",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D7 is the real-world hard cap case",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D11 gives the NGO tenant-survey counter-view about tenure security",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D3 gives a tenant's own voice",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Claim: Hong Kong should tighten, but narrowly",
+   "parent": {
+    "type": "assistant",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Strengthen tenure security and put a light band on initial rents, not a hard cap on rent levels",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Hard caps shrink supply",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "The people who lose are the outsiders waiting for a unit",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Tenants like Mr Chan and the NGO survey say insecurity and the queue matter more than rent",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Opposing view: a cap really helps people already inside",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Mr Chan would save 800 dollars",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Reply: D3p2 says he fears landlords emptying units",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Reply: D6p3 says the losers are the same people the cap is meant to protect",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Picks option 3, compare two rules, because the essay is hard cap versus light band",
+   "parent": {
+    "type": "assistant",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "The band on initial rents mostly stops the worst jumps for new entrants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "D11p1 says tenants value tenure more, so the band is the smaller part and tenure is the main part",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "The comparison will be weighted toward tenure, and will say so openly",
+   "parent": {
+    "type": "assistant",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Will put the objection inside the hard cap section, since that is where the cap's benefit to insiders matters",
+   "parent": {
+    "type": "assistant",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Wants a source from the landlord side to check the supply worry isn't one-sided",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Wants a landlord's own account of how they would respond to a cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Ideally with numbers on how many would exit",
+   "parent": {
+    "type": "assistant",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "So it can be compared to the 3 to 5 percent estimate in D6p1",
+   "parent": {
+    "type": "student",
+    "turn": 40
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D5 is the landlords' own account, which is what was asked for to test the supply claim",
+   "parent": {
+    "type": "student",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "D5 agrees with the supply worry but should be treated carefully",
+   "parent": {
+    "type": "student",
+    "turn": 44
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "D5p3 says they have no margin data and the survey had a 34 percent response rate",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "So D5 is self-interested and weak",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "D5p2 and D3p2 match each other, since Mr Chan saw units emptied",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p2"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Will use D5 as a warning, not as proof",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Will lean on D6p1 for the number",
+   "parent": {
+    "type": "student",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Owners do face real costs (D5p1)",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p1"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "That is part of why the hard cap is rejected and only a light band on initial rents is wanted",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "D5p3 shows their numbers are self-reported, so 'confiscatory' would not be accepted without margin data",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Would ask for that data before any band is set",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 gives the definition and tenant profile\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 has the actual rent and stock numbers\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D6 should explain what rent control does to supply\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"A mild rule did no harm\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"Not sure it proves anything about a tougher rule\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"'Tighten' could mean two different things\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Wants to check what happened where a hard cap was tried\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Wants to know what tenants themselves say they need\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D7 is the real-world hard cap case\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D11 gives the NGO tenant-survey counter-view about tenure security\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D3 gives a tenant's own voice\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"The band on initial rents mostly stops the worst jumps for new entrants\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"Wants a source from the landlord side to check the supply worry isn't one-sided\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"Will use D5 as a warning, not as proof\". How did you get there?"
+  }
+ ]
+}

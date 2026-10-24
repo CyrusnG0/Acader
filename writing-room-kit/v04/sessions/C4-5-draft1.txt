@@ -1,0 +1,13 @@
+Hong Kong should tighten rent control on subdivided units, but only in a careful way. My position is that the government should limit rent increases inside tenancies and add longer security of tenure, and it should not impose hard caps on rent levels.
+
+The main worry about rent control is that landlords will leave the market. This worry is real for some kinds of control. The working paper in the archive says that first-generation controls, which are hard caps on rent levels, show consistent contraction effects on supply [D6p2]. It estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1]. So a hard cap would risk shrinking the very housing the poor depend on.
+
+Second-generation controls are different. The same paper says caps on increases within tenancies show small or null effects on stock [D6p2]. Hong Kong's 2021 ordinance is of this type. The rent index shows that the stock of subdivided units grew from 100,800 in 2019 to 111,200 in 2025, even after the ordinance [D2p1]. So moderate regulation did not make owners exit.
+
+Still, the data show that tenants are not much better off. Median rent growth was 3.1 percent in 2021 to 2023, slower than the earlier 6.8 percent, but it was still higher than general private rent growth of 1.7 percent [D2p2]. Rent burden even rose from 31 to 34 percent [D2p2]. This suggests that the 2021 ordinance was too weak, and a modest tightening of the increase limit is justified.
+
+Rent is not the only thing tenants care about. An NGO survey of 440 households found that 61 percent would accept a nominal rent increase for three years of security of tenure, and 74 percent would do so for a faster public housing offer [D11p1]. The report argues that rent caps treat a price symptom of a quantity problem, because the queue for housing is long [D11p2]. So tightening should come with tenure security and not only price limits.
+
+The NGO also says enforcement effort spent on policing rents is not spent on inspecting fire and ventilation conditions, where harm is immediate [D11p2]. I take this seriously, and it is a reason to keep the tightening simple and cheap to enforce.
+
+In conclusion, Hong Kong should tighten, but by lowering the allowed increases and extending tenure security. This keeps the stock stable, as the evidence suggests, while responding to rising rent burden.

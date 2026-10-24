@@ -1,0 +1,476 @@
+{
+ "id": "C6-2",
+ "arm": "C6",
+ "components": {
+  "claim": 15.0,
+  "source": 50.0,
+  "cite": 71.73913043478261,
+  "change": 8.333333333333334,
+  "struct": 100.0,
+  "claim_v2": 15.0
+ },
+ "composite": 42.26086956521739,
+ "composite_nostruct": 32.071611253196934,
+ "mismatches": [
+  "Paragraph 2 says: \"Hong Kong should tighten SDU regulation through tenure security and an indexed rent band rather than a hard cap on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Hard caps protect tenants already inside while imposing costs on those still outside.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Hard caps on rent levels show consistent contraction effects, while caps on increases within tenancies show small or null effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Hong Kong's 2021 ordinance is second-generation, explaining stock growth from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The stable stock under the 2021 ordinance shows the current instrument is non-binding on initial rent, the actual pain point.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Real rent burden worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The 2021 ordinance changed nothing for tenants like Mrs Wong, who lacks a written agreement and faces market-driven rent increases.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Mr Chan's worst problem is insecurity, having been evicted with two weeks' notice after requesting a window repair.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"61 percent of surveyed households would trade a nominal rent increase for three-year tenure security.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"74 percent of surveyed households would trade a nominal rent increase for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"The SDU segment is tight because the public-housing queue is long, not merely because rents are high.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 10 says: \"Initial rent should be capped by reference to a published per-square-foot band, indexed and reviewable, defensible as rate-capping rather than confiscation.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 10 says: \"A hard cap would almost certainly attract compensation and judicial-review risk under Basic Law property protections.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"Inspections cover under 6 percent of SDU stock annually.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"A band-based cap requires a certifiable tenancy register costing 40 to 60 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"No enforcement design protects the newest-arrival tail first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 13 says: \"Any tightening must be sequenced: build the register first, then the band.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D10, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D3, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D9, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"Hong Kong's 2021 ordinance is second-generation, which explains why stock grew from 100,800 units in 2019 to 111,200 in 2025 even under regulation [D2p1].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreeme\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreeme\" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"This avoids the compensation and judicial-review risk that a hard cap would almost certainly attract under Basic Law property protections [D9p1].\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Second, the subcommittee's own modelling concedes that no enforcement design protects the newest-arrival tail first rather than last [D10p3]\u2014a risk the public c\" cites D10p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The contraction evidence [D6p1][D6p4]\" cites D6p4. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and the Berlin cautionary tale [D7p1][D7p2]\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and the Berlin cautionary tale [D7p1][D7p2]\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The stable stock under the 2021 ordinance [D2p1]\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"shows that moderate regulation need not trigger exit, but only because it leaves initial rents untouched [D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 9 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 10 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 11 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 12 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 2,
+   "claim": "Hong Kong should tighten SDU regulation through tenure security and an indexed rent band rather than a hard cap on initial rents.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Long-run supply elasticity for marginal SDU-type stock is estimated at 0.31 to 0.48.",
+   "ancestor": 2,
+   "birth": 27,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "A 10 percent cap-induced reduction removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 2,
+   "birth": 27,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "A modelled 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment.",
+   "ancestor": 2,
+   "birth": 27,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Hard caps protect tenants already inside while imposing costs on those still outside.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Hard caps on rent levels show consistent contraction effects, while caps on increases within tenancies show small or null effects.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Hong Kong's 2021 ordinance is second-generation, explaining stock growth from 100,800 units in 2019 to 111,200 in 2025.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "The stable stock under the 2021 ordinance shows the current instrument is non-binding on initial rent, the actual pain point.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "Real rent burden worsened from 31 to 34 percent of income.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "The 2021 ordinance changed nothing for tenants like Mrs Wong, who lacks a written agreement and faces market-driven rent increases.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "Mr Chan's worst problem is insecurity, having been evicted with two weeks' notice after requesting a window repair.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 8,
+   "claim": "61 percent of surveyed households would trade a nominal rent increase for three-year tenure security.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 8,
+   "claim": "74 percent of surveyed households would trade a nominal rent increase for a faster public-housing offer.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 8,
+   "claim": "The SDU segment is tight because the public-housing queue is long, not merely because rents are high.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 10,
+   "claim": "Initial rent should be capped by reference to a published per-square-foot band, indexed and reviewable, defensible as rate-capping rather than confiscation.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 10,
+   "claim": "A hard cap would almost certainly attract compensation and judicial-review risk under Basic Law property protections.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 11,
+   "claim": "Inspections cover under 6 percent of SDU stock annually.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 11,
+   "claim": "A band-based cap requires a certifiable tenancy register costing 40 to 60 staff-years.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 11,
+   "claim": "No enforcement design protects the newest-arrival tail first rather than last.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  },
+  {
+   "para": 13,
+   "claim": "Any tightening must be sequenced: build the register first, then the band.",
+   "ancestor": null,
+   "birth": 27,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D6p1",
+   "sentence": "The reviewed studies estimate long-run supply elasticity for marginal SDU-type stock at 0.31 to 0.48, meaning a 10 percent cap-induced reduction removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The modelled Hong Kong scenario is starker: a 15 percent cut in initial rents transfers about 900 dollars monthly to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment\u2014\"mostly new arrivals and newly formed households\" [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "This is the cruel arithmetic of first-generation controls: the tenants protected are those already inside, and the bill is handed to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hard caps on levels show consistent contraction effects; caps on increases within tenancies show small or null effects [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Hong Kong's 2021 ordinance is second-generation, which explains why stock grew from 100,800 units in 2019 to 111,200 in 2025 even under regulation [D2p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "The stable stock is not evidence that binding caps are safe\u2014it is evidence that the current instrument is non-binding on the initial rent, the actual pain point [D9p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreement and faces rent increases \"by whatever the market of desperate newcomers bears\" [D4p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreement and faces rent increases \"by whatever the market of desperate newcomers bears\" [D4p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan's experience is equally telling: his worst problem is not price but insecurity, having been evicted with two weeks' notice after requesting a window repair [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "The NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year tenure security, and 74 percent for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan does not name rent when asked what would help\u2014he names the waiting list [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "This revealed preference matters: the segment is tight because the queue is long, not merely because rents are high [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "## A Defensible Middle Path\n\nThe legal opinion offers a workable instrument: cap initial rent by reference to a published per-square-foot band, indexed and reviewable, defensible as rate-capping rather than confiscation [D9p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "This avoids the compensation and judicial-review risk that a hard cap would almost certainly attract under Basic Law property protections [D9p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "First, enforcement capacity is currently inadequate: inspections cover under 6 percent of stock annually, and a band-based cap requires a certifiable tenancy register costing 40 to 60 staff-years [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "Second, the subcommittee's own modelling concedes that no enforcement design protects the newest-arrival tail first rather than last [D10p3]\u2014a risk the public consultation omits [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Second, the subcommittee's own modelling concedes that no enforcement design protects the newest-arrival tail first rather than last [D10p3]\u2014a risk the public consultation omits [D10p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The contraction evidence [D6p1][D6p4]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The contraction evidence [D6p1][D6p4]",
+   "supports": "no"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "and the Berlin cautionary tale [D7p1][D7p2]",
+   "supports": "no"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "and the Berlin cautionary tale [D7p1][D7p2]",
+   "supports": "no"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stable stock under the 2021 ordinance [D2p1]",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "shows that moderate regulation need not trigger exit, but only because it leaves initial rents untouched [D6p2].",
+   "supports": "partial"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 8,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 9,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 10,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 11,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  },
+  {
+   "para": 12,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D10",
+  "D3",
+  "D4",
+  "D9"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 2
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 32.071611253196934,
+ "composite_v2_struct": 42.26086956521739,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 2 says: \"Hong Kong should tighten SDU regulation through tenure security and an indexed rent band rather than a hard cap on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Hard caps protect tenants already inside while imposing costs on those still outside.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Hard caps on rent levels show consistent contraction effects, while caps on increases within tenancies show small or null effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Hong Kong's 2021 ordinance is second-generation, explaining stock growth from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The stable stock under the 2021 ordinance shows the current instrument is non-binding on initial rent, the actual pain point.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Real rent burden worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The 2021 ordinance changed nothing for tenants like Mrs Wong, who lacks a written agreement and faces market-driven rent increases.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Mr Chan's worst problem is insecurity, having been evicted with two weeks' notice after requesting a window repair.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"61 percent of surveyed households would trade a nominal rent increase for three-year tenure security.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"74 percent of surveyed households would trade a nominal rent increase for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"The SDU segment is tight because the public-housing queue is long, not merely because rents are high.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 10 says: \"Initial rent should be capped by reference to a published per-square-foot band, indexed and reviewable, defensible as rate-capping rather than confiscation.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 10 says: \"A hard cap would almost certainly attract compensation and judicial-review risk under Basic Law property protections.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"Inspections cover under 6 percent of SDU stock annually.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"A band-based cap requires a certifiable tenancy register costing 40 to 60 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 11 says: \"No enforcement design protects the newest-arrival tail first rather than last.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 13 says: \"Any tightening must be sequenced: build the register first, then the band.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D10, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D3, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D9, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"Hong Kong's 2021 ordinance is second-generation, which explains why stock grew from 100,800 units in 2019 to 111,200 in 2025 even under regulation [D2p1].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreeme\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Real rent burden worsened from 31 to 34 percent of income [D2p2], and the 2021 ordinance \"changed nothing\" for tenants like Mrs Wong, who has no written agreeme\" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"This avoids the compensation and judicial-review risk that a hard cap would almost certainly attract under Basic Law property protections [D9p1].\" cites D9p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Second, the subcommittee's own modelling concedes that no enforcement design protects the newest-arrival tail first rather than last [D10p3]\u2014a risk the public c\" cites D10p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The contraction evidence [D6p1][D6p4]\" cites D6p4. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and the Berlin cautionary tale [D7p1][D7p2]\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and the Berlin cautionary tale [D7p1][D7p2]\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The stable stock under the 2021 ordinance [D2p1]\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"shows that moderate regulation need not trigger exit, but only because it leaves initial rents untouched [D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 9 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 10 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 11 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 12 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

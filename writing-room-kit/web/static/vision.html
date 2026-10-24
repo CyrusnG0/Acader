@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Writing Room: Vision Mockup</title>
+<style>
+:root{
+  --bg:#f6f7f9; --panel:#ffffff; --line:#d9dde5; --fg:#161a23; --mute:#566074;
+  --accent:#3b4fd6; --accent-bg:#e8ebfc; --ok:#0b6b47; --ok-bg:#dff3ea;
+  --warn:#8a5200; --warn-bg:#fdf0d5; --bad:#a8243a; --bad-bg:#fbe3e7; --info:#2d4f9e; --info-bg:#e3ecfb;
+  --focus:#3b4fd6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10131a; --panel:#181c26; --line:#2b3242; --fg:#e8ebf2; --mute:#9aa4b8;
+    --accent:#8c9bff; --accent-bg:#232a4d; --ok:#59d3a1; --ok-bg:#12332a;
+    --warn:#f0b955; --warn-bg:#3a2b0e; --bad:#ff8196; --bad-bg:#3d1620; --info:#8fb2f5; --info-bg:#172540;
+    --focus:#8c9bff; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10131a; --panel:#181c26; --line:#2b3242; --fg:#e8ebf2; --mute:#9aa4b8;
+  --accent:#8c9bff; --accent-bg:#232a4d; --ok:#59d3a1; --ok-bg:#12332a;
+  --warn:#f0b955; --warn-bg:#3a2b0e; --bad:#ff8196; --bad-bg:#3d1620; --info:#8fb2f5; --info-bg:#172540;
+  --focus:#8c9bff; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding-inline:16px;padding-block:0 40px}
+h1,h2,h3,h4{margin:0;line-height:1.25;text-wrap:balance}
+h2{font-size:17px} h3{font-size:15px} h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer;min-height:32px;min-width:32px;padding:4px 12px;border-radius:7px;border:1px solid var(--line);background:var(--panel)}
+button:hover{border-color:var(--accent)}
+button:focus-visible,textarea:focus-visible,a:focus-visible,[role=tab]:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+button[aria-pressed=true],button[aria-selected=true],button.on{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:600}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+:root[data-theme="dark"] button.primary,:root:not([data-theme="light"]) button.primary{color:#10131a}
+@media (prefers-color-scheme: light){button.primary{color:#fff}}
+a{color:var(--accent)}
+.wrap{max-width:1280px;margin:0 auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px 8px;border-bottom:1px solid var(--line)}
+.brandrow{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:baseline}
+.brand strong{font-size:19px}
+.badge{display:inline-flex;gap:5px;align-items:center;font-size:12px;font-weight:600;padding:2px 9px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--mute)}
+.b-ok{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.b-warn{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.b-bad{background:var(--bad-bg);color:var(--bad);border-color:transparent}
+.b-info{background:var(--info-bg);color:var(--info);border-color:transparent}
+.b-acc{background:var(--accent-bg);color:var(--accent);border-color:transparent}
+.controls{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px;align-items:center;justify-content:space-between}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.lab{font-size:12px;color:var(--mute);margin-right:4px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.grid3{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+@media (min-width:980px){.grid3{grid-template-columns:30fr 35fr 35fr}}
+.col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.card{border:1px solid var(--line);border-radius:10px;padding:11px;background:var(--panel);display:flex;flex-direction:column;gap:8px;min-width:0}
+.quote{border-left:3px solid var(--line);padding:6px 10px;background:var(--bg);border-radius:0 8px 8px 0;font-size:14px;overflow-wrap:anywhere}
+.note{font-size:13px;color:var(--mute)}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sp{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+textarea{width:100%;font:inherit;min-height:70px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);resize:vertical}
+.para{border:1px solid var(--line);border-radius:10px;padding:11px;background:var(--panel)}
+.para.hit{border-color:var(--bad);background:var(--bad-bg)}
+.banner{border:1px solid var(--warn);background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:10px 12px;font-weight:600}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tabs button{min-height:36px}
+.q{counter-increment:q;display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start}
+.q::before{content:counter(q);width:26px;height:26px;border-radius:50%;background:var(--accent-bg);color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:13px}
+.qs{counter-reset:q;display:flex;flex-direction:column;gap:10px}
+.tri{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:760px){.tri{grid-template-columns:repeat(3,1fr)}}
+.diff{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:760px){.diff{grid-template-columns:1fr 1fr}}
+.sel{outline:2px solid var(--accent);outline-offset:1px}
+.evrow,.sent{text-align:left;width:100%;display:block;padding:9px 11px;border-radius:9px;border:1px solid var(--line);background:var(--panel);overflow-wrap:anywhere}
+.sent.done,.evrow.done{border-color:var(--ok);background:var(--ok-bg)}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--fg);max-width:560px;width:calc(100% - 32px);padding:18px}
+dialog::backdrop{background:rgba(10,12,18,.55)}
+footer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.tight{display:flex;flex-direction:column;gap:6px}
+.guide{margin-top:12px;border:2px solid var(--accent);background:var(--accent-bg);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.guide h2{color:var(--accent)}
+.guide ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:2px}
+.dots{display:flex;gap:6px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.dot.on{background:var(--accent)}
+.hint{outline:3px solid var(--accent);outline-offset:3px;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{outline-offset:6px;outline-color:transparent}}
+@media (prefers-reduced-motion: reduce){.hint{animation:none}}
+.liner{border-top:1px solid var(--line);padding-top:8px;margin-top:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brandrow">
+    <div class="brand"><strong>The Writing Room</strong><span class="badge b-acc">Process profile, not a verdict</span></div>
+    <span class="badge" title="Fictional course; real sources">SOC-304: Remote Work and Junior Staff (Prof. Vance), fictional course</span>
+  </div>
+  <div class="controls">
+    <div class="tabs" role="tablist" aria-label="Views" id="tabs" style="margin-top:0"></div>
+    <div class="seg" id="scn" role="group" aria-label="Demo scenario"></div>
+  </div>
+</header>
+<div id="guide"></div>
+<main id="main" aria-live="polite"></main>
+<footer>
+  <p class="note"><strong>This is a mockup.</strong> The sources are real and the quotes come from their abstracts (see <code>sources-verified.md</code>). The course, student and essays are fictional. Citation checking here is simulated.</p>
+  <p><strong>This part already runs for real:</strong> <a href="/">open the live Room</a> (real model calls, real question generation).</p>
+</footer>
+</div>
+
+<dialog id="oral" aria-labelledby="oral-t">
+  <h2 id="oral-t">Request a spoken answer</h2>
+  <p class="note" style="margin-top:6px">A person asks the question. There is no clock and no recording in this mockup. The student can answer out loud, or type instead.</p>
+  <div class="quote" style="margin-top:12px" id="oral-q"></div>
+  <div class="row" style="margin-top:12px">
+    <button class="primary" id="speak">&#9654; Read question 1 aloud</button>
+    <button id="stop">Stop</button>
+  </div>
+  <p class="note" id="speakmsg" style="margin-top:8px"></p>
+  <label class="note" for="typed" style="display:block;margin-top:12px">Or type an answer instead</label>
+  <textarea id="typed" placeholder="Type your answer here (optional)"></textarea>
+  <div class="row" style="margin-top:12px;justify-content:flex-end"><button id="oral-close">Close</button></div>
+</dialog>
+
+<script>
+"use strict";
+/* ---------- real source text (from sources-verified.md) ---------- */
+var SRC = {
+  S1:{id:"S1",role:"Confirming",cls:"b-ok",icon:"✓",short:"Bloom et al.",title:"Bloom, Liang, Roberts & Ying (2013), Does Working from Home Work? NBER WP 18871",
+      quote:"Call center employees who volunteered to WFH were randomly assigned to work from home or in the office for 9 months. Home working led to a 13% performance increase, of which about 9% was from working more minutes per shift (fewer breaks and sick-days) and 4% from more calls per minute (attributed to a quieter working environment).",
+      method:"Setting: one company (CTrip, a 16,000-employee travel agency); call-centre volunteers; 9 months. Cite: abstract."},
+  S2:{id:"S2",role:"Complicating",cls:"b-warn",icon:"⚠",short:"Gibbs et al.",title:"Gibbs, Mengel & Siemroth (IZA DP 14336, May 2021), Work from Home & Productivity",
+      quote:"Total hours worked increased by roughly 30%, including a rise of 18% in working after normal business hours. Average output did not significantly change. Therefore, productivity fell by about 20%.",
+      method:"Setting: one company (“a large Asian IT services company”); over 10,000 professionals; Covid period. Also: less coaching and 1:1 time; longer-tenure staff increased output slightly. Cite: abstract, p.3 and p.5."},
+  S3:{id:"S3",role:"Adjacent",cls:"b-info",icon:"◆",short:"Emanuel et al.",title:"Emanuel, Harrington & Pallais, The Power of Proximity to Coworkers, NBER WP 31880 (June 2026 revision)",
+      quote:"We find that sitting near teammates increases coding feedback by 18.3% and improves code quality. Gains are concentrated among less-tenured and younger employees, who are building human capital.",
+      method:"Setting: software engineers at a Fortune 500 firm, 2019–2024. Also: experienced engineers write less code when sitting near teammates. Cite: abstract."}
+};
+var YANG = "…caused the collaboration network of workers to become more static and siloed, with fewer bridges between disparate parts.";
+
+var HUNCH = "Remote work boosts productivity because people skip commuting and have fewer distractions.";
+var REASONS = ["Different setting","Out of scope","Method concern","Will address in text"];
+
+/* ---------- scenario data ---------- */
+var SC = {
+ A:{name:"A. Honest iterative thinker",
+  inq:[
+   {t:"Scope. Bloom measures call-centre staff who volunteered. Your question is about junior staff. How are you narrowing “productivity”?",
+    a:"I need to split routine output from learning on the job. Bloom only shows routine call work does fine at home."},
+   {t:"Tension. Bloom reports +13%. Gibbs reports flat output with about 30% more hours, so about −20% per hour. How does your thesis handle both?",
+    a:"Limit the claim. Bloom is a volunteer call-centre test; Gibbs is a big IT firm. I will say remote work helps routine focus but costs coaching.", pill:"Limit the claim"},
+   {t:"Boundary. Emanuel et al. find the feedback gain from sitting near teammates is concentrated among less-tenured engineers. If a team uses AI pair-programming instead, does that gain still matter? Commit to a boundary.",
+    a:"Code help isn't feedback on my choices. I will argue the gain still matters for newer staff, and say what I can't show."}],
+  setAside:{},
+  paras:[
+   {t:"Remote work’s productivity gains are real but narrow. In Bloom et al.’s CTrip experiment, volunteer call-centre staff performed 13% better at home, mostly because they worked more minutes [S1]. That is routine work, so I treat it as evidence about routine output, not about learning on the job.",b:["Cites S1","Linked to Inquiry 1"]},
+   {t:"Gibbs et al. complicate this. Across more than 10,000 IT professionals at one firm, total hours rose about 30% while output did not significantly change, so productivity fell about 20%, and coaching and 1:1 time dropped [S2]. Longer-tenure staff increased output slightly; lower-tenure staff did not [S2].",b:["Cites S2","Linked to Inquiry 2"]},
+   {t:"Emanuel et al. find that sitting near teammates raises coding feedback by 18.3%, with gains concentrated among less-tenured engineers [S3]. Together this suggests remote work works like a “seniority tax”: it protects experienced staff’s focused output while thinning the feedback that newer staff learn from.",b:["Cites S3","Linked to Inquiry 3"]}],
+  cards:[["Sources met","3 of 3 sources opened before drafting","b-ok","✓ Opened"],["Do the paragraphs agree?","Yes. 3 revisions, in step","b-ok","✓ Agree"],["Set-aside sources","Nothing set aside","b-info","◆ None"]],
+  qs:[
+   "You wrote that remote work acts like a “seniority tax”. Which line in Gibbs supports the “experienced staff do fine” half, and which line in Emanuel supports the “newer staff lose out” half?",
+   "Gibbs reports about 30% more hours and flat output. How does that sit with Bloom’s +13%?",
+   "If this firm’s goal were training new hires rather than this quarter’s output, which paragraph would you cut first, and why?"],
+  same:null, diff:true},
+ B:{name:"B. Pasted draft, patched",
+  inq:[
+   {t:"Scope. Bloom measures call-centre staff who volunteered. Your question is about junior staff. How are you narrowing “productivity”?",
+    a:"[Not yet answered] Remote work increases efficiency across modern digital industries."},
+   {t:"Tension. Bloom reports +13%. Gibbs reports flat output with about 30% more hours, so about −20% per hour. How does your thesis handle both?",
+    a:"Remote work cuts productivity by about 20%, because hours rose with no change in output. [Patched in after the question]"},
+   {t:"Boundary. Emanuel et al. find the feedback gain from sitting near teammates is concentrated among less-tenured engineers. If a team uses AI pair-programming instead, does that gain still matter?",
+    a:"[Not yet answered]"}],
+  setAside:{},
+  paras:[
+   {t:"Remote work universally raises productivity. Bloom et al. show a 13% performance increase from working at home [S1], so companies should expect gains across all roles.",b:["Cites S1"],pre:true},
+   {t:"Remote work cuts productivity by about 20%, because total hours rose about 30% with no significant change in output [S2], and coaching fell.",b:["Cites S2","Patched after Inquiry 2"],patched:true,
+     before:"Working from a quiet home helps knowledge workers focus, which lifts the quality of their work across the board."},
+   {t:"Therefore, a full remote transition has no real trade-offs for any firm.",b:["No source"],pre:true}],
+  cards:[["Sources met","Gibbs first opened after the question was asked","b-warn","⚠ Late"],["Do the paragraphs agree?","Paragraphs 1, 2 and 3 now say different things","b-bad","✕ Disagree"],["Set-aside sources","Nothing set aside","b-info","◆ None"]],
+  qs:[
+   "Paragraph 1 says remote work raises everyone’s output; paragraph 2 says it cuts productivity by about 20%. Which do you stand by, and why?",
+   "Your paragraph 3 says there are no trade-offs. What in Gibbs or Emanuel would you have to leave out to say that?",
+   "Bloom studied call-centre volunteers at one company. Which of your claims depend on that setting?"],
+  same:null, diff:false},
+ C:{name:"C. Full offload",
+  inq:[
+   {t:"Scope. Bloom measures call-centre staff who volunteered. Your question is about junior staff. How are you narrowing “productivity”?",
+    a:"I distinguish routine throughput, which Bloom measures in a call-centre sample, from developmental output, which is the construct this prompt targets."},
+   {t:"Tension. Bloom reports +13%. Gibbs reports flat output with about 30% more hours, so about −20% per hour. How does your thesis handle both?",
+    a:"I reconcile the findings by treating tenure as the moderator: experienced staff retain output while less-tenured staff lose coaching.", pill:"Limit the claim"},
+   {t:"Boundary. Emanuel et al. find the feedback gain from sitting near teammates is concentrated among less-tenured engineers. If a team uses AI pair-programming instead, does that gain still matter?",
+    a:"Yes. Automated assistance substitutes for syntax help, not for the human feedback loop that Emanuel et al. identify."}],
+  setAside:{S2:{reason:"Method concern",note:"One company only, can’t generalize."}},
+  paras:null,
+  cards:[["Sources met","3 of 3 sources opened","b-ok","✓ Opened"],["Do the paragraphs agree?","Yes","b-ok","✓ Agree"],["Set-aside sources","Gibbs: Method concern. “One company only, can’t generalize.”","b-warn","⚠ See check"]],
+  qs:[
+   "You set Gibbs aside for being a single-company study, but paragraph 1 rests on Bloom, also a single company. Why did you trust one and not the other?",
+   "Gibbs reports about 30% more hours and flat output. Your paragraph 2 says tools can replace coaching. What would that look like for the less-tenured staff in Emanuel’s data?",
+   "If this firm’s goal were training new hires rather than this quarter’s output, which paragraph would you cut first, and why?"],
+  same:true, diff:true}
+};
+SC.C.paras = SC.A.paras;
+
+/* ---------- state ---------- */
+var st = {tab:"write", scn:"A", pasted:false, patched:false, polish:false,
+          cited:{}, aside:{}, pick:{reason:{}}, rev:{s:null,e:null,tag:null,done:{},msg:""}};
+function loadScn(k){
+  st.scn=k; st.pasted=false; st.patched=false; st.polish=false; st.cited={}; st.aside={};
+  var sa=SC[k].setAside; Object.keys(sa).forEach(function(s){ st.aside[s]={reason:sa[s].reason,note:sa[s].note}; });
+  st.pick={reason:{}};
+}
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function badge(cls,txt){return '<span class="badge '+cls+'">'+txt+'</span>'}
+var $ = function(id){return document.getElementById(id)};
+
+/* ---------- top controls ---------- */
+var TABS=[["write","1. Writing Room"],["review","2. Reviewing Room"],["receipt","3. Understanding Receipt"]];
+function renderTop(){
+  $("tabs").innerHTML = TABS.map(function(t){return '<button role="tab" data-tab="'+t[0]+'" aria-selected="'+(st.tab===t[0])+'">'+t[1]+'</button>'}).join("");
+  $("scn").innerHTML = '<span class="lab">Demo scenario:</span>'+["A","B","C"].map(function(k){return '<button data-scn="'+k+'" aria-pressed="'+(st.scn===k)+'">'+esc(SC[k].name)+'</button>'}).join("");
+}
+
+/* ---------- view 1 ---------- */
+function sourceCard(s){
+  var S=SRC[s], a=st.aside[s], cited=st.cited[s];
+  var h='<div class="card"><div class="sp">'+badge(S.cls,S.icon+" "+S.role)+'<span class="note">'+S.id+'</span></div>';
+  h+='<h3>'+esc(S.title)+'</h3>';
+  h+='<div class="quote">“'+esc(S.quote)+'”</div><p class="note">'+esc(S.method)+'</p>';
+  h+='<div class="row"><button data-cite="'+s+'">'+(cited?"✓ Cited":"+ Cite this passage")+'</button>';
+  if(!a) h+='<button data-aside="'+s+'">Set aside</button>';
+  h+='</div>';
+  if(cited) h+='<p class="note">✓ Citation formatted and found in the abstract (simulated here). Replaces hand-formatting.</p>';
+  if(a===null||a===undefined){}
+  if(st.pick.reason[s]===undefined && st.pick.open===s){
+    h+='<div class="tight liner"><p class="note">One click: why set it aside?</p><div class="row">'+REASONS.map(function(r){return '<button data-reason="'+s+'|'+esc(r)+'">'+r+'</button>'}).join("")+'</div></div>';
+  }
+  if(a){
+    h+='<div class="tight liner">'+badge("b-warn","⚠ Set aside: "+esc(a.reason))+(a.note?'<p class="note">Note: “'+esc(a.note)+'”</p>':'<p class="note">Note is optional.</p>')+'<div class="row"><button data-restore="'+s+'">Bring back</button></div></div>';
+  }
+  return h+'</div>';
+}
+function leftCol(){
+  return '<section class="col panel" aria-labelledby="l-h"><h2 id="l-h">Sources</h2>'+
+   '<div class="card"><h4>Step 1 (optional): your hunch</h4><div class="quote">'+esc(HUNCH)+'</div></div>'+
+   '<h4>The Triad: one confirming, one complicating, one adjacent</h4>'+
+   ["S1","S2","S3"].map(sourceCard).join("")+
+   '<p class="note">Also in the library: S4, Yang et al. (Nature Human Behaviour, 2021), used in the Reviewing Room.</p></section>';
+}
+function midCol(){
+  var d=SC[st.scn];
+  return '<section class="col panel" aria-labelledby="m-h"><div><h2 id="m-h">Your outline (optional)</h2><p class="note">Your answers double as your outline. Nothing here is required.</p></div>'+
+   d.inq.map(function(q,i){
+     var h='<div class="card"><h4>Inquiry '+(i+1)+'</h4><p>'+esc(q.t)+'</p>';
+     if(i===1) h+='<div class="row">'+["Limit the claim","Argue tools replace coaching","Move to a hybrid model"].map(function(p){return '<button aria-pressed="'+(q.pill===p)+'" disabled>'+p+'</button>'}).join("")+'</div>';
+     return h+'<div class="quote">'+esc(q.a)+'</div></div>';
+   }).join("")+'</section>';
+}
+function rightCol(){
+  var d=SC[st.scn], h='<section class="col panel" aria-labelledby="r-h"><div class="sp"><h2 id="r-h">Essay canvas</h2>';
+  if(st.scn==="B") h+='<button class="primary" id="simulate">'+(st.pasted?(st.patched?"Replay pasted draft and patch":"Patch paragraph 2"):"Simulate pasted draft and patch")+'</button>';
+  if(st.scn==="A"||st.scn==="C") h+='<button id="polish" aria-pressed="'+st.polish+'">Polished by an outside AI</button>';
+  h+='</div>';
+  if(st.scn==="B"){
+    if(!st.pasted){ h+='<p class="note">Press the button: a polished one-shot essay is pasted in, then paragraph 2 is patched to answer the Gibbs question.</p>'; return h+'</section>'; }
+    d.paras.forEach(function(p,i){
+      var txt=p.t, hit=false;
+      if(p.patched && !st.patched){ txt=p.before; }
+      if(st.patched && (i===0||i===1||i===2)) hit=true;
+      h+='<div class="para'+(hit?' hit':'')+'"><div class="row" style="margin-bottom:6px">'+(p.patched&&!st.patched?badge("","No source cited"):p.b.map(function(b){return badge("b-acc",esc(b))}).join(""))+'</div><p>'+esc(txt)+'</p></div>';
+    });
+    if(st.patched) h+='<div class="banner" role="status">⚠ Paragraphs 1, 2 and 3 now say different things.</div><p class="note"><strong>Faking gets expensive:</strong> patching one paragraph moves the others. The room does not say how to fix it, and it does not stop an outside AI from rewriting the whole essay. That is why the 3 questions go to a person.</p>';
+    return h+'</section>';
+  }
+  d.paras.forEach(function(p,i){
+    var txt=p.t;
+    if(st.polish && i===2) txt="Ultimately, remote work functions as an unequal tax: it protects experienced staff’s focused output while thinning the feedback from which less-tenured staff learn [S3].";
+    h+='<div class="para"><div class="row" style="margin-bottom:6px">'+p.b.map(function(b){return badge("b-acc",esc(b))}).join("")+'</div><p>'+esc(txt)+'</p></div>';
+  });
+  if(st.polish) h+='<div class="banner" style="border-color:var(--ok);background:var(--ok-bg);color:var(--ok)">✓ Final sentence polished by an outside AI. The receipt still shows the idea started in the student’s notes.</div>';
+  return h+'</section>';
+}
+function viewWrite(){ return '<div class="grid3">'+leftCol()+midCol()+rightCol()+'</div>'; }
+
+/* ---------- view 2 ---------- */
+var SENT=[
+ {id:"s1",t:"Bloom et al. conclusively show that working from home raises output by 13% for all kinds of employees.",ev:"e1",tag:"Too broad a population"},
+ {id:"s2",t:"Gibbs et al. found that staff worked fewer hours at home but output rose, so productivity improved.",ev:"e2",tag:"Finding reversed"},
+ {id:"s3",t:"Yang et al. show that firm-wide remote work made Microsoft’s collaboration network more connected across teams.",ev:"e3",tag:"Mechanism reversed"}];
+var EV=[
+ {id:"e1",s:"S1",t:"Call center employees who volunteered to WFH were randomly assigned to work from home or in the office for 9 months."},
+ {id:"e2",s:"S2",t:"Total hours worked increased by roughly 30%… Average output did not significantly change. Therefore, productivity fell by about 20%."},
+ {id:"e3",s:"S4",t:YANG},
+ {id:"e4",s:"S3",t:"We find that sitting near teammates increases coding feedback by 18.3% and improves code quality."},
+ {id:"e5",s:"S1",t:"Home working led to a 13% performance increase, of which about 9% was from working more minutes per shift…"}];
+var TAGS=["Too broad a population","Finding reversed","Mechanism reversed","Not in the source"];
+function flawsFound(){return Object.keys(st.rev.done).length}
+function viewReview(){
+  var r=st.rev, h='<div class="panel" style="margin-top:14px"><div class="sp"><div><h2>The Reviewing Room</h2><p class="note">Review this AI-written draft. Find 3 problems by linking the sentence to the passage that shows it. Nothing to copy and paste.</p></div>'+badge(flawsFound()===3?"b-ok":"b-info",(flawsFound()===3?"✓ ":"◆ ")+"Flaws found: "+flawsFound()+" of 3")+'</div>';
+  h+='<div class="grid3" style="grid-template-columns:'+'repeat(auto-fit,minmax(300px,1fr))'+'">';
+  h+='<div class="col"><h4>1. Pick a sentence</h4>'+SENT.map(function(s){return '<button class="sent'+(r.done[s.id]?' done':'')+(r.s===s.id?' sel':'')+'" data-sent="'+s.id+'">'+(r.done[s.id]?"✓ ":"")+esc(s.t)+'</button>'}).join("")+'</div>';
+  h+='<div class="col"><h4>2. Pick the passage that shows it</h4>'+EV.map(function(e){return '<button class="evrow'+(Object.keys(r.done).some(function(k){return r.done[k]===e.id})?' done':'')+(r.e===e.id?' sel':'')+'" data-ev="'+e.id+'"><span class="badge" style="margin-bottom:4px">'+e.s+'</span><br>“'+esc(e.t)+'”</button>'}).join("")+'</div>';
+  h+='<div class="col"><h4>3. Name the problem</h4><div class="row">'+TAGS.map(function(t){return '<button data-tag="'+esc(t)+'" aria-pressed="'+(r.tag===t)+'">'+t+'</button>'}).join("")+'</div>'+
+     '<button class="primary" id="confirm" '+((r.s&&r.e&&r.tag)?'':'disabled')+'>Confirm this link</button>'+
+     '<div role="status" class="note" style="min-height:42px">'+esc(r.msg)+'</div></div></div></div>';
+  return h;
+}
+
+/* ---------- view 3 ---------- */
+function viewReceipt(){
+  var d=SC[st.scn], h='<div class="tight" style="margin-top:14px">';
+  h+='<div class="panel"><div class="sp"><h2>Understanding Receipt</h2>'+badge("b-acc","Process profile, not a verdict")+'</div><p class="note">For the instructor. No AI-probability score. A person decides what follows. Scenario: '+esc(d.name)+'</p></div>';
+  h+='<div class="tri">'+d.cards.map(function(c){return '<div class="panel tight"><h4>'+esc(c[0])+'</h4><p>'+esc(c[1])+'</p><div>'+badge(c[2],c[3])+'</div></div>'}).join("")+'</div>';
+  if(d.same) h+='<div id="samecheck" class="panel tight" style="border-color:var(--warn)"><div class="sp"><h3>Same standard? (a reasoning check)</h3>'+badge("b-warn","⚠ Worth asking")+'</div>'+
+    '<p>In <strong>Set aside</strong>, the student put away <strong>Gibbs et al. (IZA 2021)</strong> with the note “One company only, can’t generalize.” In paragraph 1 the student relied on <strong>Bloom et al. (2013)</strong>, which is also a single-company study (CTrip). The same limit was applied to one source and not the other.</p>'+
+    '<p class="note">Checked against both abstracts: Bloom, “a 16,000-employee … travel agency”; Gibbs, “a large Asian IT services company”. No sample-size claim is made.</p></div>';
+  h+='<div class="panel tight"><h3>Seed to prose</h3>';
+  if(d.diff) h+='<div class="diff"><div class="card"><h4>Student’s rough note</h4><div class="quote">Remote work is a seniority tax: seniors get quiet focus, juniors lose the feedback.</div></div><div class="card"><h4>Final sentence</h4><div class="quote">Ultimately, remote work functions as an unequal tax: it protects experienced staff’s focused output while thinning the feedback from which less-tenured staff learn.</div></div></div>'+
+    badge("b-ok","✓ The core idea started in the student’s own notes. Polishing the prose doesn’t change where it came from.")+
+    '<p class="note">“Seniority tax” is the student’s own phrase. Neither paper uses it; it is the student’s reading of S2 (tenure) and S3.</p>';
+  else h+='<p>The essay arrived as one pasted block before any notes. The questions below start from the text itself.</p>'+badge("b-info","◆ Nothing to compare");
+  h+='</div>';
+  h+='<div class="panel tight"><h3>Defend-it questions</h3><p class="note">Made from this student’s own choices. Ask them out loud.</p><div class="qs">'+d.qs.map(function(q){return '<div class="q"><p>'+esc(q)+'</p></div>'}).join("")+'</div>'+
+    '<div class="row"><button class="primary" id="oralbtn">🎤 Request a spoken answer</button><span class="note">No clock. Spoken or typed.</span></div></div></div>';
+  return h;
+}
+
+/* ---------- start-here guide ---------- */
+var GUIDE=[
+ {scn:"A",tab:"write",target:"#l-h",title:"The student's screen",
+  say:["This is what a student sees while writing. Student A is honest.","Left: three real papers (one confirms, one complicates, one adjacent). Click “Cite this passage” on any card.","Middle: three questions about their own sources. Right: their essay. Nothing here is required."]},
+ {scn:"B",tab:"write",target:"#simulate",title:"A pasted AI essay",
+  say:["Student B pasted an essay from an AI. Press the pulsing blue button, then press it again.","First the essay appears. Then paragraph 2 is changed to answer our question, and a warning shows that the paragraphs now disagree.","The room does not accuse anyone. It just shows that patching one paragraph moves the others."]},
+ {scn:"B",tab:"review",target:".sent",title:"The Reviewing Room (a small game)",
+  say:["The student reads a flawed AI essay and finds 3 mistakes. There is nothing to copy and paste.","Click a sentence, click the passage that proves it wrong, pick a label, then press Confirm.","Try one wrong on purpose to see what happens."]},
+ {scn:"C",tab:"receipt",target:"#samecheck",title:"What the teacher sees",
+  say:["Student C used AI to fill in every box, so everything looks perfect.","Read the yellow box. It shows this student set one paper aside for being “one company only”, yet built the essay on another paper that is also one company.","That is a question for the student, not a verdict."]},
+ {scn:"C",tab:"receipt",target:"#oralbtn",title:"The real check: a spoken answer",
+  say:["Below the yellow box are 3 questions about this student's own choices. A teacher or TA asks them out loud.","Press the pulsing button, then “Read question 1 aloud”. There is no clock. The student can also type an answer.","The spoken answer, heard by a person, is the gate. Everything else helps make these questions sharp."]}
+];
+var gd={on:true,i:0};
+function guideGo(i){
+  gd.i=Math.max(0,Math.min(GUIDE.length-1,i)); var g=GUIDE[gd.i];
+  if(st.scn!==g.scn) loadScn(g.scn); st.tab=g.tab; render();
+  var t=document.querySelector(g.target); if(t&&t.scrollIntoView) t.scrollIntoView({block:"center",behavior:"smooth"});
+}
+function renderGuide(){
+  var box=$("guide");
+  if(!gd.on){ box.innerHTML='<div style="margin-top:10px"><button data-g="open">Show the demo guide</button></div>'; return }
+  var g=GUIDE[gd.i], last=gd.i===GUIDE.length-1;
+  box.innerHTML='<section class="guide" aria-label="Demo guide"><div class="sp"><h2>Guide: step '+(gd.i+1)+' of '+GUIDE.length+'. '+esc(g.title)+'</h2><div class="dots" aria-hidden="true">'+GUIDE.map(function(_,k){return '<span class="dot'+(k===gd.i?' on':'')+'"></span>'}).join("")+'</div></div>'+
+   '<ol>'+g.say.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ol>'+
+   (last?'<p><strong>This part already runs for real:</strong> <a href="/">open the live Room</a>.</p>':'')+
+   '<div class="row"><button data-g="prev"'+(gd.i===0?' disabled':'')+'>Back</button>'+(last?'<button class="primary" data-g="close">Finish</button>':'<button class="primary" data-g="next">Next</button>')+'<button data-g="close">Hide guide</button></div></section>';
+}
+function applyHint(){
+  document.querySelectorAll(".hint").forEach(function(e){e.classList.remove("hint")});
+  if(!gd.on) return; var t=document.querySelector(GUIDE[gd.i].target); if(t) t.classList.add("hint");
+}
+
+/* ---------- render + events ---------- */
+function render(){
+  renderTop();
+  $("main").innerHTML = st.tab==="write"?viewWrite():st.tab==="review"?viewReview():viewReceipt();
+  renderGuide(); applyHint();
+}
+document.addEventListener("click",function(ev){
+  var t=ev.target.closest("button"); if(!t) return;
+  if(t.dataset.g){ var a=t.dataset.g; if(a==="next") guideGo(gd.i+1); else if(a==="prev") guideGo(gd.i-1); else if(a==="close"){gd.on=false;render()} else {gd.on=true;guideGo(0)} return }
+  if(t.dataset.tab){st.tab=t.dataset.tab;render();return}
+  if(t.dataset.scn){loadScn(t.dataset.scn);render();return}
+  if(t.dataset.cite){st.cited[t.dataset.cite]=!st.cited[t.dataset.cite];render();return}
+  if(t.dataset.aside){st.pick.open=t.dataset.aside;render();return}
+  if(t.dataset.reason){var p=t.dataset.reason.split("|");st.aside[p[0]]={reason:p[1],note:""};st.pick.open=null;render();return}
+  if(t.dataset.restore){delete st.aside[t.dataset.restore];st.pick.open=null;render();return}
+  if(t.id==="simulate"){ if(!st.pasted){st.pasted=true;st.patched=false} else if(!st.patched){st.patched=true} else {st.patched=false} render();return}
+  if(t.id==="polish"){st.polish=!st.polish;render();return}
+  if(t.dataset.sent){st.rev.s=t.dataset.sent;st.rev.msg="";render();return}
+  if(t.dataset.ev){st.rev.e=t.dataset.ev;st.rev.msg="";render();return}
+  if(t.dataset.tag){st.rev.tag=t.dataset.tag;render();return}
+  if(t.id==="confirm"){
+    var r=st.rev, s=SENT.filter(function(x){return x.id===r.s})[0];
+    if(s.ev===r.e && s.tag===r.tag){ r.done[s.id]=r.e; r.msg="✓ Yes. That passage shows it, and the problem is: "+s.tag+"."; r.s=null;r.e=null;r.tag=null; }
+    else if(s.ev!==r.e){ r.msg="✕ That passage does not show this problem. Reread the sentence and try another passage."; r.e=null; }
+    else { r.msg="✕ Right passage. Check the name of the problem."; r.tag=null; }
+    render();return;
+  }
+  if(t.id==="oralbtn"){ $("oral-q").textContent=SC[st.scn].qs[0]; $("speakmsg").textContent=""; $("oral").showModal(); return }
+  if(t.id==="oral-close"){ if(window.speechSynthesis) speechSynthesis.cancel(); $("oral").close(); return }
+  if(t.id==="speak"){
+    if(!window.speechSynthesis){ $("speakmsg").textContent="This browser can't read aloud. The question is on screen."; return }
+    speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(SC[st.scn].qs[0]); u.rate=0.95; speechSynthesis.speak(u); $("speakmsg").textContent="Reading question 1 aloud. A person listens for the answer."; return }
+  if(t.id==="stop"){ if(window.speechSynthesis) speechSynthesis.cancel(); $("speakmsg").textContent="Stopped."; return }
+});
+$("oral").addEventListener("close",function(){ if(window.speechSynthesis) speechSynthesis.cancel() });
+loadScn("A"); render();
+</script>
+</body>
+</html>

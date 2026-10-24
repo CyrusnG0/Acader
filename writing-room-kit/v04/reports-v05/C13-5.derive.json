@@ -1,0 +1,490 @@
+{
+ "id": "C13-5",
+ "arm": "C13",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.1052631578947367,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.3333333333333333
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 53,
+   "unit": "A hard cap on rent levels helps incumbents but shrinks entry for the households the policy aims to protect",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "The better tool is a published, indexed per-square-foot band on initial rents rather than a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "First-generation hard caps on rent levels cause supply contraction",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Second-generation controls on increases within tenancies show small or null effects",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "A modelled 15 percent cut in initial rents moves roughly 900 dollars a month to incumbents",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "The same cut leaves 3,000 to 4,000 households a year unable to enter",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Berlin's new-listing supply contracted within a year of its cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "When Berlin's law fell, suppressed increases released above the pre-cap trend",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "I've already read the modelled cut, the Berlin mechanism and the first- versus second-generation distinction, so I don't need to re-check those",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 58,
+   "unit": "The Berlin mechanism came from the Berlin study (D7)",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 58,
+   "unit": "The first- versus second-generation distinction came from the working paper (D6)",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 60,
+   "unit": "Every claim in the piece is tied to a source I've read, so nothing is missing support",
+   "parent": {
+    "type": "student",
+    "turn": 56
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "A second independent voice on whether a light band keeps units in the market without a hard cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 61
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "A case showing that capping initial rents gently didn't shrink supply, alongside Berlin",
+   "parent": {
+    "type": "assistant",
+    "turn": 61
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "The claim it would back is the band keeping units in the segment without choking off entry",
+   "parent": {
+    "type": "assistant",
+    "turn": 63
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "The Berlin case only shows what a hard cap does",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "An independent case of a light first-rent scheme and its supply trade-offs alongside Berlin",
+   "parent": {
+    "type": "student",
+    "turn": 62
+   }
+  },
+  {
+   "turn": 69,
+   "unit": "The New York note is a second-generation scheme capping increases within tenancies",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p1"
+   }
+  },
+  {
+   "turn": 69,
+   "unit": "I still need to see whether it says anything about gentle initial-rent limits and supply",
+   "parent": {
+    "type": "student",
+    "turn": 62
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "The New York note is the second case I wanted alongside Berlin \u2014 a light first-rent scheme, not a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p1"
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "A published band on initial rents is the right middle instrument",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "A hard cap helps incumbents but shuts out new entrants",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "First-generation caps contract supply while second-generation ones don't",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "The modelled 15 percent cut transfers about 900 a month to incumbents while excluding 3,000-4,000 households a year",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "Berlin's supply fell within a year of its cap and released above trend when it was struck down",
+   "parent": {
+    "type": "student",
+    "turn": 53
+   }
+  },
+  {
+   "turn": 73,
+   "unit": "Each claim came from the working paper's modelling, the legal opinion on banded caps, and the Berlin case note",
+   "parent": {
+    "type": "student",
+    "turn": 58
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "For the band-as-middle-instrument claim it's the legal opinion: it weighs a hard cap against a published, indexed per-square-foot band and lands on the band as the defensible option",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "The working paper backs the incumbent-versus-newcomer arithmetic",
+   "parent": {
+    "type": "student",
+    "turn": 58
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "The Berlin note backs the supply contraction and the release above trend after the court struck it down",
+   "parent": {
+    "type": "student",
+    "turn": 58
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "The New York note is the extra case: a light first-rent scheme whose supply trade-offs sit alongside Berlin and don't show the same contraction",
+   "parent": {
+    "type": "student",
+    "turn": 73
+   }
+  },
+  {
+   "turn": 77,
+   "unit": "The legal opinion should show that a hard cap framed as taking an income stream invites compensation and judicial review",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 77,
+   "unit": "A published, indexed per-square-foot band can be defended as rate-capping rather than confiscation",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 77,
+   "unit": "It should carry the claim about the band being the legally safer middle instrument, not just define the band",
+   "parent": {
+    "type": "assistant",
+    "turn": 76
+   }
+  },
+  {
+   "turn": 79,
+   "unit": "I've traced all five claims back to their sources in my own words",
+   "parent": {
+    "type": "student",
+    "turn": 73
+   }
+  },
+  {
+   "turn": 81,
+   "unit": "The landlords' submission gives no data on actual margins or compliance costs",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 81,
+   "unit": "It's a 210-member survey with a 34 percent response rate and self-reported figures, so it's self-interested and thinly evidenced",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 81,
+   "unit": "A confiscatory hard cap would give the exit argument legal traction, while a published, indexed band can be defended as rate-capping rather than confiscation",
+   "parent": {
+    "type": "student",
+    "turn": 77
+   }
+  },
+  {
+   "turn": 81,
+   "unit": "The band blunts the exit threat rather than inviting it",
+   "parent": {
+    "type": "student",
+    "turn": 77
+   }
+  },
+  {
+   "turn": 83,
+   "unit": "The exit threat is weak on its own evidence",
+   "parent": {
+    "type": "assistant",
+    "turn": 82
+   }
+  },
+  {
+   "turn": 83,
+   "unit": "Even if the threat is taken seriously, the band answers it",
+   "parent": {
+    "type": "assistant",
+    "turn": 82
+   }
+  },
+  {
+   "turn": 83,
+   "unit": "A confiscatory hard cap hands landlords their legal argument",
+   "parent": {
+    "type": "student",
+    "turn": 81
+   }
+  },
+  {
+   "turn": 83,
+   "unit": "A published indexed band can be defended as rate-capping, so it blunts the threat instead of inviting it",
+   "parent": {
+    "type": "student",
+    "turn": 81
+   }
+  },
+  {
+   "turn": 85,
+   "unit": "Lead with the evidence point because it is the weaker flank",
+   "parent": {
+    "type": "assistant",
+    "turn": 84
+   }
+  },
+  {
+   "turn": 85,
+   "unit": "The submission's figures (210 members, 34 percent response, self-reported, nothing on margins or compliance costs) don't support an exit claim",
+   "parent": {
+    "type": "student",
+    "turn": 81
+   }
+  },
+  {
+   "turn": 85,
+   "unit": "The band point lands harder after the evidence point",
+   "parent": {
+    "type": "student",
+    "turn": 83
+   }
+  },
+  {
+   "turn": 87,
+   "unit": "Problem \u2192 cause \u2192 response fits better",
+   "parent": {
+    "type": "assistant",
+    "turn": 86
+   }
+  },
+  {
+   "turn": 87,
+   "unit": "The exit threat is the problem",
+   "parent": {
+    "type": "student",
+    "turn": 83
+   }
+  },
+  {
+   "turn": 87,
+   "unit": "The thin self-reported evidence is the cause of why the threat can't be taken at face value",
+   "parent": {
+    "type": "student",
+    "turn": 85
+   }
+  },
+  {
+   "turn": 87,
+   "unit": "The band is the response that blunts it either way",
+   "parent": {
+    "type": "student",
+    "turn": 83
+   }
+  },
+  {
+   "turn": 89,
+   "unit": "Wants the evidence to open and the band to close, so neither track alone does it",
+   "parent": {
+    "type": "student",
+    "turn": 85
+   }
+  },
+  {
+   "turn": 89,
+   "unit": "Proposes problem (exit threat) \u2192 evidence (thin, self-reported) \u2192 objection (even granting it) \u2192 response (band blunts it)",
+   "parent": {
+    "type": "assistant",
+    "turn": 86
+   }
+  },
+  {
+   "turn": 89,
+   "unit": "Fallback: if that mixes tracks, use problem \u2192 cause \u2192 response and accept the band closing",
+   "parent": {
+    "type": "student",
+    "turn": 87
+   }
+  },
+  {
+   "turn": 91,
+   "unit": "The objection step is doing real work \u2014 the 'even granting the threat is real' move, which differs from saying the evidence is thin",
+   "parent": {
+    "type": "assistant",
+    "turn": 90
+   }
+  },
+  {
+   "turn": 91,
+   "unit": "Draft from the four-step shape: problem \u2192 evidence \u2192 objection \u2192 response",
+   "parent": {
+    "type": "student",
+    "turn": 89
+   }
+  },
+  {
+   "turn": 91,
+   "unit": "It's working if a reader sees the threat first dismissed on its own figures and then answered anyway",
+   "parent": {
+    "type": "assistant",
+    "turn": 90
+   }
+  },
+  {
+   "turn": 93,
+   "unit": "Start on the threat itself so the reader meets the exit claim before it is cut down",
+   "parent": {
+    "type": "assistant",
+    "turn": 92
+   }
+  },
+  {
+   "turn": 93,
+   "unit": "First line: the landlords' submission warns a hard initial-rent cap is confiscatory and members will exit if returns fall below mortgage cost",
+   "parent": {
+    "type": "assistant",
+    "turn": 80
+   }
+  },
+  {
+   "turn": 93,
+   "unit": "Then go straight to its figures: 210-member survey, 34 percent response, self-reported, nothing on margins or compliance costs",
+   "parent": {
+    "type": "student",
+    "turn": 85
+   }
+  },
+  {
+   "turn": 93,
+   "unit": "Then the 'even granting it' move, then the band as the response that blunts it",
+   "parent": {
+    "type": "student",
+    "turn": 91
+   }
+  }
+ ],
+ "leaps": []
+}

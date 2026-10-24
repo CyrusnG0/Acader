@@ -1,0 +1,321 @@
+{
+ "id": "C5-5",
+ "arm": "C5",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.2142857142857144,
+  "F14b parentage": 0.41935483870967744,
+  "F14c grounded chains": 0.2857142857142857
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 16
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Hong Kong should tighten rent control on subdivided units because tenants are exploited",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs evidence about rents and tenant conditions",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a counter-view about landlords",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 is a primer to learn who lives in SDUs and what the debate is",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 has rent data over time needed as evidence of rents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "SDU tenants pay a per-square-foot premium",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Rent burden rose from 31 to 34 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Wants a counter-view from landlords and from supply theory",
+   "parent": {
+    "type": "assistant",
+    "turn": 13
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Landlords say a hard cap would make owners exit",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D2p1 shows stock kept growing after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Moderate tightening, like capping initial rents modestly, did not cause exit",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Argues for tightening in a moderate form",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "D5 gives the landlord side that must be answered",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "D6 is academic work on rent control types and supply, to separate moderate from hard caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "D2p1 shows stable stock under an increase cap only (D6p2)",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Now argues Hong Kong should tighten second-generation controls, like limiting increases and giving tenure security, not hard initial-rent caps",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "D6p1 says hard caps remove 3 to 5 percent of stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "D5p3 shows landlords have weak data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "A hard cap would be enforced thinly because tenants with no written agreement and newest arrivals cannot complain, so the worst-off get protected last",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Tenants say the real problem is insecurity and the long public-housing queue, not rent",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Tenants would trade rent for security of tenure",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "D10 is about enforcement missing the most exploited tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "D4 is a tenant with no written agreement",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "D11 is the tenant survey on tenure security versus rent",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Needs the interview with the tenant who talks about notice periods and the queue",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The interview would support the claim that tenants name insecurity and the queue as the worst part, with a tenant's own account of a short notice period",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Mr Chan's own account of the notice period and the queue backs the claim that tenants name insecurity as the worst part",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Mrs Wong supports a hard cap and says landlords would not leave",
+   "parent": {
+    "type": "passage",
+    "pid": "D4p2"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Her own interview notes two flats converted to storage, so her view does not show landlords stay",
+   "parent": {
+    "type": "passage",
+    "pid": "D4p3"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "D6p2 says second-generation controls have small effects on stock, which is why stable stock after 2021 fits an increase cap and not a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Enforcement is the other problem: only 6 percent of stock is inspected",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Hong Kong should tighten rent control on subdivided units because tenants are exploited\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs evidence about rents and tenant conditions\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs a counter-view about landlords\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 is a primer to learn who lives in SDUs and what the debate is\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 has rent data over time needed as evidence of rents\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"Landlords say a hard cap would make owners exit\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"Moderate tightening, like capping initial rents modestly, did not cause exit\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"D5 gives the landlord side that must be answered\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"D6 is academic work on rent control types and supply, to separate moderate from hard caps\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"D2p1 shows stable stock under an increase cap only (D6p2)\". How did you get there?"
+  },
+  {
+   "turn": 28,
+   "question": "At turn 28 you said: \"A hard cap would be enforced thinly because tenants with no written agreement and newest arrivals cannot complain, so the worst-off get protected last\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"Tenants say the real problem is insecurity and the long public-housing queue, not rent\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"Tenants would trade rent for security of tenure\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"D10 is about enforcement missing the most exploited tenants\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"D4 is a tenant with no written agreement\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"D11 is the tenant survey on tenure security versus rent\". How did you get there?"
+  },
+  {
+   "turn": 34,
+   "question": "At turn 34 you said: \"Needs the interview with the tenant who talks about notice periods and the queue\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"Mr Chan's own account of the notice period and the queue backs the claim that tenants name insecurity as the worst part\". How did you get there?"
+  }
+ ]
+}

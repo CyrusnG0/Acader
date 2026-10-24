@@ -1,0 +1,94 @@
+{
+ "packet": "P16",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial SDU rents."
+  },
+  {
+   "n": 2,
+   "claim": "A hard cap would transfer modest gains to incumbent tenants while shrinking stock for new households."
+  },
+  {
+   "n": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within existing tenancies but left initial rents untouched."
+  },
+  {
+   "n": 4,
+   "claim": "SDU stock grew from roughly 107,300 units in 2021 to 111,200 in 2025."
+  },
+  {
+   "n": 5,
+   "claim": "First-generation rent controls show consistent supply contraction, while second-generation controls show small or null effects."
+  },
+  {
+   "n": 6,
+   "claim": "The stable stock under the ordinance is what one would expect from a non-binding instrument."
+  },
+  {
+   "n": 7,
+   "claim": "The estimated long-run supply elasticity for SDU-type stock is 0.31 to 0.48."
+  },
+  {
+   "n": 8,
+   "claim": "A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 9,
+   "claim": "A modelled 15 percent cut in initial rents yields a net transfer of about HK$900 per month to incumbents."
+  },
+  {
+   "n": 10,
+   "claim": "A 15 percent cut would leave 3,000 to 4,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 11,
+   "claim": "Berlin's Mietendeckel suppressed initial-offer rents but triggered measurable supply contraction."
+  },
+  {
+   "n": 12,
+   "claim": "When Berlin's law was struck down, new-contract rents jumped above the pre-cap trend line."
+  },
+  {
+   "n": 13,
+   "claim": "New York's 2019 tightening is associated with a fall in available stabilised listings."
+  },
+  {
+   "n": 14,
+   "claim": "Current SDU inspection capacity covers under 6 percent of stock per year."
+  },
+  {
+   "n": 15,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register estimated at 40 to 60 staff-years."
+  },
+  {
+   "n": 16,
+   "claim": "Enforcement would systematically miss the most exploited tail of tenants."
+  },
+  {
+   "n": 17,
+   "claim": "Mr Chan fears landlords would rather convert cubicles back to storage than deal with regulated tenants."
+  },
+  {
+   "n": 18,
+   "claim": "The NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year security of tenure."
+  },
+  {
+   "n": 19,
+   "claim": "The binding constraint is queue length and insecurity, not price."
+  },
+  {
+   "n": 20,
+   "claim": "The landlords' Association concedes it has no data on actual margins."
+  },
+  {
+   "n": 21,
+   "claim": "The alternative is to cap initial rent by reference to a published, indexed per-square-foot band."
+  },
+  {
+   "n": 22,
+   "claim": "The consultation document expected in 2026 appears to float a floor-standard plus rent band package."
+  }
+ ],
+ "statements": "[0] (typed) I'm building an argument against a hard cap on SDU initial rents, in favor of tenure security plus a light indexed rent band. I need to work through the sources carefully. Let me start by requesting the first source: the one on the archive's overall conclusion about a hard cap transferring modest gains to incumbents while shrinking stock for new arrivals. Please add it to the shortlist.\n[2] (typed) It carries the thesis sentence itself \u2014 the archive's convergence that a hard cap transfers modest gains to incumbents while shrinking the stock available to new arrivals, single-parent families, and public-housing waiters. That is the claim the whole essay rests on, so I want it in front of me first. Please add it to the shortlist.\n[4] (pick reason) All five are cited in the essay and cover the thesis, elasticity, stock data, and comparative cases\n[18] (typed) Good \u2014 that covers the core empirical and comparative spine. Now I need the sources behind the enforcement and landlord-behaviour sections. Please pull up the tenant case material (the Mrs Wong and Mr Chan interviews), the landlord association statement, the enforcement capacity note, the alternative-instrument note, and the 2026 consultation document.\n[20] (typed) Fair. The landlord-behaviour section makes a narrow claim: that the Association's exit threat is weak evidence because it is self-reported and it concedes no margin data. I need the source to show the counter-view and its limits \u2014 no more. On the tenant side I need the interview material for the Mrs Wong and Mr Chan points, plus the enforcement capacity note, the alternative-instrument note, and the 2026 consultation document, since the essay's enforcement and remedy paragraphs rest on those. Could you pull those five up?\n[22] (pick reason) tenant interviews, landlord submission, enforcement minute for cited claims\n[42] (typed) I still need D12, the consultation document the essay's alternative package comes from \u2014 can you pull it up?\n[44] (typed) D12 is the consultation document that floats the 'floor-standard + rent band' package \u2014 it's the source for my final constructive claim, that the indexed-band alternative is actually on the table for 2026. Can you pull it up so I can read the passage I'm relying on?\n[46] (pick reason) the source for my final constructive claim about the 2026 consultation"
+}

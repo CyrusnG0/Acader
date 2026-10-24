@@ -1,0 +1,86 @@
+{
+ "packet": "P04",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten SDU regulation by targeting tenure security and enforcement first, with only a light band-based constraint on initial rents."
+  },
+  {
+   "n": 2,
+   "claim": "A hard cap on initial rents is the design most likely to harm the households it intends to protect."
+  },
+  {
+   "n": 3,
+   "claim": "Real rent burden for SDU households worsened from 31 to 34 percent of income between 2019 and 2025 despite the 2021 Tenancy Control Ordinance."
+  },
+  {
+   "n": 4,
+   "claim": "The 2021 ordinance capped increases within existing tenancies but left initial rents unregulated and excluded units with co-living services."
+  },
+  {
+   "n": 5,
+   "claim": "The binding constraint tenants name is not rent level but queue length and insecurity."
+  },
+  {
+   "n": 6,
+   "claim": "Sixty-one percent of surveyed households would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer."
+  },
+  {
+   "n": 7,
+   "claim": "First-generation rent controls show consistent supply contraction, while second-generation controls show small or null effects."
+  },
+  {
+   "n": 8,
+   "claim": "The stable SDU stock under the 2021 ordinance is evidence that a non-binding instrument does not bind, not proof that binding controls are safe."
+  },
+  {
+   "n": 9,
+   "claim": "A modelled 15 percent cut in initial rents would transfer about 900 dollars per month to incumbents but leave 3,000 to 4,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 10,
+   "claim": "Berlin's Mietendeckel protected those already inside, and when the law fell, suppressed increases released and new-contract rents jumped above the pre-cap trend."
+  },
+  {
+   "n": 11,
+   "claim": "Current SDU inspection capacity covers under 6 percent of stock per year."
+  },
+  {
+   "n": 12,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register, estimated at 40 to 60 staff-years to stand up."
+  },
+  {
+   "n": 13,
+   "claim": "The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last."
+  },
+  {
+   "n": 14,
+   "claim": "A cap framed as rate-capping\u2014a published, indexed per-square-foot band\u2014sits on firmer legal ground and avoids compensation claims under the Basic Law."
+  },
+  {
+   "n": 15,
+   "claim": "The NGO report supports tenure security plus a light band on initial rents, opposing a hard cap on both contraction arithmetic and tenants' revealed preferences."
+  },
+  {
+   "n": 16,
+   "claim": "The consultation document expected in 2026 appears to be moving toward a 'floor-standard + rent band' package rather than a hard cap."
+  },
+  {
+   "n": 17,
+   "claim": "The Landlords Association claims thin margins and threatens exit but concedes it has no data on actual margins, and its compliance-cost figures come from a self-reported survey with a 34 percent response rate."
+  },
+  {
+   "n": 18,
+   "claim": "The 2021 ordinance did not trigger visible stock exit, and the elasticity estimate of 0.31 to 0.48 applies to binding caps, not to the light band proposed here."
+  },
+  {
+   "n": 19,
+   "claim": "Tenure security, a certifiable tenancy register, and a light, indexed band on initial rents would address the insecurity tenants actually name while avoiding the contraction arithmetic that a hard cap guarantees."
+  },
+  {
+   "n": 20,
+   "claim": "A hard cap would protect incumbents like Mrs Wong and hand the bill to the households still outside\u2014the new arrivals and waiting-list families the policy is meant to serve."
+  }
+ ],
+ "statements": "[0] (typed) I need to work through the sources this essay cites. Let me start with the foundational one on the status quo and the 2021 Tenancy Control Ordinance. Can you pull up documents on the SDU rent burden data and the Tenancy Control Ordinance's coverage gaps?\n[2] (typed) It's meant to give me the numbers and the coverage picture directly \u2014 the real rent burden rising from 31 to 34 percent between 2019 and 2025, the stock figures, and the fact that the 2021 ordinance capped increases inside tenancies but left initial rents unregulated and excluded co-living units. That's the baseline showing the status quo isn't neutral, so I need the primary data source, not a counter-view. Can you pull up documents on the SDU rent burden and stock data plus the Tenancy Control Ordinance's coverage gaps?\n[4] (pick reason) Primary data and ordinance coverage baseline sources\n[8] (pick reason) primary data and ordinance coverage baseline\n[16] (typed) Good \u2014 that gives me the burden and stock baseline. Now I need the modelling side: the supply elasticity estimate that distinguishes first- from second-generation controls, the figures on how many households a 15 percent cut in initial rents would lock out, and the elasticity range of 0.31 to 0.48. Can you pull up the working paper on rent control and supply elasticity?\n[18] (typed) It's about the claim that a hard cap on initial rents is the wrong instrument because it contracts supply and locks out new entrants. The elasticity estimate is the general point \u2014 first-generation controls on levels show supply contraction, second-generation controls on increases show small or null effects. The 15 percent cut figure is the specific consequence: roughly 900 dollars a month to incumbents, but 3,000 to 4,000 households a year unable to enter, mostly new arrivals and newly formed households. The 0.31 to 0.48 range is the magnitude that applies to binding caps, not to a light band. Please pull up the working paper on rent control and supply elasticity so I can read those passages.\n[20] (pick reason) These four carry the modelling, enforcement and comparative claims the essay's core argument rests on, and I already hold D2 for the stock baseline.\n[34] (typed) Good, that gives me the modelling, enforcement and comparative material against the stock baseline from D2. Now I want the legal opinion on how a cap could be framed, and the landlord-side submission that the essay has to answer. Can you pull those up?\n[36] (typed) Both matter, but the legal opinion does the heavier lifting: I need it to show a cap can be framed as rate-capping rather than confiscation, so it survives Basic Law scrutiny and avoids compensation claims. The landlord submission is the counter-argument I have to answer, so I need its actual claims and, ideally, the weaknesses in its evidence. Can you get me both?\n[38] (pick reason) legal framing plus landlord counter-argument to answer"
+}

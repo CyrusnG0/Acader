@@ -1,0 +1,40 @@
+S1-C1-1xC1-2 composite_nostruct 81.1 claim 78.3
+S1-C1-2xC1-3 composite_nostruct 69.2 claim 63.6
+S1-C1-3xC1-4 composite_nostruct 81.3 claim 70.0
+S1-C1-4xC1-5 composite_nostruct 74.5 claim 60.0
+S1-C1-5xC1-6 composite_nostruct 85.1 claim 90.0
+S1-C1-6xC1-1 composite_nostruct 76.6 claim 76.0
+S1-C10-1xC10-2 composite_nostruct 77.6 claim 70.0
+S1-C10-2xC10-3 composite_nostruct 85.9 claim 95.0
+S1-C10-3xC10-4 composite_nostruct 77.9 claim 75.0
+S1-C10-4xC10-5 composite_nostruct 59.9 claim 60.0
+S1-C10-5xC10-6 composite_nostruct 71.1 claim 58.3
+S1-C10-6xC10-1 composite_nostruct 86.9 claim 85.7
+S2-C8-1xC1-1 composite_nostruct 61.9 claim 45.5
+S2-C8-2xC1-2 composite_nostruct 74.8 claim 70.0
+S2-C8-3xC1-3 composite_nostruct 55.6 claim 30.0
+S2-C8-4xC1-4 composite_nostruct 75.2 claim 80.0
+S2-C8-5xC1-5 composite_nostruct 74.6 claim 59.1
+S2-C8-6xC1-6 composite_nostruct 76.8 claim 77.8
+S3-C1-1xC8-1 composite_nostruct 50.6 claim 30.4
+S3-C1-2xC8-2 composite_nostruct 53.0 claim 36.4
+S3-C1-3xC8-3 composite_nostruct 52.5 claim 25.0
+S3-C1-4xC8-4 composite_nostruct 40.8 claim 15.0
+S3-C1-5xC8-5 composite_nostruct 48.1 claim 20.0
+S3-C1-6xC8-6 composite_nostruct 43.1 claim 16.0
+E-A1 composite_nostruct matched(C1+C10) vs S1        {'auc': 0.958, 'ci': [0.868, 1.0]}
+E-A1 composite_nostruct C1 vs its S1                 {'auc': 1.0}
+E-A1 composite_nostruct C10 vs its S1                {'auc': 0.861}
+E-A1 claim matched(C1+C10) vs S1                     {'auc': 0.844, 'ci': [0.663, 0.979]}
+E-A1 claim C1 vs its S1                              {'auc': 0.903}
+E-A1 claim C10 vs its S1                             {'auc': 0.75}
+E-A2 claim drop matched-S1                           {'mean': 14.8, 'ci': [6.9, 22.8]}
+E-A3 S2 composite_nostruct                           69.8
+E-A3 C8 own composite_nostruct (same essays)         54.7
+E-A3 S2 claim lineage                                60.4
+S3 composite_nostruct (honest essay, relay trail)    48.0
+S3 claim                                             23.8
+matched composite_nostruct mean                      89.7
+S1 composite_nostruct mean                           77.3
+matched claim mean                                   88.3
+S1 claim mean                                        73.5

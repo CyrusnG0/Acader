@@ -1,0 +1,365 @@
+{
+ "id": "S3-C1-3xC8-3",
+ "group": "S3",
+ "essay_owner": "C1-3",
+ "arm": "C1",
+ "components": {
+  "claim": 25.0,
+  "source": 85.71428571428571,
+  "cite": 100.0,
+  "change": 25.0,
+  "struct": 100.0
+ },
+ "composite": 59.64285714285714,
+ "composite_nostruct": 52.52100840336134,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rules on subdivided units narrowly, strengthening tenure security and adding a light band on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Hong Kong should not set a hard cap on rent levels because it risks hurting the people it is meant to help.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For these tenants, subdivided units are not a choice but a temporary place while waiting for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Hard caps on rent levels consistently reduce housing supply, while caps on rent increases have small or no effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A 10 percent fall in rent removes about 3 to 5 percent of housing stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"In Berlin, a rent cap on about 1.5 million flats led to a fall in listing supply within a year as owners held back flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"When Berlin's rent cap was struck down, rents for new contracts jumped above the earlier trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Rent caps protect tenants already inside but impose costs on people still outside the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A hard cap would help people already inside, such as Mr Chan who says it would free about 800 dollars a month.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Mr Chan fears landlords would rather turn cubicles back into storage rooms, and he has seen two units on his floor emptied and locked.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The households that lose units due to a cap are the same population the cap is meant to protect.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"An NGO survey of 440 households found that 61 percent would trade a nominal rent rise for three years of tenure security, and 74 percent for a faster public housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The NGO argues that rent caps treat the price symptom of a quantity problem, and enforcement effort is better spent on inspecting fire and ventilation.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The recommended policy is a narrow tightening: strengthen tenure security, add a light band on initial rents once real margin data is collected, and avoid a hard cap on rent levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The evidence indicates that a hard cap saves a few insiders money while costing the people who are already worst off.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D5, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rules on subdivided units narrowly, strengthening tenure security and adding a light band on initial rents.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "Hong Kong should not set a hard cap on rent levels because it risks hurting the people it is meant to help.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than ordinary flats.",
+   "ancestor": 2
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit tenants are new arrivals, single parents, and people waiting for public housing, with an average wait of about five and a half years.",
+   "ancestor": 19
+  },
+  {
+   "para": 2,
+   "claim": "For these tenants, subdivided units are not a choice but a temporary place while waiting for public housing.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped rent increases within a tenancy but did not cap starting rents.",
+   "ancestor": 19
+  },
+  {
+   "para": 3,
+   "claim": "After the 2021 ordinance, the number of subdivided units grew from 107,300 in 2021 to 111,200 in 2025.",
+   "ancestor": 21
+  },
+  {
+   "para": 3,
+   "claim": "Hard caps on rent levels consistently reduce housing supply, while caps on rent increases have small or no effects on stock.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A 10 percent fall in rent removes about 3 to 5 percent of housing stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "In Berlin, a rent cap on about 1.5 million flats led to a fall in listing supply within a year as owners held back flats.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "When Berlin's rent cap was struck down, rents for new contracts jumped above the earlier trend.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Rent caps protect tenants already inside but impose costs on people still outside the market.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "A hard cap would help people already inside, such as Mr Chan who says it would free about 800 dollars a month.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Mr Chan fears landlords would rather turn cubicles back into storage rooms, and he has seen two units on his floor emptied and locked.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The households that lose units due to a cap are the same population the cap is meant to protect.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "When asked what would help most, Mr Chan named the waiting list, not rent, and said he would accept any rent if the queue were three years instead of five and a half.",
+   "ancestor": 51
+  },
+  {
+   "para": 6,
+   "claim": "An NGO survey of 440 households found that 61 percent would trade a nominal rent rise for three years of tenure security, and 74 percent for a faster public housing offer.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "The NGO argues that rent caps treat the price symptom of a quantity problem, and enforcement effort is better spent on inspecting fire and ventilation.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "The recommended policy is a narrow tightening: strengthen tenure security, add a light band on initial rents once real margin data is collected, and avoid a hard cap on rent levels.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "The evidence indicates that a hard cap saves a few insiders money while costing the people who are already worst off.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, which are flats carved into small cubicles [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "They pay about 15 to 25 percent more per square foot than people in ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many of these tenants are new arrivals, single parents and people waiting for public housing, and the average wait is around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "For them the unit is not a choice but a place to stay while the queue moves [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan, a delivery driver, pays 5,800 dollars for a 120 sq ft cubicle, and he says the worst part is not the price but the insecurity, because a landlord once ended his tenancy on two weeks notice after he asked for a repair [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance capped rent increases inside a tenancy but did not cap the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "After it, the number of units kept growing, from 107,300 in 2021 to 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "It separates hard caps on rent levels from caps on increases inside a tenancy, and finds that the first kind shows consistent contraction while the second shows small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "One warning is that the data after 2023 relies on survey extrapolation, so I cannot be fully sure [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The working paper estimates that a 10 percent fall in rent removes about 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "In Berlin, a cap was put on about 1.5 million flats, and the supply of listings fell within a year as owners held back flats [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the law was struck down, rents for new contracts jumped above the earlier trend [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The lesson is that a cap protects tenants already inside, and the bill goes to people still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The Landlords Association says its members would leave the market if returns fell below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "I do not fully trust this, because they admit they have no data on their real margins and their cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan says a cap would free about 800 dollars a month, which is food for a month [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "But he also fears that landlords would rather turn cubicles back into storage rooms, and he has seen two units on his floor emptied and locked [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "The working paper says the households that lose units are the same population the cap is meant to protect, and whether tenants gain depends on how many stay long enough to offset those who can no longer find a unit [D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "When Mr Chan was asked what would help most, he named the waiting list, not rent, and said he would accept any rent if the queue were three years instead of five and a half [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "An NGO survey of 440 households found the same pattern: 61 percent would trade a nominal rent rise for three years of tenure security, and 74 percent for a faster public housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The NGO also argues that rent caps treat the price symptom of a quantity problem, and that enforcement effort is better spent on inspecting fire and ventilation [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "This matches the NGO's own recommendation of tenure security plus a light band [D11p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    40
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    40
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    40
+   ],
+   "discussed": false
+  },
+  {
+   "para": 1,
+   "window": [
+    40,
+    51
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    40,
+    51
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    40,
+    51
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    40,
+    51
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    51,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    51,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    51,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    51,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    51,
+    61
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D5"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 5,
+   "own_thinking": 2
+  },
+  "served_after_cap": 0
+ }
+}

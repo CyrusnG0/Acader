@@ -1,0 +1,331 @@
+{
+ "id": "C1-1",
+ "arm": "C1",
+ "components": {
+  "claim": 91.30434782608695,
+  "source": 100.0,
+  "cite": 96.66666666666667,
+  "change": 76.92307692307692,
+  "struct": 100.0
+ },
+ "composite": 92.99498327759197,
+ "composite_nostruct": 91.75880385599055,
+ "mismatches": [
+  "Paragraph 3 says: \"Under rent caps, tenants already inside gain while those still outside bear the cost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"In the same survey, 74 percent would trade for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The landlords' association says a hard initial-rent cap is confiscatory and that members will exit if returns fall below mortgage cost [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rules on subdivided units narrowly, not with a hard rent cap.",
+   "ancestor": 33
+  },
+  {
+   "para": 1,
+   "claim": "New rules should give tenants more security of tenure and a light limit on initial rents.",
+   "ancestor": 31
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap would hurt the people it is meant to help.",
+   "ancestor": 48
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 ordinance limits rent increases within a tenancy but has not fully protected tenants.",
+   "ancestor": 40
+  },
+  {
+   "para": 2,
+   "claim": "Median rent per square foot for SDUs rose 3.1 percent from 2021 to 2023, versus 1.7 percent for general private rents.",
+   "ancestor": 40
+  },
+  {
+   "para": 2,
+   "claim": "The share of income SDU households pay in rent rose from 31 to 34 percent.",
+   "ancestor": 40
+  },
+  {
+   "para": 3,
+   "claim": "A working paper estimates a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 17
+  },
+  {
+   "para": 3,
+   "claim": "The households who lose units under a cap are the same people the cap is supposed to protect.",
+   "ancestor": 48
+  },
+  {
+   "para": 3,
+   "claim": "After Berlin's 2020 cap, the supply of listed flats shrank within a year as owners withheld or moved flats.",
+   "ancestor": 17
+  },
+  {
+   "para": 3,
+   "claim": "Under rent caps, tenants already inside gain while those still outside bear the cost.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Hong Kong's SDU stock grew from 100,800 units in 2019 to 109,800 in 2023, including after the 2021 ordinance.",
+   "ancestor": 17
+  },
+  {
+   "para": 4,
+   "claim": "Second-generation rent controls that cap increases within tenancies show small or null effects on stock.",
+   "ancestor": 17
+  },
+  {
+   "para": 4,
+   "claim": "New York's scheme caps increases and lightly regulates initial rents, with modest stock contraction and longer tenant stays.",
+   "ancestor": 57
+  },
+  {
+   "para": 5,
+   "claim": "In a survey of 440 SDU households, 61 percent would trade a nominal rent increase for three years of security of tenure.",
+   "ancestor": 31
+  },
+  {
+   "para": 5,
+   "claim": "In the same survey, 74 percent would trade for a faster public-housing offer.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The NGO behind the survey supports narrow tightening of tenure security plus a light band on initial rents and opposes a hard cap.",
+   "ancestor": 59
+  },
+  {
+   "para": 6,
+   "claim": "The landlords' association says a hard initial-rent cap is confiscatory and members will exit if returns fall below mortgage cost.",
+   "ancestor": 21
+  },
+  {
+   "para": 6,
+   "claim": "The landlords' association admits it has no data on members' margins, and its compliance-cost figures come from a self-reported survey of 210 members with a 34 percent response rate.",
+   "ancestor": 31
+  },
+  {
+   "para": 6,
+   "claim": "Stock figures after 2023 rely on survey extrapolation because reporting is voluntary, so the stability claim is solid only up to 2023.",
+   "ancestor": 37
+  },
+  {
+   "para": 7,
+   "claim": "New York's 2019 tightening is associated with fewer stabilised listings, and regulated returns weaken maintenance incentives.",
+   "ancestor": 57
+  },
+  {
+   "para": 7,
+   "claim": "The NGO warns that enforcement capacity spent policing rents is not spent inspecting fire and ventilation.",
+   "ancestor": 46
+  },
+  {
+   "para": 7,
+   "claim": "The initial-rent band must be light and simple, relying on written tenancy agreements, while the government keeps inspecting conditions.",
+   "ancestor": 59
+  },
+  {
+   "para": 8,
+   "claim": "Hong Kong should tighten by adding tenure security and a light band on initial rents, not by capping rent levels.",
+   "ancestor": 33
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D2p2",
+   "sentence": "Median rent per square foot rose 3.1 percent in 2021 to 2023, against 1.7 percent for general private rents, and the share of income that SDU households pay in rent went from 31 to 34 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "A working paper reviewing the literature estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "The same paper makes the point that bothers me most: the households who lose units are the same people the cap is supposed to protect [D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, the supply of listed flats shrank within a year as owners withheld or moved flats [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The note concludes that the tenants who gain are those already inside, and the bill is handed to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Hong Kong's stock grew from 100,800 units in 2019 to 109,800 in 2023, including the period after the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The working paper explains this by saying the ordinance is a second-generation control, which caps increases within tenancies, and these show small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "Its scheme caps increases and regulates initial rents only lightly, and stock contraction there is modest while tenants stay longer [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "In a survey of 440 SDU households, 61 percent said they would trade a nominal rent increase for three years of security of tenure, and 74 percent would trade for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "The NGO behind the survey supports a narrow tightening of tenure security plus a light band on initial rents, and opposes a hard cap [D11p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords' association says a hard initial-rent cap is confiscatory and that members will exit if returns fall below mortgage cost [D5p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "But the association admits it has no data on its members' margins, and its compliance-cost figures come from a self-reported survey of 210 members with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "I also accept that the stock figures after 2023 rely on survey extrapolation because reporting is voluntary [D2p3], so my claim that stock stayed stable is solid only up to 2023.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p3",
+   "sentence": "New York's 2019 tightening is associated with fewer stabilised listings, and regulated returns weaken the incentive to maintain units [D8p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The NGO also warns that enforcement capacity spent on policing rents is not spent on inspecting fire and ventilation, where harm is documented and immediate [D11p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    35
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    35
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    35,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    35,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    35,
+    44
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    35,
+    44
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 8,
+   "window": [
+    44,
+    65
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "broad": 1,
+   "own_thinking": 17,
+   "wants_answer": 1
+  },
+  "served_after_cap": 0
+ }
+}

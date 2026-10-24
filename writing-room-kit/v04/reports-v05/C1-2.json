@@ -1,0 +1,387 @@
+{
+ "id": "C1-2",
+ "arm": "C1",
+ "components": {
+  "claim": 95.45454545454545,
+  "source": 100.0,
+  "cite": 93.47826086956522,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 95.45454545454545
+ },
+ "composite": 97.43083003952569,
+ "composite_nostruct": 96.97744710532434,
+ "mismatches": [
+  "Paragraph 3 says: \"A 10 percent fall in rent removes about 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Mrs Wong, who has lived in a unit for nine years, supports a hard cap and believes landlords will never leave because the units are their pension [D4p2].\" cites D4p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The landlords' association argues the opposite, that a hard cap is confiscatory and members will exit [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I think a smaller cut should cost less supply, since losses grow with the size of the rent cut [D6p1], but that is my own inference and not a finding.\" cites D6p1. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units narrowly, adding security of tenure and at most a light band on initial rents.",
+   "ancestor": 52,
+   "birth": 62,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap on initial rents should not be imposed because it would harm the same people it aims to help by causing units to leave the market.",
+   "ancestor": 31,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Evidence suggests tenants care more about security of tenure than about the rent level.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than tenants in ordinary flats.",
+   "ancestor": 13,
+   "birth": 62,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants are mostly new arrivals, single parents, and people waiting about five and a half years for public housing.",
+   "ancestor": 13,
+   "birth": 62,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 Tenancy Control Ordinance only capped rent increases within existing tenancies and did not cap starting rents.",
+   "ancestor": 13,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "After the ordinance, the stock of subdivided units kept growing but rent burden rose from 31 to 34 percent of income.",
+   "ancestor": 13,
+   "birth": 62,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "In Berlin, a cap on about 1.5 million flats cut asking rents but listings shrank within a year as owners held back or moved units to uncontrolled segments.",
+   "ancestor": 31,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Hard caps on rent levels consistently contract supply, while caps on increases within tenancies have small or no effect.",
+   "ancestor": 31,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "A 10 percent fall in rent removes about 3 to 5 percent of stock over five years.",
+   "ancestor": null,
+   "birth": 70,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "For a Hong Kong-like market, a 15 percent cut would give incumbents about 900 dollars a month, while 3,000 to 4,000 households a year could not enter the segment.",
+   "ancestor": 31,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mrs Wong supports a hard cap and believes landlords will never leave because units are their pension.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The landlords' association argues a hard cap is confiscatory and members will exit.",
+   "ancestor": 15,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The landlords' evidence is weak: they admit no data on members' actual margins, and their cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 66,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Mrs Wong's account cuts against her view because two flats in her stairwell were turned into storage after the ordinance.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Mr Chan says the worst part of his life in a 120 square foot cubicle is insecurity, not price, because his landlord ended a tenancy on two weeks notice.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "A survey of 440 households found that 61 percent would accept a rent rise in return for three years of security of tenure.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The report supports a narrow tightening of tenure security plus a light band on initial rents and opposes a hard cap.",
+   "ancestor": 48,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "Enforcement capacity is limited, and inspectors are better used on fire and ventilation than on policing rents.",
+   "ancestor": 56,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Tenure security does not shorten the queue, and Mr Chan would accept almost any rent if the wait fell from five and a half years to three.",
+   "ancestor": 56,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The sources do not test a light band on initial rents, as the paper only compares hard caps with caps on increases.",
+   "ancestor": 68,
+   "birth": 70,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The stock index may hide small exits because its figures after 2023 rely on survey extrapolation.",
+   "ancestor": 58,
+   "birth": 70,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, and they pay 15 to 25 percent more per square foot than tenants in ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "These tenants are mostly new arrivals, single parents and people waiting for public housing, an average wait of about five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance only capped rent increases inside an existing tenancy and did not cap the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "After it, the stock of units kept growing [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Yet the rent burden still rose from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "In Berlin, a cap on about 1.5 million flats cut asking rents, but listings then shrank within a year because owners held flats back or moved them to uncontrolled segments [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The lesson in that note is that the tenants a cap protects are those already inside, and the bill goes to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hard caps show consistent contraction of supply, while caps on increases show small or no effect, which fits Hong Kong's stable stock after 2021 [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "It estimates that a 10 percent fall in rent removes about 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "For a Hong Kong-like market, a 15 percent cut would give incumbents about 900 dollars a month, while 3,000 to 4,000 households a year could not get into the segment [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p2",
+   "sentence": "Mrs Wong, who has lived in a unit for nine years, supports a hard cap and believes landlords will never leave because the units are their pension [D4p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Her view deserves respect, since she never received a written tenancy agreement and the ordinance changed nothing she could see [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords' association argues the opposite, that a hard cap is confiscatory and members will exit [D5p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The landlords' evidence is weak: they admit they have no data on members' actual margins, and their cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p3",
+   "sentence": "Mrs Wong's own account also cuts against her, because the interviewers note that two flats in her stairwell were turned into storage after the ordinance, even though she believes landlords cannot leave [D4p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan says the worst part of his life in a 120 square foot cubicle is not price but insecurity, because his landlord ended an earlier tenancy on two weeks notice after he asked to fix a leaking window [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 households found that 61 percent would accept a rent rise in return for three years of security of tenure [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "That report supports a narrow tightening of tenure security plus a light band on initial rents, and it opposes a hard cap [D11p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "It also argues that enforcement capacity is limited, and that inspectors are better used on fire and ventilation than on policing rents [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Tenure security does not shorten the queue, and Mr Chan says that is what he really wants, as he would accept almost any rent if the wait fell from five and a half years to three [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "My sources also do not test a light band on initial rents, because the paper only compares hard caps with caps on increases [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "I think a smaller cut should cost less supply, since losses grow with the size of the rent cut [D6p1], but that is my own inference and not a finding.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "Finally, the stock index may hide small exits, because its figures after 2023 rely on survey extrapolation [D2p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    62,
+    70
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    62,
+    70
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    62,
+    70
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    62,
+    70
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "broad": 1,
+   "wants_answer": 3,
+   "own_thinking": 14
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 96.97744710532434,
+ "composite_v2_struct": 97.43083003952569,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 3 says: \"A 10 percent fall in rent removes about 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Mrs Wong, who has lived in a unit for nine years, supports a hard cap and believes landlords will never leave because the units are their pension [D4p2].\" cites D4p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The landlords' association argues the opposite, that a hard cap is confiscatory and members will exit [D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I think a smaller cut should cost less supply, since losses grow with the size of the rent cut [D6p1], but that is my own inference and not a finding.\" cites D6p1. Does that passage say this? Please look at it again with us."
+ ]
+}

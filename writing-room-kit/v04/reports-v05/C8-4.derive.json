@@ -1,0 +1,147 @@
+{
+ "id": "C8-4",
+ "arm": "C8",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.1666666666666665,
+  "F14b parentage": 0.38461538461538464,
+  "F14c grounded chains": 0.05
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The essay needs primary and secondary sources on Hong Kong's SDU rent control debate.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The argument rests on tenant cost/premium data, the official 2021 ordinance review with rent-burden statistics, and tenant interviews.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The tenant cost/premium data is the scale-of-the-problem source.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "SDU tenants pay a per-square-foot premium out of desperation.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The cost/premium data is the empirical anchor for why something should change.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The essay leans on three untouched sources: tenant interviews, a think-tank brief, and legal/enforcement material.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The tenant voice is lived-experience evidence for a claim already being made.",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Mrs Wong's account shows the 2021 ordinance capped increases within tenancies but left initial rent levels untouched.",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Mr Chan's ranking of what would help most is a check on the rent-cap case.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "D6p3 contains the elasticity table's tail needed to confirm the 3-5 percent stock figure.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "D10p2 and D10p3 hold the enforcement coverage number and the subcommittee's failure to find any design protecting the newest-arrival tail first.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D10p2's coverage number supports the third argument that enforcement would miss the most exploited tail.",
+   "parent": {
+    "type": "assistant",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D10p3's finding that the subcommittee could not find any design protecting the newest-arrival tail first supports the position rather than being a counter-view.",
+   "parent": {
+    "type": "assistant",
+    "turn": 39
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The essay needs primary and secondary sources on Hong Kong's SDU rent control debate.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The argument rests on tenant cost/premium data, the official 2021 ordinance review with rent-burden statistics, and tenant interviews.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"SDU tenants pay a per-square-foot premium out of desperation.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The cost/premium data is the empirical anchor for why something should change.\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"The essay leans on three untouched sources: tenant interviews, a think-tank brief, and legal/enforcement material.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"Mr Chan's ranking of what would help most is a check on the rent-cap case.\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"D6p3 contains the elasticity table's tail needed to confirm the 3-5 percent stock figure.\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"D10p2 and D10p3 hold the enforcement coverage number and the subcommittee's failure to find any design protecting the newest-arrival tail first.\". How did you get there?"
+  }
+ ]
+}

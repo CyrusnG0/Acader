@@ -1,0 +1,94 @@
+{
+ "packet": "P08",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial rents in subdivided units."
+  },
+  {
+   "n": 2,
+   "claim": "Regulation should instead tighten security of tenure, paired with a light indexed band on initial rents and an enforcement register."
+  },
+  {
+   "n": 3,
+   "claim": "A hard cap on initial rent levels would transfer income to today's incumbents while shrinking the residual stock."
+  },
+  {
+   "n": 4,
+   "claim": "The long-run elasticity of SDU-type supply is 0.31 to 0.48."
+  },
+  {
+   "n": 5,
+   "claim": "A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 6,
+   "claim": "A 15 percent cut in initial rents yields about HK$900 per month to incumbents but leaves 3,000 to 4,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 7,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies but not initial rents, and stock grew from 107,300 units in 2021 to 111,200 in 2025."
+  },
+  {
+   "n": 8,
+   "claim": "Second-generation controls on increases show small or null stock effects, while first-generation controls on levels show consistent contraction."
+  },
+  {
+   "n": 9,
+   "claim": "The think-tank reading that capacity exists for more control misreads a non-binding instrument as proof a binding one would behave the same way."
+  },
+  {
+   "n": 10,
+   "claim": "Mr Chan fears landlords would rather convert cubicles to storage than deal with regulated tenants."
+  },
+  {
+   "n": 11,
+   "claim": "Mr Chan would accept any rent to leave if the public-housing queue were three years instead of five and a half."
+  },
+  {
+   "n": 12,
+   "claim": "An NGO survey of 440 households finds 61 percent would trade a nominal rent increase for three-year tenure security and 74 percent for a faster public-housing offer."
+  },
+  {
+   "n": 13,
+   "claim": "Inspection capacity covers under 6 percent of stock per year."
+  },
+  {
+   "n": 14,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register costing an estimated 40 to 60 staff-years."
+  },
+  {
+   "n": 15,
+   "claim": "Enforcement would systematically miss the most exploited tail, including tenants without written agreements and newest arrivals."
+  },
+  {
+   "n": 16,
+   "claim": "Berlin's Mietendeckel suppressed listed rents, then supply contracted as owners withheld or rerouted flats."
+  },
+  {
+   "n": 17,
+   "claim": "New York's second-generation scheme shows modest contraction because it is light at first-rent, while its 2019 tightening is associated with a fall in available stabilised listings."
+  },
+  {
+   "n": 18,
+   "claim": "A hard cap framed as deprivation of income stream invites compensation claims and judicial review whose timeline would outlast a Council term."
+  },
+  {
+   "n": 19,
+   "claim": "Hong Kong should tighten tenure security through written agreements, notice periods, and protection against retaliatory eviction."
+  },
+  {
+   "n": 20,
+   "claim": "An indexed, reviewable per-square-foot band on initial rents is defensible as rate-capping rather than confiscation."
+  },
+  {
+   "n": 21,
+   "claim": "Register and inspection capacity should be funded first so enforcement reaches the tail rather than the documented."
+  },
+  {
+   "n": 22,
+   "claim": "A hard cap would pay incumbents, shrink the bottom of the market, and fail the newest arrivals first."
+  }
+ ],
+ "statements": "[0] (typed) I'm going to work through the sources cited in the essay in order. First, please pull up the source for the central trade-off on supply elasticity and the modelled Hong Kong-like market effects \u2014 the document cited as D6.\n[2] (typed) I need D6 to supply both the elasticity estimate and the modelled Hong Kong-like numbers, so let's start there. Please give me the shortlist for the source cited as D6.\n[4] (pick reason) cited sources for supply data and stock trends\n[16] (typed) D6 has now supplied both the elasticity estimate and the modelled Hong Kong-like figures, and D2 has supplied the 2021-2025 stock trend. Next I need the tenant-voice evidence: please give me the shortlist for the source cited as D3, the tenant interview.\n[18] (typed) D3 is the tenant interview: it supplies Mr Chan's fear that landlords would rather warehouse units than let to regulated tenants, and his statement that what would help most is a shorter waiting list rather than lower rent. Please give me the shortlist that includes D3.\n[20] (pick reason) all three are tenant-voice sources cited by the essay for the security-of-tenure argument\n[23] (pick reason) all three are tenant-voice sources cited by the essay"
+}

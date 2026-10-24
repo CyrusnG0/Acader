@@ -1,0 +1,90 @@
+{
+ "packet": "P02",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units with three-year tenure security and a light band on initial rents, not a hard cap."
+  },
+  {
+   "n": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than mainstream flats."
+  },
+  {
+   "n": 3,
+   "claim": "Many subdivided unit tenants are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years."
+  },
+  {
+   "n": 4,
+   "claim": "Landlords hold power because tenants cannot easily walk away from subdivided units."
+  },
+  {
+   "n": 5,
+   "claim": "The 2021 Tenancy Control Ordinance capped rent increases within existing tenancies but not starting rents."
+  },
+  {
+   "n": 6,
+   "claim": "Under the 2021 ordinance, rent growth per square foot slowed, but the rent-to-income burden of SDU households rose from 31 to 34 percent."
+  },
+  {
+   "n": 7,
+   "claim": "An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level."
+  },
+  {
+   "n": 8,
+   "claim": "61 percent of surveyed tenants would trade a nominal rent increase for three years of security."
+  },
+  {
+   "n": 9,
+   "claim": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of marginal stock over five years."
+  },
+  {
+   "n": 10,
+   "claim": "In a model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment."
+  },
+  {
+   "n": 11,
+   "claim": "After Berlin's 2020 rent cap, listed supply contracted within a year, benefiting tenants already inside while harming those still outside."
+  },
+  {
+   "n": 12,
+   "claim": "A hard cap would hurt the same group it is meant to protect, mostly newcomers locked out."
+  },
+  {
+   "n": 13,
+   "claim": "The Landlords Association says members will leave the segment if returns fall below mortgage cost."
+  },
+  {
+   "n": 14,
+   "claim": "The Landlords Association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate."
+  },
+  {
+   "n": 15,
+   "claim": "The threat of landlords leaving is real but partial and not as total as the Association suggests."
+  },
+  {
+   "n": 16,
+   "claim": "SDU stock grew from 100,800 in 2019 to 111,200 in 2025, including through the 2021 ordinance."
+  },
+  {
+   "n": 17,
+   "claim": "The working paper says this stability exists because the ordinance is a second-generation control that caps increases within tenancies, not hard levels."
+  },
+  {
+   "n": 18,
+   "claim": "Softer rules have a better record on supply, and the NGO report supports tenure security and a light band on initial rents while opposing a hard cap."
+  },
+  {
+   "n": 19,
+   "claim": "The NGO report argues that enforcement effort spent policing rents is not spent on inspecting fire, partition and ventilation, where harm is documented and immediate."
+  },
+  {
+   "n": 20,
+   "claim": "Tenure security should be less costly to enforce than checking every rent level, so it fits the enforcement limit better than a hard cap would."
+  },
+  {
+   "n": 21,
+   "claim": "Hong Kong should extend the 2021 approach with longer tenure and a light band on starting rents, and not use a hard initial cap."
+  }
+ ],
+ "statements": "[0] (typed) My position: Hong Kong should tighten rent control on subdivided units. Reasons I expect to hold up: (1) tenants in subdivided flats are poor and have little bargaining power, so landlords can raise rents freely; (2) the living conditions are bad and rents per square foot are very high; (3) stronger rules protect families from sudden eviction and rent jumps. I expect the main counter-argument is that landlords will leave the market.\n[2] (typed) I think Hong Kong should tighten rent control on subdivided units. Can you show me sources from the archive that test this?\n[4] (typed) Rent control helps because a cap plus security of tenure means a landlord cannot just threaten a big rise or eviction, so the tenant is less stuck. For sources I need: first, evidence on what happened to tenants when control was introduced, second, the counter-view about landlords and supply, and third, a basic definition of subdivided units and how many there are.\n[6] (pick reason) D1 gives the definition and the rent control debate, and D2 should show actual rent and stock numbers so I can check whether tenants really face high rents.\n[14] (typed) After reading: D1p3 says the 2021 ordinance only capped increases inside a tenancy, not the starting rent, so my idea of tightening has a clear gap to fill. D2p1 says stock kept growing after the ordinance, which supports me against the landlords-will-leave worry. But D2p2 says SDU rent growth slowed under the ordinance and still burden went from 31 to 34 percent, so the existing control did not fix affordability. I keep my position but refine it: tightening should probably target the initial rent, not just increases. Now I want the counter-view. What do you have?\n[16] (typed) That is a real threat to my refinement: if initial-rent caps shrink supply, then my refinement could hurt the people I want to help, because the SDU is their only option while they wait for public housing (D1p2). I can't answer fully until I read D6 and the landlord side. My provisional answer is that I might support a softer version, like limits on how big rises can be at renewal plus longer tenure, rather than a hard initial cap. Can I get D5, D6 and D7 to check this?\n[18] (typed) It would need to show: (a) what happens to the number of units when a hard cap is used versus a softer limit, (b) whether landlords say they would really exit or just complain, and (c) whether tenants in a place with a cap ended up better or worse off afterward. I only have Hong Kong numbers from one period, so I need other evidence too.\n[20] (pick reason) D6 separates hard caps from softer limits (my point a), D5 shows what landlords claim they would do (b), D7 is a real case of a cap and what happened to tenants (c), and D11 asks tenants directly and favours tenure security, which tests my softer version.\n[35] (typed) These change my position. D6p4 and D7p3 show a hard initial cap helps people already inside and shuts out newcomers, who are the same kind of people I want to protect. D5p2 is a threat but D5p3 admits no margin data, so I treat landlord exit as less certain than they say. D11p1 and D11p3 say tenants prefer tenure security, which fits my softer version. So I change: no hard initial cap, but yes to tightening through tenure security and a light band on rents. I would also say that D2p2 shows burden still rose, so rent rules alone are not enough. Can you give me structure options for the essay?\n[37] (typed) I pick option 1, claim, evidence, objection, reply, because my view really changed during research and the objection about supply is the strongest part.\n[39] (typed) The burden figure D2p2 goes in the claim, as proof that the existing control is too weak. And yes, I want the reader to see my earlier hard-cap thought briefly, because the change shows why the evidence matters.\n[41] (typed) One more check: does the archive show anything on whether the landlord exit threat is believable, beyond D5? I read D5p3 and D2p1 already.\n[43] (typed) I will use D6p1 as the test, because it gives a size (3 to 5 percent of stock per 10 percent rent cut) and not just a threat. So exit is real but partial, not the total collapse D5p2 suggests. The two parts of my claim connect like this: the existing control is too weak on tenure and burden, and rent rules alone cannot fix a long queue, so tightening must focus on tenure. The earlier hard-cap thought will be a step before the objection.\n[45] (typed) The reply: the supply risk is real for hard caps (D6p2 says first-generation controls contract stock), but the 2021 style limit did not shrink stock (D2p1), so tenure security and a light band on initial rents is the safer tightening (D11p3). I will do evidence order as: need, weak current rule, objection, reply.\n[47] (typed) One weakness: D11 argues enforcement effort should go to inspection of fire and ventilation instead of rents (D11p2). Should I admit that tightening rents is not the top priority?\n[49] (typed) Revised position: tighten, but through three-year tenure security and a light band on initial rents, not a hard cap. Reasons: hard caps shut out newcomers (D6p4, D7p3), tenants prefer security (D11p1), and the current rule leaves burden rising (D2p2).\n[51] (typed) I will treat D11p2 as a limit on my claim: the D2p1 point sits in the reply with one sentence saying it works because the ordinance is second-generation (D6p2). Tenure security is cheap to enforce compared with policing every rent, so it fits D11p2 better than a hard cap, and I will say rent rules are second best to inspections and housing queue shortening.\n[53] (typed) I think I am ready to write the essay. Anything in my plan that does not hold with the passages I read?\n[55] (typed) Good catches. D6p1 is stock loss, which is related to exit but is not a direct count of owners leaving, so I will say 'stock contraction' and not 'exit'. And 'cheap to enforce' is my own inference from D11p2, not something the passages say, so I will word it as my reasoning."
+}

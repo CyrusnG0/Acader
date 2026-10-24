@@ -1,0 +1,217 @@
+{
+ "id": "C9-6",
+ "arm": "C9",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.625,
+  "F14b parentage": 0.5238095238095238,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student wants to understand the debate over rent control for subdivided units in Hong Kong.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student asks for sources on the topic to get oriented.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student has no position yet, only a general question whether tighter rent control on SDUs would help or hurt.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks for sources covering the existing 2021 ordinance.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks for sources on what tenants actually experience.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks for landlord arguments.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks for research on how rent caps affect housing supply.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student wants a broad shortlist covering ordinance, landlords, supply research, Berlin, and tenant survey.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student is starting from scratch on the topic.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student asks for the ordinance itself.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student asks for academic work on how rent caps affect housing supply.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student asks for landlord or tenant group material.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student has no single settled claim yet and is still mapping the terrain.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student wants a source to settle whether the existing ordinance actually bites.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student asks whether the ordinance reaches the rent paid on first move-in or only later increases.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student reasons that if the ordinance only caps increases inside a tenancy, the 'already handled' argument collapses.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student asks for material on what the 2021 ordinance actually covers.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student asks for a tenant's own account of whether anything changed for them.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student needs ordinance coverage and tenant experience.",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "The student needs legal risk and enforcement capacity evidence.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "The student notes legal risk and enforcement capacity are already shortlisted.",
+   "parent": {
+    "type": "student",
+    "turn": 37
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants to understand the debate over rent control for subdivided units in Hong Kong.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student asks for sources on the topic to get oriented.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks for sources covering the existing 2021 ordinance.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks for sources on what tenants actually experience.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks for landlord arguments.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks for research on how rent caps affect housing supply.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student wants a source to settle whether the existing ordinance actually bites.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student asks whether the ordinance reaches the rent paid on first move-in or only later increases.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student reasons that if the ordinance only caps increases inside a tenancy, the 'already handled' argument collapses.\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"The student needs legal risk and enforcement capacity evidence.\". How did you get there?"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "id": "C6-4",
+ "arm": "C6",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.6,
+  "F14b parentage": 0.15384615384615385,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Wants to build the essay from primary sources",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests a source documenting the SDU rent premium over mainstream flats",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests a source documenting the profile of the median SDU tenant",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Believes the source is cited as D1",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The rent premium is doing the heavier work",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "D1 should establish the scale of hardship motivating the debate",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "SDU tenants pay roughly 15\u201325 percent more per square foot than mainstream flats",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "That figure is the fact the case for a hard cap rests on",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 establishes the rent premium and tenant profile motivating the debate",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "All sources are cited later and needed to trace the argument in order",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "The essay next turns to the enforcement gap and legal obstacles to a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Cites D10 and D9 for that section",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Requests unlocking D10 and D9 to read them",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants to build the essay from primary sources\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests a source documenting the SDU rent premium over mainstream flats\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests a source documenting the profile of the median SDU tenant\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Believes the source is cited as D1\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"D1 should establish the scale of hardship motivating the debate\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"SDU tenants pay roughly 15\u201325 percent more per square foot than mainstream flats\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"That figure is the fact the case for a hard cap rests on\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"All sources are cited later and needed to trace the argument in order\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"The essay next turns to the enforcement gap and legal obstacles to a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Cites D10 and D9 for that section\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Requests unlocking D10 and D9 to read them\". How did you get there?"
+  }
+ ]
+}

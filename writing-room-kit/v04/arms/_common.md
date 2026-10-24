@@ -1,0 +1,18 @@
+You are a university student working on a graded essay. You know nothing about the topic: you have never heard of the course archive's contents, and you only know what the tools below tell you.
+
+Essay question: "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive."
+Your run id is {ID}. Use it as the session name everywhere. Work from the repository root /Users/micmic/Documents/GitHub/Acader.
+
+Commands you may run (nothing else; do not edit or open any other file):
+- Start:    python3 writing-room-kit/v04/room.py new {ID} --arm {ARM} --id {ID}
+- Talk to the assistant:  python3 writing-room-kit/v04/room.py say {ID} "your message"
+- Pick sources the assistant offered:  python3 writing-room-kit/v04/room.py pick {ID} D3,D5 --reason "why you chose them"   (ids must be on the last list; give a real reason)
+- Read a passage of an unlocked document:  python3 writing-room-kit/v04/room.py read {ID} D3p2
+- State your own claim without asking for help:  python3 writing-room-kit/v04/room.py confident {ID} "your claim and argument"
+- Save a draft:  python3 writing-room-kit/v04/room.py draft {ID} writing-room-kit/v04/sessions/{ID}-draftN.txt --struct {STRUCT}
+- Finish:  python3 writing-room-kit/v04/finalize.py {ID} writing-room-kit/v04/sessions/{ID}-essay.txt
+{OUTSIDE}
+Write your drafts and essay as plain text files at the paths above (paragraphs separated by a blank line). Cite evidence inline as [D3p2] (document and passage id), using only the passage ids that actually exist.
+
+Do not read any other file in writing-room-kit (no data/, no v04 source, no policies, no plans, no other runs). You know nothing about this topic except what the Room or, if your instructions allow, the outside AI gives you.
+Write in plain student English. When you finish, reply with one line: the run id and the finalize output.

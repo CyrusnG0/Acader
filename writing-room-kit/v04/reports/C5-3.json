@@ -1,0 +1,295 @@
+{
+ "id": "C5-3",
+ "arm": "C5",
+ "components": {
+  "claim": 59.09090909090909,
+  "source": 100.0,
+  "cite": 83.33333333333333,
+  "change": 87.5,
+  "struct": 100.0
+ },
+ "composite": 81.30681818181817,
+ "composite_nostruct": 78.00802139037432,
+ "mismatches": [
+  "Paragraph 2 says: \"Mrs Wong reports the ordinance changed nothing she can see because her landlord still charges whatever the market of desperate newcomers bears.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan's worst problem is not price but insecurity.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Real rent burden for SDU households worsened from 31 to 34 percent even under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A regime that regulates only renewals is regulating the margin that matters least.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The strongest evidence in the archive cuts against a hard initial-rent cap.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The long-run elasticity of SDU-type supply is estimated at 0.31 to 0.48.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A modelled 15 percent cut in initial rents would transfer about 900 dollars a month to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"First-generation controls show consistent contraction, while second-generation controls show small or null effects.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A band-based initial-rent cap would require a certifiable tenancy register costing 40 to 60 staff-years to stand up.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched [D1p3], and Mrs Wong, nine years in her SDU, \" cites D1p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched [D1p3], and Mrs Wong, nine years in her SDU, \" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A regime that regulates only renewals, in a segment where many tenants have no written agreement at all [D4p1], is regulating the margin that matters least.\" cites D4p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin illustrates the mechanism: initial-offer rents fell, listing supply contracted within a year as owners withheld or rerouted flats, and when the law was s\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Berlin illustrates the mechanism: initial-offer rents fell, listing supply contracted within a year as owners withheld or rerouted flats, and when the law was s\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units only narrowly.",
+   "ancestor": 24
+  },
+  {
+   "para": 1,
+   "claim": "It should add security of tenure and perhaps a light band on initial rents.",
+   "ancestor": 24
+  },
+  {
+   "para": 1,
+   "claim": "It should not bring in a hard cap.",
+   "ancestor": 24
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched.",
+   "ancestor": 30
+  },
+  {
+   "para": 2,
+   "claim": "Mrs Wong reports the ordinance changed nothing she can see because her landlord still charges whatever the market of desperate newcomers bears.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan's worst problem is not price but insecurity.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Real rent burden for SDU households worsened from 31 to 34 percent even under the ordinance.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "A regime that regulates only renewals is regulating the margin that matters least.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The strongest evidence in the archive cuts against a hard initial-rent cap.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The long-run elasticity of SDU-type supply is estimated at 0.31 to 0.48.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 24
+  },
+  {
+   "para": 3,
+   "claim": "A modelled 15 percent cut in initial rents would transfer about 900 dollars a month to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "First-generation controls show consistent contraction, while second-generation controls show small or null effects.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Berlin's initial-offer rents fell, listing supply contracted within a year, and suppressed increases released above the pre-cap trend line when the law was struck down.",
+   "ancestor": 32
+  },
+  {
+   "para": 4,
+   "claim": "In a survey of 440 households, 61 percent would trade a rent increase for three years of tenure security.",
+   "ancestor": 24
+  },
+  {
+   "para": 4,
+   "claim": "Security of tenure is the better tightening.",
+   "ancestor": 24
+  },
+  {
+   "para": 5,
+   "claim": "Landlords say they will leave if returns fall, but their data is weak and self-reported.",
+   "ancestor": 44
+  },
+  {
+   "para": 5,
+   "claim": "The supply risk from a hard cap is serious because it fits the working paper.",
+   "ancestor": 44
+  },
+  {
+   "para": 6,
+   "claim": "Inspection capacity covers under 6 percent of stock per year.",
+   "ancestor": 34
+  },
+  {
+   "para": 6,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register costing 40 to 60 staff-years to stand up.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A complaint-driven regime would systematically miss the most exploited tail.",
+   "ancestor": 34
+  },
+  {
+   "para": 6,
+   "claim": "A cap that protects incumbents while missing the most vulnerable, and shrinks entry at the same time, is a poor trade.",
+   "ancestor": 24
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched [D1p3], and Mrs Wong, nine years in her SDU, reports it \"changed nothing she can see\" because her landlord still charges \"whatever the market of desperate newcomers bears\" [D4p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "The 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched [D1p3], and Mrs Wong, nine years in her SDU, reports it \"changed nothing she can see\" because her landlord still charges \"whatever the market of desperate newcomers bears\" [D4p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan's worst problem is not price but insecurity: his previous tenancy ended with two weeks' notice after he asked for a window repair [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Real rent burden for SDU households worsened from 31 to 34 percent even under the ordinance [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "A regime that regulates only renewals, in a segment where many tenants have no written agreement at all [D4p1], is regulating the margin that matters least.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The reviewed literature estimates the long-run elasticity of SDU-type supply at 0.31 to 0.48, so a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "A modelled 15 percent cut in initial rents would transfer about 900 dollars a month to incumbents while leaving 3,000 to 4,000 households per year unable to enter the segment at all [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The paper is explicit that first-generation controls show consistent contraction, while second-generation controls show small or null effects [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "Berlin illustrates the mechanism: initial-offer rents fell, listing supply contracted within a year as owners withheld or rerouted flats, and when the law was struck down, suppressed increases released above the pre-cap trend line [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "Berlin illustrates the mechanism: initial-offer rents fell, listing supply contracted within a year as owners withheld or rerouted flats, and when the law was struck down, suppressed increases released above the pre-cap trend line [D7p1][D7p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "In a survey of 440 households, 61 percent would trade a rent increase for three years of tenure security [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords say they will leave if returns fall [D5p2], but their data is weak and self-reported [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The landlords say they will leave if returns fall [D5p2], but their data is weak and self-reported [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap would require a certifiable tenancy register costing 40 to 60 staff-years to stand up [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Worse, the tenants least able to complain, those with no written agreement and the newest arrivals, are exactly those a complaint-driven regime would miss, so enforcement would systematically miss the most exploited tail [D10p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    28
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    28,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    28,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    28,
+    68
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "broad": 1,
+   "own_thinking": 8,
+   "wants_answer": 7
+  },
+  "served_after_cap": 0
+ }
+}

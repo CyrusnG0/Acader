@@ -1,0 +1,156 @@
+{
+ "id": "C11-4",
+ "arm": "C11",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.2857142857142856,
+  "F14b parentage": 0.8125,
+  "F14c grounded chains": 0.14285714285714285
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Essay topic is whether Hong Kong should tighten rent control on subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Student knows nothing about the topic yet",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a source giving basic background on subdivided units: what they are, who lives in them, and current rent control rules",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Background source would let student understand the topic before taking a position",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Needs neutral background on what SDUs are and existing rent rules before taking a position",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Read D1p1: about 110,000 households in SDUs",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Read D1p1: SDU rents about 30% below mainstream flats but 15-25% higher per square foot",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "The per-square-foot premium is striking",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Wants more sources on current rent control rules and arguments for and against tightening",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Wants both sides but start with the case against tightening",
+   "parent": {
+    "type": "assistant",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Has only seen tenant-side numbers so far",
+   "parent": {
+    "type": "student",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Needs to test instinct that the per-square-foot premium means controls should be tighter",
+   "parent": {
+    "type": "student",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "A source laying out landlords' or economists' objections would help weigh it fairly",
+   "parent": {
+    "type": "assistant",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Wants the strongest economic case against tightening before deciding",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "An academic model of supply effects will test the instinct fairly",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "Wants the case against tightening to test the tenant-side instinct fairly",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Essay topic is whether Hong Kong should tighten rent control on subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Student knows nothing about the topic yet\". How did you get there?"
+  },
+  {
+   "turn": 31,
+   "question": "At turn 31 you said: \"The per-square-foot premium is striking\". How did you get there?"
+  }
+ ]
+}

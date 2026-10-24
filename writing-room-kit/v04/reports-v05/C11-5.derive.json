@@ -1,0 +1,138 @@
+{
+ "id": "C11-5",
+ "arm": "C11",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.1666666666666665,
+  "F14b parentage": 0.6153846153846154,
+  "F14c grounded chains": 0.043478260869565216
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student has to write an essay on whether Hong Kong should tighten rent control on subdivided units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student knows nothing about the topic yet.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student hasn't settled on a claim yet.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants sources that define what a subdivided unit is and how common they are.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants evidence on what rent control has actually done to rents and housing supply where it's been tried.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants at least one counter-view arguing against tightening controls.",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants to form their own position rather than repeat one side.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 defines subdivided units and frames the debate so the student can understand the basics.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D7 gives a real-world cautionary case on rent freezes to weigh evidence.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "The student needs evidence on what rent control actually does and a counter-view.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D11 directly reports what tenants themselves say they need.",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "This helps the student test whether rent level is really the main problem.",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 62,
+   "unit": "The student wants the basic definition and scale of subdivided units first.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student has to write an essay on whether Hong Kong should tighten rent control on subdivided units.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student knows nothing about the topic yet.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student wants to form their own position rather than repeat one side.\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 defines subdivided units and frames the debate so the student can understand the basics.\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D7 gives a real-world cautionary case on rent freezes to weigh evidence.\". How did you get there?"
+  }
+ ]
+}

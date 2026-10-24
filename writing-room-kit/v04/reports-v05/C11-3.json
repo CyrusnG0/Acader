@@ -1,0 +1,344 @@
+{
+ "id": "C11-3",
+ "arm": "C11",
+ "components": {
+  "claim": 0.0,
+  "source": 100.0,
+  "cite": 66.66666666666667,
+  "change": 33.333333333333336,
+  "struct": 100.0,
+  "claim_v2": 0.0
+ },
+ "composite": 50.0,
+ "composite_nostruct": 41.1764705882353,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units only through second-generation controls that cap increases within tenancies.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The form of rent control matters enormously for whether the policy backfires.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Around 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a premium of 15 to 25 percent per square foot despite lower median rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants are disproportionately new arrivals, single-parent households, and public housing applicants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average public housing wait has hovered around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For SDU tenants the unit is not a choice but a residual option while the queue moves.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"High per-square-foot costs, weak bargaining power, and a long housing queue expose tenants to sharp rent hikes.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Standard theory predicts supply contraction under binding rent ceilings.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The long-run elasticity of SDU supply to controlled rent levels is estimated at 0.31 to 0.48.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of SDU stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"First-generation hard caps on rent levels should not be defended because of supply contraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"First-generation controls show consistent contraction effects while second-generation controls show small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The 2021 Hong Kong ordinance is second-generation and the stable stock in the D2 index is consistent with that.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A cap on increases within a tenancy protects sitting tenants without forcing rent below market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The estimated 3 to 5 percent stock loss applies to level caps, not within-tenancy caps.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Tightening second-generation rent control targets the risk of a sharp hike while avoiding contraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Hong Kong should strengthen within-tenancy increase caps rather than impose hard rent ceilings.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The estimated 3 to 5 percent stock loss applies to level caps, not to the within-tenancy approach [D6p1][D6p2].\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The living conditions and tenant profile show that protection is needed: tenants pay a per-square-foot premium [D1p1], they are the households with the least ab\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Tightening rent control in the second-generation sense \u2014 stronger limits on increases within tenancies \u2014 targets the actual vulnerability, which is the risk of \" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units only through second-generation controls that cap increases within tenancies.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "The form of rent control matters enormously for whether the policy backfires.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Around 110,000 households live in subdivided units.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants pay a premium of 15 to 25 percent per square foot despite lower median rents.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants are disproportionately new arrivals, single-parent households, and public housing applicants.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The average public housing wait has hovered around five and a half years.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "For SDU tenants the unit is not a choice but a residual option while the queue moves.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "High per-square-foot costs, weak bargaining power, and a long housing queue expose tenants to sharp rent hikes.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Standard theory predicts supply contraction under binding rent ceilings.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The long-run elasticity of SDU supply to controlled rent levels is estimated at 0.31 to 0.48.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of SDU stock over five years.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "First-generation hard caps on rent levels should not be defended because of supply contraction.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "First-generation controls show consistent contraction effects while second-generation controls show small or null effects on stock.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The 2021 Hong Kong ordinance is second-generation and the stable stock in the D2 index is consistent with that.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "A cap on increases within a tenancy protects sitting tenants without forcing rent below market.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The estimated 3 to 5 percent stock loss applies to level caps, not within-tenancy caps.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Tightening second-generation rent control targets the risk of a sharp hike while avoiding contraction.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Hong Kong should strengthen within-tenancy increase caps rather than impose hard rent ceilings.",
+   "ancestor": null,
+   "birth": 67,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "Around 110,000 households live in subdivided units, and although the median SDU rent is roughly 30 percent below mainstream private flats, tenants pay a premium of 15 to 25 percent per square foot because space is carved up and priced at its most desperate margin [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "They are disproportionately new arrivals, single-parent households, and residents waiting for public housing, where the average wait has hovered around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "For these households the SDU is \"not a choice but a residual option while the queue moves\" [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "Standard theory predicts supply contraction under binding rent ceilings, and in marginal stock like SDUs the long-run elasticity of supply to controlled rent levels is estimated at 0.31 to 0.48, meaning a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "First-generation controls, which cap rent levels, show consistent contraction effects; second-generation controls, which cap increases within tenancies, show small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The 2021 Hong Kong ordinance is second-generation, and the stable stock in the D2 index is consistent with that [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The estimated 3 to 5 percent stock loss applies to level caps, not to the within-tenancy approach [D6p1][D6p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The estimated 3 to 5 percent stock loss applies to level caps, not to the within-tenancy approach [D6p1][D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The living conditions and tenant profile show that protection is needed: tenants pay a per-square-foot premium [D1p1], they are the households with the least ability to absorb increases, and they face a five-and-a-half-year wait for public housing [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The living conditions and tenant profile show that protection is needed: tenants pay a per-square-foot premium [D1p1], they are the households with the least ability to absorb increases, and they face a five-and-a-half-year wait for public housing [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Tightening rent control in the second-generation sense \u2014 stronger limits on increases within tenancies \u2014 targets the actual vulnerability, which is the risk of a sharp hike, while avoiding the contraction associated with hard caps [D6p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].",
+   "supports": "no"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    67
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 1,
+   "own_thinking": 2
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 41.1764705882353,
+ "composite_v2_struct": 50.0,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units only through second-generation controls that cap increases within tenancies.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The form of rent control matters enormously for whether the policy backfires.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Around 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a premium of 15 to 25 percent per square foot despite lower median rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants are disproportionately new arrivals, single-parent households, and public housing applicants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average public housing wait has hovered around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For SDU tenants the unit is not a choice but a residual option while the queue moves.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"High per-square-foot costs, weak bargaining power, and a long housing queue expose tenants to sharp rent hikes.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Standard theory predicts supply contraction under binding rent ceilings.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The long-run elasticity of SDU supply to controlled rent levels is estimated at 0.31 to 0.48.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of SDU stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"First-generation hard caps on rent levels should not be defended because of supply contraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"First-generation controls show consistent contraction effects while second-generation controls show small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The 2021 Hong Kong ordinance is second-generation and the stable stock in the D2 index is consistent with that.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A cap on increases within a tenancy protects sitting tenants without forcing rent below market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The estimated 3 to 5 percent stock loss applies to level caps, not within-tenancy caps.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Tightening second-generation rent control targets the risk of a sharp hike while avoiding contraction.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Hong Kong should strengthen within-tenancy increase caps rather than impose hard rent ceilings.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The estimated 3 to 5 percent stock loss applies to level caps, not to the within-tenancy approach [D6p1][D6p2].\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The living conditions and tenant profile show that protection is needed: tenants pay a per-square-foot premium [D1p1], they are the households with the least ab\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Tightening rent control in the second-generation sense \u2014 stronger limits on increases within tenancies \u2014 targets the actual vulnerability, which is the risk of \" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The evidence on conditions justifies stronger protection [D1p1][D1p2], and the evidence on supply tells us which kind of protection to choose [D6p1][D6p2].\" cites D6p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

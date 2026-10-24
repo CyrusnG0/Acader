@@ -1,0 +1,32 @@
+RuntimeError: bad json from derive: BadOutput
+C10-4 test {'F14a step size': 3.29, 'F14b parentage': 0.84, 'F14c grounded chains': 0.9} units 69 leaps 11 sharpened
+C2-4 test {'F14a step size': 3, 'F14b parentage': 1.0, 'F14c grounded chains': 0.22} units 3 leaps 0 sharpened
+C3-4 test {'F14a step size': 1, 'F14b parentage': 1.0, 'F14c grounded chains': 0.0} units 1 leaps 0 n/a
+C4-4 test {'F14a step size': 3.14, 'F14b parentage': 0.55, 'F14c grounded chains': 0.28} units 22 leaps 10 same
+C5-4 test {'F14a step size': 2.82, 'F14b parentage': 0.66, 'F14c grounded chains': 0.55} units 62 leaps 21 sharpened
+C6-4 test {'F14a step size': 2.6, 'F14b parentage': 0.15, 'F14c grounded chains': 0.0} units 13 leaps 11 same
+RuntimeError: bad json from derive: BadOutput
+C7-4 test {'F14a step size': 2.5, 'F14b parentage': 0.5, 'F14c grounded chains': 0.25} units 10 leaps 5 same
+C8-4 test {'F14a step size': 2.17, 'F14b parentage': 0.38, 'F14c grounded chains': 0.05} units 13 leaps 8 same
+C9-4 test {'F14a step size': 2.86, 'F14b parentage': 0.4, 'F14c grounded chains': 0.35} units 20 leaps 12 changed
+RuntimeError: bad json from derive: BadOutput
+C1-5 test {'F14a step size': 3.31, 'F14b parentage': 0.79, 'F14c grounded chains': 0.65} units 53 leaps 11 sharpened
+C10-5 test {'F14a step size': 3.07, 'F14b parentage': 0.74, 'F14c grounded chains': 0.75} units 43 leaps 11 sharpened
+C2-5 test {'F14a step size': 1, 'F14b parentage': 1.0, 'F14c grounded chains': 0.24} units 3 leaps 0 n/a
+C3-5 test {'F14a step size': 2, 'F14b parentage': 0.5, 'F14c grounded chains': 0.0} units 2 leaps 1 n/a
+C4-5 test {'F14a step size': 2.11, 'F14b parentage': 0.68, 'F14c grounded chains': 0.5} units 19 leaps 6 same
+C5-5 test {'F14a step size': 2.21, 'F14b parentage': 0.42, 'F14c grounded chains': 0.29} units 31 leaps 18 sharpened
+C6-5 test {'F14a step size': 3.14, 'F14b parentage': 0.36, 'F14c grounded chains': 0.0} units 22 leaps 14 same
+C7-5 test {'F14a step size': 2, 'F14b parentage': 0.28, 'F14c grounded chains': 0.0} units 18 leaps 13 same
+C8-5 test {'F14a step size': 2, 'F14b parentage': 0.25, 'F14c grounded chains': 0.0} units 24 leaps 18 same
+C9-5 test {'F14a step size': 1.64, 'F14b parentage': 0.7, 'F14c grounded chains': 0.0} units 23 leaps 7 changed
+C1-6 test {'F14a step size': 3, 'F14b parentage': 0.78, 'F14c grounded chains': 0.92} units 54 leaps 12 same
+C10-6 test {'F14a step size': 2.94, 'F14b parentage': 0.76, 'F14c grounded chains': 0.48} units 50 leaps 12 sharpened
+C2-6 test {'F14a step size': 1.5, 'F14b parentage': 0.67, 'F14c grounded chains': 0.25} units 6 leaps 2 n/a
+C3-6 test {'F14a step size': 1.33, 'F14b parentage': 0.75, 'F14c grounded chains': 0.0} units 4 leaps 1 same
+C4-6 test {'F14a step size': 3.1, 'F14b parentage': 0.84, 'F14c grounded chains': 0.42} units 31 leaps 5 sharpened
+C5-6 test {'F14a step size': 3.13, 'F14b parentage': 0.6, 'F14c grounded chains': 0.47} units 47 leaps 19 same
+C6-6 test {'F14a step size': 1.67, 'F14b parentage': 0.3, 'F14c grounded chains': 0.05} units 10 leaps 7 sharpened
+C7-6 test {'F14a step size': 2.2, 'F14b parentage': 0.45, 'F14c grounded chains': 0.0} units 11 leaps 6 same
+C8-6 test {'F14a step size': 3.33, 'F14b parentage': 0.4, 'F14c grounded chains': 0.11} units 10 leaps 6 same
+C9-6 test {'F14a step size': 2.62, 'F14b parentage': 0.52, 'F14c grounded chains': 0.0} units 21 leaps 10 same

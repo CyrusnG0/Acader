@@ -1,3 +1,23 @@
+# writing-room-kit: experiments and the hosted demo
+
+Simulated experiments (v0.1 to v0.5) that shaped The Writing Room design, plus the hosted demo. **All results are simulated, not evidence about real students.** **Frozen as of 2026-10-23** (eng review D18): the prototype ports only the prompts (`v04/policies/*.md`, the law-1 judge) into `../prototype/server/coach/` and doesn't import from here. These tests run in CI as the regression guard for `../shared/llm.py` (D22).
+
+| Stage | Question | Read |
+|---|---|---|
+| v0.2 / v0.3 | Do typing/paste signals separate outside work? No: retyped hybrid 92 vs honest 91 | [PLAN.md](PLAN.md), [PREREG-v0.3.md](PREREG-v0.3.md), [RESULTS.md](RESULTS.md) |
+| Features | Feature experiments F1–F10 | [feature-experiment-report.md](feature-experiment-report.md), [PREREG-features.md](PREREG-features.md), [FEATURE-VERIFICATION.md](FEATURE-VERIFICATION.md) |
+| v0.4 | Does claim/source lineage separate partial-outside work? Yes on n=6 per arm | [PLAN-v0.4.md](PLAN-v0.4.md), [PREREG-v0.4.md](PREREG-v0.4.md), [RESULTS-v0.4.md](RESULTS-v0.4.md) |
+| v0.5 | Does it hold up against controls? Partly: thin honest students score low; a stolen trail gains +15 | [PLAN-v0.5.md](PLAN-v0.5.md), [PREREG-v0.5.md](PREREG-v0.5.md), [RESULTS-v0.5.md](RESULTS-v0.5.md) |
+| Pilot | Protocol for a real-student pilot | [PILOT-PROTOCOL.md](PILOT-PROTOCOL.md) |
+
+- Engine and scoring: `v04/` (`room.py` governed assistant, `lineage*.py` coherence report, `controls.py`, `audit.py`). Tests: `ROOM_LLM=stub python3 -m pytest -q v04/tests web/tests`.
+- Hosted demo: `web/` (FastAPI). `/demo` is the static click-through used with researchers on 2026-10-21; `/vision` is the mockup. Deploy notes: [web/DEPLOY.md](web/DEPLOY.md).
+- The LLM client is `../shared/llm.py`.
+
+---
+
+## Original v0.1 README (Chinese)
+
 # The Writing Room — Kit v0.1
 
 AI 時代的寫作任務原型:封存檔案庫 + 圖書館員 chat(會標記你的問題)+ 可追溯引用 + Coherence receipt。全部 mock、全部瀏覽器內/本機執行,沒有任何伺服器。

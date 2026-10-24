@@ -1,0 +1,280 @@
+{
+ "id": "C2-1",
+ "arm": "C2",
+ "components": {
+  "claim": 25.0,
+  "source": 100.0,
+  "cite": 86.36363636363636,
+  "change": 33.333333333333336,
+  "struct": 100.0
+ },
+ "composite": 61.70454545454545,
+ "composite_nostruct": 54.94652406417112,
+ "mismatches": [
+  "Paragraph 2 says: \"The number of subdivided units grew from about 100,800 in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Moderate regulation did not cause a visible exit of stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Median rent per square foot for subdivided units rose 6.8% from 2019 to 2021 and 3.1% from 2021 to 2023.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rent rose 2.4% and 1.7% in the same periods.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The ordinance slowed rent growth but subdivided units still rose faster than the rest of the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The rent burden for these households worsened from 31% to 34% of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Standard theory predicts less supply under a binding rent ceiling, but the size is an empirical question.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"For housing at the bottom of the market, the estimated elasticity is 0.31 to 0.48.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A 10% rent cut from a cap removes roughly 3 to 5% of the stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"First-generation controls are hard caps on levels and show consistent shrinking of supply.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Second-generation controls only cap increases within a tenancy and show small or null effects on stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The 2021 Hong Kong ordinance is the second kind, which explains the stable stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"It is unclear whether stability comes from the type of control or just because the rules are mild.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Hong Kong could tighten the second kind of control, for example by lowering the limit on increases.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"If the government tried something stronger, it should watch stock numbers every year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"I would not move to a hard cap, because the paper links that to losing units [D6p1].\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"If the government tried something stronger, it should watch the stock numbers every year [D2p1].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a limited way.",
+   "ancestor": 14
+  },
+  {
+   "para": 1,
+   "claim": "The government should keep limiting rent increases within a tenancy.",
+   "ancestor": 14
+  },
+  {
+   "para": 1,
+   "claim": "The government should avoid a hard cap on rent levels.",
+   "ancestor": 10
+  },
+  {
+   "para": 2,
+   "claim": "The number of subdivided units grew from about 100,800 in 2019 to 111,200 in 2025.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Moderate regulation did not cause a visible exit of stock.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Median rent per square foot for subdivided units rose 6.8% from 2019 to 2021 and 3.1% from 2021 to 2023.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "General private rent rose 2.4% and 1.7% in the same periods.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The ordinance slowed rent growth but subdivided units still rose faster than the rest of the market.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The rent burden for these households worsened from 31% to 34% of income.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Standard theory predicts less supply under a binding rent ceiling, but the size is an empirical question.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "For housing at the bottom of the market, the estimated elasticity is 0.31 to 0.48.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A 10% rent cut from a cap removes roughly 3 to 5% of the stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "First-generation controls are hard caps on levels and show consistent shrinking of supply.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Second-generation controls only cap increases within a tenancy and show small or null effects on stock.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The 2021 Hong Kong ordinance is the second kind, which explains the stable stock.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "It is unclear whether stability comes from the type of control or just because the rules are mild.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "Hong Kong could tighten the second kind of control, for example by lowering the limit on increases.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A hard cap should be avoided because it is linked to losing units.",
+   "ancestor": 10
+  },
+  {
+   "para": 6,
+   "claim": "If the government tried something stronger, it should watch stock numbers every year.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "The evidence supports a modest tightening of the tenancy-based approach, not a hard cap.",
+   "ancestor": 14
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D2p1",
+   "sentence": "The estimated number of subdivided units was about 100,800 in 2019, then 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "So the number kept growing after the 2021 tenancy control ordinance, which suggests that moderate regulation did not cause a visible exit of stock [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Median rent per square foot rose 6.8 percent from 2019 to 2021, then 3.1 percent from 2021 to 2023 under the ordinance, while general private rent rose 2.4 and 1.7 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "The rent burden for these households also got worse, from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The working paper says standard theory predicts less supply under a binding rent ceiling, but the size of the effect is an empirical question [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "For housing at the bottom of the market it estimates an elasticity of 0.31 to 0.48, so a 10 percent rent cut from a cap removes roughly 3 to 5 percent of the stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Second-generation controls only cap increases within a tenancy and show small or null effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The paper says the 2021 Hong Kong ordinance is the second kind, which explains the stable stock in the data [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hong Kong could tighten the second kind of control, for example by lowering the limit on increases, since this kind of rule seems to have small effects on supply [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "I would not move to a hard cap, because the paper links that to losing units [D6p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "If the government tried something stronger, it should watch the stock numbers every year [D2p1].",
+   "supports": "no"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    14
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 1,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    14,
+    16
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 3,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ }
+}

@@ -1,0 +1,6 @@
+C12-1 careful --essay-file v04/sessions-v05/C12-1-outside.txt --arm C12
+C12-2 careful --essay-file v04/sessions-v05/C12-2-outside.txt --arm C12
+C12-3 careful --essay-file v04/sessions-v05/C12-3-outside.txt --arm C12
+C12-4 careful --essay-file v04/sessions-v05/C12-4-outside.txt --arm C12
+C12-5 careful --essay-file v04/sessions-v05/C12-5-outside.txt --arm C12
+C12-6 careful --essay-file v04/sessions-v05/C12-6-outside.txt --arm C12

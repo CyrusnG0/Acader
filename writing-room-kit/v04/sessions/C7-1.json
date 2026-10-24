@@ -1,0 +1,436 @@
+{
+ "name": "C7-1",
+ "id": "C7-1",
+ "arm": "C7",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so i need to work up an argument against a hard cap on subdivided unit rents -- hong kong. i've got a heap of documents in the archive but no idea where to start. can you pull me a source? maybe something with actual tenant voices first, i always think better from the ground up",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want tenant voices first, and that your claim is an argument against a hard cap on subdivided unit rents in Hong Kong. Before I point you anywhere: what exactly would a tenant account need to show for that argument \u2014 that caps backfire on tenants, that tenants themselves are split on the idea, or something else you're trying to establish?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "fair question. i think what i want from a tenant account is whether the rent level is even the thing they'd name first -- like, do they experience this as a price problem or as a security problem? if tenants say 'it's not the rent, it's the fear of being moved on', that's a strong wedge against a cap. so: something with actual sdu households talking, and ideally the landlord side too. can you pull that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Industry association submission, landlord vantage, argues against hard cap, concedes weak self-reported data.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants, argues against hard cap, favors tenure security over rent controls.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). Interview with elderly SDU tenant, supports hard cap, notes landlord exits despite her belief.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper, theoretical and empirical, distinguishes control types, models contraction effects.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with male SDU tenant, ambivalent on cap, prioritizes security and waiting list over rent.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "tenant voices and landlord side first",
+   "docs": [
+    "D3",
+    "D4",
+    "D11"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D3 (Tenant Interview: Mr Chan, Kwai Chung), D4 (Tenant Interview: Mrs Wong, Sham Shui Po), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D3p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "say",
+   "text": "hmm, wait \u2014 I've been reading the NGO survey and Chan and Wong but I haven't actually looked at what the ordinance itself did. that feels like a hole. could you pull me the primary/legal stuff \u2014 the ordinance, the review paper, the working paper? and the Berlin one too while you're at it",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You're right that you've named a gap \u2014 the ordinance itself \u2014 but I can't pull sources for you. Before we go further: for which claim in your essay do you need the ordinance, and what would it need to show \u2014 what it actually says, how it was applied, or how it was challenged?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "say",
+   "text": "fair \u2014 I don't need the whole legal history, just: what the 2021 ordinance actually capped (in-tenancy increases vs initial rents, and whether co-living was carved out), and separately whether a hard initial-rent cap has ever been challenged on Basic Law / compensation grounds. so: the ordinance itself, plus whatever review or legal analysis covers that. and yeah the Berlin one, since I keep leaning on it",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 23,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent caps in marginal housing.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion assessing compensation and judicial review risks of hard initial-rent caps under the Basic Law.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 Mietendeckel rent cap and its aftermath.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal enforcement subcommittee minute discussing inspection capacity and enforcement gaps for a tightened cap.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer on subdivided housing, including the 2021 Tenancy Control Ordinance's scope and exclusions.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "pick",
+   "text": "all five cited, need the legal and ordinance backbone plus Berlin and enforcement",
+   "docs": [
+    "D1",
+    "D9",
+    "D7",
+    "D10",
+    "D6"
+   ]
+  },
+  {
+   "i": 25,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D9 (Legal Opinion: Compensation and Judicial Review Risk), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p3"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D3",
+     "D4",
+     "D6",
+     "D11",
+     "D7"
+    ],
+    [
+     "D3",
+     "D4",
+     "D5",
+     "D11",
+     "D6"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D5",
+    "D11",
+    "D4",
+    "D6",
+    "D3"
+   ],
+   "picked": [
+    "D11",
+    "D3",
+    "D4"
+   ],
+   "reason": "tenant voices and landlord side first"
+  },
+  {
+   "open_turn": 20,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D1",
+     "D7",
+     "D9",
+     "D11"
+    ],
+    [
+     "D1",
+     "D9",
+     "D6",
+     "D7",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 23,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D9",
+    "D7",
+    "D10",
+    "D1"
+   ],
+   "picked": [
+    "D1",
+    "D10",
+    "D6",
+    "D7",
+    "D9"
+   ],
+   "reason": "all five cited, need the legal and ordinance backbone plus Berlin and enforcement"
+  }
+ ],
+ "unlocked_docs": [
+  "D3",
+  "D4",
+  "D11",
+  "D1",
+  "D9",
+  "D7",
+  "D10",
+  "D6"
+ ],
+ "read_passages": [
+  "D3p1",
+  "D3p2",
+  "D3p3",
+  "D11p1",
+  "D1p3",
+  "D9p1",
+  "D10p3",
+  "D6p1",
+  "D1p1",
+  "D6p4",
+  "D6p2",
+  "D7p1",
+  "D7p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D3",
+    "D4",
+    "D11"
+   ],
+   "reason": "tenant voices and landlord side first"
+  },
+  {
+   "turn": 24,
+   "docs": [
+    "D1",
+    "D9",
+    "D7",
+    "D10",
+    "D6"
+   ],
+   "reason": "all five cited, need the legal and ordinance backbone plus Berlin and enforcement"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 20,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 22,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D6",
+  "D9",
+  "D7",
+  "D10",
+  "D1"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

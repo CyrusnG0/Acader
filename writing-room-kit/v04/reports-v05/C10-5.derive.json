@@ -1,0 +1,396 @@
+{
+ "id": "C10-5",
+ "arm": "C10",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.0714285714285716,
+  "F14b parentage": 0.7441860465116279,
+  "F14c grounded chains": 0.75
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Hong Kong should tighten rent control on subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "tenants are poor with no bargaining power so landlords can raise rents freely",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "living conditions are unsafe and crowded and affordable alternatives are scarce",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "a rent cap can be paired with safety rules to protect people rather than just cutting supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "if landlords must meet safety rules they need some money back",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "the cap should be high enough to allow that but still stop sudden big rises",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "the shakier half is that a cap stops big rises",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "wants a source on a Hong Kong case where a cap played out",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "wants a counter-view that caps make landlords leave or cut supply",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D6 is a model of whether caps cut supply with Hong Kong-like cases",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D2 is actual rent data to check if rises happened",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D5 is the landlords' counter-view",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "the existing Hong Kong rule only limits rises inside a tenancy",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "stock kept growing so a moderate tightening looks safe",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "a hard cap on starting rent looks risky",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "rents rose faster than general rents and burden got worse so the current rule is not enough",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "the landlords' evidence is weak",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "a binding hard cap would hurt the people it is meant to help so would not do that",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "tighten the second-generation type by lowering the allowed rise inside tenancies",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "make the rule cover small tenancies too since reporting is voluntary below the threshold",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p3"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "that keeps protection without forcing exits",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "needs to know if tenants actually gain",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "tenant gain means longer tenancies and fewer forced moves",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "plus rents that stay affordable relative to income",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D8 is a second-generation scheme over the long run which is the type favoured",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D3 is a real tenant's view on insecurity",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D11 surveys tenants on tenure security which is the measure of gain",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "still says tighten but the tightening should be about security of tenure and the tenancy rise limit not rent levels",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "tenants care more about the queue and not being thrown out than about cheaper rent",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p3"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "New York shows a cost: less upkeep and fewer listings after tightening",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p3"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "picks claim, evidence, objection, reply because the position is refined and must be defended",
+   "parent": {
+    "type": "assistant",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "the main task is to defend against the supply-loss objection from D6 and the landlords",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "the objection carries both D6 supply loss and the D8 upkeep and listing cost",
+   "parent": {
+    "type": "assistant",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "the landlords' weak evidence goes in the reply as a reason not to take their exit threat at full face value",
+   "parent": {
+    "type": "assistant",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "still accepts the risk is real",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "it would need to show the threat is real but manageable",
+   "parent": {
+    "type": "assistant",
+    "turn": 39
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "for example that inspection and tenure rules can be enforced cheaply",
+   "parent": {
+    "type": "student",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D9 is a legal opinion on compensation risk that tests whether the tightening is legally manageable",
+   "parent": {
+    "type": "assistant",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "skipping D10 because it is marked draft and not for circulation so should not be relied on in an essay",
+   "parent": {
+    "type": "assistant",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D9 supports the refined view",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "a hard cap on starting rent risks compensation claims while rules on tenancy terms are on firmer ground",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "a light band could be a later step but needs survey data that does not exist yet",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "recommend tenure security and a tighter rise limit first and a band only after data is built",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Hong Kong should tighten rent control on subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"tenants are poor with no bargaining power so landlords can raise rents freely\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"living conditions are unsafe and crowded and affordable alternatives are scarce\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"a rent cap can be paired with safety rules to protect people rather than just cutting supply\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D6 is a model of whether caps cut supply with Hong Kong-like cases\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D2 is actual rent data to check if rises happened\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D5 is the landlords' counter-view\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"needs to know if tenants actually gain\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D8 is a second-generation scheme over the long run which is the type favoured\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D3 is a real tenant's view on insecurity\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D11 surveys tenants on tenure security which is the measure of gain\". How did you get there?"
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "id": "S3-C1-5xC8-5",
+ "group": "S3",
+ "essay_owner": "C1-5",
+ "arm": "C1",
+ "components": {
+  "claim": 20.0,
+  "source": 71.42857142857143,
+  "cite": 100.0,
+  "change": 30.76923076923077,
+  "struct": 100.0
+ },
+ "composite": 55.901098901098905,
+ "composite_nostruct": 48.11893988364577,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units but narrowly.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The first step should be stronger security of tenure, with a light, data-based band on initial rents only later.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"A hard cap on initial rents would be a mistake.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units and pay a 15 to 25 percent premium per square foot over mainstream flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Subdivided unit tenants are mostly new arrivals, single parents, and people waiting for public housing, making the unit a leftover option.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Doing nothing is not acceptable because rent per square foot kept rising and the share of income spent on rent went from 31 to 34 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The biggest gap is that tenants lack written, secure tenancies.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A survey of 440 households found that 61 percent would trade a nominal rent increase for three years of secure tenure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A 10 percent cut in rent removes about 3 to 5 percent of stock over five years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A 15 percent cut in initial rents gives current tenants about 900 dollars a month, but 3,000 to 4,000 households a year cannot get into the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Estimated SDU stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Figures after 2023 rely on survey extrapolation, so evidence up to 2023 is more trustworthy.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A written tenancy for every SDU with three years of tenure security and protection against removal for asking for repairs is needed.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Rent control cannot fix the whole problem; the segment is tight because the public housing queue is long.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"Enforcement effort is better spent on inspecting fire and ventilation risks.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"Hong Kong should tighten in the second-generation way: security of tenure now, a light rent band when data exists, and no hard cap on initial rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D1, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D2, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units but narrowly.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "The first step should be stronger security of tenure, with a light, data-based band on initial rents only later.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap on initial rents would be a mistake.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay a 15 to 25 percent premium per square foot over mainstream flats.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants are mostly new arrivals, single parents, and people waiting for public housing, making the unit a leftover option.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Doing nothing is not acceptable because rent per square foot kept rising and the share of income spent on rent went from 31 to 34 percent.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The biggest gap is that tenants lack written, secure tenancies.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A survey of 440 households found that 61 percent would trade a nominal rent increase for three years of secure tenure.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "The strongest objection is that landlords will leave if rules get tougher, and the working paper supports this for hard caps.",
+   "ancestor": 20
+  },
+  {
+   "para": 4,
+   "claim": "A 10 percent cut in rent removes about 3 to 5 percent of stock over five years.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A 15 percent cut in initial rents gives current tenants about 900 dollars a month, but 3,000 to 4,000 households a year cannot get into the segment.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "A hard cap faces legal trouble, with counsel expecting compensation claims under the Basic Law and judicial review.",
+   "ancestor": 40
+  },
+  {
+   "para": 5,
+   "claim": "The working paper separates hard caps on rent levels from caps on increases within a tenancy and finds small or no effects on stock from the second type.",
+   "ancestor": 20
+  },
+  {
+   "para": 5,
+   "claim": "Estimated SDU stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 ordinance.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Figures after 2023 rely on survey extrapolation, so evidence up to 2023 is more trustworthy.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A written tenancy for every SDU with three years of tenure security and protection against removal for asking for repairs is needed.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "A published per-square-foot rent band, indexed and reviewable, is easier to defend than a hard cap but requires survey infrastructure that does not exist yet.",
+   "ancestor": 40
+  },
+  {
+   "para": 7,
+   "claim": "Rent control cannot fix the whole problem; the segment is tight because the public housing queue is long.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "Enforcement effort is better spent on inspecting fire and ventilation risks.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "Hong Kong should tighten in the second-generation way: security of tenure now, a light rent band when data exists, and no hard cap on initial rents.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in them, and on a per-square-foot basis they pay a premium of 15 to 25 percent over mainstream flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "These tenants are mostly new arrivals, single parents and people waiting for public housing, so the unit is a leftover option, not a choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rent per square foot kept rising, and the share of income spent on rent went from 31 to 34 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "He says the worst part is insecurity, because his old landlord ended his tenancy with two weeks notice after he asked for a leaking window to be fixed [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 households points the same way: 61 percent would trade a nominal rent increase for three years of secure tenure [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong has lived in her unit for nine years and never got a written agreement, and she says the 2021 ordinance changed nothing she can see [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "It estimates that a 10 percent cut in rent removes about 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "For a Hong Kong-like market, a 15 percent cut in initial rents gives current tenants about 900 dollars a month, but 3,000 to 4,000 households a year cannot get into the segment [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan has seen two units on his floor emptied and locked [D3p2], and Mrs Wong saw two flats in her stairwell turned into storage, even though she thinks landlords cannot leave [D4p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p3",
+   "sentence": "Mr Chan has seen two units on his floor emptied and locked [D3p2], and Mrs Wong saw two flats in her stairwell turned into storage, even though she thinks landlords cannot leave [D4p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The same working paper separates hard caps on rent levels from caps on increases within a tenancy, and finds small or no effects on stock from the second type [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Estimated SDU stock grew from 100,800 units in 2019 to 111,200 in 2025, including after the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "I should be careful here, because the index warns that figures after 2023 rely on survey extrapolation [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "Counsel says a published per-square-foot band, indexed and reviewable, is easier to defend than a hard cap, but it needs survey infrastructure that does not exist yet [D9p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan says that if the queue for public housing fell from five and a half years to three, he would accept any rent to leave [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The report I read says the segment is tight because the queue is long, and that enforcement effort is better spent on inspecting fire and ventilation risks [D11p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    20
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    20
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    20
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    20,
+    40
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    20,
+    40
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    20,
+    40
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    20,
+    40
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    40,
+    64
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D1",
+  "D2"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 7,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ }
+}

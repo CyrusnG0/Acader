@@ -1,0 +1,125 @@
+{
+ "id": "C7-6",
+ "arm": "C7",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.2,
+  "F14b parentage": 0.45454545454545453,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "The claim needing support is the supply arithmetic: elasticity figure 0.31\u20130.48 for SDU-type marginal supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The modelled HK scenario: a 15% cut in initial rents transfers ~$900/mo to incumbents but locks out 3,000\u20134,000 households/yr",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "There is a piece distinguishing first-gen vs second-gen rent controls (levels vs within-tenancy increases)",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The first-gen vs second-gen distinction is probably in the same paper",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Core supply elasticity and first-gen vs second-gen evidence",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "The elasticity paper has been pulled",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Wants the Berlin stuff next",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Wants the NGO survey next",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Berlin is for the cap-binds-on-new-entrants point: listings contracting when the Mietendeckel capped initial offers, and the release when it fell",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "NGO survey is the revealed-preference bit: tenants trading rent for tenure security and the housing queue",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Berlin case and NGO survey evidence",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The claim needing support is the supply arithmetic: elasticity figure 0.31\u20130.48 for SDU-type marginal supply\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The modelled HK scenario: a 15% cut in initial rents transfers ~$900/mo to incumbents but locks out 3,000\u20134,000 households/yr\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"There is a piece distinguishing first-gen vs second-gen rent controls (levels vs within-tenancy increases)\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The first-gen vs second-gen distinction is probably in the same paper\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"Wants the Berlin stuff next\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Berlin is for the cap-binds-on-new-entrants point: listings contracting when the Mietendeckel capped initial offers, and the release when it fell\". How did you get there?"
+  }
+ ]
+}

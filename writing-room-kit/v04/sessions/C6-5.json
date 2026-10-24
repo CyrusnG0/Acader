@@ -1,0 +1,390 @@
+{
+ "name": "C6-5",
+ "id": "C6-5",
+ "arm": "C6",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I need to work through the sources this essay cites. Could you give me a shortlist of documents on the rent-control debate\u2014specifically anything covering SDU rent premiums and tenant conditions, the 2021 Tenancy Control Ordinance, SDU stock figures, landlord exit evidence, the Berlin Mietendeckel, enforcement capacity, and supply elasticity?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've listed a lot of topics there. Before I point you anywhere, which one claim in your essay is the one you're least sure you can support right now \u2014 and what would a source need to show for that claim: evidence, a counter-view, a definition, a case, or a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "The least certain claim is that a binding cap on initial rents would shrink supply; a source would need to give me an elasticity estimate or model of marginal-stock response. Could you shortlist documents on supply elasticity and the modelled effects of cutting initial rents?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 Mietendeckel, describing its design, market effects, and legal fate.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and rent-cap effects, distinguishing first- and second-generation controls.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report presenting tenant survey findings and arguing for tenure security over hard rent caps.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission opposing a hard initial-rent cap, with self-reported member data.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt tracking SDU stock and rents from 2019 to 2025, with a caveat on post-2023 figures.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "essay needs elasticity and modelled supply effects",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "pick",
+   "text": "all are cited in the essay and cover its main claims",
+   "docs": [
+    "D6",
+    "D7",
+    "D11",
+    "D5",
+    "D2"
+   ]
+  },
+  {
+   "i": 10,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First), D5 (Submission: Landlords Association of Hong Kong), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "say",
+   "text": "Thanks. I've already read the passages I need from D6, D2, and D7. I still need the Landlord Association submission, D5, and the NGO report, D11. Could you give me D5's passages on exit threats and unit counts, and D11's passages on what tenants say about tenure security versus rent caps?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named two gaps: exit threats and unit counts from D5, and tenants' own words from D11. Before I point you anywhere, what do you need each one to *do* for your argument \u2014 is D5 meant to show a mechanism, a counter-view, or something else, and is D11 giving you first-hand accounts to back a claim you've already made, or to complicate it?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p3"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "say",
+   "text": "D5 is meant to be a counter-view I partly discount and partly concede: an exit threat and a real unit count, weak in data quality but non-zero in supply. D11 is first-hand tenant preference evidence to back a claim I have already made \u2014 that tenants would trade rent increases for tenure security or a faster public-housing offer. Now please give me D5's passages on exit threats and unit counts, and D11's passages on those tenant preferences.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 23,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). First-hand tenant interview from a long-standing SDU resident, supporting a hard cap but noting landlord exits.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-hand tenant interview from a cubicle resident, split on caps and prioritizing the housing queue.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent controls.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenant preferences, arguing against hard caps and for tenure security.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission arguing against caps, with self-reported and limited data.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "pick",
+   "text": "counter-view exit threat plus tenant preference evidence",
+   "docs": [
+    "D5",
+    "D11"
+   ]
+  },
+  {
+   "i": 25,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p2"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D10",
+     "D11"
+    ],
+    [
+     "D6",
+     "D7",
+     "D2",
+     "D5",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D6",
+    "D11",
+    "D5",
+    "D2"
+   ],
+   "picked": [
+    "D6"
+   ],
+   "reason": "essay needs elasticity and modelled supply effects"
+  },
+  {
+   "open_turn": 19,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D5",
+     "D11",
+     "D6",
+     "D4",
+     "D10"
+    ],
+    [
+     "D5",
+     "D11",
+     "D6",
+     "D3",
+     "D4"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 23,
+   "served_after_cap": false,
+   "shortlist": [
+    "D4",
+    "D3",
+    "D6",
+    "D11",
+    "D5"
+   ],
+   "picked": [
+    "D11",
+    "D5"
+   ],
+   "reason": "counter-view exit threat plus tenant preference evidence"
+  }
+ ],
+ "unlocked_docs": [
+  "D6",
+  "D7",
+  "D11",
+  "D5",
+  "D2"
+ ],
+ "read_passages": [
+  "D6p1",
+  "D6p4",
+  "D6p2",
+  "D6p3",
+  "D2p1",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D5p3",
+  "D5p1",
+  "D5p2",
+  "D11p1",
+  "D11p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D6"
+   ],
+   "reason": "essay needs elasticity and modelled supply effects"
+  },
+  {
+   "turn": 9,
+   "docs": [
+    "D6",
+    "D7",
+    "D11",
+    "D5",
+    "D2"
+   ],
+   "reason": "all are cited in the essay and cover its main claims"
+  },
+  {
+   "turn": 24,
+   "docs": [
+    "D5",
+    "D11"
+   ],
+   "reason": "counter-view exit threat plus tenant preference evidence"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 19,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 22,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D4",
+  "D3",
+  "D6",
+  "D11",
+  "D5"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

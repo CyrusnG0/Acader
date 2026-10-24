@@ -1,0 +1,665 @@
+{
+ "id": "C1-4",
+ "arm": "C1",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.3636363636363638,
+  "F14b parentage": 0.7567567567567568,
+  "F14c grounded chains": 0.9
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 36
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Needs a definition of subdivided units and their conditions first",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Then evidence about what rent control did in Hong Kong",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Claim would be about whether tightening rent control helps tenants",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 gives the definition and basic conditions",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 gives actual rent and stock numbers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D11 is tenant survey data showing what tenants want",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Tenants pay a 15-25 percent premium per square foot",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "The 2021 ordinance only capped increases, not the starting rent",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Stock still grew after the ordinance, so moderate regulation did not push landlords out",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Rent burden still worsened from 31 to 34 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "The current cap is too weak",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Tenants care more about security of tenure and a faster public housing offer than rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Wants a source arguing the other side about supply when rent control is tightened",
+   "parent": {
+    "type": "assistant",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "It needs to show tighter rent control reduces supply or quality in marginal housing like SDUs",
+   "parent": {
+    "type": "assistant",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Ideally with theory plus evidence from another city",
+   "parent": {
+    "type": "assistant",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Wants a comparative case",
+   "parent": {
+    "type": "assistant",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "To check if a tighter cap changes burden, needs evidence on what happened when a stricter cap was tried somewhere",
+   "parent": {
+    "type": "assistant",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D6 gives the economic theory on supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D7 is a real case of a strict cap and what happened after",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D5 is the landlords' side to judge how much to trust it",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Hard caps on starting rent shrink supply (elasticity 0.31 to 0.48)",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Caps on increases like Hong Kong's 2021 one have small or null effects",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "That fits the stable stock in D2",
+   "parent": {
+    "type": "student",
+    "turn": 13
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "A hard cap would probably hurt the very tenants it is meant to help",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Berlin shows insiders gain and outsiders pay",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "D5 predicts landlords will exit",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p2"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "D5 admits it has no real margin data and a weak 34 percent response survey",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "Trusts D5 less than D6 and D7",
+   "parent": {
+    "type": "student",
+    "turn": 30
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "Now leans against a hard initial-rent cap but for strengthening the increase cap and tenure security",
+   "parent": {
+    "type": "student",
+    "turn": 30
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Picks option 1, claim, evidence, objection, reply",
+   "parent": {
+    "type": "assistant",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Because the main move is arguing against a hard cap while answering the tenant burden point",
+   "parent": {
+    "type": "assistant",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Hong Kong should keep and strengthen the cap on rent increases and add tenure security",
+   "parent": {
+    "type": "student",
+    "turn": 32
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Should not impose a hard cap on initial rent because first-generation caps shrink stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "The cost falls on outsiders",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Tenants themselves rank tenure security above rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "D11p3 backs a narrow tightening: tenure security plus a light band on initial rents, not a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "A light band is acceptable because D6 only shows contraction for hard caps on levels",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "A light band moves rents only a little, so the 10 percent reduction that removes 3 to 5 percent of stock would not apply",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "One-sentence claim: narrow tightening yes, hard cap no",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "Strongest objection is that D5 says owners will exit",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p2"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "But D5 admits it has no margin data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "The light band's size is the gap because there is no number for it",
+   "parent": {
+    "type": "assistant",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "The archive gives no figure for the band size",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "The band should be small enough to stay well below the hard-cap contraction range in D6",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "D2 warns post-2023 data is extrapolated, so recent numbers need care",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p3"
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "The band should be much smaller than the 10 percent cut in D6p1",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 45,
+   "unit": "The 2021 ordinance's 3.1 percent rent growth against 1.7 percent general shows how modest moves look",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Berlin's cap fell apart when the court struck it down and rents jumped above trend",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "A sudden strict cap is also unstable, not just harmful",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Enforcement effort spent policing rents is not spent on inspecting fire and ventilation",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p2"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "That is a second reason to avoid a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "The 2021 ordinance did not stop the burden from rising, so the student's own side has a gap",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "The burden is tied to the queue",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "61 percent would trade rent for security of tenure and 74 percent for a faster offer",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Plan: claim, evidence on the problem, objection from D5 and D6, reply using D2, D6, D7 and D11, then a limits paragraph",
+   "parent": {
+    "type": "student",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Limits paragraph covers missing numbers and D2's extrapolated data",
+   "parent": {
+    "type": "student",
+    "turn": 43
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "D5's exit threat is a claim, not data, because it admits no margin data and a 34 percent self-reported survey",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "A light band is not a hard cap, so D6p1's contraction numbers do not directly apply",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "Concedes some exits cannot be ruled out",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "If enforcement is thin, a light band might not reach the worst-off tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "That supports putting tenure security first, since it protects tenants afraid to complain",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "It supports D11p2's view that enforcement should go to inspections",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p2"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "The band should be light and simple to check",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 61,
+   "unit": "D9 tells whether a band or cap could be challenged in court or need compensation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 61,
+   "unit": "That matters for whether the proposal is workable",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "The think-tank says stable stock under the 2021 ordinance is because it does not bind",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "Agrees with that, and D6p2 says the same",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "That is why only a light band is supported, not a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "A binding hard cap is where D6p1 and Berlin show contraction",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "A hard cap would likely face compensation claims",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "A per-square-foot band that is indexed and reviewable can be defended as rate-capping",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "The survey system for the band does not exist yet",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Litigation could outlast a Council term",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p3"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "The light band needs data infrastructure first",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 gives the definition and basic conditions\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 gives actual rent and stock numbers\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D11 is tenant survey data showing what tenants want\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"The current cap is too weak\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"D6 gives the economic theory on supply\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"D7 is a real case of a strict cap and what happened after\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"D5 is the landlords' side to judge how much to trust it\". How did you get there?"
+  },
+  {
+   "turn": 43,
+   "question": "At turn 43 you said: \"The archive gives no figure for the band size\". How did you get there?"
+  },
+  {
+   "turn": 49,
+   "question": "At turn 49 you said: \"That is a second reason to avoid a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 51,
+   "question": "At turn 51 you said: \"The burden is tied to the queue\". How did you get there?"
+  },
+  {
+   "turn": 57,
+   "question": "At turn 57 you said: \"Concedes some exits cannot be ruled out\". How did you get there?"
+  },
+  {
+   "turn": 59,
+   "question": "At turn 59 you said: \"If enforcement is thin, a light band might not reach the worst-off tenants\". How did you get there?"
+  },
+  {
+   "turn": 59,
+   "question": "At turn 59 you said: \"That supports putting tenure security first, since it protects tenants afraid to complain\". How did you get there?"
+  },
+  {
+   "turn": 59,
+   "question": "At turn 59 you said: \"The band should be light and simple to check\". How did you get there?"
+  },
+  {
+   "turn": 61,
+   "question": "At turn 61 you said: \"D9 tells whether a band or cap could be challenged in court or need compensation\". How did you get there?"
+  },
+  {
+   "turn": 61,
+   "question": "At turn 61 you said: \"That matters for whether the proposal is workable\". How did you get there?"
+  },
+  {
+   "turn": 66,
+   "question": "At turn 66 you said: \"The think-tank says stable stock under the 2021 ordinance is because it does not bind\". How did you get there?"
+  },
+  {
+   "turn": 68,
+   "question": "At turn 68 you said: \"The light band needs data infrastructure first\". How did you get there?"
+  }
+ ]
+}

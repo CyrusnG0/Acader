@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing Room Walkthrough</title>
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1d2330; --muted:#566074; --line:#d9d4c7;
+  --accent:#2f4ea2; --accent-ink:#ffffff; --accent-soft:#e6ecfb;
+  --ok:#17663a; --ok-soft:#e1f3e8; --warn:#8a5200; --warn-soft:#fdf0d6;
+  --bad:#9b2335; --bad-soft:#fbe4e8; --info-soft:#eef1f7;
+  --vague:#6b3fa0; --vague-soft:#f1e8fb;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151c; --card:#1a1f2a; --ink:#e8ebf2; --muted:#a2abbd; --line:#323a4a;
+  --accent:#8aa6ff; --accent-ink:#10162b; --accent-soft:#222c4d;
+  --ok:#6fd49a; --ok-soft:#173326; --warn:#f0b960; --warn-soft:#3a2b10;
+  --bad:#ff93a3; --bad-soft:#3c1b22; --info-soft:#1f2531; --vague:#cfaaff; --vague-soft:#2c2140; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151c; --card:#1a1f2a; --ink:#e8ebf2; --muted:#a2abbd; --line:#323a4a;
+  --accent:#8aa6ff; --accent-ink:#10162b; --accent-soft:#222c4d;
+  --ok:#6fd49a; --ok-soft:#173326; --warn:#f0b960; --warn-soft:#3a2b10;
+  --bad:#ff93a3; --bad-soft:#3c1b22; --info-soft:#1f2531; --vague:#cfaaff; --vague-soft:#2c2140; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;margin:0;padding-inline:16px;padding-block:0 130px}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{line-height:1.25;text-wrap:balance;margin:0}
+h2{font-size:1.7rem}
+h3{font-size:1.1rem}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:1.05rem}
+.brand small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:44px;padding:6px 14px;border:2px solid var(--line);border-radius:999px;background:var(--card);cursor:pointer;font-size:.9rem}
+.pill[aria-current="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+
+/* page body */
+main{display:flex;flex-direction:column;gap:28px;padding-block:28px}
+.head{display:flex;flex-direction:column;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:999px;font-size:.85rem;font-weight:600;background:var(--info-soft);border:1px solid var(--line)}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.box.say{border-left:6px solid var(--accent);background:var(--accent-soft)}
+.box.say h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.box.say p{font-size:1.15rem}
+.look{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.screen-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.screen{border:2px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:20px;background:var(--bg)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:20px}
+@media (max-width:780px){.cols{grid-template-columns:minmax(0,1fr)}.cols>.col:last-child{order:-1}}
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.src{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.src .cite{font-size:.9rem;color:var(--muted)}
+.src blockquote{margin:0;padding-left:12px;border-left:3px solid var(--line);font-size:.95rem}
+.src .method{font-size:.88rem;background:var(--info-soft);padding:8px 10px;border-radius:8px}
+.badge{align-self:flex-start;display:inline-flex;gap:6px;padding:3px 12px;border-radius:999px;font-size:.85rem;font-weight:700;border:1px solid var(--line)}
+.badge.used{background:var(--ok-soft);color:var(--ok)}
+.badge.gap{background:var(--warn-soft);color:var(--warn)}
+.badge.aside{background:var(--bad-soft);color:var(--bad)}
+.badge.open{background:var(--info-soft);color:var(--muted)}
+.aside-box{border:2px dashed var(--line);border-radius:10px;padding:14px;font-size:.95rem;display:flex;flex-direction:column;gap:6px}
+.essay{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.para{display:flex;flex-direction:column;gap:4px}
+.para .pl{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.para.empty p{color:var(--muted);font-style:italic}
+del{background:var(--bad-soft);color:var(--bad);text-decoration:line-through;text-decoration-thickness:2px;padding:0 3px;border-radius:3px}
+ins{background:var(--ok-soft);color:var(--ok);text-decoration:underline;text-underline-offset:3px;padding:0 3px;border-radius:3px}
+.legend{font-size:.85rem;color:var(--muted)}
+.fresh{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
+.fresh-tag{align-self:flex-start;font-size:.75rem;font-weight:700;background:var(--accent);color:var(--accent-ink);padding:1px 9px;border-radius:999px}
+.banner{border:2px solid var(--warn);background:var(--warn-soft);color:var(--ink);border-radius:10px;padding:12px 14px;display:flex;gap:10px}
+.banner b{color:var(--warn)}
+.log{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.log li{border-left:4px solid var(--line);padding:2px 0 2px 12px;font-size:.95rem}
+.log li.new{border-left-color:var(--accent)}
+.log code{font:600 .85rem ui-monospace,Menlo,monospace;color:var(--accent)}
+.coach{display:flex;flex-direction:column;gap:6px}
+.same{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+@media (max-width:680px){.same{grid-template-columns:minmax(0,1fr)}}
+.same>div{border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.same .a{background:var(--bad-soft)}
+.same .b{background:var(--ok-soft)}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.profile li{background:var(--info-soft);border-radius:10px;padding:12px 14px;font-size:.95rem}
+.profile b{display:block;font-size:1.3rem}
+.qs{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:12px}
+.btn{min-height:44px;padding:8px 18px;border-radius:10px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}
+.btn.ghost{background:var(--card);color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.words div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.words b{display:block;margin-bottom:2px}
+.note-line{font-size:.9rem;color:var(--muted)}
+.big{font-size:1.2rem}
+
+/* git status, brainstorm, wording, skills */
+.git{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.git h3{font:700 1rem ui-monospace,Menlo,monospace}
+.git ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.git li{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.95rem;align-items:baseline}
+.git .k{font:700 .85rem ui-monospace,Menlo,monospace;min-width:7.5em}
+.git .w{font:600 .85rem ui-monospace,Menlo,monospace;color:var(--muted);min-width:5em}
+.git .d{min-width:0;flex:1 1 12em}
+.k.new,.k.linked,.k.saved{color:var(--ok)}
+.k.modified{color:var(--accent)}
+.k.replaced,.k.pasted,.k.aside{color:var(--warn)}
+.k.unlinked,.k.nosrc{color:var(--bad)}
+.git .foot{font-size:.9rem;border-top:1px dashed var(--line);padding-top:8px}
+.git .foot.saved{color:var(--ok);font-weight:600}
+.git .foot.wait{color:var(--muted)}
+mark.vague{background:var(--vague-soft);color:var(--vague);border-bottom:2px dotted var(--vague);padding:0 3px;border-radius:3px}
+.brain{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.brain .qline{display:flex;flex-wrap:wrap;gap:8px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.groups>div{background:var(--info-soft);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
+.groups b{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.word{border:2px solid var(--vague);background:var(--vague-soft);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.word h3{color:var(--vague)}
+.dispute{border-left:4px solid var(--ok);padding-left:12px;display:flex;flex-direction:column;gap:4px}
+.fakebtn{align-self:flex-start;font-size:.85rem;font-weight:700;border:2px solid var(--line);border-radius:8px;padding:4px 12px;background:var(--card)}
+.banner.tip{border-color:var(--accent);background:var(--accent-soft)}
+.banner.tip b{color:var(--accent)}
+.chip.sk{background:var(--card);border:2px solid var(--accent);color:var(--accent)}
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.skills li{background:var(--info-soft);border-radius:10px;padding:12px 14px}
+
+/* presenter mode */
+.cue{background:var(--accent);color:var(--accent-ink);border-radius:14px;padding:22px 26px;display:flex;flex-direction:column;gap:14px}
+.cue .cl{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.cue .ct{font-size:1.65rem;line-height:1.45;font-weight:600}
+.cue .pt{font-size:1.15rem;border-top:1px solid rgba(255,255,255,.35);padding-top:12px}
+.cue .pt b{font-weight:700}
+.modebtn{min-height:44px;padding:6px 14px;border:2px solid var(--accent);border-radius:10px;background:var(--card);color:var(--accent);font-weight:700;cursor:pointer;font-size:.9rem}
+body:not(.pm) .cue{display:none}
+.rd,.screen-label{display:none!important}
+body.pm .src .cite{display:none}
+body.pm .essay p{font-size:1.25rem}
+body.pm .git li{font-size:1.05rem}
+body.pm .box h3, body.pm .git h3{font-size:1.15rem}
+body.pm .coach-box p{font-size:1.15rem}
+.src .short{font-size:.95rem;font-weight:600}
+.src details{display:flex;flex-direction:column;gap:10px}
+.src summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.9rem;min-height:32px}
+.hint{font-size:.8rem;color:var(--muted)}
+@media (max-width:520px){.cue .ct{font-size:1.3rem}}
+
+/* guided tour */
+[hidden]{display:none!important}
+#spot{position:fixed;z-index:4;border:3px solid #ffd23f;border-radius:12px;box-shadow:0 0 0 9999px rgba(8,10,16,.62);pointer-events:none;transition:left .25s,top .25s,width .25s,height .25s}
+#tline{position:fixed;left:0;top:0;width:100%;height:100%;z-index:7;pointer-events:none}
+#tline line{stroke:#ffd23f;stroke-width:3;stroke-linecap:round}
+#tline circle{fill:#ffd23f;stroke:#1d2330;stroke-width:2}
+#tcard{position:fixed;z-index:8;background:var(--card);color:var(--ink);border:3px solid #ffd23f;border-radius:14px;padding:12px 16px;box-shadow:0 10px 30px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:8px}
+#tcard .tn{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#tcard h3{font-size:1.1rem}
+#tcard p{font-size:1.05rem;line-height:1.45}
+#tcard .tb{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#tcard .btn{min-height:40px;padding:6px 14px}
+#tcard .skip{margin-left:auto;background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:.85rem;min-height:40px}
+body.tour .cue{display:none}
+
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--card);border-top:2px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .wrap{display:flex;flex-direction:column;gap:8px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.nav .btn{min-width:130px}
+.dots{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;align-items:center}
+.dot{width:25px;height:25px;border-radius:50%;border:2px solid var(--line);background:var(--card);cursor:pointer;padding:0;font-size:.7rem;color:var(--muted)}
+.dot[aria-current="step"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.dot.done{background:var(--accent-soft);border-color:var(--accent)}
+.dot.gap{margin-left:8px}
+.count{text-align:center;font-size:.85rem;color:var(--muted)}
+@media (max-width:520px){.nav .btn{min-width:96px;padding-inline:10px}.dots{display:none}}
+@media (prefers-reduced-motion:no-preference){.fresh{animation:glow 1.6s ease-out 1}@keyframes glow{from{outline-color:transparent}to{outline-color:var(--accent)}}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <div class="brand">The Writing Room<small>Nothing here is live. Use Next and Back.</small></div>
+  <nav class="pills" aria-label="Jump to a student" id="pills"></nav>
+  <button class="modebtn" id="mode" hidden></button>
+</div></header>
+
+<div class="wrap"><main id="stage" tabindex="-1" aria-live="polite"></main></div>
+
+<footer class="bar"><div class="wrap">
+  <div class="nav">
+    <button class="btn ghost" id="prev">← Previous</button>
+    <div class="dots" id="dots" role="group" aria-label="Steps"></div>
+    <button class="btn" id="next">Next →</button>
+  </div>
+  <div class="count" id="count"></div>
+</div></footer>
+
+<div id="tour" hidden>
+  <div id="spot"></div>
+  <svg id="tline" aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0"></line><circle r="7" cx="0" cy="0"></circle></svg>
+  <div id="tcard" role="dialog" aria-live="polite" aria-label="Guided tip">
+    <span class="tn" id="tn"></span><h3 id="tt"></h3><p id="tx"></p>
+    <div class="tb"><button class="btn ghost" id="tback">← Back</button><button class="btn" id="tnext">Next →</button><button class="skip" id="tskip">Hide tips</button></div>
+  </div>
+</div>
+<script>
+/* ---------- sources: quotes copied from the real papers (see sources-verified.md) ---------- */
+var SRC = [
+  {id:'S1', role:'Supports the idea',
+   cite:'Bloom, Liang, Roberts & Ying (2013). Does Working from Home Work? Evidence from a Chinese Experiment. NBER Working Paper 18871.',
+   quotes:['“Home working led to a 13% performance increase, of which about 9% was from working more minutes per shift (fewer breaks and sick-days) and 4% from more calls per minute (attributed to a quieter working environment).”'],
+   method:'How it was done: one company (CTrip, a travel agency). Call-centre staff who volunteered were randomly assigned to work from home or in the office for 9 months. 249 employees took part.'},
+  {id:'S2', role:'Complicates the idea',
+   cite:'Gibbs, Mengel & Siemroth (May 2021). Work from Home & Productivity: Evidence from Personnel & Analytics Data on IT Professionals. IZA Discussion Paper 14336.',
+   quotes:['“Total hours worked increased by roughly 30%, including a rise of 18% in working after normal business hours.”',
+           '“Average output did not significantly change. Therefore, productivity fell by about 20%.”',
+           '“Employees also spent less time networking, and received less coaching and 1:1 meetings with supervisors.”'],
+   method:'How it was done: one company (a large Asian IT services firm), over 10,000 skilled professionals, compared before and during the Covid-19 work-from-home period.'},
+  {id:'S3', role:'A nearby question: who gets feedback?',
+   cite:'Emanuel, Harrington & Pallais. The Power of Proximity to Coworkers. NBER Working Paper 31880 (June 2026 revision).',
+   quotes:['“We find that sitting near teammates increases coding feedback by 18.3% and improves code quality.”',
+           '“Gains are concentrated among less-tenured and younger employees, who are building human capital.”',
+           '“However, there is a tradeoff: experienced engineers write less code when sitting near teammates.”'],
+   method:'How it was done: software engineers at one Fortune 500 firm, 2019 to 2024, around the 2020 office closures and the later return-to-office rules.'}
+];
+var BADGE = {
+  used:function(p){return '<span class="badge used">✓ Used in '+p+'</span>'},
+  open:function(){return '<span class="badge open">○ Not used yet</span>'},
+  gap:function(){return '<span class="badge gap">⚠ Not addressed yet</span>'},
+  aside:function(){return '<span class="badge aside">⤵ Set aside</span>'}
+};
+
+/* ---------- commits per case (shown from step "at" onward) ---------- */
+var COMMITS = {
+ 1:[{at:4,h:'101a',m:'First claim, backed by Bloom (S1). Kept my doubt about new staff for Paragraph 2.'},
+    {at:5,h:'102b',m:'Gibbs pushes back. My view now: the gain depends on the kind of work.'},
+    {at:6,h:'103c',m:'Cut a vague phrase. Now I say who gains and who pays. Kept “quietly” on purpose.'},
+    {at:7,h:'104d',m:'Added a new hire’s side, and the feedback study (S3).'},
+    {at:9,h:'105e',m:'Undid the paste. Edited the flagged words instead and kept my S2 link.'}],
+ 2:[{at:1,h:'201a',m:'(no reason written)'},
+    {at:2,h:'202b',m:'Added the Gibbs finding to Paragraph 2.'},
+    {at:3,h:'203c',m:'Narrowed Paragraph 1 so it only claims what Bloom studied.'},
+    {at:4,h:'204d',m:'Rewrote the conclusion using the feedback study.'},
+    {at:5,h:'205e',m:'Final version.'}],
+ 3:[{at:1,h:'301a',m:'Built the thesis on Bloom: remote work raises performance by 13%.'},
+    {at:2,h:'302b',m:'Set aside Gibbs. It studies one company only.'},
+    {at:3,h:'303c',m:'Concluded that AI chat tools replace in-person feedback.'}]
+};
+
+/* ---------- the four skills ---------- */
+var SK = {R:'📖 Reading',L:'⚖️ Logic',W:'✍️ Writing',C:'🗣️ Communication'};
+
+/* final Student 1 paragraphs, reused across steps */
+var P1 = 'Working from home can raise output: call-centre volunteers at one company performed 13% better [S1].';
+var P2a = 'But at one large IT firm, hours rose by roughly 30% while output did not significantly change, and staff got less coaching [S2]. So the gain may depend on the kind of work.';
+var P2b = 'But at one large IT firm, hours rose by roughly 30% while output did not significantly change, and staff got less coaching [S2]. So the gain may depend on whether the job is routine or built on teamwork.';
+var P3 = 'Overall, remote work helps experienced staff in routine jobs, and may quietly cost newer staff the coaching they need.';
+var P4 = 'A new hire may still prefer home: no commute and more control over the day. But sitting near teammates raised coding feedback by 18.3%, mostly for less-tenured engineers [S3]. So the answer may be some days together, not a full return.';
+
+/* ---------- the story ---------- */
+var FR = [];
+FR.push({type:'intro'});
+
+/* Case 1: one honest student, from one idea to a defended essay */
+FR.push({c:1,n:1,title:'It starts with one rough idea',
+ plain:'This student has not read anything yet. They type one line: their first guess. Nothing is graded here. The box at the top right is the “git status”: like in a software team, it lists what changed since the last saved snapshot.',
+ look:['The essay is one short sentence. That is a fine start.','git status says there is 1 change that is not saved yet.','The three real research papers are on the left, closed off as “Not used yet”.'],
+ sk:[], src:['open','open','open'],
+ git:{ch:[['new','¶1','“Remote work is good. No commute.” (6 words)']]},
+ paras:['Remote work is good. No commute.',null,null], fresh:[0],
+ coach:'Nice start. Want to brainstorm before you write more? I will ask three short questions. You answer in your own words.'});
+
+FR.push({c:1,n:2,title:'Brainstorm: the Coach asks, the student answers',
+ plain:'The Coach asks three short questions. The student types quick bullet points, in their own rough words. Then the Helper sorts those bullets into groups. It does not add or change a single word. This trains logic: seeing what you think, and what you still need to find out.',
+ look:['The three Coach questions are at the top of the board.','Every bullet is the student’s own words. The Helper only moved them into groups.','One group is “Doubts”. That doubt becomes Paragraph 2 later.'],
+ sk:['L'], src:['open','open','open'],
+ brain:{qs:['Good for who?','Good how? What gets better?','Says who? What would show it?'],
+  groups:[{name:'Gains',items:['save time travelling','easier to focus at home?']},
+          {name:'Doubts',items:['bosses worry people slack off','new people learn by watching others']},
+          {name:'Need evidence',items:['numbers on output, not just feelings']}]},
+ git:{ch:[['new','¶1','“Remote work is good. No commute.”'],['new','brainstorm','5 bullet points in 3 groups']]},
+ paras:['Remote work is good. No commute.',null,null], fresh:[],
+ coach:'Your bullets are grouped. Which group would you look into first?'});
+
+FR.push({c:1,n:3,title:'Read: link a claim to a real sentence',
+ plain:'The student opens the first paper and links their claim to one passage. Then they read the method note under it: one company, call-centre volunteers. So they make the claim smaller, to match what was really studied. This trains reading: what a study shows, and what it does not.',
+ look:['“Used in Paragraph 1” shows on the first paper.','Paragraph 1 now says “call-centre volunteers at one company”. That came from the method note.','The doubt from the brainstorm is now Paragraph 2, still as a question.'],
+ sk:['R'], src:['used:Paragraph 1','open','open'],
+ diff:true,
+ git:{ch:[['modified','¶1','6 words out, 14 words in'],['linked','¶1 → S1','1 passage from Bloom'],['new','¶2','a question from the brainstorm']]},
+ paras:['<del>Remote work is good. No commute.</del> <ins>'+P1+'</ins>','<ins>But new people learn by watching others. Does that still happen at home?</ins>',null], fresh:[0,1],
+ coach:'You linked S1. Its method note says who took part. Does your sentence say the same thing?'});
+
+FR.push({c:1,n:4,title:'First save: a snapshot with a reason',
+ plain:'The student saves their work. A save in the Writing Room works like a commit in software: a snapshot plus a short reason, in the student’s own words. After saving, git status is clean. Later, the teacher can read these reasons to see how the essay grew.',
+ look:['git status now says the changes went into snapshot 101a.','The reason in the history panel is written by the student.','Nothing is graded. A snapshot is just a dated record.'],
+ sk:[], src:['used:Paragraph 1','open','open'],
+ git:{ch:[['modified','¶1','claim narrowed'],['linked','¶1 → S1','1 passage'],['new','¶2','a question']],save:'101a'},
+ paras:[P1,'But new people learn by watching others. Does that still happen at home?',null], fresh:[],
+ coach:'Saved. Your reason is part of the record your teacher can see.'});
+
+FR.push({c:1,n:5,title:'Push back: a source that disagrees',
+ plain:'The Coach points to the second paper. It studied skilled IT staff and found something different: more hours, flat output, less coaching. The student does not ignore it. They change their view: the gain may depend on the kind of work. This trains logic and reading together.',
+ look:['Red crossed-out text is what the student removed. Green underlined text is what they added.','The new view, “depends on the kind of work”, is the student’s own idea.','Paragraph 3 has a phrase in it that sounds smart. Keep an eye on it.'],
+ sk:['L','R'], src:['used:Paragraph 1','used:Paragraph 2','open'],
+ diff:true,
+ git:{ch:[['modified','¶2','question replaced by a finding'],['linked','¶2 → S2','1 passage from Gibbs'],['new','¶3','a first conclusion']],save:'102b'},
+ paras:[P1,'<del>But new people learn by watching others. Does that still happen at home?</del> <ins>'+P2a+'</ins>','<ins>Overall, remote work navigates a complex balance between flexibility and growth.</ins>'], fresh:[1,2],
+ coach:'Look at who each study measured: call-centre volunteers, and skilled IT staff. Does your Paragraph 1 claim fit both?'});
+
+FR.push({c:1,n:6,title:'Judge your own words',
+ plain:'The student’s conclusion said remote work “navigates a complex balance between flexibility and growth”. It sounds smart but says nothing: who gains, and who pays? The Coach marks it in purple and asks. The student rewrites it in plain words. The Coach also marked the word “quietly”, but the student disagrees, and says why.',
+ look:['The purple box names the vague phrase and asks one question. It does not suggest new words.','The plain rewrite is the student’s.','“Disagree with Coach”: the student wrote one short reason. The teacher will see it. The Coach can be wrong.'],
+ sk:['W'], src:['used:Paragraph 1','used:Paragraph 2','open'],
+ diff:true,
+ git:{ch:[['modified','¶3','vague phrase rewritten'],['saved','note','1 disagreement with the Coach, with a reason']],save:'103c'},
+ paras:[P1,P2a,'<del>Overall, remote work <mark class="vague">navigates a complex balance between flexibility and growth</mark>.</del> <ins>'+P3+'</ins>'], fresh:[2],
+ word:{phrase:'navigates a complex balance between flexibility and growth',why:'This sounds smooth, but a reader cannot tell who gains and who pays. Can you say it plainly?',
+       dispute:{flag:'The Coach also marked “quietly” as vague.',reason:'‘Quietly’ is my point: the cost does not show up in output numbers.'}},
+ coach:'Clearer. You now say who gains and who pays.'});
+
+FR.push({c:1,n:7,title:'See the other side',
+ plain:'So far the essay looks at the company. The Coach asks: what would a new hire say? They save a commute and control their day. The student adds that view, then uses the third paper to answer it. Their conclusion becomes fairer and more realistic. This trains communication: writing for people who see it differently.',
+ look:['Paragraph 4 is new. It starts from the new hire’s point of view.','The third paper is now used, so all three are linked.','The suggestion “some days together” is the student’s own idea.'],
+ sk:['C','R'], src:['used:Paragraph 1','used:Paragraph 2','used:Paragraph 4'],
+ git:{ch:[['new','¶4','a new hire’s point of view'],['linked','¶4 → S3','1 passage from Emanuel']],save:'104d'},
+ paras:[P1,P2a,P3,'<ins>'+P4+'</ins>'], fresh:[3],
+ coach:'Your essay looks at the company. What would a new hire who saves a long commute say?'});
+
+FR.push({c:1,n:8,title:'Pasting a whole new paragraph has a cost',
+ plain:'The student is tired. They ask a chatbot to rewrite Paragraph 2 and paste the result in. That is allowed. But the paragraph is now new from top to bottom, so its source link is gone, and git status shows “replaced 100%”. The Coach offers a quicker path: edit only the few flagged words, and keep the link.',
+ look:['git status, in yellow and red: Paragraph 2 replaced, and its link to S2 removed.','The second paper is back to “Not addressed yet”.','The blue tip compares the two paths. Nothing is blocked. The student chooses.'],
+ sk:['W'], src:['used:Paragraph 1','gap','used:Paragraph 4'],
+ git:{ch:[['pasted','¶2','22 of 22 words new (100%)'],['unlinked','¶2 → S2','link removed: the passage it pointed to is gone']]},
+ paras:[P1,'<mark class="vague">Furthermore, the multifaceted dynamics of remote collaboration present both opportunities and challenges</mark>, depending on organisational context and the nature of tasks involved.',P3,P4], fresh:[1],
+ tip:'The Coach flagged 4 words in Paragraph 2: “the kind of work”. Editing those keeps your link to S2. Pasting a whole paragraph removes it, and your snapshot will say “replaced 100%”. You can still paste. It is your choice.',
+ coach:'This paragraph is new from top to bottom, and its S2 link is gone. Want to undo, and edit only the flagged words?'});
+
+FR.push({c:1,n:9,title:'Undo, and edit just the flagged words',
+ plain:'The student presses Undo. The old paragraph and its link come back. They change the 4 flagged words into 9 clearer ones. That took less time than the paste, and they kept their work. Small edits keep the thinking inside the Room, without any rule against pasting.',
+ look:['Only a few words changed. The rest of Paragraph 2 is the student’s earlier work.','The second paper shows “Used” again.','git status says “4 words out, 9 in, link kept”.'],
+ sk:['W'], src:['used:Paragraph 1','used:Paragraph 2','used:Paragraph 4'],
+ diff:true,
+ git:{ch:[['modified','¶2','4 words out, 9 words in'],['linked','¶2 → S2','link kept']],save:'105e'},
+ paras:[P1,'But at one large IT firm, hours rose by roughly 30% while output did not significantly change, and staff got less coaching [S2]. So the gain may depend on <del>the kind of work</del> <ins>whether the job is routine or built on teamwork</ins>.',P3,P4], fresh:[1],
+ coach:'Your essay is saved with its full history.'});
+
+FR.push({c:1,n:10,title:'What the teacher sees for this student',
+ plain:'The teacher gets one page, the Receipt. It lists facts from the history: snapshots, sources, the paste that was undone, and the moment the student disagreed with the Coach. It shows which skills each step trained. And it gives three questions about this student’s own choices. A student who built the essay can answer each one in about 30 seconds.',
+ look:['These are facts from the history, not a score.','The idea “depends on the kind of work” is traced to snapshot 102b, in the student’s words.','The three questions are about this student’s own choices.'],
+ receipt:'s1'});
+
+/* Case 2 */
+FR.push({c:2,n:1,title:'A finished essay is pasted in',
+ plain:'This second student pastes in an essay written by an AI tool. It reads smoothly, but none of it points to the real papers. The system does not accuse anyone. It asks the same question it would ask any student.',
+ look:['git status shows the whole essay arrived in one paste, with 0 source links.','Two papers show “Not addressed yet”. That is only a reminder.','The opening has a purple vague phrase, and the Coach asks about one specific claim.'],
+ sk:['R'], src:['open','gap','gap'],
+ git:{ch:[['pasted','¶1–¶3','3 paragraphs at once (100% new)'],['nosrc','¶1–¶3','0 of 3 paragraphs linked to a source']],save:'201a'},
+ paras:['<mark class="vague">In today’s digital economy</mark>, full-time remote work boosts productivity and innovation for workers at every level.','With cloud tools and daily video stand-ups, remote teams keep mentorship and knowledge-sharing strong.','In conclusion, firms should close their offices, since remote work has no real downsides.'], fresh:[0,1,2],
+ coach:'Paragraph 2 talks about mentorship. Which passage in your sources supports that?'});
+FR.push({c:2,n:2,title:'Fixing one paragraph makes the others disagree',
+ plain:'The student fixes the one paragraph the Coach asked about. They may even ask an AI tool for the fix. But now Paragraph 2 says staff got less coaching, while Paragraphs 1 and 3 still say everything is fine. The system points out that the paragraphs disagree and leaves the fixing to the student.',
+ look:['The change is only in Paragraph 2.','The yellow box says the paragraphs now say different things. It does not tell the student what to write.','Faking gets more expensive here: one honest patch means more work elsewhere.'],
+ sk:['L'], src:['open','used:Paragraph 2','gap'],
+ diff:true,
+ git:{ch:[['modified','¶2','second half rewritten'],['linked','¶2 → S2','1 passage from Gibbs']],save:'202b'},
+ paras:['In today’s digital economy, full-time remote work boosts productivity and innovation for workers at every level.',
+        'With cloud tools and daily video stand-ups, remote teams <del>keep mentorship and knowledge-sharing strong.</del> <ins>received less coaching and fewer 1:1 meetings with supervisors [S2].</ins>',
+        'In conclusion, firms should close their offices, since remote work has no real downsides.'], fresh:[1],
+ banner:'Paragraph 2 now says staff received less coaching. Paragraph 1 says remote work boosts productivity at every level, and Paragraph 3 says there are no real downsides. These paragraphs now say different things.',
+ coach:'Paragraphs 1 and 3 point one way and Paragraph 2 points another. How would you bring them together?'});
+FR.push({c:2,n:3,title:'To fix Paragraph 1, the student must read the study',
+ plain:'To make Paragraph 1 match, the student has to know what the first study really covered. That means opening it and reading how it was done. One company, call-centre volunteers. The student narrows the claim.',
+ look:['Paragraph 1 changed. The claim now fits what the study measured.','Only Paragraphs 2 and 3 still disagree.','The student read the method note to do this.'],
+ sk:['R','L'], src:['used:Paragraph 1','used:Paragraph 2','gap'],
+ diff:true,
+ git:{ch:[['modified','¶1','claim narrowed to what was studied'],['linked','¶1 → S1','1 passage from Bloom']],save:'203c'},
+ paras:['<del>In today’s digital economy, full-time remote work boosts productivity and innovation for workers at every level.</del> <ins>Working from home raised performance by 13% for call-centre volunteers at one company [S1]. Whether that holds for other kinds of work is a separate question.</ins>',
+        'With cloud tools and daily video stand-ups, remote teams received less coaching and fewer 1:1 meetings with supervisors [S2].',
+        'In conclusion, firms should close their offices, since remote work has no real downsides.'], fresh:[0],
+ banner:'Paragraph 2 and Paragraph 3 now say different things.',
+ coach:'Paragraph 3 says there are no downsides. Paragraph 2 describes one. Which one does your evidence support?'});
+FR.push({c:2,n:4,title:'The conclusion gets rewritten too',
+ plain:'The last paragraph is the final one that disagrees. The student rewrites it using the third paper. Now all three paragraphs agree with each other and with the sources.',
+ look:['Paragraph 3 is rewritten.','The yellow box is gone because nothing disagrees any more.','Paragraph 2 forced a rewrite of Paragraph 1, which forced a rewrite of Paragraph 3.'],
+ sk:['L','C'], src:['used:Paragraph 1','used:Paragraph 2','used:Paragraph 3'],
+ diff:true,
+ git:{ch:[['modified','¶3','conclusion rewritten'],['linked','¶3 → S3','1 passage from Emanuel']],save:'204d'},
+ paras:['Working from home raised performance by 13% for call-centre volunteers at one company [S1]. Whether that holds for other kinds of work is a separate question.',
+        'With cloud tools and daily video stand-ups, remote teams received less coaching and fewer 1:1 meetings with supervisors [S2].',
+        '<del>In conclusion, firms should close their offices, since remote work has no real downsides.</del> <ins>Staff who sit near teammates get more coding feedback, mostly less-tenured engineers [S3]. Firms that go fully remote may need another way to give newer staff that feedback.</ins>'], fresh:[2],
+ coach:'All three paragraphs now agree with each other and with your sources.'});
+FR.push({c:2,n:5,title:'What this does and does not prove',
+ plain:'The essay started as a paste and ended up rewritten from start to finish. The student had to read the sources to do it, so they learned something along the way. We are honest about the limit: a very determined person could do all of this with an AI tool. That is why every submission also comes with 3 questions (shown in Student 3).',
+ look:['The summary says what was pasted and what was rewritten. It is a count, not a verdict.','Faking took about as much effort as thinking.','The questions in the next student are the real check.'],
+ sk:[], src:['used:Paragraph 1','used:Paragraph 2','used:Paragraph 3'],
+ git:{ch:[],save:'205e'},
+ paras:['Working from home raised performance by 13% for call-centre volunteers at one company [S1]. Whether that holds for other kinds of work is a separate question.',
+        'With cloud tools and daily video stand-ups, remote teams received less coaching and fewer 1:1 meetings with supervisors [S2].',
+        'Staff who sit near teammates get more coding feedback, mostly less-tenured engineers [S3]. Firms that go fully remote may need another way to give newer staff that feedback.'], fresh:[],
+ chip:'Pasted: 3 paragraphs. Rewritten after the paste: 3 of 3.',
+ coach:'Your essay is saved with its full history.'});
+
+/* Case 3 */
+FR.push({c:3,n:1,title:'A strong AI tool builds a neat history',
+ plain:'The third student uses a very capable AI agent. It writes the essay and also fills in neat, believable commits one at a time. Everything looks tidy. This is the hardest case, and we say so openly.',
+ look:['The essay is one-sided: every claim rests on the first paper.','git status and the commit list look like honest work.','Nothing looks wrong yet. Look at the next steps.'],
+ sk:[], src:['used:Paragraph 1','open','open'],
+ git:{ch:[['new','¶1–¶3','added across neat snapshots'],['linked','¶1 → S1','1 passage from Bloom']],save:'301a'},
+ paras:['Remote work raises performance by 13% [S1]. Firms can safely go fully remote.','Because the evidence is positive, any role can move home.','Remote work is the future of every industry.'], fresh:[0,1,2],
+ coach:'Your essay is saved with its history.'});
+FR.push({c:3,n:2,title:'The student sets aside the paper that disagrees',
+ plain:'The student can set a source aside, with a one-click reason. That is a normal and useful thing to do, and honest students do it too. Here the reason is polished and sounds reasonable: “One company only. Cannot generalise.”',
+ look:['The second paper moved to the Set aside box.','The reason looks sensible on its own.','Keep this reason in mind. It matters in the next step.'],
+ sk:[], src:['used:Paragraph 1','aside','open'], aside:{s:'S2',pill:'One company only. Cannot generalise.',note:'Excluded because a study of a single company cannot support conclusions for other firms.'},
+ git:{ch:[['aside','S2','reason: “One company only. Cannot generalise.”']],save:'302b'},
+ paras:['Remote work raises performance by 13% [S1]. Firms can safely go fully remote.','Because the evidence is positive, any role can move home.','Remote work is the future of every industry.'], fresh:[],
+ coach:'You set aside S2. Your reason is saved.'});
+FR.push({c:3,n:3,title:'A claim with no source behind it',
+ plain:'The last paragraph now says that AI chat tools replace the feedback people used to get from sitting together. No passage backs that up. Everything on the surface is filled in. Inside the screen, a strong enough AI can pass all of this. We say that openly.',
+ look:['The third paper shows “Not addressed yet”.','The new sentence has no source in square brackets, and git status says so.','This is why the screen alone is not the final check.'],
+ sk:[], src:['used:Paragraph 1','aside','gap'], aside:{s:'S2',pill:'One company only. Cannot generalise.',note:'Excluded because a study of a single company cannot support conclusions for other firms.'},
+ git:{ch:[['modified','¶3','new last sentence'],['nosrc','¶3','1 sentence with no source linked']],save:'303c'},
+ paras:['Remote work raises performance by 13% [S1]. Firms can safely go fully remote.','Because the evidence is positive, any role can move home.','<del>Remote work is the future of every industry.</del> <ins>AI chat tools will replace the feedback people used to get from sitting together.</ins>'], fresh:[2],
+ coach:'Which passage supports this last sentence?'});
+FR.push({c:3,n:4,title:'A reasoning check: same standard?',
+ plain:'Now the Receipt, which is a page for the teacher, compares what the student set aside with what they relied on. The student set Gibbs aside for being “one company only”. But the paper they rely on most, Bloom, is also one company, and it is much smaller: 249 people against more than 10,000. The same filter was used on one source and not the other.',
+ look:['Left box: what was set aside and why. Right box: what the student relies on.','Both are single-company studies. That comes straight from the papers’ own descriptions.','This is a reasoning check, not a verdict. It becomes a question for a person to ask.'],
+ receipt:'same'});
+FR.push({c:3,n:5,title:'The real check: a person hears a short answer',
+ plain:'The Receipt gives the teacher three questions about this student’s own choices. A student who did the thinking can answer each in about 30 seconds. A student who did not usually cannot, in front of a person. The teacher or a TA asks them. The teacher decides what happens next. The system never decides.',
+ look:['The “process profile” is a set of facts, not a score and not a judgement.','The three questions use this student’s own sources and choices.','Press the button to hear the first question read aloud. It uses your browser’s voice.'],
+ receipt:'questions'});
+
+FR.push({type:'outro'});
+
+/* ---------- helpers ---------- */
+var CASES = {1:'Student 1: Starts from one idea',2:'Student 2: Pastes a draft',3:'Student 3: Hands it all to an AI agent'};
+var CHIPCASE = {1:'ok',2:'warn',3:'bad'};
+var QS = {
+ 1:['Bloom and colleagues studied call-centre volunteers. Why might that result not carry over to team-based work like software?',
+    'You kept the word “quietly” when the Coach flagged it. Which finding in Gibbs and colleagues shows a cost that output numbers miss?',
+    'Your last paragraph suggests some days together. What would you measure to know whether that works for new hires?'],
+ 3:['You set aside Gibbs and colleagues because the study covers one company. Your Paragraph 1 rests on Bloom and colleagues, which also covers one company and far fewer people. Why did that filter apply to one study and not the other?',
+    'Gibbs and colleagues found that hours rose by roughly 30% while output did not significantly change. Your essay says remote work raises performance. What does “performance” mean in your essay, and is it what the Gibbs study measured?',
+    'Emanuel and colleagues found that sitting near teammates raised coding feedback, mostly for less-tenured engineers. Your last sentence says AI chat tools replace that. What evidence would convince you?']
+};
+
+/* ---------- presenter script: what to say, and where to point ---------- */
+var SAY = {
+ 'i':['Every student will soon have an AI that writes a polished essay. A polished essay no longer proves understanding. So we built a place where the student’s thinking is easy to do, and easy to see. Three students, one question: does remote work help or harm how teams learn?','The four words and the four skills, further down.'],
+ '1.1':['This student has read nothing yet. One rough line. Notice git status: one change, not saved.','The git status box, top right.'],
+ '1.2':['The Coach asks three short questions. The student answers in their own words. The Helper only sorts them. It adds nothing.','The three groups. Remember “Doubts”.'],
+ '1.3':['Now they read. They link their claim to a real sentence. Then they see it was one company, call-centre volunteers, so they shrink their claim to match.','Green text in Paragraph 1, and the S1 badge.'],
+ '1.4':['They save. A snapshot with a reason, in their own words. git status goes clean.','The green “Saved” line, snapshot 101a.'],
+ '1.5':['A second source disagrees. The student does not ignore it. They change their view: it depends on the kind of work. That idea is theirs, and the history shows when it appeared.','Red and green in Paragraph 2.'],
+ '1.6':['Purple means vague. “Navigates a complex balance” sounds smart and says nothing. The student rewrites it. They also pressed Disagree on one flag, with a reason. The Coach can be wrong.','The purple box, then the Disagree line.'],
+ '1.7':['The Coach asks: what would a new hire say? The student adds that view and answers it with the third paper. That is communication.','Paragraph 4, and S3 now “Used”.'],
+ '1.8':['Now they paste a whole paragraph. That is allowed. But git status says replaced 100%, and the source link is gone. The tip says editing four words keeps it. We never block.','Yellow and red in git status, then the blue tip.'],
+ '1.9':['They undo, and edit four words. Link kept. The thinking stays in the Room by design, not by rule.','“link kept” in git status.'],
+ '1.10':['The teacher’s page. Facts, not a score. Which skill each step trained. Three questions about this student’s own choices. A student who built this essay answers each in about thirty seconds.','The skills list, then the three questions.'],
+ '2.1':['A whole essay pasted at once. git status shows three paragraphs and zero sources. We do not accuse anyone. We ask: which passage supports this?','“0 of 3 paragraphs linked to a source”.'],
+ '2.2':['They patch Paragraph 2 to answer. Now it disagrees with Paragraphs 1 and 3. The yellow box says so. It does not say what to write.','The yellow reasoning-gap box.'],
+ '2.3':['To fix Paragraph 1, they must read what the study really covered. They learn something just to make the fix.','Paragraph 1, changed.'],
+ '2.4':['The conclusion gets rewritten too. One patch forced three rewrites. Now everything agrees.','The yellow box is gone.'],
+ '2.5':['We are honest: a determined person could still do this with AI. That is why every essay comes with three questions. Which brings us to the next student.','The chip: 3 of 3 rewritten.'],
+ '3.1':['The hardest case. A strong AI agent writes the essay and fakes a neat history. Everything looks fine, and we say so.','The tidy snapshot list.'],
+ '3.2':['It sets aside the paper that disagrees, with a polished reason: “one company only”.','The Set aside box, left.'],
+ '3.3':['A last claim with no source behind it. A strong AI can pass this screen. So the screen is not the final check.','“1 sentence with no source linked”.'],
+ '3.4':['The teacher’s page. Gibbs was set aside for being one company. But Bloom, the main source, is also one company, and only 249 people against over 10,000. The same filter, used on one paper only. Not a verdict. A question.','The left box and the right box.'],
+ '3.5':['Three questions about this student’s own choices. A TA asks them in person. A student who thought it through answers in about thirty seconds. The teacher decides, never the system. Press the button to hear one.','The read-aloud button.'],
+ 'o':['Four takeaways. Honest students are not slowed down. Every step trains a skill. Pasting is allowed but costs the source links. Every essay comes with three questions. And the honest limit: a strong AI can fill the screen, so a person asking is the final check. Then the ask: a small pilot.','The “Honest limits” box.']
+};
+
+/* ---------- guided tour: [css selector, which match, title, description] ---------- */
+var TOUR = {
+ 'i':[['#stage > .box',0,'The idea','When an AI can write the essay, a finished essay stops proving understanding. This tool records how the student thinks, then gives the teacher three questions to ask.'],
+      ['#stage > .box',1,'How to move','Press Next, or the right arrow, to follow the tips. The student essays are samples. The research papers and quotes are real.'],
+      ['#stage > .box',2,'Three students','The main story is Student 1, in ten steps. Students 2 and 3 show what happens when AI does the work.'],
+      ['#stage > .box',3,'Words you will see','git status, snapshot, Coach, Helper, set aside, Receipt. Each one is explained here.'],
+      ['#stage > .box',4,'Four skills','Every Coach question trains one of these: reading, logic, writing, communication.']],
+ '1.1':[['.git',0,'git status','Like in a software team, this lists what changed since the last save. Right now: one change, not saved yet.'],
+        ['.essay .para',0,'The first idea','One rough line, written before reading anything. That is a fine start. Nothing is graded.'],
+        ['.coach-box',0,'The Coach','It only asks. It never writes a sentence for the student.']],
+ '1.2':[['.brain .qline',0,'Three questions','The Coach asks: good for who, good how, says who.'],
+        ['.groups',0,'Sorted by the Helper','Every bullet is the student’s own words. The Helper only put them in groups.'],
+        ['.groups > div',1,'The doubts group','This doubt will become Paragraph 2 later.']],
+ '1.3':[['.src',0,'Linked to a real source','The badge shows the first paper is now used in Paragraph 1.'],
+        ['.essay .para',0,'The claim got smaller','After reading how the study was done (one company, call-centre volunteers) the student narrowed their claim.'],
+        ['.git',0,'git status','Words out, words in, and one source link made. Not saved yet.']],
+ '1.4':[['.git .foot',0,'Saved','The save is a snapshot, like a commit in software. git status is clean again.'],
+        ['.log li',0,'The first snapshot','The reason is written by the student, in their own words.']],
+ '1.5':[['.src',1,'A source that disagrees','The Coach points here: hours went up, output stayed flat, staff got less coaching.'],
+        ['.essay .para',1,'The student changes their view','Red is removed, green is added. The new view, that it depends on the kind of work, is the student’s own.'],
+        ['.git',0,'git status','A new link to the second paper, and a first conclusion in Paragraph 3.']],
+ '1.6':[['.word',0,'Vague wording','It sounds smart and says nothing. The Coach asks who gains and who pays. It does not offer new words.'],
+        ['.essay .para',2,'The student rewrites it','Plain words, saying who gains and who pays.'],
+        ['.dispute',0,'Disagree with Coach','The student kept one flagged word and gave a short reason. The teacher will see it.']],
+ '1.7':[['.coach-box',0,'A question, not an answer','What would a new hire say?'],
+        ['.essay .para',3,'The other side','Paragraph 4 starts from a new hire’s point of view and answers it with the third paper.'],
+        ['.src',2,'All three papers used','The third paper is now linked.']],
+ '1.8':[['.git',0,'Replaced 100%','Pasting a whole paragraph is allowed. But its source link goes with it.'],
+        ['.banner.tip',0,'Quick edit','Four flagged words. Editing them keeps the link. The choice stays with the student.'],
+        ['.src',1,'Link lost','The second paper is back to “Not addressed yet”.']],
+ '1.9':[['.git',0,'Link kept','Four words out, nine in. The source link stays.'],
+        ['.essay .para',1,'Only a few words changed','The rest is the student’s earlier work.'],
+        ['.log li',0,'A snapshot with a reason','The student explains the undo in their own words.']],
+ '1.10':[['.profile',0,'Facts, not a score','Snapshots, sources, the paste that was undone, and one disagreement with the Coach.'],
+         ['.skills',0,'Skills each step trained','Reading, logic, writing and communication, each tied to real steps.'],
+         ['.qs',0,'Three questions','About this student’s own choices. Someone who built the essay can answer each in about 30 seconds.'],
+         ['#speak',0,'Hear a question','Plays question 1 with the browser’s voice. There is no clock.']],
+ '2.1':[['.git',0,'Pasted, no links','Three paragraphs arrived at once and none has a source.'],
+        ['.essay .para',0,'Smooth but general','The purple words are vague. The essay says a lot and shows little.'],
+        ['.coach-box',0,'The same question for everyone','Which passage supports this claim?']],
+ '2.2':[['.essay .para',1,'One honest patch','Paragraph 2 now says staff got less coaching.'],
+        ['.banner',0,'A reasoning gap','The paragraphs now say different things. It does not say what to write.'],
+        ['.git',0,'git status','One paragraph changed and one source link added.']],
+ '2.3':[['.essay .para',0,'Paragraph 1 changed','To fix it, the student had to read what the first study really covered.'],
+        ['.banner',0,'Still a gap','Paragraphs 2 and 3 still disagree.']],
+ '2.4':[['.essay .para',2,'The conclusion is rewritten','One patch forced three rewrites.'],
+        ['.src',2,'Third paper used','Now every paragraph rests on a source.']],
+ '2.5':[['.col .chip.warn',0,'A count, not a verdict','Pasted: 3 paragraphs. Rewritten after: 3 of 3.'],
+        ['.coach-box',0,'The honest limit','A determined person could still do this with AI. That is why every essay comes with three questions.']],
+ '3.1':[['.log',0,'A neat history','A strong AI agent can make this look just like honest work. We say so openly.'],
+        ['.essay .para',0,'One-sided','Every claim rests on the first paper.']],
+ '3.2':[['.aside-box',0,'Set aside','One click and a reason. Honest students do this too. Remember the reason: “One company only”.'],
+        ['.src',1,'The paper that disagrees','It has moved out of the way.']],
+ '3.3':[['.essay .para',2,'No source behind it','The new sentence says AI chat tools replace feedback from sitting together. No passage backs it.'],
+        ['.git li',1,'git status','It says so: one sentence with no source.'],
+        ['.src',2,'Not addressed','The third paper was never used.']],
+ '3.4':[['.same .a',0,'Set aside','Gibbs: one company, over 10,000 professionals.'],
+        ['.same .b',0,'Relied on','Bloom: also one company, and only 249 people.'],
+        ['.screen > p',0,'The question for a person','The same filter was used on one paper and not the other. A reasoning check, not a verdict.']],
+ '3.5':[['.profile',0,'Facts, not a verdict','Three plain counts.'],
+        ['.banner',0,'Suggested next step','A short spoken answer. The teacher decides what happens next.'],
+        ['.qs',0,'Three questions','A TA asks them in person. About 30 seconds each for a student who thought it through.'],
+        ['#speak',0,'Hear it','Plays question 1 with the browser’s voice.']],
+ 'o':[['#stage > .box',0,'Four takeaways','Honest students are not slowed down. Every step trains a skill. Pasting costs the source links. Every essay comes with three questions.'],
+      ['#stage > .box',1,'Honest limits','A strong AI can fill the screen. That is why the final check is a person asking.'],
+      ['#stage > .box',2,'It runs for real','The live Writing Room runs today.'],
+      ['#stage > .box',3,'Sources','All the research is from real papers.']]
+};
+var MODES = ['tour','present','read'], MODELABEL = {tour:'View: Guided tour',present:'View: Presenter',read:'View: Read mode'};
+var MODE = 'read', PM = false, HS = 0;
+function setMode(m){
+  MODE=m; PM = m!=='read';
+  document.body.className = m==='read' ? '' : (m==='tour' ? 'pm tour' : 'pm');
+  $('#mode').textContent = MODELABEL[m];
+}
+function keyOf(f){return f.type==='intro'?'i':f.type==='outro'?'o':f.c+'.'+f.n}
+function tourListFor(i){ return MODE==='tour' ? (TOUR[keyOf(FR[i])]||[]) : [] }
+function step(d){
+  var L = tourListFor(cur);
+  if(d>0 && HS<L.length-1){HS++; tourShow(); return}
+  if(d<0 && HS>0){HS--; tourShow(); return}
+  var t = cur+d; if(t<0||t>=FR.length) return;
+  go(t, d<0 ? 'last' : 0);
+}
+function tourPlace(doScroll){
+  var L = tourListFor(cur), T = $('#tour');
+  if(MODE!=='tour' || !L.length){ T.hidden=true; return }
+  var h = L[HS], el = document.querySelectorAll(h[0])[h[1]];
+  if(!el){ T.hidden=true; return }
+  T.hidden=false;
+  $('#tn').textContent = 'Tip '+(HS+1)+' of '+L.length;
+  $('#tt').textContent = h[2]; $('#tx').textContent = h[3];
+  $('#tback').disabled = (cur===0 && HS===0);
+  $('#tnext').disabled = (cur===FR.length-1 && HS>=L.length-1);
+  var topH = $('.top').offsetHeight, barH = $('.bar').offsetHeight, vw = document.documentElement.clientWidth, vh = window.innerHeight;
+  var r = el.getBoundingClientRect();
+  if(doScroll){ window.scrollBy(0, r.top-(topH+20)); r = el.getBoundingClientRect(); }
+  var sp = $('#spot'); sp.style.left=(r.left-8)+'px'; sp.style.top=(r.top-8)+'px'; sp.style.width=(r.width+16)+'px'; sp.style.height=(r.height+16)+'px';
+  var card = $('#tcard'), cw = Math.min(400, vw-32); card.style.width = cw+'px';
+  var ch = card.offsetHeight, gap = 28, lo = topH+8, hi = vh-barH-8;
+  function cl(v,a,b){return Math.max(a,Math.min(b,v))}
+  var pos = null, cands = [
+    function(){var t=r.bottom+gap; return t+ch<=hi ? [cl(r.left+r.width/2-cw/2,16,vw-cw-16), t] : null},
+    function(){var t=r.top-gap-ch; return t>=lo ? [cl(r.left+r.width/2-cw/2,16,vw-cw-16), t] : null},
+    function(){var l=r.right+gap; return l+cw<=vw-16 ? [l, cl(r.top,lo,hi-ch)] : null},
+    function(){var l=r.left-gap-cw; return l>=16 ? [l, cl(r.top,lo,hi-ch)] : null}
+  ];
+  for(var k=0;k<cands.length && !pos;k++) pos = cands[k]();
+  if(!pos) pos = [vw-cw-16, hi-ch];
+  card.style.left = pos[0]+'px'; card.style.top = pos[1]+'px';
+  var line = $('#tline line'), dot = $('#tline circle');
+  var cx = pos[0]+cw/2, cy = pos[1]+ch/2;
+  var tx = cl(cx, r.left-8, r.right+8), ty = cl(cy, r.top-8, r.bottom+8);
+  var inside = tx>=pos[0] && tx<=pos[0]+cw && ty>=pos[1] && ty<=pos[1]+ch;
+  if(inside){ line.style.display='none'; dot.style.display='none'; }
+  else{
+    var sx = cl(tx,pos[0],pos[0]+cw), sy = cl(ty,pos[1],pos[1]+ch);
+    line.style.display=''; dot.style.display='';
+    line.setAttribute('x1',sx); line.setAttribute('y1',sy); line.setAttribute('x2',tx); line.setAttribute('y2',ty);
+    dot.setAttribute('cx',tx); dot.setAttribute('cy',ty);
+  }
+}
+function tourShow(){ drawBar(); tourPlace(true); try{history.replaceState(null,'','#'+cur+(MODE==='tour'?'.'+HS:''))}catch(e){} }
+var _raf=0; function again(){ if(_raf) return; _raf=requestAnimationFrame(function(){_raf=0; tourPlace(false)}) }
+window.addEventListener('scroll',again,{passive:true}); window.addEventListener('resize',again);
+function cueHtml(f){
+  var k = keyOf(f), t=SAY[k];
+  if(!t) return '';
+  return '<div class="cue"><span class="cl">You say</span><p class="ct">'+esc(t[0])+'</p><p class="pt">👉 <b>Point at:</b> '+esc(t[1])+'</p></div>';
+}
+var SHORT = ['Bloom et al. (2013)','Gibbs et al. (2021)','Emanuel et al. (2026 revision)'];
+var NSTEPS = {};
+var cur = 0;
+function $(s){return document.querySelector(s)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+
+function srcCard(i, state){
+  var s = SRC[i], b;
+  var parts = String(state).split(':');
+  b = parts[0]==='used' ? BADGE.used(parts[1]) : BADGE[parts[0]]();
+  var q = s.quotes.map(function(t){return '<blockquote>'+esc(t)+'</blockquote>'}).join('');
+  return '<div class="src"><h3>'+s.id+' · '+esc(s.role)+'</h3>'+b+'<p class="short">'+SHORT[i]+'</p><p class="cite">'+esc(s.cite)+'</p><details'+(PM?'':' open')+'><summary>Show the quotes and how the study was done</summary>'+q+'<p class="method">'+esc(s.method)+'</p></details></div>';
+}
+function logHtml(c,n){
+  var list = COMMITS[c].filter(function(x){return x.at<=n}).reverse();
+  if(!list.length) return '<p class="note-line">No snapshots yet. The first save will appear here.</p>';
+  return '<ul class="log">'+list.map(function(x){
+    return '<li class="'+(x.at===n?'new':'')+'"><code>'+x.h+'</code>'+(x.at===n?' <span class="chip">New</span>':'')+'<br>“'+esc(x.m)+'”</li>';
+  }).join('')+'</ul>';
+}
+var GITWORD = {new:'new',modified:'modified',linked:'linked',unlinked:'unlinked',pasted:'replaced',nosrc:'no source',aside:'set aside',saved:'saved'};
+function gitHtml(g){
+  var rows = g.ch.length ? g.ch.map(function(r){
+    return '<li><span class="k '+r[0]+'">'+GITWORD[r[0]]+'</span><span class="w">'+esc(r[1])+'</span><span class="d">'+esc(r[2])+'</span></li>';
+  }).join('') : '<li><span class="d">Nothing changed. Everything is saved.</span></li>';
+  var foot = g.save ? '<div class="foot saved">✓ Saved as snapshot '+g.save+', with the reason shown in the history below.</div>'
+                    : '<div class="foot wait">Not saved yet. Nothing is lost: saving just adds a snapshot and a reason.</div>';
+  return '<div class="git"><h3>git status</h3><span class="note-line">What changed since the last snapshot</span><ul>'+rows+'</ul>'+foot+'</div>';
+}
+function brainHtml(b){
+  return '<div class="brain"><h3>Brainstorm board</h3><div class="qline">'+b.qs.map(function(q){return '<span class="chip">Coach: '+esc(q)+'</span>'}).join('')+'</div>'+
+   '<div class="groups">'+b.groups.map(function(g){return '<div><b>'+esc(g.name)+'</b>'+g.items.map(function(i){return '<span>• '+esc(i)+'</span>'}).join('')+'</div>'}).join('')+'</div>'+
+   '<span class="note-line">Grouped by the Helper. Every bullet is the student’s own words.</span></div>';
+}
+function wordHtml(w){
+  return '<div class="word"><h3>☁️ Vague wording</h3><p><mark class="vague">'+esc(w.phrase)+'</mark></p><p>'+esc(w.why)+'</p>'+
+   (w.dispute?'<div class="dispute"><span class="fakebtn">✋ Disagree with Coach</span><span>'+esc(w.dispute.flag)+'</span><span><b>Student’s reason:</b> “'+esc(w.dispute.reason)+'”</span><span class="note-line">The word stays. The reason goes on the teacher’s page.</span></div>':'')+'</div>';
+}
+function skillChips(sk){return (sk||[]).map(function(k){return '<span class="chip sk">Trains: '+SK[k]+'</span>'}).join('')}
+function asideHtml(a){
+  if(!a) return '<div class="aside-box"><b>Set aside</b><span class="note-line">Nothing set aside yet. Setting a source aside takes one click and a short reason.</span></div>';
+  return '<div class="aside-box" style="border-style:solid;border-color:var(--bad)"><b>Set aside</b><span class="badge aside">⤵ '+a.s+' set aside</span><span><b>Reason chosen:</b> '+esc(a.pill)+'</span><span class="note-line">Student’s note: '+esc(a.note)+'</span></div>';
+}
+function qsHtml(c){
+  return '<h3>3 questions about this student’s own choices</h3><ol class="qs">'+QS[c].map(function(q){return '<li>'+esc(q)+'</li>'}).join('')+'</ol>'+
+   '<div><button class="btn" id="speak" data-c="'+c+'">🔊 Read question 1 aloud</button> <span class="note-line" id="speakmsg"></span></div>'+
+   '<p class="note-line">The answer can be spoken or typed. There is no clock.</p>';
+}
+function receiptHtml(f){
+  var top = '<div class="screen-label">What the teacher sees: the Understanding Receipt</div><div class="screen">';
+  if(f.receipt==='s1'){
+    return top+'<h3>Process profile (facts, not a verdict)</h3>'+
+    '<ul class="profile"><li><b>5</b>snapshots, each with a reason in the student’s words</li><li><b>3 of 3</b>sources used and linked</li><li><b>1</b>whole-paragraph paste, undone by the student</li><li><b>1</b>Coach note the student disagreed with, with a reason</li></ul>'+
+    '<h3>Skills each step trained</h3><ul class="skills">'+
+     '<li><b>'+SK.R+'</b>: steps 3, 5 and 7. Linked claims to passages, and narrowed a claim to match the study’s method.</li>'+
+     '<li><b>'+SK.L+'</b>: steps 2 and 5. Sorted first ideas, then changed view when a source pushed back.</li>'+
+     '<li><b>'+SK.W+'</b>: steps 6, 8 and 9. Replaced a vague phrase with a plain claim, and edited 4 words instead of re-pasting.</li>'+
+     '<li><b>'+SK.C+'</b>: step 7. Added a new hire’s point of view and answered it with evidence.</li></ul>'+
+    '<h3>Where the main idea came from</h3><p>“The gain may depend on the kind of work” first appears in snapshot 102b, in the student’s own words, right after they read Gibbs and colleagues.</p>'+
+    '<div class="dispute"><b>The student disagreed with the Coach once</b><span>The Coach marked “quietly” as vague. Student’s reason: “‘Quietly’ is my point: the cost does not show up in output numbers.”</span><span class="note-line">A good thing to ask about. It shows the student judging their own words.</span></div>'+
+    qsHtml(1)+'</div>';
+  }
+  if(f.receipt==='same'){
+    return top+'<h3>Same standard? (a reasoning check, not a verdict)</h3>'+
+    '<div class="same"><div class="a"><b>⤵ Set aside: Gibbs et al.</b><span>Reason given: “One company only. Cannot generalise.”</span><span class="note-line">The paper’s own description: one large Asian IT services company, over 10,000 professionals.</span></div>'+
+    '<div class="b"><b>✓ Relied on: Bloom et al.</b><span>Used for all of Paragraph 1.</span><span class="note-line">The paper’s own description: one company (CTrip), 249 call-centre volunteers. Also one company, and far fewer people.</span></div></div>'+
+    '<p>Both studies cover a single company. The same reason was used on one and not the other. A person can ask the student why.</p></div>';
+  }
+  return top+'<h3>Process profile (facts, not a verdict)</h3>'+
+   '<ul class="profile"><li><b>3</b>commits, all built on one source (S1)</li><li><b>1 of 3</b>sources set aside, with a reason</li><li><b>1</b>sentence with no source linked</li></ul>'+
+   '<div class="banner"><span aria-hidden="true">ℹ️</span><span><b>Suggested next step:</b> a short spoken answer to the questions below. The teacher decides what happens next.</span></div>'+
+   qsHtml(3)+'</div>';
+}
+
+function render(){
+  var f = FR[cur], h = '';
+  if(f.type==='intro'){
+    h = '<div class="head"><div class="chips"><span class="chip">Start here</span></div><h2>What you are about to see</h2></div>'+
+    '<div class="box say"><h3>In one sentence</h3><p>When students can ask an AI to write for them, a finished essay is no longer proof of understanding. This walkthrough shows a writing tool that helps a student build an essay from one rough idea, keeps a record of how their thinking grew, and gives the teacher three questions to check it in person.</p></div>'+
+    '<div class="box"><h3>How to use this page</h3><p class="big">Press <b>Next</b> at the bottom to move forward and <b>Previous</b> to go back. The arrow keys work too. You will meet three students. Student 1 is the main story, in 10 steps. Students 2 and 3 take 5 steps each. Nothing here is live. The student essays are made up as samples. The research papers and their quotes are real.</p></div>'+
+    '<div class="box"><h3>The three students</h3><div class="words">'+
+      '<div><b>Student 1</b>Starts from one rough idea and builds the essay step by step.</div><div><b>Student 2</b>Pastes in an AI draft.</div><div><b>Student 3</b>Hands everything to a strong AI agent.</div></div></div>'+
+    '<div class="box"><h3>Words you will see</h3><div class="words">'+
+      '<div><b>git status</b>A short list of what changed since the last save, borrowed from how software teams work.</div>'+
+      '<div><b>Snapshot (commit)</b>A saved copy of the essay, with a short reason in the student’s own words.</div>'+
+      '<div><b>Coach</b>Asks questions about the student’s own sources and words. Never writes a sentence for them.</div>'+
+      '<div><b>Helper</b>Does the boring parts: sorting bullet points, finding a quote. Never adds ideas.</div>'+
+      '<div><b>Set aside</b>A source the student chose not to use. One click and a reason.</div>'+
+      '<div><b>Receipt</b>A page for the teacher with facts and three questions. It is not a grade and not a verdict.</div></div></div>'+
+    '<div class="box"><h3>Four skills the Coach trains</h3><div class="words">'+
+      '<div><b>'+SK.R+'</b>What does this study really show, and about whom?</div>'+
+      '<div><b>'+SK.L+'</b>Do my paragraphs agree? What changes when a source pushes back?</div>'+
+      '<div><b>'+SK.W+'</b>Does this phrase say something, or does it only sound smart?</div>'+
+      '<div><b>'+SK.C+'</b>How would someone who disagrees read this?</div></div></div>'+
+    '<div class="box"><h3>The essay question in this demo</h3><p>“Does full-time remote work help or harm how well teams learn and innovate?” (Sample course. Placeholder wording.)</p></div>';
+  } else if(f.type==='outro'){
+    h = '<div class="head"><div class="chips"><span class="chip">The end</span></div><h2>What this shows, and what it does not</h2></div>'+
+    '<div class="box say"><h3>The idea in four lines</h3><p>1. An honest student can start from one rough idea. The Coach asks, the Helper sorts, and the student does the thinking.<br>2. Every step trains one of four skills: reading, logic, writing, communication.<br>3. Pasting is allowed, but a full paste shows as “replaced 100%” and drops its source links, so small edits are the easier path.<br>4. Every submission comes with three questions that a student who did the thinking answers in about 30 seconds.</p></div>'+
+    '<div class="box"><h3>Honest limits</h3><ul class="look"><li>This walkthrough is a mockup. The student essays are made up.</li><li>A very strong AI can fill in everything on the screen. That is why the final check is a person hearing a spoken answer.</li><li>The Receipt is not a grade and not a verdict. A person decides.</li><li>The papers are real, and we used the working-paper versions named on each card.</li></ul></div>'+
+    '<div class="box"><h3>What already runs for real</h3><p>The live Writing Room runs today: <a href="../" style="color:var(--accent)">open the live room</a> (it works when this page is served by the demo app).</p></div>'+
+    '<div class="box"><h3>Sources</h3><ul class="look">'+SRC.map(function(s){return '<li>'+esc(s.cite)+'</li>'}).join('')+'</ul></div>';
+  } else {
+    var c=f.c, n=f.n;
+    h = '<div class="head"><div class="chips"><span class="chip '+CHIPCASE[c]+'">'+CASES[c]+'</span><span class="chip">Step '+n+' of '+NSTEPS[c]+'</span>'+skillChips(f.sk)+'</div><h2>'+esc(f.title)+'</h2></div>'+
+    '<div class="box say rd"><h3>What is happening</h3><p>'+esc(f.plain)+'</p></div>'+
+    '<div class="box rd"><h3>What to look at</h3><ul class="look">'+f.look.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></div>';
+    if(f.receipt){
+      h += receiptHtml(f);
+    } else {
+      var srcs = [0,1,2].map(function(i){return srcCard(i,f.src[i])}).join('');
+      var ps = f.paras.map(function(p,i){
+        var fresh = (f.fresh||[]).indexOf(i)>=0;
+        var cls = 'para'+(p===null?' empty':'')+(fresh?' fresh':'');
+        return '<div class="'+cls+'"><span class="pl">Paragraph '+(i+1)+(fresh?' · new or changed':'')+'</span><p>'+(p===null?'Not written yet.':p)+'</p></div>';
+      }).join('');
+      var hasVague = f.paras.some(function(p){return p && p.indexOf('class="vague"')>=0});
+      h += '<div class="screen-label">What the student sees on screen (sample content)</div><div class="screen"><div class="cols">'+
+        '<div class="col"><h3>Sources</h3>'+srcs+asideHtml(f.aside)+'</div>'+
+        '<div class="col">'+gitHtml(f.git)+
+        (f.brain?brainHtml(f.brain):'')+
+        '<h3>Essay</h3>'+(f.diff||hasVague?'<p class="legend">'+(f.diff?'<del>Red crossed out</del> = removed. <ins>Green underlined</ins> = added. ':'')+(hasVague?'<mark class="vague">Purple</mark> = vague wording the Coach asks about.':'')+'</p>':'')+
+        (f.banner?'<div class="banner"><span aria-hidden="true">⚠️</span><span><b>Reasoning gap:</b> '+esc(f.banner)+'</span></div>':'')+
+        (f.tip?'<div class="banner tip"><span aria-hidden="true">💡</span><span><b>Quick edit:</b> '+esc(f.tip)+'</span></div>':'')+
+        '<div class="essay">'+ps+'</div>'+
+        (f.word?wordHtml(f.word):'')+
+        (f.chip?'<span class="chip warn">'+esc(f.chip)+'</span>':'')+
+        '<div class="box coach-box"><h3>Coach</h3><p>'+esc(f.coach)+'</p><span class="note-line">The Coach asks. It never writes the essay and never gives a grade.</span></div>'+
+        '<div class="box"><h3>History of saved snapshots (newest on top)</h3>'+logHtml(c,n)+'</div></div>'+
+        '</div></div>';
+    }
+  }
+  h = h.replace('</h2></div>','</h2></div>'+cueHtml(f));
+  $('#stage').innerHTML = h;
+  var sp = $('#speak');
+  if(sp) sp.onclick = function(){speakQ1(+sp.getAttribute('data-c'))};
+  drawBar();
+  tourShow();
+}
+function speakQ1(c){
+  var m = $('#speakmsg');
+  if(!('speechSynthesis' in window)){ m.textContent='This browser has no voice. Read the question aloud yourself.'; return; }
+  try{
+    speechSynthesis.cancel();
+    speechSynthesis.speak(new SpeechSynthesisUtterance(QS[c][0]));
+    m.textContent='Reading question 1…';
+  }catch(e){ m.textContent='Could not start the voice. Read the question aloud yourself.'; }
+}
+FR.forEach(function(f){if(f.c) NSTEPS[f.c]=Math.max(NSTEPS[f.c]||0,f.n)});
+function firstOf(c){for(var i=0;i<FR.length;i++){if(FR[i].c===c) return i}return 0}
+function drawBar(){
+  var f = FR[cur];
+  var pills = [['Start',0],['Student 1',firstOf(1)],['Student 2',firstOf(2)],['Student 3',firstOf(3)],['The end',FR.length-1]];
+  $('#pills').innerHTML = pills.map(function(p){
+    var on = (p[1]===0&&f.type==='intro')||(p[0]==='The end'&&f.type==='outro')||(f.c && p[0]==='Student '+f.c);
+    return '<button class="pill" data-go="'+p[1]+'"'+(on?' aria-current="true"':'')+'>'+p[0]+'</button>';
+  }).join('');
+  $('#dots').innerHTML = FR.map(function(x,i){
+    var cls='dot'+(i<cur?' done':'')+((i===firstOf(2)||i===firstOf(3)||i===FR.length-1)?' gap':'');
+    var lab = x.type==='intro'?'Start':x.type==='outro'?'The end':'Student '+x.c+', step '+x.n;
+    return '<button class="'+cls+'" data-go="'+i+'" aria-label="'+lab+'"'+(i===cur?' aria-current="step"':'')+'>'+(x.type?'':x.n)+'</button>';
+  }).join('');
+  var L = tourListFor(cur);
+  $('#prev').disabled = (cur===0 && HS===0);
+  $('#next').disabled = (cur===FR.length-1 && HS>=Math.max(0,L.length-1));
+  $('#count').textContent = (f.type==='intro'?'Start':f.type==='outro'?'The end':CASES[f.c]+' · step '+f.n+' of '+NSTEPS[f.c])+(L.length?' · tip '+(HS+1)+' of '+L.length:'')+'  (screen '+(cur+1)+' of '+FR.length+')';
+}
+function go(i,hs){
+  if(i<0||i>=FR.length) return;
+  cur=i; try{speechSynthesis.cancel()}catch(e){}
+  var L = tourListFor(i); HS = hs==='last' ? Math.max(0,L.length-1) : (hs||0);
+  window.scrollTo(0,0); render();
+}
+document.addEventListener('click',function(e){
+  var t = e.target.closest('[data-go]');
+  if(t) go(+t.getAttribute('data-go'));
+});
+$('#prev').addEventListener('click',function(){step(-1)});
+$('#tback').addEventListener('click',function(){step(-1)});
+$('#tnext').addEventListener('click',function(){step(1)});
+$('#tskip').addEventListener('click',function(){setMode('present');render()});
+$('#next').addEventListener('click',function(){step(1)});
+document.addEventListener('keydown',function(e){
+  if(e.target.closest && e.target.closest('input,textarea')) return;
+  if(e.key==='ArrowRight'||(e.key===' '&&!e.target.closest('button,summary'))){e.preventDefault();step(1)} else if(e.key==='ArrowLeft'){step(-1)}
+});
+var hp = (location.hash||'').slice(1).split('.'), h0 = parseInt(hp[0],10);
+if(h0>=0 && h0<FR.length) cur=h0;
+setMode(MODE);
+var hh = parseInt(hp[1],10); HS = (hh>=0 && hh<tourListFor(cur).length) ? hh : 0;
+render();
+</script>
+</body>
+</html>

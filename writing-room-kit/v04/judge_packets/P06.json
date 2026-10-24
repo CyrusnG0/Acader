@@ -1,0 +1,86 @@
+{
+ "packet": "P06",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units narrowly, limiting increases and extending tenure security but not capping rent levels."
+  },
+  {
+   "n": 2,
+   "claim": "SDU tenants pay a 15\u201325 percent per-square-foot premium because their options are exhausted, and they are disproportionately vulnerable groups."
+  },
+  {
+   "n": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies but left initial rents untouched and excluded co-living SDUs."
+  },
+  {
+   "n": 4,
+   "claim": "Mrs Wong, a nine-year SDU tenant without a written agreement, says the ordinance changed nothing she can see."
+  },
+  {
+   "n": 5,
+   "claim": "A 10 percent rent cut caused by a cap removes roughly 3 to 5 percent of marginal housing stock over five years."
+  },
+  {
+   "n": 6,
+   "claim": "The landlords association argues a hard initial-rent cap is confiscatory and promises members will leave the segment if returns fall below mortgage cost."
+  },
+  {
+   "n": 7,
+   "claim": "The landlords association admits it has no data on members' real margins, and its compliance-cost figures come from a self-reported survey with only a 34 percent response rate."
+  },
+  {
+   "n": 8,
+   "claim": "Hard caps on rent levels show consistent stock contraction, while caps on increases within tenancies show small or null effects on stock."
+  },
+  {
+   "n": 9,
+   "claim": "The stability of SDU stock since 2021 is not proof that binding caps are safe because the 2021 ordinance is second-generation and non-binding."
+  },
+  {
+   "n": 10,
+   "claim": "One think-tank's inference that stable stock proves capacity for more control misreads the natural experiment."
+  },
+  {
+   "n": 11,
+   "claim": "Median rent per square foot in subdivided units rose 3.1 percent from 2021 to 2023, faster than the 1.7 percent for general private rent."
+  },
+  {
+   "n": 12,
+   "claim": "The rent burden for SDU households worsened from 31 to 34 percent of income over the same period."
+  },
+  {
+   "n": 13,
+   "claim": "An NGO survey of 440 households found that 61 percent would trade a rent increase for three years of security of tenure, and 74 percent for a faster public-housing offer."
+  },
+  {
+   "n": 14,
+   "claim": "The NGO report says the real problem is a long queue, and rent caps treat the price symptom of a quantity problem."
+  },
+  {
+   "n": 15,
+   "claim": "The NGO report supports a narrow tightening with tenure security and a light band on initial rents, and opposes a hard cap."
+  },
+  {
+   "n": 16,
+   "claim": "A light, indexed band on initial rents is legally defensible as rate-capping rather than confiscation, surviving judicial review."
+  },
+  {
+   "n": 17,
+   "claim": "Current inspection covers under 6 percent of stock annually, and a certifiable tenancy register needs 40\u201360 staff-years."
+  },
+  {
+   "n": 18,
+   "claim": "The subcommittee could not design an enforcement model that protects the newest-arrival tail first rather than last."
+  },
+  {
+   "n": 19,
+   "claim": "The queue will not shorten this decade, and tenants are being harmed now, so 'don't cap, fix supply' is not a complete answer."
+  },
+  {
+   "n": 20,
+   "claim": "The defensible position is a narrow tightening: tenure security, a reviewable initial-rent band, and enforcement investment targeted at the most exploited tail."
+  }
+ ],
+ "statements": "[0] (typed) I know nothing about this topic. Can you give me sources about subdivided units and rent control in Hong Kong?\n[2] (typed) My guess is that tighter rent control helps tenants but might push landlords to cut supply. I want evidence on both sides. Which archive documents are on this?\n[4] (typed) The supply-cut claim is shakier. Please list the archive documents so I can pick some on supply effects and tenant outcomes.\n[6] (pick reason) D6 and D2 give modeling and data on supply, D5 gives the landlord view on unit exit, D11 gives the tenant side and an alternative to caps.\n[16] (typed) From D6 and D2, it looks like moderate controls on increases did not shrink stock, but hard caps would. I think Hong Kong should tighten a bit, but only by limiting increases, not by hard caps.\n[18] (typed) D11 says tenants care more about security of tenure than rent level. Does that fit my position?\n[22] (typed) I think Hong Kong should tighten rent control only in the second-generation way: cap increases inside tenancies and give three-year security of tenure. Hard caps would shrink stock (D6p1, D5p2), while the 2021 ordinance did not (D2p1, D6p2). Tenants prefer tenure security (D11p1).\n[24] (typed) D6p4 was a mistake in my note, I mean D6p1 on contraction from cuts in initial rents. My package is tenure security plus limits on increases, which D11p3 also supports, and it avoids the initial-rent cut that D6p1 links to lost stock."
+}

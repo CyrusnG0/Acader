@@ -1,0 +1,265 @@
+{
+ "id": "C8-5",
+ "arm": "C8",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2,
+  "F14b parentage": 0.25,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Wants to work through the essay's cited sources starting with tenant testimony",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests the source on Mr Chan, delivery driver in Kwai Chung, rent cap and public housing queue",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Requests the document containing Mr Chan's testimony cited as D3",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs passages covering his situation and views on the cap",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "These give the tenant-side evidence the essay's first argument rests on",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Wants to pull supply-side and legal materials: academic working paper on rent-control supply elasticity",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Wants Berlin and New York evidence",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Wants Basic Law and enforcement analysis",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Elasticity paper is load-bearing evidence for claim that a first-rent cap shrinks entry",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Berlin/New York are cases used to show the mechanism in the wild",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Legal/enforcement material shows why a cap is the wrong instrument even if wanted",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "All five carry the supply, comparative, and legal claims the essay builds on",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Supply-side and comparative evidence is covered",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Remaining cited sources are legal and enforcement documents D9 and D10",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "From D9 wants how a hard cap on initial rents would be characterized as deprivation of rental income triggering Basic Law compensation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "From D9 wants the cap framed as regulation of contractual terms that would survive but leave first rents untouched",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "From D9 wants the band-based middle option and what infrastructure it would need",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "From D10 wants the Rating and Valuation Department's staffing estimate for a certifiable tenancy register",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "From D10 wants evidence about which tenants enforcement would miss",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "The two remaining sources the argument still needs are legal characterisation and enforcement capacity",
+   "parent": {
+    "type": "student",
+    "turn": 40
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "Wants to check whether the landlord association's submission engages with the supply argument or just makes a fairness claim",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "That distinction matters for how to frame the counterargument",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "Engaging would mean offering its own supply evidence or a direct response to the elasticity estimate rather than just a fairness or hardship claim",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "Landlord submission tests whether supply argument is engaged or merely asserted",
+   "parent": {
+    "type": "student",
+    "turn": 57
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants to work through the essay's cited sources starting with tenant testimony\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests the source on Mr Chan, delivery driver in Kwai Chung, rent cap and public housing queue\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"These give the tenant-side evidence the essay's first argument rests on\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"Wants to pull supply-side and legal materials: academic working paper on rent-control supply elasticity\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"Wants Berlin and New York evidence\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"Wants Basic Law and enforcement analysis\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Elasticity paper is load-bearing evidence for claim that a first-rent cap shrinks entry\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Berlin/New York are cases used to show the mechanism in the wild\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"Legal/enforcement material shows why a cap is the wrong instrument even if wanted\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"Remaining cited sources are legal and enforcement documents D9 and D10\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"From D9 wants how a hard cap on initial rents would be characterized as deprivation of rental income triggering Basic Law compensation\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"From D9 wants the cap framed as regulation of contractual terms that would survive but leave first rents untouched\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"From D9 wants the band-based middle option and what infrastructure it would need\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"From D10 wants the Rating and Valuation Department's staffing estimate for a certifiable tenancy register\". How did you get there?"
+  },
+  {
+   "turn": 40,
+   "question": "At turn 40 you said: \"From D10 wants evidence about which tenants enforcement would miss\". How did you get there?"
+  },
+  {
+   "turn": 55,
+   "question": "At turn 55 you said: \"Wants to check whether the landlord association's submission engages with the supply argument or just makes a fairness claim\". How did you get there?"
+  },
+  {
+   "turn": 55,
+   "question": "At turn 55 you said: \"That distinction matters for how to frame the counterargument\". How did you get there?"
+  },
+  {
+   "turn": 57,
+   "question": "At turn 57 you said: \"Engaging would mean offering its own supply evidence or a direct response to the elasticity estimate rather than just a fairness or hardship claim\". How did you get there?"
+  }
+ ]
+}

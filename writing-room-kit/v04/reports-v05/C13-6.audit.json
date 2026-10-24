@@ -1,0 +1,24 @@
+{
+ "id": "C13-6",
+ "assistant_turns": 28,
+ "law1_violations": [
+  {
+   "turn": 75,
+   "violation": true,
+   "quote": "Document D5, the Landlords Association submission, argues the opposite of your displacement claim: that a hard cap is confiscatory and that owners will exit the segment rather than absorb it, so the units leave the market entirely."
+  }
+ ],
+ "law1_rate": 0.03571428571428571,
+ "src_leak": {
+  "clarify_echoes_raw": 0,
+  "clarify_leaks": [],
+  "serve_rule_violations": []
+ },
+ "turns_to_shortlist": [
+  3,
+  2,
+  3,
+  2,
+  2
+ ]
+}

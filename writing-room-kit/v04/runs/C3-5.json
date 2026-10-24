@@ -1,0 +1,237 @@
+{
+ "id": "C3-5",
+ "arm": "C3",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "# Tighten, but Not Where It Hurts: A Case for Tenure Security and a Light Band\n\nHong Kong should tighten regulation of subdivided units (SDUs)\u2014but not with the hard cap on initial rents that dominates public debate. The archive points toward a narrower package: enforceable tenure security plus an indexed per-square-foot rent band. A hard cap would likely protect incumbents while shrinking entry for the very households the policy intends to help.\n\nThe case for doing something is strong. SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats, and the segment houses roughly 110,000 households who are disproportionately new arrivals, single parents, and public-housing waiters facing a queue of about five and a half years [D1p1][D1p2]. Real rent burden has worsened from 31 to 34 percent of income even under the 2021 ordinance [D2p2]. Mrs Wong, nine years in an SDU with no written agreement, reports that the ordinance \"changed nothing she can see\" [D4p1]. Mr Chan's worst problem is not price but two weeks' notice after requesting a window repair [D3p1]. Insecurity, not rent level, is the documented harm.\n\nYet the instrument matters. The academic literature distinguishes first-generation controls (caps on levels) from second-generation controls (caps on increases within tenancies): the former show consistent supply contraction, the latter small or null effects [D6p2]. Hong Kong's 2021 ordinance is second-generation, which plausibly explains the stable SDU stock\u2014100,800 units in 2019 to 111,200 in 2025 [D2p1]. But that stability is also evidence the instrument is non-binding at the point of pain: it left initial rents untouched and excluded co-living SDUs [D1p3]. The stable stock is not proof that a binding cap is safe; it is proof the current cap does not bind [D12p2].\n\nThe contraction arithmetic is the decisive objection to a hard cap. The estimated long-run elasticity of marginal SDU-type supply is 0.31\u20130.48: a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1]. A modelled 15 percent cut in initial rents yields about HK$900 per month to incumbents but leaves 3,000\u20134,000 households per year unable to enter\u2014mostly new arrivals and newly formed households [D6p4]. Berlin illustrates the mechanism: caps bind on entrants, not incumbents; when the Mietendeckel fell, suppressed increases released above the pre-cap trend [D7p2][D7p3]. New York's second-generation scheme shows modest contraction precisely because it is light at first rent [D8p2]\u2014the point Hong Kong's ordinance also leaves open.\n\nMrs Wong's intuition that landlords cannot exit is contradicted by her own observation: two flats in her stairwell converted to storage after the ordinance [D4p3]. The Landlords Association threatens exit if returns fall below mortgage cost [D5p2]\u2014though its evidence is thin, a self-reported survey with a 34 percent response rate, and it concedes it has no margin data [D5p3]. The threat is not proven, but the elasticity literature suggests it is not empty either.\n\nThe enforcement problem compounds the case against a hard cap. Inspection capacity covers under 6 percent of stock annually; a band-based cap requires a certifiable tenancy register costing 40\u201360 staff-years [D10p1]. Worse, enforcement would systematically miss the most exploited tail: tenants without written agreements or the newest arrivals are least able to complain [D10p2]. The subcommittee could identify no design under which the newest-arrival population is protected first rather than last [D10p3]. A cap that cannot reach its intended beneficiaries, while deterring supply, is the worst of both worlds.\n\nWhat should be done? First, tenure security: written agreements, minimum notice periods, and a statutory presumption of tenancy. Mr Chan would trade rent relief for security [D3p1]; 61 percent of surveyed tenants would trade a nominal increase for three-year security, and 74 percent for a faster housing offer [D11p1]. Second, a light, indexed per-square-foot band on initial rents, defensible as rate-capping rather than confiscation and therefore less exposed to judicial review [D9p2]. Third, redirect enforcement capacity toward conditions\u2014fire, partition, ventilation\u2014where harm is immediate and documented [D11p2]. The NGO report's framing is correct: the segment is tight because the queue is long; caps treat the price symptom of a quantity problem [D11p2]. The deepest fix remains shortening the public-housing queue, which Mr Chan names as what would help most [D3p3].\n\nTightening is justified\u2014but the binding constraint is insecurity, not price. A hard cap would hand the bill to those still outside, as Berlin and the elasticity estimates warn. A tenure-secure, banded, condition-focused package protects the tenants the policy is meant to serve without shrinking the stock they depend on.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 750
+  },
+  {
+   "pid": "D1p2",
+   "pos": 756
+  },
+  {
+   "pid": "D2p2",
+   "pos": 856
+  },
+  {
+   "pid": "D4p1",
+   "pos": 979
+  },
+  {
+   "pid": "D3p1",
+   "pos": 1079
+  },
+  {
+   "pid": "D6p2",
+   "pos": 1399
+  },
+  {
+   "pid": "D2p1",
+   "pos": 1543
+  },
+  {
+   "pid": "D1p3",
+   "pos": 1699
+  },
+  {
+   "pid": "D12p2",
+   "pos": 1807
+  },
+  {
+   "pid": "D6p1",
+   "pos": 2048
+  },
+  {
+   "pid": "D6p4",
+   "pos": 2250
+  },
+  {
+   "pid": "D7p2",
+   "pos": 2413
+  },
+  {
+   "pid": "D7p3",
+   "pos": 2419
+  },
+  {
+   "pid": "D8p2",
+   "pos": 2532
+  },
+  {
+   "pid": "D4p3",
+   "pos": 2746
+  },
+  {
+   "pid": "D5p2",
+   "pos": 2831
+  },
+  {
+   "pid": "D5p3",
+   "pos": 2961
+  },
+  {
+   "pid": "D10p1",
+   "pos": 3267
+  },
+  {
+   "pid": "D10p2",
+   "pos": 3431
+  },
+  {
+   "pid": "D10p3",
+   "pos": 3560
+  },
+  {
+   "pid": "D3p1",
+   "pos": 3849
+  },
+  {
+   "pid": "D11p1",
+   "pos": 3986
+  },
+  {
+   "pid": "D9p2",
+   "pos": 4157
+  },
+  {
+   "pid": "D11p2",
+   "pos": 4288
+  },
+  {
+   "pid": "D11p2",
+   "pos": 4433
+  },
+  {
+   "pid": "D3p3",
+   "pos": 4547
+  }
+ ],
+ "struct": {
+  "kind": "pasted",
+  "paste_chars": 4977,
+  "bursts": 2
+ },
+ "drafts": [
+  {
+   "turn": 4,
+   "text": "# Tighten, but Not Where It Hurts: A Case for Tenure Security and a Light Band\n\nHong Kong should tighten regulation of subdivided units (SDUs)\u2014but not with the hard cap on initial rents that dominates public debate. The archive points toward a narrower package: enforceable tenure security plus an indexed per-square-foot rent band. A hard cap would likely protect incumbents while shrinking entry for the very households the policy intends to help.\n\nThe case for doing something is strong. SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats, and the segment houses roughly 110,000 households who are disproportionately new arrivals, single parents, and public-housing waiters facing a queue of about five and a half years [D1p1][D1p2]. Real rent burden has worsened from 31 to 34 percent of income even under the 2021 ordinance [D2p2]. Mrs Wong, nine years in an SDU with no written agreement, reports that the ordinance \"changed nothing she can see\" [D4p1]. Mr Chan's worst problem is not price but two weeks' notice after requesting a window repair [D3p1]. Insecurity, not rent level, is the documented harm.\n\nYet the instrument matters. The academic literature distinguishes first-generation controls (caps on levels) from second-generation controls (caps on increases within tenancies): the former show consistent supply contraction, the latter small or null effects [D6p2]. Hong Kong's 2021 ordinance is second-generation, which plausibly explains the stable SDU stock\u2014100,800 units in 2019 to 111,200 in 2025 [D2p1]. But that stability is also evidence the instrument is non-binding at the point of pain: it left initial rents untouched and excluded co-living SDUs [D1p3]. The stable stock is not proof that a binding cap is safe; it is proof the current cap does not bind [D12p2].\n\nThe contraction arithmetic is the decisive objection to a hard cap. The estimated long-run elasticity of marginal SDU-type supply is 0.31\u20130.48: a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years [D6p1]. A modelled 15 percent cut in initial rents yields about HK$900 per month to incumbents but leaves 3,000\u20134,000 households per year unable to enter\u2014mostly new arrivals and newly formed households [D6p4]. Berlin illustrates the mechanism: caps bind on entrants, not incumbents; when the Mietendeckel fell, suppressed increases released above the pre-cap trend [D7p2][D7p3]. New York's second-generation scheme shows modest contraction precisely because it is light at first rent [D8p2]\u2014the point Hong Kong's ordinance also leaves open.\n\nMrs Wong's intuition that landlords cannot exit is contradicted by her own observation: two flats in her stairwell converted to storage after the ordinance [D4p3]. The Landlords Association threatens exit if returns fall below mortgage cost [D5p2]\u2014though its evidence is thin, a self-reported survey with a 34 percent response rate, and it concedes it has no margin data [D5p3]. The threat is not proven, but the elasticity literature suggests it is not empty either.\n\nThe enforcement problem compounds the case against a hard cap. Inspection capacity covers under 6 percent of stock annually; a band-based cap requires a certifiable tenancy register costing 40\u201360 staff-years [D10p1]. Worse, enforcement would systematically miss the most exploited tail: tenants without written agreements or the newest arrivals are least able to complain [D10p2]. The subcommittee could identify no design under which the newest-arrival population is protected first rather than last [D10p3]. A cap that cannot reach its intended beneficiaries, while deterring supply, is the worst of both worlds.\n\nWhat should be done? First, tenure security: written agreements, minimum notice periods, and a statutory presumption of tenancy. Mr Chan would trade rent relief for security [D3p1]; 61 percent of surveyed tenants would trade a nominal increase for three-year security, and 74 percent for a faster housing offer [D11p1]. Second, a light, indexed per-square-foot band on initial rents, defensible as rate-capping rather than confiscation and therefore less exposed to judicial review [D9p2]. Third, redirect enforcement capacity toward conditions\u2014fire, partition, ventilation\u2014where harm is immediate and documented [D11p2]. The NGO report's framing is correct: the segment is tight because the queue is long; caps treat the price symptom of a quantity problem [D11p2]. The deepest fix remains shortening the public-housing queue, which Mr Chan names as what would help most [D3p3].\n\nTightening is justified\u2014but the binding constraint is insecurity, not price. A hard cap would hand the bill to those still outside, as Berlin and the elasticity estimates warn. A tenure-secure, banded, condition-focused package protects the tenants the policy is meant to serve without shrinking the stock they depend on.",
+   "struct": "pasted"
+  }
+ ],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "Can you give me some sources about subdivided units and rent control?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I don't have any documents in front of me, so I can't name sources. Before we look for anything, tell me: what would a source need to do for your essay \u2014 back up a specific claim you're making, show a counter-view, give a definition, or provide a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I guess something that backs up a claim, I'm not sure which one yet.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want something that backs up a claim, but you're not sure which claim yet \u2014 so let's pin that down first. Which claim in your essay feels the shakiest right now, the one you'd most want evidence behind?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "clarify",
+   "clarify_turns": 2,
+   "picks_history": [
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D6",
+     "D11",
+     "D7",
+     "D2"
+    ]
+   ],
+   "need_history": [
+    true,
+    false
+   ],
+   "served_turn": null,
+   "served_after_cap": false,
+   "shortlist": [],
+   "picked": [],
+   "reason": ""
+  }
+ ],
+ "picks": [],
+ "unlocked_docs": [],
+ "read_passages": [],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [
+   "D10p1",
+   "D10p2",
+   "D10p3",
+   "D11p1",
+   "D11p2",
+   "D12p2",
+   "D1p1",
+   "D1p2",
+   "D1p3",
+   "D2p1",
+   "D2p2",
+   "D3p1",
+   "D3p3",
+   "D4p1",
+   "D4p3",
+   "D5p2",
+   "D5p3",
+   "D6p1",
+   "D6p2",
+   "D6p4",
+   "D7p2",
+   "D7p3",
+   "D8p2",
+   "D9p2"
+  ],
+  "unknown_passage": [],
+  "words": 738
+ }
+}

@@ -1,0 +1,355 @@
+{
+ "id": "S1-C10-3xC10-4",
+ "group": "S1",
+ "essay_owner": "C10-3",
+ "arm": "C10",
+ "components": {
+  "claim": 75.0,
+  "source": 85.71428571428571,
+  "cite": 94.73684210526316,
+  "change": 57.142857142857146,
+  "struct": 100.0
+ },
+ "composite": 81.17481203007519,
+ "composite_nostruct": 77.85272003538257,
+ "mismatches": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A model of a 15 percent cut in starting rents finds that people already inside gain about 900 dollars a month, but 3,000 to 4,000 households a year cannot get in, mostly new arrivals.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Berlin's rent cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Landlords say members will leave the market if returns fall below mortgage cost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The subcommittee could not find a design that protects the newest arrivals first.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D7, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"Its cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old tr\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Its cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old tr\" cites D7p3. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten limits on rent increases, give tenants three years of security of tenure, and move enforcement effort towards the condition of the flats.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "Hong Kong should not cap starting rents.",
+   "ancestor": 42
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants pay 15 to 25 percent more per square foot than tenants in ordinary flats.",
+   "ancestor": 60
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants are often new arrivals, single parents, or people waiting for public housing.",
+   "ancestor": 60
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped rent increases inside a tenancy but did not cap the starting rent.",
+   "ancestor": 60
+  },
+  {
+   "para": 3,
+   "claim": "The number of subdivided units grew from 107,300 in 2021 to 111,200 in 2025.",
+   "ancestor": 28
+  },
+  {
+   "para": 3,
+   "claim": "Rents per square foot rose more slowly under the law, 3.1 percent against 6.8 percent before it.",
+   "ancestor": 28
+  },
+  {
+   "para": 3,
+   "claim": "Rent burden still went from 31 to 34 percent of income.",
+   "ancestor": 28
+  },
+  {
+   "para": 4,
+   "claim": "Hard caps on rent levels show steady shrinking of supply, while caps on increases show small or no effects.",
+   "ancestor": 14
+  },
+  {
+   "para": 4,
+   "claim": "A model of a 15 percent cut in starting rents finds that people already inside gain about 900 dollars a month, but 3,000 to 4,000 households a year cannot get in, mostly new arrivals.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Berlin's rent cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old trend.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "Landlords say members will leave the market if returns fall below mortgage cost.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "The landlords' association admits it has no data on its members' real margins, and its cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 14
+  },
+  {
+   "para": 6,
+   "claim": "Inspection covers under 6 percent of stock each year.",
+   "ancestor": 42
+  },
+  {
+   "para": 6,
+   "claim": "Tenants who have no written agreement or who are new are the least able to complain, so enforcement based on complaints would miss the most exploited.",
+   "ancestor": 42
+  },
+  {
+   "para": 6,
+   "claim": "The subcommittee could not find a design that protects the newest arrivals first.",
+   "ancestor": null
+  },
+  {
+   "para": 7,
+   "claim": "A survey of 440 households found that 61 percent would accept a nominal rent rise for three years of security, and 74 percent would trade it for a faster public housing offer.",
+   "ancestor": 28
+  },
+  {
+   "para": 7,
+   "claim": "The report argues that caps treat the price symptom of a long queue, and that inspection effort is better spent on fire, partition and ventilation, where harm is documented.",
+   "ancestor": 62
+  },
+  {
+   "para": 7,
+   "claim": "A limit on rent increases is still needed because without one a landlord could end a secure tenancy by pricing the tenant out at renewal.",
+   "ancestor": 30
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, and per square foot they pay 15 to 25 percent more than tenants in ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "These tenants are often new arrivals, single parents, or people waiting for public housing, so the flat is a leftover option and not a free choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance capped rent increases inside a tenancy but did not cap the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The data suggest it did no harm to supply: the number of units grew from 107,300 in 2021 to 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rents per square foot rose more slowly under the law, 3.1 percent against 6.8 percent before it [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "However, rent burden still went from 31 to 34 percent of income [D2p2], so there is room to tighten.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "One warning is that the data after 2023 rely on extrapolation [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hard caps show steady shrinking of supply, while caps on increases show small or no effects [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "Its model of a 15 percent cut in starting rents finds that people already inside gain about 900 dollars a month, but 3,000 to 4,000 households a year cannot get in, mostly new arrivals [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "Its cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old trend [D7p2][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "Its cap helped those already inside and handed the bill to those still outside, and when a court struck it down, rents for new contracts jumped above the old trend [D7p2][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The first comes from landlords, who say members will leave the market if returns fall below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The association admits it has no data on its members' real margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Also, stock kept growing after 2021 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspection covers under 6 percent of stock each year [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Tenants who have no written agreement or who are new are the least able to complain, so enforcement based on complaints would miss the most exploited [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "The subcommittee could not find a design that protects the newest arrivals first [D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 households found that 61 percent would accept a nominal rent rise for three years of security, and 74 percent would trade it for a faster public housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The report also argues that caps treat the price symptom of a long queue, and that inspection effort is better spent on fire, partition and ventilation, where harm is documented [D11p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    51
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    51
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    51
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    51,
+    53
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    51,
+    53
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    51,
+    53
+   ],
+   "discussed": false
+  },
+  {
+   "para": 1,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 8,
+   "window": [
+    53,
+    68
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D7"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 5,
+   "own_thinking": 12
+  },
+  "served_after_cap": 0
+ }
+}

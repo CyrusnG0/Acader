@@ -1,0 +1,578 @@
+{
+ "id": "C5-4",
+ "arm": "C5",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.8181818181818183,
+  "F14b parentage": 0.6612903225806451,
+  "F14c grounded chains": 0.55
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 25
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "I know nothing about this topic",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Request for sources on subdivided units and rent control in Hong Kong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "I want sources that give facts about subdivided units",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "I want a counter-view on rent control",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 gives factual background on subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D5 is the landlords' counter-view against hard rent caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Weighing both sides is the aim",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "SDU tenants pay a per-square-foot premium",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "SDU tenants wait years for public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Landlords say a hard cap makes owners exit",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p2"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "I support tightening, but only partly",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 13,
+   "unit": "Request for sources on evidence about what happens when rent is capped",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "The owner exit claim is the one needing backing",
+   "parent": {
+    "type": "assistant",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "A source would have to show real data on whether supply shrinks after a cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Ideally from a case where a cap happened",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D7 is a real case where a cap was tried (Berlin)",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D6 models supply effects",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Together D6 and D7 test the owner exit claim",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Hong Kong should not impose a hard cap on initial SDU rents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "D6 says first-generation caps shrink the stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "D7 shows Berlin supply fell",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "It should tighten in a softer way, extending second-generation controls",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Protecting tenants who stay, since those showed little stock effect",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "Request for a source giving the tenant side",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "Specifically what tenants want instead of a cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 29,
+   "unit": "The soft 2021 rules left the stock stable",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 29,
+   "unit": "Tightening along that same line seems low risk",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 29,
+   "unit": "I need survey findings on what tenants want",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D11 surveys 440 tenants on preferences",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D4 is a tenant who supports a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Together they give survey data and a first-hand opposing voice",
+   "parent": {
+    "type": "student",
+    "turn": 29
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "The 2021 ordinance was a soft second-generation rule",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "The stock kept growing",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "A light rule like New York's costs show up as less maintenance rather than lost units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "Request for sources on the stock index, New York and the 2021 ordinance",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "The stock-kept-growing claim does most of the work",
+   "parent": {
+    "type": "assistant",
+    "turn": 40
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "D2 is the stock data showing whether units kept growing after 2021",
+   "parent": {
+    "type": "assistant",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "D8 is the New York case of a light rule",
+   "parent": {
+    "type": "assistant",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "A hard cap protects tenants already inside while the cost falls on newcomers",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "The paragraph uses the elasticity numbers, the Berlin case, and one tenant who saw units converted to storage",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "The tenant is a first-hand account showing conversion happening",
+   "parent": {
+    "type": "assistant",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "For the stability point I want a counter-view on whether it really held",
+   "parent": {
+    "type": "assistant",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D3 is Mr Chan's first-hand account of unit conversion",
+   "parent": {
+    "type": "assistant",
+    "turn": 54
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "D12 is the counter-view on whether stability under the 2021 ordinance is real",
+   "parent": {
+    "type": "assistant",
+    "turn": 54
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "Enforcement capacity is too small to police a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "A cap would also face legal challenge",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 65,
+   "unit": "The legal one is harder",
+   "parent": {
+    "type": "assistant",
+    "turn": 64
+   }
+  },
+  {
+   "turn": 65,
+   "unit": "A source would need to show an actual legal analysis of compensation claims or judicial review",
+   "parent": {
+    "type": "assistant",
+    "turn": 64
+   }
+  },
+  {
+   "turn": 67,
+   "unit": "D9 is the legal analysis of compensation and judicial review",
+   "parent": {
+    "type": "assistant",
+    "turn": 66
+   }
+  },
+  {
+   "turn": 67,
+   "unit": "D10 is the enforcement minute on inspection capacity",
+   "parent": {
+    "type": "assistant",
+    "turn": 66
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "The stock grew under the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "That rule did not cap initial rents, so growth does not show a binding cap is safe",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p2"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "D6p1 and D6p4 show a binding cap shrinks stock and shuts newcomers out",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "Mr Chan in D3p2 saw units locked",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "Enforcement covers under 6 percent of stock, so a hard cap would be hard to police",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "D9p1 says a hard cap risks compensation claims",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 75,
+   "unit": "My position stays: tighten tenure and add only a light band",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 77,
+   "unit": "Stable stock shows a soft rule like the 2021 one is low risk and says nothing about a hard cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 76
+   }
+  },
+  {
+   "turn": 77,
+   "unit": "I support extending the soft rules and a light band, not a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 79,
+   "unit": "The other think-tank is right that capacity exists for more soft control, which is what I back",
+   "parent": {
+    "type": "passage",
+    "pid": "D12p2"
+   }
+  },
+  {
+   "turn": 79,
+   "unit": "It does not follow for a binding cap because D12p2 itself says the stability may be an artifact of a non-binding rule",
+   "parent": {
+    "type": "passage",
+    "pid": "D12p2"
+   }
+  },
+  {
+   "turn": 79,
+   "unit": "D6 says binding caps behave differently",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"I know nothing about this topic\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Request for sources on subdivided units and rent control in Hong Kong\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 gives factual background on subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D5 is the landlords' counter-view against hard rent caps\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"I support tightening, but only partly\". How did you get there?"
+  },
+  {
+   "turn": 13,
+   "question": "At turn 13 you said: \"Request for sources on evidence about what happens when rent is capped\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"Ideally from a case where a cap happened\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"D7 is a real case where a cap was tried (Berlin)\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"D6 models supply effects\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Hong Kong should not impose a hard cap on initial SDU rents\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"It should tighten in a softer way, extending second-generation controls\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"Request for a source giving the tenant side\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"Specifically what tenants want instead of a cap\". How did you get there?"
+  },
+  {
+   "turn": 31,
+   "question": "At turn 31 you said: \"D11 surveys 440 tenants on preferences\". How did you get there?"
+  },
+  {
+   "turn": 31,
+   "question": "At turn 31 you said: \"D4 is a tenant who supports a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 39,
+   "question": "At turn 39 you said: \"The stock kept growing\". How did you get there?"
+  },
+  {
+   "turn": 39,
+   "question": "At turn 39 you said: \"A light rule like New York's costs show up as less maintenance rather than lost units\". How did you get there?"
+  },
+  {
+   "turn": 39,
+   "question": "At turn 39 you said: \"Request for sources on the stock index, New York and the 2021 ordinance\". How did you get there?"
+  },
+  {
+   "turn": 51,
+   "question": "At turn 51 you said: \"The paragraph uses the elasticity numbers, the Berlin case, and one tenant who saw units converted to storage\". How did you get there?"
+  },
+  {
+   "turn": 63,
+   "question": "At turn 63 you said: \"Enforcement capacity is too small to police a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 63,
+   "question": "At turn 63 you said: \"A cap would also face legal challenge\". How did you get there?"
+  }
+ ]
+}

@@ -1,0 +1,472 @@
+{
+ "id": "C10-3",
+ "arm": "C10",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.176470588235294,
+  "F14b parentage": 0.8703703703703703,
+  "F14c grounded chains": 0.85
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Hong Kong should tighten rent control on subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Tenants in subdivided units are poor with little bargaining power, so landlords can raise rents freely",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Housing is a basic need and bad conditions hurt health and children",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The government can afford to act because the problem is mostly fairness, not scarcity of money",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "If landlords can raise rents freely, tenants pay more than the flat is worth, and that is unfair",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Fairness is about price versus quality",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Need what tenants actually pay compared with size and condition of the unit",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Need whether the 2022 rent control law changed it",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D1 should explain who the tenants are and what the 2021 law does",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D2 has rent and stock numbers needed to compare price with what tenants get",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "D1p1 shows tenants pay a 15-25 percent premium per square foot, fitting the fairness reason",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "D1p2 shows tenants have no choice while waiting for public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "D1p3 says the 2021 law only capped increases, not starting rent, so tightening would mean capping initial rent",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "D1p4 warns capping initial rent may shrink stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p4"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "D2p1 shows stock kept growing after the 2021 law, so moderate rules did not make units disappear",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Refined view: tighten, but moderately",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Landlords saying they would exit is a claim, not evidence",
+   "parent": {
+    "type": "assistant",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D2p1 shows stock still grew after the 2021 law, so owners did not leave when increases were capped",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "A 15 to 25 percent per-square-foot premium suggests margins are not that thin",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "A hard cap on starting rent is a bigger step than 2021",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Would cap increases more tightly and add limits linked to unit size rather than a hard price cap",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Need evidence from a case where tighter caps were tried and what happened to supply",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Need the strongest counter-view that owners would leave",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "D7 is a real case of a tight cap and what happened to supply",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "D6 is the academic argument that caps shrink stock, to test the view",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "D5 is the landlords' own voice to judge their exit threat",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "D5p3 says landlords have no margin data and a weak survey, so their exit threat is weak evidence",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "D6p2 says hard caps on levels shrink stock while caps on increases do not",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "D6p4 says a 15 percent initial cut helps incumbents about 900 dollars a month but blocks 3,000 to 4,000 households a year from entering",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "D7p3 says the same about Berlin",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "No longer supports a hard cap on starting rent",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Supports tightening the second-generation kind: stricter limits on increases and enforcement, not a price cap",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Did not expect new arrivals to be the losers",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Enforcement matters because the new position depends on rules actually being applied",
+   "parent": {
+    "type": "assistant",
+    "turn": 34
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Wants to know whether the government can realistically inspect and enforce increase limits",
+   "parent": {
+    "type": "assistant",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "A source should show how well enforcement works or fails, and what it changes",
+   "parent": {
+    "type": "assistant",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "D10 comes from the people who would have to enforce the rules, so it tests whether the increase-limit idea is realistic",
+   "parent": {
+    "type": "assistant",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "D11 is a tenant survey arguing for something other than caps, which should be heard",
+   "parent": {
+    "type": "assistant",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D10p1 says inspection covers under 6 percent of stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D10p2 says those least able to complain are most exploited",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p2"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "D11p1 says tenants care more about tenure security (61 percent) and faster public housing (74 percent) than rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Revised position: tenure security (three-year term) plus modest limits on increases",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Enforcement money should go to building and conditions inspection",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p2"
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Admits rent rules alone will miss new arrivals (D10p3)",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p3"
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Picks option 1: claim, evidence, objection, reply",
+   "parent": {
+    "type": "assistant",
+    "turn": 48
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Final position is the spine, with hard cap and exit threat as objections answered",
+   "parent": {
+    "type": "assistant",
+    "turn": 48
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Strongest objection is D10: modest rule may not reach newest arrivals because enforcement relies on complaints",
+   "parent": {
+    "type": "student",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Reply narrows the claim: rent rules alone are not enough, hence tenure security and conditions enforcement",
+   "parent": {
+    "type": "student",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Second objection is the landlords' exit threat, answered with D5p3 and D2p1",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Agrees with D11 and has moved toward it",
+   "parent": {
+    "type": "assistant",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "D11p1 shows tenants prefer tenure security, so tenure becomes the centre of the plan",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Limits rent rules to increases, which cost less to police than a starting-rent band",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Still differs from D11: some rent limit needed because a landlord can price the tenant out at renewal",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "No passage read speaks to renewal pricing; it is own reasoning and a gap to flag as an assumption",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Hong Kong should tighten rent control on subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Tenants in subdivided units are poor with little bargaining power, so landlords can raise rents freely\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Housing is a basic need and bad conditions hurt health and children\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The government can afford to act because the problem is mostly fairness, not scarcity of money\". How did you get there?"
+  },
+  {
+   "turn": 47,
+   "question": "At turn 47 you said: \"Revised position: tenure security (three-year term) plus modest limits on increases\". How did you get there?"
+  },
+  {
+   "turn": 53,
+   "question": "At turn 53 you said: \"Still differs from D11: some rent limit needed because a landlord can price the tenant out at renewal\". How did you get there?"
+  },
+  {
+   "turn": 55,
+   "question": "At turn 55 you said: \"No passage read speaks to renewal pricing; it is own reasoning and a gap to flag as an assumption\". How did you get there?"
+  }
+ ]
+}

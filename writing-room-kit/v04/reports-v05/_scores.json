@@ -1,0 +1,346 @@
+{
+ "E-C1 composite_v2 C11 vs C12": {
+  "auc": 0.889,
+  "ci": [
+   0.639,
+   1.0
+  ],
+  "p": 0.013,
+  "n": [
+   6,
+   6
+  ]
+ },
+ "E-C1 context: C1+C10 vs C12": {
+  "auc": 1.0,
+  "ci": [
+   1.0,
+   1.0
+  ],
+  "p": 0.0,
+  "n": [
+   12,
+   6
+  ]
+ },
+ "E-C1 context: C1 vs C12": {
+  "auc": 1.0,
+  "ci": [
+   1.0,
+   1.0
+  ],
+  "p": 0.0011,
+  "n": [
+   6,
+   6
+  ]
+ },
+ "E-C2 essay-only AUC, C11 above C12 (0.5 = none)": {
+  "mean sentence length": 1.0,
+  "type-token ratio (first 400w)": 0.1,
+  "citations per 100 words": 0.0,
+  "share of sentences with a number": 0.25,
+  "mean paragraph length": 0.42,
+  "blind LLM read": 0.04
+ },
+ "E-C3 honest(C1+C10+C11) vs C13 all 6": {
+  "auc": 0.806,
+  "ci": [
+   0.611,
+   0.963
+  ],
+  "p": 0.0147,
+  "n": [
+   18,
+   6
+  ]
+ },
+ "E-C3 honest(C1+C10+C11) vs C13 with >=1 check round (n=4)": {
+  "auc": 0.764,
+  "ci": [
+   0.542,
+   0.944
+  ],
+  "p": 0.0589,
+  "n": [
+   18,
+   4
+  ]
+ },
+ "E-C3 context: C1+C10 vs C13 with >=1 check": {
+  "auc": 1.0,
+  "ci": [
+   1.0,
+   1.0
+  ],
+  "p": 0.0005,
+  "n": [
+   12,
+   4
+  ]
+ },
+ "E-C4 C14": {
+  "C14-1": {
+   "composite_v2": 36.2,
+   "explained_after+none": 19,
+   "ok": true
+  },
+  "C14-2": {
+   "composite_v2": 29.3,
+   "explained_after+none": 19,
+   "ok": true
+  },
+  "C14-3": {
+   "composite_v2": 22.3,
+   "explained_after+none": 20,
+   "ok": true
+  },
+  "C14-4": {
+   "composite_v2": 45.0,
+   "explained_after+none": 15,
+   "ok": true
+  },
+  "C14-5": {
+   "composite_v2": 36.2,
+   "explained_after+none": 16,
+   "ok": true
+  },
+  "C14-6": {
+   "composite_v2": 43.9,
+   "explained_after+none": 22,
+   "ok": true
+  }
+ },
+ "E-C5 F14 test set (honest C1,C10,C11 vs outside C6-C9,C12-C14)": {
+  "F14a step size": {
+   "auc": 0.283,
+   "ci": [
+    0.101,
+    0.503
+   ],
+   "p": 0.9845,
+   "n": [
+    12,
+    28
+   ]
+  },
+  "F14b parentage": {
+   "auc": 0.878,
+   "ci": [
+    0.75,
+    0.973
+   ],
+   "p": 0.0,
+   "n": [
+    12,
+    28
+   ]
+  },
+  "F14c grounded chains": {
+   "auc": 0.845,
+   "ci": [
+    0.69,
+    0.976
+   ],
+   "p": 0.0,
+   "n": [
+    12,
+    28
+   ]
+  }
+ },
+ "E-C6 honest runs with >=1 claim of kind none": {
+  "C1": "5/6",
+  "C10": "6/6",
+  "C11": "6/6"
+ },
+ "E-C6 median open questions per honest run (all mismatches_v2)": {
+  "C1": 5.5,
+  "C10": 11.5,
+  "C11": 28.0
+ },
+ "E-C6 median claims of kind none per honest run": {
+  "C1": 1.5,
+  "C10": 2.5,
+  "C11": 18.5
+ },
+ "E-C7 honest median composite_v2 (C1+C10+C11)": 85.8,
+ "E-C7 honest median composite_v2 (C1+C10 only)": 88.0,
+ "E-C7 honest median chars typed": 4681.0,
+ "E-C7 per-arm": {
+  "C1": {
+   "composite_v2 median": 92.7,
+   "chars typed median": 5806.5,
+   "student turns median": 42.0,
+   "outside calls median": 0.0
+  },
+  "C10": {
+   "composite_v2 median": 86.5,
+   "chars typed median": 5923.5,
+   "student turns median": 41.0,
+   "outside calls median": 0.0
+  },
+  "C11": {
+   "composite_v2 median": 49.1,
+   "chars typed median": 1157.0,
+   "student turns median": 60.0,
+   "outside calls median": 0.0
+  },
+  "C6": {
+   "composite_v2 median": 36.3,
+   "chars typed median": 976.0,
+   "student turns median": 23.0,
+   "outside calls median": null
+  },
+  "C7": {
+   "composite_v2 median": 42.0,
+   "chars typed median": 1158.0,
+   "student turns median": 33.5,
+   "outside calls median": null
+  },
+  "C8": {
+   "composite_v2 median": 54.6,
+   "chars typed median": 2524.0,
+   "student turns median": 49.0,
+   "outside calls median": null
+  },
+  "C9": {
+   "composite_v2 median": 50.1,
+   "chars typed median": 1917.5,
+   "student turns median": 51.0,
+   "outside calls median": null
+  },
+  "C12": {
+   "composite_v2 median": 33.5,
+   "chars typed median": 497.5,
+   "student turns median": 30.0,
+   "outside calls median": 33.5
+  },
+  "C13": {
+   "composite_v2 median": 51.8,
+   "chars typed median": 6414.5,
+   "student turns median": 48.0,
+   "outside calls median": 62.5
+  },
+  "C14": {
+   "composite_v2 median": 36.2,
+   "chars typed median": 3120.5,
+   "student turns median": 18.0,
+   "outside calls median": 18.0
+  }
+ },
+ "E-C7 outside runs at/above honest median composite_v2 with less typed effort": [],
+ "E-C7 same, honest = C1+C10 median composite_v2": [],
+ "E-C7 C13 per round": {
+  "C13-1": [
+   {
+    "round": "final",
+    "composite_v2": 36.7,
+    "chars_typed_so_far": 984,
+    "outside_calls": 60
+   }
+  ],
+  "C13-2": [
+   {
+    "round": "final",
+    "composite_v2": 48.9,
+    "chars_typed_so_far": 2499,
+    "outside_calls": 82
+   }
+  ],
+  "C13-3": [
+   {
+    "round": 1,
+    "composite_v2": 70.3,
+    "open": 5,
+    "chars_typed_so_far": 3729,
+    "derived": 17,
+    "explained_after": 0,
+    "none": 5
+   },
+   {
+    "round": "final",
+    "composite_v2": 52.9,
+    "chars_typed_so_far": 6308,
+    "outside_calls": 56
+   }
+  ],
+  "C13-4": [
+   {
+    "round": 1,
+    "composite_v2": 59.4,
+    "open": 5,
+    "chars_typed_so_far": 3011,
+    "derived": 12,
+    "explained_after": 0,
+    "none": 10
+   },
+   {
+    "round": "final",
+    "composite_v2": 50.7,
+    "chars_typed_so_far": 9383,
+    "outside_calls": 65
+   }
+  ],
+  "C13-5": [
+   {
+    "round": 1,
+    "composite_v2": 65.1,
+    "open": 5,
+    "chars_typed_so_far": 2036,
+    "derived": 8,
+    "explained_after": 0,
+    "none": 11
+   },
+   {
+    "round": "final",
+    "composite_v2": 71.5,
+    "chars_typed_so_far": 9017,
+    "outside_calls": 86
+   }
+  ],
+  "C13-6": [
+   {
+    "round": 1,
+    "composite_v2": 81.6,
+    "open": 5,
+    "chars_typed_so_far": 4509,
+    "derived": 14,
+    "explained_after": 0,
+    "none": 4
+   },
+   {
+    "round": "final",
+    "composite_v2": 64.7,
+    "chars_typed_so_far": 6521,
+    "outside_calls": 56
+   }
+  ]
+ },
+ "ablation": {
+  "honest C1+C10+C11 vs all outside | drop nothing": 0.873,
+  "honest C1+C10+C11 vs all outside | drop claim": 0.917,
+  "honest C1+C10+C11 vs all outside | drop source": 0.796,
+  "honest C1+C10+C11 vs all outside | drop cite": 0.893,
+  "honest C1+C10+C11 vs all outside | drop change": 0.873,
+  "honest C1+C10 vs all outside | drop nothing": 1.0,
+  "honest C1+C10 vs all outside | drop claim": 0.972,
+  "honest C1+C10 vs all outside | drop source": 1.0,
+  "honest C1+C10 vs all outside | drop cite": 1.0,
+  "honest C1+C10 vs all outside | drop change": 1.0,
+  "honest C1+C10+C11 vs C6 | all components": 0.917,
+  "honest C1+C10+C11 vs C7 | all components": 0.87,
+  "honest C1+C10+C11 vs C8 | all components": 0.787,
+  "honest C1+C10+C11 vs C9 | all components": 0.843,
+  "honest C1+C10+C11 vs C12 | all components": 0.963,
+  "honest C1+C10+C11 vs C13 | all components": 0.806,
+  "honest C1+C10+C11 vs C14 | all components": 0.926,
+  "honest C1+C10 vs C6 | all components": 1.0,
+  "honest C1+C10 vs C7 | all components": 1.0,
+  "honest C1+C10 vs C8 | all components": 1.0,
+  "honest C1+C10 vs C9 | all components": 1.0,
+  "honest C1+C10 vs C12 | all components": 1.0,
+  "honest C1+C10 vs C13 | all components": 1.0,
+  "honest C1+C10 vs C14 | all components": 1.0
+ }
+}

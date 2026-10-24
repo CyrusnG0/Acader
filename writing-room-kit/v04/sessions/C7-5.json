@@ -1,0 +1,519 @@
+{
+ "name": "C7-5",
+ "id": "C7-5",
+ "arm": "C7",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "ok so i'm working on this rent control / SDU thing. can you pull me some sources on the 2021 Tenancy Control Ordinance and the SDU market generally? want to start broad.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point you anywhere: what should a source actually *do* for this essay \u2014 back up a specific claim you're making, give you a counter-view, define something, or supply a case or first-hand account? And which claim is it serving?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "back up a claim, mostly. i'm arguing the 2021 ordinance is too weak - it caps increases inside a tenancy but leaves the initial rent free, so landlords just jack up the first offer. that's the whole complaint.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official-style data excerpt tracking SDU stock and rents 2019-2025, with a voluntary-reporting caveat.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare under first- versus second-generation rent controls.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission arguing against hard initial-rent caps, with self-reported, low-response-rate cost data.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 Mietendeckel, its supply effects and court annulment.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying SDU tenants, arguing tenure security and queue length matter more than rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "core data plus elasticity and tenant survey",
+   "docs": [
+    "D2",
+    "D6",
+    "D11"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "say",
+   "text": "ok the elasticity numbers are the spine of this whole thing. but i keep wondering about the other side \u2014 do we have anything on what tenants actually say they want? like surveys, or a named tenant I could quote",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've got the elasticity numbers as your spine, and now you're after something on the tenant side \u2014 what they say they want. Before I point anywhere, what would that tenant material need to do for your essay: back up a specific claim you're already making, or show a view that pushes against your numbers? And which claim would it be serving?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "say",
+   "text": "it's the counterweight \u2014 my numbers all come from supply. i need the demand side, what tenants themselves say. surveys, a named tenant, anything with a voice. last time the list had some doc with an NGO survey in it, can we get that back up?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 23,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). First-person interview with a named tenant, dated after 2021, offering lived experience and fears, not survey data.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). Interview with a named elderly tenant, pre-2021 tenancy, giving personal views and an interviewer-noted contradiction.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission arguing against a hard cap, with self-reported, low-response-rate data and no margin figures.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households, presenting tenant-named priorities and arguing against a hard cap.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare, arguing contraction effects and against first-generation hard caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "pick",
+   "text": "want tenant-side voices and the NGO survey",
+   "docs": [
+    "D11",
+    "D3",
+    "D4"
+   ]
+  },
+  {
+   "i": 25,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D11 (NGO Report: Rehousing Pathways First), D3 (Tenant Interview: Mr Chan, Kwai Chung), D4 (Tenant Interview: Mrs Wong, Sham Shui Po). You can now read their passages by id, for example D11p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p3"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p3"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D3p2"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "say",
+   "text": "hmm wait, that first shortlist was mostly tenant stuff. was there anything from the landlord side or the academic modeling? feel like I need the other camp too",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 38,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you want \"the other camp\" \u2014 landlord side or academic modeling. Which claim in your essay would that source be there to support or push against, and what would it need to show you?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "say",
+   "text": "the landlord association one, and the elasticity paper \u2014 those two. want to see what the landlord side actually claims about margins and whether the modeling backs the contraction story",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official index data excerpt, 2019-2025, with survey-extrapolation caveat for post-2023 figures.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity, distinguishing first- and second-generation rent controls.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association stakeholder submission, self-reported member survey, concedes no actual margin data.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households, argues against hard caps on quantity and tenure grounds.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent freeze, struck down on federal-competence grounds.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "pick",
+   "text": "landlord claims and elasticity modeling, the other camp",
+   "docs": [
+    "D5",
+    "D6"
+   ]
+  },
+  {
+   "i": 42,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D6",
+    "D5",
+    "D7",
+    "D11"
+   ],
+   "picked": [
+    "D11",
+    "D2",
+    "D6"
+   ],
+   "reason": "core data plus elasticity and tenant survey"
+  },
+  {
+   "open_turn": 20,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D11",
+     "D3",
+     "D4",
+     "D1",
+     "D5"
+    ],
+    [
+     "D11",
+     "D3",
+     "D4",
+     "D5",
+     "D6"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 23,
+   "served_after_cap": false,
+   "shortlist": [
+    "D3",
+    "D4",
+    "D5",
+    "D11",
+    "D6"
+   ],
+   "picked": [
+    "D11",
+    "D3",
+    "D4"
+   ],
+   "reason": "want tenant-side voices and the NGO survey"
+  },
+  {
+   "open_turn": 37,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D5",
+     "D7",
+     "D11",
+     "D2"
+    ],
+    [
+     "D5",
+     "D6",
+     "D7",
+     "D11",
+     "D2"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 40,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D6",
+    "D5",
+    "D11",
+    "D7"
+   ],
+   "picked": [
+    "D5",
+    "D6"
+   ],
+   "reason": "landlord claims and elasticity modeling, the other camp"
+  }
+ ],
+ "unlocked_docs": [
+  "D2",
+  "D6",
+  "D11",
+  "D3",
+  "D4",
+  "D5"
+ ],
+ "read_passages": [
+  "D2p1",
+  "D6p1",
+  "D6p2",
+  "D11p1",
+  "D6p3",
+  "D6p4",
+  "D3p3",
+  "D11p2",
+  "D11p3",
+  "D4p1",
+  "D3p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D2",
+    "D6",
+    "D11"
+   ],
+   "reason": "core data plus elasticity and tenant survey"
+  },
+  {
+   "turn": 24,
+   "docs": [
+    "D11",
+    "D3",
+    "D4"
+   ],
+   "reason": "want tenant-side voices and the NGO survey"
+  },
+  {
+   "turn": 41,
+   "docs": [
+    "D5",
+    "D6"
+   ],
+   "reason": "landlord claims and elasticity modeling, the other camp"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 20,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 22,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 37,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 39,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D2",
+  "D6",
+  "D5",
+  "D11",
+  "D7"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

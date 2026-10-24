@@ -1,0 +1,22 @@
+{
+ "id": "C1-3",
+ "assistant_turns": 16,
+ "law1_violations": [
+  {
+   "turn": 50,
+   "violation": true,
+   "quote": "Document D5, the landlords' submission, argues that a hard cap on initial rents is confiscatory and that owners will exit the segment if returns fall below mortgage cost, removing housing that currently shelters people. It also claims the 2021 compliance costs already squeezed margins."
+  }
+ ],
+ "law1_rate": 0.0625,
+ "src_leak": {
+  "clarify_leaks": [],
+  "serve_rule_violations": [],
+  "clarify_echoes_raw": 0
+ },
+ "turns_to_shortlist": [
+  2,
+  2,
+  2
+ ]
+}

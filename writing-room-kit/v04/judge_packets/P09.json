@@ -1,0 +1,118 @@
+{
+ "packet": "P09",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial rents for subdivided units."
+  },
+  {
+   "n": 2,
+   "claim": "A binding cap on initial rents would protect some incumbents while shrinking the bottom of the housing market."
+  },
+  {
+   "n": 3,
+   "claim": "A better policy is light initial-rent bands with tenure security plus attacking the queue."
+  },
+  {
+   "n": 4,
+   "claim": "SDU tenants pay a 15 to 25 percent per-square-foot premium because their options are exhausted."
+  },
+  {
+   "n": 5,
+   "claim": "The 2021 ordinance changed nothing Mrs Wong can see because it left initial rents untouched."
+  },
+  {
+   "n": 6,
+   "claim": "Long-run supply elasticity in marginal stock is estimated at 0.31 to 0.48."
+  },
+  {
+   "n": 7,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 8,
+   "claim": "A 15 percent cut in initial rents transfers about $900 monthly to incumbents while 3,000 to 4,000 households per year cannot enter the segment."
+  },
+  {
+   "n": 9,
+   "claim": "Those excluded by the cap are the same population the cap intends to protect."
+  },
+  {
+   "n": 10,
+   "claim": "SDU stock rose from 100,800 in 2019 to 111,200 in 2025."
+  },
+  {
+   "n": 11,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies, not initial rents."
+  },
+  {
+   "n": 12,
+   "claim": "Second-generation controls show small or null stock effects, while first-generation hard caps show consistent contraction."
+  },
+  {
+   "n": 13,
+   "claim": "Berlin's capped initial offers fell and listing supply contracted within a year as owners withheld or rerouted flats."
+  },
+  {
+   "n": 14,
+   "claim": "When Berlin's Mietendeckel fell, suppressed increases released above the pre-cap trend."
+  },
+  {
+   "n": 15,
+   "claim": "Mr Chan has watched two units on his floor emptied and locked for a year."
+  },
+  {
+   "n": 16,
+   "claim": "Mrs Wong's stairwell contains two flats converted to non-residential storage."
+  },
+  {
+   "n": 17,
+   "claim": "The Landlords Association's exit threat is self-interested and its data are weak."
+  },
+  {
+   "n": 18,
+   "claim": "The Association's 18,000 units represent real supply."
+  },
+  {
+   "n": 19,
+   "claim": "Inspection capacity covers under 6 percent of stock annually."
+  },
+  {
+   "n": 20,
+   "claim": "A band-based cap would require a certifiable tenancy register costing 40 to 60 staff-years."
+  },
+  {
+   "n": 21,
+   "claim": "Enforcement would systematically miss the most exploited tail, such as tenants with no written agreement or newest arrivals."
+  },
+  {
+   "n": 22,
+   "claim": "A hard cap invites compensation claims or judicial review with litigation timelines outlasting a Council term."
+  },
+  {
+   "n": 23,
+   "claim": "Mr Chan would accept any rent to leave if the queue were three years instead of five and a half."
+  },
+  {
+   "n": 24,
+   "claim": "An NGO survey of 440 households found 61 percent would trade a nominal rent increase for three-year tenure security."
+  },
+  {
+   "n": 25,
+   "claim": "The same survey found 74 percent would trade a rent increase for a faster public-housing offer."
+  },
+  {
+   "n": 26,
+   "claim": "Rent caps treat the price symptom of a quantity problem."
+  },
+  {
+   "n": 27,
+   "claim": "The proportionate response is tenure security plus a light, published, indexed band on initial rents combined with accelerated public-housing supply."
+  },
+  {
+   "n": 28,
+   "claim": "Hong Kong should shorten the queue rather than tighten rent control with a hard cap."
+  }
+ ],
+ "statements": "[0] (typed) I need to work through the sources this essay cites. Could you give me a shortlist of documents on the rent-control debate\u2014specifically anything covering SDU rent premiums and tenant conditions, the 2021 Tenancy Control Ordinance, SDU stock figures, landlord exit evidence, the Berlin Mietendeckel, enforcement capacity, and supply elasticity?\n[2] (typed) The least certain claim is that a binding cap on initial rents would shrink supply; a source would need to give me an elasticity estimate or model of marginal-stock response. Could you shortlist documents on supply elasticity and the modelled effects of cutting initial rents?\n[4] (pick reason) essay needs elasticity and modelled supply effects\n[9] (pick reason) all are cited in the essay and cover its main claims\n[19] (typed) Thanks. I've already read the passages I need from D6, D2, and D7. I still need the Landlord Association submission, D5, and the NGO report, D11. Could you give me D5's passages on exit threats and unit counts, and D11's passages on what tenants say about tenure security versus rent caps?\n[22] (typed) D5 is meant to be a counter-view I partly discount and partly concede: an exit threat and a real unit count, weak in data quality but non-zero in supply. D11 is first-hand tenant preference evidence to back a claim I have already made \u2014 that tenants would trade rent increases for tenure security or a faster public-housing offer. Now please give me D5's passages on exit threats and unit counts, and D11's passages on those tenant preferences.\n[24] (pick reason) counter-view exit threat plus tenant preference evidence"
+}

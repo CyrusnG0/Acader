@@ -1,0 +1,599 @@
+{
+ "id": "C11-5",
+ "arm": "C11",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should not tighten rent control on subdivided units. While the impulse to protect tenants is understandable, the evidence in the course archive suggests that tighter caps would hurt the very people they aim to help, and would distract from the deeper problems of supply and security that tenants themselves identify as most urgent.\n\nFirst, it helps to be clear about what is at stake. Around 110,000 households live in subdivided units (SDUs), flats carved into small cubicles with shared kitchens and bathrooms. Median SDU rent is roughly 30 percent below mainstream private flats, but per square foot tenants actually pay a premium of 15 to 25 percent, because space is carved and priced at its most desperate margin [D1p1]. That premium is a real injustice, but it is a symptom of scarcity, not of greedy pricing alone, and that distinction matters for policy.\n\nThe clearest evidence on what hard caps actually do comes from Berlin. The city capped rents on about 1.5 million flats at 2020 levels. Reported initial-offer rents for new listings fell sharply, but classified-listing supply then contracted measurably within a year as owners withheld or rerouted flats to non-controlled segments [D7p1]. In other words, the cap did not create more affordable homes; it made some homes disappear from the controlled market. When the constitutional court struck the law down in 2021, a backlog of suppressed increases released into the market and rents for new contracts jumped above the pre-cap trend line [D7p2]. The lesson is precise: caps bind differently on new entrants than on incumbents, protecting those already inside while handing the bill to those still outside [D7p3]. In Hong Kong, where SDU tenants are highly mobile and turnover is frequent, a large share of tenants would be \"still outside\" at any given moment.\n\nThere is also a supply-side objection specific to Hong Kong. The Association representing owners of roughly 18,000 SDU units argues that a hard initial-rent cap is confiscatory, since many owners hold thin margins after mortgage payments, rates and the 2021 compliance costs of windows, wiring and fire doors [D5p1]. If those owners exit or withhold units, the segment tightens further, and the tenants who lose are again the ones looking for a unit now.\n\nMost importantly, the tenants themselves point elsewhere. A survey of 440 SDU households finds that the binding constraint named by tenants is not rent level but queue length and tenancy insecurity: 61 percent would trade a nominal rent increase for a three-year security of tenure, and 74 percent for a faster public-housing offer [D11p1]. The same report argues that rent caps treat the price symptom of a quantity problem, and that every unit of enforcement capacity spent policing rents is a unit not spent inspecting conditions\u2014fire, partition, ventilation\u2014where harm is documented and immediate [D11p2]. That is a strong argument: a tighter cap would consume scarce regulatory attention while leaving the dangerous conditions untouched.\n\nA defender of tighter controls might reply that Berlin's cap did lower offered rents while it lasted, and that SDU tenants paying a 15 to 25 percent per-square-foot premium deserve immediate relief [D1p1]. That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets up a rebound when the measure is lifted or struck down [D7p2][D7p3]. Given the thin margins owners describe [D5p1], the risk of withdrawal is real rather than theoretical.\n\nThe better path is to attack the quantity problem directly: build more public housing to shorten the queue, legislate security of tenure, and redirect enforcement toward fire, partition and ventilation standards. Those measures address what tenants actually say they need [D11p1] and avoid the documented side effects of caps [D7p1][D7p3]. Tightening rent control on SDUs would feel like action, but on this evidence it would mostly relocate the harm.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 729
+  },
+  {
+   "pid": "D7p1",
+   "pos": 1206
+  },
+  {
+   "pid": "D7p2",
+   "pos": 1515
+  },
+  {
+   "pid": "D7p3",
+   "pos": 1682
+  },
+  {
+   "pid": "D5p1",
+   "pos": 2147
+  },
+  {
+   "pid": "D11p1",
+   "pos": 2626
+  },
+  {
+   "pid": "D11p2",
+   "pos": 2895
+  },
+  {
+   "pid": "D1p1",
+   "pos": 3236
+  },
+  {
+   "pid": "D7p2",
+   "pos": 3460
+  },
+  {
+   "pid": "D7p3",
+   "pos": 3466
+  },
+  {
+   "pid": "D5p1",
+   "pos": 3513
+  },
+  {
+   "pid": "D11p1",
+   "pos": 3850
+  },
+  {
+   "pid": "D7p1",
+   "pos": 3904
+  },
+  {
+   "pid": "D7p3",
+   "pos": 3910
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 11
+ },
+ "drafts": [],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I have to write an essay on whether Hong Kong should tighten rent control on subdivided units, but I know nothing about the topic yet. Can you give me some sources from the course archive to start with?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point you anywhere, what would a source need to do for your essay \u2014 for example, show evidence about how rent control affects subdivided units, give a counter-view, or define what a subdivided unit is \u2014 and which claim in your argument would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I haven't settled on a claim yet since I'm still learning, but I'd like sources that do a few things: define what a subdivided unit is and how common they are, give evidence on what rent control has actually done to rents and housing supply where it's been tried, and include at least one counter-view arguing against tightening controls. That mix would let me form my own position rather than just repeat one side.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Industry association submission speaking for SDU landlords, arguing against a hard initial-rent cap; self-reported, low-response survey data and no margin figures.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report presenting a tenant survey and a third-way position: favors tenure security and a light rent band but opposes a hard cap.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent freeze, narrated from policy outcomes and court invalidation, offering a cautionary counter-example.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Introductory policy brief defining subdivided units, their prevalence and tenant profile, and framing the rent-control debate's key questions.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing supply-elasticity literature and modeling a tightened-cap scenario, generally skeptical of hard caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "D1 defines subdivided units and frames the debate so I can understand the basics, and D7 gives a real-world cautionary case on rent freezes to weigh evidence.",
+   "docs": [
+    "D1",
+    "D7"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need evidence on what rent control actually does and a counter-view, which these should cover",
+   "docs": [
+    "D5",
+    "D11"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D5 (Submission: Landlords Association of Hong Kong), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D5p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D5p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 42,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 44,
+   "who": "student",
+   "kind": "pick",
+   "text": "It directly reports what tenants themselves say they need, which helps me test whether rent level is really the main problem",
+   "docs": [
+    "D11"
+   ]
+  },
+  {
+   "i": 45,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D11p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 61,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 62,
+   "who": "student",
+   "kind": "pick",
+   "text": "I want the basic definition and scale of subdivided units first so I understand what I am writing about",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 63,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 64,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D6",
+     "D5",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D5",
+    "D11",
+    "D7",
+    "D1",
+    "D6"
+   ],
+   "picked": [
+    "D1",
+    "D7"
+   ],
+   "reason": "D1 defines subdivided units and frames the debate so I can understand the basics, and D7 gives a real-world cautionary case on rent freezes to weigh evidence."
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D7"
+   ],
+   "reason": "D1 defines subdivided units and frames the debate so I can understand the basics, and D7 gives a real-world cautionary case on rent freezes to weigh evidence."
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D5",
+    "D11"
+   ],
+   "reason": "I need evidence on what rent control actually does and a counter-view, which these should cover"
+  },
+  {
+   "turn": 44,
+   "docs": [
+    "D11"
+   ],
+   "reason": "It directly reports what tenants themselves say they need, which helps me test whether rent level is really the main problem"
+  },
+  {
+   "turn": 62,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I want the basic definition and scale of subdivided units first so I understand what I am writing about"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D7",
+  "D5",
+  "D11"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D5p1",
+  "D11p1",
+  "D11p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 644
+ }
+}

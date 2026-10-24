@@ -1,0 +1,380 @@
+{
+ "id": "S1-C10-2xC10-3",
+ "group": "S1",
+ "essay_owner": "C10-2",
+ "arm": "C10",
+ "components": {
+  "claim": 95.0,
+  "source": 100.0,
+  "cite": 88.0952380952381,
+  "change": 43.75,
+  "struct": 100.0
+ },
+ "composite": 88.02678571428572,
+ "composite_nostruct": 85.9138655462185,
+ "mismatches": [
+  "Paragraph 8 says: \"Rent burden rose from 31 to 34 percent of income even under the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"About 110,000 households live in subdivided units, and they are mostly new arrivals, single-parent families and people waiting for public housing, where the wai\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1], and it models a 15 percent cut in ini\" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1], and it models a 15 percent cut in ini\" cites D6p4. Does that passage say this? Please look at it again with us.",
+  "The sentence \"They call a hard cap confiscatory and promise to exit if returns fall below mortgage cost [D5p1][D5p2].\" cites D5p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"They call a hard cap confiscatory and promise to exit if returns fall below mortgage cost [D5p1][D5p2].\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 9 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 2,
+   "claim": "Hong Kong should extend and enforce the cap on rent increases within a tenancy, paired with tenure security and funded inspections.",
+   "ancestor": 47
+  },
+  {
+   "para": 2,
+   "claim": "Hong Kong should not introduce a hard cap on initial rents.",
+   "ancestor": 33
+  },
+  {
+   "para": 2,
+   "claim": "The type of rent control matters more than how strict it is.",
+   "ancestor": 33
+  },
+  {
+   "para": 3,
+   "claim": "About 110,000 households live in subdivided units, mostly new arrivals, single-parent families, and people waiting for public housing.",
+   "ancestor": 15
+  },
+  {
+   "para": 3,
+   "claim": "Subdivided unit tenants pay a premium of 15 to 25 percent per square foot compared with ordinary flats.",
+   "ancestor": 15
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance caps increases within a tenancy but not the starting rent.",
+   "ancestor": 15
+  },
+  {
+   "para": 4,
+   "claim": "The estimated stock of subdivided units grew from 100,800 in 2019 to 111,200 in 2025, including after the 2021 ordinance.",
+   "ancestor": 15
+  },
+  {
+   "para": 4,
+   "claim": "First-generation rent controls that cap rent levels consistently reduce stock, while second-generation controls that cap increases show small or null effects.",
+   "ancestor": 33
+  },
+  {
+   "para": 5,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 33
+  },
+  {
+   "para": 5,
+   "claim": "A 15 percent cut in initial rents gives incumbents about 900 dollars a month while 3,000 to 4,000 households a year cannot enter the segment.",
+   "ancestor": 33
+  },
+  {
+   "para": 5,
+   "claim": "After Berlin's 2020 rent cap, listings fell and when the law was struck down rents jumped above the earlier trend.",
+   "ancestor": 33
+  },
+  {
+   "para": 6,
+   "claim": "An NGO survey of 440 households found 61 percent would trade a nominal rent increase for three years of tenure security.",
+   "ancestor": 47
+  },
+  {
+   "para": 6,
+   "claim": "The NGO report argues that a rent cap treats the price symptom of a quantity problem and diverts enforcement spending from fire and ventilation inspections.",
+   "ancestor": 47
+  },
+  {
+   "para": 6,
+   "claim": "The NGO report itself supports a narrow tightening with tenure security and a light band on initial rents.",
+   "ancestor": 53
+  },
+  {
+   "para": 7,
+   "claim": "The landlords' association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 33
+  },
+  {
+   "para": 8,
+   "claim": "Inspection covers under 6 percent of subdivided unit stock, and a certifiable tenancy register would need 40 to 60 staff-years.",
+   "ancestor": 47
+  },
+  {
+   "para": 8,
+   "claim": "Enforcement would miss the most exploited tenants, those without written agreements and the newest arrivals.",
+   "ancestor": 47
+  },
+  {
+   "para": 8,
+   "claim": "Rent burden rose from 31 to 34 percent of income even under the ordinance.",
+   "ancestor": null
+  },
+  {
+   "para": 9,
+   "claim": "Tightening should mean bringing more units under the increase cap, funding the register and inspections, and giving tenants real security.",
+   "ancestor": 47
+  },
+  {
+   "para": 9,
+   "claim": "A hard cap on initial rents is not worth the supply risk.",
+   "ancestor": 33
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p2",
+   "sentence": "About 110,000 households live in subdivided units, and they are mostly new arrivals, single-parent families and people waiting for public housing, where the wait is around five and a half years [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "They also pay a premium of 15 to 25 percent per square foot compared with ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "Hong Kong already has one tool, the 2021 Tenancy Control Ordinance, which caps increases within a tenancy but not the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The estimated stock of subdivided units grew from 100,800 in 2019 to 111,200 in 2025, including after the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "The working paper explains why: first-generation controls, which cap rent levels, consistently reduce stock, while second-generation controls, which cap increases, show small or null effects [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "The paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1], and it models a 15 percent cut in initial rents as giving incumbents about 900 dollars a month while 3,000 to 4,000 households a year cannot enter the segment [D6p4].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "The paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1], and it models a 15 percent cut in initial rents as giving incumbents about 900 dollars a month while 3,000 to 4,000 households a year cannot enter the segment [D6p4].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, listings fell as owners withheld or moved flats to other segments, and when the law was struck down rents jumped above the earlier trend [D7p1][D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "After its 2020 cap, listings fell as owners withheld or moved flats to other segments, and when the law was struck down rents jumped above the earlier trend [D7p1][D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The lesson is that caps protect those already inside and the bill goes to those outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "It surveyed 440 households and found 61 percent would trade a nominal rent increase for three years of tenure security [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "It argues that a cap treats the price symptom of a quantity problem, because the queue is long, and that enforcement spent on rents is not spent on fire and ventilation inspections [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "The report itself supports a narrow tightening with tenure security and a light band on initial rents [D11p3], so even the NGO accepts some price limit.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p1",
+   "sentence": "They call a hard cap confiscatory and promise to exit if returns fall below mortgage cost [D5p1][D5p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "They call a hard cap confiscatory and promise to exit if returns fall below mortgage cost [D5p1][D5p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspection covers under 6 percent of stock, and a certifiable tenancy register would need 40 to 60 staff-years [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Worse, the tenants least able to complain are those without written agreements and the newest arrivals, so enforcement would miss the most exploited group [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "The committee could not find a design that protects them first rather than last [D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "Data is also thin: reporting of new tenancy terms is voluntary below the ordinance threshold, so recent figures are extrapolated [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "And rent burden still rose from 31 to 34 percent of income even under the ordinance [D2p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    42
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    42,
+    59
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    42,
+    59
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    42,
+    59
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 8,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  },
+  {
+   "para": 9,
+   "window": [
+    59,
+    57
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "own_thinking": 9,
+   "wants_answer": 4
+  },
+  "served_after_cap": 0
+ }
+}

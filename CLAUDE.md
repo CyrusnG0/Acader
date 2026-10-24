@@ -1,97 +1,115 @@
-# CLAUDE.md — Agent orientation for Acader
+# CLAUDE.md: agent orientation for Acader
 
-> Read this file first. It tells you what this project is, where everything lives,
-> the rules you must not break, and how to leave the repo for the next agent.
+> Read this file first. It says what we are building, where everything lives, the rules you must not break, and how to leave the repo for the next agent.
 
 ## 1. What this project is (30 seconds)
 
-**Acader** (working repo name; product name not decided, see [docs/OPEN_LOOPS.md](docs/OPEN_LOOPS.md) OL-001) is
-**understanding infrastructure for schools in the AI era**:
+**The Writing Room** (repo name "Acader"; product name not final, OL-001) is a **writing platform that schools buy and students write their assignments in. The process is the evidence.**
 
-- Schools upload what they already post to Classroom/Blackboard (lecture videos, notes, assignments, rubrics).
-- We **mine lectures** into a **teaching knowledge graph** that reflects how *their* instructors teach.
-- Students do graded work (code first, then writing) inside **the Room**. A **Helper** removes mechanical friction and a **Coach** asks viva-style questions grounded in the course graph.
-- Each finished piece of work earns a **Proof of Understanding**: portable, owned by the student, backed by evidence.
+- While a student reads, plans and writes, the platform records **where each part of the work came from**: a source passage, a lecture, a Coach exchange, declared outside-AI help, or nowhere we can see.
+- At submission, the teacher gets a one-page **receipt**: what was traced, declared and untraced, plus 2–3 questions worth asking. **It shows where to ask, never a verdict.**
+- A **Helper** answers (reading, finding, citing). A **Coach** asks questions that make the student's idea stronger. Neither writes the student's work.
+- We **assume outside AI is always available** and don't try to block it. Untraced is not AI.
 
-The full vision, market evidence, risks and roadmap are in **[ultimate-proposal.md](ultimate-proposal.md)**, the single source of truth for product intent. If this file or any doc disagrees with the proposal about *product intent*, the proposal wins unless a later entry in [docs/DECISIONS.md](docs/DECISIONS.md) overrides it.
+Source of truth for product intent: **[PRODUCT.md](PRODUCT.md)**. If any doc disagrees with it, PRODUCT.md wins unless a later entry in [docs/DECISIONS.md](docs/DECISIONS.md) overrides it. Current direction: D-024 to D-030 (locked 2026-10-22).
 
 ## 2. Cold-start reading order
 
-1. This file.
-2. [docs/STATUS.md](docs/STATUS.md): where things stand right now and the next action.
-3. [docs/OPEN_LOOPS.md](docs/OPEN_LOOPS.md): unresolved questions, blockers, TODOs.
-4. [ultimate-proposal.md](ultimate-proposal.md): §1 vision, §3 philosophy, §9 module plan, §10 roadmap, §14 one-pager.
-5. [design/README.md](design/README.md): technical designs (architecture, miner, data isolation, code-track MVP).
-6. [docs/UPDATE_LOG.md](docs/UPDATE_LOG.md): what happened in each past session (newest first).
-7. [docs/DECISIONS.md](docs/DECISIONS.md) and [docs/GLOSSARY.md](docs/GLOSSARY.md) when needed.
+1. This file (§8 says which role you are: lead, worker or checker).
+2. [docs/STATUS.md](docs/STATUS.md): where things stand and the single next action.
+3. [docs/TASKS.md](docs/TASKS.md): the task board. Leads pick their task here.
+4. [EXPECTATIONS.md](EXPECTATIONS.md): the checklist every finished task must pass.
+5. [docs/OPEN_LOOPS.md](docs/OPEN_LOOPS.md): open questions, blockers and TODOs.
+6. [PRODUCT.md](PRODUCT.md): what we build and why.
+7. [design/README.md](design/README.md): how it's built (architecture, workspace, event log, provenance, receipt, reading aid, Coach/Helper, privacy, evaluation, build plan).
+8. [docs/UPDATE_LOG.md](docs/UPDATE_LOG.md): what each past session did (newest first).
+9. [docs/DECISIONS.md](docs/DECISIONS.md) and [docs/GLOSSARY.md](docs/GLOSSARY.md) when needed.
 
 ## 3. Repo layout
 
 ```
 Acader/
-├── CLAUDE.md               ← you are here (agent orientation + rules)
-├── README.md               ← human-facing short intro
-├── ultimate-proposal.md    ← product source of truth (vision → roadmap → sources)
-├── CHANGELOG.md            ← user-visible / repo-level changes (Keep a Changelog style)
+├── CLAUDE.md, README.md, PRODUCT.md, EXPECTATIONS.md (task checklist), CHANGELOG.md, TODOS.md
+├── design/               ← v1 engineering designs (read design/README.md)
+├── prototype/            ← v1 code (server/, web/, fixtures/, spikes/); empty until the build starts
+├── shared/llm.py         ← the one DeepSeek client (used by the kit and the prototype)
 ├── docs/
-│   ├── STATUS.md           ← current state snapshot + next action (overwrite each session)
-│   ├── UPDATE_LOG.md       ← append-only session journal (newest on top)
-│   ├── OPEN_LOOPS.md       ← open questions, blockers, TODOs with IDs (OL-xxx)
-│   ├── DECISIONS.md        ← locked decisions log (D-xxx), ADR-lite
-│   └── GLOSSARY.md         ← project vocabulary (Room, Door, Proof, L1/L2/L3 …)
-└── design/
-    ├── README.md           ← design index + status of each design doc
-    ├── architecture.md     ← system overview, modules M1–M11, data flow
-    ├── lecture-miner.md    ← M2 visual miner algorithm + calibration lessons [VALIDATED]
-    ├── data-isolation.md   ← 3-layer model (L1/L2/L3), ownership, cross-checks
-    └── code-track-mvp.md   ← Phase 1 spec draft (variant engine + line-level viva)
+│   ├── STATUS.md, TASKS.md (task board), UPDATE_LOG.md, OPEN_LOOPS.md, DECISIONS.md, GLOSSARY.md
+│   ├── handoffs/         ← one note per finished task, read by the checker
+│   ├── designs/          ← review inputs and history (writing-platform-v1, provenance-engine, process-evidence-room)
+│   ├── renewed-direction/← pitch scripts, verified sources, the renewed proposal
+│   ├── research/         ← market research, deep-research reports and notes, brainstorm records
+│   └── interview-script.md, outreach-data-note.md
+├── writing-room-kit/     ← simulated experiments v0.1–v0.5 (v04/ engine) + hosted static demo (web/)
+└── archive/              ← superseded material (earlier proposals, design v1, code track, stray copies)
 ```
 
-There is **no application code yet**. The validated prototype (`lecture_miner.py` etc.) lived in an earlier session and **is not in this repo** (see OL-002).
+## 4. Non-negotiable rules (product law; do not violate in code, copy or design)
 
-## 4. Non-negotiable rules (product law; do not violate in code, copy, or design)
-
-These come from proposal §3, §8 and §11. Breaking one means building a different product.
-
-1. **Help students think; never think for them.** Never automate argument formation or write the student's content. AI may change *structure* (cluster, order, rename, find gaps) and must use *the student's own words*.
-2. **Helper answers, Coach asks.** The Coach's questions must be grounded in the course graph, not in a generic system prompt.
-3. **Make the right path the easiest one.** Remove mechanical cost (finding, citing, verifying sources). Keep the thinking cost (arguing, defending, explaining).
-4. **Outside is free.** Never police or compete with research tools (Gemini Notebook, Elicit …). The Door imports anything and passes no judgment.
-5. **Typing is not proof.** It is only the entry condition for process evidence. The viva/challenge is the real gate. Accessibility alternatives are mandatory.
-6. **Never a cheat report.** Outputs are comprehension tiers: *Strong / Partial / Oral-verified*. Low confidence leads to a *recommended* oral check, and a human decides any consequence (EU AI Act posture).
-7. **Students own their process data.** Schools see derived signals only. Tenant course materials **never** enter the global graph.
-8. **Professors are heroes.** Explanations point first to how *their own* instructor taught the concept.
-9. **Scope discipline.** The workspace exists for graded work only (code track and writing track). It is not a general notes app.
-10. **Wording discipline.** Never use surveillance vocabulary ("detect", "catch", "cheater"). Never promise "no cheating". Promise *evidence on every submission* and *visibility into who is behind and where*. The selling point is thinking, never time saved.
+1. **Help students think; never think for them.** Never write the student's prose or invent their argument. AI may change *structure* using *the student's own words*.
+2. **Helper answers, Coach asks.** Coach questions are grounded in course material and the student's own trail (they cite block or claim IDs), never in a generic prompt.
+3. **Make the right path the easiest one.** Remove mechanical cost (finding, reading, citing). Keep the thinking cost (arguing, choosing, explaining).
+4. **Outside is free.** Assume outside AI is present. The Door imports anything and passes no judgment. Declaring is never penalised.
+5. **Typing is not proof.** The trace is evidence of the student's thinking (writing traced back to its claim map and sources) and of *where to ask*. The conversation is the gate. Accessibility alternatives are mandatory.
+6. **Never a verdict.** The receipt is a process profile with no score. Untraced is not AI. A human decides any consequence.
+7. **Students own their process data.** Schools see the receipt and derived signals only. Course materials never leave their tenant. **Record what changed in the text, not how you typed it**: no keystroke timing, webcam, screen capture or biometrics.
+8. **Professors are heroes.** Explanations and grounding point first to the student's own instructor's material.
+9. **Scope discipline.** A writing platform for school work. Not a general notes app. The code track is parked (D-030).
+10. **Wording discipline.** Never "detect", "catch", "cheat", "AI-generated", "forensic", "suspect" or "suspicious". Never promise "no cheating" or "100%". Promise *evidence on every submission* and *where to ask*. The selling point is thinking, never time saved.
 
 ## 5. Current focus
 
-**Concierge viva pilot (Approach A), not the full Phase 1 build.** Interview ~5 CS instructors, hand-run one line-level viva on a real assignment, then build only a thin async viva runner. The blind comparison (graph stand-in vs raw pasted notes) tests whether the course graph is a real differentiator. Source: [docs/designs/concierge-viva-pilot.md](docs/designs/concierge-viva-pilot.md) (APPROVED 2026-10-12) and D-011 to D-014 in [docs/DECISIONS.md](docs/DECISIONS.md). The full code track in [design/code-track-mvp.md](design/code-track-mvp.md) is the destination if the pilot succeeds, not the next build. See [docs/STATUS.md](docs/STATUS.md) for the immediate next action.
+**Prototype v1** for one real class first, then more (D-029). **Design is finished; building starts now.**
+1. Reviews: all done (CEO D-032/D-033, eng D-034, design D-036, eng v2 D-037). Latest direction: the live map is the product (D-035); in the pilot it is the outline the student builds, and the mapper is a flagged experiment (D-037); every new idea gets one pillar question, whatever its origin (D-038).
+2. **M0 now**: scaffold, schema, LLM boundary, spikes S1/S2/S5, preregistration, golden-set sources, DESIGN.md. See [docs/TASKS.md](docs/TASKS.md).
+3. Then M1–M5 and M4m ([design/build-plan.md](design/build-plan.md)); ≈ 35–36 build days.
+
+Don't claim more than the engine can establish ([design/provenance.md](design/provenance.md) §2). No real student touches the system before the pilot gate in build-plan.md §4.
 
 ## 6. Session protocol (how to leave the repo for the next agent)
 
+> In the multi-agent flow (§8), **leads and workers write only their own code, docs and handoff**; the **checker** does the shared-file steps below.
+
 At the **start** of a session:
-- Read STATUS.md and OPEN_LOOPS.md. Do not redo work marked done or reopen items marked decided without a reason.
+- Read STATUS.md and OPEN_LOOPS.md. Do not redo work marked done, or reopen items marked decided, without a reason.
 
 At the **end** of every session that changes anything:
 1. **docs/STATUS.md**: overwrite the snapshot (phase, what works, what is in progress, the *single* next action, last-updated date).
 2. **docs/UPDATE_LOG.md**: add a new entry **at the top** with the date, a summary, files touched, and loops opened or closed.
-3. **CHANGELOG.md**: add lines under `[Unreleased]` for repo-level changes (new modules, docs, behavior).
-4. **docs/OPEN_LOOPS.md**: add new loops with the next free `OL-xxx` ID, and move resolved ones to the *Closed* section with the resolution and date. Never reuse IDs.
+3. **CHANGELOG.md**: add lines under `[Unreleased]` for repo-level changes.
+4. **docs/OPEN_LOOPS.md**: add new loops with the next free `OL-xxx` ID; move resolved ones to *Closed* with the resolution and date. Never reuse IDs.
 5. **docs/DECISIONS.md**: record any decision the user locked in (`D-xxx`, with context and consequences).
-6. If a design changed, update the doc in `design/` and its status row in [design/README.md](design/README.md).
+6. If a design changed, update the doc in `design/` and its row in [design/README.md](design/README.md).
 
 Conventions:
-- Dates are absolute ISO (`2026-10-11`), never "yesterday".
-- Mark claims that were tested **[VALIDATED]**. Mark guesses **[ASSUMPTION]**.
-- Keep the proposal unchanged except to fix factual errors. Record evolution in DECISIONS.md instead.
+- Dates are absolute ISO (`2026-10-23`), never "yesterday".
+- Mark tested claims **[VALIDATED]** and guesses **[ASSUMPTION]**. Kit results are simulated: never present them as evidence about real students.
+- Numbers and quotes in pitches and demos come only from `docs/renewed-direction/sources-verified.md` or validated results.
+- Change PRODUCT.md only when a decision changes product intent, and cite the D-xxx.
 
-## 7. Tech notes (for when code starts)
+## 7. Tech notes
 
-- Prototype stack: Python 3, ffmpeg, OpenCV and numpy, with no ML in the visual miner. Command: `python3 lecture_miner.py VIDEO.mp4 --outdir out [--fps 1] [--max-seconds 600]`.
-- Planned additions: Whisper (transcripts), a cheap LLM pass (topic structuring), a VLM (QA spot-checks), Crossref/DOI + Semantic Scholar or Scite (citation verification), and Canvas, Google Classroom and Blackboard (LMS).
-- No language or framework is decided for the app (web Room, dashboard). See OL-008.
-- Large media (videos, `*_out/` frame dumps) must not be committed. See `.gitignore`.
+- **Stack (locked by /plan-eng-review, D-034):** Python 3.12 + FastAPI; Vite + TypeScript + TipTap (ProseMirror) + PDF.js with one `web/schema.json` (server replay via prosemirror-py); SQLite (WAL) everywhere; DB job queue; PDF parser chosen by spike S2; DeepSeek + an OpenAI-compatible backend via `shared/llm.py` (wrap it, don't change it).
+- **Tests:** set `ROOM_LLM=stub` for deterministic LLM output. Kit and web tests: `cd writing-room-kit && ROOM_LLM=stub python3 -m pytest -q v04/tests web/tests`.
+- **Secrets:** `DEEPSEEK_API_KEY` in the repo-root `.env` (gitignored) or the host's secret store. Never commit it.
+- **Hosted demo:** `writing-room-kit/web/` (FastAPI, Fly.io; build from the repo root, see its Dockerfile). `/demo` is the static click-through.
+- Large media and run dumps must not be committed (see `.gitignore`).
+
+## 8. How we work: lead, worker, checker
+
+Several conversations run at once. Each has one role:
+
+| Role | Who | Does | Never does |
+|---|---|---|---|
+| **Lead** | One Opus conversation per task, started by the founder | Claims one task in [docs/TASKS.md](docs/TASKS.md) (Owner + `in progress`); reads the docs it cites; plans; hands well-specified pieces to workers; reviews their output; runs the tests; writes a handoff in [docs/handoffs/](docs/handoffs/README.md); sets the task to `review` | Edit STATUS, UPDATE_LOG, CHANGELOG, DECISIONS or other tasks; decide product questions (it writes them as *proposed decisions* in the handoff) |
+| **Worker** | Subagents launched by a lead: Sonnet, or DeepSeek where TASKS.md marks **D** | One narrow, fully specified piece (a module, its tests, fixtures) | Choose wording, prompts, product behaviour or band rules; touch files outside its piece; see `.env` |
+| **Checker** | The founder's long-running review conversation | Reads each handoff; runs the tests; ticks [EXPECTATIONS.md](EXPECTATIONS.md) line by line; marks `done` or sends back the failing lines; merges; does the §6 protocol (STATUS, UPDATE_LOG, CHANGELOG, OPEN_LOOPS, DECISIONS); takes proposed decisions to the founder; adds the next wave of tasks | Build features itself |
+
+Rules for every role:
+- **Work on a branch per task** (`task/T-0xx-short-name`) or a worktree, never directly on `main`; the checker merges.
+- The docs in `design/` are the spec. If something is unclear or wrong, stop and write it as a proposed decision in the handoff; don't improvise.
+- `ROOM_LLM=stub` for tests; no live LLM calls except golden release runs.
+- DeepSeek workers only if F-005 in TASKS.md is approved; they never receive `.env` or anything outside the repo.
 
 ## Skill routing
 

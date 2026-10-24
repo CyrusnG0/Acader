@@ -1,0 +1,7 @@
+Position: tighten, but target tenure security and rises within tenancies, not a hard cap on starting rent.
+
+Evidence: current rule limits rises in tenancies, stock kept growing [D2p1, D6p2], but rents rose faster than general rents and burden worsened [D2p2]. Tenants want security [D3p1, D11p1] and the queue [D3p3].
+
+Objection: hard caps cut supply [D6p1, D6p3], legal risk [D9p1], New York upkeep and listings cost [D8p3].
+
+Reply: landlord exit threat is weakly evidenced [D5p3] but real [D5p2]; second-generation rules have small effects on stock [D8p2]; use band later only after data [D9p2].

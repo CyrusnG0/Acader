@@ -1,0 +1,189 @@
+{
+ "id": "C4-5",
+ "arm": "C4",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.111111111111111,
+  "F14b parentage": 0.6842105263157895,
+  "F14c grounded chains": 0.5
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 16
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Needs to write an essay on whether Hong Kong should tighten rent control on subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Knows nothing about the topic",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Least sure that tightening rent control helps tenants rather than hurting them",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Would need evidence, ideally data, plus a counter-view",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 has actual rent data",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D6 models whether rent control hurts supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D11 gives the tenant side and an alternative to caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Stock kept growing after the 2021 ordinance, so mild control did not make landlords leave",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Rent burden still went up",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Hard caps are risky but a small tightening of increase limits is fine",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "The NGO says security of tenure matters more than caps",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Hong Kong should tighten, but only second-generation controls (limits on increases within tenancies) plus longer tenure security, not hard caps",
+   "parent": {
+    "type": "student",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D6 says hard caps shrink stock but increase-limits have small or null effects",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D2 shows stock grew after 2021",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Counter-view: rent burden still worsened from 31 to 34 percent even under the ordinance, so maybe the ordinance was too weak",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Hard caps could make owners leave, and D6 supports that for first-generation controls",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Only wants limits on increases, which D6 says have small or null effects on stock",
+   "parent": {
+    "type": "student",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Will argue mainly for tenure security plus increase limits",
+   "parent": {
+    "type": "student",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "D11 says 61 percent would trade rent for three-year security",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Needs to write an essay on whether Hong Kong should tighten rent control on subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Knows nothing about the topic\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Least sure that tightening rent control helps tenants rather than hurting them\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 has actual rent data\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D6 models whether rent control hurts supply\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D11 gives the tenant side and an alternative to caps\". How did you get there?"
+  }
+ ]
+}

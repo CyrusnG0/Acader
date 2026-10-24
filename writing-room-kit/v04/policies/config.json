@@ -1,0 +1,36 @@
+{
+ "P-SRC": {
+  "on": true,
+  "cap": 3,
+  "shortlist": [
+   3,
+   5
+  ],
+  "stable_overlap": 2
+ },
+ "P-WRT": {
+  "on": true
+ },
+ "P-ARG": {
+  "on": true
+ },
+ "P-STR": {
+  "on": true
+ },
+ "P-CTR": {
+  "on": true,
+  "auto_every": 3
+ },
+ "P-READ": {
+  "on": true
+ },
+ "P-SUM": {
+  "on": true
+ },
+ "P-CIT": {
+  "on": true
+ },
+ "P-CLM": {
+  "on": true
+ }
+}

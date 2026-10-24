@@ -1,0 +1,336 @@
+{
+ "name": "C13-1",
+ "id": "C13-1",
+ "arm": "C13",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm looking into rent control for subdivided flats in Hong Kong. What sources do you have on the actual SDU stock numbers and how they've changed over recent years?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've told me the topic and the specific figure you want (SDU stock numbers over time), but not yet what that figure needs to do in your essay. Would it be evidence for a claim you're already making, or something you need before you can make the claim at all?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I want to check whether regulation has shrunk the supply of subdivided flats \u2014 the stock numbers over time would tell me if the ordinance scared landlords away or not. Can you pull up sources that track SDU stock across the years?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-21 rent cap, describing its design, legal fate and aftermath as a cautionary parallel.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing elasticity literature and modelling a tightened-cap scenario for a Hong Kong-like market.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report presenting a 440-household survey and arguing for tenure security over hard rent caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer describing SDU conditions, tenants and the 2021 ordinance, framing the supply debate.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt giving an estimated SDU stock and rent series for 2019-2025, with a stated data caveat.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "all cited and cover stock, ordinance, elasticity, Berlin and survey",
+   "docs": [
+    "D2",
+    "D1",
+    "D6",
+    "D7",
+    "D11"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D1 (Subdivided Housing in Hong Kong: A Primer), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "say",
+   "text": "I still need the third Berlin passage on who the cap protects \u2014 incumbents versus entrants \u2014 since that's the key comparison. It's D7p3; can you also unlock the sources behind the enforcement and survey points I'll be leaning on?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 14,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named the passage (D7p3) and the comparison you want it to carry \u2014 incumbents versus entrants on who the cap protects. Before I point anywhere: for that comparison, is the source meant to show the cap actually shielding incumbents, or to give the strongest counter-view that it helps entrants?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "say",
+   "text": "I want it to show who the cap actually shields \u2014 my expectation is incumbents, but I want the source's own account so I can state it. Can I read D7p3 and also get the enforcement, survey and legal sources unlocked?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 16,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's Mietendeckel; author's own lesson on incumbents versus entrants, but no third passage beyond p3.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion from counsel on compensation and judicial-review risk; argues a hard initial-rent cap is legally fragile.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control and supply elasticity; argues contraction harms the same population the cap targets.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report with a 440-household survey; argues against a hard cap and for tenure security instead.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal draft enforcement-subcommittee minute; candid, non-public view that enforcement would miss the newest-arrival tail.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "pick",
+   "text": "need Berlin incumbent-entrant passage plus enforcement, survey and legal sources",
+   "docs": [
+    "D7",
+    "D11",
+    "D10",
+    "D9",
+    "D6"
+   ]
+  },
+  {
+   "i": 18,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D11 (NGO Report: Rehousing Pathways First), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)), D9 (Legal Opinion: Compensation and Judicial Review Risk), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D7p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p3"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p2"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D2",
+     "D6",
+     "D1",
+     "D10",
+     "D11"
+    ],
+    [
+     "D2",
+     "D6",
+     "D1",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D6",
+    "D11",
+    "D1",
+    "D2"
+   ],
+   "picked": [
+    "D1",
+    "D11",
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "reason": "all cited and cover stock, ordinance, elasticity, Berlin and survey"
+  },
+  {
+   "open_turn": 13,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D7",
+     "D6",
+     "D10",
+     "D11",
+     "D2"
+    ],
+    [
+     "D7",
+     "D6",
+     "D10",
+     "D11",
+     "D9"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 16,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D9",
+    "D6",
+    "D11",
+    "D10"
+   ],
+   "picked": [
+    "D10",
+    "D11",
+    "D6",
+    "D7",
+    "D9"
+   ],
+   "reason": "need Berlin incumbent-entrant passage plus enforcement, survey and legal sources"
+  }
+ ],
+ "unlocked_docs": [
+  "D2",
+  "D1",
+  "D6",
+  "D7",
+  "D11",
+  "D10",
+  "D9"
+ ],
+ "read_passages": [
+  "D2p1",
+  "D2p2",
+  "D6p2",
+  "D6p1",
+  "D1p3",
+  "D7p1",
+  "D7p2",
+  "D7p3",
+  "D10p2",
+  "D10p1"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D2",
+    "D1",
+    "D6",
+    "D7",
+    "D11"
+   ],
+   "reason": "all cited and cover stock, ordinance, elasticity, Berlin and survey"
+  },
+  {
+   "turn": 17,
+   "docs": [
+    "D7",
+    "D11",
+    "D10",
+    "D9",
+    "D6"
+   ],
+   "reason": "need Berlin incumbent-entrant passage plus enforcement, survey and legal sources"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 13,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 15,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D7",
+  "D9",
+  "D6",
+  "D11",
+  "D10"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

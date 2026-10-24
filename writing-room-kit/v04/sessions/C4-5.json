@@ -1,0 +1,299 @@
+{
+ "name": "C4-5",
+ "id": "C4-5",
+ "arm": "C4",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "Hi, I need to write an essay on whether Hong Kong should tighten rent control on subdivided units. I know nothing about it. What sources can I use?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you need sources but not yet what any of them has to do. Before I point you anywhere: which claim in your essay is the one you're least sure you can back up \u2014 and would a source for it need to show evidence, a counter-view, a definition, or a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I guess I'm least sure that tightening rent control actually helps tenants rather than hurting them. I would need evidence, ideally data, plus a counter-view.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy brief perspective, with limits of legal context.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households, arguing for tenure security over hard caps, with limits of self-reported preferences.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control effects, distinguishing first- and second-generation controls, with theoretical and empirical limits.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt from an SDU rent and stock index, 2019-2025, with caveats on post-2023 survey extrapolation.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from a landlords association, representing owner interests, with self-reported and limited data.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "D2 has actual rent data, D6 models whether rent control hurts supply, D11 gives the tenant side and an alternative to caps",
+   "docs": [
+    "D2",
+    "D6",
+    "D11"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "say",
+   "text": "I read the data. Stock kept growing after the 2021 ordinance, so mild control did not make landlords leave. But rent burden still went up. Is that a problem for my argument?",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 13,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've noticed that stock kept growing while rent burden still rose, which sits awkwardly with the idea that tightening control helps tenants. What would you want to check next \u2014 whether the rent rise is driven by something other than the control itself, or what D6 and D11 say about that gap?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "say",
+   "text": "I think hard caps are risky but a small tightening of increase limits is fine, and the NGO says security of tenure matters more than caps.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've landed on a middle position: small tightening of increase limits, with tenure security as the bigger lever. Which of those two would your essay actually argue for, and what would you use to show the other one matters less?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "confident",
+   "text": "My claim: Hong Kong should tighten, but only second-generation controls (limits on increases within tenancies) plus longer tenure security, not hard caps. D6 says hard caps shrink stock but increase-limits have small or null effects, and D2 shows stock grew after 2021.",
+   "paste": false
+  },
+  {
+   "i": 17,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You said D2 shows rent burden still worsened from 31 to 34 percent under the mild 2021 controls \u2014 so what in D6 or D11 tells you that tightening increase-limits plus tenure security would move that burden, rather than leave it rising as before?",
+   "policy": "COACH"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "say",
+   "text": "A counter-view is that rent burden still worsened from 31 to 34 percent even under the ordinance, so maybe the ordinance was too weak.",
+   "paste": false,
+   "intent": "counter_request"
+  },
+  {
+   "i": 19,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Document D5, the landlords' submission, argues that a hard initial-rent cap is confiscatory and that owners will exit the segment if returns fall below mortgage cost, removing housing that shelters someone tonight.\n\nHow do you answer this?",
+   "policy": "P-CTR"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "say",
+   "text": "I agree hard caps could make owners leave, and D6 supports that for first-generation controls. That is why I only want limits on increases, which D6 says have small or null effects on stock.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said D6 supports the exit risk for first-generation controls but not for increase limits, which is why you'd keep only the latter. What in D6 or D2 would you point to if a reader asked whether small-or-null supply effects are the same as helping tenants?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "say",
+   "text": "I will argue mainly for tenure security plus increase limits, since D11 says 61 percent would trade rent for three-year security.",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 23,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said you'll argue mainly for tenure security plus increase limits, citing D11's 61 percent figure. What would you want to look at next \u2014 how that 61 percent was measured, or what D2 or D6 says about whether tenure security alone moves rent burden?",
+   "policy": "P-CLM"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D11",
+    "D6",
+    "D2",
+    "D5"
+   ],
+   "picked": [
+    "D11",
+    "D2",
+    "D6"
+   ],
+   "reason": "D2 has actual rent data, D6 models whether rent control hurts supply, D11 gives the tenant side and an alternative to caps"
+  }
+ ],
+ "unlocked_docs": [
+  "D2",
+  "D6",
+  "D11"
+ ],
+ "read_passages": [
+  "D2p1",
+  "D2p2",
+  "D6p1",
+  "D6p2",
+  "D11p1",
+  "D11p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D2",
+    "D6",
+    "D11"
+   ],
+   "reason": "D2 has actual rent data, D6 models whether rent control hurts supply, D11 gives the tenant side and an alternative to caps"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 24,
+   "text": "Hong Kong should tighten rent control on subdivided units, but only in a careful way. My position is that the government should limit rent increases inside tenancies and add longer security of tenure, and it should not impose hard caps on rent levels.\n\nThe main worry about rent control is that landlords will leave the market. This worry is real for some kinds of control. The working paper in the archive says that first-generation controls, which are hard caps on rent levels, show consistent contraction effects on supply [D6p2]. It estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1]. So a hard cap would risk shrinking the very housing the poor depend on.\n\nSecond-generation controls are different. The same paper says caps on increases within tenancies show small or null effects on stock [D6p2]. Hong Kong's 2021 ordinance is of this type. The rent index shows that the stock of subdivided units grew from 100,800 in 2019 to 111,200 in 2025, even after the ordinance [D2p1]. So moderate regulation did not make owners exit.\n\nStill, the data show that tenants are not much better off. Median rent growth was 3.1 percent in 2021 to 2023, slower than the earlier 6.8 percent, but it was still higher than general private rent growth of 1.7 percent [D2p2]. Rent burden even rose from 31 to 34 percent [D2p2]. This suggests that the 2021 ordinance was too weak, and a modest tightening of the increase limit is justified.\n\nRent is not the only thing tenants care about. An NGO survey of 440 households found that 61 percent would accept a nominal rent increase for three years of security of tenure, and 74 percent would do so for a faster public housing offer [D11p1]. The report argues that rent caps treat a price symptom of a quantity problem, because the queue for housing is long [D11p2]. So tightening should come with tenure security and not only price limits.\n\nThe NGO also says enforcement effort spent on policing rents is not spent on inspecting fire and ventilation conditions, where harm is immediate [D11p2]. I take this seriously, and it is a reason to keep the tightening simple and cheap to enforce.\n\nIn conclusion, Hong Kong should tighten, but by lowering the allowed increases and extending tenure security. This keeps the stock stable, as the evidence suggests, while responding to rising rent burden.\n",
+   "struct": "retyped"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "broad"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 12,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 14,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 18,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 20,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 22,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D7",
+  "D11",
+  "D6",
+  "D2",
+  "D5"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 5
+ }
+}

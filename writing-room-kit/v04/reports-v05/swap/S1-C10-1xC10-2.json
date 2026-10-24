@@ -1,0 +1,392 @@
+{
+ "id": "S1-C10-1xC10-2",
+ "group": "S1",
+ "essay_owner": "C10-1",
+ "arm": "C10",
+ "components": {
+  "claim": 70.0,
+  "source": 77.77777777777777,
+  "cite": 97.82608695652173,
+  "change": 75.0,
+  "struct": 100.0
+ },
+ "composite": 80.97946859903382,
+ "composite_nostruct": 77.62290423415745,
+ "mismatches": [
+  "Paragraph 2 says: \"SDU tenants pay a premium of 15 to 25 percent per square foot compared with ordinary flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The harm of shrinking supply falls on the same poor households the cap is meant to help.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin's 2020 rent cap led to fewer listings and owners moving flats to uncontrolled segments.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"In a survey of 440 households, the main problem named was queue length and insecurity of tenure, not rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"A heavy initial-rent register would be expensive, with one estimate of 40 to 60 staff-years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 8 says: \"The archive does not tell how many tenants have no written agreement.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "You cite D3, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "You cite D4, but it wasn't chosen with a reason in the Room. How did you come to use it?",
+  "The sentence \"Mr Chan, a tenant, has seen two units on his floor emptied [D3p2], so the fear is not invented, but the stock figures show no mass exit under the milder control\" cites D3p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 9 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten SDU rules focusing on security of tenure and a light limit on rent increases, not a hard cap on rent levels.",
+   "ancestor": 34
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants pay a premium of 15 to 25 percent per square foot compared with ordinary flats.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Most SDU tenants are new arrivals or people waiting for public housing, making SDUs a last option.",
+   "ancestor": 55
+  },
+  {
+   "para": 2,
+   "claim": "Rent burden for SDU households rose from 31 to 34 percent of income.",
+   "ancestor": 18
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 ordinance capped increases inside a tenancy but not the initial rent.",
+   "ancestor": 55
+  },
+  {
+   "para": 3,
+   "claim": "Hard caps on rent levels consistently shrink supply, while caps on increases within a tenancy have small or null effects.",
+   "ancestor": 18
+  },
+  {
+   "para": 3,
+   "claim": "The stock of SDUs grew from 100,800 in 2019 to 111,200 in 2025.",
+   "ancestor": 18
+  },
+  {
+   "para": 3,
+   "claim": "The harm of shrinking supply falls on the same poor households the cap is meant to help.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Berlin's 2020 rent cap led to fewer listings and owners moving flats to uncontrolled segments.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Landlords' cost figures come from a self-reported survey with a 34 percent response rate and no data on actual margins.",
+   "ancestor": 55
+  },
+  {
+   "para": 5,
+   "claim": "In a survey of 440 households, the main problem named was queue length and insecurity of tenure, not rent level.",
+   "ancestor": null
+  },
+  {
+   "para": 5,
+   "claim": "61 percent of surveyed tenants would accept a small rent rise for three years of security.",
+   "ancestor": 36
+  },
+  {
+   "para": 6,
+   "claim": "Inspections cover under 6 percent of SDU stock each year.",
+   "ancestor": 34
+  },
+  {
+   "para": 6,
+   "claim": "Enforcement depends on complaints, but the tenants least able to complain are those with no written agreement and the newest arrivals.",
+   "ancestor": 34
+  },
+  {
+   "para": 6,
+   "claim": "The law should presume a tenancy after a set time, even with no paper, and ban eviction as punishment for complaints.",
+   "ancestor": 34
+  },
+  {
+   "para": 7,
+   "claim": "The root problem is the queue, which is about five and a half years.",
+   "ancestor": 36
+  },
+  {
+   "para": 7,
+   "claim": "A heavy initial-rent register would be expensive, with one estimate of 40 to 60 staff-years.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "The archive does not tell how many tenants have no written agreement.",
+   "ancestor": null
+  },
+  {
+   "para": 8,
+   "claim": "An internal minute admits that nobody found an enforcement design that protects the newest arrivals first rather than last.",
+   "ancestor": 57
+  },
+  {
+   "para": 9,
+   "claim": "The position is to tighten carefully: cap increases more firmly, protect tenants from retaliation, presume a tenancy without paper, keep any initial-rent band light, and treat the waiting list as the real long-term fix.",
+   "ancestor": 34
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "SDUs hold about 110,000 households, and tenants pay a premium of 15 to 25 percent per square foot compared with ordinary flats, because the space is priced at its most desperate margin [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Most tenants are new arrivals or people waiting for public housing, so the SDU is a last option, not a choice [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rent burden for SDU households rose from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 ordinance capped increases inside a tenancy but not the initial rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hard caps consistently shrink supply, while the second kind has small or null effects, and Hong Kong's 2021 law is the second kind [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The numbers fit: the stock of SDUs grew from 100,800 in 2019 to 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "The harm of shrinking supply falls on the same poor households the cap is meant to help [D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, listings fell and owners moved flats to uncontrolled segments [D7p1], and the tenants protected were those already inside while the cost went to those outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "After its 2020 cap, listings fell and owners moved flats to uncontrolled segments [D7p1], and the tenants protected were those already inside while the cost went to those outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The landlords say they will leave if returns fall [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "Their own data is weak: the cost figures come from a self-reported survey with a 34 percent response rate, and they admit they have no data on actual margins [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan, a tenant, has seen two units on his floor emptied [D3p2], so the fear is not invented, but the stock figures show no mass exit under the milder control.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "In a survey of 440 households, the main problem named was queue length and insecurity of tenure, not the rent level, and 61 percent would accept a small rent rise for three years of security [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan's landlord ended an earlier tenancy with two weeks notice after he asked for a window repair [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Inspections cover under 6 percent of SDU stock each year [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "Enforcement depends on complaints, but the tenants least able to complain are those with no written agreement and the newest arrivals [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong has lived in her SDU for nine years without ever receiving a written agreement, and she says the 2021 ordinance changed nothing for her [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The NGO report says rent caps treat a price symptom of a quantity problem, and that enforcement staff spent policing rents are not spent on safety inspections, where the harm is documented [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The root problem is the queue, which is about five and a half years [D1p2], and a policy on SDUs cannot fix that alone.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "Also, a heavy initial-rent register would be expensive, since one estimate is 40 to 60 staff-years [D10p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "So I would keep any band on initial rents light, as the report itself supports [D11p3], and put the main effort into tenure, which tenants can enforce themselves through a tribunal and which needs fewer inspectors.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D10p3",
+   "sentence": "Second, an internal minute admits that nobody found an enforcement design that protects the newest arrivals first rather than last [D10p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "Presuming a tenancy helps people who stay, but not someone who has just arrived, and a band on initial rents could even make landlords less willing to take newcomers, as the Berlin case hints [D7p3].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    36,
+    50
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    36,
+    50
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    36,
+    50
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    36,
+    50
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": false
+  },
+  {
+   "para": 8,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": true
+  },
+  {
+   "para": 9,
+   "window": [
+    50,
+    61
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [
+  "D3",
+  "D4"
+ ],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 6,
+   "own_thinking": 8,
+   "broad": 1
+  },
+  "served_after_cap": 0
+ }
+}

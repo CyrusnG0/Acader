@@ -1,0 +1,179 @@
+{
+ "name": "C2-2",
+ "id": "C2-2",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What should this source do for your rent essay \u2014 back up a claim you're making, show a counter-view, or give a definition or first-hand case? And which point in your argument would it sit next to?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "just back up my claim, i think rent control should be tighter",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenants; argues for narrow tightening and against hard caps, based on survey and contraction arithmetic.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity; distinguishes control types and models tightened cap scenario.\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Landlord association submission opposing hard caps; represents owners, cites self-reported survey data.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt from rent and stock index, 2019\u20132025, with caveat on post-2023 extrapolation.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin rent cap 2020\u20132021, detailing supply contraction and court annulment.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "relevant and academic evidence",
+   "docs": [
+    "D11",
+    "D6"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D11 (NGO Report: Rehousing Pathways First), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D11p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "confident",
+   "text": "I think tightening should be limited to caps on increases inside tenancies, not hard caps, because hard caps shrink supply.",
+   "paste": false
+  },
+  {
+   "i": 10,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Earlier you said you wanted rent control \"tighter\" \u2014 what in D6p2 or D11p3 leads you from that to limiting tightening to within-tenancy caps rather than a hard cap?",
+   "policy": "COACH"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D11",
+     "D7",
+     "D1"
+    ],
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D5"
+    ]
+   ],
+   "need_history": [
+    false,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D11",
+    "D6",
+    "D5",
+    "D2",
+    "D7"
+   ],
+   "picked": [
+    "D11",
+    "D6"
+   ],
+   "reason": "relevant and academic evidence"
+  }
+ ],
+ "unlocked_docs": [
+  "D11",
+  "D6"
+ ],
+ "read_passages": [
+  "D11p1",
+  "D6p1",
+  "D6p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D11",
+    "D6"
+   ],
+   "reason": "relevant and academic evidence"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 11,
+   "text": "I think Hong Kong should tighten rent control on subdivided units, but only in a narrow way. Hard caps on rent levels look bad for supply [D6p1].\n\nThe better option is to limit rent increases inside a tenancy, and tenants seem to want security more than low rent [D11p1].\n",
+   "struct": "typed"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D11",
+  "D6",
+  "D5",
+  "D2",
+  "D7"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 1
+ }
+}

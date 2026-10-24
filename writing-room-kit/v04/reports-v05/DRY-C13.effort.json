@@ -1,0 +1,10 @@
+{
+ "id": "DRY-C13",
+ "arm": "C13",
+ "student_turns": 45,
+ "chars_typed": 4774,
+ "reads": 24,
+ "distinct_passages": 24,
+ "check_rounds": 1,
+ "outside_calls": 297
+}

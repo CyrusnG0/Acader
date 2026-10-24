@@ -1,0 +1,57 @@
+{
+ "id": "C2-3",
+ "arm": "C2",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.25,
+  "F14b parentage": 1.0,
+  "F14c grounded chains": 0.13636363636363635
+ },
+ "F14d refinement": {
+  "relation": "n/a"
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "rent control is probably good",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "the source should show that rent control helps tenants",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "wants a tenant voice and case",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "the sources are mixed",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "tenure security matters more than a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  }
+ ],
+ "leaps": []
+}

@@ -1,0 +1,415 @@
+{
+ "id": "DRY-C13",
+ "arm": "C13",
+ "split": "dev",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.25,
+  "F14b parentage": 0.7333333333333333,
+  "F14c grounded chains": 0.23809523809523808
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Wants to understand Hong Kong's subdivided-unit rent rules",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Requests sources on how rents are set and what the 2021 ordinance changed",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants to know whether initial SDU rent is set freely by landlord or constrained",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants to know what the 2021 ordinance did and didn't change about initial rent setting",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Sources cover rent-setting, the ordinance, elasticity and tenant preferences",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "SDU tenants are mostly new arrivals, single-parent households, and people waiting years for public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "Requests sources on rents and supply when a cap is imposed",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "Requests sources on what tenants say would help most",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Rent and supply effects do the heavier work",
+   "parent": {
+    "type": "assistant",
+    "turn": 11
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Claim: a hard cap on initial rents would shrink supply of units for new tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Needs evidence on what capping rents does to supply and entry",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Supply elasticity and tenant preferences are the core of the claim",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Supply elasticity and tenant preference evidence for the claim",
+   "parent": {
+    "type": "student",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Wants to check landlord-side exit evidence",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Wants to check the Berlin comparison",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "For landlord-exit claim wants a source showing whether exit is actually happening on the ground",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "For Berlin wants a source showing how a cap affected people trying to get in rather than incumbents",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  },
+  {
+   "turn": 29,
+   "unit": "Wants landlord exit evidence, Berlin new-entrant effects, and on-the-ground tenant experience",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Needs the enforcement side and the consultation proposal",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Wants inspection coverage figures",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Wants the register cost",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Wants the expected package the consultation describes",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "These support the enforcement caveat: a rent band only works with a real register and inspection capacity",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Needs a source giving inspection coverage and register cost figures",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Needs a separate source showing what the consultation actually proposes to judge whether the package is realistic",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Enforcement capacity figures and consultation proposal evidence are needed",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 47,
+   "unit": "Also needs tenant/legal evidence behind the package",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Has enforcement and consultation evidence now",
+   "parent": {
+    "type": "student",
+    "turn": 40
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Wants to read the tenant's account of her rent and missing written agreement directly",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Wants the tenant's point about units being pensions",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 49,
+   "unit": "Wants the legal opinion's proposed indexed band",
+   "parent": {
+    "type": "student",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Tenant account is first-hand evidence that initial rents are the unregulated pain point",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Tenant account shows the enforcement gap via no written agreement",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Pensions remark tests the landlord-exit threat",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Legal opinion's indexed band supports a middle path framed as rate-capping",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Band avoids compensation and judicial-review risk of a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Wants tenant first-hand evidence and legal band proposal",
+   "parent": {
+    "type": "student",
+    "turn": 51
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "Per-square-foot premium and rent burden figures come from D1p1 and D2p2",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "First-vs-second-generation cap distinction comes from D6p2",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "Non-binding-instrument reading comes from D12p2",
+   "parent": {
+    "type": "passage",
+    "pid": "D12p2"
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "15 percent cut modelling comes from D6p4",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "Wants a concrete case of landlords exiting or emptying units when rent rules bite",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Case sits under the supply-shrinkage point from the working paper",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Elasticity estimate: a 10 percent cap removes 3\u20135 percent of stock over five years",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Concrete emptying case would show shrinkage on the ground, not just in the model",
+   "parent": {
+    "type": "student",
+    "turn": 66
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants to understand Hong Kong's subdivided-unit rent rules\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Requests sources on how rents are set and what the 2021 ordinance changed\". How did you get there?"
+  },
+  {
+   "turn": 10,
+   "question": "At turn 10 you said: \"Requests sources on what tenants say would help most\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Claim: a hard cap on initial rents would shrink supply of units for new tenants\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Needs evidence on what capping rents does to supply and entry\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Wants to check landlord-side exit evidence\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Wants to check the Berlin comparison\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"Needs the enforcement side and the consultation proposal\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"Wants inspection coverage figures\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"Wants the register cost\". How did you get there?"
+  },
+  {
+   "turn": 36,
+   "question": "At turn 36 you said: \"Wants the expected package the consultation describes\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"These support the enforcement caveat: a rent band only works with a real register and inspection capacity\". How did you get there?"
+  }
+ ]
+}

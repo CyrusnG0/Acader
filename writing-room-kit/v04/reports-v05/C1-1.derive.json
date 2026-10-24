@@ -1,0 +1,669 @@
+{
+ "id": "C1-1",
+ "arm": "C1",
+ "split": "dev",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.3181818181818183,
+  "F14b parentage": 0.6986301369863014,
+  "F14c grounded chains": 0.8695652173913043
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 33
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Claim will be about whether tighter rent control makes life better or worse for SDU residents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "A source would need to show what happened to rents, living conditions, or number of units when rules were introduced",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Will argue about number of units and rents",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Guess: tighter control could push landlords to take units off the market, hurting tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "A source on that would be evidence for my view",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D6 models supply and welfare effects of rent control, matching my guess about landlords removing units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D7 is a real case of a rent freeze to see if it happened",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D2 has actual numbers on stock and rents in Hong Kong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Guess about landlords removing units looks right for hard caps",
+   "parent": {
+    "type": "student",
+    "turn": 4
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D6p1 says a 10 percent cut removes 3 to 5 percent of stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Berlin D7p1 shows supply shrinking",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D2p1 shows Hong Kong stock kept growing under the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D6p2 says the 2021 ordinance only limits increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Tightening should not mean hard caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "If tenants care more about not being evicted than the rent number, my focus on rent levels is too narrow",
+   "parent": {
+    "type": "assistant",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "Tightening increase limits within a tenancy is a kind of tenure security, fitting what tenants want better than a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The landlord source would push against my claim that tighter increase limits are safe for supply",
+   "parent": {
+    "type": "assistant",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "To matter, it would need to show landlords actually exiting or raising rents or evicting in response to the 2021 ordinance, not just complaining",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D5 is the landlord view, needed to test whether tighter limits make owners exit",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D11 gives the tenant view on tenure security versus caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Skipping D10 because it is marked not for circulation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D5 threatens exit but D5p3 admits no margin data and a self-reported survey with 34 percent response, so I trust it less",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D2p1 (stock still growing) backs that exit has not happened so far",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D11p1 says 61 percent of tenants would trade rent for three-year security, supporting my answer to the opposing view",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Position: tighten with tenure security and a light band on initial rents, but no hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Hong Kong should tighten narrowly: tenure security and a light limit on initial rents, no hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Hard caps shrink supply by 3 to 5 percent per 10 percent rent cut (D6p1)",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Berlin showed the cost lands on outsiders (D7p3)",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "The 2021 increase-limit rule did not stop stock growing (D2p1)",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "A light band on initial rents fits tenants only if it is small",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "D11p3 itself supports tenure security plus a light band, so the survey says rent ranks below security and queue length, not that it is irrelevant",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Less sure how strong the survey is since D11 only surveyed 440 households",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Will use claim, evidence, objection, reply structure",
+   "parent": {
+    "type": "assistant",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Claim is narrow tightening; evidence is D6, D7 and D2",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Objections are the landlord exit threat (D5) and that rents are not the real problem (D11)",
+   "parent": {
+    "type": "student",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Reply is that tenure security plus a light band answers both",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "D2p3 says post-2023 data is extrapolated, so I will say stock growth is only solid to 2023",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p3"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "D2p2 shows SDU rents rose 3.1 percent under the ordinance versus 1.7 percent for general rents",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Rent burden went from 31 to 34 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Current control has not fully protected tenants, so tighten rather than leave it alone",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D2p2 sits under the case for tightening at all",
+   "parent": {
+    "type": "assistant",
+    "turn": 41
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D5 argues against a hard initial-rent cap, not against increase limits",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p1"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D5 admits it has no margin data (D5p3)",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Exit is a real risk for a hard cap, which I already reject, but not shown for a light band",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Keep the band light because owners also face compliance costs (D5p1)",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p1"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "A source for the light band should show small limits do not push owners out",
+   "parent": {
+    "type": "assistant",
+    "turn": 43
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D2p1 helps because stock grew under the increase limits",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "That is a different rule than an initial-rent band, so I will say so honestly",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "D11p2 says enforcement capacity spent on rents is not spent on inspecting fire and ventilation",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p2"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "That is a cost of tightening I should admit",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "A light band still needs enforcement, so it should be simple",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 48,
+   "unit": "D6p3 says households that lose units are the same people a cap tries to protect",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  },
+  {
+   "turn": 48,
+   "unit": "Use D6p3 to explain why I reject hard caps",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 48,
+   "unit": "Use D11p1 to explain why security matters more to tenants than the rent number",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 50,
+   "unit": "Weakest points are D11's 440 households and D2's post-2023 extrapolation",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 50,
+   "unit": "I will state both weak points",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "D8 is a second-generation scheme with light first-rent regulation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "D8 is the closest real example of my narrow tightening idea",
+   "parent": {
+    "type": "student",
+    "turn": 33
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "New York is a light scheme and stock contraction is modest (D8p2)",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p2"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "Tenants stay longer in New York, which is tenure security",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p2"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "D8p3 warns the 2019 tightening was linked to fewer listings and weaker maintenance",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p3"
+   }
+  },
+  {
+   "turn": 57,
+   "unit": "Even a light tightening has costs, and I should say that",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "Place the enforcement point as a limit on the light band",
+   "parent": {
+    "type": "assistant",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "The band should be simple and rely on written tenancy agreements",
+   "parent": {
+    "type": "student",
+    "turn": 46
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "The weakest tenants are missed first",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "Handle D11's small sample first: 440 households is modest but matches the NGO's own recommendation",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 59,
+   "unit": "I will call D11 supporting, not decisive",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 61,
+   "unit": "If enforcement is weak, protection lands last on those with no written agreement",
+   "parent": {
+    "type": "assistant",
+    "turn": 49
+   }
+  },
+  {
+   "turn": 61,
+   "unit": "Tenure security should require a written tenancy",
+   "parent": {
+    "type": "student",
+    "turn": 59
+   }
+  },
+  {
+   "turn": 61,
+   "unit": "Cannot cite the inspection minute since I have not read it, so state it as my own reasoning",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "I am answering D5, not conceding it fully",
+   "parent": {
+    "type": "assistant",
+    "turn": 62
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "D5's exit threat is real for a hard cap, but D5p3 admits it has no margin data",
+   "parent": {
+    "type": "student",
+    "turn": 42
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "D8p3 is a limit I place on the band: keep it light because New York's tightening was linked to fewer listings",
+   "parent": {
+    "type": "student",
+    "turn": 57
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Claim will be about whether tighter rent control makes life better or worse for SDU residents\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"A source would need to show what happened to rents, living conditions, or number of units when rules were introduced\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"Guess: tighter control could push landlords to take units off the market, hurting tenants\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D6 models supply and welfare effects of rent control, matching my guess about landlords removing units\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D7 is a real case of a rent freeze to see if it happened\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D2 has actual numbers on stock and rents in Hong Kong\". How did you get there?"
+  },
+  {
+   "turn": 17,
+   "question": "At turn 17 you said: \"Tightening should not mean hard caps\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"Tightening increase limits within a tenancy is a kind of tenure security, fitting what tenants want better than a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"To matter, it would need to show landlords actually exiting or raising rents or evicting in response to the 2021 ordinance, not just complaining\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D5 is the landlord view, needed to test whether tighter limits make owners exit\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D11 gives the tenant view on tenure security versus caps\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"Skipping D10 because it is marked not for circulation\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"A light band on initial rents fits tenants only if it is small\". How did you get there?"
+  },
+  {
+   "turn": 44,
+   "question": "At turn 44 you said: \"That is a different rule than an initial-rent band, so I will say so honestly\". How did you get there?"
+  },
+  {
+   "turn": 46,
+   "question": "At turn 46 you said: \"That is a cost of tightening I should admit\". How did you get there?"
+  },
+  {
+   "turn": 46,
+   "question": "At turn 46 you said: \"A light band still needs enforcement, so it should be simple\". How did you get there?"
+  },
+  {
+   "turn": 50,
+   "question": "At turn 50 you said: \"I will state both weak points\". How did you get there?"
+  },
+  {
+   "turn": 52,
+   "question": "At turn 52 you said: \"D8 is a second-generation scheme with light first-rent regulation\". How did you get there?"
+  },
+  {
+   "turn": 57,
+   "question": "At turn 57 you said: \"Even a light tightening has costs, and I should say that\". How did you get there?"
+  },
+  {
+   "turn": 59,
+   "question": "At turn 59 you said: \"The weakest tenants are missed first\". How did you get there?"
+  },
+  {
+   "turn": 59,
+   "question": "At turn 59 you said: \"I will call D11 supporting, not decisive\". How did you get there?"
+  },
+  {
+   "turn": 61,
+   "question": "At turn 61 you said: \"Cannot cite the inspection minute since I have not read it, so state it as my own reasoning\". How did you get there?"
+  }
+ ]
+}

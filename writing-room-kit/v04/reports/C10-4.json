@@ -1,0 +1,337 @@
+{
+ "id": "C10-4",
+ "arm": "C10",
+ "components": {
+  "claim": 90.0,
+  "source": 100.0,
+  "cite": 82.5,
+  "change": 83.33333333333333,
+  "struct": 100.0
+ },
+ "composite": 91.375,
+ "composite_nostruct": 89.8529411764706,
+ "mismatches": [
+  "Paragraph 3 says: \"The landlords' association says a hard cap is confiscatory and members will leave the business if returns fall below mortgage cost.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The landlords' submission lacks data on members' real margins and its cost figures come from a self-reported survey with a 34% response rate.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Rents in these units grew more slowly than general rents after 2021, but the share of income spent on rent still rose from 31 to 34 percent [D2p2].\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Their association says a hard cap is confiscatory and that members will leave the business if returns fall below mortgage cost [D5p1]\" cites D5p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A working paper estimates that hard caps on rent levels remove roughly 3 to 5 percent of stock for every 10 percent rent cut, and the people who lose units are \" cites D6p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"But the same paper says controls that only limit increases inside tenancies have small or null effects on stock [D6p2], and the data agree, since stock rose fro\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Rent control cannot fix a waiting time of around five and a half years [D1p2], and faster public housing is the real long-term answer.\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The survey asks about a trade, which is not the same as saying rent is unimportant, and the burden rising to 34 percent shows rent still hurts [D2p2].\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A draft internal minute, marked not for circulation and so not final policy, says inspection covers under 6 percent of the stock each year and that a band on in\" cites D10p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in stages, not with a hard cap.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "The first step should be to build a tenancy register and survey data.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "The second step should be to give tenants security of tenure.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "The third step should be to add a published band on initial rents.",
+   "ancestor": 42
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay a 15-25% premium per square foot compared with ordinary flats.",
+   "ancestor": 60
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants are mostly new arrivals, single parents, and people waiting for public housing.",
+   "ancestor": 60
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 ordinance limits rent increases inside a tenancy but does not cap the initial rent.",
+   "ancestor": 60
+  },
+  {
+   "para": 2,
+   "claim": "After 2021, rents in subdivided units grew more slowly than general rents, but the share of income spent on rent rose from 31% to 34%.",
+   "ancestor": 28
+  },
+  {
+   "para": 3,
+   "claim": "The landlords' association says a hard cap is confiscatory and members will leave the business if returns fall below mortgage cost.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The landlords' submission lacks data on members' real margins and its cost figures come from a self-reported survey with a 34% response rate.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A working paper estimates that hard caps on rent levels remove roughly 3 to 5 percent of stock for every 10 percent rent cut, harming poor households.",
+   "ancestor": 14
+  },
+  {
+   "para": 3,
+   "claim": "Controls that only limit increases inside tenancies have small or null effects on stock, and stock rose from 107,300 in 2021 to 111,200 in 2025.",
+   "ancestor": 28
+  },
+  {
+   "para": 4,
+   "claim": "An NGO survey of 440 households found that 61 percent would trade a rent rise for three years of security of tenure.",
+   "ancestor": 28
+  },
+  {
+   "para": 4,
+   "claim": "The NGO report says rent caps treat the price symptom of a quantity problem and inspection effort is better spent on fire and ventilation.",
+   "ancestor": 62
+  },
+  {
+   "para": 4,
+   "claim": "Rent control cannot fix a waiting time of around five and a half years for public housing.",
+   "ancestor": 62
+  },
+  {
+   "para": 5,
+   "claim": "A draft internal minute says inspection covers under 6 percent of the stock each year and a band on initial rents needs a certifiable register taking 40 to 60 staff-years to build.",
+   "ancestor": 42
+  },
+  {
+   "para": 5,
+   "claim": "If tenants must complain to enforce the rule, the newest arrivals and those with no written agreement will be missed first.",
+   "ancestor": 42
+  },
+  {
+   "para": 6,
+   "claim": "Counsel thinks a hard cap on initial rents would likely lead to compensation claims on property rights, while the 2021 style is on firmer legal ground but leaves initial rent unregulated.",
+   "ancestor": 42
+  },
+  {
+   "para": 6,
+   "claim": "A published, indexed band is more legally defensible but requires a survey system that does not exist yet.",
+   "ancestor": 42
+  },
+  {
+   "para": 7,
+   "claim": "If the register cannot be built, the band should wait and not be passed as an empty rule.",
+   "ancestor": 62
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in these units, and they pay a premium of 15 to 25 percent per square foot compared with ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "They are mostly new arrivals, single parents and people waiting for public housing, for whom the unit is a leftover option while the queue moves [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The one rule we have, the 2021 ordinance, limits rent increases inside a tenancy but does not cap the initial rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rents in these units grew more slowly than general rents after 2021, but the share of income spent on rent still rose from 31 to 34 percent [D2p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D4p1",
+   "sentence": "Mrs Wong, who has no written agreement, says the ordinance changed nothing she can see [D4p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p1",
+   "sentence": "Their association says a hard cap is confiscatory and that members will leave the business if returns fall below mortgage cost [D5p1]",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "[D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "I take the threat seriously, but I trust it less because the same submission admits it has no data on members' real margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "A working paper estimates that hard caps on rent levels remove roughly 3 to 5 percent of stock for every 10 percent rent cut, and the people who lose units are the same poor households the cap is meant to protect [D6p1]",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "[D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "But the same paper says controls that only limit increases inside tenancies have small or null effects on stock [D6p2], and the data agree, since stock rose from 107,300 in 2021 to 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "But the same paper says controls that only limit increases inside tenancies have small or null effects on stock [D6p2], and the data agree, since stock rose from 107,300 in 2021 to 111,200 in 2025 [D2p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "It surveyed 440 households and found that 61 percent would trade a rent rise for three years of security of tenure [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "It says rent caps treat the price symptom of a quantity problem, because the queue is long, and that inspection effort is better spent on fire and ventilation [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Rent control cannot fix a waiting time of around five and a half years [D1p2], and faster public housing is the real long-term answer.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "The survey asks about a trade, which is not the same as saying rent is unimportant, and the burden rising to 34 percent shows rent still hurts [D2p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D10p1",
+   "sentence": "A draft internal minute, marked not for circulation and so not final policy, says inspection covers under 6 percent of the stock each year and that a band on initial rents needs a certifiable register that would take 40 to 60 staff-years to build [D10p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D10p2",
+   "sentence": "If tenants must complain to enforce the rule, then the newest arrivals and those with no written agreement will be missed first [D10p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "Counsel thinks a hard cap on initial rents would likely lead to compensation claims on property rights, while the 2021 style sits on firmer ground but leaves the initial rent unregulated [D9p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "A published, indexed band is more defensible, but it needs a survey system that does not exist yet [D9p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    46
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    46
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    46,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    46,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    46,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    46,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    62,
+    68
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 5,
+   "own_thinking": 12
+  },
+  "served_after_cap": 0
+ }
+}

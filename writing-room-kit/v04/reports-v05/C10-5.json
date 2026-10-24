@@ -1,0 +1,431 @@
+{
+ "id": "C10-5",
+ "arm": "C10",
+ "components": {
+  "claim": 91.66666666666667,
+  "source": 100.0,
+  "cite": 90.625,
+  "change": 46.666666666666664,
+  "struct": 100.0,
+  "claim_v2": 91.66666666666667
+ },
+ "composite": 87.67708333333333,
+ "composite_nostruct": 85.50245098039215,
+ "mismatches": [
+  "Paragraph 4 says: \"New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Rent rules cannot fix a queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first r\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Their association says its members will leave, but it admits it has no data on members' actual margins, and its compliance cost figures come from a self-reporte\" cites D5p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I still treat the risk as real, because the units that disappear house someone tonight [D5p2], so my proposal keeps the burden on landlords modest.\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units by making tenants harder to push out and limiting rent rises within a tenancy, but not by imposing a hard cap on starting rents.",
+   "ancestor": 34,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 ordinance limits rises inside a tenancy, but rents for subdivided units still rose 3.1 percent from 2021 to 2023, while general private rents rose only 1.7 percent, and the share of income spent on rent increased from 31 to 34 percent.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The current rule has not protected tenants enough.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The problem is about security more than price.",
+   "ancestor": 34,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan, a delivery driver, says the worst part is insecurity, as his landlord ended his previous tenancy with two weeks notice after he asked for a leaking window to be repaired.",
+   "ancestor": 23,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "A survey of 440 households found that 61 percent would accept a nominal rent increase in return for three years of security, and 74 percent would trade for a faster public housing offer.",
+   "ancestor": 23,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The strongest objection is that rent control shrinks the supply of the cheapest housing.",
+   "ancestor": 4,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The households who lose units are the same people the cap is supposed to help.",
+   "ancestor": 19,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Landlords say they would leave the market if returns fell below their mortgage cost.",
+   "ancestor": 4,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "New York shows a second kind of cost: after its rules were tightened in 2019, available stabilised listings fell and owners had less reason to maintain units.",
+   "ancestor": 34,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Counsel thinks a hard cap on initial rents would almost certainly bring compensation claims under the Basic Law, while rules on tenancy terms are on firmer ground.",
+   "ancestor": 47,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The objection does not defeat the narrower tightening I support.",
+   "ancestor": 38,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The same working paper separates caps on rent levels from caps on increases within tenancies, finding consistent contraction for the first and small or null effects on stock for the second.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "Hong Kong's own data fits this: the stock of these units grew from 100,800 in 2019 to 107,300 in 2021 and 111,200 in 2025, through the ordinance.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first rents.",
+   "ancestor": null,
+   "birth": 49,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "The landlords' association says its members will leave, but it admits it has no data on members' actual margins, and its compliance cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 17,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The risk of landlords leaving is still real, because the units that disappear house someone tonight, so my proposal keeps the burden on landlords modest.",
+   "ancestor": 38,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Mr Chan says that if the queue for public housing were three years instead of five and a half, he would accept any rent in order to leave.",
+   "ancestor": 34,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Rent rules cannot fix a queue.",
+   "ancestor": null,
+   "birth": 49,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The data has a weakness: figures after 2023 depend on survey extrapolation because reporting of new tenancies is voluntary below the ordinance threshold.",
+   "ancestor": 19,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The first step should be to extend the rule to small tenancies and gather proper data.",
+   "ancestor": 19,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "My recommendation is a staged one: first, strengthen tenure security and lower the permitted rise within tenancies; second, build the survey data; only then consider a published, indexed per-square-foot band for starting rents.",
+   "ancestor": 47,
+   "birth": 49,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "Counsel thinks a published, indexed per-square-foot band for starting rents could be defended as rate-capping rather than confiscation, but it needs survey infrastructure that does not yet exist.",
+   "ancestor": 47,
+   "birth": 49,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D2p2",
+   "sentence": "Under it, rents for these units still rose 3.1 percent in 2021 to 2023, while general private rents rose only 1.7 percent, and the share of income that households spend on rent went from 31 to 34 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "His landlord ended his previous tenancy with two weeks notice after he asked for a leaking window to be repaired [D3p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 households found that 61 percent would accept a nominal rent increase in return for three years of security, and 74 percent would trade for a faster public housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p3",
+   "sentence": "The households who lose units are the same people the cap is supposed to help [D6p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "Landlords say they would leave the market if returns fell below their mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p3",
+   "sentence": "After its rules were tightened in 2019, available stabilised listings fell and owners had less reason to maintain units [D8p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p1",
+   "sentence": "Counsel thinks a hard cap on initial rents would almost certainly bring compensation claims under the Basic Law, while rules on tenancy terms are on firmer ground [D9p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "It finds consistent contraction for the first and small or null effects on stock for the second [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Hong Kong's own data fits this: the stock of these units grew from 100,800 in 2019 to 107,300 in 2021 and 111,200 in 2025, through the ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first rents [D8p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "Their association says its members will leave, but it admits it has no data on members' actual margins, and its compliance cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "I still treat the risk as real, because the units that disappear house someone tonight [D5p2], so my proposal keeps the burden on landlords modest.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan says that if the queue for public housing were three years instead of five and a half, he would accept any rent in order to leave [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p3",
+   "sentence": "The data also has a weakness: figures after 2023 depend on survey extrapolation because reporting of new tenancies is voluntary below the ordinance threshold [D2p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D9p2",
+   "sentence": "Only then consider a published, indexed per-square-foot band for starting rents, which counsel thinks could be defended as rate-capping rather than confiscation, but which needs survey infrastructure that does not yet exist [D9p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    36
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    36,
+    49
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    36,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    36,
+    49
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    36,
+    49
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  },
+  {
+   "para": 7,
+   "window": [
+    49,
+    49
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "own_thinking": 5,
+   "wants_answer": 5
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 85.50245098039215,
+ "composite_v2_struct": 87.67708333333333,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 4 says: \"New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Rent rules cannot fix a queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"New York, which has regulated rises within tenancies for decades, has seen tenants stay longer and only modest stock contraction, because it is light on first r\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Their association says its members will leave, but it admits it has no data on members' actual margins, and its compliance cost figures come from a self-reporte\" cites D5p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I still treat the risk as real, because the units that disappear house someone tonight [D5p2], so my proposal keeps the burden on landlords modest.\" cites D5p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 7 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

@@ -1,0 +1,370 @@
+{
+ "name": "C6-1",
+ "id": "C6-1",
+ "arm": "C6",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I need to build this essay's evidence base from the archive. Please give me the documents this essay cites. Start with the ones on tenant hardship and the 2021 Tenancy Control Ordinance: D4, D1, D9, and D2.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named the topic and the specific items you want, but I don't have any documents in front of me, so I can't hand you D4, D1, D9, or D2.\n\nBefore we go looking, tell me: what should a source on tenant hardship actually *do* for your essay \u2014 is it there to prove a claim you're making, to show a counter-view, or to give a first-hand account? And which claim of yours would it be supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "It's there to give a concrete, first-hand account of the hardship and the rent burden, supporting my opening claim that the case for a hard cap rests on genuine hardship. Please now give me the source documents D4, D1, D9, and D2 so I can read them.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion from counsel assessing compensation and judicial review risks of a hard cap, not tenant testimony.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting an SDU rent and stock index with survey caveats, not a first-hand account.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving background on subdivided housing and the 2021 ordinance, not a personal narrative.\n- D3: Tenant Interview: Mr Chan, Kwai Chung (Interview). Interview with a tenant describing his situation and mixed views on a hard cap.\n- D4: Tenant Interview: Mrs Wong, Sham Shui Po (Interview). Interview with a tenant describing her situation and support for a hard cap, with interviewer-noted contradiction.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "Essay opens with hardship and 2021 ordinance background",
+   "docs": [
+    "D4",
+    "D1",
+    "D9",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D4 (Tenant Interview: Mrs Wong, Sham Shui Po), D1 (Subdivided Housing in Hong Kong: A Primer), D9 (Legal Opinion: Compensation and Judicial Review Risk), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D4p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p3"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D4p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D9p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "say",
+   "text": "Please pull the academic working paper on rent control and SDU-type supply, the news digest on the think-tank debate, the landlord association submission, the enforcement subcommittee report, the NGO survey, and the Berlin Mietendeckel study.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 20,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named several kinds of material there. Before I help you look, which single claim in your essay is the one you're still missing support for \u2014 and what would a source need to show for that spot: evidence, a counter-view, a definition, a case, or a first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "say",
+   "text": "The essay's next point is the empirical claim that the 2021 Tenancy Control Ordinance is a second-generation control whose stability tells us nothing about a binding initial-rent cap. Please pull the academic working paper on rent control and SDU-type supply, since that is where the first- versus second-generation distinction and the contraction evidence live.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 22,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing elasticity literature and distinguishing first- from second-generation controls.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting SDU stock and rent index figures with a post-2023 caveat.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying tenant preferences and arguing against hard caps.\n- D12: News Digest: Policy Signals, January\u2013June 2026 (News digest). News digest summarizing policy signals and opposing think-tank arguments.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's Mietendeckel, its supply effects and court voiding.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "pick",
+   "text": "Working paper for the first- versus second-generation distinction and the news digest for the think-tank debate point",
+   "docs": [
+    "D6",
+    "D12"
+   ]
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D12 (News Digest: Policy Signals, January\u2013June 2026). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p2"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D4",
+     "D1",
+     "D9",
+     "D2",
+     "D6"
+    ],
+    [
+     "D4",
+     "D1",
+     "D9",
+     "D2",
+     "D3"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D9",
+    "D2",
+    "D1",
+    "D3",
+    "D4"
+   ],
+   "picked": [
+    "D1",
+    "D2",
+    "D4",
+    "D9"
+   ],
+   "reason": "Essay opens with hardship and 2021 ordinance background"
+  },
+  {
+   "open_turn": 19,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D12",
+     "D5",
+     "D10",
+     "D7"
+    ],
+    [
+     "D6",
+     "D12",
+     "D7",
+     "D2",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 22,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D2",
+    "D11",
+    "D12",
+    "D7"
+   ],
+   "picked": [
+    "D12",
+    "D6"
+   ],
+   "reason": "Working paper for the first- versus second-generation distinction and the news digest for the think-tank debate point"
+  }
+ ],
+ "unlocked_docs": [
+  "D4",
+  "D1",
+  "D9",
+  "D2",
+  "D6",
+  "D12"
+ ],
+ "read_passages": [
+  "D4p1",
+  "D2p2",
+  "D1p3",
+  "D4p3",
+  "D9p1",
+  "D6p2",
+  "D6p1",
+  "D6p4",
+  "D12p2"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D4",
+    "D1",
+    "D9",
+    "D2"
+   ],
+   "reason": "Essay opens with hardship and 2021 ordinance background"
+  },
+  {
+   "turn": 23,
+   "docs": [
+    "D6",
+    "D12"
+   ],
+   "reason": "Working paper for the first- versus second-generation distinction and the news digest for the think-tank debate point"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 19,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 21,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D6",
+  "D2",
+  "D11",
+  "D12",
+  "D7"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

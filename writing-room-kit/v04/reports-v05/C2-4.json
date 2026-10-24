@@ -1,0 +1,424 @@
+{
+ "id": "C2-4",
+ "arm": "C2",
+ "components": {
+  "claim": 34.375,
+  "source": 100.0,
+  "cite": 85.0,
+  "change": 14.285714285714286,
+  "struct": 100.0,
+  "claim_v2": 34.375
+ },
+ "composite": 61.924107142857146,
+ "composite_nostruct": 55.20483193277311,
+ "mismatches": [
+  "Paragraph 1 says: \"People living in subdivided flats have very little choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Subdivided units are small cubicles, often with shared kitchens and bathrooms.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The median rent of subdivided units is about 30 percent lower than a normal private flat.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Subdivided unit tenants are mostly new arrivals, single-parent households, and people waiting for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average wait for public housing is around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For these tenants, a subdivided unit is not a real choice but what they have while waiting in the queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"People with no alternatives cannot bargain with a landlord, which is the usual reason to have rent rules.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Rent per square foot in subdivided units went up 6.8 percent in 2019 to 2021 and another 3.1 percent in 2021 to 2023.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rent grew only 2.4 and 1.7 percent in the same periods.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The 2021 ordinance seems to have slowed the rise, but subdivided rents still grew faster than the rest of the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The share of income spent on rent for these households got worse, going from 31 to 34 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The usual argument against stricter control is that landlords will leave the market and the supply of units will shrink.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The estimated stock of subdivided units went from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The data does not prove the rules were harmless.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The stock could have grown for other reasons, such as high demand from people stuck in the queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A tighter rule than the 2021 one might act differently from a moderate one.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The numbers give no sign yet that moderate control caused landlords to leave.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The sensible step is a measured tightening, for example a limit on how much rent can rise between tenancies, and not a hard cap that is very strict.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The supply risk is real but not visible in the evidence.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A moderate change lets the government check the stock figures each year and step back if units start to disappear.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept gr\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept gr\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units, but carefully.",
+   "ancestor": 4,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "People living in subdivided flats have very little choice.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "The numbers show that subdivided unit tenants are still being squeezed.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided units are small cubicles, often with shared kitchens and bathrooms.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The median rent of subdivided units is about 30 percent lower than a normal private flat.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Tenants of subdivided units pay 15 to 25 percent more per square foot.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Subdivided unit tenants are mostly new arrivals, single-parent households, and people waiting for public housing.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The average wait for public housing is around five and a half years.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "For these tenants, a subdivided unit is not a real choice but what they have while waiting in the queue.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "People with no alternatives cannot bargain with a landlord, which is the usual reason to have rent rules.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The current rules have not stopped rents from rising quickly.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Rent per square foot in subdivided units went up 6.8 percent in 2019 to 2021 and another 3.1 percent in 2021 to 2023.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "General private rent grew only 2.4 and 1.7 percent in the same periods.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 ordinance seems to have slowed the rise, but subdivided rents still grew faster than the rest of the market.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The share of income spent on rent for these households got worse, going from 31 to 34 percent.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The usual argument against stricter control is that landlords will leave the market and the supply of units will shrink.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The data does not show that landlords have left the market so far.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The estimated stock of subdivided units went from 100,800 units in 2019 to 111,200 in 2025.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The stock kept growing through the 2021 ordinance.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "The data does not prove the rules were harmless.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The stock could have grown for other reasons, such as high demand from people stuck in the queue.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "A tighter rule than the 2021 one might act differently from a moderate one.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "The numbers give no sign yet that moderate control caused landlords to leave.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "The sensible step is a measured tightening, for example a limit on how much rent can rise between tenancies, and not a hard cap that is very strict.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Tenants have few options, pay a premium for their space, and their rent burden is getting heavier.",
+   "ancestor": 4,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The supply risk is real but not visible in the evidence.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "A moderate change lets the government check the stock figures each year and step back if units start to disappear.",
+   "ancestor": null,
+   "birth": 14,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a moderate way.",
+   "ancestor": 4,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The tenants are stuck and paying more than they should.",
+   "ancestor": 4,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Their burden is rising faster than the wider market.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The stock has kept growing under the current rules.",
+   "ancestor": 12,
+   "birth": 14,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households do, and the flats are carved into small cubicles, often with shared kitchens and bathrooms [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "Even though the median rent is about 30 percent lower than a normal private flat, tenants actually pay 15 to 25 percent more per square foot [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "On top of that, the tenants are mostly new arrivals, single-parent households and people waiting for public housing, and the average wait is around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Rent per square foot in these units went up 6.8 percent in 2019 to 2021 and another 3.1 percent in 2021 to 2023, while general private rent grew only 2.4 and 1.7 percent in the same periods [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Also, the share of income spent on rent got worse for these households, going from 31 to 34 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The estimated stock went from 100,800 units in 2019 to 111,200 in 2025, and it kept growing through the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept growing under the current rules [D2p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept growing under the current rules [D2p1].",
+   "supports": "no"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept growing under the current rules [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept growing under the current rules [D2p1].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    14
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    14,
+    14
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 3
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 55.20483193277311,
+ "composite_v2_struct": 61.924107142857146,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"People living in subdivided flats have very little choice.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Subdivided units are small cubicles, often with shared kitchens and bathrooms.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The median rent of subdivided units is about 30 percent lower than a normal private flat.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Subdivided unit tenants are mostly new arrivals, single-parent households, and people waiting for public housing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average wait for public housing is around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"For these tenants, a subdivided unit is not a real choice but what they have while waiting in the queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"People with no alternatives cannot bargain with a landlord, which is the usual reason to have rent rules.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Rent per square foot in subdivided units went up 6.8 percent in 2019 to 2021 and another 3.1 percent in 2021 to 2023.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rent grew only 2.4 and 1.7 percent in the same periods.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The 2021 ordinance seems to have slowed the rise, but subdivided rents still grew faster than the rest of the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The share of income spent on rent for these households got worse, going from 31 to 34 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The usual argument against stricter control is that landlords will leave the market and the supply of units will shrink.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The estimated stock of subdivided units went from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The data does not prove the rules were harmless.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The stock could have grown for other reasons, such as high demand from people stuck in the queue.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A tighter rule than the 2021 one might act differently from a moderate one.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The numbers give no sign yet that moderate control caused landlords to leave.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The sensible step is a measured tightening, for example a limit on how much rent can rise between tenancies, and not a hard cap that is very strict.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The supply risk is real but not visible in the evidence.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A moderate change lets the government check the stock figures each year and step back if units start to disappear.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept gr\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The tenants are stuck and paying more than they should [D1p1][D1p2], and their burden is rising faster than the wider market [D2p2], while the stock has kept gr\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

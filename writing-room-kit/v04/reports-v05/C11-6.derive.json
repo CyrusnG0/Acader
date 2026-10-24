@@ -1,0 +1,103 @@
+{
+ "id": "C11-6",
+ "arm": "C11",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.5,
+  "F14b parentage": 0.5555555555555556,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student has to write an essay on whether Hong Kong should tighten rent control on subdivided units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student knows almost nothing about the topic yet.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student needs background first: what subdivided units are, how many people live in them, and what the current rent control rules are.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Background would let the student understand the basic situation before picking a side.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 gives the basic definitions and current ordinance.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 gives the actual rent and stock numbers.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "The student needs basic background on what subdivided units are and how rent control works before taking a position.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 43,
+   "unit": "The student needs basic background on what subdivided units are and who lives in them.",
+   "parent": {
+    "type": "student",
+    "turn": 27
+   }
+  },
+  {
+   "turn": 63,
+   "unit": "The student needs background on what subdivided units are and who lives in them before taking a side.",
+   "parent": {
+    "type": "student",
+    "turn": 43
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student has to write an essay on whether Hong Kong should tighten rent control on subdivided units.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student knows almost nothing about the topic yet.\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 gives the basic definitions and current ordinance.\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 gives the actual rent and stock numbers.\". How did you get there?"
+  }
+ ]
+}

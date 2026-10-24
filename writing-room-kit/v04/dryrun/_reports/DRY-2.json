@@ -1,0 +1,109 @@
+{
+ "id": "DRY-2",
+ "arm": "DRY",
+ "components": {
+  "claim": 25.0,
+  "source": 100.0,
+  "cite": 50.0,
+  "change": 33.333333333333336,
+  "struct": 100.0
+ },
+ "composite": 56.25,
+ "composite_nostruct": 48.529411764705884,
+ "mismatches": [
+  "Paragraph 1 says: \"Rent control could make rents more affordable for these tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Landlords might leave the market if rent control rules get too strict.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Landlords leaving the market could worsen the housing shortage for those who need it most.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The government should think carefully about tightening rent control.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Rent control should help tenants while ensuring landlords do not stop renting out their units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A balance is needed between tenants and landlords.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Hong Kong has about 110,000 households in subdivided units, and they pay high rents for very small spaces [D1p1].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong has about 110,000 households in subdivided units.",
+   "ancestor": 13
+  },
+  {
+   "para": 1,
+   "claim": "Subdivided unit tenants pay high rents for very small spaces.",
+   "ancestor": 13
+  },
+  {
+   "para": 1,
+   "claim": "Rent control could make rents more affordable for these tenants.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Landlords might leave the market if rent control rules get too strict.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Landlords leaving the market could worsen the housing shortage for those who need it most.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The government should think carefully about tightening rent control.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Rent control should help tenants while ensuring landlords do not stop renting out their units.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A balance is needed between tenants and landlords.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "Hong Kong has about 110,000 households in subdivided units, and they pay high rents for very small spaces [D1p1].",
+   "supports": "partial"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    17
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    17
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    17
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 1,
+  "question_kinds": {
+   "wants_answer": 4,
+   "broad": 1,
+   "own_thinking": 2
+  },
+  "served_after_cap": 1
+ }
+}

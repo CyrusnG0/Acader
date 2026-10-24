@@ -1,0 +1,234 @@
+{
+ "id": "C2-6",
+ "arm": "C2",
+ "components": {
+  "claim": 40.0,
+  "source": 100.0,
+  "cite": 100.0,
+  "change": 14.285714285714286,
+  "struct": 100.0
+ },
+ "composite": 66.14285714285714,
+ "composite_nostruct": 60.16806722689076,
+ "mismatches": [
+  "Paragraph 1 says: \"A very hard cap could backfire.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Mr Chan says a hard cap would free up about 800 dollars a month, which he calls food for a month.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Rent decides whether people can eat properly.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan worries landlords would rather turn cubicles back into storage rooms than deal with regulated tenants.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Mr Chan has seen two units on his floor emptied and locked for a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"One person's story cannot be treated as proof of what happens across the city.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A policy that makes units disappear would hurt the very people it wants to help.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The risk of landlords exiting is the strongest argument against a hard cap.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"The number of subdivided units rose from about 100,800 in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"A step similar in size to the 2021 rules seems safe enough to try and could bring real relief.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The data excerpt only covers up to 2025 and cannot show whether a stricter rule than 2021 would cause a different result.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The government should watch stock numbers each year and stop if units start to fall.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a moderate way.",
+   "ancestor": 10
+  },
+  {
+   "para": 1,
+   "claim": "A very hard cap could backfire.",
+   "ancestor": null
+  },
+  {
+   "para": 1,
+   "claim": "Doing nothing leaves tenants with little protection.",
+   "ancestor": 4
+  },
+  {
+   "para": 2,
+   "claim": "Tenants have a lot to gain from tighter rent control.",
+   "ancestor": 4
+  },
+  {
+   "para": 2,
+   "claim": "Mr Chan says a hard cap would free up about 800 dollars a month, which he calls food for a month.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Rent decides whether people can eat properly.",
+   "ancestor": null
+  },
+  {
+   "para": 2,
+   "claim": "Without government action, tenants keep paying high rents with no real protection.",
+   "ancestor": 4
+  },
+  {
+   "para": 3,
+   "claim": "Mr Chan worries landlords would rather turn cubicles back into storage rooms than deal with regulated tenants.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "Mr Chan has seen two units on his floor emptied and locked for a year.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "One person's story cannot be treated as proof of what happens across the city.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "A policy that makes units disappear would hurt the very people it wants to help.",
+   "ancestor": null
+  },
+  {
+   "para": 3,
+   "claim": "The risk of landlords exiting is the strongest argument against a hard cap.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "The number of subdivided units rose from about 100,800 in 2019 to 111,200 in 2025.",
+   "ancestor": null
+  },
+  {
+   "para": 4,
+   "claim": "Growth continued through the 2021 tenancy control ordinance, suggesting moderate regulation did not cause a visible exit of units.",
+   "ancestor": 10
+  },
+  {
+   "para": 4,
+   "claim": "If landlords were going to pull out because of regulation, the stock would have fallen after 2021, and it did not.",
+   "ancestor": 10
+  },
+  {
+   "para": 5,
+   "claim": "Moderate tightening is a reasonable choice.",
+   "ancestor": 10
+  },
+  {
+   "para": 5,
+   "claim": "A step similar in size to the 2021 rules seems safe enough to try and could bring real relief.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "The data excerpt only covers up to 2025 and cannot show whether a stricter rule than 2021 would cause a different result.",
+   "ancestor": null
+  },
+  {
+   "para": 6,
+   "claim": "The author would not support a very hard cap right now but would support a gradual change.",
+   "ancestor": 10
+  },
+  {
+   "para": 6,
+   "claim": "The government should watch stock numbers each year and stop if units start to fall.",
+   "ancestor": null
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D3p2",
+   "sentence": "Mr Chan, a tenant in Kwai Chung, says a hard cap would free up about 800 dollars a month, which he describes as food for a month [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "He worries that landlords would rather turn cubicles back into storage rooms than deal with regulated tenants, and he has seen two units on his floor emptied and locked for a year [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stock index shows that the number of subdivided units went from about 100,800 in 2019 to 107,300 in 2021, then 109,800 in 2023 and 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The source says growth continued through the 2021 tenancy control ordinance, which suggests that moderate regulation did not cause a visible exit of units [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "The tenant interview shows the benefit of lower rent and also the fear of lost units [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "The stock data shows that the earlier, moderate rules did not lead to a drop in units [D2p1].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    12
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 3,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ }
+}

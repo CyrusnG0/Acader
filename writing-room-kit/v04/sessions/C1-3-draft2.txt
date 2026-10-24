@@ -1,0 +1,11 @@
+Hong Kong should tighten the rules on subdivided units, but narrowly. It should strengthen tenure security and add a light band on initial rents. It should not set a hard cap on rent levels.
+
+About 110,000 households live in these units [D1p1]. Many are waiting for public housing, and the average wait is around five and a half years [D1p2]. They pay a premium per square foot [D1p1]. Mr Chan, a delivery driver, pays 5,800 dollars for a 120 sq ft cubicle, and says the worst part is insecurity, not price [D3p1].
+
+The 2021 law capped rent increases inside a tenancy but not starting rents [D1p3]. Stock kept growing afterwards, from 107,300 to 111,200 [D2p1]. The working paper says this kind of control has small or null effects on stock [D6p2]. So a stricter version of this rule looks safe.
+
+A hard cap is the risky option. The working paper estimates a 10 percent cut in rent removes about 3 to 5 percent of stock in five years [D6p1]. In Berlin, listings fell within a year of the cap [D7p1]. The cap protected tenants already inside and the cost fell on people outside [D7p3]. The landlords say they would exit the market [D5p2], but they admit they have no margin data [D5p3], so I treat this only as a warning.
+
+The best argument for a hard cap is that it helps people inside. Mr Chan would free about 800 dollars a month [D3p2]. But he also fears landlords would empty units [D3p2], and the working paper says the people who lose units are the same people the cap is meant to protect [D6p3].
+
+The tenants say rent is not the main thing. In a survey of 440 households, 61 percent would trade a rent rise for three years of security [D11p1].

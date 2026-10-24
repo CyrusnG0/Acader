@@ -1,0 +1,198 @@
+{
+ "id": "C14-3",
+ "arm": "C14",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.375,
+  "F14b parentage": 0.5263157894736842,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student is investigating Hong Kong's subdivided flats and the rent control debate.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student wants to understand what has actually been tried and what the evidence says.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants to start with the problem itself and whether a cap has actually been tried.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks what the current Hong Kong ordinance covers.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks whether any rent cap has been tried somewhere comparable.",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student says all five sources cover problem definition, Hong Kong data, comparative cases and the counter-view.",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student says the working paper showed hard caps shrink stock while cap-on-increase rules barely do.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student says a legal source said a rate-style band is easier to defend than a flat cap.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student says the consultation piece pointed toward a band.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student combined those sources to land on the recommendation.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student says the working paper's elasticity figures and modelled finding that 3,000\u20134,000 households a year would be shut out told them who bears the cost of contraction.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student says D1's tenant profile told them those excluded households are the same people the policy is meant to help.",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "The student says the cap protects current tenants at the expense of the next ones, a tension none of the sources states outright.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The student says D1 describes how the 2021 Tenancy Control Ordinance capped increases within an existing tenancy but left the initial rent untouched.",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The student says they pulled the detail in when building the argument that the status quo fails tenants at the point where rents are set.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student says the point came from document D2, cited as [D2p2].",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "The student says they put it in paragraph 3 because it supports the claim that the ordinance failed at the initial rent.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The student says the figure came from D2 [D2p2], which reports real rent burden rising from 31 to 34 percent.",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "The student says it was a new detail added when building the paragraph showing the ordinance didn't help tenants at the point that matters.",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student is investigating Hong Kong's subdivided flats and the rent control debate.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants to understand what has actually been tried and what the evidence says.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"The student says a legal source said a rate-style band is easier to defend than a flat cap.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"The student says the consultation piece pointed toward a band.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"The student combined those sources to land on the recommendation.\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"The student says the cap protects current tenants at the expense of the next ones, a tension none of the sources states outright.\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"The student says they pulled the detail in when building the argument that the status quo fails tenants at the point where rents are set.\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"The student says they put it in paragraph 3 because it supports the claim that the ordinance failed at the initial rent.\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"The student says it was a new detail added when building the paragraph showing the ordinance didn't help tenants at the point that matters.\". How did you get there?"
+  }
+ ]
+}

@@ -1,0 +1,476 @@
+{
+ "id": "C1-5",
+ "arm": "C1",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.3125,
+  "F14b parentage": 0.7924528301886793,
+  "F14c grounded chains": 0.65
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 42
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Needs a definition of subdivided units and how bad conditions are",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Later needs evidence about what rent control does to tenants and landlords",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "For the definition wants an official or legal description",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "For how bad it is wants numbers",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Wants one first-hand account",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D1 is a primer that defines subdivided units",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D2 has the numbers on stock and rents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D3 is a first-hand tenant account",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "SDUs are small cubicles",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "About 110,000 households live in SDUs",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Tenants pay a premium per square foot",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Stock kept growing after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Rent burden went from 31 to 34 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Mr Chan says insecurity and the waiting list matter more than price",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p1"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Leans toward tightening, but only in a limited way",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Landlords say they will leave if returns drop",
+   "parent": {
+    "type": "assistant",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Stock kept growing from 100,800 to 111,200 even under the 2021 ordinance, so the threat has not happened with moderate rules",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Mr Chan saw two units emptied, so a hard cap on initial rent is riskier than limits on increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "Would tighten gradually and focus on security of tenure",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Needs evidence that tenants gained something concrete from security of tenure or caps",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Needs an academic analysis of supply effects",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D4 is a tenant account of the ordinance's real effect",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D6 is the academic analysis of supply and welfare",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D11 is a survey-based report on tenure security versus hard caps",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Hard caps on initial rent cut stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "A 15 percent cut helps incumbents by about 900 dollars while 3,000 to 4,000 households a year cannot get in",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Mrs Wong wants a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D4p2"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Mrs Wong's own account of two flats turned into storage shows exit does happen",
+   "parent": {
+    "type": "passage",
+    "pid": "D4p3"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "D11 says 61 percent would take tenure security over a rent rise",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "Position is narrow tightening, not a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Picks claim, evidence, objection, reply structure",
+   "parent": {
+    "type": "assistant",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "Wants narrow-tightening position up front and to answer the landlord exit threat directly with the stock data and the supply paper",
+   "parent": {
+    "type": "assistant",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "D2 stock growth carries the reply because it is real Hong Kong data under the 2021 rule",
+   "parent": {
+    "type": "student",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "D6's excluded households come from a model of a hard cap not being proposed",
+   "parent": {
+    "type": "student",
+    "turn": 36
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Narrow tightening means written tenancies with three-year tenure security",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Narrow tightening includes notice limits for repairs",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "Narrow tightening includes at most a light band on initial rents",
+   "parent": {
+    "type": "student",
+    "turn": 20
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "The 2021 ordinance did not shrink stock, which grew from 100,800 to 111,200",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D2p3 warns that post-2023 data is extrapolated, so should be careful",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p3"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "Tenure security is the best first step because tenants themselves rank it above rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D4p1 shows Mrs Wong never got a written agreement, so enforcement may be weak",
+   "parent": {
+    "type": "passage",
+    "pid": "D4p1"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "D9 is a legal opinion on compensation and judicial review risk",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "D9 tells whether a light initial-rent band is legally safe",
+   "parent": {
+    "type": "assistant",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "Skips D10 because it is marked draft and not for circulation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "A hard cap would likely face compensation claims",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p1"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "A band by published per-square-foot rate is more defensible but needs survey data that does not exist",
+   "parent": {
+    "type": "passage",
+    "pid": "D9p2"
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Will put tenure security first and make any rent band a later step once data exists",
+   "parent": {
+    "type": "assistant",
+    "turn": 45
+   }
+  },
+  {
+   "turn": 51,
+   "unit": "Will say the stock evidence is good up to 2023 and weaker after",
+   "parent": {
+    "type": "assistant",
+    "turn": 43
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Reply should concede that hard caps do cut stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Reply should concede that exit is real",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 53,
+   "unit": "Reply should hold firm that moderate rules on tenure did not shrink stock up to 2023",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "Conclusion is tenure security first, a data-based band later, no hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 51
+   }
+  },
+  {
+   "turn": 55,
+   "unit": "Plus faster public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p3"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs a definition of subdivided units and how bad conditions are\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Later needs evidence about what rent control does to tenants and landlords\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D1 is a primer that defines subdivided units\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D2 has the numbers on stock and rents\". How did you get there?"
+  },
+  {
+   "turn": 6,
+   "question": "At turn 6 you said: \"D3 is a first-hand tenant account\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"Leans toward tightening, but only in a limited way\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D4 is a tenant account of the ordinance's real effect\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D6 is the academic analysis of supply and welfare\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"D11 is a survey-based report on tenure security versus hard caps\". How did you get there?"
+  },
+  {
+   "turn": 46,
+   "question": "At turn 46 you said: \"D9 is a legal opinion on compensation and judicial review risk\". How did you get there?"
+  },
+  {
+   "turn": 46,
+   "question": "At turn 46 you said: \"Skips D10 because it is marked draft and not for circulation\". How did you get there?"
+  }
+ ]
+}

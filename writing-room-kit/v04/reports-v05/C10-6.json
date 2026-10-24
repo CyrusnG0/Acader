@@ -1,0 +1,379 @@
+{
+ "id": "C10-6",
+ "arm": "C10",
+ "components": {
+  "claim": 76.19047619047619,
+  "source": 100.0,
+  "cite": 90.0,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 76.19047619047619
+ },
+ "composite": 90.16666666666666,
+ "composite_nostruct": 88.4313725490196,
+ "mismatches": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than mainstream flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"61 percent of surveyed tenants would trade a nominal rent increase for three years of security.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"In a model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to tho\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to tho\" cites D7p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I am saying that softer rules have a better record on supply, and the NGO report reaches the same view, supporting tenure security and a light band on initial r\" cites D11p3. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units with three-year tenure security and a light band on initial rents, not a hard cap.",
+   "ancestor": 49,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than mainstream flats.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Many subdivided unit tenants are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years.",
+   "ancestor": null,
+   "birth": 39,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Landlords hold power because tenants cannot easily walk away from subdivided units.",
+   "ancestor": 0,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "The 2021 Tenancy Control Ordinance capped rent increases within existing tenancies but not starting rents.",
+   "ancestor": 14,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Under the 2021 ordinance, rent growth per square foot slowed, but the rent-to-income burden of SDU households rose from 31 to 34 percent.",
+   "ancestor": 14,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level.",
+   "ancestor": null,
+   "birth": 57,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "61 percent of surveyed tenants would trade a nominal rent increase for three years of security.",
+   "ancestor": null,
+   "birth": 57,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of marginal stock over five years.",
+   "ancestor": 43,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "In a model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment.",
+   "ancestor": null,
+   "birth": 57,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "After Berlin's 2020 rent cap, listed supply contracted within a year, benefiting tenants already inside while harming those still outside.",
+   "ancestor": 35,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 4,
+   "claim": "A hard cap would hurt the same group it is meant to protect, mostly newcomers locked out.",
+   "ancestor": 35,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The Landlords Association says members will leave the segment if returns fall below mortgage cost.",
+   "ancestor": 20,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The Landlords Association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 35,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "The threat of landlords leaving is real but partial and not as total as the Association suggests.",
+   "ancestor": 43,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "SDU stock grew from 100,800 in 2019 to 111,200 in 2025, including through the 2021 ordinance.",
+   "ancestor": 14,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "The working paper says this stability exists because the ordinance is a second-generation control that caps increases within tenancies, not hard levels.",
+   "ancestor": 51,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 6,
+   "claim": "Softer rules have a better record on supply, and the NGO report supports tenure security and a light band on initial rents while opposing a hard cap.",
+   "ancestor": 35,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "The NGO report argues that enforcement effort spent policing rents is not spent on inspecting fire, partition and ventilation, where harm is documented and immediate.",
+   "ancestor": 47,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 7,
+   "claim": "Tenure security should be less costly to enforce than checking every rent level, so it fits the enforcement limit better than a hard cap would.",
+   "ancestor": 51,
+   "birth": 57,
+   "kind": "derived"
+  },
+  {
+   "para": 8,
+   "claim": "Hong Kong should extend the 2021 approach with longer tenure and a light band on starting rents, and not use a hard initial cap.",
+   "ancestor": 49,
+   "birth": 57,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in subdivided units, and they pay 15 to 25 percent more per square foot than people in mainstream flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Many are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "The 2021 Tenancy Control Ordinance capped rent increases inside an existing tenancy but not the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Under it, rent growth per square foot slowed, yet the rent to income burden of SDU households still rose from 31 to 34 percent [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level, and 61 percent would trade a nominal rent increase for three years of security [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "A working paper estimates that a 10 percent cap-induced rent cut removes roughly 3 to 5 percent of marginal stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "In its model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to those still outside [D7p1][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to those still outside [D7p1][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "The Landlords Association says members will leave the segment if returns fall below mortgage cost [D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "But it also admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "SDU stock grew from 100,800 in 2019 to 111,200 in 2025, including through the 2021 ordinance [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "I should be careful here: the working paper says this stability exists because the ordinance is a second-generation control that caps increases within tenancies, not hard levels [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p3",
+   "sentence": "I am saying that softer rules have a better record on supply, and the NGO report reaches the same view, supporting tenure security and a light band on initial rents while opposing a hard cap [D11p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The NGO report also argues that enforcement effort spent policing rents is not spent on inspecting fire, partition and ventilation, where harm is documented and immediate [D11p2].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    39
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    39,
+    45
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    39,
+    45
+   ],
+   "discussed": true
+  },
+  {
+   "para": 1,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  },
+  {
+   "para": 8,
+   "window": [
+    45,
+    57
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "own_thinking": 14,
+   "wants_answer": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 88.4313725490196,
+ "composite_v2_struct": 90.16666666666666,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than mainstream flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Many subdivided unit tenants are new arrivals, single parents, or people waiting for public housing, which has averaged around five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"An NGO survey of 440 households found the main constraint tenants name is queue length and insecure tenure, not rent level.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"61 percent of surveyed tenants would trade a nominal rent increase for three years of security.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"In a model of a 15 percent cut in initial rents, incumbents gain about 900 dollars a month, while 3,000 to 4,000 households a year cannot enter the segment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to tho\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"After its 2020 cap, listed supply contracted within a year, and the report concludes the tenants who benefit are those already inside while the bill goes to tho\" cites D7p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"I am saying that softer rules have a better record on supply, and the NGO report reaches the same view, supporting tenure security and a light band on initial r\" cites D11p3. Does that passage say this? Please look at it again with us."
+ ]
+}

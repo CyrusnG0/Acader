@@ -1,0 +1,72 @@
+{
+ "id": "C2-6",
+ "arm": "C2",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.5,
+  "F14b parentage": 0.6666666666666666,
+  "F14c grounded chains": 0.25
+ },
+ "F14d refinement": {
+  "relation": "n/a"
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "something that backs up tightening rent control",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "evidence that tenants get hurt without it",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "tenant voice and data",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "Mr Chan is split",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "stock kept growing after the 2021 rules",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 10,
+   "unit": "moderate tightening is ok",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"something that backs up tightening rent control\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"evidence that tenants get hurt without it\". How did you get there?"
+  }
+ ]
+}

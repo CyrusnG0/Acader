@@ -1,0 +1,225 @@
+{
+ "id": "C4-4",
+ "arm": "C4",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.142857142857143,
+  "F14b parentage": 0.5454545454545454,
+  "F14c grounded chains": 0.2777777777777778
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 24
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Tighter rent control probably helps tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs facts about what happened to rents and tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a counter-view about landlords",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 gives rent and stock numbers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D3 is a first-hand tenant account",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D5 is the landlord counter-view",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D6 is academic analysis of rent control's effect on supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Hard caps shrink supply but caps on increases within a tenancy do not",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Hong Kong should tighten, but only the second kind",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "D3's tenant fears landlords will empty units",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p2"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "D2 shows stock kept growing after 2021",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "His fear is real for hard caps but not for the current ordinance",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "D5 admits no margin data and only a 34 percent survey response",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Landlord warning is weak evidence",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tighten rent control only by limiting increases within a tenancy and adding tenure security, not a hard cap on initial rent",
+   "parent": {
+    "type": "student",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D6p2 says increase caps have small or null effect on stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D2p1 shows stock grew from 107,300 to 111,200 after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "D5p3 shows landlord warnings rest on self-reported data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tenants face rent burden rising from 31 to 34 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tenants face short notice evictions",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p1"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "D3p3 says Mr Chan cares most about the waiting list",
+   "parent": {
+    "type": "passage",
+    "pid": "D3p3"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Rent control alone is not enough",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Tighter rent control probably helps tenants\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs facts about what happened to rents and tenants\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs a counter-view about landlords\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D2 gives rent and stock numbers\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D3 is a first-hand tenant account\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D5 is the landlord counter-view\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D6 is academic analysis of rent control's effect on supply\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"Hong Kong should tighten, but only the second kind\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Landlord warning is weak evidence\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Rent control alone is not enough\". How did you get there?"
+  }
+ ]
+}

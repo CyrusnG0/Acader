@@ -1,0 +1,86 @@
+{
+ "packet": "P13",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units but only narrowly."
+  },
+  {
+   "n": 2,
+   "claim": "It should strengthen the cap on rent increases, give tenants security of tenure, and consider a light, published band on starting rents."
+  },
+  {
+   "n": 3,
+   "claim": "It should not impose a hard cap on the initial rent."
+  },
+  {
+   "n": 4,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than tenants in mainstream flats."
+  },
+  {
+   "n": 5,
+   "claim": "Many subdivided unit residents are new arrivals, single parents, and people waiting around five and a half years for public housing."
+  },
+  {
+   "n": 6,
+   "claim": "Rent burden worsened from 31 to 34 percent of income even after the 2021 ordinance."
+  },
+  {
+   "n": 7,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases inside a tenancy but did not cap the initial rent."
+  },
+  {
+   "n": 8,
+   "claim": "Subdivided unit stock grew from about 107,300 units in 2021 to about 111,200 in 2025."
+  },
+  {
+   "n": 9,
+   "claim": "A working paper says hard caps on rent levels cause consistent contraction, while caps on increases have small or null effects on stock."
+  },
+  {
+   "n": 10,
+   "claim": "A 10 percent cap-induced rent cut removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 11,
+   "claim": "The households that lose units due to a hard cap are the same people the cap is meant to protect."
+  },
+  {
+   "n": 12,
+   "claim": "After Berlin's 2020 rent cap, new listings fell as owners withheld flats or moved them to uncontrolled segments."
+  },
+  {
+   "n": 13,
+   "claim": "When Berlin's rent cap was struck down, rents on new contracts jumped above the earlier trend."
+  },
+  {
+   "n": 14,
+   "claim": "The landlords' association argues that members will leave the segment if returns fall below mortgage cost."
+  },
+  {
+   "n": 15,
+   "claim": "The landlords' association admits it has no data on members' actual margins, and its cost figures come from a self-reported survey with a 34 percent response rate."
+  },
+  {
+   "n": 16,
+   "claim": "A legal opinion says a hard cap would almost certainly attract compensation claims under property rights, while an indexed, reviewable per-square-foot band could be defended as rate-capping."
+  },
+  {
+   "n": 17,
+   "claim": "The survey system a band needs does not exist yet, and judicial review could take longer than a Council term."
+  },
+  {
+   "n": 18,
+   "claim": "In a survey of 440 households, 61 percent would accept a nominal rent rise for three years of secure tenure, and 74 percent for a faster public housing offer."
+  },
+  {
+   "n": 19,
+   "claim": "Enforcement effort spent policing rents is effort not spent on inspecting fire safety and ventilation, where harm is documented and immediate."
+  },
+  {
+   "n": 20,
+   "claim": "The archive gives no number for how large a light band should be, so it should be much smaller than the 10 percent cut in the supply estimate."
+  }
+ ],
+ "statements": "[0] (typed) Hi, I know nothing about subdivided units in Hong Kong. Can you give me some sources from the course archive to start with?\n[2] (typed) I need a definition first of what subdivided units are and how bad conditions are, then evidence about what rent control did in Hong Kong. My claim would be about whether tightening rent control helps tenants.\n[4] (pick reason) D1 gives me the definition and basic conditions, D2 gives actual rent and stock numbers, and D11 is tenant survey data so I can see what tenants themselves want.\n[13] (typed) Reading D1 and D2: tenants pay a 15-25 percent premium per square foot [D1p1], and the 2021 ordinance only capped increases, not the starting rent [D1p3]. Stock still grew after it [D2p1], so moderate regulation did not seem to push landlords out. But rent burden still got worse, 31 to 34 percent [D2p2]. I think that means the current cap is too weak.\n[15] (typed) D11 says tenants care more about security of tenure and a faster public housing offer than the rent level [D11p1]. That surprised me. Can you give me a source that argues the other side, about what happens to supply when you tighten rent control?\n[17] (typed) It needs to show that tighter rent control reduces supply or quality in marginal housing like SDUs, ideally with a theory plus some evidence from another city. I would also like a comparative case. To check if a tighter cap changes burden, I need evidence on what happened when a stricter cap was tried somewhere.\n[19] (pick reason) D6 gives the economic theory on supply, D7 is a real case of a strict cap and what happened after, and D5 is the landlords' side so I can see their argument and judge how much to trust it.\n[30] (typed) D6 says hard caps on starting rent shrink supply (elasticity 0.31 to 0.48) but caps on increases like Hong Kong's 2021 one have small or null effects [D6p1][D6p2]. That fits the stable stock in D2. So my thinking changes: a hard cap would probably hurt the very tenants it is meant to help [D6p3]. Berlin shows the same thing, insiders gain and outsiders pay [D7p3].\n[32] (typed) D5 predicts landlords will exit [D5p2] but admits it has no real margin data and a weak 34 percent response survey [D5p3], so I trust it less than D6 and D7. I now lean against a hard initial-rent cap, but for strengthening the current increase cap and tenure security. Can you give me structure options for the essay?\n[34] (typed) I pick option 1, claim, evidence, objection, reply, because my main move is arguing against a hard cap while answering the tenant burden point.\n[36] (typed) Hong Kong should keep and strengthen the cap on rent increases and add tenure security, but should not impose a hard cap on initial rent, because first-generation caps shrink stock [D6p2] and the cost falls on outsiders [D7p3], while tenants themselves rank tenure security above rent level [D11p1].\n[41] (typed) Fair point, I had not read D11p3. It backs a narrow tightening: tenure security plus a light band on initial rents, not a hard cap [D11p3]. I think a light band is acceptable because D6 only shows contraction for hard caps on levels [D6p2], and a light band moves rents only a little, so the 10 percent reduction that removes 3 to 5 percent of stock [D6p1] would not apply. My one-sentence claim: narrow tightening yes, hard cap no. The strongest objection is that D5 says owners will exit [D5p2], but D5 admits it has no margin data [D5p3].\n[43] (typed) The light band's size, because I do not have a number for it. I will say honestly that the archive gives no figure, and argue it should be small enough to stay well below the hard-cap contraction range in D6. Also D2 warns post-2023 data is extrapolated [D2p3], so I will be careful with recent numbers.\n[45] (typed) A comparison inside the archive: I will say the band should be much smaller than the 10 percent cut in D6p1, and that the 2021 ordinance's rent growth of 3.1 percent against 1.7 percent for general rents [D2p2] shows how modest moves look.\n[47] (typed) Berlin's cap fell apart when the court struck it down and rents jumped above trend [D7p2]. I think that means a sudden strict cap is also unstable, not just harmful. Is that a fair reading, or is the court ruling a different issue?\n[49] (typed) I think D11p2 adds a good point: enforcement effort spent on policing rents is not spent on inspecting fire and ventilation where harm is documented. I will use that as a second reason to avoid a hard cap.\n[51] (typed) One weakness: the 2021 ordinance did not stop the burden from rising [D2p2], so my own side has a gap. I will answer by saying the burden is tied to the queue, since 61 percent would trade rent for security of tenure and 74 percent for a faster offer [D11p1].\n[53] (typed) I think I am ready to write. My plan: claim, evidence on the problem, objection from D5 and D6, reply using D2, D6, D7 and D11, then a short limits paragraph about missing numbers and D2's extrapolated data.\n[55] (typed) Last check: is there anything in what I have read that cuts against my narrow tightening claim that I have not answered?\n[57] (typed) D5 reply: its exit threat is a claim, not data, because it admits no margin data and a 34 percent self-reported survey [D5p3]. A light band is not a hard cap, so the contraction numbers in D6p1 do not directly apply, though I admit I can not rule out some exits.\n[59] (typed) D10 reply: if enforcement is thin, a light band might not reach the worst-off tenants. That is a fair point. It supports putting tenure security first, since it protects tenants who are afraid to complain, and it supports D11p2's view that enforcement should go to inspections. So the band should be light and simple to check.\n[61] (pick reason) D9 tells me whether a band or cap could be challenged in court or need compensation, which matters for whether my proposal is workable.\n[66] (typed) On D12: the think-tank says stable stock under the 2021 ordinance is because it does not bind. I agree with that, and D6p2 says the same, it is why I only support a light band and not a hard cap. A binding hard cap is where D6p1 and Berlin [D7p1] show contraction.\n[68] (typed) D9 helps a lot. A hard cap would likely face compensation claims [D9p1], but a per-square-foot band that is indexed and reviewable can be defended as rate-capping [D9p2]. The catch is that the survey system for it does not exist yet [D9p2], and litigation could outlast a Council term [D9p3]. So my light band needs data infrastructure first."
+}

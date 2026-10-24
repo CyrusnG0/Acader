@@ -1,0 +1,380 @@
+{
+ "id": "C11-5",
+ "arm": "C11",
+ "components": {
+  "claim": 4.3478260869565215,
+  "source": 100.0,
+  "cite": 71.42857142857143,
+  "change": 100.0,
+  "struct": 100.0,
+  "claim_v2": 4.3478260869565215
+ },
+ "composite": 62.2360248447205,
+ "composite_nostruct": 55.57179393496529,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should not tighten rent control on subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Tighter caps would hurt the tenants they aim to help.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Rent control distracts from supply and security problems tenants find most urgent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU median rent is roughly 30 percent below mainstream private flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The rent premium is a symptom of scarcity, not merely greedy pricing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin capped rents on about 1.5 million flats at 2020 levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin's cap caused classified-listing supply to contract within a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin's cap made some homes disappear from the controlled market rather than creating affordable ones.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"After the cap was struck down in 2021, new-contract rents jumped above the pre-cap trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Rent caps protect incumbents while burdening those still outside the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Hong Kong SDU tenants are highly mobile, so many would be 'still outside' at any moment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"An association representing about 18,000 SDU units argues a hard initial-rent cap is confiscatory.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Many SDU owners hold thin margins after mortgage, rates and 2021 compliance costs.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"If owners exit or withhold units, the segment tightens and current seekers lose.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"61 percent of surveyed tenants would trade a rent increase for three-year security of tenure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"74 percent would trade a rent increase for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent caps treat the price symptom of a quantity problem and divert enforcement from unsafe conditions.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Berlin's cap did lower offered rents while it lasted.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Relief from tighter caps is temporary, protects incumbents, and sets up a rebound.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The better path is building more public housing, legislating security of tenure, and enforcing fire, partition and ventilation standards.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"A defender of tighter controls might reply that Berlin's cap did lower offered rents while it lasted, and that SDU tenants paying a 15 to 25 percent per-square-\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets\" cites D7p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Given the thin margins owners describe [D5p1], the risk of withdrawal is real rather than theoretical.\" cites D5p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and avoid the documented side effects of caps [D7p1][D7p3].\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and avoid the documented side effects of caps [D7p1][D7p3].\" cites D7p3. Does that passage say this? Please look at it again with us."
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should not tighten rent control on subdivided units.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "Tighter caps would hurt the tenants they aim to help.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "Rent control distracts from supply and security problems tenants find most urgent.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU median rent is roughly 30 percent below mainstream private flats.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants pay a per-square-foot premium of 15 to 25 percent.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The rent premium is a symptom of scarcity, not merely greedy pricing.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Berlin capped rents on about 1.5 million flats at 2020 levels.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Berlin's cap caused classified-listing supply to contract within a year.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Berlin's cap made some homes disappear from the controlled market rather than creating affordable ones.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "After the cap was struck down in 2021, new-contract rents jumped above the pre-cap trend.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Rent caps protect incumbents while burdening those still outside the market.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Hong Kong SDU tenants are highly mobile, so many would be 'still outside' at any moment.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "An association representing about 18,000 SDU units argues a hard initial-rent cap is confiscatory.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Many SDU owners hold thin margins after mortgage, rates and 2021 compliance costs.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "If owners exit or withhold units, the segment tightens and current seekers lose.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "A survey of 440 SDU households finds tenancy insecurity and queue length, not rent level, are the binding constraints.",
+   "ancestor": 44,
+   "birth": 65,
+   "kind": "derived"
+  },
+  {
+   "para": 5,
+   "claim": "61 percent of surveyed tenants would trade a rent increase for three-year security of tenure.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "74 percent would trade a rent increase for a faster public-housing offer.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Rent caps treat the price symptom of a quantity problem and divert enforcement from unsafe conditions.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Berlin's cap did lower offered rents while it lasted.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "Relief from tighter caps is temporary, protects incumbents, and sets up a rebound.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  },
+  {
+   "para": 7,
+   "claim": "The better path is building more public housing, legislating security of tenure, and enforcing fire, partition and ventilation standards.",
+   "ancestor": null,
+   "birth": 65,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "Median SDU rent is roughly 30 percent below mainstream private flats, but per square foot tenants actually pay a premium of 15 to 25 percent, because space is carved and priced at its most desperate margin [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "Reported initial-offer rents for new listings fell sharply, but classified-listing supply then contracted measurably within a year as owners withheld or rerouted flats to non-controlled segments [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the constitutional court struck the law down in 2021, a backlog of suppressed increases released into the market and rents for new contracts jumped above the pre-cap trend line [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "The lesson is precise: caps bind differently on new entrants than on incumbents, protecting those already inside while handing the bill to those still outside [D7p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p1",
+   "sentence": "The Association representing owners of roughly 18,000 SDU units argues that a hard initial-rent cap is confiscatory, since many owners hold thin margins after mortgage payments, rates and the 2021 compliance costs of windows, wiring and fire doors [D5p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 SDU households finds that the binding constraint named by tenants is not rent level but queue length and tenancy insecurity: 61 percent would trade a nominal rent increase for a three-year security of tenure, and 74 percent for a faster public-housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The same report argues that rent caps treat the price symptom of a quantity problem, and that every unit of enforcement capacity spent policing rents is a unit not spent inspecting conditions\u2014fire, partition, ventilation\u2014where harm is documented and immediate [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "A defender of tighter controls might reply that Berlin's cap did lower offered rents while it lasted, and that SDU tenants paying a 15 to 25 percent per-square-foot premium deserve immediate relief [D1p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets up a rebound when the measure is lifted or struck down [D7p2][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets up a rebound when the measure is lifted or struck down [D7p2][D7p3].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p1",
+   "sentence": "Given the thin margins owners describe [D5p1], the risk of withdrawal is real rather than theoretical.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "Those measures address what tenants actually say they need [D11p1]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "and avoid the documented side effects of caps [D7p1][D7p3].",
+   "supports": "no"
+  },
+  {
+   "pid": "D7p3",
+   "sentence": "and avoid the documented side effects of caps [D7p1][D7p3].",
+   "supports": "no"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    0,
+    65
+   ],
+   "discussed": true
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 1,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 55.57179393496529,
+ "composite_v2_struct": 62.2360248447205,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Hong Kong should not tighten rent control on subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Tighter caps would hurt the tenants they aim to help.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"Rent control distracts from supply and security problems tenants find most urgent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU median rent is roughly 30 percent below mainstream private flats.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The rent premium is a symptom of scarcity, not merely greedy pricing.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin capped rents on about 1.5 million flats at 2020 levels.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin's cap caused classified-listing supply to contract within a year.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Berlin's cap made some homes disappear from the controlled market rather than creating affordable ones.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"After the cap was struck down in 2021, new-contract rents jumped above the pre-cap trend.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Rent caps protect incumbents while burdening those still outside the market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Hong Kong SDU tenants are highly mobile, so many would be 'still outside' at any moment.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"An association representing about 18,000 SDU units argues a hard initial-rent cap is confiscatory.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Many SDU owners hold thin margins after mortgage, rates and 2021 compliance costs.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"If owners exit or withhold units, the segment tightens and current seekers lose.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"61 percent of surveyed tenants would trade a rent increase for three-year security of tenure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"74 percent would trade a rent increase for a faster public-housing offer.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent caps treat the price symptom of a quantity problem and divert enforcement from unsafe conditions.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Berlin's cap did lower offered rents while it lasted.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"Relief from tighter caps is temporary, protects incumbents, and sets up a rebound.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 7 says: \"The better path is building more public housing, legislating security of tenure, and enforcing fire, partition and ventilation standards.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"A defender of tighter controls might reply that Berlin's cap did lower offered rents while it lasted, and that SDU tenants paying a 15 to 25 percent per-square-\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets\" cites D7p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"That is fair as far as it goes, but the relief is temporary and misdirected: it protects incumbents, shrinks the listing pool, and, on the Berlin evidence, sets\" cites D7p3. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Given the thin margins owners describe [D5p1], the risk of withdrawal is real rather than theoretical.\" cites D5p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and avoid the documented side effects of caps [D7p1][D7p3].\" cites D7p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"and avoid the documented side effects of caps [D7p1][D7p3].\" cites D7p3. Does that passage say this? Please look at it again with us."
+ ]
+}

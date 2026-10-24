@@ -1,0 +1,590 @@
+{
+ "id": "C11-6",
+ "arm": "C11",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should tighten rent control on subdivided units (SDUs). The current regime has slowed rent growth, but it has not gone far enough: SDU tenants still pay a large per-square-foot premium, their rent burden has actually worsened under the existing ordinance, and the stock of units has kept growing, so there is no evidence that stronger controls would cause landlords to exit the market. Tightening is the fair and workable next step.\n\nFirst, the background matters. Around 110,000 households live in SDUs, which are flats carved into small cubicles with shared kitchens and bathrooms [D1p1]. The median SDU rent is about 30 percent below mainstream private flats, but per square foot tenants pay a premium of 15 to 25 percent, because space is \"priced at its most desperate margin\" [D1p1]. That premium is the clearest sign that the market is not working for tenants. People are not paying more per square foot because SDUs are better; they are paying more because they have nowhere else to go. A rent control regime that leaves this premium intact is not doing its job.\n\nSecond, the existing ordinance has helped but only modestly. Median SDU rent per square foot rose 6.8 percent in 2019\u20132021, then 3.1 percent in 2021\u20132023 under the ordinance, compared with general private rent growth of 2.4 and 1.7 percent in the same windows [D2p2]. So SDU rents did slow down after regulation, which is a real achievement and shows that controls are not automatically counterproductive. But SDU rents still grew faster than general private rents, and the real rent burden for SDU households worsened from 31 to 34 percent of income [D2p2]. In other words, the ordinance bent the curve but did not break it. If the goal is to protect tenants, the current settings are too loose.\n\nThird, the usual objection to tighter rent control \u2014 that landlords will withdraw units and shrink supply \u2014 is not supported by the evidence here. Estimated SDU stock rose from 100,800 units in 2019 to 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1]. Growth continued through the 2021 tenancy control ordinance, which suggests moderate regulation did not trigger visible stock exit [D2p1]. This is important because it means the government can tighten rules without fearing a collapse in supply. Landlords are clearly still finding it worthwhile to operate SDUs even under controls, so the trade-off that critics warn about is, at least in this market, mostly hypothetical.\n\nFourth, the people affected are exactly the ones policy should protect. SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing, where the average wait has hovered around five and a half years [D1p2]. For these households the SDU is not a choice but a residual option while the queue moves [D1p2]. When tenants have no bargaining power and no exit option, a lightly regulated market will keep extracting the premium described in [D1p1]. Tighter controls \u2014 for example, a lower cap on per-square-foot increases and stronger enforcement against evasion \u2014 would target that extraction directly.\n\nOne honest caveat: tighter controls will not fix the root cause, which is the public housing queue and overall land supply. But that is an argument for doing more on supply, not for doing less on rent control in the meantime. The evidence shows controls can slow rents [D2p2] without shrinking stock [D2p1], and that tenants remain under serious pressure [D1p2]. Tightening rent control on SDUs is therefore justified: it is proportionate, it is backed by the archive's own numbers, and it protects the households with the least ability to protect themselves.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 593
+  },
+  {
+   "pid": "D1p1",
+   "pos": 791
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1341
+  },
+  {
+   "pid": "D2p2",
+   "pos": 1632
+  },
+  {
+   "pid": "D2p1",
+   "pos": 2034
+  },
+  {
+   "pid": "D2p1",
+   "pos": 2173
+  },
+  {
+   "pid": "D1p2",
+   "pos": 2718
+  },
+  {
+   "pid": "D1p2",
+   "pos": 2815
+  },
+  {
+   "pid": "D1p1",
+   "pos": 2954
+  },
+  {
+   "pid": "D2p2",
+   "pos": 3387
+  },
+  {
+   "pid": "D2p1",
+   "pos": 3418
+  },
+  {
+   "pid": "D1p2",
+   "pos": 3473
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 10
+ },
+ "drafts": [],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I have to write an essay on whether Hong Kong should tighten rent control on subdivided units, but I know almost nothing about the topic yet. Can you give me some sources from the course archive to start with?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before I point you anywhere, what would a source need to do for your essay right now \u2014 for example, give you background on the current situation, show evidence for one side, or give you a first-hand account \u2014 and which part of your argument is it meant to support?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I need background first: what subdivided units are, how many people live in them, and what the current rent control rules actually are. That would let me understand the basic situation before I pick a side. Can you shortlist a couple of sources on that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Statistical data excerpt tracking SDU stock and rents 2019-2025, with caveats on post-2023 survey extrapolation.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of 440 households arguing caps treat a symptom, favoring tenure security over hard caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer defining SDUs, tenant demographics, and the 2021 Tenancy Control Ordinance's scope.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity and welfare effects of rent control types, including a tightened-cap scenario.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal draft enforcement minute from a Housing Authority subcommittee, focused on inspection capacity and register feasibility.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "D1 gives me the basic definitions and current ordinance, and D2 gives the actual rent and stock numbers I need to understand the situation before taking a side.",
+   "docs": [
+    "D1",
+    "D2"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 21,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need the basic background on what subdivided units are and how rent control works before I can take a position",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 28,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 42,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "pick",
+   "text": "gives me the basic background on what subdivided units are and who lives in them",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 44,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 61,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 62,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 63,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need background on what subdivided units are and who lives in them before taking a side",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 64,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 65,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ],
+    [
+     "D1",
+     "D2",
+     "D6",
+     "D11",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D11",
+    "D1",
+    "D6",
+    "D10"
+   ],
+   "picked": [
+    "D1",
+    "D2"
+   ],
+   "reason": "D1 gives me the basic definitions and current ordinance, and D2 gives the actual rent and stock numbers I need to understand the situation before taking a side."
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1",
+    "D2"
+   ],
+   "reason": "D1 gives me the basic definitions and current ordinance, and D2 gives the actual rent and stock numbers I need to understand the situation before taking a side."
+  },
+  {
+   "turn": 27,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I need the basic background on what subdivided units are and how rent control works before I can take a position"
+  },
+  {
+   "turn": 43,
+   "docs": [
+    "D1"
+   ],
+   "reason": "gives me the basic background on what subdivided units are and who lives in them"
+  },
+  {
+   "turn": 63,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I need background on what subdivided units are and who lives in them before taking a side"
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D2p1",
+  "D2p2",
+  "D1p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 602
+ }
+}

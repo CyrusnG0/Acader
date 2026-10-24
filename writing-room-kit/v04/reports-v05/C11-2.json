@@ -1,0 +1,352 @@
+{
+ "id": "C11-2",
+ "arm": "C11",
+ "components": {
+  "claim": 0.0,
+  "source": 100.0,
+  "cite": 60.714285714285715,
+  "change": 0.0,
+  "struct": 100.0,
+  "claim_v2": 0.0
+ },
+ "composite": 44.10714285714286,
+ "composite_nostruct": 34.2436974789916,
+ "mismatches": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units modestly as a stopgap.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent despite lower median rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The SDU market is not functioning like a normal rental market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants are disproportionately new arrivals, single-parent households, and public housing waiters.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average public housing wait is about five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Demand for SDUs is highly inelastic, giving landlords little competitive pressure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Rent control caps increases on sitting tenants and gives households predictability.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The poorest households pay the most per unit of space.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A cap on annual increases would narrow the premium without eliminating supply incentives.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Tighter controls risk reducing SDU supply, which is a real risk.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A strict rent freeze should not be supported.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"SDU supply responds to housing shortage rather than rent levels alone.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Existing tenants' security matters more than marginal landlords' returns.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent control alone cannot solve the housing problem.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The root cause is the long public housing wait.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent control should be paired with supply-side measures.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A cap on annual increases is preferable to a rent freeze.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The policy is a stopgap, not a cure, but better than nothing for 110,000 households.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Tightening rent control addresses exactly this imbalance by capping how much landlords can raise rents on sitting tenants, giving households predictability whil\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The goal is not to make SDU landlords rich or poor; it is to stop the premium from growing while the public housing queue remains long [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"But the risk is overstated in the SDU context because the supply of subdivided units is itself a response to a housing shortage, not to rent levels alone [D1p1]\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The root cause is the five-and-a-half-year public housing wait [D1p2], and no rent cap will shorten that queue.\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A tightened cap buys time and reduces the per-square-foot premium [D1p1]\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Without it, tenants absorb the cost of the shortage through the most regressive channel available: paying more per square foot for less space [D1p1].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"despite being the households least able to afford it, and that they are trapped by a public housing queue averaging five and a half years [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units modestly as a stopgap.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "About 110,000 households live in subdivided units.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "SDU tenants pay a per-square-foot premium of 15 to 25 percent despite lower median rents.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 1,
+   "claim": "The SDU market is not functioning like a normal rental market.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "SDU tenants are disproportionately new arrivals, single-parent households, and public housing waiters.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The average public housing wait is about five and a half years.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Demand for SDUs is highly inelastic, giving landlords little competitive pressure.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Rent control caps increases on sitting tenants and gives households predictability.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The poorest households pay the most per unit of space.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "A cap on annual increases would narrow the premium without eliminating supply incentives.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Tighter controls risk reducing SDU supply, which is a real risk.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "A strict rent freeze should not be supported.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "SDU supply responds to housing shortage rather than rent levels alone.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Existing tenants' security matters more than marginal landlords' returns.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Rent control alone cannot solve the housing problem.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "The root cause is the long public housing wait.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Rent control should be paired with supply-side measures.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "A cap on annual increases is preferable to a rent freeze.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The policy is a stopgap, not a cure, but better than nothing for 110,000 households.",
+   "ancestor": null,
+   "birth": 66,
+   "kind": "none"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households live in flats carved into small cubicles with shared kitchens and bathrooms, and while the median SDU rent is roughly 30 percent below mainstream private flats, tenants actually pay a premium of 15 to 25 percent per square foot because space is priced at its most desperate margin [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "SDU tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing, where the average wait has hovered around five and a half years [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "For these households the SDU is not a choice but a residual option while the queue moves [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Tightening rent control addresses exactly this imbalance by capping how much landlords can raise rents on sitting tenants, giving households predictability while they wait for public housing [D1p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The per-square-foot premium of 15 to 25 percent [D1p1]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The goal is not to make SDU landlords rich or poor; it is to stop the premium from growing while the public housing queue remains long [D1p2].",
+   "supports": "no"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "But the risk is overstated in the SDU context because the supply of subdivided units is itself a response to a housing shortage, not to rent levels alone [D1p1].",
+   "supports": "no"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "Moreover, the 110,000 households already living in SDUs [D1p1]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "The root cause is the five-and-a-half-year public housing wait [D1p2], and no rent cap will shorten that queue.",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "A tightened cap buys time and reduces the per-square-foot premium [D1p1]",
+   "supports": "no"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "Without it, tenants absorb the cost of the shortage through the most regressive channel available: paying more per square foot for less space [D1p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The evidence shows that SDU tenants pay a per-square-foot premium of 15 to 25 percent [D1p1]",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "despite being the households least able to afford it, and that they are trapped by a public housing queue averaging five and a half years [D1p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D1p1",
+   "sentence": "The policy is a stopgap, not a cure \u2014 but for 110,000 households [D1p1], a stopgap is better than nothing.",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    0,
+    66
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 1,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 34.2436974789916,
+ "composite_v2_struct": 44.10714285714286,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"Hong Kong should tighten rent control on subdivided units modestly as a stopgap.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"About 110,000 households live in subdivided units.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"SDU tenants pay a per-square-foot premium of 15 to 25 percent despite lower median rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 1 says: \"The SDU market is not functioning like a normal rental market.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"SDU tenants are disproportionately new arrivals, single-parent households, and public housing waiters.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"The average public housing wait is about five and a half years.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Demand for SDUs is highly inelastic, giving landlords little competitive pressure.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Rent control caps increases on sitting tenants and gives households predictability.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The poorest households pay the most per unit of space.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"A cap on annual increases would narrow the premium without eliminating supply incentives.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Tighter controls risk reducing SDU supply, which is a real risk.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"A strict rent freeze should not be supported.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"SDU supply responds to housing shortage rather than rent levels alone.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Existing tenants' security matters more than marginal landlords' returns.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent control alone cannot solve the housing problem.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"The root cause is the long public housing wait.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Rent control should be paired with supply-side measures.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"A cap on annual increases is preferable to a rent freeze.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 6 says: \"The policy is a stopgap, not a cure, but better than nothing for 110,000 households.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Tightening rent control addresses exactly this imbalance by capping how much landlords can raise rents on sitting tenants, giving households predictability whil\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The goal is not to make SDU landlords rich or poor; it is to stop the premium from growing while the public housing queue remains long [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"But the risk is overstated in the SDU context because the supply of subdivided units is itself a response to a housing shortage, not to rent levels alone [D1p1]\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The root cause is the five-and-a-half-year public housing wait [D1p2], and no rent cap will shorten that queue.\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"A tightened cap buys time and reduces the per-square-foot premium [D1p1]\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Without it, tenants absorb the cost of the shortage through the most regressive channel available: paying more per square foot for less space [D1p1].\" cites D1p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"despite being the households least able to afford it, and that they are trapped by a public housing queue averaging five and a half years [D1p2].\" cites D1p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 1 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

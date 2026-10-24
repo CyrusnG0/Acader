@@ -1,0 +1,577 @@
+{
+ "id": "C13-3",
+ "arm": "C13",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.52,
+  "F14b parentage": 0.7142857142857143,
+  "F14c grounded chains": 0.15
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Researching how rent regulation affects subdivided flats in Hong Kong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Question of whether capping rents helps tenants or shrinks the market",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Key thing to test is whether capping initial rents shrinks supply of subdivided flats",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants evidence on stock or landlord behaviour under rent controls",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Wants material on how tenants weigh rent against security",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Core evidence on stock",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Tenant preferences",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Berlin case",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Supply elasticity",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Needs sources on how rules are actually enforced",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Needs what tenants themselves say about their landlords",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Needs the legal side of a cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Start with enforcement capacity",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Needs source showing how many flats inspectors can check in a year",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Needs what happens to tenants with no written agreement when a cap is enforced",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Enforcement capacity",
+   "parent": {
+    "type": "student",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Tenant accounts",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Legal risk for the claims",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Needs the other tenant story about landlord converting cubicles to storage and the waiting list",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Needs legal point about a banded cap being defensible",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Needs the NGO's own recommendation",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tenant story shows even someone who'd gain from a cap doubts landlords would stay",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tenant story works as counter-view to the idea that capping rent keeps units on the market",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Legal point backs the claim that a banded cap is defensible where a hard cap isn't",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "NGO recommendation backs the claim that the narrow tightening is the better package",
+   "parent": {
+    "type": "student",
+    "turn": 22
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Tenant counter-view",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Banded cap legality",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "NGO recommendation",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Tenant counter-view",
+   "parent": {
+    "type": "student",
+    "turn": 26
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Banded cap legality",
+   "parent": {
+    "type": "student",
+    "turn": 26
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "NGO recommendation",
+   "parent": {
+    "type": "student",
+    "turn": 26
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "All are cited documents on the shortlist still wanted",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 37,
+   "unit": "Needs the government's own framing of the floor-standard and rent band package",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "Wants the government's own framing to weigh its stated rationale for a floor standard plus rent band against arguments for a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 37
+   }
+  },
+  {
+   "turn": 39,
+   "unit": "The framing should back up what the package actually proposes",
+   "parent": {
+    "type": "assistant",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 41,
+   "unit": "All cited sources still needing passages on this shortlist",
+   "parent": {
+    "type": "student",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "Still needs the internal enforcement minute and the Mrs Wong tenant interview",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "Enforcement minute should show what the subcommittee found about inspection capacity and which tenants get missed",
+   "parent": {
+    "type": "student",
+    "turn": 14
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "That finding is the basis for saying enforcement would fail the most exploited",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "Mrs Wong's account should show how tenants see the cap and whether their experience matches it",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 48,
+   "unit": "Needs enforcement minute and tenant interview passages to ground those claims",
+   "parent": {
+    "type": "student",
+    "turn": 44
+   }
+  },
+  {
+   "turn": 52,
+   "unit": "Still needs the original 2021 ordinance text and the Berlin wrap-up passages",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 54,
+   "unit": "Ordinance text is to show the 2021 law only limited increases within a tenancy, not starting rents",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 54,
+   "unit": "So the stable stock doesn't tell us what a hard cap would do",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 54,
+   "unit": "Berlin wrap-up is to show suppressed increases released once the cap was struck down and new-contract rents jumped above the pre-cap trend",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p2"
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "Needs ordinance scope, Berlin aftermath, and policy arguments already relied on",
+   "parent": {
+    "type": "student",
+    "turn": 52
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "SDU stock rose from about 107,300 in 2021 to 111,200 in 2025, so the 2021 rules didn't visibly push landlords out",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Academic work separates two kinds of control: caps on the rent level shrink supply, rules limiting increases within a tenancy have small or no stock effect",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Modelled Hong Kong case: a 15 percent cut in starting rents helps current tenants by roughly 900 dollars a month",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "But leaves 3,000 to 4,000 households a year unable to get in, mostly new arrivals and newly formed households, exactly the people the policy is meant to help",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "A real initial-rent cap would need a certifiable tenancy register estimated at 40 to 60 staff-years to build",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p1"
+   }
+  },
+  {
+   "turn": 68,
+   "unit": "Own conclusion: a light band plus real security of tenure protects the people the current market abandons without pretending the waiting list is a rent problem",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "The load-bearing step is the entry-loss figure",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "If a modest cut in starting rents didn't block new households, the case against a hard cap would weaken a lot",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 70,
+   "unit": "The stock index and the two-types distinction matter mostly as context",
+   "parent": {
+    "type": "student",
+    "turn": 68
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "Would want to know the model's assumptions about how many new households try to enter each year and how sensitive entry is to rent level",
+   "parent": {
+    "type": "assistant",
+    "turn": 71
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "If it assumes a fixed inflow and a steep response, the 3,000\u20134,000 could be soft",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 72,
+   "unit": "Would like to check whether the model lets landlords convert units to storage instead of just exiting",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "The point being made is that a hard cap helps current tenants but pushes the cost onto people trying to get in",
+   "parent": {
+    "type": "student",
+    "turn": 68
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "That is why a light, indexed band on starting rents with tenure tightened first is preferred",
+   "parent": {
+    "type": "student",
+    "turn": 68
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "The stock numbers and the two-kinds-of-control distinction are just context; they don't prove a binding cap would be harmless",
+   "parent": {
+    "type": "student",
+    "turn": 70
+   }
+  },
+  {
+   "turn": 74,
+   "unit": "The claim that needs backing is that the losers from a hard cap are mainly the households still outside, exactly the people the policy is meant to help",
+   "parent": {
+    "type": "student",
+    "turn": 68
+   }
+  },
+  {
+   "turn": 76,
+   "unit": "A source would need to show who actually gets shut out when a cap binds \u2014 that the households blocked from entering are new arrivals and newly formed households, rather than existing tenants.",
+   "parent": {
+    "type": "assistant",
+    "turn": 75
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Researching how rent regulation affects subdivided flats in Hong Kong\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Question of whether capping rents helps tenants or shrinks the market\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Needs sources on how rules are actually enforced\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Needs what tenants themselves say about their landlords\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Needs the legal side of a cap\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Needs the other tenant story about landlord converting cubicles to storage and the waiting list\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Needs legal point about a banded cap being defensible\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Needs the NGO's own recommendation\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"All are cited documents on the shortlist still wanted\". How did you get there?"
+  },
+  {
+   "turn": 37,
+   "question": "At turn 37 you said: \"Needs the government's own framing of the floor-standard and rent band package\". How did you get there?"
+  },
+  {
+   "turn": 46,
+   "question": "At turn 46 you said: \"That finding is the basis for saying enforcement would fail the most exploited\". How did you get there?"
+  },
+  {
+   "turn": 52,
+   "question": "At turn 52 you said: \"Still needs the original 2021 ordinance text and the Berlin wrap-up passages\". How did you get there?"
+  },
+  {
+   "turn": 54,
+   "question": "At turn 54 you said: \"Ordinance text is to show the 2021 law only limited increases within a tenancy, not starting rents\". How did you get there?"
+  },
+  {
+   "turn": 54,
+   "question": "At turn 54 you said: \"So the stable stock doesn't tell us what a hard cap would do\". How did you get there?"
+  },
+  {
+   "turn": 70,
+   "question": "At turn 70 you said: \"The load-bearing step is the entry-loss figure\". How did you get there?"
+  },
+  {
+   "turn": 70,
+   "question": "At turn 70 you said: \"If a modest cut in starting rents didn't block new households, the case against a hard cap would weaken a lot\". How did you get there?"
+  },
+  {
+   "turn": 72,
+   "question": "At turn 72 you said: \"If it assumes a fixed inflow and a steep response, the 3,000\u20134,000 could be soft\". How did you get there?"
+  },
+  {
+   "turn": 72,
+   "question": "At turn 72 you said: \"Would like to check whether the model lets landlords convert units to storage instead of just exiting\". How did you get there?"
+  }
+ ]
+}

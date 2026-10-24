@@ -1,0 +1,120 @@
+{
+ "id": "C6-6",
+ "arm": "C6",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.6666666666666667,
+  "F14b parentage": 0.3,
+  "F14c grounded chains": 0.045454545454545456
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Will work through the essay's cited sources in order",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "D6 is the source for the central trade-off on supply elasticity and modelled Hong Kong-like market effects",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "D6 must supply both the elasticity estimate and the modelled Hong Kong-like numbers",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Needs cited sources for supply data and stock trends",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D6 supplied the elasticity estimate and modelled Hong Kong-like figures",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D2 supplied the 2021-2025 stock trend",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "Next needs tenant-voice evidence from D3, the tenant interview",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "D3 supplies Mr Chan's fear that landlords would rather warehouse units than let to regulated tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "D3 supplies Mr Chan's statement that a shorter waiting list would help more than lower rent",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 20,
+   "unit": "All three are tenant-voice sources cited for the security-of-tenure argument",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Will work through the essay's cited sources in order\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"D6 is the source for the central trade-off on supply elasticity and modelled Hong Kong-like market effects\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"Needs cited sources for supply data and stock trends\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"Next needs tenant-voice evidence from D3, the tenant interview\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"D3 supplies Mr Chan's fear that landlords would rather warehouse units than let to regulated tenants\". How did you get there?"
+  },
+  {
+   "turn": 18,
+   "question": "At turn 18 you said: \"D3 supplies Mr Chan's statement that a shorter waiting list would help more than lower rent\". How did you get there?"
+  },
+  {
+   "turn": 20,
+   "question": "At turn 20 you said: \"All three are tenant-voice sources cited for the security-of-tenure argument\". How did you get there?"
+  }
+ ]
+}

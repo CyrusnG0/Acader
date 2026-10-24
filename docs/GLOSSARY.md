@@ -1,32 +1,76 @@
 # Glossary
 
+Vocabulary for The Writing Room (current direction, D-024). Earlier terms are at the bottom.
+
+## Product
+
 | Term | Meaning |
 |---|---|
-| **Understanding infrastructure** | Our category: the school's evidence layer for verified understanding. Not a tool and not "edtech". |
-| **Report Card 2.0** | North-star framing: grades plus verified understanding plus an evidence chain. |
-| **Lecture mining** | Turning lecture recordings into structured knowledge automatically (board states + transcript → teaching units → course graph). |
-| **Board state** | A snapshot of the fullest version of a chalkboard or slide just before it is erased or changed. Output of the visual miner (M2). |
-| **Ink** | The fraction of a frame's pixels that look like writing. The representative frame of a segment is the *argmax ink* frame. |
-| **Ladder** | The miner's fine-grained sequence of progressively fuller states of one board. Production needs semantic clustering on top of it. |
-| **Teaching knowledge graph / course graph (L1)** | Per-school graph of concepts and how *their* instructors taught them, mined from their materials. |
-| **Global concept graph (L2)** | Platform-wide concepts, prerequisite edges and openly licensed canonical explanations (e.g. MIT OCW). Contains no tenant data. |
-| **Mastery model (L3)** | The student-owned model of what the student has demonstrated they understand. |
-| **School Teaching Brain** | The accumulated L1 graph of a school, used by new and substitute teachers and for revision. It is the retention moat. |
-| **Outside** | The unsupervised research phase. Any tool is allowed and we never police it. |
-| **Door** | Source-neutral import of anything from Outside, with no judgment. |
-| **Room** | The workspace where graded work is done and proof is earned (Helper + Coach). |
-| **End / Clear End** | Explicit completion: the artifact plus the report plus the Proof. "You have arrived." |
-| **Space** | One course or one project inside the workspace. |
-| **Helper** | The voice that answers the student's questions and removes mechanical friction. |
-| **Coach** | The voice that asks the student questions grounded in the course graph. It produces the proof. |
-| **Variant engine** | Generates N isomorphic assignment variants from one teacher reference solution. The teacher reviews them before release. |
-| **Isomorphic variant** | A different scenario, parameters or constraints that test the same core concept. It tests transfer rather than memorization. |
-| **Line-level viva** | During coding (with paste disabled), the system stops the student at key lines and asks why. |
-| **Burst-typing escalation** | Large unedited input in a short window raises challenge intensity, which can lead to the Oral-verified tier. |
-| **Claim card** | Writing track: an imported source tied to a specific claim. |
-| **Coverage map** | Writing track: sources per argument and gaps, phrased as questions. |
-| **Proof of Understanding** | A portable, evidence-backed certificate owned by the student: the artifact, process signals, comprehension dimensions and an optional oral spot-check. |
-| **Tiers** | Standard (rich process), Oral-verified (challenged), or none (returned with reasons). Comprehension labels: Strong / Partial / Oral-verified. |
-| **Five cross-checks** | Course alignment (L1), citation authenticity (L2), concept consistency (L2×L3), code-challenge grounding (L1×L2), process consistency (L3 → viva recommendation). |
-| **FYP** | Final Year Project. The writing-track beachhead. |
-| **Hero teacher** | An individual secondary-school teacher who adopts first, before a school-wide license. |
+| **The Writing Room** | The writing platform students write their assignments in. Working product name. |
+| **Process as evidence** | Our core idea: how the work was built, recorded in the platform, is the evidence. It is never a verdict about the student. |
+| **Helper** | The voice that answers: reading help, finding, citing, formatting. It never writes the student's argument. |
+| **Coach** | The voice that asks questions that make the student's idea stronger, grounded in the sources, lecture and the student's own trail. |
+| **Mapper** | Background role (not the Helper or Coach) that runs a small model on each batch of changes and proposes sentence-to-claim links on the live map (never links to source passages in v1; eng v2 D19). It maps meaning, never trust: its links show to the student as "suggested by the map, not checked", never raise a band, and appear on the receipt only as a count. Its findings reach the student as Coach questions (D-035). |
+| **Live map** | The student's claim map, built bottom-up while they write. The product's main screen; the receipt is its snapshot at submission (D-035). |
+| **Four pillars** | The four skills the Coach's questions train: reading, logic, writing, communication. One pillar question per new idea (D-038). |
+| **Coach cases A–E** | When the Coach acts: A blank page, B arrived with outside AI, C untraced text, D weak reasoning, E confident mode. |
+| **Coach outcome** | How a question ended: answered, revised, disagreed (with a reason), declined. |
+| **Confident mode** | The student turns help off and writes their own claims; the Coach asks a few questions at the end. |
+| **Policy module** | Code that governs one Helper capability (P-SRC, P-READ, P-SUM, P-STR, P-ARG, P-WRT, P-CTR, P-CIT). |
+| **Policy level** | The teacher's dial per assignment: practice, standard, assessed. |
+| **The Door** | The declared channel: the student brings in outside work (chat logs, outlines) and names the tool. Never penalised. |
+| **Outside** | Anything not in the platform. Always allowed and never policed. We assume outside AI is present. |
+| **Source** | A reading: teacher upload, lecture material, a paper from search, or a Door import. |
+| **Block** | A parsed piece of a source with page, position, section and kind (abstract, method, results, table, limitation…). |
+| **Reading aid** | Shows places to read for the student's current claim. Points, never concludes. |
+| **Pin** | One pointer from the reading aid: support, skeptical, limitation, data, method, lecture. |
+| **Triad** | A suggested trio of sources for a claim: confirming, complicating, adjacent. |
+| **Idea card** | The student's takeaway in their own words, anchored to the block it came from. |
+| **Anchor** | The recorded link from an idea card to a block. |
+| **Set aside** | Marking a source as not used, with a reason pill. |
+| **Claim node / claim map** | The student's mind map: claims in their own words, linked to cards, declared claims and draft sentences. |
+| **Declared claim** | A claim split out of a Door import, in the import's words, labelled as declared. |
+| **Unanchored claim** | A claim node with no card or declared claim behind it. |
+
+## Engine
+
+| Term | Meaning |
+|---|---|
+| **Event log** | The append-only, hash-chained record per student per assignment. The only input to the receipt. |
+| **Seal / head hash** | At submit, the log's last hash is printed on the receipt and given to the student, so later edits would show. |
+| **Origin mark** | The editor mark on every character saying where it came from: typed, paste_ext, quote, helper, coach, import. |
+| **Chain** | Sentence → claim node → idea card → block. Broken at the first missing link. |
+| **Recorded vs. inferred link** | Recorded: made by the student or the channel. Inferred: proposed by embeddings and confirmed by the LLM; labelled as such. |
+| **L0–L3** | Pipeline layers: capture, deterministic, candidate (embeddings), meaning (LLM on flagged spans only). |
+| **Claim compare (L3b)** | Checks each proposition in a sentence against its claim node; "added" propositions are untraced. |
+| **AI-expanded card** | A failure case: outside AI expands a student's card with new content that similarity scores miss. |
+| **Thin honest student** | A real student who leaves few traces (quiet, anxious, second-language); the receipt must not make them look suspect. |
+| **Leak check** | Tests that Helper/Coach output contains nothing the student could paste as their argument (law 1). |
+| **Wording filter** | Blocks banned words in teacher-facing text (law 10). |
+
+## Receipt
+
+| Term | Meaning |
+|---|---|
+| **Receipt** | The one-page process profile per submission. Never a verdict. |
+| **Bands** | Traced to a source or lecture, traced to a Coach exchange, declared outside help, polish only, untraced. Shown by words and by claims. |
+| **Untraced** | No record in the platform of where it came from. **Not the same as AI.** |
+| **Where to ask** | The 2–3 questions on the receipt, anchored to the student's work and choices. |
+| **Thinking moments** | Recorded signs of thinking: a claim changed after counter-evidence, a source set aside with a reason, a reasoned disagreement with the Coach. |
+| **Reading depth** | Which parts of each source were opened and anchored. |
+| **Chain view** | The click-through from a sentence back to its source passage. |
+| **Teacher mirror** | Later: a class-level view of what was read and where reasoning was thin. Not in v1. |
+
+## Other
+
+| Term | Meaning |
+|---|---|
+| **Kit** | `writing-room-kit/`: simulated experiments (v0.1–v0.5) that shaped the design. Not evidence about real students. |
+| **Golden session** | A scripted test session with an expected receipt. |
+| **Spike (S1–S5)** | A short pre-registered experiment before the build. |
+| **AIAS** | AI Assessment Scale; informs the policy levels. |
+| **FYP** | Final Year Project. |
+
+## Earlier vocabulary (archived direction)
+
+Lecture mining, board state, ink, ladder, course graph (L1/L2/L3), School Teaching Brain, Proof of Understanding, Space, End/Clear End, variant engine, line-level viva, burst-typing escalation, coverage map, five cross-checks and hero teacher belong to the original vision. See [../archive/proposals/ultimate-proposal.md](../archive/proposals/ultimate-proposal.md). Lecture mining may return as a source input.

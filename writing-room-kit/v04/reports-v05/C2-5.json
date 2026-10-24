@@ -1,0 +1,349 @@
+{
+ "id": "C2-5",
+ "arm": "C2",
+ "components": {
+  "claim": 28.571428571428573,
+  "source": 100.0,
+  "cite": 90.9090909090909,
+  "change": 25.0,
+  "struct": 100.0,
+  "claim_v2": 28.571428571428573
+ },
+ "composite": 62.38636363636363,
+ "composite_nostruct": 55.74866310160427,
+ "mismatches": [
+  "Paragraph 1 says: \"The course archive evidence supports this view but shows the current rules leave some gaps.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A common worry is that rent control makes landlords sell up or stop renting, reducing homes.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Estimated stock rose from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Median rent per square foot in subdivided units rose 6.8 percent in 2019 to 2021 and 3.1 percent in 2021 to 2023.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rents rose 2.4 and 1.7 percent in the same periods.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Subdivided unit rents grew faster than the general market even with the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The rent burden for these households worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Present control is not enough to protect people, so it should be tightened.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"New York has regulated rents since 1947 and now covers about 44 percent of its rental stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"New York's scheme is second generation, capping increases inside a tenancy while first rents and vacancy are only lightly regulated.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Stock contraction in New York is modest because the scheme is light at first rent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Hong Kong's 2021 ordinance also left the first-rent point untouched.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Tightening does not have to mean a hard cap on everything.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Regulated units in New York show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"This could be unfair to people seeking a first home who cannot get into a regulated unit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can wor\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can wor\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units in a moderate and targeted way.",
+   "ancestor": 8,
+   "birth": 12,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "Carefully designed rent control helps tenants a lot without pushing landlords out of the market.",
+   "ancestor": 2,
+   "birth": 12,
+   "kind": "derived"
+  },
+  {
+   "para": 1,
+   "claim": "The course archive evidence supports this view but shows the current rules leave some gaps.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "A common worry is that rent control makes landlords sell up or stop renting, reducing homes.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "The archive's index of subdivided units does not show a decline in stock.",
+   "ancestor": 8,
+   "birth": 12,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "Estimated stock rose from 100,800 units in 2019 to 111,200 in 2025.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 2,
+   "claim": "Stock growth continued after the 2021 tenancy control ordinance.",
+   "ancestor": 8,
+   "birth": 12,
+   "kind": "derived"
+  },
+  {
+   "para": 2,
+   "claim": "The data suggests moderate regulation did not cause a visible exit of stock.",
+   "ancestor": 8,
+   "birth": 12,
+   "kind": "derived"
+  },
+  {
+   "para": 3,
+   "claim": "Median rent per square foot in subdivided units rose 6.8 percent in 2019 to 2021 and 3.1 percent in 2021 to 2023.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "General private rents rose 2.4 and 1.7 percent in the same periods.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Subdivided unit rents grew faster than the general market even with the ordinance.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "The rent burden for these households worsened from 31 to 34 percent of income.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 3,
+   "claim": "Present control is not enough to protect people, so it should be tightened.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "New York has regulated rents since 1947 and now covers about 44 percent of its rental stock.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "New York's scheme is second generation, capping increases inside a tenancy while first rents and vacancy are only lightly regulated.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Stock contraction in New York is modest because the scheme is light at first rent.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Hong Kong's 2021 ordinance also left the first-rent point untouched.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 4,
+   "claim": "Tightening does not have to mean a hard cap on everything.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "Regulated units in New York show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 5,
+   "claim": "This could be unfair to people seeking a first home who cannot get into a regulated unit.",
+   "ancestor": null,
+   "birth": 12,
+   "kind": "none"
+  },
+  {
+   "para": 6,
+   "claim": "The government should tighten the rules step by step and watch the stock numbers as it does so.",
+   "ancestor": 8,
+   "birth": 12,
+   "kind": "derived"
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D2p1",
+   "sentence": "The estimated stock was 100,800 units in 2019, 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025 [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Median rent per square foot in these units rose 6.8 percent in 2019 to 2021, then 3.1 percent in 2021 to 2023 under the ordinance, while general private rents rose 2.4 and 1.7 percent in the same periods [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Also, the rent burden for these households got worse, from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p1",
+   "sentence": "New York has regulated rents since 1947 and now covers about 44 percent of its rental stock [D8p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p1",
+   "sentence": "Its scheme is called second generation, because increases are capped inside a tenancy while first rents and vacancy are only lightly regulated [D8p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "The note says stock contraction there is modest because the scheme is light at first rent [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "That is a useful lesson for Hong Kong, because the note says our 2021 ordinance also left that first-rent point untouched [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "The New York note says regulated units show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can work without big stock losses [D8p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can work without big stock losses [D8p2].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D8p2",
+   "sentence": "Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can work without big stock losses [D8p2].",
+   "supports": "partial"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    12
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    12
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    0,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 2,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 3,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 4,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 5,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  },
+  {
+   "para": 6,
+   "window": [
+    12,
+    12
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "wants_answer": 2,
+   "own_thinking": 1
+  },
+  "served_after_cap": 0
+ },
+ "report_version": "v2",
+ "composite_v2": 55.74866310160427,
+ "composite_v2_struct": 62.38636363636363,
+ "explained_after": [],
+ "mismatches_v2": [
+  "Paragraph 1 says: \"The course archive evidence supports this view but shows the current rules leave some gaps.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"A common worry is that rent control makes landlords sell up or stop renting, reducing homes.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 2 says: \"Estimated stock rose from 100,800 units in 2019 to 111,200 in 2025.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Median rent per square foot in subdivided units rose 6.8 percent in 2019 to 2021 and 3.1 percent in 2021 to 2023.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"General private rents rose 2.4 and 1.7 percent in the same periods.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Subdivided unit rents grew faster than the general market even with the ordinance.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"The rent burden for these households worsened from 31 to 34 percent of income.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 3 says: \"Present control is not enough to protect people, so it should be tightened.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"New York has regulated rents since 1947 and now covers about 44 percent of its rental stock.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"New York's scheme is second generation, capping increases inside a tenancy while first rents and vacancy are only lightly regulated.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Stock contraction in New York is modest because the scheme is light at first rent.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Hong Kong's 2021 ordinance also left the first-rent point untouched.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 4 says: \"Tightening does not have to mean a hard cap on everything.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"Regulated units in New York show lower mobility, with tenants staying longer and a wide gap between regulated and unregulated rents.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "Paragraph 5 says: \"This could be unfair to people seeking a first home who cannot get into a regulated unit.\". This point doesn't appear earlier in your work in the Room. Where did it come from?",
+  "The sentence \"Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can wor\" cites D2p2. Does that passage say this? Please look at it again with us.",
+  "The sentence \"Supply kept growing under the 2021 ordinance [D2p1], rents and burdens still rose [D2p2], and the New York example shows that a light and careful scheme can wor\" cites D8p2. Does that passage say this? Please look at it again with us.",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 2 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 3 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 4 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 5 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?",
+  "Paragraph 6 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ]
+}

@@ -1,0 +1,733 @@
+{
+ "id": "C11-1",
+ "arm": "C11",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "essay": "Hong Kong should not tighten rent control on subdivided units beyond the current second-generation framework, because the evidence suggests stricter caps would deliver only modest tenant relief while risking a slow contraction of the very stock low-income households depend on. The case for tightening is understandable but ultimately weaker than it first appears.\n\nThe case for tightening rests on real hardship. About 110,000 households live in SDUs, and while median SDU rent is roughly 30 percent below mainstream flats, tenants pay a per-square-foot premium of 15 to 25 percent because space is priced at its most desperate margin [D1p1]. These tenants are disproportionately new arrivals, single-parent households and residents waiting for public housing, where the average wait has hovered around five and a half years [D1p2]. For these households the SDU is a residual option, not a choice [D1p2]. On this reading, tighter caps look like straightforward protection.\n\nBut the supply evidence complicates that story. Standard theory predicts supply contraction under binding rent ceilings, though the elasticity is an empirical question [D6p1]. In marginal stock like SDUs, the long-run elasticity of supply to controlled rent levels is estimated at 0.31 to 0.48: a 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years [D6p1]. That is not catastrophic, but it is real, and it falls hardest on the households with the fewest alternatives.\n\nThe counter-argument is that the 2021 ordinance did not shrink stock. Estimated SDU stock rose from 100,800 units in 2019 to 107,300 in 2021, 109,800 in 2023 and 111,200 in 2025, with growth continuing through the ordinance [D2p1]. This is genuine evidence that moderate regulation did not trigger visible stock exit [D2p1]. However, the mechanism matters: the literature distinguishes first-generation controls (hard caps on levels) from second-generation controls (caps on increases within tenancies). First-generation controls show consistent contraction effects, while second-generation controls show small or null effects on stock \u2014 and the 2021 Hong Kong ordinance is second-generation, which explains the stable stock [D6p2]. So the stability of stock under the 2021 rules is evidence for keeping a second-generation framework, not evidence that tightening toward harder caps is harmless. Tightening would move policy closer to the first-generation end of the spectrum, where contraction effects are consistent [D6p2].\n\nThis is why I would not tighten. The current ordinance already caps increases within tenancies, and the stock data show it did not cause visible exit [D2p1][D6p2]. Stricter caps would push toward level controls with a known contraction record [D6p2], while the per-square-foot premium that actually burdens tenants [D1p1] is driven by scarcity and carving, not merely by the size of annual increases. A tighter cap does not create space; it mainly redistributes the existing marginal stock and, at the margin, reduces the incentive to keep providing it [D6p1].\n\nWhat should happen instead is enforcement and supply-side policy. The premium persists because tenants have nowhere else to go while the public housing queue moves [D1p2]; the durable fix is faster turnover of that queue and more transitional supply, not a harder ceiling on a stock that is already growing slowly [D2p1]. Tightening rent control treats the symptom while risking the stock. Hong Kong should hold the second-generation framework, enforce it properly, and address the underlying shortage.",
+ "citations": [
+  {
+   "pid": "D1p1",
+   "pos": 636
+  },
+  {
+   "pid": "D1p2",
+   "pos": 826
+  },
+  {
+   "pid": "D1p2",
+   "pos": 898
+  },
+  {
+   "pid": "D6p1",
+   "pos": 1143
+  },
+  {
+   "pid": "D6p1",
+   "pos": 1366
+  },
+  {
+   "pid": "D2p1",
+   "pos": 1710
+  },
+  {
+   "pid": "D2p1",
+   "pos": 1803
+  },
+  {
+   "pid": "D6p2",
+   "pos": 2211
+  },
+  {
+   "pid": "D6p2",
+   "pos": 2504
+  },
+  {
+   "pid": "D2p1",
+   "pos": 2663
+  },
+  {
+   "pid": "D6p2",
+   "pos": 2669
+  },
+  {
+   "pid": "D6p2",
+   "pos": 2756
+  },
+  {
+   "pid": "D1p1",
+   "pos": 2828
+  },
+  {
+   "pid": "D6p1",
+   "pos": 3066
+  },
+  {
+   "pid": "D1p2",
+   "pos": 3239
+  },
+  {
+   "pid": "D2p1",
+   "pos": 3389
+  }
+ ],
+ "struct": {
+  "kind": "typed",
+  "paste_chars": 0,
+  "bursts": 9
+ },
+ "drafts": [],
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I need to write an essay on whether Hong Kong should tighten rent control on subdivided units. I don't know much about this yet. Could you give me some sources to start with?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Before we look for anything, it helps to know what a source would need to do for your essay. Which claim in your argument would it support \u2014 for example, that rents are unaffordable, that tighter control would help tenants, or that it would cause some harm \u2014 and what kind of evidence would convince you there?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "I'm not sure yet which claim to argue. I'd like sources that give me background on the situation: how bad subdivided unit rents are, what current rent control exists, and what critics and supporters say about tightening it. Ideally I'd want evidence on both the tenant impact and any effect on landlords or supply.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Statistical data excerpt tracking SDU stock and rents over 2019-2025, with caveats on post-2023 survey extrapolation.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control supply elasticity, distinguishing first- and second-generation controls and modeling a tightened-cap scenario.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent cap, describing its design, market effects, and court annulment.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of 440 SDU households arguing caps treat a symptom, favoring tenure security over hard caps.\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer giving background on SDU conditions, existing 2021 tenancy control, and the rent-economics debate.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need background first on conditions and the existing 2021 tenancy control before I can take a position",
+   "docs": [
+    "D1"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "pick",
+   "text": "I need background on current rent control rules and the debate over tightening them before I can take a position.",
+   "docs": [
+    "D2"
+   ]
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 23,
+   "who": "student",
+   "kind": "say",
+   "text": "Thanks. Before I pick another source, I want to understand the current rules. Can you give me sources on what the existing tenancy control ordinance actually does, and evidence on whether tightening it would help tenants or shrink supply? Also any evidence on the per-square-foot premium and enforcement problems.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 24,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've named several things you want evidence on \u2014 what the ordinance does, whether tightening helps tenants or shrinks supply, the per-square-foot premium, and enforcement. Which one claim in your essay is the most important to support right now, and what would a source need to show for that claim \u2014 evidence, a counter-view, or a definition?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 25,
+   "who": "student",
+   "kind": "say",
+   "text": "The most important claim right now is the effect of tightening rent control on supply \u2014 whether stricter caps would shrink the SDU stock, since my D2 data shows stock kept growing through the 2021 ordinance. A source would need to show evidence or a counter-view on landlord exit and supply response under stricter controls. Can you give me that?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 26,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said the source needs to show evidence or a counter-view on landlord exit and supply response under stricter controls. To narrow it: should it mainly show landlords actually exiting or cutting units when caps tighten, or mainly argue the opposite \u2014 that stricter caps don't shrink stock \u2014 so you can weigh it against your D2 trend?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "say",
+   "text": "I want the counter-view: a source arguing that stricter caps don't shrink stock, so I can weigh it directly against my D2 trend data showing stock kept growing through the 2021 ordinance. Please shortlist sources on that.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 28,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've settled on the counter-view: a source arguing stricter caps don't shrink stock, to weigh against your D2 trend. One thing still unclear \u2014 what would that source need to show for you to treat it as a real counter-view rather than just an assertion? For example, would it need to explain *why* stock held up despite tighter caps, or show a case where it did?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "say",
+   "text": "It would count as a real counter-view for me if it explains the mechanism \u2014 why landlords didn't exit or cut units despite the 2021 caps \u2014 and ideally points to evidence, like a case or data, where stock held up under tighter rules rather than just asserting that regulation is harmless. Please shortlist sources along those lines.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 30,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-21 rent freeze, describing supply contraction and court annulment; argues caps harm new entrants.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt indexing SDU stock and rents 2019-2025, with caveats on voluntary reporting; shows stock growth through the 2021 ordinance.\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case note on New York's second-generation rent stabilisation, describing modest contraction and maintenance/listing costs.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying 440 SDU households; argues caps treat a price symptom and opposes hard caps on contraction grounds.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling supply elasticity under rent controls, distinguishing first- and second-generation schemes and tightened-cap scenarios.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "pick",
+   "text": "It models supply elasticity under tightened-cap scenarios, so it can explain the mechanism behind whether stock shrinks, which is what I need to weigh against my D2 trend data.",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 32,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 40,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 42,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 44,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "pick",
+   "text": "It distinguishes first and second generation controls and gives elasticity estimates, which directly addresses whether tighter caps shrink supply.",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 48,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 58,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 59,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 60,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 61,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 62,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 63,
+   "who": "student",
+   "kind": "pick",
+   "text": "It directly tests the supply question with elasticity estimates and separates first- versus second-generation controls, which I need to weigh against my D2 stock trend.",
+   "docs": [
+    "D6"
+   ]
+  },
+  {
+   "i": 64,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 65,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 66,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 67,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 68,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 69,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 70,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D9"
+    ],
+    [
+     "D1",
+     "D6",
+     "D2",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D6",
+    "D7",
+    "D11",
+    "D1"
+   ],
+   "picked": [
+    "D1"
+   ],
+   "reason": "I need background first on conditions and the existing 2021 tenancy control before I can take a position"
+  },
+  {
+   "open_turn": 23,
+   "state": "closed",
+   "clarify_turns": 3,
+   "picks_history": [
+    [
+     "D6",
+     "D1",
+     "D2",
+     "D10",
+     "D11"
+    ],
+    [
+     "D6",
+     "D5",
+     "D7",
+     "D2",
+     "D11"
+    ],
+    [
+     "D6",
+     "D8",
+     "D11",
+     "D2",
+     "D7"
+    ],
+    [
+     "D6",
+     "D8",
+     "D2",
+     "D11",
+     "D7"
+    ]
+   ],
+   "need_history": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "served_turn": 30,
+   "served_after_cap": false,
+   "shortlist": [
+    "D7",
+    "D2",
+    "D8",
+    "D11",
+    "D6"
+   ],
+   "picked": [
+    "D6"
+   ],
+   "reason": "It models supply elasticity under tightened-cap scenarios, so it can explain the mechanism behind whether stock shrinks, which is what I need to weigh against my D2 trend data."
+  }
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D1"
+   ],
+   "reason": "I need background first on conditions and the existing 2021 tenancy control before I can take a position"
+  },
+  {
+   "turn": 20,
+   "docs": [
+    "D2"
+   ],
+   "reason": "I need background on current rent control rules and the debate over tightening them before I can take a position."
+  },
+  {
+   "turn": 31,
+   "docs": [
+    "D6"
+   ],
+   "reason": "It models supply elasticity under tightened-cap scenarios, so it can explain the mechanism behind whether stock shrinks, which is what I need to weigh against my D2 trend data."
+  },
+  {
+   "turn": 47,
+   "docs": [
+    "D6"
+   ],
+   "reason": "It distinguishes first and second generation controls and gives elasticity estimates, which directly addresses whether tighter caps shrink supply."
+  },
+  {
+   "turn": 63,
+   "docs": [
+    "D6"
+   ],
+   "reason": "It directly tests the supply question with elasticity estimates and separates first- versus second-generation controls, which I need to weigh against my D2 stock trend."
+  }
+ ],
+ "unlocked_docs": [
+  "D1",
+  "D2",
+  "D6"
+ ],
+ "read_passages": [
+  "D1p1",
+  "D1p2",
+  "D2p1",
+  "D6p1",
+  "D6p2"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ },
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 23,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 25,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 27,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 29,
+   "kind": "own_thinking"
+  }
+ ],
+ "flags": {
+  "cited_unread": [],
+  "unknown_passage": [],
+  "words": 542
+ }
+}

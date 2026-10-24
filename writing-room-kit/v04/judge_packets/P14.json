@@ -1,0 +1,86 @@
+{
+ "packet": "P14",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should tighten regulation of subdivided units, but the instrument should be tenancy security and habitability, not the initial rent level."
+  },
+  {
+   "n": 2,
+   "claim": "A hard cap on initial rents is the intervention that the evidence most clearly warns against."
+  },
+  {
+   "n": 3,
+   "claim": "The binding constraint named by tenants is queue length and insecurity, not price."
+  },
+  {
+   "n": 4,
+   "claim": "SDU tenants pay a 15\u201325 percent per-square-foot premium over mainstream flats."
+  },
+  {
+   "n": 5,
+   "claim": "The median SDU tenant is a new arrival, single parent, or public-housing waiter facing a five-and-a-half-year queue."
+  },
+  {
+   "n": 6,
+   "claim": "Real rent burden has worsened from 31 to 34 percent of income."
+  },
+  {
+   "n": 7,
+   "claim": "Long-run elasticity of SDU-type supply is estimated at 0.31\u20130.48, so a 10 percent cap-induced rent cut removes roughly 3\u20135 percent of stock over five years."
+  },
+  {
+   "n": 8,
+   "claim": "A 15 percent cut in initial rents transfers about HK$900 per month to incumbents while leaving 3,000\u20134,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 9,
+   "claim": "Berlin illustrates that initial-offer rents fell but listing supply contracted, and when the Mietendeckel fell, suppressed increases released above the pre-cap trend."
+  },
+  {
+   "n": 10,
+   "claim": "The 2021 Tenancy Control Ordinance capped increases within tenancies but not initial rents, and excluded co-living SDUs."
+  },
+  {
+   "n": 11,
+   "claim": "The SDU stock grew from 100,800 to 111,200 units across 2019\u20132025."
+  },
+  {
+   "n": 12,
+   "claim": "The working paper states that the stable stock reflects a second-generation, non-binding instrument, while first-generation controls on levels show consistent contraction effects."
+  },
+  {
+   "n": 13,
+   "claim": "Inspection capacity covers under 6 percent of stock per year, and a band-based initial-rent cap would require a certifiable tenancy register costing 40\u201360 staff-years."
+  },
+  {
+   "n": 14,
+   "claim": "The subcommittee could not identify any enforcement design under which the newest-arrival tail is protected first rather than last."
+  },
+  {
+   "n": 15,
+   "claim": "A hard cap invites judicial review and compensation claims if framed as deprivation of income, and the litigation timeline would outlast a Council term."
+  },
+  {
+   "n": 16,
+   "claim": "Mr Chan says the worst part is insecurity\u2014two weeks' notice after asking for a window repair\u2014and he would accept any rent to leave if the queue were three years."
+  },
+  {
+   "n": 17,
+   "claim": "The NGO survey finds 61 percent would trade a nominal rent increase for three-year security of tenure, and 74 percent for a faster public-housing offer."
+  },
+  {
+   "n": 18,
+   "claim": "The legal opinion's middle instrument\u2014a published, indexed per-square-foot band defensible as rate-capping rather than confiscation\u2014is compatible with this approach if paired with the missing register and inspection capacity."
+  },
+  {
+   "n": 19,
+   "claim": "The strongest objection is that a light band leaves the initial rent\u2014the actual pain point\u2014unregulated."
+  },
+  {
+   "n": 20,
+   "claim": "Tightening rent control on SDUs in the form of a hard initial-rent cap would help some incumbents and hurt more outsiders."
+  }
+ ],
+ "statements": "[0] (typed) I'd like to build this essay from primary sources. Could you give me a source that documents the rent premium SDU tenants pay over mainstream flats and the profile of the median SDU tenant? I believe it's cited as D1.\n[2] (typed) The rent premium is doing the heavier work. I need D1 to establish the scale of the hardship that motivates the whole debate: the concrete figure that SDU tenants pay roughly 15\u201325 percent more per square foot than mainstream flats, which is the fact the case for a hard cap rests on. Please give me D1 as a source.\n[4] (pick reason) Establishes the rent premium and tenant profile motivating the debate\n[16] (pick reason) All cited later and needed to trace the argument in order\n[26] (typed) The essay next turns to the enforcement gap and the legal obstacles to a hard cap, citing D10 and D9. Please unlock those two sources so I can read them."
+}

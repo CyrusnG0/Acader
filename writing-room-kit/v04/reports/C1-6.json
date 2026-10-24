@@ -1,0 +1,355 @@
+{
+ "id": "C1-6",
+ "arm": "C1",
+ "components": {
+  "claim": 100.0,
+  "source": 100.0,
+  "cite": 95.0,
+  "change": 91.66666666666667,
+  "struct": 100.0
+ },
+ "composite": 98.0,
+ "composite_nostruct": 97.64705882352942,
+ "mismatches": [
+  "The sentence \"Hong Kong's ordinance is the second kind, and the stock data fits that: stock grew from 107,300 in 2021 to 111,200 in 2025 [D2p1].\" cites D2p1. Does that passage say this? Please look at it again with us.",
+  "The sentence \"The Landlords Association says a hard cap is confiscatory and that members will leave the segment if returns fall below mortgage cost [D5p1]\" cites D5p1. Does that passage say this? Please look at it again with us.",
+  "Paragraph 8 is new or changed between saves, and that change isn't discussed in the Room. What made you write or change it?"
+ ],
+ "claims": [
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten rent control on subdivided units, but only in a narrow way.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "Hong Kong should not set a hard cap on initial rents.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "Hong Kong should tighten tenure security and at most add a loose band on initial rents.",
+   "ancestor": 42
+  },
+  {
+   "para": 1,
+   "claim": "A hard cap would probably hurt the people it is meant to protect.",
+   "ancestor": 12
+  },
+  {
+   "para": 2,
+   "claim": "About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than tenants in ordinary flats.",
+   "ancestor": 12
+  },
+  {
+   "para": 2,
+   "claim": "Most SDU residents are new arrivals, single parents, and people waiting for public housing.",
+   "ancestor": 12
+  },
+  {
+   "para": 2,
+   "claim": "The 2021 Tenancy Control Ordinance capped rent increases within an existing tenancy but did not cap the starting rent.",
+   "ancestor": 25
+  },
+  {
+   "para": 3,
+   "claim": "The rent burden of SDU households worsened under the ordinance, rising from 31 to 34 percent of income.",
+   "ancestor": 54
+  },
+  {
+   "para": 3,
+   "claim": "A hard cap could free about 800 dollars a month for a tenant like Mr Chan.",
+   "ancestor": 12
+  },
+  {
+   "para": 4,
+   "claim": "A 10 percent cut in rent caused by a cap removes roughly 3 to 5 percent of SDU stock over five years.",
+   "ancestor": 25
+  },
+  {
+   "para": 4,
+   "claim": "Hard caps on rent levels show consistent contraction, while caps on increases within a tenancy show small or no effects on stock.",
+   "ancestor": 25
+  },
+  {
+   "para": 4,
+   "claim": "Hong Kong's SDU stock grew from 107,300 in 2021 to 111,200 in 2025 under the softer 2021 rules.",
+   "ancestor": 42
+  },
+  {
+   "para": 4,
+   "claim": "A 15 percent cut in initial rents would gain incumbent tenants about 900 dollars a month but prevent 3,000 to 4,000 households a year from entering the segment.",
+   "ancestor": 25
+  },
+  {
+   "para": 4,
+   "claim": "Berlin's 2020 rent cap led to a contraction in listings within a year, and when struck down, rents for new contracts jumped above the earlier trend.",
+   "ancestor": 25
+  },
+  {
+   "para": 5,
+   "claim": "The Landlords Association says a hard cap is confiscatory and that members will leave the segment if returns fall below mortgage cost.",
+   "ancestor": 58
+  },
+  {
+   "para": 5,
+   "claim": "The Landlords Association admits it has no data on its members' real margins, and its cost numbers come from a self-reported survey with a 34 percent response rate.",
+   "ancestor": 58
+  },
+  {
+   "para": 5,
+   "claim": "Landlord exit is a real risk of a hard cap, not a proven fact.",
+   "ancestor": 58
+  },
+  {
+   "para": 6,
+   "claim": "Mr Chan says what would help most is not lower rent but a shorter waiting list, and he would accept any rent to leave if the queue were three years instead of five and a half.",
+   "ancestor": 48
+  },
+  {
+   "para": 6,
+   "claim": "A survey of 440 SDU households found that 61 percent would trade a nominal rent increase for three years of secure tenure, and 74 percent for a faster public housing offer.",
+   "ancestor": 42
+  },
+  {
+   "para": 6,
+   "claim": "The NGO report argues that rent caps treat the price symptom of a quantity problem, and that enforcement effort is better spent on inspecting fire and ventilation conditions.",
+   "ancestor": 52
+  },
+  {
+   "para": 7,
+   "claim": "A light band on initial rents is still a cap on levels, so it could shrink supply if it binds.",
+   "ancestor": 46
+  },
+  {
+   "para": 7,
+   "claim": "The sources give no number for how loose the band should be to avoid binding much.",
+   "ancestor": 46
+  },
+  {
+   "para": 7,
+   "claim": "The archive contains nothing that explains why rent burden rose under the ordinance.",
+   "ancestor": 60
+  },
+  {
+   "para": 8,
+   "claim": "Hong Kong should tighten rent control by giving tenants security and a loose band, not by a hard cap on initial rents.",
+   "ancestor": 42
+  },
+  {
+   "para": 8,
+   "claim": "The real fix is the waiting list.",
+   "ancestor": 27
+  }
+ ],
+ "cites": [
+  {
+   "pid": "D1p1",
+   "sentence": "About 110,000 households do, in flats carved into small cubicles, and they pay 15 to 25 percent more per square foot than tenants in ordinary flats [D1p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p2",
+   "sentence": "Most are new arrivals, single parents and people waiting for public housing, so the SDU is a residual option while they wait in the queue [D1p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D1p3",
+   "sentence": "It capped rent increases inside an existing tenancy, but it did not cap the starting rent [D1p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p2",
+   "sentence": "The rent burden of SDU households got worse under the ordinance, from 31 to 34 percent of income [D2p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "A hard cap could free about 800 dollars a month for a tenant like Mr Chan [D3p2], which is a real gain.",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p1",
+   "sentence": "A working paper reviews the literature and estimates that a 10 percent cut in rent caused by a cap removes roughly 3 to 5 percent of SDU stock over five years [D6p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D6p2",
+   "sentence": "Hard caps on rent levels show consistent contraction, while caps on increases inside a tenancy show small or no effects on stock [D6p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Hong Kong's ordinance is the second kind, and the stock data fits that: stock grew from 107,300 in 2021 to 111,200 in 2025 [D2p1].",
+   "supports": "partial"
+  },
+  {
+   "pid": "D6p4",
+   "sentence": "Incumbent tenants would gain about 900 dollars a month, but 3,000 to 4,000 households a year could not enter the segment, mostly new arrivals [D6p4].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p1",
+   "sentence": "After its 2020 cap, listings contracted within a year as owners withheld flats or moved them to uncontrolled segments [D7p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D7p2",
+   "sentence": "When the law was struck down, rents for new contracts jumped above the earlier trend [D7p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p1",
+   "sentence": "The Landlords Association says a hard cap is confiscatory and that members will leave the segment if returns fall below mortgage cost [D5p1]",
+   "supports": "partial"
+  },
+  {
+   "pid": "D5p2",
+   "sentence": "[D5p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D5p3",
+   "sentence": "The Association admits it has no data on its members' real margins, and its cost numbers come from a self-reported survey with a 34 percent response rate [D5p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D2p1",
+   "sentence": "Also, stock kept growing under the softer 2021 rules [D2p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p2",
+   "sentence": "He has seen two units on his floor emptied and locked for a year [D3p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p3",
+   "sentence": "Mr Chan himself says what would help most is not lower rent but a shorter waiting list, and that he would accept any rent to leave if the queue were three years instead of five and a half [D3p3].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p1",
+   "sentence": "A survey of 440 SDU households found the same: 61 percent would trade a nominal rent increase for three years of secure tenure, and 74 percent for a faster public housing offer [D11p1].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D11p2",
+   "sentence": "The NGO report argues that rent caps treat the price symptom of a quantity problem, and that enforcement effort is better spent on inspecting fire and ventilation conditions [D11p2].",
+   "supports": "yes"
+  },
+  {
+   "pid": "D3p1",
+   "sentence": "Mr Chan's first complaint was insecurity, since his landlord ended an earlier tenancy on two weeks notice when he asked for a repair [D3p1].",
+   "supports": "yes"
+  }
+ ],
+ "changes": [
+  {
+   "para": 1,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    0,
+    27
+   ],
+   "discussed": true
+  },
+  {
+   "para": 2,
+   "window": [
+    27,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    27,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    27,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    27,
+    52
+   ],
+   "discussed": true
+  },
+  {
+   "para": 3,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 4,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 5,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 6,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 7,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": true
+  },
+  {
+   "para": 8,
+   "window": [
+    52,
+    62
+   ],
+   "discussed": false
+  }
+ ],
+ "sources_unpicked": [],
+ "inputs": {
+  "write_requests": 0,
+  "question_kinds": {
+   "broad": 2,
+   "wants_answer": 7,
+   "own_thinking": 7
+  },
+  "served_after_cap": 0
+ }
+}

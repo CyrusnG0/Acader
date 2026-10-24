@@ -1,0 +1,238 @@
+{
+ "id": "C14-5",
+ "arm": "C14",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.6666666666666665,
+  "F14b parentage": 0.625,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Wants to see the working paper estimating supply elasticity and modelling a tightened cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants the NGO survey of subdivided-unit tenants",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Core claim needing backing: a hard cap on initial rents would shrink stock rather than help tenants",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs the modelling paper to show how much stock a cap-induced rent cut removes and who bears it",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Tenant survey can wait",
+   "parent": {
+    "type": "student",
+    "turn": 0
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Needs supply elasticity modelling paper for the core claim",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 9,
+   "unit": "Wants enforcement, tenant survey, Berlin case, and stock index too",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Worked backwards from evidence rather than starting with a policy",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Elasticity findings and failure of hard caps told him what not to do",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Tenant survey plus Mr Chan's answer told him what tenants actually want",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Three-part package is what was left once alternatives were ruled out",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 22,
+   "unit": "Consultation source floating a floor-standard plus rent band gave the specific shape",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Figure came from D6p1, long-run elasticity of SDU-type supply estimated at 0.31 to 0.48",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Hadn't used that source earlier, so the point is new to the essay",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Brought it in because the supply-elasticity estimate is core economic evidence that a binding cap would shrink marginal stock",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Number came from own calculation multiplying the 0.31 to 0.48 elasticity by the 10 percent rent cut",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Should have shown the arithmetic in the paragraph rather than presenting the result as stated in the source",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Built the sentence from the working paper's modelling of a tightened cap in a Hong Kong-like market at D6p4",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Treated the 15 percent scenario as the paper's illustration, not his own calculation, since he had already taken the elasticity from D6p1",
+   "parent": {
+    "type": "student",
+    "turn": 23
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Put it in paragraph 3 because it was the clearest numbers for the trade-off between helping current tenants and shutting out new ones",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p4"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Got the distinction from D6p2, first-generation hard caps on levels versus second-generation caps on increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Used it to re-read the 2021 ordinance as a second-generation instrument",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Stable stock in D2p1 doesn't prove a harder cap is safe",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 26,
+   "unit": "Point came out of comparing those two sources, not from outside",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants to see the working paper estimating supply elasticity and modelling a tightened cap\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants the NGO survey of subdivided-unit tenants\". How did you get there?"
+  },
+  {
+   "turn": 9,
+   "question": "At turn 9 you said: \"Wants enforcement, tenant survey, Berlin case, and stock index too\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Worked backwards from evidence rather than starting with a policy\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Three-part package is what was left once alternatives were ruled out\". How did you get there?"
+  },
+  {
+   "turn": 22,
+   "question": "At turn 22 you said: \"Consultation source floating a floor-standard plus rent band gave the specific shape\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"Hadn't used that source earlier, so the point is new to the essay\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"Should have shown the arithmetic in the paragraph rather than presenting the result as stated in the source\". How did you get there?"
+  },
+  {
+   "turn": 26,
+   "question": "At turn 26 you said: \"Point came out of comparing those two sources, not from outside\". How did you get there?"
+  }
+ ]
+}

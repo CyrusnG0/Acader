@@ -1,0 +1,361 @@
+{
+ "id": "C5-3",
+ "arm": "C5",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.8,
+  "F14b parentage": 0.5,
+  "F14c grounded chains": 0.45454545454545453
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 24
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Tentative claim: rent control should be tightened because SDU tenants are very vulnerable",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a source backing the vulnerability claim",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a counter-view about landlords or supply",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 is a primer for background on tenants and current rules",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D5 gives the landlord counter-view needed to answer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Wants a source on whether tightening rent control works or shrinks supply",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 12,
+   "unit": "Wants a source on what tenants themselves want",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Least sure about supply effects",
+   "parent": {
+    "type": "student",
+    "turn": 12
+   }
+  },
+  {
+   "turn": 14,
+   "unit": "Source would need to show whether rent caps make landlords leave the market",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D6 models supply effects of caps, the weakest claim",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 16,
+   "unit": "D11 shows what tenants themselves want",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Changed mind: Hong Kong should tighten only narrowly, with tenure security and maybe a light band on initial rents, not a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "A hard cap would shrink stock by about 3 to 5 percent per 10 percent rent cut, hurting the people it protects",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 24,
+   "unit": "Tenants say they want security of tenure more than lower rent",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "Moved from the vulnerability claim to a narrower one",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "Tenants are vulnerable, but what protects them most is security of tenure",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 28,
+   "unit": "A hard cap would remove units they need",
+   "parent": {
+    "type": "student",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Claim 1: the 2021 ordinance is not enough because it only caps increases and misses initial rent and insecurity",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 30,
+   "unit": "Tenants still suffer under the ordinance",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 32,
+   "unit": "Claim 2: Berlin shows a hard cap shrank listings and the bill fell on people outside",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 34,
+   "unit": "Claim 3: enforcement is weak, with little inspection capacity, so a cap would miss the most exploited newcomers",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p2"
+   }
+  },
+  {
+   "turn": 36,
+   "unit": "For claim 1 needs both a tenant's own account of insecurity and numbers on rent burden after 2021",
+   "parent": {
+    "type": "assistant",
+    "turn": 31
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "For Berlin, the listings falling does the heavier work, and then that the burden landed on outsiders.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 40,
+   "unit": "For enforcement, I most need that inspection capacity is low and that newcomers are missed.",
+   "parent": {
+    "type": "assistant",
+    "turn": 35
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D3 and D4 are tenant accounts of insecurity and the ordinance",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 42,
+   "unit": "D2 gives rent burden numbers after 2021",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "D5 is self-interested and admits no margin data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "Stock stayed stable under the 2021 ordinance",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 44,
+   "unit": "I accept exit is a real risk for a hard cap, which is why I only back a narrow tightening",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 46,
+   "unit": "I still need the Berlin source for listings falling.",
+   "parent": {
+    "type": "student",
+    "turn": 38
+   }
+  },
+  {
+   "turn": 54,
+   "unit": "The Berlin source would need to show proof that listing supply fell after the cap, as evidence for my claim.",
+   "parent": {
+    "type": "assistant",
+    "turn": 47
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "D7 shows Berlin listings fell after a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 56,
+   "unit": "D10 shows inspection capacity and enforcement gaps for newcomers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 64,
+   "unit": "Is there any counter-view to my enforcement claim that a cap would miss newcomers?",
+   "parent": {
+    "type": "student",
+    "turn": 40
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "D10 is right that enforcement would miss newcomers, and that is a reason against a hard cap",
+   "parent": {
+    "type": "passage",
+    "pid": "D10p3"
+   }
+  },
+  {
+   "turn": 66,
+   "unit": "It is why I back tenure security and written tenancies first, with only a light band.",
+   "parent": {
+    "type": "student",
+    "turn": 44
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Tentative claim: rent control should be tightened because SDU tenants are very vulnerable\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs a source backing the vulnerability claim\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs a counter-view about landlords or supply\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D1 is a primer for background on tenants and current rules\". How did you get there?"
+  },
+  {
+   "turn": 4,
+   "question": "At turn 4 you said: \"D5 gives the landlord counter-view needed to answer\". How did you get there?"
+  },
+  {
+   "turn": 12,
+   "question": "At turn 12 you said: \"Wants a source on what tenants themselves want\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"D6 models supply effects of caps, the weakest claim\". How did you get there?"
+  },
+  {
+   "turn": 16,
+   "question": "At turn 16 you said: \"D11 shows what tenants themselves want\". How did you get there?"
+  },
+  {
+   "turn": 24,
+   "question": "At turn 24 you said: \"A hard cap would shrink stock by about 3 to 5 percent per 10 percent rent cut, hurting the people it protects\". How did you get there?"
+  },
+  {
+   "turn": 30,
+   "question": "At turn 30 you said: \"Tenants still suffer under the ordinance\". How did you get there?"
+  },
+  {
+   "turn": 32,
+   "question": "At turn 32 you said: \"Claim 2: Berlin shows a hard cap shrank listings and the bill fell on people outside\". How did you get there?"
+  },
+  {
+   "turn": 38,
+   "question": "At turn 38 you said: \"For Berlin, the listings falling does the heavier work, and then that the burden landed on outsiders.\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"D3 and D4 are tenant accounts of insecurity and the ordinance\". How did you get there?"
+  },
+  {
+   "turn": 42,
+   "question": "At turn 42 you said: \"D2 gives rent burden numbers after 2021\". How did you get there?"
+  },
+  {
+   "turn": 44,
+   "question": "At turn 44 you said: \"Stock stayed stable under the 2021 ordinance\". How did you get there?"
+  },
+  {
+   "turn": 44,
+   "question": "At turn 44 you said: \"I accept exit is a real risk for a hard cap, which is why I only back a narrow tightening\". How did you get there?"
+  },
+  {
+   "turn": 56,
+   "question": "At turn 56 you said: \"D7 shows Berlin listings fell after a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 56,
+   "question": "At turn 56 you said: \"D10 shows inspection capacity and enforcement gaps for newcomers\". How did you get there?"
+  }
+ ]
+}

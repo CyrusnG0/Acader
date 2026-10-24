@@ -1,0 +1,114 @@
+{
+ "id": "C7-4",
+ "arm": "C7",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.5,
+  "F14b parentage": 0.5,
+  "F14c grounded chains": 0.25
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "Needs to work on a rent control / subdivided units essay",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "Wants sources pulled up on the SDU situation in Hong Kong with basic numbers",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Framing is how many households and what they pay versus normal flats",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a source with headline numbers so as not to just assert them",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Wants the actual 2021 ordinance text",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 18,
+   "unit": "Key question is whether the ordinance caps the initial rent or just increases",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Has enough from D1 and D2",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "The second-generation vs first-generation distinction is the whole ballgame",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Wants supply-elasticity material and Berlin numbers next",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Wants to pin down the 3-5% figure before committing to it",
+   "parent": {
+    "type": "none"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Needs to work on a rent control / subdivided units essay\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"Wants sources pulled up on the SDU situation in Hong Kong with basic numbers\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"The second-generation vs first-generation distinction is the whole ballgame\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"Wants supply-elasticity material and Berlin numbers next\". How did you get there?"
+  },
+  {
+   "turn": 35,
+   "question": "At turn 35 you said: \"Wants to pin down the 3-5% figure before committing to it\". How did you get there?"
+  }
+ ]
+}

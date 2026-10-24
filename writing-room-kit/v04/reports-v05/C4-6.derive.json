@@ -1,0 +1,282 @@
+{
+ "id": "C4-6",
+ "arm": "C4",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 3.1,
+  "F14b parentage": 0.8387096774193549,
+  "F14c grounded chains": 0.42105263157894735
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 25
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Rent control should be tightened because SDU tenants are vulnerable",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a source with evidence on rents and conditions",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs a counter-view about landlords or supply",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The counter-view is harder to find",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Evidence would need to show rents per square foot are high",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "Evidence would need to show people have little space or choice",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D1 gives background and definitions",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D2 gives rent data for the evidence",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 6,
+   "unit": "D5 is the landlord counter-view",
+   "parent": {
+    "type": "assistant",
+    "turn": 5
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "SDU tenants pay a 15 to 25 percent premium per square foot",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Landlords say they will leave if returns fall",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p2"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Moderate tightening, like capping initial rent growth, is better than a hard cap",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "D2p1 shows stock kept growing after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Moderate regulation did not make landlords leave",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D5 is a landlord group with a stake",
+   "parent": {
+    "type": "assistant",
+    "turn": 18
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "D2 only covers a short period",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D2p3 says post-2023 figures are extrapolated from voluntary reporting",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p3"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "Stock growth is weaker proof",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D5p3 says landlords have no margin data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D5p3 says a self-reported survey with a 34 percent response rate",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The landlord exit threat is not well backed",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Cap rent increases on new tenancies",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Extend the ordinance to co-living SDUs",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 25,
+   "unit": "Tenants have no alternative while waiting about five and a half years for public housing",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p2"
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "D6 models supply effects of different control types, testing the moderate position",
+   "parent": {
+    "type": "assistant",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "D11 is tenant survey evidence arguing for tenure security",
+   "parent": {
+    "type": "assistant",
+    "turn": 24
+   }
+  },
+  {
+   "turn": 27,
+   "unit": "D11 is a counter-view to answer",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "A hard cap on initial rents shrinks stock",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p1"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "A narrow tightening with tenure security and a light band on initial rents seems supported",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p3"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Tenants care more about security than rent level",
+   "parent": {
+    "type": "passage",
+    "pid": "D11p1"
+   }
+  },
+  {
+   "turn": 35,
+   "unit": "Will argue for tenure security plus a light band, not a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 25
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Rent control should be tightened because SDU tenants are vulnerable\". How did you get there?"
+  },
+  {
+   "turn": 15,
+   "question": "At turn 15 you said: \"Moderate tightening, like capping initial rent growth, is better than a hard cap\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"D2 only covers a short period\". How did you get there?"
+  },
+  {
+   "turn": 25,
+   "question": "At turn 25 you said: \"Cap rent increases on new tenancies\". How did you get there?"
+  },
+  {
+   "turn": 27,
+   "question": "At turn 27 you said: \"D11 is a counter-view to answer\". How did you get there?"
+  }
+ ]
+}

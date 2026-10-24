@@ -1,0 +1,54 @@
+{
+ "id": "C3-6",
+ "arm": "C3",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 1.3333333333333333,
+  "F14b parentage": 0.75,
+  "F14c grounded chains": 0.0
+ },
+ "F14d refinement": {
+  "relation": "same",
+  "first_turn": 2
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "needs sources about subdivided units and rent control in Hong Kong",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "needs evidence of a problem, like rent levels for these units",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "wants a list of sources",
+   "parent": {
+    "type": "assistant",
+    "turn": 1
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "the source seems like a general overview",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"needs sources about subdivided units and rent control in Hong Kong\". How did you get there?"
+  }
+ ]
+}

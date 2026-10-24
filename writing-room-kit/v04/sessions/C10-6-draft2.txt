@@ -1,0 +1,5 @@
+My first instinct was that Hong Kong should put a hard cap on starting rents in subdivided units. After reading the archive I still think rent control should be tightened, but I changed what tightening should mean.
+
+About 110,000 households live in subdivided units and pay 15 to 25 percent more per square foot than in ordinary flats [D1p1]. Many are new arrivals and single parents waiting for public housing [D1p2]. The 2021 ordinance only capped rises inside a tenancy [D1p3], and rent burden still went from 31 to 34 percent of income [D2p2]. So the current control is too weak.
+
+The objection is supply. A working paper estimates that a 10 percent cap-induced rent cut removes 3 to 5 percent of stock [D6p1], and in a model of a 15 percent cut in initial rents, incumbents gain while 3,000 to 4,000 households a year cannot enter [D6p4]. Berlin shows the same: the tenants protected were those already inside [D7p3].

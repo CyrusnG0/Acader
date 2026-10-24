@@ -1,0 +1,627 @@
+{
+ "name": "C8-6",
+ "id": "C8-6",
+ "arm": "C8",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "I need to reconstruct the source base for an essay on SDU rent control. Please pull up the archive's holdings on this topic \u2014 I'll request specific sources as I go.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I don't have any archive or holdings in front of me, so I can't pull up sources \u2014 and I shouldn't name any anyway.\n\nBefore we go further: for the claim you're making about SDU rent control, what would a source need to *do* for you \u2014 show evidence, give a counter-view, define a term, or provide a case or first-hand account?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "Fair. What I need first is the empirical backbone: peer-reviewed work measuring how binding rent ceilings affect the supply of subdivided or informal rental stock, ideally with elasticity estimates and a distinction between controls on rent levels versus controls on increases within a tenancy. That's the foundation the whole argument rests on.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper reviewing elasticity literature and distinguishing first- from second-generation controls.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt presenting an index of stock and rents with a caveat on post-2023 extrapolation.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report based on a tenant survey, arguing against hard caps and for tenure security.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal enforcement subcommittee minute, draft and not for circulation, focused on inspection capacity.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020\u20132021 rent freeze and its court annulment.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "pick",
+   "text": "empirical backbone plus comparative case",
+   "docs": [
+    "D6",
+    "D2",
+    "D7"
+   ]
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 7,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p4"
+  },
+  {
+   "i": 11,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 15,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 16,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 17,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 18,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p2"
+  },
+  {
+   "i": 19,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 20,
+   "who": "student",
+   "kind": "say",
+   "text": "I have D6 and D2 and D7 open. I still need the sources on the ordinance itself, the tenant voices, the enforcement study, the NGO survey, the legal advice, and the CE's package. Can you pull the Tenancy Control Ordinance source for me first?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 21,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I can't pull sources \u2014 I don't have any documents here, and I shouldn't name or guess one.\n\nBefore we go further: for the Tenancy Control Ordinance, what does that source need to *do* in your essay \u2014 show what the ordinance actually says, back a specific claim you're making, or something else? And which claim is it supporting?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 22,
+   "who": "student",
+   "kind": "say",
+   "text": "It needs to show what the ordinance actually did: it capped increases within a tenancy but left the initial rent untouched, which is why I call it second-generation. That's the claim it supports \u2014 the instrument was never binding at the point that matters. Please shortlist the Tenancy Control Ordinance source for me.",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 23,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D1: Subdivided Housing in Hong Kong: A Primer (Policy brief). Policy brief primer describing the 2021 Tenancy Control Ordinance's scope and limits.\n- D8: Comparative Note: New York City Rent Stabilisation (Comparative case). Comparative case note on New York City rent stabilisation as a second-generation scheme.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modelling rent control supply elasticity and distinguishing control generations.\n- D12: News Digest: Policy Signals, January\u2013June 2026 (News digest). News digest summarising 2026 policy signals, consultation plans, and think-tank debate.\n- D9: Legal Opinion: Compensation and Judicial Review Risk (Legal opinion). Legal opinion assessing compensation and judicial review risk for rent caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 24,
+   "who": "student",
+   "kind": "pick",
+   "text": "all four back the ordinance, NY, legal, and CE claims",
+   "docs": [
+    "D1",
+    "D8",
+    "D12",
+    "D9"
+   ]
+  },
+  {
+   "i": 25,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D1 (Subdivided Housing in Hong Kong: A Primer), D8 (Comparative Note: New York City Rent Stabilisation), D12 (News Digest: Policy Signals, January\u2013June 2026), D9 (Legal Opinion: Compensation and Judicial Review Risk). You can now read their passages by id, for example D1p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 26,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 27,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 28,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 29,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p2"
+  },
+  {
+   "i": 30,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 31,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 32,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p2"
+  },
+  {
+   "i": 33,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 34,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p3"
+  },
+  {
+   "i": 35,
+   "who": "student",
+   "kind": "read",
+   "text": "D1p1"
+  },
+  {
+   "i": 36,
+   "who": "student",
+   "kind": "read",
+   "text": "D8p1"
+  },
+  {
+   "i": 37,
+   "who": "student",
+   "kind": "read",
+   "text": "D12p1"
+  },
+  {
+   "i": 38,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 39,
+   "who": "student",
+   "kind": "say",
+   "text": "Good, those four are exactly the ones I need next. Before I read them, let me get the remaining sources the essay leans on: I still need the stock-elasticity paper (the one distinguishing first- and second-generation controls), the Berlin case study, the enforcement-capacity document, and the tenant survey. Can you shortlist those for me?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 40,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "I can't name or shortlist sources, but I can help you get clear on what each one needs to do.\n\nYou've listed four: the stock-elasticity paper, the Berlin case study, the enforcement-capacity document, and the tenant survey. Which single claim in your essay is the weakest right now, and what would a source have to show to hold that claim up?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 41,
+   "who": "student",
+   "kind": "say",
+   "text": "The weakest claim is that a hard cap on initial rents would shrink the stock enough to shut out new households, and that Berlin shows this happening in practice. For that I need the stock-elasticity paper with its first- vs second-generation distinction, plus the Berlin case study. Can you shortlist those two for me now?",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 42,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Official statistical index excerpt, 2019-2025, with voluntary reporting caveat.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case study of Berlin's 2020-2021 rent cap, from a policy brief perspective.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO survey report of 440 SDU tenants, arguing against a hard cap.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling supply elasticity, distinguishing first- and second-generation controls.\n- D10: Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation) (Internal minute). Internal draft minute of enforcement subcommittee, not for circulation, on inspection capacity.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 43,
+   "who": "student",
+   "kind": "pick",
+   "text": "these four carry the essay's core supply, Berlin, enforcement, and survey claims",
+   "docs": [
+    "D6",
+    "D7",
+    "D10",
+    "D11"
+   ]
+  },
+  {
+   "i": 44,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing), D7 (Comparative Note: Berlin, Mietendeckel 2020\u20132021), D10 (Internal Minute: Housing Authority Enforcement Subcommittee (draft, not for circulation)), D11 (NGO Report: Rehousing Pathways First). You can now read their passages by id, for example D6p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 45,
+   "who": "student",
+   "kind": "read",
+   "text": "D11p1"
+  },
+  {
+   "i": 46,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 47,
+   "who": "student",
+   "kind": "read",
+   "text": "D7p1"
+  },
+  {
+   "i": 48,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 49,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 50,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 51,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 52,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 53,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 54,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 55,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p3"
+  },
+  {
+   "i": 56,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p1"
+  },
+  {
+   "i": 57,
+   "who": "student",
+   "kind": "read",
+   "text": "D10p3"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D2",
+     "D7",
+     "D11",
+     "D10"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 3,
+   "served_after_cap": false,
+   "shortlist": [
+    "D6",
+    "D2",
+    "D11",
+    "D10",
+    "D7"
+   ],
+   "picked": [
+    "D2",
+    "D6",
+    "D7"
+   ],
+   "reason": "empirical backbone plus comparative case"
+  },
+  {
+   "open_turn": 20,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D1",
+     "D9",
+     "D10",
+     "D11",
+     "D12"
+    ],
+    [
+     "D1",
+     "D6",
+     "D9",
+     "D8",
+     "D12"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 23,
+   "served_after_cap": false,
+   "shortlist": [
+    "D1",
+    "D8",
+    "D6",
+    "D12",
+    "D9"
+   ],
+   "picked": [
+    "D1",
+    "D12",
+    "D8",
+    "D9"
+   ],
+   "reason": "all four back the ordinance, NY, legal, and CE claims"
+  },
+  {
+   "open_turn": 39,
+   "state": "closed",
+   "clarify_turns": 1,
+   "picks_history": [
+    [
+     "D6",
+     "D7",
+     "D10",
+     "D11",
+     "D2"
+    ],
+    [
+     "D6",
+     "D7",
+     "D10",
+     "D11",
+     "D2"
+    ]
+   ],
+   "need_history": [
+    true,
+    true
+   ],
+   "served_turn": 42,
+   "served_after_cap": false,
+   "shortlist": [
+    "D2",
+    "D7",
+    "D11",
+    "D6",
+    "D10"
+   ],
+   "picked": [
+    "D10",
+    "D11",
+    "D6",
+    "D7"
+   ],
+   "reason": "these four carry the essay's core supply, Berlin, enforcement, and survey claims"
+  }
+ ],
+ "unlocked_docs": [
+  "D6",
+  "D2",
+  "D7",
+  "D1",
+  "D8",
+  "D12",
+  "D9",
+  "D10",
+  "D11"
+ ],
+ "read_passages": [
+  "D6p1",
+  "D6p2",
+  "D6p4",
+  "D6p3",
+  "D2p1",
+  "D7p1",
+  "D7p2",
+  "D2p2",
+  "D1p3",
+  "D1p1",
+  "D1p2",
+  "D8p2",
+  "D8p1",
+  "D12p1",
+  "D11p1",
+  "D10p1",
+  "D10p3"
+ ],
+ "picks": [
+  {
+   "turn": 4,
+   "docs": [
+    "D6",
+    "D2",
+    "D7"
+   ],
+   "reason": "empirical backbone plus comparative case"
+  },
+  {
+   "turn": 24,
+   "docs": [
+    "D1",
+    "D8",
+    "D12",
+    "D9"
+   ],
+   "reason": "all four back the ordinance, NY, legal, and CE claims"
+  },
+  {
+   "turn": 43,
+   "docs": [
+    "D6",
+    "D7",
+    "D10",
+    "D11"
+   ],
+   "reason": "these four carry the essay's core supply, Berlin, enforcement, and survey claims"
+  }
+ ],
+ "drafts": [],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "broad"
+  },
+  {
+   "turn": 2,
+   "kind": "own_thinking"
+  },
+  {
+   "turn": 20,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 22,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 39,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 41,
+   "kind": "wants_answer"
+  }
+ ],
+ "last_shortlist": [
+  "D2",
+  "D7",
+  "D11",
+  "D6",
+  "D10"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 0
+ }
+}

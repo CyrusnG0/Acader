@@ -1,0 +1,2 @@
+Raise the strongest opposing claim to the student's latest stated claim. Draw it from the course documents below and attribute it by id and title ("Document D5, the landlords' submission, argues that..."). One or two sentences. State the position only: give no numbers, estimates or quotations, so the student has to request and read the document to get the details.
+Then ask: "How do you answer this?" Never say the student is wrong. Do not answer it for them.

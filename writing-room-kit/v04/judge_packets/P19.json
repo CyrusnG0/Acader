@@ -1,0 +1,78 @@
+{
+ "packet": "P19",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Hong Kong should not impose a hard cap on initial rents for subdivided units."
+  },
+  {
+   "n": 2,
+   "claim": "A binding cap on initial rents would shrink the stock of subdivided units."
+  },
+  {
+   "n": 3,
+   "claim": "A hard cap would leave the most exploited tenants unprotected."
+  },
+  {
+   "n": 4,
+   "claim": "Real rent burden for SDU households worsened from 31 to 34 percent."
+  },
+  {
+   "n": 5,
+   "claim": "The 2021 Tenancy Control Ordinance did not address initial rents."
+  },
+  {
+   "n": 6,
+   "claim": "The long-run elasticity of SDU-type supply to controlled rents is estimated at 0.31 to 0.48."
+  },
+  {
+   "n": 7,
+   "claim": "A 10 percent cap-induced rent reduction removes roughly 3 to 5 percent of stock over five years."
+  },
+  {
+   "n": 8,
+   "claim": "A modelled 15 percent cut in initial rents would leave 3,000 to 4,000 households per year unable to enter the segment."
+  },
+  {
+   "n": 9,
+   "claim": "The 2021 ordinance is a second-generation control, so its stability does not predict the effects of a binding initial-rent cap."
+  },
+  {
+   "n": 10,
+   "claim": "The Association's submission on landlord exit is self-interested and evidentially weak."
+  },
+  {
+   "n": 11,
+   "claim": "Berlin's Mietendeckel led to measurable supply contraction and suppressed rent increases."
+  },
+  {
+   "n": 12,
+   "claim": "Inspection capacity covers under 6 percent of SDU stock per year."
+  },
+  {
+   "n": 13,
+   "claim": "A band-based initial-rent cap would require a certifiable tenancy register costing 40 to 60 staff-years."
+  },
+  {
+   "n": 14,
+   "claim": "Enforcement would systematically fail the most exploited tenants, such as new arrivals and those without written agreements."
+  },
+  {
+   "n": 15,
+   "claim": "61 percent of surveyed households would trade a nominal rent increase for three-year security of tenure."
+  },
+  {
+   "n": 16,
+   "claim": "The binding constraint for SDU tenants is quantity, not price."
+  },
+  {
+   "n": 17,
+   "claim": "The appropriate response is tenure security plus a light, indexed band on initial rents."
+  },
+  {
+   "n": 18,
+   "claim": "A hard cap is emotionally satisfying but economically self-defeating."
+  }
+ ],
+ "statements": "[0] (typed) I need to build this essay's evidence base from the archive. Please give me the documents this essay cites. Start with the ones on tenant hardship and the 2021 Tenancy Control Ordinance: D4, D1, D9, and D2.\n[2] (typed) It's there to give a concrete, first-hand account of the hardship and the rent burden, supporting my opening claim that the case for a hard cap rests on genuine hardship. Please now give me the source documents D4, D1, D9, and D2 so I can read them.\n[4] (pick reason) Essay opens with hardship and 2021 ordinance background\n[19] (typed) Please pull the academic working paper on rent control and SDU-type supply, the news digest on the think-tank debate, the landlord association submission, the enforcement subcommittee report, the NGO survey, and the Berlin Mietendeckel study.\n[21] (typed) The essay's next point is the empirical claim that the 2021 Tenancy Control Ordinance is a second-generation control whose stability tells us nothing about a binding initial-rent cap. Please pull the academic working paper on rent control and SDU-type supply, since that is where the first- versus second-generation distinction and the contraction evidence live.\n[23] (pick reason) Working paper for the first- versus second-generation distinction and the news digest for the think-tank debate point"
+}

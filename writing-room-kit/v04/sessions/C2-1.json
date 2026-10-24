@@ -1,0 +1,227 @@
+{
+ "name": "C2-1",
+ "id": "C2-1",
+ "arm": "C2",
+ "question": "Should Hong Kong tighten rent control on subdivided units? Take a position and defend it with evidence from the course archive.",
+ "config": "policies/config.json",
+ "turns": [
+  {
+   "i": 0,
+   "who": "student",
+   "kind": "say",
+   "text": "need a source for the rent essay",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 1,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "What would this source need to show for your rent essay \u2014 evidence for a claim you're making, a counter-view, a definition, or a case? And which claim is it meant to support?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 2,
+   "who": "student",
+   "kind": "say",
+   "text": "not sure, just evidence about rent control on subdivided units",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 3,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said \"evidence about rent control on subdivided units\" \u2014 what would that evidence need to show: that rent control helped, that it backfired, or something about how it was applied to those units specifically?",
+   "policy": "P-SRC",
+   "state": "clarify"
+  },
+  {
+   "i": 4,
+   "who": "student",
+   "kind": "say",
+   "text": "maybe that it backfired? just give me some sources please",
+   "paste": false,
+   "intent": "source_request"
+  },
+  {
+   "i": 5,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Here are some places to look, in no particular order:\n- D5: Submission: Landlords Association of Hong Kong (Stakeholder submission). Stakeholder submission from landlord association representing SDU owners, arguing against hard rent caps.\n- D2: SDU Rent and Stock Index, 2019\u20132025 (excerpt) (Data excerpt). Data excerpt with SDU stock and rent index from 2019 to 2025, including caveats.\n- D7: Comparative Note: Berlin, Mietendeckel 2020\u20132021 (Comparative case). Comparative case note on Berlin's 2020-2021 rent cap and its aftermath.\n- D6: Working Paper: Rent Control and Supply Elasticity in Marginal Housing (Academic working paper). Academic working paper modeling rent control effects on marginal housing supply.\n- D11: NGO Report: Rehousing Pathways First (NGO report). NGO report surveying SDU tenants and advocating tenure security over hard caps.\nPick one or more (by id) and tell me why.",
+   "policy": "P-SRC",
+   "state": "serve"
+  },
+  {
+   "i": 6,
+   "who": "student",
+   "kind": "pick",
+   "text": "data and academic paper",
+   "docs": [
+    "D2",
+    "D6"
+   ]
+  },
+  {
+   "i": 7,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Unlocked: D2 (SDU Rent and Stock Index, 2019\u20132025 (excerpt)), D6 (Working Paper: Rent Control and Supply Elasticity in Marginal Housing). You can now read their passages by id, for example D2p1.",
+   "policy": "P-SRC",
+   "state": "unlock"
+  },
+  {
+   "i": 8,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p1"
+  },
+  {
+   "i": 9,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p1"
+  },
+  {
+   "i": 10,
+   "who": "student",
+   "kind": "say",
+   "text": "ok, I think moderate rules are fine but hard caps are risky",
+   "paste": false,
+   "intent": "claim_statement"
+  },
+  {
+   "i": 11,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "You've said moderate rules are fine but hard caps are risky. What would you want to look at next to see whether the data and the working paper support that, or push against it?",
+   "policy": "P-CLM"
+  },
+  {
+   "i": 12,
+   "who": "student",
+   "kind": "read",
+   "text": "D2p2"
+  },
+  {
+   "i": 13,
+   "who": "student",
+   "kind": "read",
+   "text": "D6p2"
+  },
+  {
+   "i": 14,
+   "who": "student",
+   "kind": "confident",
+   "text": "I think tightening should only limit increases inside a tenancy, not set rent levels, because the second type seems safer for supply.",
+   "paste": false
+  },
+  {
+   "i": 15,
+   "who": "assistant",
+   "kind": "reply",
+   "text": "Earlier you said hard caps are risky; D6p2 says the 2021 ordinance was second-generation and D2p1 shows stock held steady. What in those two documents tells you the supply safety comes from the tenancy-limit type rather than from the ordinance being mild?",
+   "policy": "COACH"
+  }
+ ],
+ "src_requests": [
+  {
+   "open_turn": 0,
+   "state": "closed",
+   "clarify_turns": 2,
+   "picks_history": [
+    [],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D11",
+     "D7"
+    ],
+    [
+     "D6",
+     "D2",
+     "D5",
+     "D7",
+     "D11"
+    ]
+   ],
+   "need_history": [
+    false,
+    true,
+    true
+   ],
+   "served_turn": 5,
+   "served_after_cap": false,
+   "shortlist": [
+    "D5",
+    "D2",
+    "D7",
+    "D6",
+    "D11"
+   ],
+   "picked": [
+    "D2",
+    "D6"
+   ],
+   "reason": "data and academic paper"
+  }
+ ],
+ "unlocked_docs": [
+  "D2",
+  "D6"
+ ],
+ "read_passages": [
+  "D2p1",
+  "D6p1",
+  "D2p2",
+  "D6p2"
+ ],
+ "picks": [
+  {
+   "turn": 6,
+   "docs": [
+    "D2",
+    "D6"
+   ],
+   "reason": "data and academic paper"
+  }
+ ],
+ "drafts": [
+  {
+   "turn": 14,
+   "text": "Hong Kong should tighten rent control on subdivided units a little, but not with a hard cap. The stock of units is stable under the current rules [D2p1], and hard caps seem risky [D6p1].\n\nThe rent is still rising faster than normal rent [D2p2].\n",
+   "struct": "typed"
+  }
+ ],
+ "question_kinds": [
+  {
+   "turn": 0,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 2,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 4,
+   "kind": "wants_answer"
+  },
+  {
+   "turn": 10,
+   "kind": "own_thinking"
+  }
+ ],
+ "last_shortlist": [
+  "D5",
+  "D2",
+  "D7",
+  "D6",
+  "D11"
+ ],
+ "counters": {
+  "write_requests": 0,
+  "claim_statements": 2
+ }
+}

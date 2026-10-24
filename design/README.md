@@ -1,17 +1,31 @@
 # Design
 
-Technical design documents. Product intent lives in [../ultimate-proposal.md](../ultimate-proposal.md). These docs turn it into buildable designs.
-Status values: **validated** (prototyped and tested) · **designed** (agreed design, not built) · **draft** (proposal, open choices) · **stub**.
+How The Writing Room v1 is built. Product intent is in [../PRODUCT.md](../PRODUCT.md); decisions are in [../docs/DECISIONS.md](../docs/DECISIONS.md).
+Status values: **validated** (tested) · **reviewed** (passed gstack review) · **draft** (written, open choices) · **stub**.
 
-| Doc | Covers | Status | Last updated |
-|---|---|---|---|
-| [architecture.md](architecture.md) | System overview, modules M1–M11, data flow, phases | designed | 2026-10-11 |
-| [lecture-miner.md](lecture-miner.md) | M2 visual board/slide miner algorithm and calibration lessons | **validated** (code not in repo, OL-002) | 2026-10-11 |
-| [data-isolation.md](data-isolation.md) | L1/L2/L3 layers, ownership table, five cross-checks | designed | 2026-10-11 |
-| [code-track-mvp.md](code-track-mvp.md) | Phase 1: variant engine, no-paste editor, line-level viva, defense record | draft | 2026-10-11 |
+## Read in this order
 
-Pilot plan (current focus): [../docs/designs/concierge-viva-pilot.md](../docs/designs/concierge-viva-pilot.md), APPROVED 2026-10-12. It takes priority over the Phase 1 draft above.
+| # | Doc | Covers | Status | Updated |
+|---|---|---|---|---|
+| 1 | [architecture.md](architecture.md) | Components, data flow, recommended stack, prototype layout, non-functional targets | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 2 | [event-log.md](event-log.md) | Event envelope and types, origin marks, batching, hash chain, sealing, who reads what | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 3 | [provenance.md](provenance.md) | Chains, the claim map model, pipeline layers L0–L3, claim-level comparison, bands, signal register | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 4 | [receipt.md](receipt.md) | Receipt layout, submissions list, chain view, question selection, wording filter, JSON format, student preview, P-15, nursing example | reviewed (CEO + eng + design; eng v2) | 2026-10-24 |
+| 4a | [workspace.md](workspace.md) | The student workspace and the live map: layout, map suggestions, states, trail toggle, widths, keyboard and screen readers | reviewed (design + eng v2); DESIGN.md pending | 2026-10-24 |
+| 5 | [reading-aid.md](reading-aid.md) | Source origins, parsing into blocks, reading pins, reader actions, citation help | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 6 | [coach-helper.md](coach-helper.md) | Helper vs Coach, policy modules, cases A–E, grounding, the Door, leak check, prompt hygiene | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 7 | [privacy.md](privacy.md) | Data inventory, provider question, consent text, student rights, pilot security | reviewed (CEO + eng); provider terms + school approval before real students | 2026-10-23 |
+| 8 | [evaluation.md](evaluation.md) | Spikes S1–S5, automated tests, golden receipts, pilot measures, nursing walkthrough | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 9 | [build-plan.md](build-plan.md) | Milestones (re-baselined: engine + receipt + walkthrough ~11-08), cut lines, pilot gate | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
 
-Not yet written (add these when the work starts): `writing-track.md` (M9), `proof-of-understanding.md` (M10 Proof schema), `dashboard.md` (M10), `lms-integrations.md` (M11).
+Review records: [../docs/designs/ceo-review-v1.md](../docs/designs/ceo-review-v1.md) (CEO-1 to CEO-24) [../docs/designs/eng-review-v1.md](../docs/designs/eng-review-v1.md) (D1 to D35) [../docs/designs/design-review-v1.md](../docs/designs/design-review-v1.md) (1A to 20A, D-036) and [../docs/designs/eng-review-v2.md](../docs/designs/eng-review-v2.md) (D1 to D21, D-037). Every decision in them is now written into the docs above; there are no override boxes.
 
-Rule: every design doc starts with a status line, links back to the proposal sections it implements, and lists its open loops by `OL-xxx`.
+## Inputs these docs were built from
+
+These are kept for history and review trails. Where they disagree with this folder, this folder wins.
+- [../docs/designs/writing-platform-v1.md](../docs/designs/writing-platform-v1.md): product design draft (2026-10-22), now distilled into PRODUCT.md and receipt.md.
+- [../docs/designs/provenance-engine.md](../docs/designs/provenance-engine.md): engineering draft (2026-10-22), now split into event-log.md, provenance.md, reading-aid.md and evaluation.md.
+- [../docs/designs/process-evidence-room.md](../docs/designs/process-evidence-room.md): policy modules and claim lineage (2026-10-16), now in coach-helper.md.
+- Earlier architecture, lecture miner, code track and data isolation: [../archive/design-v1/](../archive/design-v1/).
+
+Rule: every design doc starts with a status line, names the decisions it implements, and lists its open loops by `OL-xxx`.

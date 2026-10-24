@@ -1,0 +1,204 @@
+{
+ "id": "C4-3",
+ "arm": "C4",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.75,
+  "F14b parentage": 0.8636363636363636,
+  "F14c grounded chains": 0.3157894736842105
+ },
+ "F14d refinement": {
+  "relation": "sharpened",
+  "first_turn": 17
+ },
+ "units": [
+  {
+   "turn": 2,
+   "unit": "Hong Kong should tighten rent control because SDU tenants pay very high rent for tiny space",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "Needs sources showing rents, living conditions, and prior rent control attempts",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D1 is a primer for basics on rents and existing tenancy control",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D2 has rent data over time",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "D7 shows what happened when Berlin tried a rent cap",
+   "parent": {
+    "type": "assistant",
+    "turn": 3
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "SDU tenants pay a 15 to 25 percent premium per square foot",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Rent burden went from 31 to 34 percent even after the 2021 ordinance",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Tightening is justified",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 15,
+   "unit": "Berlin says caps hurt new tenants",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p3"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "The 2021 ordinance only caps increases inside a tenancy",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Stock kept growing after the ordinance, so moderate rules did not make owners leave",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Berlin shows a hard cap on initial rents makes supply shrink and hurts outsiders",
+   "parent": {
+    "type": "passage",
+    "pid": "D7p1"
+   }
+  },
+  {
+   "turn": 17,
+   "unit": "Would extend the existing rule rather than copy Berlin",
+   "parent": {
+    "type": "student",
+    "turn": 15
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "Wants a counter-view source to test the claim that extending the in-tenancy cap is safe",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D5 gives the landlord counter-view on owners exiting",
+   "parent": {
+    "type": "assistant",
+    "turn": 16
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "D6 is an academic model separating first and second generation controls",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D6 says second-generation controls have small or null effects on stock while hard caps shrink supply",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "D5 threatens exit but admits it has no margin data",
+   "parent": {
+    "type": "passage",
+    "pid": "D5p3"
+   }
+  },
+  {
+   "turn": 31,
+   "unit": "Tightening should mean strengthening in-tenancy protection, not a hard cap",
+   "parent": {
+    "type": "student",
+    "turn": 17
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "The ordinance slowed rent growth from 6.8 to 3.1 percent",
+   "parent": {
+    "type": "passage",
+    "pid": "D2p2"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "It did not cap the starting rent, so burden still rose",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p3"
+   }
+  },
+  {
+   "turn": 33,
+   "unit": "Would add tenure security so tenants stay in regulated tenancies longer",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p3"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Hong Kong should tighten rent control because SDU tenants pay very high rent for tiny space\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"Needs sources showing rents, living conditions, and prior rent control attempts\". How did you get there?"
+  },
+  {
+   "turn": 23,
+   "question": "At turn 23 you said: \"D6 is an academic model separating first and second generation controls\". How did you get there?"
+  }
+ ]
+}

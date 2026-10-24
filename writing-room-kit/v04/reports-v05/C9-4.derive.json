@@ -1,0 +1,215 @@
+{
+ "id": "C9-4",
+ "arm": "C9",
+ "split": "test",
+ "derive_sha256": "3a79b4815f633fc0703c7fbcf0bfa69127f15a73cdfea5987f3c34b3d2449bea",
+ "metrics": {
+  "F14a step size": 2.857142857142857,
+  "F14b parentage": 0.4,
+  "F14c grounded chains": 0.35
+ },
+ "F14d refinement": {
+  "relation": "changed",
+  "first_turn": 0
+ },
+ "units": [
+  {
+   "turn": 0,
+   "unit": "The student wants to understand the debate over rent control for subdivided flats in Hong Kong.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 0,
+   "unit": "The student asks for sources to be pulled together.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student has no claim yet and wants to figure out the actual problem.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks what the current law already does about rents in these units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student asks where the current law seems to fall short.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 2,
+   "unit": "The student wants something on the existing ordinance and how it works in practice.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 4,
+   "unit": "The student wants the existing ordinance and its real-world limits.",
+   "parent": {
+    "type": "student",
+    "turn": 2
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The student finds the primer and enforcement minute especially useful.",
+   "parent": {
+    "type": "passage",
+    "pid": "D1p1"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The student is missing the empirical backbone.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The student asks for material on supply elasticity of small rental units.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The student asks for modelled scenarios of what a rent cap does to the number of units and who gets excluded.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 19,
+   "unit": "The student asks for comparisons of Hong Kong with other cities that tried first-generation rent freezes, like Berlin or New York.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The source would stand behind the sentence that a hard cap shrinks the stock future tenants rely on.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student needs a source with actual elasticity estimates for small rental units.",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student needs a modelled scenario showing how many households get priced out.",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student wants a second source comparing Hong Kong with first-generation freezes like Berlin or New York.",
+   "parent": {
+    "type": "student",
+    "turn": 19
+   }
+  },
+  {
+   "turn": 21,
+   "unit": "The student wants to see whether the contraction shows up in those comparative cases too.",
+   "parent": {
+    "type": "none"
+   }
+  },
+  {
+   "turn": 23,
+   "unit": "The student wants empirical elasticity, comparative cases, and tenant survey material.",
+   "parent": {
+    "type": "student",
+    "turn": 21
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "The student wants to check how the comparative notes characterise first-rent versus increase-based controls rather than assuming they line up.",
+   "parent": {
+    "type": "passage",
+    "pid": "D6p2"
+   }
+  },
+  {
+   "turn": 38,
+   "unit": "The student plans to read the New York note more closely as the case that supposedly shows a lighter scheme behaving differently.",
+   "parent": {
+    "type": "passage",
+    "pid": "D8p2"
+   }
+  }
+ ],
+ "leaps": [
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student wants to understand the debate over rent control for subdivided flats in Hong Kong.\". How did you get there?"
+  },
+  {
+   "turn": 0,
+   "question": "At turn 0 you said: \"The student asks for sources to be pulled together.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student has no claim yet and wants to figure out the actual problem.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks what the current law already does about rents in these units.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student asks where the current law seems to fall short.\". How did you get there?"
+  },
+  {
+   "turn": 2,
+   "question": "At turn 2 you said: \"The student wants something on the existing ordinance and how it works in practice.\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"The student is missing the empirical backbone.\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"The student asks for material on supply elasticity of small rental units.\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"The student asks for modelled scenarios of what a rent cap does to the number of units and who gets excluded.\". How did you get there?"
+  },
+  {
+   "turn": 19,
+   "question": "At turn 19 you said: \"The student asks for comparisons of Hong Kong with other cities that tried first-generation rent freezes, like Berlin or New York.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"The source would stand behind the sentence that a hard cap shrinks the stock future tenants rely on.\". How did you get there?"
+  },
+  {
+   "turn": 21,
+   "question": "At turn 21 you said: \"The student wants to see whether the contraction shows up in those comparative cases too.\". How did you get there?"
+  }
+ ]
+}

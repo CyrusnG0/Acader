@@ -1,0 +1,267 @@
+{
+ "perm": {
+  "rows": [
+   {
+    "comparison": "composite_nostruct C1 vs C4",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "composite_nostruct C1 vs C5",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 0.889,
+    "p_one_sided": 0.013,
+    "exact": true
+   },
+   {
+    "comparison": "composite_nostruct C1 vs C6",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "composite_nostruct C1 vs C7",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "composite_nostruct C1 vs C8",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "composite_nostruct C1 vs C9",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C1 vs C6",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C1 vs C7",
+    "n": [
+     6,
+     5
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0022,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C1 vs C8",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C1 vs C9",
+    "n": [
+     6,
+     3
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0119,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C10 vs C6",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C10 vs C7",
+    "n": [
+     6,
+     5
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0022,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C10 vs C8",
+    "n": [
+     6,
+     6
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0011,
+    "exact": true
+   },
+   {
+    "comparison": "F13 C10 vs C9",
+    "n": [
+     6,
+     3
+    ],
+    "auc": 1.0,
+    "p_one_sided": 0.0119,
+    "exact": true
+   }
+  ],
+  "smallest_auc_p05_6v6": 0.777778
+ },
+ "essayonly": {
+  "mean sentence length": {
+   "C2": 0.47,
+   "C3": 0.03,
+   "C4": 0.03,
+   "C5": 0.08,
+   "C6": 0.0,
+   "C7": 0.0,
+   "C8": 0.0,
+   "C9": 0.03,
+   "C10": 0.56
+  },
+  "type-token ratio (first 400w)": {
+   "C2": 0.92,
+   "C3": 0.21,
+   "C4": 0.15,
+   "C5": 0.03,
+   "C6": 0.31,
+   "C7": 0.26,
+   "C8": 0.33,
+   "C9": 0.19,
+   "C10": 0.4
+  },
+  "citations per 100 words": {
+   "C2": 0.97,
+   "C3": 0.14,
+   "C4": 0.25,
+   "C5": 0.0,
+   "C6": 0.03,
+   "C7": 0.17,
+   "C8": 0.22,
+   "C9": 0.28,
+   "C10": 0.58
+  },
+  "share of sentences with a number": {
+   "C2": 0.92,
+   "C3": 0.5,
+   "C4": 0.38,
+   "C5": 0.22,
+   "C6": 0.57,
+   "C7": 0.38,
+   "C8": 0.35,
+   "C9": 0.5,
+   "C10": 0.74
+  },
+  "mean paragraph length": {
+   "C2": 0.78,
+   "C3": 0.5,
+   "C4": 0.56,
+   "C5": 0.94,
+   "C6": 0.56,
+   "C7": 0.78,
+   "C8": 0.56,
+   "C9": 0.56,
+   "C10": 0.53
+  },
+  "blind LLM read (process)": {
+   "C2": 1.0,
+   "C3": 0.5,
+   "C4": 0.42,
+   "C5": 0.67,
+   "C6": 0.58,
+   "C7": 0.5,
+   "C8": 0.58,
+   "C9": 0.42,
+   "C10": 0.25
+  }
+ },
+ "swap": {
+  "E-A1 composite_nostruct matched(C1+C10) vs S1": {
+   "auc": 0.958,
+   "ci": [
+    0.868,
+    1.0
+   ]
+  },
+  "E-A1 composite_nostruct C1 vs its S1": {
+   "auc": 1.0
+  },
+  "E-A1 composite_nostruct C10 vs its S1": {
+   "auc": 0.861
+  },
+  "E-A1 claim matched(C1+C10) vs S1": {
+   "auc": 0.844,
+   "ci": [
+    0.663,
+    0.979
+   ]
+  },
+  "E-A1 claim C1 vs its S1": {
+   "auc": 0.903
+  },
+  "E-A1 claim C10 vs its S1": {
+   "auc": 0.75
+  },
+  "E-A2 claim drop matched-S1": {
+   "mean": 14.8,
+   "ci": [
+    6.9,
+    22.8
+   ]
+  },
+  "E-A3 S2 composite_nostruct": 69.8,
+  "E-A3 C8 own composite_nostruct (same essays)": 54.7,
+  "E-A3 S2 claim lineage": 60.4,
+  "S3 composite_nostruct (honest essay, relay trail)": 48.0,
+  "S3 claim": 23.8,
+  "matched composite_nostruct mean": 89.7,
+  "S1 composite_nostruct mean": 77.3,
+  "matched claim mean": 88.3,
+  "S1 claim mean": 73.5
+ },
+ "judge": {
+  "J2 Claude": {
+   "n": 24,
+   "spearman_vs_v04": 0.866,
+   "AUC honest vs relay (alt judge)": 1.0,
+   "AUC honest vs relay (v0.4 judge, same runs)": 1.0
+  }
+ }
+}
