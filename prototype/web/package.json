@@ -16,5 +16,8 @@
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
     "vitest": "^4.1.12"
+  },
+  "dependencies": {
+    "prosemirror-model": "1.25.4"
   }
 }

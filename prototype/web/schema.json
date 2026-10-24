@@ -1,0 +1,73 @@
+{
+  "x-writing-room": {
+    "schema_version": 1,
+    "spec": "design/event-log.md §4",
+    "note": "One editor schema for the browser and the Python replay (D33). Keys starting with x- and the enum lists are ours; ProseMirror ignores them, and each loader turns every enum into a validate check. Changing this file regenerates the golden logs (evaluation.md §2)."
+  },
+  "topNode": "doc",
+  "nodes": {
+    "doc": {
+      "content": "block+"
+    },
+    "paragraph": {
+      "group": "block",
+      "content": "inline*"
+    },
+    "text": {
+      "group": "inline"
+    }
+  },
+  "marks": {
+    "origin": {
+      "inclusive": false,
+      "excludes": "origin",
+      "attrs": {
+        "kind": {
+          "validate": "string",
+          "enum": [
+            "typed",
+            "paste_ext",
+            "quote",
+            "helper",
+            "coach",
+            "import"
+          ]
+        },
+        "ref": {
+          "default": null,
+          "validate": "string|null"
+        }
+      },
+      "x-ref-by-kind": {
+        "typed": null,
+        "paste_ext": "paste_id",
+        "quote": "block_id",
+        "helper": "helper_serve_id",
+        "coach": "q_id",
+        "import": "import_id"
+      }
+    },
+    "claim": {
+      "inclusive": false,
+      "excludes": "claim",
+      "attrs": {
+        "claim_id": {
+          "validate": "string"
+        },
+        "by": {
+          "validate": "string",
+          "enum": [
+            "student",
+            "coach",
+            "import"
+          ]
+        },
+        "suggestion_id": {
+          "default": null,
+          "validate": "string|null"
+        }
+      },
+      "x-suggestion-id-only-when-by": "student"
+    }
+  }
+}

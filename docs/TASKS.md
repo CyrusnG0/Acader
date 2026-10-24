@@ -13,7 +13,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | ID | Task | Read first | Done when (EXPECTATIONS) | Depends on | Model | Owner | Status |
 |---|---|---|---|---|---|---|---|
 | T-001 | Scaffold `prototype/` per architecture.md §6 (server/app, engine, sources, coach, mapper, trail, tests; web Vite+TS; fixtures; spikes) + CI that runs prototype tests and the kit's 29 | architecture.md §4, §6 | A; I-M0 (scaffold + CI) | — | D/S | lead-opus-T001 | done |
-| T-002 | `web/schema.json`: origin marks (closed list), claim mark `{claim_id, by}` with optional `suggestion_id` | event-log.md §4 | A; C (typed rules) | T-001 | S | | ready |
+| T-002 | `web/schema.json`: origin marks (closed list), claim mark `{claim_id, by}` with optional `suggestion_id` | event-log.md §4 | A; C (typed rules) | T-001 | S | lead-opus-T002 | review |
 | T-003 | LLM boundary `complete(task, messages, schema)` wrapping `shared/llm.py`: stub, error classes, boot ping, backend-2 slot, task enum incl. `map_suggest`; plus a Python lock file that CI installs (D-040) | architecture.md §5 | A (shared/llm.py unchanged) | T-001 | S | | ready |
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | | blocked |
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | lead-opus-T005 | done |
