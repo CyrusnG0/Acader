@@ -124,13 +124,10 @@ class CoachQuestionOut(_Out):
     cites: list[str] = Field(min_length=1)  # block or claim ids (law 2: grounded, never generic)
 
 
-class ReceiptQuestion(_Out):
-    text: str = Field(min_length=1)
-    event_ids: list[str] = Field(min_length=1)  # every receipt line cites events (receipt.md §6)
-
-
 class ReceiptQuestionOut(_Out):
-    questions: list[ReceiptQuestion]
+    question: str = Field(min_length=1)
+    pillar: Literal["reading", "logic", "writing", "communication"]
+    cites: list[str] = Field(min_length=1)  # grounding labels g1.. given in the prompt (law 2)
 
 
 class LimitationTagOut(_Out):
@@ -177,7 +174,9 @@ STUB_FIXTURES: dict[Task, dict] = {
     Task.claim_compare: {"relation": "related"},
     Task.contradiction: {"pairs": []},
     Task.coach_question: {"question": "stub question", "cites": ["stub-block-1"]},
-    Task.receipt_question: {"questions": [{"text": "stub question", "event_ids": ["stub-event-1"]}]},
+    Task.receipt_question: {
+        "question": "How would a reader who disagrees with this point respond, and what would you say back?",
+        "pillar": "communication", "cites": ["g1"]},
     Task.limitation_tag: {"passages": []},
     Task.leak_check: {"result": "pass"},
     Task.map_suggest: {"links": [{"claim_id": "stub-claim-1", "paragraph_id": "stub-para-1",
