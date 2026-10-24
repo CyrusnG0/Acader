@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: golden-set source manifest, D19 session script format and 15 draft mapper-label seeds (`prototype/fixtures/`, T-008).
 - 2026-10-24: L1 deterministic provenance (`engine/provenance/`: sentence split, origin mix, chains via paragraph links, bands, receipt facts, thresholds config) (T-014).
 - 2026-10-24: compile-time replay with checkpoint hash checks and the provenance mark check (`engine/provenance/`, `engine/replay/rebuild.py`, `app/compile_service.py`) (T-013).
 - 2026-10-24: paragraph links and the D-044 node set in the editor schema, replay and fixtures (T-011); the inline `claim` mark is removed.

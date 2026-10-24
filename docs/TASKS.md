@@ -19,7 +19,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | lead-opus-T005 | done |
 | T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | lead-opus-T006 | done |
 | T-007 | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | | ready |
-| T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | codex-lead-T008 | review |
+| T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | codex-lead-T008 | done |
 | T-009 | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | | ready |
 | T-010 | /design-consultation → `DESIGN.md` (type, scale, spacing, focus ring, dark mode). Must finish before the receipt UI in M1 | design-review-v1.md 13A | A; G, H (tokens) | — | O | | ready |
 
@@ -41,8 +41,8 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-012 | Events for M1: append API, staging table + one merged `editor.batch` per 5-minute window (timestamps rounded down), checkpoints with `doc_hash`, submit with idempotency key → seal, post-seal whitelist enforced by the store, `verify` endpoint | event-log.md §3, §5, §6; D-041 | A; C (5-min merge, seal, verify) | — | S | lead-opus-T012 | done |
 | T-013 | Replay + mark check at compile: rebuild the doc from checkpoint + steps (prosemirror-py), replay-mismatch path (D28), check every non-typed run against its origin; a failed run is untraced | provenance.md §4.1; event-log.md §5 | A; C (mark check) | T-011, T-012 | S | lead-opus-T013 | done |
 | T-014 | L1 provenance: sentence split, origin mix, chains through paragraph links, bands in order (D13, D27, D-045), receipt facts §7 (no construction-order ratio, D-046), thresholds into the engine stamp | provenance.md §3–§7 | A; C; D | T-013 | O+S | lead-opus-T014 | done |
-| T-015 | Golden YAML scripts + Playwright generator + ingest builder (D19); 10 golden sessions incl. forged quote and coach marks and an elaborating honest writer | evaluation.md §2, §2a | A; C | T-008, T-011, T-012 | O+S | | blocked |
-| T-016 | Receipt compiler: JSON with integer counts, `event_ids` = seq, `receipt_hash`; pillar-form question rules with L3e stubbed and "questions pending" mode; wording filter; engine stamp (lock hash, editor pair) | receipt.md §4–§6; D-041, D-044, D-046 | A; B; H (data lines) | T-014 | O+S | | ready |
+| T-015 | Golden YAML scripts + Playwright generator + ingest builder (D19); 10 golden sessions incl. forged quote and coach marks and an elaborating honest writer | evaluation.md §2, §2a | A; C | T-008, T-011, T-012 | O+S | | ready |
+| T-016 | Receipt compiler: (first, per D-050: sentences made only of confirmed Helper text leave the word and claim counts and show as \"mechanics\"); JSON with integer counts, `event_ids` = seq, `receipt_hash`; pillar-form question rules with L3e stubbed and "questions pending" mode; wording filter; engine stamp (lock hash, editor pair) | receipt.md §4–§6; D-041, D-044, D-046 | A; B; H (data lines) | T-014 | O+S | | ready |
 | T-017 | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H; I-M1 | T-010, T-016 | O | | blocked |
 
 ## Next waves (detail is added by the checker when M1 is done)

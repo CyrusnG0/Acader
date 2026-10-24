@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-008 merged; founder answers on T-011…T-014 recorded
+**Summary:** T-008 (golden set sources, D19 session format, 15 draft mapper-label seeds) reviewed and merged; it was written by a Codex lead directly in the main checkout, so I committed it on its branch and merged it. The founder said yes to every pending point from T-011, T-012, T-013 and T-014 (and option b on PD-T014-9): recorded as D-047 to D-050; D-051 records the T-008 source choices. event-log.md §4/§5 updated. T-015 and T-016 are ready.
+**Files touched:** docs/DECISIONS.md, docs/TASKS.md, design/event-log.md, prototype/fixtures/*, design/evaluation.md, docs/handoffs/2026-10-24-T-008-golden-set.md
+**Loops:** none
+**Decisions:** D-047, D-048, D-049, D-050, D-051
+**Next:** review T-015 and T-016; founder names a second labeller (T-007) for the held-out labels
+
 ## 2026-10-24 — Checker: T-014 L1 provenance merged
 **Summary:** T-014 reviewed and merged: sentence split, origin mix, chains through paragraph links, the five bands in order (D13, D27, D19, D-045), integer counts by words and claims, receipt facts without any order ratio or answer grading (D-046), one thresholds config for the engine stamp. 525 prototype tests and the kit's 29 pass. The lead broke the code in 20 places; each broke a test. T-016 is on the board as ready but held until the founder answers PD-T014-9 (reference lists come out untraced).
 **Files touched:** engine/provenance/{sentences,trail,bands,facts,l1}.py, three test files, docs/handoffs, docs/TASKS.md
