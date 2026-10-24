@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-25 — T-010 proposal prepared on its task branch
+**Summary:** Delegated T-010 to a separate lead. The task branch contains the exact proposed DESIGN.md, rationale/contrast evidence and an interactive receipt/workspace/type preview, using synthetic golden data. Independent visual review found and the lead fixed dark-print palette and hidden-focus issues. Final design approval is still pending; no product decision or root DESIGN.md was written. Proposal files remain on `task/T-010-design-system` in `.claude/worktrees/codex-T010-design-system/`.
+**Files touched:** on the task branch: docs/designs/T-010-{design-proposal.md,DESIGN.proposed.md,preview.html}, task handoff and own task row; checker tracking: docs/TASKS.md, STATUS.md, UPDATE_LOG.md
+**Loops:** none; existing T-010 design gate remains open
+**Decisions:** none; visual token values remain proposed
+**Next:** founder reviews the concrete preview and exact candidate; lead finalizes DESIGN.md after approval.
+
 ## 2026-10-25 — Checker: golden library metadata corrected during preview
 **Summary:** Preparing T-010 exposed a fixture omission: real receipts said “with no sources” because golden logs opened/anchored readings without source.add. A worker registered the script’s sources through the existing teacher event path using local manifest metadata. Added eighteen regressions; full prototype 795 passed, kit 29 passed, and the checker independently reran all 156 golden tests. Band/question expectations are unchanged.
 **Files touched:** prototype/server/golden/{build,script}.py, tests/test_golden_sessions.py, docs/handoffs/2026-10-25-T-015-source-metadata.md, docs/STATUS.md, UPDATE_LOG.md, CHANGELOG.md, prototype/fixtures/README.md

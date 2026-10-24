@@ -19,7 +19,7 @@ A writing platform where the process is the evidence. The student builds a live 
 
 ## In progress / outstanding
 
-- T-010: DESIGN.md design system before T-017 receipt UI. The installed design-consultation skill supports an HTML preview without an image-generation key.
+- T-010 is **in progress** on `task/T-010-design-system` in `.claude/worktrees/codex-T010-design-system/`. The complete candidate `docs/designs/T-010-DESIGN.proposed.md`, rationale and interactive `T-010-preview.html` are ready for founder feedback. Final root DESIGN.md is not written until this candidate is approved. Preview review covered light/dark, wide/narrow, focus, print and contrast; this is not production UI acceptance.
 - T-017: receipt rendering and chain view. **M1 is not complete until at least ten golden receipts render and a person has read them.**
 - T-007/T-009: preregistration and the nursing walkthrough/blind-question protocol before M2.
 - OL-046: full mapper corpus, textbook coverage, parser block IDs and independent/held-out labels. The twelve M1 engineering sessions do not satisfy the mapper gate.
@@ -27,7 +27,7 @@ A writing platform where the process is the evidence. The student builds a live 
 
 ## Single next action
 
-**Start T-010:** prepare the design-token/type proposal and realistic HTML preview from the already-locked workspace and receipt specs; get founder feedback and complete DESIGN.md before starting T-017.
+**Founder review of T-010:** open `.claude/worktrees/codex-T010-design-system/docs/designs/T-010-preview.html` and approve or revise the exact candidate `T-010-DESIGN.proposed.md` beside it. Then the lead can finalize DESIGN.md and hand off T-010 before T-017 starts.
 
 ## Founder actions and pilot blockers
 
