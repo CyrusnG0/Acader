@@ -1,0 +1,226 @@
+# Draft mapper gold labels for tuning-set design. These synthetic paragraphs
+# paraphrase the cited sources; they are not student data or model outputs.
+# A second person must review the labels before they are treated as frozen gold.
+schema_version: 1
+dataset_id: mapper-seed-labels-v1
+label_status: draft_needs_second_person_review
+sessions:
+  - session_id: nursing-01
+    split: tuning
+    source_ids: [nursing]
+    claims:
+      - {claim_id: c1, text: "A CNS head nurse was associated with lower ICU mortality in the studied ICU."}
+      - {claim_id: c2, text: "The study compares outcomes before and after the CNS appointment."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "After the CNS became head nurse, the study reports lower ICU mortality at this hospital."}
+          - {paragraph_id: p2, text: "The paper describes the unit's staffing and clinical routines."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: nursing-02
+    split: tuning
+    source_ids: [nursing]
+    claims:
+      - {claim_id: c1, text: "The before-and-after design limits causal conclusions."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "Because outcomes were compared across periods around the appointment, other changes over time could also matter."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: nursing-03
+    split: tuning
+    source_ids: [nursing]
+    claims:
+      - {claim_id: c1, text: "The findings come from one Japanese ICU and should not automatically be generalized to every hospital."}
+      - {claim_id: c2, text: "The study reports fewer patients receiving mechanical ventilation after the CNS appointment."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "These results establish that CNS leadership lowers mortality in all hospitals."}
+          - {paragraph_id: p2, text: "The reported ventilation outcome also declined in the later period."}
+        expected_links:
+          - {paragraph_id: p2, claim_id: c2}
+
+  - session_id: nursing-04
+    split: tuning
+    source_ids: [nursing]
+    claims:
+      - {claim_id: c1, text: "The study's primary endpoint was ICU mortality."}
+      - {claim_id: c2, text: "The study's secondary endpoint was mechanical ventilation."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "Mortality and ventilation are both outcomes in the paper, but the authors designate them as primary and secondary endpoints respectively."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p1, claim_id: c2}
+
+  - session_id: sanitation-01
+    split: tuning
+    source_ids: [socsci]
+    claims:
+      - {claim_id: c1, text: "The sanitation policy increased fecal contamination in rivers."}
+      - {claim_id: c2, text: "The estimated increase in river contamination was 72 percent."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "River contamination rose under the policy; the paper estimates a 72% increase."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p1, claim_id: c2}
+
+  - session_id: sanitation-02
+    split: tuning
+    source_ids: [socsci]
+    claims:
+      - {claim_id: c1, text: "The policy reduced diarrheal child mortality overall."}
+      - {claim_id: c2, text: "The health benefit was eliminated in upstream areas lacking adequate wastewater infrastructure."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "The average health result improved, yet the gain disappeared where upstream wastewater systems were insufficient."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p1, claim_id: c2}
+
+  - session_id: sanitation-03
+    split: tuning
+    source_ids: [socsci]
+    claims:
+      - {claim_id: c1, text: "The author uses soil characteristics affecting latrine feasibility as geographic variation for identification."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "Differences in how suitable local soils were for latrine construction provide the study's source of variation."}
+          - {paragraph_id: p2, text: "India subsidized construction of more than 100 million latrines."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: sanitation-04
+    split: tuning
+    source_ids: [socsci]
+    claims:
+      - {claim_id: c1, text: "Sanitation expansion can create water-quality costs when fecal-sludge treatment infrastructure is insufficient."}
+      - {claim_id: c2, text: "Sanitation investment was intended to improve child health."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "The program's public-health goal does not remove the pollution externality created when treatment capacity lags behind latrine construction."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p1, claim_id: c2}
+
+  - session_id: cs-01
+    split: tuning
+    source_ids: [cs]
+    claims:
+      - {claim_id: c1, text: "The paper distinguishes recurrent hallucinations from emergent hallucinations across a decomposed generation path."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "An error category that appears earlier and again in the final query is recurrent; one appearing only at the final step is emergent."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: cs-02
+    split: tuning
+    source_ids: [cs]
+    claims:
+      - {claim_id: c1, text: "The evaluation decomposes Text-to-SQL into progressively more complex executable sub-queries."}
+      - {claim_id: c2, text: "The study examines five large language models on an expanded BIRD-mini benchmark."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "The authors compare several models using staged executable query tasks."}
+          - {paragraph_id: p2, text: "The results concern student writing in an undergraduate sociology course."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: cs-03
+    split: tuning
+    source_ids: [cs]
+    claims:
+      - {claim_id: c1, text: "With conversational history, recurrence probabilities were generally higher and emergence probabilities generally lower."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "Adding conversation context shifted the two conditional measures in opposite directions on average."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: cs-04
+    split: tuning
+    source_ids: [cs]
+    claims:
+      - {claim_id: c1, text: "The study motivates trajectory-level analysis in addition to evaluating only the final query."}
+      - {claim_id: c2, text: "The study presents a new commercial database product."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "Looking at intermediate steps can reveal whether the final error was already present earlier."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: sociology-01
+    split: tuning
+    source_ids: [sociology_methods]
+    claims:
+      - {claim_id: c1, text: "A research question should guide the choice of research design and data collection method."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "The method is selected in relation to what the investigator wants to find out."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: sociology-02
+    split: tuning
+    source_ids: [sociology_methods]
+    claims:
+      - {claim_id: c1, text: "Primary data collection gathers observations directly for a study."}
+      - {claim_id: c2, text: "Secondary data analysis uses data already collected by another researcher."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "A survey a researcher administers for the current project is primary data, while reusing an existing dataset is secondary analysis."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p1, claim_id: c2}
+
+  - session_id: sociology-03
+    split: tuning
+    source_ids: [sociology_methods]
+    claims:
+      - {claim_id: c1, text: "Research methods have benefits and limitations, and topic and question shape the choice."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "No method is best in the abstract; fit depends on the question and trade-offs."}
+          - {paragraph_id: p2, text: "A researcher's favorite color is blue."}
+        expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+  - session_id: mixed-01
+    split: tuning
+    source_ids: [nursing, sociology_methods]
+    claims:
+      - {claim_id: c1, text: "The nursing study is a before-and-after comparison."}
+      - {claim_id: c2, text: "Sociological research design should fit the research question."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "A change observed after the appointment is not by itself proof that the appointment caused the difference."}
+          - {paragraph_id: p2, text: "The study's question should determine which method is appropriate."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p2, claim_id: c2}
+
+  - session_id: mixed-02
+    split: tuning
+    source_ids: [socsci, sociology_methods]
+    claims:
+      - {claim_id: c1, text: "The sanitation paper uses geographic variation in soil suitability for identification."}
+      - {claim_id: c2, text: "A study's method should be evaluated against its research question."}
+    batches:
+      - batch_id: b0
+        changed_paragraphs:
+          - {paragraph_id: p1, text: "The soil-based comparison is the paper's identification strategy."}
+          - {paragraph_id: p2, text: "Choosing a method requires matching the design to the question being asked."}
+        expected_links:
+          - {paragraph_id: p1, claim_id: c1}
+          - {paragraph_id: p2, claim_id: c2}
