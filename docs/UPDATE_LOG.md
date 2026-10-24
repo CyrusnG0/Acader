@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-012 events layer merged
+**Summary:** T-012 reviewed and merged: staging, one merged `editor.batch` per 5-minute window, checkpoints, idempotent submit and seal, post-seal whitelist (409), verify endpoint, edit lease. 230 prototype tests and the kit's 29 pass in a fresh locked venv. Seven small spec details await the founder (handoff). Merged through a separate worktree because the main checkout is on `task/T-008-golden-set`.
+**Files touched:** prototype/server/app/{events_service,routes_events,main}.py, engine/events/{merge,store}.py, tests/test_events_m1.py, docs/handoffs, docs/TASKS.md
+**Loops:** none
+**Decisions:** none yet (T-012 PD 1–7 pending)
+**Next:** review T-011; then T-013 can start
+
 ## 2026-10-24 — Checker: founder answers on the spike decisions; links per paragraph; M1 wave
 **Summary:** The founder accepted the 21 proposed decisions from T-002…T-006 except S1 PD-S1-2 (typed words inside a linked sentence lose the link). Replaced by D-045: links belong to paragraphs, so editing or elaborating never cuts a link; a paragraph link alone never makes text traced and D13 still holds per sentence. The founder also rejected a "source-first ratio" (fakeable by a scripted outside-AI workflow): D-046 drops construction order as a signal, has elaboration questioned forward through the pillars, and records Coach answers without grading them. M1 tasks T-011…T-017 written; T-011 and T-012 launched.
 **Files touched:** docs/DECISIONS.md (D-041…D-046), design/event-log.md, provenance.md, receipt.md, workspace.md, coach-helper.md, reading-aid.md, architecture.md, build-plan.md, design/README.md, EXPECTATIONS.md (C/D/E/G), TODOS.md (#12 GROBID), docs/GLOSSARY.md, docs/OPEN_LOOPS.md, docs/TASKS.md, docs/STATUS.md, CHANGELOG.md
