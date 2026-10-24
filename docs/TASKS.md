@@ -12,12 +12,12 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 
 | ID | Task | Read first | Done when (EXPECTATIONS) | Depends on | Model | Owner | Status |
 |---|---|---|---|---|---|---|---|
-| T-001 | Scaffold `prototype/` per architecture.md §6 (server/app, engine, sources, coach, mapper, trail, tests; web Vite+TS; fixtures; spikes) + CI that runs prototype tests and the kit's 29 | architecture.md §4, §6 | A; I-M0 (scaffold + CI) | — | D/S | lead-opus-T001 | review |
-| T-002 | `web/schema.json`: origin marks (closed list), claim mark `{claim_id, by}` with optional `suggestion_id` | event-log.md §4 | A; C (typed rules) | T-001 | S | | blocked |
-| T-003 | LLM boundary `complete(task, messages, schema)` wrapping `shared/llm.py`: stub, error classes, boot ping, backend-2 slot, task enum incl. `map_suggest` | architecture.md §5 | A (shared/llm.py unchanged) | T-001 | S | | blocked |
+| T-001 | Scaffold `prototype/` per architecture.md §6 (server/app, engine, sources, coach, mapper, trail, tests; web Vite+TS; fixtures; spikes) + CI that runs prototype tests and the kit's 29 | architecture.md §4, §6 | A; I-M0 (scaffold + CI) | — | D/S | lead-opus-T001 | done |
+| T-002 | `web/schema.json`: origin marks (closed list), claim mark `{claim_id, by}` with optional `suggestion_id` | event-log.md §4 | A; C (typed rules) | T-001 | S | | ready |
+| T-003 | LLM boundary `complete(task, messages, schema)` wrapping `shared/llm.py`: stub, error classes, boot ping, backend-2 slot, task enum incl. `map_suggest` | architecture.md §5 | A (shared/llm.py unchanged) | T-001 | S | | ready |
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | | blocked |
-| T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | | blocked |
-| T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | | blocked |
+| T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | | ready |
+| T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | | ready |
 | T-007 | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | | ready |
 | T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | | ready |
 | T-009 | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | | ready |

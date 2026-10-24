@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: `prototype/` scaffold (server packages, FastAPI `/healthz`, engine CLI stub, Vite + TS web, fixtures, spikes) and `.github/workflows/ci.yml` running prototype, kit and web checks (T-001).
 - 2026-10-24: `EXPECTATIONS.md` (checklist every task must pass), `docs/TASKS.md` (task board, M0 tasks), `docs/handoffs/` (handoff template); CLAUDE.md §8 lead/worker/checker flow.
 - 2026-10-24: `docs/designs/eng-review-v2.md` (eng review of the mapper and workspace, D-037).
 - 2026-10-24: `design/workspace.md` (student workspace and live map) and `docs/designs/design-review-v1.md` (design review record, D-036).

@@ -1,11 +1,11 @@
 # Current Status
 
-**Last updated:** 2026-10-24 (multi-agent flow set up; D-035 → D-038 this week)
+**Last updated:** 2026-10-24 (T-001 scaffold merged; D-035 → D-038 this week)
 **Phase:** design finished and reviewed; **building starts with M0**. Work runs as one Opus lead per task, with Sonnet/DeepSeek workers, and one checker conversation (CLAUDE.md §8).
 **Code in repo:**
 - `writing-room-kit/`: simulated experiments v0.1–v0.5 and the hosted static demo (`web/`), **frozen**; 29 tests pass with `ROOM_LLM=stub` (run 2026-10-23)
 - `shared/llm.py`: the DeepSeek client (wrap it, don't change it)
-- `prototype/`: empty, scaffolded by T-001
+- `prototype/`: scaffold merged (T-001): server packages, `/healthz`, engine CLI stub, Vite + TS web; 13 tests + web smoke test pass. CI workflow exists but has not run on GitHub yet
 - Parked code: `archive/code-track/`
 
 ## Where we are going (one paragraph)
@@ -18,8 +18,8 @@ A writing platform where the process is the evidence. The student writes beside 
 - **D-038:** every new idea gets the same Coach treatment: one pillar question, never blocking.
 
 ## Next action (do this first)
-**Leads:** take the first `ready` task in [docs/TASKS.md](TASKS.md) (T-001 scaffold first; T-007, T-008, T-009, T-010 can run in parallel). Pass [EXPECTATIONS.md](../EXPECTATIONS.md) and write a handoff.
-**Founder:** F-001 (schedule option, build-plan §2a), F-002 (named teacher by 10-30), F-005 (allow DeepSeek workers on the repo or not).
+**Leads:** T-001 is done. Ready now, in parallel: T-002 (schema), T-003 (`complete()`), T-005 (S5), T-006 (S2), T-007…T-010. T-004 waits for T-002. Pass [EXPECTATIONS.md](../EXPECTATIONS.md) and write a handoff.
+**Founder:** F-001 (schedule option, build-plan §2a), F-002 (named teacher by 10-30), confirm F-005 (relayed as approved in the T-001 handoff); push `main` so CI runs; PD-1 (lock Python deps) and PD-2 (Node 22.12+).
 
 ## Where to read
 - Product: [PRODUCT.md](../PRODUCT.md) §5–7

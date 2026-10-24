@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-001 checked and merged (prototype scaffold + CI)
+**Summary:** Checker re-ran T-001 from a clean checkout: prototype 13 passed, kit 29 passed, web typecheck/test/build clean. Section A ticked; I-M0 scaffold ticked, "CI green" open until the first GitHub Actions run. Merged to main; T-002, T-003, T-005, T-006 unblocked.
+**Files touched:** prototype/ (scaffold), .github/workflows/ci.yml, .gitignore, docs/TASKS.md, docs/handoffs/2026-10-24-T-001-scaffold.md, docs/STATUS.md, CHANGELOG.md
+**Loops:** none
+**Decisions:** none. Proposed to the founder: PD-1 (lock Python deps, lock hash in the engine stamp), PD-2 (Node 22.12+ floor); F-005 approval to confirm.
+**Next:** push main so CI runs; leads take T-002/T-003/T-005/T-006 (plus T-007…T-010).
+
+---
+
 ## 2026-10-24 — Multi-agent flow set up for the build
 **Summary:** The repo is ready for parallel work: one Opus lead per task (in separate conversations) with Sonnet/DeepSeek workers, and this conversation as the checker. Added EXPECTATIONS.md (plain-language checklist, sections A–I), docs/TASKS.md (M0 tasks T-001…T-010 plus founder tasks F-001…F-005), docs/handoffs/ (template). CLAUDE.md gained §8 (roles, branch per task, only the checker edits shared docs); STATUS.md rewritten as a clean snapshot.
 **Files touched:** EXPECTATIONS.md (new), docs/TASKS.md (new), docs/handoffs/README.md (new), CLAUDE.md, README.md, docs/STATUS.md, CHANGELOG.md
