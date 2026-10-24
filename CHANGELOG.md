@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: receipt compiler (`engine/receipt/`, `app/receipt_service.py`): JSON receipt with integer counts, hash, question text via `complete()`, wording filter, "mechanics" count (T-016, D-050).
 - 2026-10-24: golden-set source manifest, D19 session script format and 15 draft mapper-label seeds (`prototype/fixtures/`, T-008).
 - 2026-10-24: L1 deterministic provenance (`engine/provenance/`: sentence split, origin mix, chains via paragraph links, bands, receipt facts, thresholds config) (T-014).
 - 2026-10-24: compile-time replay with checkpoint hash checks and the provenance mark check (`engine/provenance/`, `engine/replay/rebuild.py`, `app/compile_service.py`) (T-013).
