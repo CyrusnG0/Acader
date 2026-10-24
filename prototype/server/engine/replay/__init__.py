@@ -6,5 +6,9 @@ each checkpoint (event-log.md §5, D6). Spike S1 showed both replays give the
 same document and marks (prototype/spikes/S1/RESULT.md).
 """
 from .replay import ALLOWED_STEP_TYPES, ReplayError, doc_hash, load_schema, replay_steps
+from .rebuild import (EMPTY_DOC, CheckpointCheck, ReplayReport, SnapshotLoader, check_replay,
+                      rebuild_at, step_segments, steps_between)
 
-__all__ = ["ALLOWED_STEP_TYPES", "ReplayError", "doc_hash", "load_schema", "replay_steps"]
+__all__ = ["ALLOWED_STEP_TYPES", "ReplayError", "doc_hash", "load_schema", "replay_steps",
+           "EMPTY_DOC", "CheckpointCheck", "ReplayReport", "SnapshotLoader", "check_replay",
+           "rebuild_at", "step_segments", "steps_between"]
