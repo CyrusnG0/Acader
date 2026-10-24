@@ -4,7 +4,7 @@
 import { Schema, type AttributeSpec, type MarkSpec, type NodeSpec } from "prosemirror-model";
 import schemaJson from "../schema.json";
 
-type JsonAttr = { default?: unknown; validate?: string; enum?: readonly unknown[] };
+export type JsonAttr = { default?: unknown; validate?: string; enum?: readonly unknown[] };
 type JsonSpec = { attrs?: Record<string, JsonAttr>; [key: string]: unknown };
 type JsonSchema = {
   topNode?: string;
@@ -22,7 +22,7 @@ function typeCheck(types: string, where: string, value: unknown): void {
   }
 }
 
-function toAttrSpec(where: string, spec: JsonAttr): AttributeSpec {
+export function toAttrSpec(where: string, spec: JsonAttr): AttributeSpec {
   const out: AttributeSpec = {};
   if ("default" in spec) out.default = spec.default;
   const { validate, enum: allowed } = spec;
