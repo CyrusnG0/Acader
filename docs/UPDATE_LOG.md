@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-013 replay and mark check merged
+**Summary:** T-013 reviewed and merged: replay from checkpoints with per-checkpoint hash checks (replay_mismatch path, operator alerts), and the provenance §4.1 mark check for quote, coach, import and helper runs behind a `ProvenanceSources` interface. 453 prototype tests and the kit's 29 pass. T-014 is now ready.
+**Files touched:** engine/replay/rebuild.py, engine/provenance/*, app/compile_service.py, two test files, docs/handoffs, docs/TASKS.md
+**Loops:** none
+**Decisions:** none yet (T-013 PD 1–8 pending)
+**Next:** launch T-014 (L1 provenance)
+
 ## 2026-10-24 — Checker: T-011 paragraph links merged
 **Summary:** T-011 reviewed and merged: `schema.json` v2 (paragraph `links`, D-044 node set, `em`/`strong`), link commands and the split/join rule, claim stripping removed, JS and Python replay parity regenerated (jsdom 55 cases; real Chromium 23/23). 388 prototype tests, 118 web tests and the kit's 29 pass. T-013 is now ready.
 **Files touched:** prototype/web/{schema.json,src/schema.ts,src/editor/*}, server/engine/replay/*, fixtures/replay/*, spikes/S1, tests, docs/handoffs, docs/TASKS.md

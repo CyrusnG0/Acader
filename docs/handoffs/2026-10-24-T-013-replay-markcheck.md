@@ -108,3 +108,9 @@ Not touched: `prototype/web/`, `schema.json`, `engine/events/`, `app/events_serv
   - *Recommend:* accept.
 - **PD-T013-8: `operator_alerts` table.** One SQLite table (`log_id, kind, doc_rev, seq, detail, created_at`), unique per log, kind and seq, holding hashes only.
   - *Recommend:* accept as the minimal operator record until the operator page (D15) exists.
+
+## Checker review (2026-10-24): passed, merged to `main`
+- Re-ran in a fresh locked venv: prototype 453 passed; kit 29 passed. Diff touches only `engine/replay/rebuild.py`, `engine/provenance/`, `app/compile_service.py`, two test files and docs; web, schema, events code, `shared/`, `design/`, kit and dependencies untouched. No banned words or secrets.
+- EXPECTATIONS A ticked; C "every non-typed mark is checked against its origin; a failed check is untraced" ticked for the check itself (the band step is T-014); D28 replay-mismatch path ticked.
+- Not covered (later): background job per checkpoint, operator page, `unconfirmed` → untraced (T-014).
+- PD-T013-1…8 go to the founder; all are small and recommended yes.
