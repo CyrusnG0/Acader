@@ -1,0 +1,33 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    env:
+      ROOM_LLM: stub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r prototype/requirements.txt
+      - name: prototype tests
+        run: cd prototype && ROOM_LLM=stub python -m pytest -q
+      - name: kit tests (29)
+        run: cd writing-room-kit && ROOM_LLM=stub python -m pytest -q v04/tests web/tests
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: prototype/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
