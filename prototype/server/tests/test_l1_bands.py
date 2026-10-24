@@ -476,3 +476,77 @@ def test_card_edit_without_via_keeps_previous_via():
         ev(3, "card.edit", card_id="c1", text="reworded", origin_runs=typed_runs("reworded")),
         claim_ev(4)]
     assert run(d, evs)["sentences"][0]["chains"][0]["ends"] == ["coach"]
+
+
+# ---------------------------------------------------------------- D-050 mechanics
+REF = "Smith, J. (2020). Fluid balance in adults. Journal of Care, 12, 1-9."
+
+
+def helper_src(text=REF):
+    return InMemorySources(blocks={"b1": BLOCK}, helper={"h1": text})
+
+
+def test_mechanics_all_helper_paragraph():
+    d = doc(para(t(REF, "helper", "h1")))
+    out = run(d, sources=helper_src())
+    assert out["sentences"] and all(s["band"] == "mechanics" for s in out["sentences"])
+    assert all(s["notes"] == [] for s in out["sentences"])
+    assert out["bands"]["mechanics"] == len(REF.split())
+    assert out["bands"]["total_words"] == 0
+    assert all(v == 0 for v in out["bands"]["by_words"].values())
+    assert all(v == 0 for v in out["bands"]["by_claims"].values())
+    assert out["claims"] == [] and out["l3b_queue"] == []
+
+
+def test_mechanics_typed_then_helper_sentence():
+    d = doc(para(t("I read this. "), t(REF, "helper", "h1")))
+    out = run(d, sources=helper_src())
+    assert band_of(out, 0) == "untraced"
+    assert all(s["band"] == "mechanics" for s in out["sentences"][1:])
+    assert out["bands"]["total_words"] == out["sentences"][0]["words"]
+    assert [c["sentence_ids"] for c in out["claims"]] == [["s1"]]
+    assert all(q["sentence_id"] == "s1" for q in out["l3b_queue"])
+
+
+def test_mechanics_mixed_sentence_is_not_mechanics():
+    d = doc(para(t("Note: ", "typed"), t("Smith, J. (2020)", "helper", "h1"), t(" says so.")))
+    out = run(d, sources=helper_src("Smith, J. (2020)"))
+    assert len(out["sentences"]) == 1 and band_of(out) == "untraced"
+    assert out["bands"]["mechanics"] == 0
+
+
+def test_mechanics_unconfirmed_helper_is_not_mechanics():
+    d = doc(para(t("Jones, K. (2019). Made up title.", "helper", "h1")))
+    out = run(d, sources=helper_src())
+    assert all(s["band"] == "untraced" and s["notes"] == ["label_not_confirmed"]
+               for s in out["sentences"])
+    assert out["bands"]["mechanics"] == 0
+    assert out["bands"]["total_words"] == sum(s["words"] for s in out["sentences"])
+
+
+def test_mechanics_linked_paragraph_excludes_helper_sentence():
+    d = doc(para(t("My own point here. "), t(REF, "helper", "h1"), links=[link("k1")]))
+    out = run(d, anchored_claim_events(), sources=helper_src())
+    assert band_of(out, 0) == "student_linked"
+    assert all(s["band"] == "mechanics" for s in out["sentences"][1:])
+    (c,) = out["claims"]
+    assert c["sentence_ids"] == ["s1"] and c["words"] == out["sentences"][0]["words"]
+    assert out["bands"]["by_claims"]["student_linked"] == 1
+    assert out["bands"]["mechanics"] == sum(s["words"] for s in out["sentences"][1:])
+
+
+def test_mechanics_linked_only_helper_drops_claim_unit():
+    d = doc(para(t(REF, "helper", "h1"), links=[link("k1")]))
+    out = run(d, anchored_claim_events(), sources=helper_src())
+    assert all(s["band"] == "mechanics" for s in out["sentences"])
+    assert out["claims"] == []
+    assert all(v == 0 for v in out["bands"]["by_claims"].values())
+    assert out["l3b_queue"] == []
+
+
+def test_mechanics_is_int_and_json_ok():
+    out = run(doc(para(t(REF, "helper", "h1"))), sources=helper_src())
+    assert type(out["bands"]["mechanics"]) is int
+    assert "mechanics" not in out["bands"]["by_words"]
+    canonical_json(out)
+    assert run(doc(para(t("Plain."))))["bands"]["mechanics"] == 0

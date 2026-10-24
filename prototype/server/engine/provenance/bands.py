@@ -13,6 +13,7 @@ from .sentences import split_sentences
 from .trail import Trail, claim_reanchored
 
 BAND_ORDER = ("declared", "traced_source", "traced_coach", "student_linked", "untraced")
+MECHANICS = "mechanics"  # D-050: sentences made entirely of confirmed Helper text
 MIX_KEYS = ("coach", "helper", "import", "paste_ext", "quote", "typed", "unconfirmed", "unmarked")
 CHECKED = ("quote", "coach", "import", "helper")
 NOTE_TEXT = {"pasted_linked_not_checked": "pasted; linked by the student, not checked",
@@ -203,7 +204,10 @@ def analyse(blocks: list, runs, trail: Trail, cfg, l3b=(), map_suggestions: int 
                 return False
 
             declared_unanch = any(du for (_, du) in chain_infos)
-            if imp * 100 >= pct_imp * n or declared_unanch:
+            mechanics = n > 0 and all(k == "helper" for k in ek[s:e])
+            if mechanics:
+                band = MECHANICS
+            elif imp * 100 >= pct_imp * n or declared_unanch:
                 band = "declared"
             elif added == 0 and clean and (quo > 0 or l3b_cond("block")):
                 band = "traced_source"
@@ -214,9 +218,9 @@ def analyse(blocks: list, runs, trail: Trail, cfg, l3b=(), map_suggestions: int 
             else:
                 band = "untraced"
             notes = set()
-            if b.links and mostly_pasted and band == "untraced" and pas * 100 >= pct_paste * n:
+            if not mechanics and b.links and mostly_pasted and band == "untraced" and pas * 100 >= pct_paste * n:
                 notes.add("pasted_linked_not_checked")
-            if unc > 0:
+            if not mechanics and unc > 0:
                 notes.add("label_not_confirmed")
             seen, marks = set(), []
             for r in sorted((r for r in runs if r["from"] < to and r["to"] > frm),
@@ -235,6 +239,8 @@ def analyse(blocks: list, runs, trail: Trail, cfg, l3b=(), map_suggestions: int 
                     "chain_break": None if b.links else "no_link"}
             sentences.append(sent)
             sents.append(sent)
+            if mechanics:
+                continue
             reasons = set()
             if not b.links and (mix["typed"] + pas) * 100 >= pct_unl * n:
                 reasons.add("unlinked")
@@ -261,13 +267,16 @@ def analyse(blocks: list, runs, trail: Trail, cfg, l3b=(), map_suggestions: int 
                 u = order[cid]
                 if b.id not in u["pids"]:
                     u["pids"].add(b.id)
-                    u["sents"].extend(para_sentences[b.id])
-        elif b.node == "paragraph" and para_sentences[b.id]:
-            units.append({"id": b.id, "unit": "paragraph", "sents": list(para_sentences[b.id]),
+                    u["sents"].extend(x for x in para_sentences[b.id] if x["band"] != MECHANICS)
+        elif b.node == "paragraph" and any(x["band"] != MECHANICS for x in para_sentences[b.id]):
+            units.append({"id": b.id, "unit": "paragraph",
+                          "sents": [x for x in para_sentences[b.id] if x["band"] != MECHANICS],
                           "pids": {b.id}})
     claims_out = []
     by_claims = {k: 0 for k in BAND_ORDER}
     for u in units:
+        if u["unit"] == "claim" and not u["sents"]:
+            continue
         w = {k: 0 for k in BAND_ORDER}
         for s in u["sents"]:
             w[s["band"]] += s["words"]
@@ -284,11 +293,15 @@ def analyse(blocks: list, runs, trail: Trail, cfg, l3b=(), map_suggestions: int 
                            "words": sum(s["words"] for s in u["sents"]),
                            "sentence_ids": [s["id"] for s in u["sents"]]})
     by_words = {k: 0 for k in BAND_ORDER}
+    mech_words = 0
     for s in sentences:
-        by_words[s["band"]] += s["words"]
+        if s["band"] == MECHANICS:
+            mech_words += s["words"]
+        else:
+            by_words[s["band"]] += s["words"]
     inferred = sum(1 for b in blocks for l in b.links if l.get("suggestion_id"))
     bands = {"total_words": sum(by_words.values()), "by_words": by_words, "by_claims": by_claims,
              "quoted_words": sum(s["quoted_words"] for s in sentences),
-             "inferred_links": inferred, "map_suggestions": map_suggestions}
+             "mechanics": mech_words, "inferred_links": inferred, "map_suggestions": map_suggestions}
     return {"paragraphs": paragraphs, "sentences": sentences, "claims": claims_out,
             "bands": bands, "l3b_queue": queue}
