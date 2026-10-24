@@ -1,6 +1,6 @@
 {
   "x-writing-room": {
-    "schema_version": 1,
+    "schema_version": 2,
     "spec": "design/event-log.md §4",
     "note": "One editor schema for the browser and the Python replay (D33). Keys starting with x- and the enum lists are ours; ProseMirror ignores them, and each loader turns every enum into a validate check. Changing this file regenerates the golden logs (evaluation.md §2)."
   },
@@ -11,10 +11,74 @@
     },
     "paragraph": {
       "group": "block",
-      "content": "inline*"
+      "content": "inline*",
+      "attrs": {
+        "links": {
+          "default": [],
+          "validate": "array",
+          "items": {
+            "claim_id": {
+              "validate": "string"
+            },
+            "by": {
+              "validate": "string",
+              "enum": [
+                "student",
+                "coach",
+                "import"
+              ]
+            },
+            "suggestion_id": {
+              "validate": "string",
+              "optional": true,
+              "only_when": {
+                "by": "student"
+              }
+            }
+          }
+        }
+      }
+    },
+    "heading": {
+      "group": "block",
+      "content": "inline*",
+      "defining": true,
+      "attrs": {
+        "level": {
+          "default": 1,
+          "validate": "number",
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "blockquote": {
+      "group": "block",
+      "content": "block+",
+      "defining": true
+    },
+    "bullet_list": {
+      "group": "block",
+      "content": "list_item+"
+    },
+    "ordered_list": {
+      "group": "block",
+      "content": "list_item+"
+    },
+    "list_item": {
+      "content": "paragraph block*",
+      "defining": true
     },
     "text": {
       "group": "inline"
+    },
+    "hard_break": {
+      "group": "inline",
+      "inline": true,
+      "selectable": false
     }
   },
   "marks": {
@@ -47,27 +111,7 @@
         "import": "import_id"
       }
     },
-    "claim": {
-      "inclusive": false,
-      "excludes": "claim",
-      "attrs": {
-        "claim_id": {
-          "validate": "string"
-        },
-        "by": {
-          "validate": "string",
-          "enum": [
-            "student",
-            "coach",
-            "import"
-          ]
-        },
-        "suggestion_id": {
-          "default": null,
-          "validate": "string|null"
-        }
-      },
-      "x-suggestion-id-only-when-by": "student"
-    }
+    "em": {},
+    "strong": {}
   }
 }

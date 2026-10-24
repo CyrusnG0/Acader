@@ -8,7 +8,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -85,6 +88,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -129,7 +135,7 @@
      }
     ]
    },
-   "doc_hash": "0bc654801772abb3670bfe513a21e277ae09a0eabf19b669a7a0f9675924fbf4",
+   "doc_hash": "eae5e1780fdc572721b93ced25a62d1a5d2efccd356db3b700a2e72bee53b439",
    "counts": {
     "keyboard": 2,
     "ime": 0,
@@ -144,7 +150,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -221,6 +230,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -265,7 +277,7 @@
      }
     ]
    },
-   "doc_hash": "e5fd3bd94000b2eebcc1321eae3632261821a049cb622161da2c9dae255f2768",
+   "doc_hash": "a4d8224bbdb9c47a711d12e73ff5c2ab825ea8e172cc0ccd63e0f13d6cab64ec",
    "counts": {
     "keyboard": 2,
     "ime": 0,
@@ -275,12 +287,15 @@
    "passed": true
   },
   {
-   "name": "kb_claim_student",
+   "name": "kb_linked_paragraph",
    "start": {
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -300,20 +315,23 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c3",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "claimed"
        }
       ]
      }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c3",
+       "by": "student"
+      }
+     ]
     },
     {
      "stepType": "replace",
@@ -339,8 +357,30 @@
     },
     {
      "stepType": "replace",
-     "from": 9,
-     "to": 9,
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "["
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
      "slice": {
       "content": [
        {
@@ -365,7 +405,28 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c3",
+         "by": "student"
+        }
+       ]
+      },
       "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "["
+       },
        {
         "type": "text",
         "marks": [
@@ -374,14 +435,6 @@
           "attrs": {
            "kind": "quote",
            "ref": "b81"
-          }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c3",
-           "by": "student",
-           "suggestion_id": null
           }
          }
         ],
@@ -409,14 +462,6 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c3",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "imed"
@@ -438,9 +483,9 @@
      }
     ]
    },
-   "doc_hash": "ac25bf2de68719922034d2a043bde427c47e76d76dd13b194d10aac215ed0d0f",
+   "doc_hash": "bc042c2c417b56bce14f9bf6f1b29f039f523afd0303a2dafa2e2808fd1a3c06",
    "counts": {
-    "keyboard": 2,
+    "keyboard": 3,
     "ime": 0,
     "dictation": 0,
     "replacement": 0
@@ -453,7 +498,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -552,6 +600,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -596,7 +647,7 @@
      }
     ]
    },
-   "doc_hash": "0c28c80af6df3bcb294eaecba7c5ff61a1b2885881fffe653ea2c0060efc977e",
+   "doc_hash": "d239b5690132a51b554bf4dd81e53e1d2de23d52bbb35e4aa975bc77a0ed5a5b",
    "counts": {
     "keyboard": 0,
     "ime": 3,
@@ -611,7 +662,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -666,6 +720,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -710,7 +767,7 @@
      }
     ]
    },
-   "doc_hash": "13bf548bf4cc884bcfa74672a55eb486d024bf0bb8457066d87312c1d6dd5af0",
+   "doc_hash": "1f58e7f6b171e2f82def0a58d518b470a6dac779a327efe87d3f175928430e23",
    "counts": {
     "keyboard": 1,
     "ime": 0,
@@ -725,7 +782,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -745,20 +805,23 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c1",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "a quote"
        }
       ]
      }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
     },
     {
      "stepType": "replace",
@@ -768,6 +831,9 @@
       "content": [
        {
         "type": "paragraph",
+        "attrs": {
+         "links": []
+        },
         "content": [
          {
           "type": "text",
@@ -881,6 +947,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -899,7 +968,205 @@
      }
     ]
    },
-   "doc_hash": "daa6411b495c5efc03f6bbae4a8103b1de4e4bb2641db477bc3cf9070e0b965b",
+   "doc_hash": "d9efce894936ca50ce6ac437abfe6377cfaf1327ffd0713285c35ff4eda0607a",
+   "counts": {
+    "keyboard": 5,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "select_text_type",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "a quote"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "fresh"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "34a180cbc4df063ebcdcbfa95e753e7afb048b4d3c9dc04c79d6a54338ba2bac",
    "counts": {
     "keyboard": 5,
     "ime": 0,
@@ -914,7 +1181,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -948,10 +1218,16 @@
      "slice": {
       "content": [
        {
-        "type": "paragraph"
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
        },
        {
-        "type": "paragraph"
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
        }
       ],
       "openStart": 1,
@@ -1053,6 +1329,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -1071,6 +1350,9 @@
      },
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -1102,7 +1384,7 @@
      }
     ]
    },
-   "doc_hash": "45985560827dcdc5b479380dd2bf662a82df502a81457201fd51545d76f06004",
+   "doc_hash": "1a7d2dceee467674d0c67bc3a13c30f20e70d751f17f64438812d8a473da4d92",
    "counts": {
     "keyboard": 4,
     "ime": 0,
@@ -1117,7 +1399,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -1270,6 +1555,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -1301,7 +1589,7 @@
      }
     ]
    },
-   "doc_hash": "db9769e3f31dbffb78a0f2a316016868ba883d5d83a96a94b6049217b13a68a2",
+   "doc_hash": "8326a55ba15ec4596892c4b0227da67ef474b8777e7f3b5fb4ff1632673e2b22",
    "counts": {
     "keyboard": 5,
     "ime": 0,
@@ -1316,7 +1604,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -1380,20 +1671,23 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c2",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "quoted"
        }
       ]
      }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c2",
+       "by": "student"
+      }
+     ]
     },
     {
      "stepType": "replace",
@@ -1423,14 +1717,6 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c2",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "quoted"
@@ -1444,6 +1730,14 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
       "content": [
        {
         "type": "text",
@@ -1467,14 +1761,6 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c2",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "quoted"
@@ -1501,14 +1787,6 @@
            "kind": "quote",
            "ref": "b81"
           }
-         },
-         {
-          "type": "claim",
-          "attrs": {
-           "claim_id": "c2",
-           "by": "student",
-           "suggestion_id": null
-          }
          }
         ],
         "text": "quoted"
@@ -1517,7 +1795,7 @@
      }
     ]
    },
-   "doc_hash": "0c5d663d28903553e259fe50f126c23d18d18dd163218b419268aeb9fdefb65d",
+   "doc_hash": "5b174363f0e78a2f1203d8d53975b0d53de4bb57fccffdc98225a396ba51f207",
    "counts": {
     "keyboard": 2,
     "ime": 0,
@@ -1532,7 +1810,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -1702,6 +1983,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -1733,7 +2017,7 @@
      }
     ]
    },
-   "doc_hash": "bc7449940868abcfc5f7449c1074e3822c4d189deac94f77da167755ca6cabfc",
+   "doc_hash": "892015c209f5446d3048a85d6a093f8b8f75e5963d393006728f8e20ea6c670a",
    "counts": {
     "keyboard": 5,
     "ime": 0,
@@ -1748,7 +2032,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -1803,6 +2090,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -1834,7 +2124,7 @@
      }
     ]
    },
-   "doc_hash": "027914639546f4f599dedeb5b3627cf9e06e0dc2900e945c0d3af6d243464c36",
+   "doc_hash": "ad463c7866da117105e6750ffb947303d2edc4907816bae26e6f658ffab82915",
    "counts": {
     "keyboard": 1,
     "ime": 0,
@@ -1849,7 +2139,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -1997,6 +2290,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -2028,7 +2324,7 @@
      }
     ]
    },
-   "doc_hash": "320a868c375aa4d300fb407a68d824deb4bc6326cd4592bfe51b77a9cae92728",
+   "doc_hash": "64e48443d230bc85e88c29434380f3417a9f2e9a6a26edb2451b67f867c94bbd",
    "counts": {
     "keyboard": 4,
     "ime": 0,
@@ -2043,7 +2339,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -2120,6 +2419,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -2151,7 +2453,7 @@
      }
     ]
    },
-   "doc_hash": "e141b82d8f3f717201c38d9afd38bc469e68f2bf357c2570554f6ce9afdd8724",
+   "doc_hash": "22e99a00b8c37467588ef1620a77ed6da83b9c6aba82eb1c0847b64192992cb6",
    "counts": {
     "keyboard": 2,
     "ime": 0,
@@ -2166,7 +2468,10 @@
     "type": "doc",
     "content": [
      {
-      "type": "paragraph"
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
      }
     ]
    },
@@ -2248,6 +2553,9 @@
     "content": [
      {
       "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
       "content": [
        {
         "type": "text",
@@ -2292,9 +2600,1904 @@
      }
     ]
    },
-   "doc_hash": "af6139ea360035b6623204d918f9b4e54e24f97c0a620b0d5d4bef1311c37405",
+   "doc_hash": "3be980cb1e0b47373f6d000abd301bec1e114f09ce67f8fb75abe6db303cb115",
    "counts": {
     "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "enter_split_linked",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 7,
+     "to": 7,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "first"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "second"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "5f19c9d04264a1bac2b9a65d486b518d7fb5dc1e15703ba733f88e0b410f65fb",
+   "counts": {
+    "keyboard": 11,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "enter_end_linked",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 7,
+     "to": 7,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "abc"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "new"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "4d3717126b1cac84d1d3702d22d0d289647187a2f02d6f629140594cb2099b1f",
+   "counts": {
+    "keyboard": 6,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "backspace_join_linked",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "attr",
+     "pos": 4,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c2",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 5,
+     "structure": true
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      },
+      {
+       "claim_id": "c2",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        },
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "abcd"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "12d92cfa0019ee63f8d7ae86f295cbc904b6dfe351a9fd26bc7415d41a2401ea",
+   "counts": {
+    "keyboard": 4,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "copy_paste_linked_paragraphs",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 7,
+     "to": 7,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "attr",
+     "pos": 5,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c2",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c2",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        },
+        "content": [
+         {
+          "type": "text",
+          "marks": [
+           {
+            "type": "origin",
+            "attrs": {
+             "kind": "typed",
+             "ref": null
+            }
+           }
+          ],
+          "text": "one"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c2",
+           "by": "student"
+          }
+         ]
+        },
+        "content": [
+         {
+          "type": "text",
+          "marks": [
+           {
+            "type": "origin",
+            "attrs": {
+             "kind": "typed",
+             "ref": null
+            }
+           }
+          ],
+          "text": "two"
+         }
+        ]
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 10,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "one"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "two"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "one"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "two"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "da8a26d74dd541c3c81348cb54f95d24453c1e0906c04f1adc15bc7b4641d99f",
+   "counts": {
+    "keyboard": 6,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "undo_redo_link",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": []
+    },
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "ab"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "6be7418997e2b0de7997829f06e2e0ba2e19676160758fcd0f415886ede7bba4",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "bold_typing",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         },
+         {
+          "type": "strong"
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         },
+         {
+          "type": "strong"
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "5b64d889ae8da3b7d0921696a404912e25c33187c8d705294c315e5b6666c8e5",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "list_enter",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replaceAround",
+     "from": 0,
+     "to": 2,
+     "gapFrom": 0,
+     "gapTo": 2,
+     "insert": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "bullet_list",
+        "content": [
+         {
+          "type": "list_item"
+         }
+        ]
+       }
+      ]
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "attrs": {
+           "links": []
+          }
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "attrs": {
+           "links": []
+          }
+         }
+        ]
+       }
+      ],
+      "openStart": 2,
+      "openEnd": 2
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 12,
+     "to": 12,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "bullet_list",
+      "content": [
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "attrs": {
+           "links": []
+          },
+          "content": [
+           {
+            "type": "text",
+            "marks": [
+             {
+              "type": "origin",
+              "attrs": {
+               "kind": "typed",
+               "ref": null
+              }
+             }
+            ],
+            "text": "one"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "attrs": {
+           "links": []
+          },
+          "content": [
+           {
+            "type": "text",
+            "marks": [
+             {
+              "type": "origin",
+              "attrs": {
+               "kind": "typed",
+               "ref": null
+              }
+             }
+            ],
+            "text": "two"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "1ad6c556463e3693bd462863b78ddb0619e33bfa7682d2567a6c4ee46553fb96",
+   "counts": {
+    "keyboard": 6,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "shift_enter_hard_break",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      }
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "hard_break"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "addMark",
+     "mark": {
+      "type": "origin",
+      "attrs": {
+       "kind": "typed",
+       "ref": null
+      }
+     },
+     "from": 2,
+     "to": 3
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       },
+       {
+        "type": "hard_break",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "cec8ec2b7f7ca47bdb710b55314e0332667231c7c94b33087e7864ff6f447096",
+   "counts": {
+    "keyboard": 2,
     "ime": 0,
     "dictation": 0,
     "replacement": 0

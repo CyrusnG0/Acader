@@ -45,9 +45,24 @@ export function recordPlugin(): Plugin<StepLog> {
 
 export class ReplayError extends Error {}
 
+/** Step types the replay accepts (D-044); the Python replay has the same list. */
+export const ALLOWED_STEP_TYPES: ReadonlySet<string> = new Set([
+  "replace",
+  "replaceAround",
+  "addMark",
+  "removeMark",
+  "addNodeMark",
+  "removeNodeMark",
+  "attr",
+  "docAttr",
+]);
+
 export function replaySteps(schema: Schema, start: JsonObject, steps: readonly JsonObject[]): PMNode {
   let doc = PMNode.fromJSON(schema, start);
   steps.forEach((json, i) => {
+    if (typeof json.stepType !== "string" || !ALLOWED_STEP_TYPES.has(json.stepType)) {
+      throw new ReplayError(`step ${i}: step type ${String(json.stepType)} is not allowed`);
+    }
     const result = Step.fromJSON(schema, json).apply(doc);
     if (result.failed || !result.doc) throw new ReplayError(`step ${i}: ${result.failed}`);
     doc = result.doc;

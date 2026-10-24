@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-24: paragraph links and the D-044 node set in the editor schema, replay and fixtures (T-011); the inline `claim` mark is removed.
 - 2026-10-24: events layer for M1 (`app/events_service.py`, `routes_events.py`, `engine/events/merge.py`): staging, 5-minute merge, checkpoints, idempotent submit and seal, post-seal 409, verify endpoint, edit lease (T-012).
 - 2026-10-24: editor input plugin (`web/src/editor/`) and Python replay (`engine/replay/`) with browser parity (spike S1, T-004; GO). Spikes S2 (`spikes/S2/`, PDF parsers) and S5 result notes.
 - 2026-10-24: `prototype/server/app/llm.py`: `complete(task, messages, schema)` boundary with stub, D13 error classes, backend-2 slot and boot ping (T-003).

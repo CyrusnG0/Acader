@@ -14,6 +14,13 @@ Template:
 
 ---
 
+## 2026-10-24 — Checker: T-011 paragraph links merged
+**Summary:** T-011 reviewed and merged: `schema.json` v2 (paragraph `links`, D-044 node set, `em`/`strong`), link commands and the split/join rule, claim stripping removed, JS and Python replay parity regenerated (jsdom 55 cases; real Chromium 23/23). 388 prototype tests, 118 web tests and the kit's 29 pass. T-013 is now ready.
+**Files touched:** prototype/web/{schema.json,src/schema.ts,src/editor/*}, server/engine/replay/*, fixtures/replay/*, spikes/S1, tests, docs/handoffs, docs/TASKS.md
+**Loops:** none
+**Decisions:** none yet (T-011 PD-1…5 pending)
+**Next:** launch T-013 (replay + mark check)
+
 ## 2026-10-24 — Checker: T-012 events layer merged
 **Summary:** T-012 reviewed and merged: staging, one merged `editor.batch` per 5-minute window, checkpoints, idempotent submit and seal, post-seal whitelist (409), verify endpoint, edit lease. 230 prototype tests and the kit's 29 pass in a fresh locked venv. Seven small spec details await the founder (handoff). Merged through a separate worktree because the main checkout is on `task/T-008-golden-set`.
 **Files touched:** prototype/server/app/{events_service,routes_events,main}.py, engine/events/{merge,store}.py, tests/test_events_m1.py, docs/handoffs, docs/TASKS.md

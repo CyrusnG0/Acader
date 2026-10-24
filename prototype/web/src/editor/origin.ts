@@ -2,8 +2,8 @@
 //
 // - Typed text is always `typed`. Every text the student enters through the
 //   keyboard, IME, dictation or a replacement (spellcheck, autocorrect,
-//   extensions that edit the page) gets origin=typed and no claim mark, also
-//   inside or at the edge of a marked span. The plugin does this after the
+//   extensions that edit the page) gets origin=typed, also inside or at the
+//   edge of a marked span. The plugin does this after the
 //   fact (appendTransaction), so it covers every input path ProseMirror has,
 //   including DOM edits it only sees through its mutation observer.
 // - `input_kind` (keyboard, ime, dictation, replacement) is kept as counts in
@@ -16,6 +16,7 @@ import { Plugin, PluginKey, TextSelection, type EditorState, type Transaction } 
 import { Fragment, Slice, type Mark, type Node as PMNode, type Schema } from "@tiptap/pm/model";
 import { isHistoryTransaction } from "@tiptap/pm/history";
 import type { EditorView } from "@tiptap/pm/view";
+import { PASTE_SLICE_META } from "./links";
 
 export const SLICE_MIME = "application/x-writing-room-slice";
 /** Set on a transaction whose marks were set on purpose (quote, helper, import, internal paste, replay). */
@@ -77,30 +78,27 @@ function rangeHasText(doc: PMNode, [a, b]: Range): boolean {
   return found;
 }
 
-/** Strip every mark from a slice and stamp origin=paste_ext with one paste_id. */
+/** Strip every mark from a slice, stamp origin=paste_ext with one paste_id, and clear paragraph links. */
 export function stampSlice(schema: Schema, slice: Slice, pasteId: string): Slice {
   const origin = schema.marks.origin.create({ kind: "paste_ext", ref: pasteId });
   const walk = (frag: Fragment): Fragment => {
     const nodes: PMNode[] = [];
     frag.forEach((n) => {
       if (n.isText) nodes.push(n.mark([origin]));
-      else nodes.push(n.copy(walk(n.content)).mark([] as readonly Mark[]));
+      else if (n.type.spec.attrs && "links" in n.type.spec.attrs) {
+        // Outside text never brings links (D-045); other attrs, e.g. a heading level, stay.
+        nodes.push(n.type.create({ ...n.attrs, links: [] }, walk(n.content)).mark([] as readonly Mark[]));
+      } else nodes.push(n.copy(walk(n.content)).mark([] as readonly Mark[]));
     });
     return Fragment.from(nodes);
   };
   return new Slice(walk(slice.content), slice.openStart, slice.openEnd);
 }
 
-/** Insert text with an explicit origin (quote, helper, coach, import) and optional claim. */
-export function insertMarked(
-  view: EditorView,
-  text: string,
-  origin: { kind: string; ref: string | null },
-  claim?: { claim_id: string; by: string; suggestion_id?: string | null },
-): void {
+/** Insert text with an explicit origin (quote, helper, coach, import). */
+export function insertMarked(view: EditorView, text: string, origin: { kind: string; ref: string | null }): void {
   const { state } = view;
   const marks = [state.schema.marks.origin.create(origin)];
-  if (claim) marks.push(state.schema.marks.claim.create(claim));
   const { from, to } = state.selection;
   const tr = state.tr.replaceWith(from, to, state.schema.text(text, marks)).setMeta(EXPLICIT_META, true);
   view.dispatch(tr);
@@ -151,11 +149,10 @@ export function originPlugin(opts: OriginOptions): Plugin<OriginState> {
         if (isUserInput(tr)) ranges.push(...insertedRanges(tr));
       }
       if (ranges.length === 0) return null;
-      const { origin, claim } = state.schema.marks;
+      const { origin } = state.schema.marks;
       const typed = origin.create({ kind: "typed", ref: null });
       const tr = state.tr;
       for (const [a, b] of ranges) {
-        tr.removeMark(a, b, claim);
         tr.addMark(a, b, typed); // excludes: origin, so this replaces any other origin
       }
       return tr.docChanged ? tr.setMeta(EXPLICIT_META, "typed") : null;
@@ -165,8 +162,11 @@ export function originPlugin(opts: OriginOptions): Plugin<OriginState> {
       // step instead of two (insert, then appendTransaction's addMark). Text inserted
       // any other way (IME, DOM edits, replacements) still goes through appendTransaction.
       handleTextInput(view, from, to, text) {
-        const typed = view.state.schema.marks.origin.create({ kind: "typed", ref: null });
-        const tr = view.state.tr.replaceWith(from, to, view.state.schema.text(text, [typed]));
+        const { state } = view;
+        const typed = state.schema.marks.origin.create({ kind: "typed", ref: null });
+        // The cursor's other marks (strong, em) carry over; its origin never does.
+        const carried = (state.storedMarks ?? state.doc.resolve(from).marks()).filter((m) => m.type !== typed.type);
+        const tr = state.tr.replaceWith(from, to, state.schema.text(text, typed.addToSet(carried)));
         // Put the cursor after the text (mapping alone would keep an AllSelection).
         tr.setSelection(TextSelection.create(tr.doc, tr.mapping.map(to)));
         view.dispatch(tr.scrollIntoView());
@@ -195,7 +195,8 @@ export function originPlugin(opts: OriginOptions): Plugin<OriginState> {
             .scrollIntoView()
             .setMeta("paste", true)
             .setMeta("uiEvent", "paste")
-            .setMeta(EXPLICIT_META, "internal"),
+            .setMeta(EXPLICIT_META, "internal")
+            .setMeta(PASTE_SLICE_META, restored),
         );
         return true;
       },
