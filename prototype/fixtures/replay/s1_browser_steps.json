@@ -1,0 +1,2305 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/spikes/S1/browser_check.mjs (not CI). server/tests/test_replay_s1.py replays these steps in Python and must reach the same doc and doc_hash.",
+ "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "cases": [
+  {
+   "name": "kb_inside_quote",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "abcdef"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "X"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Y"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "abc"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "XY"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "def"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "0bc654801772abb3670bfe513a21e277ae09a0eabf19b669a7a0f9675924fbf4",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "kb_edges_quote",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "quoted"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "<"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ">"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "<"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "quoted"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ">"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "e5fd3bd94000b2eebcc1321eae3632261821a049cb622161da2c9dae255f2768",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "kb_claim_student",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c3",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "claimed"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "_"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "]"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c3",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "cla"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "_"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c3",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "imed"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "]"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "ac25bf2de68719922034d2a043bde427c47e76d76dd13b194d10aac215ed0d0f",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "ime_inside_quote",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "ab"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "に"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "にほん"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "日本"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "a"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "日本"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "0c28c80af6df3bcb294eaecba7c5ff61a1b2885881fffe653ea2c0060efc977e",
+   "counts": {
+    "keyboard": 0,
+    "ime": 3,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "extension_dom_edit",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "recieve it"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "ei"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "rec"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "ei"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "ve it"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "13bf548bf4cc884bcfa74672a55eb486d024bf0bb8457066d87312c1d6dd5af0",
+   "counts": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "select_all_type",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c1",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "a quote"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 0,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "marks": [
+           {
+            "type": "origin",
+            "attrs": {
+             "kind": "typed",
+             "ref": null
+            }
+           }
+          ],
+          "text": "f"
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "fresh"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "daa6411b495c5efc03f6bbae4a8103b1de4e4bb2641db477bc3cf9070e0b965b",
+   "counts": {
+    "keyboard": 5,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "enter_inside_quote",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "firstsecond"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph"
+       },
+       {
+        "type": "paragraph"
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "first"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "new "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "second"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "45985560827dcdc5b479380dd2bf662a82df502a81457201fd51545d76f06004",
+   "counts": {
+    "keyboard": 4,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "backspace_across_edge",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "m"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 4,
+     "to": 4,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "theirs"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 7
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 6
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "mine"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "heirs"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "db9769e3f31dbffb78a0f2a316016868ba883d5d83a96a94b6049217b13a68a2",
+   "counts": {
+    "keyboard": 5,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "copy_paste_internal",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c2",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "quoted"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c2",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "quoted"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c2",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "quoted"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "I "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         },
+         {
+          "type": "claim",
+          "attrs": {
+           "claim_id": "c2",
+           "by": "student",
+           "suggestion_id": null
+          }
+         }
+        ],
+        "text": "quoted"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "0c5d663d28903553e259fe50f126c23d18d18dd163218b419268aeb9fdefb65d",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "cut_paste_move",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "move me"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 9,
+     "to": 9,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 10,
+     "to": 10,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 11,
+     "to": 11,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 12,
+     "to": 12,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "y"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 8
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "move me"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " stay"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "move me"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "bc7449940868abcfc5f7449c1074e3822c4d189deac94f77da167755ca6cabfc",
+   "counts": {
+    "keyboard": 5,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "paste_external_html",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "x"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "outside forged"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "x"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "outside forged"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "027914639546f4f599dedeb5b3627cf9e06e0dc2900e945c0d3af6d243464c36",
+   "counts": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "drag_move_internal",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "drag"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 6,
+     "to": 6,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 7,
+     "to": 7,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 8,
+     "to": 8,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 5
+    },
+    {
+     "stepType": "replace",
+     "from": 5,
+     "to": 5,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "drag"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " end"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "drag"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "320a868c375aa4d300fb407a68d824deb4bc6326cd4592bfe51b77a9cae92728",
+   "counts": {
+    "keyboard": 4,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "drop_external",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 2,
+     "to": 2,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "b"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "dragged from outside"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "ab"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "dragged from outside"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "e141b82d8f3f717201c38d9afd38bc469e68f2bf357c2570554f6ce9afdd8724",
+   "counts": {
+    "keyboard": 2,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  },
+  {
+   "name": "undo_redo",
+   "start": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph"
+     }
+    ]
+   },
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "abcd"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "T"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 4
+    },
+    {
+     "stepType": "replace",
+     "from": 3,
+     "to": 3,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "T"
+       }
+      ]
+     }
+    }
+   ],
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "ab"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "T"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "b81"
+          }
+         }
+        ],
+        "text": "cd"
+       }
+      ]
+     }
+    ]
+   },
+   "doc_hash": "af6139ea360035b6623204d918f9b4e54e24f97c0a620b0d5d4bef1311c37405",
+   "counts": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "passed": true
+  }
+ ]
+}
