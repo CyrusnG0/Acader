@@ -14,6 +14,15 @@ Template:
 
 ---
 
+## 2026-10-24 — T-005 (spike S5) checked and merged; CI green
+**Summary:** First GitHub CI run green (prototype 13, kit 29, web). Leads now run as background Opus agents launched by the checker, one worktree each (T-002, T-003, T-005, T-006). T-005 re-run by the checker: 61 + 29 passed, whitelist matches event-log.md §6. Spike S5 is GO. EXPECTATIONS C clarified: the seal covers the record up to submission; dropping the newest post-seal events doesn't show.
+**Files touched:** prototype/server/engine/events/, prototype/server/engine/__main__.py, prototype/server/tests/test_events_s5.py, prototype/spikes/S5/RESULT.md, docs/handoffs/2026-10-24-T-005-spike-s5.md, docs/TASKS.md, EXPECTATIONS.md, docs/STATUS.md, CHANGELOG.md
+**Loops:** OL-035 can close once PD-S5-1…4 are decided
+**Decisions:** none yet. Proposed: PD-S5-1 (prev_hash as hex text), PD-S5-2 (event id = seq), PD-S5-3 (no floats in the receipt JSON; integer word counts), PD-S5-4 (say the seal covers the record up to submission).
+**Next:** founder decides PD-S5-1…4; checker reviews T-002, T-003, T-006 as they land.
+
+---
+
 ## 2026-10-24 — T-001 checked and merged (prototype scaffold + CI)
 **Summary:** Checker re-ran T-001 from a clean checkout: prototype 13 passed, kit 29 passed, web typecheck/test/build clean. Section A ticked; I-M0 scaffold ticked, "CI green" open until the first GitHub Actions run. Merged to main; T-002, T-003, T-005, T-006 unblocked.
 **Files touched:** prototype/ (scaffold), .github/workflows/ci.yml, .gitignore, docs/TASKS.md, docs/handoffs/2026-10-24-T-001-scaffold.md, docs/STATUS.md, CHANGELOG.md

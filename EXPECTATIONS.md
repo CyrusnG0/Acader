@@ -37,7 +37,7 @@ Where a line cites a code like `D13`, `9A` or `D-035`, the full reasoning is in 
 - [ ] Editor changes enter the chain once per 5 minutes; timestamps rounded down to 5 minutes (D12, D30).
 - [ ] The seal is the hash of the `submit` event; after it, only the whitelisted events may append (D8).
 - [ ] Same log + same engine stamp + stored AI outputs → a byte-identical receipt (D20, D31).
-- [ ] `verify` fails on any edit, deletion, reordering or non-whitelisted post-seal event (S5).
+- [ ] `verify` fails on any edit, deletion, reordering or non-whitelisted post-seal event (S5). The seal covers the record up to submission: later notes are chained, so a gap in the middle shows, but dropping the newest ones does not (S5 result, PD-S5-4).
 
 ## D. Bands (provenance.md §6)
 
