@@ -4,6 +4,7 @@
 import { createEditor } from "../../../web/src/editor/editor";
 import { insertMarked, originKey } from "../../../web/src/editor/origin";
 import { linkParagraph, paragraphPosAt, unlinkParagraph, type Link } from "../../../web/src/editor/links";
+import { toggleBulletList } from "../../../web/src/editor/formatting";
 import { recordKey, replaySteps } from "../../../web/src/editor/record";
 import { docHash } from "../../../web/src/editor/canonical";
 import { editorSchema } from "../../../web/src/schema";
@@ -50,6 +51,30 @@ function links() {
 (window as unknown as { s1: unknown }).s1 = {
   runs,
   links,
+  /** [text, "mark,mark"] per text run (marks other than origin), one row per textblock. */
+  formats() {
+    const out: [string, string][][] = [];
+    view.state.doc.descendants((block) => {
+      if (!block.isTextblock) return true;
+      const row: [string, string][] = [];
+      block.forEach((t) => {
+        if (t.isText) row.push([t.text ?? "", t.marks.filter((m) => m.type.name !== "origin").map((m) => m.type.name).join(",")]);
+      });
+      out.push(row);
+      return false;
+    });
+    return out;
+  },
+  /** How many nodes of this type the document holds. */
+  count(type: string) {
+    let c = 0;
+    view.state.doc.descendants((n) => {
+      if (n.type.name === type) c++;
+      return true;
+    });
+    return c;
+  },
+  bulletList: () => toggleBulletList(editor),
   counts: () => originKey.getState(view.state)!.counts,
   insertQuote(text: string) {
     insertMarked(view, text, { kind: "quote", ref: "b81" });

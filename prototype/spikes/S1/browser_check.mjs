@@ -57,23 +57,28 @@ async function fresh() {
   return page;
 }
 
-const R = (text, origin, ref = null, claim = null) => [text, origin, ref, claim];
+const R = (text, origin, ref = null) => [text, origin, ref];
 
-async function check(name, page, expected, extra = () => true) {
+async function check(name, page, expected, extra = () => true, expectedLinks = undefined) {
   const got = await page.evaluate(() => window.s1.runs());
+  const gotLinks = await page.evaluate(() => window.s1.links());
   const res = await page.evaluate(() => window.s1.result());
   const counts = await page.evaluate(() => window.s1.counts());
-  const ok = JSON.stringify(got) === JSON.stringify(expected) && res.js_replay_equal && extra(counts, got);
+  const linksOk = expectedLinks === undefined || JSON.stringify(gotLinks) === JSON.stringify(expectedLinks);
+  const ok = JSON.stringify(got) === JSON.stringify(expected) && linksOk && res.js_replay_equal && extra(counts, got);
   console.log(`${ok ? "PASS" : "FAIL"}  ${name}`);
   if (!ok) {
     failures.push(name);
     console.log("   expected", JSON.stringify(expected));
+    if (expectedLinks !== undefined) console.log("   links expected", JSON.stringify(expectedLinks), "got", JSON.stringify(gotLinks));
     console.log("   got     ", JSON.stringify(got), "counts", JSON.stringify(counts), "js_replay_equal", res.js_replay_equal);
   }
   results.push({ name, start: res.start, steps: res.steps, doc: res.doc, doc_hash: res.doc_hash, counts, passed: ok });
   await page.close();
 }
 
+const C1 = { claim_id: "c1", by: "student" };
+const C2 = { claim_id: "c2", by: "student" };
 const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), [fn, args]);
 
 // 1. Keyboard typing inside a quote span.
@@ -83,7 +88,7 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
   await s1(p, "select", 4);
   await p.keyboard.type("XY");
   await check("kb_inside_quote", p, [[R("abc", "quote", "b81"), R("XY", "typed"), R("def", "quote", "b81")]],
-    (c) => c.keyboard === 2);
+    (c) => c.keyboard === 2, [[]]);
 }
 // 2. Keyboard typing at both edges.
 {
@@ -95,17 +100,20 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
   await p.keyboard.type(">");
   await check("kb_edges_quote", p, [[R("<", "typed"), R("quoted", "quote", "b81"), R(">", "typed")]]);
 }
-// 3. Keyboard typing inside and at the edge of a claim span.
+// 3. Keyboard typing inside and at both edges of a linked paragraph.
 {
   const p = await fresh();
-  await s1(p, "insertQuote", "claimed", { claim_id: "c3", by: "student" });
+  await s1(p, "insertQuote", "claimed");
+  await s1(p, "link", await s1(p, "paragraphPos"), { claim_id: "c3", by: "student" });
   await s1(p, "select", 4);
   await p.keyboard.type("_");
+  await s1(p, "select", 1);
+  await p.keyboard.type("[");
   await s1(p, "select", await s1(p, "end"));
   await p.keyboard.type("]");
-  await check("kb_claim_student", p, [[
-    R("cla", "quote", "b81", "c3/student"), R("_", "typed"), R("imed", "quote", "b81", "c3/student"), R("]", "typed"),
-  ]]);
+  await check("kb_linked_paragraph", p, [[
+    R("[", "typed"), R("cla", "quote", "b81"), R("_", "typed"), R("imed", "quote", "b81"), R("]", "typed"),
+  ]], (c) => c.keyboard === 3, [["c3/student"]]);
 }
 // 4. IME composition inside a quote span (CDP).
 {
@@ -134,10 +142,21 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
 // 6. Select all, then type.
 {
   const p = await fresh();
-  await s1(p, "insertQuote", "a quote", { claim_id: "c1", by: "student" });
+  await s1(p, "insertQuote", "a quote");
+  await s1(p, "link", await s1(p, "paragraphPos"), C1);
   await p.keyboard.press(`${MOD}+a`);
   await p.keyboard.type("fresh");
-  await check("select_all_type", p, [[R("fresh", "typed")]]);
+  // Mod-a is a whole-document selection: typing replaces the paragraph node itself, so its links go with it.
+  await check("select_all_type", p, [[R("fresh", "typed")]], () => true, [[]]);
+}
+// 6b. Select all the text of one paragraph (not the document), then type: links unchanged.
+{
+  const p = await fresh();
+  await s1(p, "insertQuote", "a quote");
+  await s1(p, "link", await s1(p, "paragraphPos"), C1);
+  await s1(p, "select", 1, await s1(p, "end"));
+  await p.keyboard.type("fresh");
+  await check("select_text_type", p, [[R("fresh", "typed")]], () => true, [["c1/student"]]);
 }
 // 7. Enter inside a span, then type.
 {
@@ -146,7 +165,7 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
   await s1(p, "select", 6);
   await p.keyboard.press("Enter");
   await p.keyboard.type("new ");
-  await check("enter_inside_quote", p, [[R("first", "quote", "b81")], [R("new ", "typed"), R("second", "quote", "b81")]]);
+  await check("enter_inside_quote", p, [[R("first", "quote", "b81")], [R("new ", "typed"), R("second", "quote", "b81")]], () => true, [[], []]);
 }
 // 8. Backspace at the edge of a span.
 {
@@ -156,20 +175,21 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
   await s1(p, "select", 7);
   await p.keyboard.press("Backspace");
   await p.keyboard.press("Backspace");
-  await check("backspace_across_edge", p, [[R("mine", "typed"), R("heirs", "quote", "b81")]]);
+  await check("backspace_across_edge", p, [[R("mine", "typed"), R("heirs", "quote", "b81")]], () => true, [[]]);
 }
 // 9. Internal copy and paste with the real clipboard.
 {
   const p = await fresh();
   await p.keyboard.type("I ");
-  await s1(p, "insertQuote", "quoted", { claim_id: "c2", by: "student" });
+  await s1(p, "insertQuote", "quoted");
+  await s1(p, "link", await s1(p, "paragraphPos"), C2);
   await s1(p, "select", 1, await s1(p, "end"));
   await p.keyboard.press(`${MOD}+c`);
   await s1(p, "select", await s1(p, "end"));
   await p.keyboard.press(`${MOD}+v`);
   await check("copy_paste_internal", p, [[
-    R("I ", "typed"), R("quoted", "quote", "b81", "c2/student"), R("I ", "typed"), R("quoted", "quote", "b81", "c2/student"),
-  ]]);
+    R("I ", "typed"), R("quoted", "quote", "b81"), R("I ", "typed"), R("quoted", "quote", "b81"),
+  ]], () => true, [["c2/student"]]);
 }
 // 10. Cut and paste (a move).
 {
@@ -187,14 +207,14 @@ const s1 = (page, fn, ...args) => page.evaluate(([f, a]) => window.s1[f](...a), 
   const p = await fresh();
   await p.keyboard.type("x");
   await p.evaluate(async () => {
-    const html = '<p>outside <span data-origin-kind="quote" data-origin-ref="b81">forged</span></p>';
+    const html = '<p data-links=\'[{"claim_id":"cX","by":"student"}]\'>outside <span data-origin-kind="quote" data-origin-ref="b81">forged</span></p>';
     await navigator.clipboard.write([new ClipboardItem({
       "text/html": new Blob([html], { type: "text/html" }),
       "text/plain": new Blob(["outside forged"], { type: "text/plain" }),
     })]);
   });
   await p.keyboard.press(`${MOD}+v`);
-  await check("paste_external_html", p, [[R("x", "typed"), R("outside forged", "paste_ext", "paste_1")]]);
+  await check("paste_external_html", p, [[R("x", "typed"), R("outside forged", "paste_ext", "paste_1")]], () => true, [[]]);
 }
 // 12 and 13: headless Chromium does not start an OS drag from Playwright's
 // mouse, so these dispatch real DragEvents with a real DataTransfer at real
@@ -245,6 +265,97 @@ async function dropAt(p, x, y, { fromSpan, text }) {
   await p.keyboard.press(`${MOD}+Shift+z`);
   await check("undo_redo", p, [[R("ab", "quote", "b81"), R("T", "typed"), R("cd", "quote", "b81")]],
     () => JSON.stringify(afterUndo) === JSON.stringify([[R("abcd", "quote", "b81")]]));
+}
+
+// 15. Enter in the middle of a linked paragraph: both halves linked.
+{
+  const p = await fresh();
+  await p.keyboard.type("firstsecond");
+  await s1(p, "link", await s1(p, "paragraphPos"), C1);
+  await s1(p, "select", 6);
+  await p.keyboard.press("Enter");
+  await check("enter_split_linked", p, [[R("first", "typed")], [R("second", "typed")]], () => true,
+    [["c1/student"], ["c1/student"]]);
+}
+// 16. Enter at the end of a linked paragraph: the new paragraph is unlinked and stays so.
+{
+  const p = await fresh();
+  await p.keyboard.type("abc");
+  await s1(p, "link", await s1(p, "paragraphPos"), C1);
+  await s1(p, "select", await s1(p, "end"));
+  await p.keyboard.press("Enter");
+  await p.keyboard.type("new");
+  await check("enter_end_linked", p, [[R("abc", "typed")], [R("new", "typed")]], () => true, [["c1/student"], []]);
+}
+// 17. Backspace joins two linked paragraphs: the union.
+{
+  const p = await fresh();
+  await p.keyboard.type("ab");
+  await p.keyboard.press("Enter");
+  await p.keyboard.type("cd");
+  await s1(p, "link", 0, C1);
+  await s1(p, "link", 4, C2);
+  await s1(p, "select", 5);
+  await p.keyboard.press("Backspace");
+  await check("backspace_join_linked", p, [[R("abcd", "typed")]], () => true, [["c1/student", "c2/student"]]);
+}
+// 18. Internal copy of two linked paragraphs with the real clipboard, paste into a new empty paragraph.
+{
+  const p = await fresh();
+  await p.keyboard.type("one");
+  await p.keyboard.press("Enter");
+  await p.keyboard.type("two");
+  await s1(p, "link", 0, C1);
+  await s1(p, "link", 5, C2);
+  await s1(p, "select", 1, await s1(p, "end"));
+  await p.keyboard.press(`${MOD}+c`);
+  await s1(p, "select", await s1(p, "end"));
+  await p.keyboard.press("Enter");
+  await p.keyboard.press(`${MOD}+v`);
+  await check("copy_paste_linked_paragraphs", p,
+    [[R("one", "typed")], [R("two", "typed")], [R("one", "typed")], [R("two", "typed")]], () => true,
+    [["c1/student"], ["c2/student"], ["c1/student"], ["c2/student"]]);
+}
+// 19. Link command, then keyboard undo and redo.
+{
+  const p = await fresh();
+  await p.keyboard.type("ab");
+  await p.waitForTimeout(600);
+  await s1(p, "link", await s1(p, "paragraphPos"), C1);
+  await p.keyboard.press(`${MOD}+z`);
+  const afterUndo = await p.evaluate(() => window.s1.links());
+  await p.keyboard.press(`${MOD}+Shift+z`);
+  await check("undo_redo_link", p, [[R("ab", "typed")]], () => JSON.stringify(afterUndo) === JSON.stringify([[]]),
+    [["c1/student"]]);
+}
+// 20. Mod-b, then type.
+{
+  const p = await fresh();
+  await p.keyboard.type("a");
+  await p.keyboard.press(`${MOD}+b`);
+  await p.keyboard.type("b");
+  const fmt = await p.evaluate(() => window.s1.formats());
+  await check("bold_typing", p, [[R("a", "typed"), R("b", "typed")]],
+    () => JSON.stringify(fmt) === JSON.stringify([[["a", ""], ["b", "strong"]]]), [[]]);
+}
+// 21. Enter in a bullet list creates a new list item.
+{
+  const p = await fresh();
+  await s1(p, "bulletList");
+  await p.keyboard.type("one");
+  await p.keyboard.press("Enter");
+  await p.keyboard.type("two");
+  const items = await s1(p, "count", "list_item");
+  await check("list_enter", p, [[R("one", "typed")], [R("two", "typed")]], () => items === 2, [[], []]);
+}
+// 22. Shift-Enter inserts a hard break.
+{
+  const p = await fresh();
+  await p.keyboard.type("a");
+  await p.keyboard.press("Shift+Enter");
+  await p.keyboard.type("b");
+  const breaks = await s1(p, "count", "hard_break");
+  await check("shift_enter_hard_break", p, [[R("a", "typed"), R("b", "typed")]], () => breaks === 1, [[]]);
 }
 
 await browser.close();

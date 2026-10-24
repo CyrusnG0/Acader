@@ -301,20 +301,25 @@ def test_schema_has_the_same_nodes_and_marks_as_the_json():
 
 
 # Steps recorded in real Chromium (spikes/S1/browser_check.mjs; not regenerated in CI).
-# T-011: the fixture still holds claim marks (schema v1) and is regenerated separately.
 BROWSER = json.loads((FIXTURE.parent / "s1_browser_steps.json").read_text(encoding="utf-8"))
-CHROMIUM_SKIP = pytest.mark.skip(reason="T-011: Chromium fixture regenerated separately")
 
 
-@CHROMIUM_SKIP
 def test_browser_fixture_covers_the_real_input_paths():
     names = {c["name"] for c in BROWSER["cases"]}
     assert {"kb_inside_quote", "ime_inside_quote", "extension_dom_edit", "copy_paste_internal",
-            "paste_external_html", "drag_move_internal", "drop_external", "undo_redo"} <= names
+            "paste_external_html", "drag_move_internal", "drop_external", "undo_redo",
+            # T-011 link, structure and formatting cases
+            "kb_linked_paragraph", "enter_split_linked", "enter_end_linked", "backspace_join_linked",
+            "copy_paste_linked_paragraphs", "undo_redo_link", "bold_typing", "list_enter",
+            "shift_enter_hard_break"} <= names
     assert all(c["passed"] for c in BROWSER["cases"])
 
 
-@CHROMIUM_SKIP
+@pytest.mark.parametrize("c", BROWSER["cases"], ids=[c["name"] for c in BROWSER["cases"]])
+def test_every_chromium_step_type_is_allowed(c):
+    assert {s["stepType"] for s in c["steps"]} <= ALLOWED_STEP_TYPES
+
+
 @pytest.mark.parametrize("c", BROWSER["cases"], ids=[c["name"] for c in BROWSER["cases"]])
 def test_python_replay_matches_chromium(c):
     doc = replay_steps(c["start"], c["steps"])
