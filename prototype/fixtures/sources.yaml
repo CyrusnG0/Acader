@@ -1,0 +1,92 @@
+# Golden-set source manifest. Rights checked from the linked publisher/repository
+# pages on 2026-10-24. Source bytes are fetched into an ignored cache, not Git.
+manifest_version: 1
+reuse_policy:
+  preferred_license: CC-BY-4.0
+  attribution_required: true
+  note: >-
+    Golden content may be used in a commercial school product and sent to the
+    configured model for inference. Use only the listed licensed text and
+    exclude separately licensed images or ancillary material.
+  openstax_excluded_because: >-
+    OpenStax's current textbooks generally use CC BY-NC-SA; its Biology 2e
+    pages also prohibit use in generative-AI offerings without prior written
+    permission. Do not add OpenStax content without permission and a recorded
+    licence review.
+  openstax_license_evidence: https://help.openstax.org/s/article/Licensing-information-of-OpenStax-textbooks
+  openstax_ai_use_evidence: https://openstax.org/books/biology-2e/pages/2-introduction
+
+sources:
+  - id: nursing
+    kind: peer_reviewed_article
+    role: nursing / clinical evidence
+    title: Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes
+    authors: [Tomohide Fukuda, Hironori Sakurai, Masanori Kashiwagi]
+    citation: "Fukuda T, Sakurai H, Kashiwagi M (2020). PLoS ONE 15(2): e0228458."
+    version: published_2020
+    doi: 10.1371/journal.pone.0228458
+    content_url: https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0228458&type=printable
+    landing_page: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228458
+    license: CC-BY-4.0
+    license_evidence: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228458
+    license_scope: article text; exclude any separately credited third-party content
+    existing_parser_fixture: ../spikes/S2/corpus.json#nursing
+    use: >-
+      Nursing reading with clear methods, before/after comparison, outcomes and
+      limits on generalisation; reuses the S2 parser source.
+
+  - id: socsci
+    kind: working_paper
+    role: social science / causal inference
+    title: "Unintended Consequences of Sanitation Investment: Negative Externalities on Water Quality and Health in India"
+    authors: [Kazuki Motohashi]
+    citation: "Motohashi K (2026). arXiv:2607.29371v1 [econ.GN]. Journal reference: Journal of Development Economics 182 (2026), 103793."
+    version: arXiv:2607.29371v1
+    content_url: https://arxiv.org/pdf/2607.29371v1
+    landing_page: https://arxiv.org/abs/2607.29371
+    license: CC-BY-4.0
+    license_evidence: https://arxiv.org/abs/2607.29371
+    license_url: https://creativecommons.org/licenses/by/4.0/
+    license_scope: author manuscript v1
+    existing_parser_fixture: ../spikes/S2/corpus.json#socsci
+    use: >-
+      Social-science paper with identification strategy, externalities and
+      heterogeneous effects; reuses the S2 parser source.
+
+  - id: cs
+    kind: workshop_paper
+    role: computer science / LLM evaluation
+    title: Tracing Recurrent and Emergent Hallucination Patterns in Decomposed Text-to-SQL Generation
+    authors: [Hayden Moore, Abhinav Verma, Anshuman Dutt]
+    citation: "Moore H, Verma A, Dutt A (2026). arXiv:2610.27720v1 [cs.CL]. Accepted to the 3rd Workshop on Uncertainty-Aware NLP (UncertaiNLP 2026)."
+    version: arXiv:2610.27720v1
+    content_url: https://arxiv.org/pdf/2610.27720v1
+    landing_page: https://arxiv.org/abs/2610.27720
+    license: CC-BY-4.0
+    license_evidence: https://arxiv.org/abs/2610.27720
+    license_url: https://creativecommons.org/licenses/by/4.0/
+    license_scope: author manuscript v1
+    existing_parser_fixture: ../spikes/S2/corpus.json#cs
+    use: >-
+      CS paper with explicit decomposition, evaluation categories and
+      conditional results; reuses the S2 parser source.
+
+  - id: sociology_methods
+    kind: open_textbook_chapter
+    role: textbook / research methods
+    title: "Sociology in Everyday Life: An Equity Lens — Chapter 3, Sociological Research Methods: Studying Social Life"
+    authors: [Jennifer Puentes, Matthew Gougherty]
+    publisher: Open Oregon Educational Resources
+    year: 2025
+    isbn: 9781636354002
+    version: first_edition_2025
+    content_url: https://openoregon.pressbooks.pub/soceveryday1e/part/chapter-3/
+    section_url: https://openoregon.pressbooks.pub/soceveryday1e/chapter/oo3-2/
+    catalog_page: https://open.umn.edu/opentextbooks/textbooks/1924
+    license: CC-BY-4.0
+    license_evidence: https://openoregon.pressbooks.pub/soceveryday1e/
+    license_scope: original chapter text only, except where a page attribution states otherwise
+    use: >-
+      Open textbook chapter on research questions, scientific method, study
+      design and methods. Exclude images, embedded third-party content and any
+      subsection marked with a different licence.

@@ -18,7 +18,7 @@ Each spike gets a short preregistration (pass condition written before running),
 
 ## 2. Golden sessions (the executable spec, D19, D33)
 
-- Each golden session is a **YAML script** (actions + expected bands, moments and question targets).
+- Each golden session is a **YAML script** (actions + expected bands, moments, question targets and mapper labels). The current format and licensed source manifest are in [prototype/fixtures/README.md](../prototype/fixtures/README.md) and [prototype/fixtures/sources.yaml](../prototype/fixtures/sources.yaml).
 - Logs are produced by **Playwright driving the real editor page** (the S1 page, then the M3 editor) for editor steps, plus a Python builder that posts card, anchor, Coach and Door events **through the real ingest path**.
 - Logs are **regenerated in CI** whenever `web/schema.json` or editor code changes. The **expected receipts are frozen** and are the assertion.
 - Sessions: honest · declared outside · pasted then partly rewritten · AI-expanded card · thin honest · **student links an outside-AI paragraph to their own card** (CEO-17; expected: untraced with the note "pasted; linked by the student, not checked", eng v2 D13) · **student accepts a map suggestion on a pasted paragraph** (same expectation, plus the D12 sub-count) · **forged quote and coach marks** (D5) · **AI prose pasted into a Coach answer, then moved** (D26) · **edit above a linked sentence** (D17) · the nursing case (CEO-15).
@@ -27,7 +27,7 @@ Each spike gets a short preregistration (pass condition written before running),
 
 ## 2a. Mapper eval (gates `mapper_enabled`, eng review v2 D7)
 
-- The 15–20 hand-scripted golden sessions (D-035: real sources + an open textbook; simulated, never evidence about students) label, per 5-minute batch, the correct sentence→claim links (YAML `expected_links`).
+- The 15–20 hand-scripted golden sessions (D-035: licensed real sources + an open textbook; simulated, never evidence about students) label, per 5-minute batch, the correct paragraph→claim links (YAML `expected_links`, D-045). A label is a `(paragraph_id, claim_id)` pair; links are not provenance judgments.
 - **Pass bar:** precision ≥ 0.80 of suggestions shown; **recall ≥ 0.50** of labelled links; ≤ 1 suggestion per batch on average; on **both backends**; plus 3 human sessions **separate from H** (after M4m, flag on, results kept apart; eng v2 D16) where **a second person labels each shown suggestion correct or not and precision ≥ 0.80** (the students' reject rate is reported, not gated) (eng v2 D17).
 - **Hold-out:** ≥ 5 golden sessions labelled by someone other than the prompt author and never used while tuning (eng v2 D17).
 - Runs in CI as a stub replay, and live on any change to the mapper prompt or model. `mapper_enabled` turns on for the pilot only when the bar passes (D1).
