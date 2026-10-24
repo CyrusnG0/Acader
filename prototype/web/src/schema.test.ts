@@ -1,17 +1,53 @@
 import { describe, expect, test } from "vitest";
 import { Mark, Node, type Mark as PMMark } from "prosemirror-model";
 import schemaJson from "../schema.json";
-import { CLAIM_BY, ORIGIN_KINDS, editorSchema as schema } from "./schema";
+import { LINK_BY, ORIGIN_KINDS, editorSchema as schema } from "./schema";
 
 const origin = (kind: string, ref: string | null = null) => schema.marks.origin.create({ kind, ref });
-const claim = (claim_id: string, by: string, suggestion_id: string | null = null) =>
-  schema.marks.claim.create({ claim_id, by, suggestion_id });
 const text = (t: string, ...marks: PMMark[]) => schema.text(t, marks);
 const para = (...children: Node[]) => schema.node("paragraph", null, children);
 const doc = (...paras: Node[]) => schema.node("doc", null, paras);
 
 const originOf = (marks: readonly PMMark[]) => marks.filter((m) => m.type.name === "origin");
-const claimOf = (marks: readonly PMMark[]) => marks.filter((m) => m.type.name === "claim");
+
+/** A one-paragraph document JSON whose paragraph carries these links. */
+const withLinks = (links: unknown) => ({ type: "doc", content: [{ type: "paragraph", attrs: { links } }] });
+const check = (links: unknown) => Node.fromJSON(schema, withLinks(links)).check();
+
+describe("nodes and marks (D-044)", () => {
+  test("node and mark names are the D-044 list, in order", () => {
+    expect(Object.keys(schemaJson.nodes)).toEqual([
+      "doc",
+      "paragraph",
+      "heading",
+      "blockquote",
+      "bullet_list",
+      "ordered_list",
+      "list_item",
+      "text",
+      "hard_break",
+    ]);
+    expect(Object.keys(schema.nodes)).toEqual(Object.keys(schemaJson.nodes));
+    expect(Object.keys(schema.marks)).toEqual(["origin", "em", "strong"]);
+    expect("claim" in schema.marks).toBe(false);
+  });
+
+  test("em and strong have no attrs", () => {
+    expect(Object.keys(schema.marks.em.spec.attrs ?? {})).toEqual([]);
+    expect(Object.keys(schema.marks.strong.spec.attrs ?? {})).toEqual([]);
+  });
+
+  test.each([1, 2, 3])("heading level %s is accepted", (level) => {
+    const d = Node.fromJSON(schema, { type: "doc", content: [{ type: "heading", attrs: { level } }] });
+    expect(() => d.check()).not.toThrow();
+  });
+
+  test.each([4, 0, "1", null])("heading level %s is rejected", (level) => {
+    expect(() =>
+      Node.fromJSON(schema, { type: "doc", content: [{ type: "heading", attrs: { level } }] }).check(),
+    ).toThrow(RangeError);
+  });
+});
 
 describe("origin mark: closed list (event-log.md §4)", () => {
   test("the list is exactly the six kinds in the design table", () => {
@@ -69,64 +105,68 @@ describe("origin mark: closed list (event-log.md §4)", () => {
   });
 });
 
-describe("claim mark {claim_id, by} with optional suggestion_id", () => {
-  test("attrs are claim_id and by (required) and suggestion_id (default null)", () => {
-    const attrs = schema.marks.claim.spec.attrs ?? {};
-    expect(Object.keys(attrs)).toEqual(["claim_id", "by", "suggestion_id"]);
-    expect("default" in attrs.claim_id).toBe(false);
-    expect("default" in attrs.by).toBe(false);
-    expect(attrs.suggestion_id.default).toBeNull();
+describe("paragraph links: [{claim_id, by, suggestion_id?}] (D-044, D-045)", () => {
+  test("the attr is `links`, default [], and nothing else", () => {
+    const attrs = schema.nodes.paragraph.spec.attrs ?? {};
+    expect(Object.keys(attrs)).toEqual(["links"]);
+    expect(attrs.links.default).toEqual([]);
+    expect(schema.nodes.paragraph.create().attrs.links).toEqual([]);
+    expect(Node.fromJSON(schema, { type: "doc", content: [{ type: "paragraph" }] }).child(0).attrs.links).toEqual([]);
   });
 
   test("by is the closed list student | coach | import", () => {
-    expect([...CLAIM_BY]).toEqual(["student", "coach", "import"]);
-    expect(() => Mark.fromJSON(schema, { type: "claim", attrs: { claim_id: "c1", by: "mapper" } })).toThrow(RangeError);
-    expect(() => Mark.fromJSON(schema, { type: "claim", attrs: { claim_id: "c1", by: "model" } })).toThrow(RangeError);
+    expect([...LINK_BY]).toEqual(["student", "coach", "import"]);
   });
 
-  test("suggestion_id is optional and kept when given", () => {
-    expect(Mark.fromJSON(schema, { type: "claim", attrs: { claim_id: "c1", by: "student" } }).attrs).toEqual({
-      claim_id: "c1",
-      by: "student",
-      suggestion_id: null,
-    });
-    expect(
-      Mark.fromJSON(schema, { type: "claim", attrs: { claim_id: "c1", by: "student", suggestion_id: "s9" } }).attrs
-        .suggestion_id,
-    ).toBe("s9");
+  test("valid items pass check(), with and without suggestion_id", () => {
+    expect(() => check([])).not.toThrow();
+    expect(() => check([{ claim_id: "c1", by: "student" }])).not.toThrow();
+    expect(() => check([{ claim_id: "c1", by: "student", suggestion_id: "s9" }])).not.toThrow();
+    expect(() => check([{ claim_id: "c1", by: "coach" }, { claim_id: "c2", by: "import" }])).not.toThrow();
+    expect(() => check([{ claim_id: "", by: "coach" }])).not.toThrow(); // the commands refuse it, the schema does not
   });
 
-  test("claim_id and by are required; claim_id must be a string", () => {
-    expect(() => schema.marks.claim.create({ by: "student" })).toThrow();
-    expect(() => schema.marks.claim.create({ claim_id: "c1" })).toThrow();
-    expect(() => Mark.fromJSON(schema, { type: "claim", attrs: { claim_id: 7, by: "student" } })).toThrow(RangeError);
+  test.each([
+    ["not an array", { claim_id: "c1", by: "student" }],
+    ["a string", "c1"],
+    ["null", null],
+    ["item not an object", ["c1"]],
+    ["item is null", [null]],
+    ["item is an array", [["c1", "student"]]],
+    ["by model", [{ claim_id: "c1", by: "model" }]],
+    ["by mapper", [{ claim_id: "c1", by: "mapper" }]],
+    ["missing claim_id", [{ by: "student" }]],
+    ["missing by", [{ claim_id: "c1" }]],
+    ["claim_id a number", [{ claim_id: 7, by: "student" }]],
+    ["unknown key", [{ claim_id: "c1", by: "student", score: 1 }]],
+    ["suggestion_id with by coach", [{ claim_id: "c1", by: "coach", suggestion_id: "s1" }]],
+    ["suggestion_id with by import", [{ claim_id: "c1", by: "import", suggestion_id: "s1" }]],
+    ["suggestion_id null", [{ claim_id: "c1", by: "student", suggestion_id: null }]],
+    ["suggestion_id a number", [{ claim_id: "c1", by: "student", suggestion_id: 3 }]],
+  ])("rejected: %s", (_name, links) => {
+    expect(() => check(links)).toThrow(RangeError);
   });
 
-  test("a claim mark sits alongside the origin mark", () => {
-    const t = text("linked", origin("typed"), claim("c1", "student"));
-    expect(originOf(t.marks)).toHaveLength(1);
-    expect(claimOf(t.marks)).toHaveLength(1);
-    expect(() => doc(para(t)).check()).not.toThrow();
+  test("create() refuses a bad links value too", () => {
+    expect(() => schema.nodes.paragraph.create({ links: [{ claim_id: "c1", by: "model" }] })).toThrow(RangeError);
   });
 });
 
 // D21: typed text is always `typed`, including at the edges of marked spans.
 // The schema's share of that rule is `inclusive: false`: text inserted at the
-// edge of a marked span never inherits its origin or claim mark. Typing inside
-// a span is the input plugin's job (T-004, spike S1), not the schema's.
+// edge of a marked span never inherits its origin mark. Typing inside a span is
+// the input plugin's job (T-004, spike S1), not the schema's.
 describe("typed text at the edges of marked spans (D21)", () => {
-  test("origin and claim are not inclusive", () => {
+  test("origin is not inclusive", () => {
     expect(schema.marks.origin.spec.inclusive).toBe(false);
-    expect(schema.marks.claim.spec.inclusive).toBe(false);
   });
 
-  const pasted = text("PASTED", origin("paste_ext", "p1"), claim("c1", "student", "s1"));
+  const pasted = text("PASTED", origin("paste_ext", "p1"));
   const quoted = text("QUOTE", origin("quote", "b7"));
   const typed = text("typed ", origin("typed"));
 
   const inherited = (d: Node, pos: number) => d.resolve(pos).marks();
-  const nonTyped = (marks: readonly PMMark[]) =>
-    originOf(marks).filter((m) => m.attrs.kind !== "typed").length + claimOf(marks).length;
+  const nonTyped = (marks: readonly PMMark[]) => originOf(marks).filter((m) => m.attrs.kind !== "typed").length;
 
   test("after a pasted span at the end of a paragraph", () => {
     const d = doc(para(typed, pasted));
@@ -149,14 +189,12 @@ describe("typed text at the edges of marked spans (D21)", () => {
     expect(nonTyped(inherited(d, 1 + typed.nodeSize + quoted.nodeSize))).toBe(0);
   });
 
-  test("every non-typed kind and every claim `by` behaves the same at the edge", () => {
+  test("every non-typed kind behaves the same at the edge", () => {
     for (const kind of ORIGIN_KINDS.filter((k) => k !== "typed")) {
-      for (const by of CLAIM_BY) {
-        const span = text("SPAN", origin(kind, "r1"), claim("c1", by));
-        const d = doc(para(span));
-        expect(nonTyped(inherited(d, 1))).toBe(0);
-        expect(nonTyped(inherited(d, 1 + span.nodeSize))).toBe(0);
-      }
+      const span = text("SPAN", origin(kind, "r1"));
+      const d = doc(para(span));
+      expect(nonTyped(inherited(d, 1))).toBe(0);
+      expect(nonTyped(inherited(d, 1 + span.nodeSize))).toBe(0);
     }
   });
 });
