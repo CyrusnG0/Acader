@@ -1,0 +1,2147 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "session_id": "honest-nursing",
+ "editor_actions_sha256": "aaa15eeb33734deb22ee0172d39f6a82264a12068a5f8eb9fa53a4c56fb56267",
+ "actions": [
+  {
+   "index": 10,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues report that a CNS head nurse was "
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "92998446d95013742fad857761a0d478c55dcc3f99cfc6668b7117f7a943ea73",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 11,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 56,
+     "to": 56,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "898a6df23cc5971545b00d668269da5a624e1519eb97a77035d4e3d29dc01493",
+   "paste_id": null,
+   "at": 56
+  },
+  {
+   "index": 12,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 91,
+     "to": 91,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " in their ICU. This result is the core of my argument."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "75c65937fbc7600d7aefc203993abc6e441f65e4a66a18f3ab79d817b548cc25",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 13,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "958450352ca50b7f185da2a7cc0f707f1f2263b24ffefb531d29ea98d1336ddd",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues report that a CNS head nurse was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " in their ICU. This result is the core of my argument."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 15,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 145,
+     "to": 145,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 147,
+     "to": 147,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The authors note that it was "
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 6,
+   "doc_hash": "7f92d0782dca86458c2681b5ba4526d6a6e1809fe156c052fe3e29c41908894b",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 16,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 176,
+     "to": 176,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p7.limitation"
+          }
+         }
+        ],
+        "text": "based in a single institution"
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 7,
+   "doc_hash": "a538a834d45892fd1e0659feebd61e49cdfaffc866b5606540dd03457cd22540",
+   "paste_id": null,
+   "at": 176
+  },
+  {
+   "index": 17,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 205,
+     "to": 205,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ", so other hospitals may differ."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 8,
+   "doc_hash": "c768e544498f491888715c1dae32c404455b42fa0050d9a85b845387190c5579",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 18,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 146,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c2",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 9,
+   "doc_hash": "0f5d629c404187f3eb154c7274f460cc05ffadf1f521f2c3695ad25614cea983",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues report that a CNS head nurse was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " in their ICU. This result is the core of my argument."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The authors note that it was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p7.limitation"
+          }
+         }
+        ],
+        "text": "based in a single institution"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ", so other hospitals may differ."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 21,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 237,
+     "to": 237,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c2",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 239,
+     "to": 239,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "It would need a similar open ICU without intensivists running care."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 11,
+   "doc_hash": "6ce6fba4678d7cda428624d3efb01e21d83feebc53f5341d2cb5c44f845a0ab8",
+   "paste_id": null,
+   "at": 239
+  },
+  {
+   "index": 22,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 238,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c2",
+       "by": "coach"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 12,
+   "doc_hash": "abc23b9487d5e205ab57ee0f3bd57ce22854d7a5c0885b8a4c7357bc047cc994",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues report that a CNS head nurse was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " in their ICU. This result is the core of my argument."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The authors note that it was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p7.limitation"
+          }
+         }
+        ],
+        "text": "based in a single institution"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ", so other hospitals may differ."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "coach"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "It would need a similar open ICU without intensivists running care."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 24,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 306,
+     "to": 306,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c2",
+           "by": "coach"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 308,
+     "to": 308,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "S"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 309,
+     "to": 309,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 310,
+     "to": 310,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 311,
+     "to": 311,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 312,
+     "to": 312,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "f"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 313,
+     "to": 313,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 314,
+     "to": 314,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 315,
+     "to": 315,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "g"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 316,
+     "to": 316,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 317,
+     "to": 317,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 318,
+     "to": 318,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 319,
+     "to": 319,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 320,
+     "to": 320,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 321,
+     "to": 321,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 322,
+     "to": 322,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 323,
+     "to": 323,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 324,
+     "to": 324,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 325,
+     "to": 325,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 326,
+     "to": 326,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 327,
+     "to": 327,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 328,
+     "to": 328,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 329,
+     "to": 329,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "o"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 330,
+     "to": 330,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "u"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 331,
+     "to": 331,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "l"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 332,
+     "to": 332,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 333,
+     "to": 333,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 334,
+     "to": 334,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 335,
+     "to": 335,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 336,
+     "to": 336,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 337,
+     "to": 337,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "g"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 338,
+     "to": 338,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 339,
+     "to": 339,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 340,
+     "to": 340,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 341,
+     "to": 341,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 342,
+     "to": 342,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 343,
+     "to": 343,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "s"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 344,
+     "to": 344,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 345,
+     "to": 345,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 346,
+     "to": 346,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "v"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 347,
+     "to": 347,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 348,
+     "to": 348,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "d"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 349,
+     "to": 349,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 350,
+     "to": 350,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "n"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 351,
+     "to": 351,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 352,
+     "to": 352,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 353,
+     "to": 353,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 354,
+     "to": 354,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "w"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 355,
+     "to": 355,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "i"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 356,
+     "to": 356,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "t"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 357,
+     "to": 357,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "h"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 358,
+     "to": 358,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " "
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 359,
+     "to": 359,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "c"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 360,
+     "to": 360,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "a"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 361,
+     "to": 361,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "r"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 362,
+     "to": 362,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "e"
+       }
+      ]
+     }
+    },
+    {
+     "stepType": "replace",
+     "from": 363,
+     "to": 363,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 56,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 69,
+   "doc_hash": "488450c339bf032fbc381b4b31500c4695e10044b0bf3ea668c7612974da285f",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Fukuda and colleagues report that a CNS head nurse was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p1.abstract-results"
+          }
+         }
+        ],
+        "text": "associated with lower ICU mortality"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " in their ICU. This result is the core of my argument."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The authors note that it was "
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "quote",
+           "ref": "nursing.p7.limitation"
+          }
+         }
+        ],
+        "text": "based in a single institution"
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": ", so other hospitals may differ."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c2",
+         "by": "coach"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "coach",
+           "ref": "q1"
+          }
+         }
+        ],
+        "text": "It would need a similar open ICU without intensivists running care."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Staffing decisions should weigh this evidence with care."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

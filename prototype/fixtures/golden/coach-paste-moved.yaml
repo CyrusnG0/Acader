@@ -1,0 +1,69 @@
+# Golden session (T-015). Simulated: the student answer and the pasted AI prose are invented test text.
+schema_version: 1
+session_id: coach-paste-moved
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  Eng v2 D26: the student answers a Coach question with one typed sentence and
+  pastes AI prose after it in the answer box, then moves the answer into the
+  draft. The typed part arrives as coach text and is traced to the Coach; the
+  pasted part arrives as paste_ext and stays untraced.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "Who leads the ICU changes what a CNS head nurse can achieve."}
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - {minute: 1, action: create_claim, claim_id: c1, card_ids: []}
+  - minute: 3
+    action: coach_ask
+    q_id: q1
+    case: C
+    pillar: logic
+    grounding_ids: [c1, nursing.p6.head-nurse-role]
+    question: "The paper's ICU changed who led it during the study. How could that matter for your claim?"
+  - minute: 5
+    action: coach_outcome
+    q_id: q1
+    outcome: answered
+    parts:
+      - {text: "I think the effect depends on who runs the ICU.", kind: typed}
+      - {text: " Units without intensivists rely more on nurse leaders to coordinate complex care decisions.", kind: paste_ext}
+  - minute: 6
+    action: insert
+    paragraph_id: p1
+    runs:
+      - {text: "I think the effect depends on who runs the ICU.", kind: coach, ref: q1}
+      - {text: " Units without intensivists rely more on nurse leaders to coordinate complex care decisions.", kind: paste_ext, ref: q1-paste}
+  - {minute: 6, action: link, paragraph_id: p1, claim_id: c1, by: coach}
+  - {minute: 7, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+
+# Why these numbers:
+# s1 is coach text inside the answer's typed range -> confirmed -> traced_coach 10.
+# s2 is paste_ext (the pasted part of the answer, D26) in a linked paragraph -> untraced with the
+#    D13 note, 13 words. Unit c1: 13 untraced vs 10 traced_coach -> untraced.
+# The link is by coach, so only s2 is a target ("pasted"). Facts: one Coach answer with a paste;
+#    the move is not an editor paste event.
+expected_receipt:
+  status: complete
+  total_words: 23
+  bands_by_words: {declared: 0, traced_source: 0, traced_coach: 10, student_linked: 0, untraced: 13}
+  bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 0, untraced: 1}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["traced_coach 10", "untraced 13"]
+  claim_units: {c1: untraced}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 1}
+  unconfirmed_marks: []
+  moments: []
+  question_targets: ["s2 p1 pasted"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 1,
+          declared_claims: 0, declared_claims_anchored: 0}

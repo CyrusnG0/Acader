@@ -1,0 +1,465 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "session_id": "declared-outside",
+ "editor_actions_sha256": "9a077d394517b4b6aa3c77439e96ad9c8ed6029504ddd0dc47ac5ab791e377d1",
+ "actions": [
+  {
+   "index": 9,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "import",
+           "ref": "imp1"
+          }
+         }
+        ],
+        "text": "Nurse leaders with clinical training can improve outcomes by coordinating care across professions."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "9761db58908e97f67cf5d11e57f3ad9d4f8acb72ec67fe9d748f592cdc8f7c4a",
+   "paste_id": null,
+   "at": 1
+  },
+  {
+   "index": 10,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "d1",
+       "by": "import"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "2f566758f23b63beac5cc868a6791e106c6fa740b581d6fc1dfe034f6c0290fe",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 11,
+   "action": "type",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 99,
+     "to": 99,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " The Fukuda study is one example."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 3,
+   "doc_hash": "8347cc9b1ff3aff8d25d800decc9deabc1bac5ede342bd0677a1487099b7718e",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 12,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 132,
+     "to": 132,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "d1",
+           "by": "import"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 134,
+     "to": 134,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "In one Japanese ICU, mortality was lower after a CNS became head nurse."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 5,
+   "doc_hash": "5fb6016297063a289ad36b9232047aba3ed10346458da94aa5511acc09a26d78",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 13,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 133,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 6,
+   "doc_hash": "45219da47f7065aa4265a927d9eaff7283802d7ca6f41ca685ed5fc67e686b4e",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "d1",
+         "by": "import"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "import",
+           "ref": "imp1"
+          }
+         }
+        ],
+        "text": "Nurse leaders with clinical training can improve outcomes by coordinating care across professions."
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " The Fukuda study is one example."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "In one Japanese ICU, mortality was lower after a CNS became head nurse."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 15,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 205,
+     "to": 205,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 207,
+     "to": 207,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Head nurses set goals and monitor outcomes in their units."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 8,
+   "doc_hash": "7bc36bf0b476b5e9671616ac30400570d26f3bf245dbae8b77d72c464c9faa16",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 16,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 206,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "d2",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 9,
+   "doc_hash": "bc30df60c34b5e9f9e807c2051aeae16a667b27e2358fb95fbae4838aab38444",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "d1",
+         "by": "import"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "import",
+           "ref": "imp1"
+          }
+         }
+        ],
+        "text": "Nurse leaders with clinical training can improve outcomes by coordinating care across professions."
+       },
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": " The Fukuda study is one example."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "In one Japanese ICU, mortality was lower after a CNS became head nurse."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "d2",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "Head nurses set goals and monitor outcomes in their units."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

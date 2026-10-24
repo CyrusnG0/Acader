@@ -1,0 +1,73 @@
+{
+ "attribution": {
+  "cs": "Moore H, Verma A, Dutt A (2026). arXiv:2610.27720v1 [cs.CL]. CC BY 4.0.",
+  "nursing": "Fukuda T, Sakurai H, Kashiwagi M (2020). PLoS ONE 15(2): e0228458. doi:10.1371/journal.pone.0228458. CC BY 4.0.",
+  "socsci": "Motohashi K (2026). arXiv:2607.29371v1 [econ.GN]. CC BY 4.0."
+ },
+ "blocks": {
+  "cs.p1.abstract": {
+   "kind": "abstract",
+   "page": 1,
+   "section": "Abstract",
+   "source_id": "cs",
+   "text": "Large language models can achieve strong Text-to-SQL benchmark performance while still producing schema and query-logic errors. Most evaluations characterize such failures only in the final generated query, making it difficult to determine whether a related error was also observed in an earlier, simpler step or appears only at the final stage. We present a drill-down evaluation framework that decomposes Text-to-SQL queries into progressively more complex executable sub-queries and corresponding natural-language questions, allowing rule-based hallucination categories to be examined across a generation path. We distinguish recurrent hallucinations, in which the same rule-based category is observed in an earlier step and again in the final query, from emergent hallucinations, in which the category is observed at the final step without an earlier detection in the same path. Across five LLMs evaluated on an expanded BIRD-mini benchmark, several categories show appreciable recurrence probabilities, while clause abuse shows comparatively higher conditional emergence. Under the conversational-history condition, recurrence probabilities are generally higher and emergence probabilities are generally lower. These observations indicate that the two conditional measures do not move uniformly in the same direction under additional context and motivate trajectory-level analysis in addition to final-output evaluation."
+  },
+  "nursing.p1.abstract-results": {
+   "kind": "abstract",
+   "page": 1,
+   "section": "Abstract / Results",
+   "source_id": "nursing",
+   "text": "Multivariable logistic regression analysis revealed that the presence of a CNS as ICU head nurse was associated with lower ICU mortality (odds ratio (OR): 0.52, 95% CI: 0.36–0.73, p < .001) and fewer patients receiving mechanical ventilation in the ICU (OR: 0.20, 95% CI: 0.15–0.26, p < .001)."
+  },
+  "nursing.p2.design": {
+   "kind": "method",
+   "page": 2,
+   "section": "Method / Design",
+   "source_id": "nursing",
+   "text": "A retrospective cohort study was conducted among ICU patients in Japan over a five-year period. Data were collected from April 2014–March 2019. Results were compared between two groups: before and after a CNS was assigned as ICU head nurse."
+  },
+  "nursing.p4.characteristics": {
+   "kind": "results",
+   "page": 4,
+   "section": "Results / Characteristics of patients",
+   "source_id": "nursing",
+   "text": "During the study period, data were collected from 3,652 people, with 1,988 in the first group (“before” group: ICU head nurse was not a CNS) and 1,664 in the second group (“after” group: ICU head nurse was a CNS). Patient characteristics are shown in Table 1. There was no difference between groups in age or gender. As intensivists began to take charge of ICU treatment management during the “after” period, a system was created that encouraged the surgical system to place high-risk patients into the ICU following an examination in anesthesiology at a preoperative consultation. Accordingly, postoperative ICU admissions increased in number."
+  },
+  "nursing.p4.data-analysis": {
+   "kind": "method",
+   "page": 4,
+   "section": "Method / Data analysis",
+   "source_id": "nursing",
+   "text": "The period covered was divided into two intervals: before the ICU head nurse was a CNS (April 2014–March 2017) and after the ICU head nurse held this qualification (April 2017–March 2019). Differences between groups were compared using Fisher’s exact test for categorical variables and the Mann-Whitney U test for continuous variables. The primary endpoint of this study was the ICU mortality rate, and the secondary endpoint was the number of ventilator-equipped patients in the ICU. Multiple logistic regression analysis was performed with dependent variables being the degree of severity and need for nursing care, and independent variables of presence of a CNS ICU head nurse, patient age, patient gender, and emergency versus planned admission to ICU. Significant differences were defined as p < .05. The free software Easy R (EZR) version 3.5.2 was used for analysis."
+  },
+  "nursing.p5.outcomes": {
+   "kind": "results",
+   "page": 5,
+   "section": "Results / Relationship between presence of CNS ICU head nurse and patient outcomes",
+   "source_id": "nursing",
+   "text": "Table 2 shows the results of the multivariate logistic regression analysis of ICU mortality. The presence of a CNS as ICU head nurse was significantly associated with lower ICU mortality (OR: 0.52, 95% CI: 0.36–0.73, p < .001) and fewer ventilator-equipped patients in the ICU (OR: 0.20, 95% CI: 0.10–0.26, p < .001; Table 3)."
+  },
+  "nursing.p6.head-nurse-role": {
+   "kind": "discussion",
+   "page": 6,
+   "section": "Discussion",
+   "source_id": "nursing",
+   "text": "The head nurse manages ward policy, nursing staff, and finances to achieve ward goals so that the staff can engage in effective nursing practice. However, head nurses placed in a highly specialized ward may experience difficulties in setting outcomes and goals [13]. This is because treatments are complex and care has a therapeutic aspect that influences the outcome. In this study, a CNS acted as a head nurse; this individual communicated nursing policies while exchanging information with doctors, nursing staff, and other medical professionals, in order to improve the treatment received by patients. Notably, the presence of a CNS as head nurse was associated with a reduction in mortality among ICU patients and fewer patients requiring ventilators."
+  },
+  "nursing.p7.limitation": {
+   "kind": "limitation",
+   "page": 7,
+   "section": "Discussion (limitations)",
+   "source_id": "nursing",
+   "text": "The main limitation of this study is that it was based in a single institution; thus, it is difficult to generalize these results to other institutions. Further, because many factors affect patients’ outcomes in a complex and mutually influential manner, it cannot be definitively concluded that the presence of a CNS as ICU head nurse directly affected patient outcomes. In addition, the scale used in this study reflected the severity of the patients’ conditions and the need for nursing care, but it is used only in Japan, and the correlation between severity as assessed by other methods, such as the APACHE severity of disease classification system and scales reflecting mortality, should be examined."
+  },
+  "socsci.p1.abstract": {
+   "kind": "abstract",
+   "page": 1,
+   "section": "Abstract",
+   "source_id": "socsci",
+   "text": "Developing countries have increased sanitation investment to improve child health. However, scaling up latrine construction can cause water pollution externalities owing to insufficient infrastructure for the treatment of fecal sludge, offsetting the direct health benefits. I estimate the negative externalities of an Indian sanitation policy that subsidized the construction of over 100 million latrines. Exploiting geographical variations in soil characteristics that affect the feasibility of latrine construction, I find that this policy increases fecal contamination of rivers by 72%. Although the policy reduces diarrheal child mortality overall, this positive health effect is eliminated when upstream areas lack adequate wastewater infrastructure."
+  }
+ },
+ "x-note": "Golden block fixture (T-015). Docling (the S2 choice) is not installed locally, so these block references are defined by hand over the S2 spike corpus PDFs (prototype/spikes/S2/corpus.json; fetched into an ignored cache, never committed). Text was extracted with pypdfium2, line-break hyphens joined, whitespace collapsed and checked by eye against the PDF (two real hyphens restored in cs.p1.abstract). Block ids are '<source>.p<page>.<name>'; replace them with the parser's ids when the reader task lands (that regenerates every golden log). Only these short excerpts are committed, under CC BY 4.0 with the attribution below."
+}

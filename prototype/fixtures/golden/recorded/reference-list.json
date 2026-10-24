@@ -1,0 +1,358 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "session_id": "reference-list",
+ "editor_actions_sha256": "13bf84ebe76a3686859bcada6d4b9ac73ab10cb42d7493b627abb8e1047fecdb",
+ "actions": [
+  {
+   "index": 3,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "A CNS head nurse was linked to lower ICU mortality in one Japanese ICU."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "619107ce63f93ac0d403f1c2c7f2f6e828836dfe28b1aed70a0e23efe59f8ab0",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 4,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "aaa60671cc2e1f5596edce37d9f788b518328b9a89b01873c32e858b60bdccec",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "A CNS head nurse was linked to lower ICU mortality in one Japanese ICU."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 6,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 72,
+     "to": 72,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 74,
+     "to": 74,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "helper",
+           "ref": "h1"
+          }
+         }
+        ],
+        "text": "Fukuda T, Sakurai H, Kashiwagi M. Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes. PLoS ONE. 2020;15(2):e0228458."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "a7d1bed5b9998d915d126d564704ea4cb50883776bba309a3b8c361d905b9446",
+   "paste_id": null,
+   "at": 74,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "A CNS head nurse was linked to lower ICU mortality in one Japanese ICU."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "helper",
+           "ref": "h1"
+          }
+         }
+        ],
+        "text": "Fukuda T, Sakurai H, Kashiwagi M. Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes. PLoS ONE. 2020;15(2):e0228458."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "index": 8,
+   "action": "insert",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 248,
+     "to": 248,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 250,
+     "to": 250,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "helper",
+           "ref": "h2"
+          }
+         }
+        ],
+        "text": "Motohashi K. Unintended consequences of sanitation investment: negative externalities on water quality and health in India. arXiv:2607.29371v1 [econ.GN]. 2026."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 6,
+   "doc_hash": "19eef7f47b30a02fdf9b2b8dbe7601b6fa1f0f2b203ba5ec06b3aad9e54ab3fe",
+   "paste_id": null,
+   "at": 250,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "A CNS head nurse was linked to lower ICU mortality in one Japanese ICU."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "helper",
+           "ref": "h1"
+          }
+         }
+        ],
+        "text": "Fukuda T, Sakurai H, Kashiwagi M. Impact of having a certified nurse specialist in critical care nursing as head nurse on ICU patient outcomes. PLoS ONE. 2020;15(2):e0228458."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": []
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "helper",
+           "ref": "h2"
+          }
+         }
+        ],
+        "text": "Motohashi K. Unintended consequences of sanitation investment: negative externalities on water quality and health in India. arXiv:2607.29371v1 [econ.GN]. 2026."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

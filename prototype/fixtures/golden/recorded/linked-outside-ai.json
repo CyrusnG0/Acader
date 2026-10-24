@@ -1,0 +1,224 @@
+{
+ "x-note": "Recorded in real Chromium by prototype/web/golden/record.mjs (not CI). Regenerate after editor, schema.json or script changes. The golden test (server/tests/test_golden_sessions.py) replays these steps in Python.",
+ "browser": "Chromium (playwright-core 1.56.1, headless)",
+ "session_id": "linked-outside-ai",
+ "editor_actions_sha256": "0e05260ca3c4de8092a11c956319cec544fca9abe3a17723ee9d4c73fafd4298",
+ "actions": [
+  {
+   "index": 3,
+   "action": "paste",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 1,
+     "to": 1,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "A specialist head nurse improves survival because expert leadership raises the standard of care. This effect is likely to hold in most intensive care units."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 1,
+   "doc_hash": "585a125797e5d55f9a44a02f8507e341fca179e80f4ad1cc957cc1656370766d",
+   "paste_id": "paste_1",
+   "at": 1
+  },
+  {
+   "index": 4,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 0,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 2,
+   "doc_hash": "eb213bc58c73d982f29dc6c3026ceaae0c92f3d21ecd5aa581c3e38a1c500e82",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 5,
+   "action": "type_paragraph",
+   "steps": [
+    {
+     "stepType": "replace",
+     "from": 157,
+     "to": 157,
+     "slice": {
+      "content": [
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": [
+          {
+           "claim_id": "c1",
+           "by": "student"
+          }
+         ]
+        }
+       },
+       {
+        "type": "paragraph",
+        "attrs": {
+         "links": []
+        }
+       }
+      ],
+      "openStart": 1,
+      "openEnd": 1
+     },
+     "structure": true
+    },
+    {
+     "stepType": "replace",
+     "from": 159,
+     "to": 159,
+     "slice": {
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The paper itself reports one ICU only."
+       }
+      ]
+     }
+    }
+   ],
+   "input_kind": {
+    "keyboard": 1,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 4,
+   "doc_hash": "b577e52e2cd365cc1f9e7193334e76b695b9473abb26a89240c7360c8ed8c6e9",
+   "paste_id": null,
+   "at": null
+  },
+  {
+   "index": 6,
+   "action": "link",
+   "steps": [
+    {
+     "stepType": "attr",
+     "pos": 158,
+     "attr": "links",
+     "value": [
+      {
+       "claim_id": "c1",
+       "by": "student"
+      }
+     ]
+    }
+   ],
+   "input_kind": {
+    "keyboard": 0,
+    "ime": 0,
+    "dictation": 0,
+    "replacement": 0
+   },
+   "doc_rev": 5,
+   "doc_hash": "c5e99ef6e0d890d81cff0bad498e94249b80f99d0938dcac1b262d27fb893b78",
+   "paste_id": null,
+   "at": null,
+   "doc": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "paste_ext",
+           "ref": "paste_1"
+          }
+         }
+        ],
+        "text": "A specialist head nurse improves survival because expert leadership raises the standard of care. This effect is likely to hold in most intensive care units."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "attrs": {
+       "links": [
+        {
+         "claim_id": "c1",
+         "by": "student"
+        }
+       ]
+      },
+      "content": [
+       {
+        "type": "text",
+        "marks": [
+         {
+          "type": "origin",
+          "attrs": {
+           "kind": "typed",
+           "ref": null
+          }
+         }
+        ],
+        "text": "The paper itself reports one ICU only."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+# Golden session (T-015). Simulated: the "outside AI" paragraph and the student text are invented test text.
+schema_version: 1
+session_id: linked-outside-ai
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  CEO-17 / D13: the student pastes a paragraph written by an outside AI and links
+  it to their own anchored claim. The link does not lift it: both pasted
+  sentences stay untraced with "pasted; linked by the student, not checked".
+  A second, typed paragraph on the same claim is band 4.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "A CNS head nurse was associated with lower ICU mortality."}
+
+actions:
+  - {minute: 0, action: open_source, source_id: nursing}
+  - minute: 1
+    action: create_card
+    card_id: card1
+    text: "Lower ICU mortality after the CNS appointment."
+    anchor: {source_id: nursing, block_ref: nursing.p5.outcomes, quote: "significantly associated with lower ICU mortality"}
+  - {minute: 2, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - minute: 5
+    action: paste
+    paragraph_id: p1
+    text: "A specialist head nurse improves survival because expert leadership raises the standard of care. This effect is likely to hold in most intensive care units."
+  - {minute: 6, action: link, paragraph_id: p1, claim_id: c1, by: student}
+  - {minute: 10, action: type_paragraph, paragraph_id: p2, text: "The paper itself reports one ICU only."}
+  - {minute: 10, action: link, paragraph_id: p2, claim_id: c1, by: student}
+  - {minute: 11, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: c1}]
+  - batch_id: b10
+    window_start_minute: 10
+    changed_paragraph_ids: [p2]
+    expected_links: [{paragraph_id: p2, claim_id: c1}]
+
+# Why these numbers:
+# p1: both sentences are 100% paste_ext; the student's link cannot lift them (D13) -> untraced
+#    with the note, 14 + 11 words. p2 typed, linked -> student_linked 7.
+# Unit c1: 25 untraced vs 7 student_linked -> untraced. Paste: 96 + 1 + 59 = 156 chars survive.
+expected_receipt:
+  status: complete
+  total_words: 32
+  bands_by_words: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 7, untraced: 25}
+  bands_by_claims: {declared: 0, traced_source: 0, traced_coach: 0, student_linked: 0, untraced: 1}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["untraced 14", "untraced 11"]
+    p2: ["student_linked 7"]
+  claim_units: {c1: untraced}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 2}
+  unconfirmed_marks: []
+  moments: []
+  question_targets: ["s1 p1 pasted,student_link", "s2 p1 pasted,student_link", "s3 p2 student_link"]
+  facts: {editor_pastes: 1, paste_surviving_chars: 156, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 0, declared_claims_anchored: 0}

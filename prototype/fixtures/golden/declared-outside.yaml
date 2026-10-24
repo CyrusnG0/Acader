@@ -1,0 +1,91 @@
+# Golden session (T-015). Simulated: the student text and the "outside AI" text are invented test text.
+schema_version: 1
+session_id: declared-outside
+split: tuning
+label_status: draft_needs_second_person_review
+scenario: >-
+  The student declares outside AI help through the Door. Two claims are
+  extracted from the import. The student moves one imported sentence into the
+  draft and adds a typed sentence to it (still declared), re-anchors the other
+  declared claim to the paper with a card, and writes their own linked paragraph.
+source_ids: [nursing]
+claims:
+  - {claim_id: c1, text: "In one ICU, mortality was lower after a CNS became head nurse."}
+  - {claim_id: d1, text: "Clinically trained nurse leaders can improve outcomes through coordination."}
+  - {claim_id: d2, text: "Head nurses set goals and monitor outcomes."}
+imports:
+  imp1:
+    tool_name: ChatGPT
+    text: "Nurse leaders with clinical training can improve outcomes by coordinating care across professions. Head nurses also set goals and monitor outcomes in their units."
+
+actions:
+  - {minute: 0, action: declare_import, import_id: imp1}
+  - {minute: 1, action: extract_claim, claim_id: d1, import_id: imp1, text: "Clinically trained nurse leaders can improve outcomes through coordination."}
+  - {minute: 1, action: extract_claim, claim_id: d2, import_id: imp1, text: "Head nurses set goals and monitor outcomes."}
+  - {minute: 2, action: open_source, source_id: nursing}
+  - {minute: 3, action: view_blocks, source_id: nursing, block_ids: [nursing.p1.abstract-results, nursing.p6.head-nurse-role]}
+  - minute: 4
+    action: create_card
+    card_id: card1
+    text: "Lower ICU mortality with a CNS head nurse."
+    anchor: {source_id: nursing, block_ref: nursing.p1.abstract-results, quote: "associated with lower ICU mortality"}
+  - {minute: 4, action: create_claim, claim_id: c1, card_ids: [card1]}
+  - minute: 5
+    action: create_card
+    card_id: card2
+    text: "The head nurse sets ward goals and manages staff."
+    anchor: {source_id: nursing, block_ref: nursing.p6.head-nurse-role, quote: "The head nurse manages ward policy"}
+  - {minute: 6, action: edit_claim, claim_id: d2, card_ids: [card2]}
+  - minute: 8
+    action: insert
+    paragraph_id: p1
+    runs: [{text: "Nurse leaders with clinical training can improve outcomes by coordinating care across professions.", kind: import, ref: imp1}]
+  - {minute: 8, action: link, paragraph_id: p1, claim_id: d1, by: import}
+  - {minute: 9, action: type, paragraph_id: p1, text: " The Fukuda study is one example."}
+  - {minute: 11, action: type_paragraph, paragraph_id: p2, text: "In one Japanese ICU, mortality was lower after a CNS became head nurse."}
+  - {minute: 11, action: link, paragraph_id: p2, claim_id: c1, by: student}
+  - {minute: 12, action: checkpoint}
+  - {minute: 16, action: type_paragraph, paragraph_id: p3, text: "Head nurses set goals and monitor outcomes in their units."}
+  - {minute: 16, action: link, paragraph_id: p3, claim_id: d2, by: student}
+  - {minute: 17, action: submit}
+
+batches:
+  - batch_id: b5
+    window_start_minute: 5
+    changed_paragraph_ids: [p1]
+    expected_links: [{paragraph_id: p1, claim_id: d1}]
+  - batch_id: b10
+    window_start_minute: 10
+    changed_paragraph_ids: [p2]
+    expected_links: [{paragraph_id: p2, claim_id: c1}]
+  - batch_id: b15
+    window_start_minute: 15
+    changed_paragraph_ids: [p3]
+    expected_links: [{paragraph_id: p3, claim_id: d2}]
+
+# Why these numbers:
+# p1 links d1, a declared claim never re-anchored -> both sentences declared (13 imported + 6 typed;
+#    the typed one is declared only through its paragraph's declared claim, provenance §6 band 1).
+# p2 typed, student-linked -> student_linked 13. p3 links d2, which the student re-anchored with
+#    card2 (D-050 (3)) -> no longer forced to declared; typed -> student_linked 10.
+# Units: d1 declared; c1 and d2 student_linked. Facts: 2 declared claims, 1 re-anchored.
+# Targets: p1's link is by import (no student_link reason, nothing pasted); p2, p3 student_link.
+expected_receipt:
+  status: complete
+  total_words: 42
+  bands_by_words: {declared: 19, traced_source: 0, traced_coach: 0, student_linked: 23, untraced: 0}
+  bands_by_claims: {declared: 1, traced_source: 0, traced_coach: 0, student_linked: 2, untraced: 0}
+  quoted_words: 0
+  inferred_links: 0
+  map_suggestions: 0
+  sentences:
+    p1: ["declared 13", "declared 6"]
+    p2: ["student_linked 13"]
+    p3: ["student_linked 10"]
+  claim_units: {d1: declared, c1: student_linked, d2: student_linked}
+  notes: {label_not_confirmed: 0, pasted_linked_not_checked: 0}
+  unconfirmed_marks: []
+  moments: []
+  question_targets: ["s3 p2 student_link", "s4 p3 student_link"]
+  facts: {editor_pastes: 0, paste_surviving_chars: 0, cards_with_paste: 0, coach_answers_with_paste: 0,
+          declared_claims: 2, declared_claims_anchored: 1}
