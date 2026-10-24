@@ -377,3 +377,52 @@ def test_compiled_count_assertion_rejects_misforwarded_band():
     receipt["bands"]["by_words"]["traced_source"] += 1
     with pytest.raises(AssertionError, match="by_words"):
         compare_compiled_counts(SCRIPTS["honest-nursing"]["expected_receipt"], receipt)
+
+
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_golden_receipt_has_registered_source_metadata(sid):
+    from golden.script import load_sources
+
+    res = built(sid)
+    ids = SCRIPTS[sid]["source_ids"]
+    manifest = load_sources()
+    adds = [e for e in res.events if e["type"] == "source.add"]
+    assert [e["payload"]["source_id"] for e in adds] == ids
+    assert all(e["actor"] == "teacher" for e in adds)
+    first_student = next(e["seq"] for e in res.events if e["actor"] == "student")
+    assert all(e["seq"] < first_student for e in adds)
+    for event in adds:
+        source = manifest[event["payload"]["source_id"]]
+        assert event["payload"] == {"source_id": source["id"], "origin": "teacher",
+                                    "title": source["title"], "url": source["content_url"]}
+    reading = {r["source_id"]: r for r in res.receipt["reading"]["sources"]}
+    assert set(reading) == set(ids)
+    for source_id in ids:
+        assert reading[source_id]["title"] == manifest[source_id]["title"]
+    count_phrase = "with 1 source" if len(ids) == 1 else f"with {len(ids)} sources"
+    assert count_phrase in res.receipt["summary"]["text"]
+    assert "with no sources" not in res.receipt["summary"]["text"]
+    assert {e["seq"] for e in adds} <= set(res.receipt["summary"]["event_ids"])
+
+
+@pytest.mark.parametrize("ids, message", [
+    (["not-in-manifest"], "unknown source_ids"),
+    (["nursing", "nursing"], "duplicate source_ids"),
+    ("nursing", "list of strings"),
+    ([1], "list of strings"),
+    (None, "list of strings"),
+])
+def test_invalid_source_ids_rejected_before_build(ids, message):
+    script = unit_script(tp(0, "p1", "Some words here."), SUBMIT, source_ids=ids)
+    with pytest.raises(ScriptError, match=message):
+        validate_script(script, "unit")
+    with pytest.raises(ScriptError, match=message):
+        build_session("unit", recording=make_recording(script), script=script)
+
+
+def test_unit_script_without_source_ids_still_builds():
+    script = unit_script(tp(0, "p1", "Some words here."), SUBMIT)
+    validate_script(script, "unit")
+    res = build_session("unit", recording=make_recording(script), script=script)
+    assert not any(e["type"] == "source.add" for e in res.events)
+    assert res.receipt["reading"]["sources"] == []

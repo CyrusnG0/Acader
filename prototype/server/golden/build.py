@@ -21,7 +21,7 @@ from engine.provenance import (InMemorySources, coach_answer_from_runs, compile_
                                l1_from_compile)
 
 from .script import (EDITOR_ACTIONS, RECORDED_DIR, editor_actions_sha256, load_blocks,
-                     load_script)
+                     load_script, source_metadata)
 
 T0 = datetime(2026, 11, 2, 14, 0, tzinfo=timezone.utc)
 _TEXTBLOCKS = ("paragraph", "heading")
@@ -109,6 +109,7 @@ class _Builder:
         self.script = script
         self.rec = recording
         self.blocks = load_blocks()
+        self.sources_metadata = source_metadata(script)
         self.clock = Clock()
         self.app = None
         self.client = None
@@ -160,6 +161,13 @@ class _Builder:
         self.call("POST", "/logs", {"log_id": self.id, "assignment_id": "golden",
                                     "consent_version": 1,
                                     "mapper_enabled": self.script.get("mapper_enabled", False)})
+        # A golden's declared readings are the teacher library before student work.
+        # This uses the same event path and payload as a real library source.add.
+        for source in self.sources_metadata:
+            self.server("source.add", "teacher", {
+                "source_id": source["id"], "origin": "teacher",
+                "title": source["title"], "url": source["content_url"],
+            })
         per_minute: dict[int, int] = {}
         for i, a in enumerate(self.script["actions"]):
             k = per_minute.get(a["minute"], 0)

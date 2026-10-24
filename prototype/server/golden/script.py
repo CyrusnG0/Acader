@@ -30,6 +30,41 @@ def load_blocks() -> dict:
         return json.load(f)["blocks"]
 
 
+def load_sources() -> dict:
+    """Read the local source manifest; URLs are metadata and are never fetched."""
+    with open(GOLDEN_DIR.parent / "sources.yaml", encoding="utf-8") as f:
+        manifest = yaml.safe_load(f)
+    if not isinstance(manifest, dict) or not isinstance(manifest.get("sources"), list):
+        raise ScriptError("source manifest must contain a sources list")
+    sources = {}
+    for source in manifest["sources"]:
+        if not isinstance(source, dict) or not isinstance(source.get("id"), str):
+            raise ScriptError("source manifest entry needs a string id")
+        sid = source["id"]
+        if sid in sources:
+            raise ScriptError(f"duplicate source in manifest: {sid}")
+        if not isinstance(source.get("title"), str) or not source["title"].strip():
+            raise ScriptError(f"source {sid} needs a title")
+        if not isinstance(source.get("content_url"), str) or not source["content_url"].strip():
+            raise ScriptError(f"source {sid} needs a content_url")
+        sources[sid] = source
+    return sources
+
+
+def source_metadata(script: dict) -> list[dict]:
+    """Resolve declared fixture sources, retaining the script's deterministic order."""
+    ids = script.get("source_ids", [])
+    if not isinstance(ids, list) or any(not isinstance(sid, str) for sid in ids):
+        raise ScriptError("source_ids must be a list of strings")
+    if len(ids) != len(set(ids)):
+        raise ScriptError("duplicate source_ids")
+    sources = load_sources()
+    missing = [sid for sid in ids if sid not in sources]
+    if missing:
+        raise ScriptError(f"unknown source_ids: {missing}")
+    return [sources[sid] for sid in ids]
+
+
 def list_sessions() -> list[str]:
     return sorted(p.stem for p in GOLDEN_DIR.glob("*.yaml"))
 
@@ -44,6 +79,7 @@ def validate_script(script: dict, session_id: str, blocks: dict | None = None) -
         raise ScriptError(f"{session_id}: session_id {script.get('session_id')!r} != file name")
     if "mapper_enabled" in script and not isinstance(script["mapper_enabled"], bool):
         raise ScriptError(f"{session_id}: mapper_enabled must be a bool")
+    source_metadata(script)
     actions = script.get("actions")
     if not isinstance(actions, list) or not actions:
         raise ScriptError(f"{session_id}: actions must be a non-empty list")
