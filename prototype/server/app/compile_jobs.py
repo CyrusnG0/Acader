@@ -217,7 +217,7 @@ class CompileJobs:
             "kind": kind, "log_id": job.log_id,
             "seq": payload.get("seal_seq"), "doc_rev": payload.get("doc_rev"),
             "job_id": job.id, "job_kind": job.kind, "attempts": job.attempts,
-            "error_kind": job.error_kind,
+            "retry_failures": job.retry_failures, "error_kind": job.error_kind,
         }, ts_seconds(self.service.clock()))
 
     # ---- execution ------------------------------------------------------------------------

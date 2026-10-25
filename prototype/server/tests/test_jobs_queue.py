@@ -501,27 +501,51 @@ def test_on_failed_exception_rolls_back_the_failure(db, clock):
     assert stored.finished_at is None
 
 
-def test_expired_lease_at_the_attempt_limit_fails_the_job(db, clock):
+def test_lease_recovery_does_not_count_toward_the_retry_cap(queue, clock):
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    running = queue.claim(worker_id="w1")
+    for _ in range(3):
+        clock.advance(seconds=301)  # expire the lease; the next claim recovers it
+        running = queue.claim(worker_id="w1")
+        assert running.id == 1 and running.retry_failures == 0
+    assert running.attempts == 4  # claims counted, retryable failures did not
+
+    for retry, delay in enumerate((1, 4, 16, 16), start=1):
+        failed = queue.fail(running, error_kind="timeout", retryable=True)
+        assert failed.state == "queued"
+        assert failed.retry_failures == retry
+        assert failed.run_after == ts_seconds(clock.t + timedelta(minutes=delay))
+        clock.advance(minutes=delay)
+        running = queue.claim(worker_id="w1")
+
+    failed = queue.fail(running, error_kind="timeout", retryable=True)
+    assert failed.state == "failed"
+    assert failed.attempts == 8
+    assert failed.retry_failures == MAX_ATTEMPTS
+    assert failed.finished_at is not None
+    clock.advance(days=30)
+    assert queue.claim(worker_id="w1") is None
+
+
+def test_lease_expiry_at_four_retry_failures_requeues_not_fails(db, clock):
     seen = []
     queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
     queue.enqueue("compile", idempotency_key="k1", log_id="L1")
-    for attempt in range(1, MAX_ATTEMPTS):
-        claimed = queue.claim(worker_id="w1")
-        assert claimed.attempts == attempt
-        clock.advance(seconds=301)  # expire the lease; the next claim recovers it
-    last = queue.claim(worker_id="w1")
-    assert last.attempts == MAX_ATTEMPTS
-    assert seen == []  # recoveries under the limit only requeue
+    for delay in (1, 4, 16, 16):
+        job = queue.claim(worker_id="w1")
+        failed = queue.fail(job, error_kind="timeout", retryable=True)
+        clock.advance(minutes=delay)
+    assert failed.state == "queued" and failed.retry_failures == 4
 
+    running = queue.claim(worker_id="w1")
+    assert running.attempts == 5 and running.retry_failures == 4
     clock.advance(seconds=301)
     assert queue.recover_expired() == 1
-    failed = queue.get(last.id)
-    assert failed.state == "failed"
-    assert failed.error_kind == "lease_expired"
-    assert failed.finished_at is not None
-    assert failed.lease_token is None
-    assert len(seen) == 1 and seen[0].id == last.id
-    assert queue.claim(worker_id="w1") is None
+    stored = queue.get(running.id)
+    assert stored.state == "queued"
+    assert stored.retry_failures == 4
+    assert stored.run_after == ts_seconds(clock.t)
+    assert seen == []
 
 
 def test_expired_lease_under_the_limit_is_requeued_without_the_hook(db, clock):
@@ -533,6 +557,54 @@ def test_expired_lease_under_the_limit_is_requeued_without_the_hook(db, clock):
     assert queue.recover_expired() == 1
     assert queue.get(1).state == "queued"
     assert seen == []
+
+
+OLD_JOBS_DDL = """
+CREATE TABLE jobs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kind TEXT NOT NULL,
+  idempotency_key TEXT NOT NULL UNIQUE,
+  log_id TEXT,
+  submission_id TEXT,
+  priority INTEGER NOT NULL,
+  backend TEXT,
+  payload TEXT NOT NULL,
+  state TEXT NOT NULL,
+  attempts INTEGER NOT NULL DEFAULT 0,
+  run_after TEXT NOT NULL,
+  lease_token TEXT,
+  lease_until TEXT,
+  worker_id TEXT,
+  result TEXT,
+  error_kind TEXT,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  finished_at TEXT
+);
+"""
+
+
+def test_existing_database_gains_the_retry_failures_column(db, clock):
+    db.executescript(OLD_JOBS_DDL)
+    now_ts = ts_seconds(T0)
+    db.execute(
+        "INSERT INTO jobs (kind, idempotency_key, priority, payload, state, attempts, "
+        "run_after, created_at, updated_at) "
+        "VALUES ('compile', 'old', 0, '{}', 'queued', 0, ?, ?, ?)",
+        (now_ts, now_ts, now_ts))
+
+    queue = JobQueue(db, clock=clock)
+    columns = {row[1] for row in db.execute("PRAGMA table_info(jobs)")}
+    assert "retry_failures" in columns
+    old = queue.get(1)
+    assert old.retry_failures == 0
+
+    new = queue.enqueue("compile", idempotency_key="new", log_id="L1")
+    claimed = queue.claim(worker_id="w1")
+    assert claimed.id == old.id  # the migrated row is claimable
+    failed = queue.fail(claimed, error_kind="timeout", retryable=True)
+    assert failed.state == "queued" and failed.retry_failures == 1
+    assert queue.claim(worker_id="w1").id == new.id
 
 
 def test_non_retryable_failure_is_terminal(queue, clock):

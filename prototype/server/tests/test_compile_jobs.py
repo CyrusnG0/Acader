@@ -288,6 +288,61 @@ def test_retries_stop_after_five_tries_and_keep_v1():
     assert jobs.queue.get(qid).attempts == 5
 
 
+def test_lease_recovery_does_not_use_up_a_question_try():
+    clock = Clock()
+    svc = EventService(":memory:", clock)
+
+    def down(messages):
+        raise LLMUnavailable("down")
+
+    jobs = make_jobs(svc, ask=down)
+    build_log(svc, clock, LOG)
+    seal = submit_event(svc)["hash"]
+
+    jobs.run_until_idle()  # compile, then question attempt 1 (retryable failure 1)
+    qid = job_id(jobs, KIND_QUESTIONS)
+    assert jobs.queue.get(qid).state == "queued"
+    assert jobs.queue.get(qid).retry_failures == 1
+
+    # Wait out the 1-minute backoff, claim the queued job, then let its lease expire.
+    clock.advance(minutes=1)
+    claimed = jobs.queue.claim(worker_id="worker-a")
+    assert claimed.id == qid
+    assert claimed.attempts == 2 and claimed.retry_failures == 1
+    clock.advance(seconds=301)
+    assert jobs.queue.recover_expired() == 1
+    recovered = jobs.queue.get(qid)
+    assert recovered.state == "queued"
+    assert recovered.retry_failures == 1  # lease recovery is not a try (D-054)
+
+    jobs.run_until_idle()  # retryable failure 2
+    assert jobs.queue.get(qid).state == "queued"
+    clock.advance(minutes=4)
+    jobs.run_until_idle()  # retryable failure 3
+    clock.advance(minutes=16)
+    jobs.run_until_idle()  # retryable failure 4
+    after_four = jobs.queue.get(qid)
+    assert after_four.state == "queued"
+    assert after_four.retry_failures == 4
+
+    clock.advance(minutes=16)
+    jobs.run_until_idle()  # retryable failure 5 -> terminal
+    questions_job = jobs.queue.get(qid)
+    assert questions_job.state == "failed"
+    assert questions_job.retry_failures == 5
+    assert questions_job.error_kind == "llm_unavailable"
+
+    alerts = list_alerts(svc, LOG)
+    assert [a["kind"] for a in alerts] == ["questions_failed"]
+    assert alerts[0]["detail"]["retry_failures"] == 5
+    assert alerts[0]["detail"]["job_kind"] == KIND_QUESTIONS
+
+    latest = jobs.receipts.latest(LOG)
+    assert latest.version == RECEIPT_V1
+    assert latest.receipt["status"] == "questions_pending"
+    assert jobs.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V2) is None
+
+
 # ---- g ----------------------------------------------------------------------------------------
 def test_replay_mismatch_still_issues_v1_and_alerts():
     clock = Clock()
