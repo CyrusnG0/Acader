@@ -90,7 +90,7 @@ def compile_receipt(*, events, l1: dict, doc, log_id: str, seal_hash: str, sourc
     facts, bands = l1["facts"], l1["bands"]
 
     # ---- questions
-    cands, skipped = select_candidates(l1, evs, doc, seal_seq=seal_seq, sources=sources)
+    cands, more, skipped = select_candidates(l1, evs, doc, seal_seq=seal_seq, sources=sources)
     index = _stored_index(stored)
     artifacts: dict = {}
     questions: list = []
@@ -112,6 +112,17 @@ def compile_receipt(*, events, l1: dict, doc, log_id: str, seal_hash: str, sourc
     pending = any(q["q"] is None for q in questions)
     status = ("replay_mismatch" if l1["status"] == "replay_mismatch"
               else "questions_pending" if pending else "complete")
+
+    # ---- more places to ask (D-060): no generated wording and no provider call. These are
+    # grounded places the top questions did not use, in paragraph order, with the existing
+    # plain reason copy. Each cites its grounding ids and event ids (unless a mapper artifact
+    # is stored, nothing here needs artifact_ids).
+    more_places = [{
+        "paragraph_id": c["paragraph_id"], "span": dict(c["span"]),
+        "why": c["why"], "why_text": copy.WHY_TEXT[c["why"]],
+        "grounding": [i["id"] for i in c["grounding_items"]],
+        "event_ids": list(c["event_ids"]),
+    } for c in more]
 
     # ---- the rest
     titles = _latest_titles(evs)
@@ -163,6 +174,7 @@ def compile_receipt(*, events, l1: dict, doc, log_id: str, seal_hash: str, sourc
         "built_from": l1["built_from"], "replay_note": status_note,
         "summary": build_summary(l1, evs, seal_seq=seal_seq, wf=wf),
         "questions": questions,
+        "more_places": more_places,
         "bands": {"total_words": bands["total_words"], "by_words": bands["by_words"],
                   "by_claims": bands["by_claims"], "mechanics": bands["mechanics"],
                   "quoted_words": bands["quoted_words"], "event_ids": [seal_seq]},

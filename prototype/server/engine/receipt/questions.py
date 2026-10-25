@@ -118,7 +118,12 @@ def _claim_event_ids(events, trail, claim_id) -> set:
 
 def select_candidates(l1: dict, events: list, doc, *, seal_seq: int, sources,
                       limit: int = 3) -> tuple:
-    """Return (candidates, skipped_no_grounding). Only events with seq <= seal_seq are used.
+    """Return (chosen, more_places, skipped_no_grounding). Only events with seq <= seal_seq.
+
+    `chosen` keeps the old behaviour: at most `limit` grounded candidates, at most one per
+    paragraph, in priority order. Every other grounded candidate is kept in `more_places`
+    (D-060), at most one per paragraph, in document (paragraph) order. Candidates without
+    grounding are only counted in `skipped` (law 2).
 
     `sources` (block_text lookup) is an added keyword: grounding needs the block texts.
     """
@@ -177,7 +182,7 @@ def select_candidates(l1: dict, events: list, doc, *, seal_seq: int, sources,
              for (w, r) in ordered]
     cands += _finding_candidates(l1, evs, trail, body, build)
 
-    out, used, skipped = [], set(), 0
+    out, used, more, skipped = [], set(), [], 0
     for c in cands:
         if c["paragraph_id"] in used:
             continue
@@ -185,10 +190,14 @@ def select_candidates(l1: dict, events: list, doc, *, seal_seq: int, sources,
             skipped += 1  # law 2: no grounding, no question
             continue
         used.add(c["paragraph_id"])
-        out.append(c)
-        if len(out) >= limit:
-            break
-    return out, skipped
+        if len(out) < limit:
+            out.append(c)
+        else:
+            more.append(c)
+    # Every place behind "More places to ask" is shown in paragraph order, never by
+    # priority (D-060: no rank number that could read as a ranking).
+    more.sort(key=lambda c: (c["span"]["from"], c["span"]["to"], c["paragraph_id"]))
+    return out, more, skipped
 
 
 def _finding_candidates(l1, evs, trail, body, build) -> list:

@@ -8,7 +8,7 @@ function sample(): GoldenSession {
   const sentence: SentenceView = {id:'s1',paragraph_id:'p1',from:1,to:45,text:'A source supports a carefully bounded claim.',band:'student_linked',chain:{steps:[],notes:['No source text checked.'],history:[],history_note:'No sentence history available.'}};
   return {
     session_id:'renderer-derived',receipt_hash:'abc123',view_context:{synthetic:true,header:{student_name:'Synthetic Student A',assignment_title:'A care-plan rationale',submitted_at:'2026-11-02T14:26:00Z',source_count:1},paragraphs:[{id:'p1',text:sentence.text,sentence_ids:['s1']}],sentences:[sentence]},
-    receipt:{receipt_id:'r1',log_id:'l1',seal_hash:'def456',seal_seq:12,status:'complete',questions_pending:false,built_from:'replay',replay_note:null,summary:{text:'One claim is linked by the student, not checked.',event_ids:[12]},questions:[{q:'What changes if the clinical setting changes?',pillar:'logic',why:'student_linked_claim',why_text:'This part carries the argument and is linked by the student, not checked against a source.',paragraph_id:'p1',span:{from:1,to:45},grounding:['c1'],event_ids:[12],artifact_ids:[]}],bands:{total_words:7,by_words:{traced_source:0,traced_coach:0,declared:0,student_linked:7,untraced:0},by_claims:{traced_source:0,traced_coach:0,declared:0,student_linked:1,untraced:0},mechanics:46,quoted_words:0,event_ids:[12]},moments:[],coach:{asked:0,by_outcome:{}},reading:{sources:[{source_id:'nursing',title:'A nursing paper',opened:{abstract:1},anchored:{abstract:1},event_ids:[1]}]},declared:{imports:[],by_tool:[],declared_claims:0,declared_claims_anchored:0},facts:{pastes:{editor:{count:0},cards:{cards_with_paste:0},coach_answers:{answers_with_paste:0}},replacement_edits:{count:0}},inferred_links:0,map_suggestions:0,blind_spots:[],engine:{version:'receipt/1',git_sha:'fixture',editor_pair:'test pair',lock_hash:'abcdef'}}
+    receipt:{receipt_id:'r1',log_id:'l1',seal_hash:'def456',seal_seq:12,status:'complete',questions_pending:false,built_from:'replay',replay_note:null,summary:{text:'One claim is linked by the student, not checked.',event_ids:[12]},questions:[{q:'What changes if the clinical setting changes?',pillar:'logic',why:'student_linked_claim',why_text:'This part carries the argument and is linked by the student, not checked against a source.',paragraph_id:'p1',span:{from:1,to:45},grounding:['c1'],event_ids:[12],artifact_ids:[]}],more_places:[],bands:{total_words:7,by_words:{traced_source:0,traced_coach:0,declared:0,student_linked:7,untraced:0},by_claims:{traced_source:0,traced_coach:0,declared:0,student_linked:1,untraced:0},mechanics:46,quoted_words:0,event_ids:[12]},moments:[],coach:{asked:0,by_outcome:{}},reading:{sources:[{source_id:'nursing',title:'A nursing paper',opened:{abstract:1},anchored:{abstract:1},event_ids:[1]}]},declared:{imports:[],by_tool:[],declared_claims:0,declared_claims_anchored:0},facts:{pastes:{editor:{count:0},cards:{cards_with_paste:0},coach_answers:{answers_with_paste:0}},replacement_edits:{count:0}},inferred_links:0,map_suggestions:0,blind_spots:[],engine:{version:'receipt/1',git_sha:'fixture',editor_pair:'test pair',lock_hash:'abcdef'}}
   };
 }
 const mounted = (session=sample(), callback=vi.fn()) => {const node=renderReceipt(session,callback);document.body.replaceChildren(node);return {node,callback};};
@@ -85,5 +85,33 @@ describe('receipt document rendering',()=>{
   test.each(['detect','caught','cheating','ghostwriter','forensic','AI-generated','suspicious','suspect','flagship','violation','integrity score','probability','100%'])('new rendered context respects the existing wording stem %s',(text)=>{
     expect(receiptText(text)).toBe('Text omitted by the wording policy.');
     const s=sample();s.receipt.reading.sources[0].title=text;const {node}=mounted(s);expect(node.querySelector('[data-source-id] th')?.textContent).toBe('Text omitted by the wording policy.');
+  });
+  test('more places sit under the questions in a closed disclosure, in document order and without rank',()=>{
+    const s=sample();const first=s.view_context.sentences[0];const second={...first,id:'s2',paragraph_id:'p2',from:46,to:67,text:'A second bounded point.'};
+    s.view_context.sentences.push(second);s.view_context.paragraphs.push({id:'p2',text:second.text,sentence_ids:['s2']});
+    s.receipt.more_places=[
+      {paragraph_id:'p2',why:'untraced_claim',why_text:'This part carries the argument, and there is no record here of where it came from.',span:{from:46,to:67},grounding:['b1'],event_ids:[12]},
+      {paragraph_id:'p1',why:'declared_not_anchored',why_text:'This claim came from declared outside help and was never connected to a source.',span:{from:1,to:45},grounding:['kd'],event_ids:[12]}];
+    const {node,callback}=mounted(s);const disclosure=node.querySelector<HTMLDetailsElement>('.receipt-more-places');
+    expect(disclosure).not.toBeNull();expect(disclosure!.open).toBe(false);
+    expect(disclosure!.querySelector('summary')?.textContent).toBe('More places to ask');
+    expect(disclosure!.closest('.receipt-questions')).toBe(node.querySelector('.receipt-questions'));
+    expect(disclosure!.querySelector('ol')).toBeNull();
+    const items=[...disclosure!.querySelectorAll('.receipt-more-place')];
+    expect(items.map(item=>item.getAttribute('data-paragraph-id'))).toEqual(['p2','p1']);
+    expect(items.map(item=>item.querySelector('.receipt-label')?.textContent)).toEqual([
+      s.receipt.more_places[0].why_text,s.receipt.more_places[1].why_text]);
+    expect(disclosure!.textContent).not.toMatch(/(^|\s)\d+[.)]\s/);
+    const buttons=disclosure!.querySelectorAll<HTMLButtonElement>('button[data-sentence-id]');
+    expect(buttons).toHaveLength(2);expect(buttons[0].type).toBe('button');
+    buttons[0].focus();expect(document.activeElement).toBe(buttons[0]);
+    buttons[0].click();expect(callback).toHaveBeenCalledWith('s2',buttons[0]);
+  });
+  test('no more-places disclosure is rendered when no other grounded place exists',()=>{
+    const {node}=mounted();expect(node.querySelector('.receipt-more-places')).toBeNull();
+  });
+  test('more-places reason text passes the wording guard',()=>{
+    const s=sample();s.receipt.more_places=[{paragraph_id:'p1',why:'untraced_claim',why_text:'This was flagged.',span:{from:1,to:45},grounding:['b1'],event_ids:[12]}];
+    const {node}=mounted(s);expect(node.querySelector('.receipt-more-places')?.textContent).toContain('Text omitted by the wording policy.');
   });
 });
