@@ -3,6 +3,7 @@ run the real pipeline and compare the projection with the frozen expected_receip
 
 No browser is needed here; the recordings are committed (see fixtures/README.md)."""
 import functools
+import re
 
 import pytest
 
@@ -377,6 +378,18 @@ def test_compiled_count_assertion_rejects_misforwarded_band():
     receipt["bands"]["by_words"]["traced_source"] += 1
     with pytest.raises(AssertionError, match="by_words"):
         compare_compiled_counts(SCRIPTS["honest-nursing"]["expected_receipt"], receipt)
+
+
+@pytest.mark.parametrize("sid", SESSIONS)
+def test_summary_has_no_day_session_or_duration_count(sid):
+    res = built(sid)
+    summary = res.receipt["summary"]
+    assert "Written on" not in summary["text"]
+    assert re.search(r"\b(?:days?|sessions?|durations?|hours?|minutes?|weeks?)\b",
+                     summary["text"], re.I) is None
+    batches = {e["seq"] for e in res.events
+               if e["type"] == "editor.batch" and e["seq"] <= res.receipt["seal_seq"]}
+    assert not (batches & set(summary["event_ids"]))
 
 
 @pytest.mark.parametrize("sid", SESSIONS)
