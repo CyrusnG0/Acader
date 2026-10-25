@@ -1,17 +1,30 @@
-# T-010: proposed design system and review preview
+# T-010: approved design system and review preview
 
 - **Lead:** codex-lead-T010. **Workers:** root checker and independent browser QA worker reviewed the draft.
 - **Branch/worktree:** `task/T-010-design-system`, `.claude/worktrees/codex-T010-design-system`, based on `c980c5d`.
-- **Status:** proposal prepared; founder approval and final DESIGN.md remain outstanding. No commits by this lead.
+- **Status:** founder approved the exact candidate with “A — Approve exact candidate”; approved content promoted unchanged to root DESIGN.md. Ready for checker review.
+- **Integration:** latest main incorporated at `124496b`; current task links and other task states preserved. Proposal remains at `db6f0ab`; final promotion commit is the commit containing this updated handoff.
 
 ## What changed
+
+- `DESIGN.md`: byte-for-byte copy of the founder-approved `docs/designs/T-010-DESIGN.proposed.md`; no token, font, copy or rationale edits.
 
 - `docs/designs/T-010-design-proposal.md`: product-grounded rationale, familiar choices and deliberate departures, verified primary font references, light/dark contrast evidence, verification scope, and exact approval gate.
 - `docs/designs/T-010-DESIGN.proposed.md`: complete normative candidate for root DESIGN.md, with the five token groups and usage rationale. It is a proposed artifact, not an authoritative design decision.
 - `docs/designs/T-010-preview.html`: static synthetic teacher receipt, workspace and type/colour specimen, theme/view controls, responsive writing panels, print rules and keyboard examples. Current summary/question/counts use the actual `honest-nursing` golden receipt with teacher source registration from the checker correction. The draft and Coach question follow the same synthetic fixture. Fonts load only from the verified Google Fonts families in this preview; product implementation is proposed to self-host them.
-- `docs/TASKS.md`: only T-010 owner and in-progress state.
+- `docs/TASKS.md`: only T-010 ownership and review state; latest main’s ticket links and other task rows retained.
 
 ## Checks and evidence
+
+Final-promotion checks, run after founder approval:
+
+- **[VALIDATED]** `bun --no-env-file --config=/dev/null run ~/.claude/skills/gstack/bin/gstack-design-md.ts check DESIGN.md` → `DESIGN_MD_FORMAT: spec`, `DESIGN_MD_MARKER: spec`.
+- **[VALIDATED]** `cmp DESIGN.md docs/designs/T-010-DESIGN.proposed.md` → exit 0; byte-identical.
+- **[VALIDATED]** `shasum -a 256 DESIGN.md docs/designs/T-010-DESIGN.proposed.md` → both `08a1c28cf47d36610d8e1dc6c069665fd7572b603f1359cc8f51f50e20267d18`.
+- **[VALIDATED]** `git diff --check` → exit 0.
+- No runtime or preview changes in final promotion, so existing browser evidence below remains applicable; no application tests or browser checks were rerun for copying the approved document. The checker retains the main-line regression evidence.
+
+Prior proposal/preview evidence retained:
 
 - **[VALIDATED]** Official Google Fonts metadata and OFL 1.1 files read on 2026-10-25 for Source Sans 3 and Literata; exact primary URLs are in the proposal and candidate. No licence or availability claim relies on a font aggregator.
 - **[VALIDATED]** sRGB/WCAG relative-luminance calculation for text/muted/accent/error against light/dark surface and paper. All proposed text combinations exceed 4.5:1; the light decorative hairline does not, so controls and untraced outlines use the separate high-contrast border role. Full table/method are in the proposal.
@@ -23,8 +36,8 @@
 
 ## EXPECTATIONS coverage
 
-- **A (partial):** authorized proposal scope only; no secrets, shared-client changes, runtime dependencies or product rules. Handoff and static/browser checks exist. This task is not done because approved root DESIGN.md is absent.
-- **G/H (proposed tokens):** candidate retains D-036 layout, motion, access and band semantics. Preview demonstrates these visual rules, but does not implement student/teacher application behavior, release permissions, persistence or the complete chain service.
+- **A:** requested approved design file exists and matches the exact candidate. No secrets, shared-client changes, runtime dependencies or product-rule changes. Handoff contains actual format/parity/diff checks and prior browser evidence. Application code is unchanged; no claim of a new runtime test run. Checker owns shared tracking, decision recording and updating obsolete DESIGN.md-pending labels in design/README.md/workspace.md/build-plan.md as appropriate.
+- **G/H (tokens):** approved system retains D-036 layout, motion, access and band semantics. Preview demonstrates these visual rules, but does not implement student/teacher application behavior, release permissions, persistence or the complete chain service.
 - **I-M1:** no completion claim. All golden receipts still need the actual T-017 renderer and a person reading them.
 
 ## Skill routing / limitations
@@ -33,8 +46,10 @@ Read the installed `~/.claude/skills/design-consultation/SKILL.md` and its `sect
 
 The skill-start command reported `CHECK_FAILED gstack-update-check crashed ... update status UNKNOWN`; it eventually emitted interactive-session status but also reported that the session held no workflow lease. Unsupported setup, further external state writes and telemetry were not pursued. No installation or credential detours were taken.
 
-## Proposed decision and next step
+## Approval received and next step
 
-Approve or revise the exact proposed DESIGN.md plus its matching preview. No final root DESIGN.md or CLAUDE.md/AGENTS.md edit has been made. The installed skill's Phase 6 says: **“Wait. Only A permits the writes below; B/C leave project files untouched.”** The exact candidate is ready so founder approval can be the final gate. The task remains in progress until that approval and final-file promotion/checker review.
+Founder explicitly replied **“A — Approve exact candidate”**. This satisfies the installed design-consultation skill's Phase 6 write gate for the exact candidate. Root DESIGN.md now contains that candidate unchanged. CLAUDE.md and AGENTS.md were not changed, per the founder's task scope.
 
-After approval, promote the candidate to root DESIGN.md, record the founder decision through the checker, and unlock T-017. Do not treat agent selection of the typefaces as founder approval.
+No new product decisions or alternative design choices were introduced during promotion. The proposed-design artifacts remain historical review inputs; root DESIGN.md is the final file for checker acceptance. The checker records the approval decision and shared status, verifies the final commit and merges. T-010 is `review`, not `done`.
+
+T-017 has not been started. Only checker acceptance/merge may unblock it. M1 still requires the real receipt renderer and a person reading at least ten golden receipts; the visual proposal does not satisfy that production gate.
