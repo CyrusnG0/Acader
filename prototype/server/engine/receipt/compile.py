@@ -17,7 +17,7 @@ from .summary import build_summary
 from .wording import WordingFilter
 
 RECEIPT_SCHEMA = 1
-ENGINE_VERSION = "receipt/1 l1/1"
+ENGINE_VERSION = "receipt/1 l1/2"
 BLIND_SPOTS = ["retyped", "offline", "undeclared_outside", "understanding"]
 STAMP_KEYS = ("version", "git_sha", "lock_hash", "editor_pair", "models", "prompt_hashes")
 
