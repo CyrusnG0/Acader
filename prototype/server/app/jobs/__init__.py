@@ -10,10 +10,11 @@ one handler per job ``kind``. At submit, T-020 can join an existing transaction 
 
 See :mod:`app.jobs.queue` for leases, fairness, provider caps, retry timing and recovery.
 """
-from .queue import (PRIORITY_MAPPER, PRIORITY_NORMAL, RETRY_DELAYS_MINUTES, STATES, Job,
-                    JobQueue, JobQueueError, IdempotencyConflict, LeaseLost)
+from .queue import (MAX_ATTEMPTS, PRIORITY_MAPPER, PRIORITY_NORMAL, RETRY_DELAYS_MINUTES,
+                    STATES, Job, JobQueue, JobQueueError, IdempotencyConflict, LeaseLost)
 from .runner import Handler, JobRunner, PermanentJobError, RetryableJobError
 
 __all__ = ["Job", "JobQueue", "JobQueueError", "IdempotencyConflict", "LeaseLost",
            "JobRunner", "Handler", "RetryableJobError", "PermanentJobError",
-           "PRIORITY_NORMAL", "PRIORITY_MAPPER", "RETRY_DELAYS_MINUTES", "STATES"]
+           "PRIORITY_NORMAL", "PRIORITY_MAPPER", "RETRY_DELAYS_MINUTES", "MAX_ATTEMPTS",
+           "STATES"]

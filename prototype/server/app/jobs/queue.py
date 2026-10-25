@@ -20,8 +20,11 @@ Design points T-020 and T-021 rely on:
   neither share one system bucket. Lowest priority is reserved for mapper jobs
   (:data:`PRIORITY_MAPPER`); the mapper itself is not implemented here.
 - **Retries.** A retryable failure returns the job to ``queued`` with the D23 schedule
-  1, 4, 16 minutes, then the last delay again. A non-retryable failure is terminal
-  (``failed``). The queue invents no attempt limit; T-021 owns the release cap.
+  1, 4, 16 minutes, then the last delay again, until the attempt limit
+  (``max_attempts``, default :data:`MAX_ATTEMPTS` = 5, founder decision 2026-10-25).
+  At the limit, and for every non-retryable failure, the job is terminal (``failed``).
+  An optional ``on_failed`` hook runs inside the same transaction for each job that
+  becomes ``failed``, so an operator alert rolls back if it cannot be written.
 - **Cancellation.** ``cancel_by_log`` is a one-statement update that can join a caller-owned
   transaction. It fences running jobs too, so a result produced after cancellation is
   rejected. T-021 uses this for ``record.withdrawn``.
@@ -55,6 +58,7 @@ STATES = ("queued", "running", "done", "failed", "cancelled")
 PRIORITY_NORMAL = 0
 PRIORITY_MAPPER = 100  # reserved: lowest priority for future mapper jobs (eng v2 D6)
 RETRY_DELAYS_MINUTES = (1, 4, 16)
+MAX_ATTEMPTS = 5  # founder decision 2026-10-25: retries stop after five tries
 
 _DDL = """
 CREATE TABLE IF NOT EXISTS jobs (
@@ -178,13 +182,18 @@ class JobQueue:
 
     def __init__(self, db: sqlite3.Connection, *, clock: Callable[[], datetime] | None = None,
                  lock=None, lease_seconds: int = 300, max_per_backend: int = 4,
-                 retry_delays_minutes: tuple[int, ...] = RETRY_DELAYS_MINUTES):
+                 retry_delays_minutes: tuple[int, ...] = RETRY_DELAYS_MINUTES,
+                 max_attempts: int = MAX_ATTEMPTS,
+                 on_failed: Callable[[sqlite3.Connection, Job], None] | None = None):
         if not isinstance(lease_seconds, int) or isinstance(lease_seconds, bool) \
                 or lease_seconds <= 0:
             raise ValueError("lease_seconds must be a positive integer")
         if not isinstance(max_per_backend, int) or isinstance(max_per_backend, bool) \
                 or max_per_backend <= 0:
             raise ValueError("max_per_backend must be a positive integer")
+        if not isinstance(max_attempts, int) or isinstance(max_attempts, bool) \
+                or max_attempts <= 0:
+            raise ValueError("max_attempts must be a positive integer")
         delays = tuple(retry_delays_minutes)
         if not delays or not all(isinstance(d, int) and not isinstance(d, bool) and d >= 0
                                  for d in delays):
@@ -194,6 +203,8 @@ class JobQueue:
         self.lease_seconds = lease_seconds
         self.max_per_backend = max_per_backend
         self.retry_delays_minutes = delays
+        self.max_attempts = max_attempts
+        self.on_failed = on_failed
         # Share EventService._lock when both services use one connection (T-020/T-021).
         self._lock = lock if lock is not None else threading.RLock()
         self.db.executescript(_DDL)
@@ -373,7 +384,10 @@ class JobQueue:
 
     def fail(self, job: Job, *, error_kind: str, retryable: bool,
              conn: sqlite3.Connection | None = None) -> Job:
-        """Record a failure. Retryable jobs wait on the D23 schedule; others are terminal.
+        """Record a failure. Retryable jobs wait on the D23 schedule until the attempt limit.
+
+        At ``max_attempts`` a retryable failure is terminal, like any non-retryable failure.
+        ``on_failed`` runs inside the same transaction for every job that becomes ``failed``.
 
         ``error_kind`` must be a short internal label (for example an LLM error class). Never
         pass prompt text, student text or provider messages.
@@ -391,7 +405,7 @@ class JobQueue:
             if row is None or row[1] != "running" or row[2] != job.lease_token:
                 raise LeaseLost(f"job {job.id} is not held by this worker")
             attempts = row[0]
-            if retryable:
+            if retryable and attempts < self.max_attempts:
                 delay = self.retry_delays_minutes[
                     min(attempts - 1, len(self.retry_delays_minutes) - 1)]
                 run_after = ts_seconds(now + timedelta(minutes=delay))
@@ -406,7 +420,10 @@ class JobQueue:
                     "worker_id = NULL, error_kind = ?, updated_at = ?, finished_at = ? "
                     "WHERE id = ? AND lease_token = ?",
                     (error_kind, now_ts, now_ts, job.id, job.lease_token))
-            return self._row(db, job.id)
+            failed_job = self._row(db, job.id)
+            if failed_job.state == "failed" and self.on_failed is not None:
+                self.on_failed(db, failed_job)
+            return failed_job
 
     # ---- cancellation ---------------------------------------------------------------------
 
@@ -456,15 +473,34 @@ class JobQueue:
     # ---- recovery and observability -------------------------------------------------------
 
     def _recover_expired_in_tx(self, db: sqlite3.Connection, now_ts: str) -> int:
+        failed_ids = [row[0] for row in db.execute(
+            "SELECT id FROM jobs WHERE state = 'running' AND lease_until IS NOT NULL "
+            "AND lease_until <= ? AND attempts >= ?", (now_ts, self.max_attempts))]
         cur = db.execute(
             "UPDATE jobs SET state = 'queued', run_after = ?, lease_token = NULL, "
             "lease_until = NULL, worker_id = NULL, updated_at = ? "
-            "WHERE state = 'running' AND lease_until IS NOT NULL AND lease_until <= ?",
-            (now_ts, now_ts, now_ts))
-        return cur.rowcount
+            "WHERE state = 'running' AND lease_until IS NOT NULL AND lease_until <= ? "
+            "AND attempts < ?",
+            (now_ts, now_ts, now_ts, self.max_attempts))
+        recovered = cur.rowcount
+        if failed_ids:
+            db.execute(
+                "UPDATE jobs SET state = 'failed', lease_token = NULL, lease_until = NULL, "
+                "worker_id = NULL, error_kind = 'lease_expired', updated_at = ?, "
+                "finished_at = ? "
+                "WHERE state = 'running' AND lease_until IS NOT NULL AND lease_until <= ? "
+                "AND attempts >= ?",
+                (now_ts, now_ts, now_ts, self.max_attempts))
+            if self.on_failed is not None:
+                for job_id in failed_ids:
+                    self.on_failed(db, self._row(db, job_id))
+        return recovered + len(failed_ids)
 
     def recover_expired(self, conn: sqlite3.Connection | None = None) -> int:
-        """Return every expired running job to ``queued``. Call once at boot and per claim."""
+        """Requeue expired running jobs, or fail them at the attempt limit.
+
+        Call once at boot and per claim.
+        """
         now_ts = ts_seconds(self._now())
         with self._write(conn) as db:
             return self._recover_expired_in_tx(db, now_ts)
