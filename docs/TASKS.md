@@ -2,7 +2,7 @@
 
 One task = one lead conversation. A cold worker may pick **any unowned `ready` task whose dependencies are `done`**. Read the [pickup instructions and executable tickets](tickets/README.md), then write your conversation tag in **Owner** and set only your task to `in progress` before starting. Coordinate claims: edits on separate branches alone do not prevent duplicate ownership. Codex is the planner/checker; the founder supplies implementation workers.
 
-**No agent task is ready right now (2026-10-25).** T-018…T-021 and T-024 passed checker review. T-022 waits only on the founder's answer to OL-049 (preview order); T-023 waits on OL-050 (PD-T007-4 schema + S3 prompt). Small engineering follow-ups OL-055…OL-057 can be ticketed by the checker. M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
+**Ready now (2026-10-25, after founder decisions D-059…D-062):** T-025 (remove student withdrawal), T-026 (delayed state + release re-check), T-022 (student preview and teacher views), T-027 ("More places to ask"). T-025, T-026 and T-022 all touch `app/lifecycle.py`: run T-025 first, then T-026, then T-022, or rebase the later branch. T-023 still waits on OL-050 (PD-T007-4 schema + S3 prompt). Small engineering follow-ups OL-056, OL-057 can be ticketed by the checker. M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
 
 **Only the checker changes a status to `done`.** A lead sets `review` and writes a handoff (docs/handoffs/). The checker reviews it against [EXPECTATIONS.md](../EXPECTATIONS.md).
 
@@ -56,10 +56,13 @@ These tasks prepare the existing M2 design. Ready infrastructure tasks are indep
 | [T-018](tickets/T-018-receipt-storage.md) | Durable receipts and AI artifacts | T-012, T-016 | S | worker-T-018 | done |
 | [T-019](tickets/T-019-job-queue.md) | Bounded durable job queue | T-012, T-003 | S | worker-T-019 | done |
 | [T-020](tickets/T-020-compile-jobs.md) | Submit and compile orchestration, incl. the five-try retry cap (D-054) | T-018, T-019 | O+S | opus-lead-T-020 | done |
-| [T-021](tickets/T-021-release-withdrawal.md) | Release cap and transactional withdrawal | T-020 | O+S | worker-T-021 | done |
-| [T-022](tickets/T-022-receipt-preview.md) | Student preview and teacher lifecycle views | T-017 and T-021 done; blocked only on OL-049 (preview order clarification) | O+S | | blocked |
+| [T-021](tickets/T-021-release-withdrawal.md) | Release cap and transactional withdrawal (withdrawal reversed by D-062; removed in T-025) | T-020 | O+S | worker-T-021 | done |
+| [T-022](tickets/T-022-receipt-preview.md) | Student preview (same order as the teacher first screen, D-059) and teacher lifecycle views incl. delayed-state wording (D-061); no withdrawal UI (D-062) | T-017, T-021 (done); delayed status from T-026 | O+S | | ready |
 | [T-023](tickets/T-023-s3-harness.md) | Executable preregistered S3 evaluation harness | T-007 done, bar approved (D-056); still needs PD-T007-4 schema + S3 prompt approval (OL-050) | O+S | | blocked |
 | [T-024](tickets/T-024-drop-written-days.md) | Drop "Written on N days" from the receipt summary (D-055) | T-016 | S | worker-T-024 | done |
+| [T-025](tickets/T-025-remove-withdrawal.md) | Remove student withdrawal: routes, service, tombstone, whitelist entry, tests (D-062); keep release | T-021 | O+S (D ok for the mechanical removal) | | ready |
+| [T-026](tickets/T-026-delayed-recheck.md) | Delayed state past the cap + scheduled release re-check + one operator alert (D-061) | T-021 | O+S | | ready |
+| [T-027](tickets/T-027-more-places.md) | "More places to ask": keep and render the full grounded candidate list (D-060) | T-016, T-017, T-020 | O+S | | ready |
 
 ## Remaining wave planning
 

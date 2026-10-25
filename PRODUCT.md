@@ -90,7 +90,7 @@ Reviewed by /plan-ceo-review on 2026-10-23 (D-032; record in [docs/designs/ceo-r
   - Teacher: upload the class roster, create an assignment, upload readings.
   - Student: sign in by invite link; an editor with origin tracking; readings with pins by section kind (limitation, method, data, results); idea cards; the live map as an outline the student builds (D-036); map suggestions from the mapper only behind a flag, if its eval passes (eng v2 D21); the Door (pasted text and files, never fetched links); Helper; Coach cases B and C.
   - The receipt with click-through. The student previews it first (spans and facts, not the questions). It is released to the teacher at the latest of: the deadline, 24 hours after submitting, and when the questions are ready.
-  - Consent, export and delete.
+  - Consent and export. Students cannot delete the process record of submitted work (D-062, 2026-10-25); deletion on request and retention are open (OL-058).
 - **Rules settled in review:**
   - A submission is always sealed, even when the AI is down. Questions follow later.
   - Reworded text the system hasn't checked counts as untraced, with a note saying so.

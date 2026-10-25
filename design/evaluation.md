@@ -1,6 +1,6 @@
 # Evaluation: spikes, tests and pilot measures
 
-Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-23
+Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-25 (D-061, D-062)
 Implements: the "[VALIDATED] only when tested" convention; CEO-6, CEO-7, CEO-14, CEO-15, CEO-18, CEO-19, CEO-21, CEO-24; D5, D6, D8, D9, D10, D19, D20, D21, D22, D23, D26, D28, D32, D33 ([eng record](../docs/designs/eng-review-v1.md)). Answers how OL-034, OL-035, OL-038 and OL-040 close.
 Test plan for /qa: `~/.gstack/projects/CyrusnG0-Acader/micmic-main-eng-review-test-plan-20261023-164120.md`.
 
@@ -37,7 +37,7 @@ Each spike gets a short preregistration (pass condition written before running),
 | Level | What |
 |---|---|
 | Unit | Hash chain + verify + seal whitelist; append concurrency (two batches at once → one chain, CEO-16); ts rounding + 5-min merge + session split (D12, D30); mark check incl. quote rules (D5, D29); band table, one row per rule (incl. student-linked, D27); claim-mark majority; sentence split; wording filter; leak-check shape rules; policy routing per classifier label; `complete()` error classes with a fake transport (D13) |
-| Integration | Submit while the LLM is down → sealed, L1 receipt "questions pending", retry job (CEO-7); release rule incl. the +48 h cap, frozen clock (CEO-21, D7); preview has no question text (CEO-20); withdraw between submit and release → no release ever, queued jobs cancelled, unreleased receipt deleted (frozen clock, eng v2 D10); replay mismatch → labelled fallback receipt (D28); magic link GET doesn't consume, reuse/expiry rejected (D11); uninvited email → no session; Door makes zero outbound calls (CEO-9); parse caps and status (D4) |
+| Integration | Submit while the LLM is down → sealed, L1 receipt "questions pending", retry job (CEO-7); release rule incl. the +48 h cap, frozen clock (CEO-21, D7); preview has no question text (CEO-20); no student withdrawal route exists and `record.withdrawn` is refused after the seal (D-062); cap passed with no receipt → `delayed` state, operator alert, re-check releases once compiled (frozen clock, D-061); replay mismatch → labelled fallback receipt (D28); magic link GET doesn't consume, reuse/expiry rejected (D11); uninvited email → no session; Door makes zero outbound calls (CEO-9); parse caps and status (D4) |
 | Security | Route enumeration: foreign IDs → 404 on every route; CSP header present; teacher audit rows written (D9) |
 | Load | 30 submits in 5 minutes with a 3 s stub: every L1 receipt < 60 s, every question set < 15 min, no rate-limit errors (D23) |
 | Regression | `ROOM_LLM=stub pytest writing-room-kit/v04/tests writing-room-kit/web/tests` (29 tests) on every change (D22) |

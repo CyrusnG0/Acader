@@ -1,6 +1,6 @@
 # The receipt
 
-Status: **reviewed (CEO + eng 2026-10-23, design 2026-10-24)** · Last updated: 2026-10-24
+Status: **reviewed (CEO + eng 2026-10-23, design 2026-10-24)** · Last updated: 2026-10-25 (founder D-059…D-062)
 Implements: D-025, laws 5, 6 and 10; CEO-3, CEO-5, CEO-7, CEO-17, CEO-20, CEO-21; D7, D20, D27, D28, D31 ([CEO record](../docs/designs/ceo-review-v1.md), [eng record](../docs/designs/eng-review-v1.md)). Answers OL-032 (proportions) and OL-041 (stop it reading as a score). Validated against the nursing case in OL-034.
 
 ## 1. Job of the receipt
@@ -21,7 +21,7 @@ The questions come before the numbers, and the blind spot sits next to the bar, 
 
 1. **Header:** student, assignment, submitted date, words, number of sources used. No hash here: the seal hash and `verify` move to "About this receipt" (2A), so the first impression isn't a certificate.
 2. **Summary in one sentence**, generated from facts only. Example: "Built from 4 sources; most claims trace to passages the student anchored; one paragraph was pasted from outside and partly rewritten; two Coach questions were declined." No session, day or duration count appears (D-055).
-3. **Where to ask (2–3 questions).** Each shows the span it is about and why it was chosen ("this paragraph has no trace in the platform"). Each links to the chain. During an AI outage this section reads "questions pending" (CEO-7).
+3. **Where to ask (2–3 questions).** Each shows the span it is about and why it was chosen ("this paragraph has no trace in the platform"). Each links to the chain. During an AI outage this section reads "questions pending" (CEO-7). Under the 2–3 questions, one closed disclosure, **"More places to ask"**, lists every other candidate place the question step considered (§4), in paragraph order, with its plain reason; no score, rank number or count that compares students (D-060, T-027).
 4. **How the work was built: the bar.** Five bands by words, and the same five by claims, in two thin bars:
    - Traced to a source or lecture
    - Traced to a Coach exchange
@@ -41,7 +41,7 @@ The questions come before the numbers, and the blind spot sits next to the bar, 
 
 ## 2a. The teacher's submissions list (design review 3A)
 
-One row per student, **alphabetical by name only**: name · submitted date · status (`still compiling` with its release time · `ready` · `questions pending` · `discussed` · `record removed`, 9A). **No band columns, no sort or filter by band, no class averages.** Law 6 holds at the list level: nothing here ranks students by how traced their work is. "Mark as discussed" sits at the foot of each receipt and sets the status; it is the teacher's finish line, not a verdict. It is stored teacher-side (`receipt_status`: receipt_id, teacher_id, discussed_at, plus an audit row), never in the student's log, and is not shown to the student (eng review v2 D9).
+One row per student, **alphabetical by name only**: name · submitted date · status (`still compiling` with its "Ready by" time, which is the cap time (D-061) · `delayed` when the cap has passed with no receipt (D-061) · `ready` · `questions pending` · `discussed`). There is no `record removed` status: students cannot remove the process record (D-062). **No band columns, no sort or filter by band, no class averages.** Law 6 holds at the list level: nothing here ranks students by how traced their work is. "Mark as discussed" sits at the foot of each receipt and sets the status; it is the teacher's finish line, not a verdict. It is stored teacher-side (`receipt_status`: receipt_id, teacher_id, discussed_at, plus an audit row), never in the student's log, and is not shown to the student (eng review v2 D9).
 
 ## 3. Click-through: the chain view
 
@@ -65,7 +65,7 @@ Candidates, in priority order:
 6. Student-linked claims that carry the argument.
 7. An unanswered mapper finding (`map.finding`: an unconnected paragraph or a claim without a source), cited by its event_id and artifact_id. Never about a sentence the student answered "Not this" (eng review v2 D15).
 
-At most 3, at most one per paragraph. Generated with L3e under these rules:
+At most 3, at most one per paragraph, on the first screen. Every other candidate that has grounding is kept and shown behind "More places to ask" (§2 item 3; D-060, T-027); whether those get generated wording or only a place and reason is set in T-027. Generated with L3e under these rules:
 - About **the idea and the student's choices**, never about the trace ("How does renal clearance connect to your dosage point?", never "Did you write this?").
 - **One of the four pillars** (reading, logic, writing, communication; coach-helper §3), looking forward: test the idea against a reading, a boundary condition, a qualifier or a sceptical reader. Never "how did you think of this?" Elaboration is taken at face value (D-046).
 - Never built from construction order (which came first, card or paragraph), and never from a judgment of whether a Coach answer was good enough (D-046).
@@ -111,25 +111,22 @@ Every element carries `event_ids`; AI-derived elements also carry `artifact_ids`
 ## 7. Release and the student view
 
 - **Student preview, before release:** bands, facts, and which spans may be asked about, **not the question text** (CEO-20). The student can add a short note to any span ("drafted on paper in class") and a link they forgot. Both are new events marked "added after submit"; links never change the bands (CEO-17).
-- **Preview layout (design review 8A):** same order as the teacher's first screen, so there is no hidden version.
+- **Preview layout (design review 8A; D-059):** identical to the teacher's first screen and in the same order as §2 (summary, the parts that may be asked about, then the bars), so there is no hidden version. The student sees which parts, never the question wording (CEO-20).
   ```
   Here's what your teacher will see.                      Nothing here is a grade.
   Summary sentence (same as the teacher's)
-  Bars by words / by claims + "Untraced is not AI. …"
   Parts your teacher may ask about
     ¶3 "Rapid boluses harm after the first hour…"
        Your teacher may ask about this part. Be ready to explain your thinking.
        [Add a note]  [Link a card or source]
+  Bars by words / by claims + "Untraced is not AI. …"
   How it was built (details) ▸
   Your teacher sees this from [time]. Until then you can add notes and links.
   ```
-- **Release to the teacher:** at the latest of the deadline, submit + 24 h, and questions compiled, but **no later than the latest of (deadline, submit + 24 h) + 48 h**. At that cap the receipt is released with "questions pending", the operator is alerted, and questions arrive later marked "added after release" (CEO-21, D7). Until release the teacher sees "Still compiling. Ready by [time]" (6A), never a bare status.
+- **Release to the teacher:** at the latest of the deadline, submit + 24 h, and questions compiled, but **no later than the latest of (deadline, submit + 24 h) + 48 h**. At that cap the receipt is released with "questions pending", the operator is alerted, and questions arrive later marked "added after release" (CEO-21, D7). Until release the teacher sees "Still compiling. Ready by [time]" (6A), never a bare status; [time] is the cap (D-061). If the cap passes and nothing has compiled, the cap never invents a receipt: the teacher sees a plain **delayed** state (wording in T-022, about the system and never about the student or the work), the operator is alerted, and a scheduled re-check releases the record as soon as a receipt compiles (D-061, T-026).
 - Notes added after release are marked "added after release".
-- **Withdrawal between submit and release (P-15, design review 9A).** Allowed (law 7).
-  - Student confirm: "Remove your process record? Your teacher will see that the record was removed, not why. Your submitted work stays submitted. Removing it is your right and isn't treated as a mark. This can't be undone." **[Keep my record]** **[Remove it]**
-  - Teacher list status: `record removed`. Teacher view, in place of the receipt: "The student chose to remove their process record before release. The submitted work is unchanged. Talk with the student about it as you would for any work written outside this platform." No seal, bars or questions.
-  - **Jobs (eng review v2 D10):** `record.withdrawn` cancels queued compile, L3, question and release jobs for that log in the same transaction; a running job checks the withdrawn flag before it writes and stops; a compiled but unreleased receipt is deleted with its stored outputs. A teacher-side tombstone (log_id, withdrawn_at) drives `record removed`.
-  - Edits after submitting are never part of the submission; the editor says so: "Edits after submitting aren't part of this submission."
+- **No student removal of the process record (D-062, 2026-10-25).** P-15 / design review 9A (withdrawal between submit and release) is dropped from v1. Students can see and export their whole record (privacy.md §5) but cannot remove it, before or after release. There is no confirm dialog, tombstone or `record removed` status; T-025 removes the built path.
+- Edits after submitting are never part of the submission; the editor says so: "Edits after submitting aren't part of this submission."
 
 ## 8. Worked example: the nursing case (for OL-034)
 

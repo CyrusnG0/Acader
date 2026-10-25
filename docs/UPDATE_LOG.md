@@ -15,6 +15,13 @@ Template:
 ---
 
 
+## 2026-10-25 — Checker: founder decisions on preview, candidates, delayed state, withdrawal reversal
+**Summary:** Recorded four founder decisions. D-059: the student preview is the teacher's first screen in the same order (no question wording, CEO-20). D-060: a "More places to ask" disclosure with every grounded candidate the question step considered (today `select_candidates` discards all but three). D-061: "Ready by" = cap time accepted; a plain `delayed` state and a scheduled re-check when the cap passes with no receipt. D-062: students can see and export but cannot remove the process record; P-15 / 9A withdrawal dropped from v1 (narrows law 7 as written; wording left for the founder to confirm). Wrote tickets T-025…T-027, unblocked and rescoped T-022. Docs only; no code or tests run.
+**Files touched:** docs/DECISIONS.md (D-059…D-062; pointers on D-053, D-058), OPEN_LOOPS.md, TASKS.md, STATUS.md, UPDATE_LOG.md, CHANGELOG.md; docs/tickets/{README.md, T-022-receipt-preview.md, T-025-remove-withdrawal.md, T-026-delayed-recheck.md, T-027-more-places.md}; design/{receipt.md §2/§2a/§4/§7, event-log.md §3/§6/§8, privacy.md §5, evaluation.md, README.md}; EXPECTATIONS.md H; PRODUCT.md §7 ("Consent, export and delete" → "Consent and export", D-062).
+**Loops:** closed OL-049 (D-059), OL-052, OL-053 (D-061), OL-054 (D-062), OL-055 (moot). Opened OL-058 (law 7 wording, deletion on request, retention), OL-059 (student preview and "More places").
+**Decisions:** D-059, D-060, D-061, D-062.
+**Next:** start T-025, then T-026 and T-022; T-027 in parallel.
+
 ## 2026-10-25 — Checker: T-020, T-021, T-024 merged
 **Summary:** T-020 (submit and compile orchestration with the D-054 retry cap) and T-024 (drop "Written on N days", D-055) were merged earlier (a76b567, ee7cc8a) and marked done in 386f2cd; their tracking entries are written here. T-021 (release cap and transactional withdrawal, branch `task/T-021-release-withdrawal`, 3 commits) merged as 9f5a874. Opus review sent T-021 back once: (a) no test covered the withdraw tenant check on its own; (b) the school-side tombstone stored the student's free-text withdrawal reason, against receipt.md §7 and law 7. Both fixed in 0b841d7 and re-verified by mutation. Reviewer-recommended engineering proposals recorded as D-058; founder proposals and follow-ups opened as loops. T-022 now blocked only on OL-049.
 **Files touched:** docs/TASKS.md, STATUS.md, UPDATE_LOG.md, OPEN_LOOPS.md, DECISIONS.md, CHANGELOG.md; Checker review sections in docs/handoffs/2026-10-25-T-020-compile-jobs.md, -T-021-release-withdrawal.md, -T-024-drop-written-days.md.

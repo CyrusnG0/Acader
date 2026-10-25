@@ -1,6 +1,6 @@
 # Event log and origin capture
 
-Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-23
+Status: **reviewed (CEO + eng) 2026-10-23** · Last updated: 2026-10-25 (D-062: no student withdrawal)
 Implements: D-025 (tamper-evident record, every receipt line cites events), the privacy floor in [PRODUCT.md](../PRODUCT.md) §6, CEO-16, D5, D8, D10, D12, D16, D17, D21, D26, D28, D30, D31, D32 ([eng record](../docs/designs/eng-review-v1.md)). Answers OL-031 (capture half) and OL-035 (what "provable" means).
 
 ## 1. What this record is for
@@ -73,7 +73,7 @@ One log per (student, assignment). It opens when the student accepts consent for
 | `receipt.issued` | system | receipt_id, receipt_hash, seal_seq, version | compiler |
 | `note.add` | student | span, text, after_release: bool | student receipt view |
 | `link.add` | student | paragraph, claim_id (never changes bands, CEO-17) | student receipt view |
-| `record.withdrawn` | student | reason (optional) | delete after submit |
+| ~~`record.withdrawn`~~ | — | — | **Dropped from v1 (D-062):** students cannot remove the process record; T-025 takes the type out of the whitelist and routes |
 | `map.suggestion` | system (mapper) | suggestion_id, doc_rev, paragraph, paragraph_hash, claim_id, artifact_id, output_hash (D-035; eng review v2 D3, D14; per paragraph since D-045) | mapper job |
 | `map.finding` | system (mapper) | finding_id, kind: `unconnected_paragraph \| claim_without_source`, span, claim_id (optional), artifact_id, output_hash. Never about a sentence with a `map.answer` no (eng review v2 D15) | mapper job |
 | `map.answer` | student | suggestion_id, answer: `yes \| no`. A yes also adds the link `{claim_id, by: student, suggestion_id}` to the paragraph through a normal editor step (D-045) | live map |
@@ -129,7 +129,7 @@ Every character carries exactly one `origin` mark `{kind, ref}`. **Links to clai
 
 - **Submit** is enabled only when the client queue is empty. One submit per `doc_rev` (idempotency key); a 0-word submit is blocked. Submit retries with the same key until acked (D10, D34).
 - At submit the server flushes staging, writes `doc.checkpoint` and `submit`. **The hash of the `submit` event is the seal.** It is emailed to the student and printed on the receipt (D8).
-- After a seal, only these may append: `receipt.issued`, `note.add`, `link.add`, `record.withdrawn`, `resubmit.open`. An editor batch after submit gets 409 unless a resubmission is open. **Mapper jobs** (D-035) for a log are cancelled at submit; a mapper result (suggestion or finding) that finishes after the seal is discarded, never appended, and counted on the operator page (eng review v2 D4).
+- After a seal, only these may append: `receipt.issued`, `note.add`, `link.add`, `resubmit.open` (`record.withdrawn` removed by D-062, code in T-025). An editor batch after submit gets 409 unless a resubmission is open. **Mapper jobs** (D-035) for a log are cancelled at submit; a mapper result (suggestion or finding) that finishes after the seal is discarded, never appended, and counted on the operator page (eng review v2 D4).
 - `verify(log, seal)` recomputes every hash from genesis to the seal, checks the post-seal events against the whitelist, checks that each receipt line's `event_ids` exist at or before its `seal_seq` (or are marked post-seal notes), and checks stored AI output hashes and `receipt_hash`. A CLI and an endpoint expose it. Spike **S5** tests tampering, including an edit after the seal.
 - **The seal covers the record up to submission (D-041).** Notes and links added after it are chained and dated, so a gap in the middle shows, but dropping the newest ones does not. "About this receipt" says so. No anchoring of the post-seal head in v1.
 - The chain is evidence against after-the-fact editing. It is not evidence about what happened outside the platform.
@@ -149,5 +149,5 @@ Teacher opens and exports are logged in an audit table, not in the student's log
 ## 8. Settled questions
 
 - Dwell time: not stored (D16).
-- Deleting a log: before submit, deleted with no receipt; after submit, `record.withdrawn` and the receipt reads "record withdrawn by the student". Wording: [receipt.md](receipt.md) §7 (P-15, design review 9A).
+- Deleting a log: **the student cannot remove the process record of submitted work, before or after release (D-062, 2026-10-25;** replaces P-15 / 9A). Whether an unsubmitted draft log may be deleted, and deletion on request or retention under school contracts, are open in OL-058.
 - Anchoring: the emailed seal hash only in v1; no public transparency log.

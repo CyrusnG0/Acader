@@ -83,8 +83,9 @@ Where a line cites a code like `D13`, `9A` or `D-035`, the full reasoning is in 
 - [ ] The first screen shows header (no hash), summary, Where to ask, and the bars with the "untraced is not AI" line (2A).
 - [ ] Bands use one hue at falling strength plus patterns and labels; never green/amber/red (12A).
 - [ ] The submissions list is alphabetical with status only; no band columns, sorting or filters (3A).
-- [ ] The student preview matches the teacher's order and says "Nothing here is a grade." (8A)
-- [ ] Withdrawal before release: plain notices on both sides, queued jobs cancelled, never released (9A, D10).
+- [ ] The student preview is the teacher's first screen in the same order (summary, parts that may be asked about, bars) and says "Nothing here is a grade."; no question wording (8A, D-059, CEO-20).
+- [ ] No student removal of the process record anywhere (D-062). Cap passed with no receipt: the teacher sees a plain `delayed` state, the operator is told, and a re-check releases it once compiled (D-061).
+- [ ] "More places to ask" is closed by default, lists candidate places in paragraph order with no score or rank, and passes the wording filter (D-060).
 - [ ] The chain view uses plain rounded wording; exact figures only in the JSON and export (20A).
 
 ## I. Milestone exits (build-plan.md)

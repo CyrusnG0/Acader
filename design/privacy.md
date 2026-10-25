@@ -1,6 +1,6 @@
 # Privacy, consent and data ownership
 
-Status: **reviewed (CEO + eng) 2026-10-23; must be completed (provider terms, school approval) before any real student** · Last updated: 2026-10-23
+Status: **reviewed (CEO + eng) 2026-10-23; must be completed (provider terms, school approval) before any real student** · Last updated: 2026-10-25 (D-062: no student deletion of the process record)
 Implements: law 7, the privacy floor in [PRODUCT.md](../PRODUCT.md) §6; CEO-6, CEO-8, CEO-12, CEO-20, CEO-22; D3, D9, D12, D14, D16, D30, D31 ([eng record](../docs/designs/eng-review-v1.md)). Answers OL-037, OL-016 and OL-019 (partly).
 Replaces: [archive/design-v1/data-isolation.md](../archive/design-v1/data-isolation.md).
 
@@ -62,7 +62,7 @@ Shown before the editor opens; readable in under a minute; the teacher co-signs 
 ## 5. Student rights in the product
 
 - **Export:** the full log (JSON), stored AI outputs, the document, the receipt (HTML) and the seal hash, from one button.
-- **Delete:** before submission → the log is deleted, no receipt. After submission → `record.withdrawn`; the receipt reads "record withdrawn by the student"; a copy already filed by the school stays under the school's policy. Between submit and release the wording is set in [receipt.md](receipt.md) §7 (P-15, design review 9A).
+- **No student deletion of the process record (D-062, 2026-10-25).** Ownership means the student can see and export all of it; the student cannot remove the process record of submitted work, before or after release. The earlier withdrawal right (P-15, design review 9A) is dropped from v1. Open (OL-058): whether an unsubmitted draft log may be deleted, deletion on request, and the retention rule for school contracts (the retention column in §2 is still an [ASSUMPTION]).
 - **Correct:** notes and links after submit are new events; nothing is overwritten.
 - **Accessibility route:** dictation, screen readers and assistive input are `typed`, with `input_kind` kept only as counts. They never change bands or questions.
 
