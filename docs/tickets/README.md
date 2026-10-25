@@ -4,7 +4,7 @@ Start with [AGENTS.md](../../AGENTS.md), [STATUS](../STATUS.md), [TASKS](../TASK
 
 ## Claim one task
 
-1. Choose **any unowned ready task** with every dependency done. Recommended pickup: T-025, then T-026; T-027 can run in parallel. An empty owner on a blocked task is not permission to start it. Founder tasks are not agent work.
+1. Choose **any unowned ready task** with every dependency done. Recommended pickup (2026-10-25): after T-028 merges, T-029 and T-026, then T-022. An empty owner on a blocked task is not permission to start it. Founder tasks are not agent work.
 2. Refresh the board and check active branches/worktrees before claiming. Set only your task's Owner to your conversation tag and Status to `in progress`; communicate the claim to the coordinator. Claims on separate branches are not a distributed lock: the coordinator must reconcile them before duplicate work starts.
 3. Use `task/T-0xx-short-name` or its worktree. Never build on main. T-010 and T-017 are checker-accepted; do not reopen their implementation. Preserve the founder's untracked AGENTS.md and all other work.
 4. Deliver the ticket's files and tests. Use ROOM_LLM=stub; no live model calls, secrets, real student data or unapproved product choices. If a design is ambiguous, document a proposed decision; progress on independent pieces.
@@ -30,8 +30,10 @@ Do not expand the later milestone waves into implementation tasks before the che
 - [T-022: Student preview and teacher lifecycle views](T-022-receipt-preview.md) — ready (D-059, D-061, D-062).
 - [T-023: Executable preregistered S3 evaluation harness](T-023-s3-harness.md) — blocked.
 - [T-024: Drop "Written on N days"](T-024-drop-written-days.md) — done (D-055).
-- [T-025: Remove student withdrawal](T-025-remove-withdrawal.md) — ready (D-062).
+- [T-025: Remove student withdrawal](T-025-remove-withdrawal.md) — done (D-062).
 - [T-026: Delayed state and scheduled release re-check](T-026-delayed-recheck.md) — ready (D-061).
-- [T-027: "More places to ask"](T-027-more-places.md) — ready (D-060).
+- [T-027: "More places to ask"](T-027-more-places.md) — done (D-060).
+- [T-028: Hardening: engine version bump and one-per-paragraph test](T-028-hardening.md) — in progress (D-063).
+- [T-029: `artifact_ids` on "More places to ask" items](T-029-more-places-artifacts.md) — ready after T-028 (D-063).
 
-T-025, T-026 and T-022 all touch `app/lifecycle.py`: run them in that order or rebase the later branch. T-027 may run in parallel; coordinate with T-022 on the teacher receipt view. Blocked tickets are not empty work slots.
+T-026 and T-022 both touch `app/lifecycle.py`: run T-026 before T-022 or rebase the later branch. T-029 waits for T-028 (same engine stamp and fixtures) and is otherwise independent. T-022 must not list "More places" parts in the student preview until OL-059 is answered. Blocked tickets are not empty work slots.

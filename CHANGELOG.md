@@ -6,6 +6,8 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-25: "More places to ask": every grounded non-chosen candidate kept in receipt field `more_places` (inside `receipt_hash`) and shown in one closed disclosure on the teacher receipt (T-027, D-060); checker accepted.
+- 2026-10-25: tickets T-028 (engine version bump to `receipt/1 l1/2`, one-per-paragraph test) and T-029 (`artifact_ids` on `more_places`) (D-063).
 - 2026-10-25: tickets T-025 (remove student withdrawal), T-026 (delayed state + release re-check), T-027 ("More places to ask"); T-022 unblocked and rescoped (D-059…D-062).
 - 2026-10-25: release cap and transactional withdrawal (`app/lifecycle.py`, `app/withdrawal.py`, `POST /logs/{id}/withdraw`; T-021, D-058); checker accepted.
 - 2026-10-25: submit and compile orchestration (`app/compile_jobs.py`: receipt v1 then v2, five-try retry cap with operator alert, startup reconcile; T-020, D-054); checker accepted.
@@ -34,6 +36,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 - 2026-10-23: `docs/designs/ceo-review-v1.md` (CEO review record, D-032); TODOS.md deferrals for v1.
 
 ### Changed
+- 2026-10-25: student withdrawal removed (T-025, D-062): `app/withdrawal.py`, `POST /logs/{id}/withdraw`, the tombstone and `record.withdrawn` on the post-seal whitelist are gone; release kept. A sealed log now answers 409 `sealed` to any client-disallowed event type (D-063). Local dev databases holding `record.withdrawn` no longer verify (OL-060); checker accepted.
 - 2026-10-25: founder decisions D-059…D-062: student preview = teacher first screen order; full candidate list behind "More places to ask"; `delayed` state past the cap; student withdrawal of the process record dropped from v1. receipt.md, event-log.md, privacy.md, evaluation.md, EXPECTATIONS H and PRODUCT.md §7 updated.
 - 2026-10-25: the receipt summary no longer says "Written on N days" or cites edit batches (T-024, D-055).
 - 2026-10-25: design/provenance.md §5 aligned to §6 on `added` propositions (D-056); design/receipt.md summary examples drop the session count (D-055).

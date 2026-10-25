@@ -12,6 +12,13 @@ Template:
 **Next:** the single most important next step
 ```
 
+## 2026-10-25 — Checker: T-025 and T-027 merged; D-063; tickets T-028, T-029
+**Summary:** Opus reviews of T-025 (remove student withdrawal, D-062) and T-027 (More places to ask, D-060) both said MERGE with no blockers; main b3e6900 merges T-025 then T-027 (local until the checker pushes). T-025 from a fresh `--require-hashes` venv (Python 3.14.5): prototype 960, kit 29, web 145, tsc clean; the 24 h, 48 h and whitelist-restore mutations fail tests. T-027 alone: prototype 1006, kit 29, web 150, tsc clean; checker re-run of merged main from a fresh `--require-hashes` venv: prototype 996 passed; 6 of 7 T-027 review mutations fail tests. Review findings: T-027 L1 (one-per-paragraph rule for `more_places` untested) and L3 (`ENGINE_VERSION` not bumped) go to T-028; L4 (no `artifact_ids` on `more_places`) to T-029; L2 (student-view test uses a golden with an empty list) becomes a T-022 requirement. T-025 notes: one refusal test passes even with the whitelist restored (two others cover it); T-021-era dev databases with `record.withdrawn` now fail verification (wipe them); `receipt_store.py:182` lint. Founder accepted the checker's recommendations (D-063), asked to push main and mark every reviewed task done. Housekeeping: 17 merged worktrees and old `/private/tmp` scratch removed; branches kept. T-028 worker (DeepSeek) running in `../Acader-wt-T-028`. Docs only in this session.
+**Files touched:** docs/STATUS.md, TASKS.md (T-025, T-027 → done; T-028 in progress; T-029 ready), OPEN_LOOPS.md, DECISIONS.md (D-063), UPDATE_LOG.md, CHANGELOG.md; docs/tickets/{README.md, T-028-hardening.md, T-029-more-places-artifacts.md}.
+**Loops:** opened OL-060 (wipe T-021-era dev DBs), OL-061 (T-022 student-preview boundary test, tied to OL-059), OL-062 (receipt_store.py:182 lint). OL-052…OL-055 already closed; OL-056, OL-057, OL-059 stay open.
+**Decisions:** D-063 (409 `sealed` on sealed logs; engine version bump on additive receipt fields; `more_places` artifact ids as follow-up; other T-025/T-027 PDs accepted as built).
+**Next:** after T-028 merges, dispatch T-029 and T-026, then T-022.
+
 ## 2026-10-25 — dispatcher stands down; T-025 and T-027 workers in flight
 **Summary:** After the D-059…D-062 decisions (6b30778), the dispatcher created worktrees and launched DeepSeek workers for T-025 (remove withdrawal) and T-027 (More places to ask). The founder then said review and planning go to an outside conversation, so no review was dispatched and nothing was merged. T-026 and T-022 are not started. The dispatcher never writes code; workers did all of it. Nothing is pushed.
 **Files touched:** docs/STATUS.md (in-progress table, next action). Worker output lands only in their own branches.
