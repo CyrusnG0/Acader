@@ -83,3 +83,7 @@ Suite count: the previous merged main reported 898; this branch adds 12 golden-s
 ## Proposed decisions
 
 None.
+
+## Checker review
+
+**2026-10-25: passed; merged to main (ee7cc8a) and marked done (386f2cd).** D-055 is implemented; no proposed decisions. Full prototype suite on merged main after T-021 (9f5a874), fresh `--require-hashes` venv: **970 passed, 1 warning** (`ROOM_LLM=stub`, Python 3.14.5; CI covers 3.12). The historical files that still quote the old wording (T-010 preview, docs/research/nursing-walkthrough-protocol.md, older logs) are not changed here.

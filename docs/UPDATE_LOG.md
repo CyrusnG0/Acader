@@ -15,6 +15,14 @@ Template:
 ---
 
 
+## 2026-10-25 — Checker: T-020, T-021, T-024 merged
+**Summary:** T-020 (submit and compile orchestration with the D-054 retry cap) and T-024 (drop "Written on N days", D-055) were merged earlier (a76b567, ee7cc8a) and marked done in 386f2cd; their tracking entries are written here. T-021 (release cap and transactional withdrawal, branch `task/T-021-release-withdrawal`, 3 commits) merged as 9f5a874. Opus review sent T-021 back once: (a) no test covered the withdraw tenant check on its own; (b) the school-side tombstone stored the student's free-text withdrawal reason, against receipt.md §7 and law 7. Both fixed in 0b841d7 and re-verified by mutation. Reviewer-recommended engineering proposals recorded as D-058; founder proposals and follow-ups opened as loops. T-022 now blocked only on OL-049.
+**Files touched:** docs/TASKS.md, STATUS.md, UPDATE_LOG.md, OPEN_LOOPS.md, DECISIONS.md, CHANGELOG.md; Checker review sections in docs/handoffs/2026-10-25-T-020-compile-jobs.md, -T-021-release-withdrawal.md, -T-024-drop-written-days.md.
+**Validation:** checker re-ran the full prototype suite from a fresh `--require-hashes` venv on merged main 9f5a874: 970 passed, 1 warning (`ROOM_LLM=stub`, Python 3.14.5; CI covers 3.12). Docs-only session after that.
+**Loops:** opened OL-052 ("Ready by" = cap time, PD-T021-2), OL-053 (nothing compiled by the cap leaves the record `compiling` indefinitely, PD-T021-3; real gap), OL-054 (removal after release refused with 409, PD-T021-5), OL-055 (alerts after withdrawal), OL-056 (runner `worker_id` and release handler wiring), OL-057 (invalid `ROOM_LLM_BACKEND` stops `create_app`). OL-050 extended with T-020 PD-1…7. None closed.
+**Decisions:** D-058 (release not a chain event; lifecycle opt-in, generic route 403 without it; idempotent withdrawal).
+**Next:** founder answers OL-049 so T-022 can start.
+
 ## 2026-10-25 — Checker: T-007/T-009/T-018/T-019 merged; founder answers recorded
 **Summary:** Independent review of the four branches; T-018 follow-ups and the T-019 shared-lock fix landed before merge. All four merged to main and marked done; merged main runs 898 prototype tests. Founder answers recorded as D-053…D-057; the retry cap changes T-019's built behaviour and is folded into T-020. provenance.md §5 aligned to §6; receipt.md summary examples drop the session count. New ticket T-024 drops "Written on N days".
 **Files touched:** docs/DECISIONS.md, STATUS.md, TASKS.md, OPEN_LOOPS.md, UPDATE_LOG.md, CHANGELOG.md; docs/tickets/{README.md,T-020-compile-jobs.md,T-024-drop-written-days.md}; four 2026-10-25 handoffs (Checker review sections); design/provenance.md §5, design/receipt.md §2/§8, design/README.md.

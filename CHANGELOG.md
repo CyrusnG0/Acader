@@ -6,6 +6,8 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-25: release cap and transactional withdrawal (`app/lifecycle.py`, `app/withdrawal.py`, `POST /logs/{id}/withdraw`; T-021, D-058); checker accepted.
+- 2026-10-25: submit and compile orchestration (`app/compile_jobs.py`: receipt v1 then v2, five-try retry cap with operator alert, startup reconcile; T-020, D-054); checker accepted.
 - 2026-10-25: durable receipt and AI-artifact storage (`app/receipt_store.py`, T-018) and bounded durable job queue (`app/jobs/`, T-019); checker accepted.
 - 2026-10-25: S3/S4 preregistration (`prototype/spikes/S3/`, `S4/`, T-007) and nursing walkthrough + blind-question preregistration (`docs/research/`, T-009); protocols only, nothing run.
 - 2026-10-25: ticket T-024 (drop "Written on N days"); T-020 ticket now carries the five-try retry cap (D-054).
@@ -31,6 +33,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 - 2026-10-23: `docs/designs/ceo-review-v1.md` (CEO review record, D-032); TODOS.md deferrals for v1.
 
 ### Changed
+- 2026-10-25: the receipt summary no longer says "Written on N days" or cites edit batches (T-024, D-055).
 - 2026-10-25: design/provenance.md §5 aligned to §6 on `added` propositions (D-056); design/receipt.md summary examples drop the session count (D-055).
 - 2026-10-25: golden logs register licensed reading metadata before student actions, so compiled receipts show the correct source count and reading titles (T-015 followup).
 - 2026-10-24: links to claims move from an inline mark to the paragraph (D-045); construction order and answer grading dropped as signals (D-046); spike decisions D-041…D-044 folded into design/ (event-log, provenance, receipt, workspace, reading-aid, coach-helper). M1 tasks T-011…T-017 on the board.

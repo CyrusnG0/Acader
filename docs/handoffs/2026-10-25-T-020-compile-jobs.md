@@ -164,4 +164,8 @@ Results, same environment as above:
 
 ## Checker review
 
-_Pending. Only the checker merges, marks done and updates shared tracking._
+**2026-10-25: passed; merged to main (a76b567) and marked done (386f2cd).**
+
+- The coordinator's review found the startup and questions `reconcile()` paths untested; closed by tests in cd7b1ff, each checked against a deliberate break (see Review follow-up).
+- Full prototype suite on merged main after T-021 (9f5a874), fresh `--require-hashes` venv: **970 passed, 1 warning** (`ROOM_LLM=stub`, Python 3.14.5; CI covers 3.12).
+- PD-T020-1…7 are not yet decided; added to OL-050. The startup failure on an invalid `ROOM_LLM_BACKEND` is open as OL-057.

@@ -219,4 +219,8 @@ passed** (same commands/environment above).
 
 ## Checker review
 
-_Pending. Only the checker merges, marks done and updates shared tracking._
+**2026-10-25: passed; merged to main as 9f5a874 and marked done.**
+
+- Opus review sent the branch back once: (a) no test covered the withdraw tenant check on its own; (b) the school-side tombstone stored the student's free-text reason, against receipt.md §7 and law 7. Both fixed in 0b841d7 and re-verified by mutation (see Review follow-up).
+- Checker re-ran the full prototype suite from a fresh `--require-hashes` venv on merged main: **970 passed, 1 warning** (`ROOM_LLM=stub`, Python 3.14.5; CI covers 3.12).
+- PD-T021-1, 4, 6 accepted as D-058. PD-T021-2, 3, 5 go to the founder as OL-052, OL-053 (a real gap: the record stays `compiling` indefinitely if nothing compiled by the cap), OL-054. Follow-ups opened: OL-055 (alerts after withdrawal), OL-056 (runner `worker_id` and release handler wiring).
