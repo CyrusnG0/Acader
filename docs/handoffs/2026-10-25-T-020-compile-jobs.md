@@ -131,6 +131,37 @@ I made each temporary edit, ran the two test files, then restored the file. `git
 - **PD-T020-6: a permanent failure also alerts.** `on_failed` fires for every terminal failure (cap, permanent error, missing handler), not only at the cap. *Recommend:* accept.
 - **PD-T020-7: the "Written on N days" overlap.** The removal belongs to T-024 (D-055), so I dropped it from this branch. *Recommend:* run T-024 as ticketed.
 
+## Review follow-up (2026-10-25): reconcile paths tested
+
+The coordinator's review found two untested paths: startup `reconcile()` in `main.py`, and the questions branch of `reconcile()`. Commit `cd7b1ff` closes both with tests only, written by a DeepSeek worker. No behaviour changed: `git diff` on `prototype/server/app` is empty for that commit.
+
+Three tests were added to `tests/test_compile_jobs.py`:
+
+- `test_startup_reconcile_schedules_a_seal_committed_without_a_job`:
+  1. A file DB holds a seal that was committed with no `CompileJobs` attached.
+  2. `create_app` is built, and before its lifespan no compile job exists.
+  3. Entering `TestClient` creates exactly one queued `receipt.compile` job.
+- `test_reconcile_schedules_questions_for_a_pending_v1_without_v2`:
+  1. v1 is issued and its questions job row is removed.
+  2. `reconcile()` creates exactly one `receipt.questions` job.
+  3. A second `reconcile()` creates nothing.
+  4. Once v2 is stored, `reconcile()` creates no questions job.
+- `test_reconcile_recovers_an_expired_lease`: a claimed compile job whose lease has expired is `queued` again with no lease after `reconcile()`. The test does not call `claim()` before asserting, because `claim()` also recovers expired leases.
+
+I checked each test against a deliberate break, using my own script. Each break restored the file afterwards, and `git status` was clean.
+
+| Break | Test that failed |
+|---|---|
+| `app.state.jobs.reconcile()` → `pass` in `main.py` | 1 failed: `test_startup_reconcile_schedules_a_seal_committed_without_a_job` |
+| `self.queue.recover_expired()` removed from `reconcile()` | 1 failed: `test_reconcile_recovers_an_expired_lease` |
+| `continue` at the top of the pending-v1 loop in `reconcile()` | 1 failed: `test_reconcile_schedules_questions_for_a_pending_v1_without_v2` |
+
+Results, same environment as above:
+
+- `cd prototype && ROOM_LLM=stub .venv/bin/python -m pytest -q server/tests/test_compile_jobs.py` → **19 passed** (run 3 times)
+- `cd prototype && ROOM_LLM=stub .venv/bin/python -m pytest -q` → **935 passed, 1 warning**
+- `cd writing-room-kit && ROOM_LLM=stub python3 -m pytest -q v04/tests web/tests` → **29 passed, 2 warnings**
+
 ## Checker review
 
 _Pending. Only the checker merges, marks done and updates shared tracking._
