@@ -700,7 +700,7 @@ def test_cancel_by_log_fences_queued_and_running_jobs(queue):
     running = queue.claim(worker_id="w3")
     assert running.log_id == "L1"
 
-    assert queue.cancel_by_log("L1", reason="record.withdrawn") == 2
+    assert queue.cancel_by_log("L1", reason="cancelled_by_operator") == 2
     assert queue.get(running.id).state == "cancelled"
     assert queue.get(done_job.id).state == "done"
     assert queue.get(other_log.id).state == "running"  # another log is untouched
@@ -715,7 +715,7 @@ def test_cancel_by_log_can_join_a_caller_transaction(queue, db):
     queue.enqueue("l3", idempotency_key="c2", log_id="L1")
 
     db.execute("BEGIN IMMEDIATE")
-    assert queue.cancel_by_log("L1", reason="record.withdrawn", conn=db) == 2
+    assert queue.cancel_by_log("L1", reason="cancelled_by_operator", conn=db) == 2
     db.execute("ROLLBACK")
 
     assert queue.stats()["counts"]["queued"] == 2
@@ -725,7 +725,7 @@ def test_cancel_by_log_can_join_a_caller_transaction(queue, db):
 def test_cancel_by_log_can_select_kinds(queue):
     queue.enqueue("compile", idempotency_key="c1", log_id="L1")
     queue.enqueue("l3", idempotency_key="c2", log_id="L1")
-    assert queue.cancel_by_log("L1", kinds=["l3"], reason="record.withdrawn") == 1
+    assert queue.cancel_by_log("L1", kinds=["l3"], reason="cancelled_by_operator") == 1
     job = queue.enqueue("compile", idempotency_key="c1", log_id="L1")
     assert job.state == "queued"
     other = queue.enqueue("l3", idempotency_key="c2", log_id="L1")
@@ -822,7 +822,7 @@ def test_runner_fails_a_job_with_no_handler(queue):
 
 def test_runner_publish_after_cancel_is_discarded(queue):
     def handler(job):
-        queue.cancel_by_log("L1", reason="record.withdrawn")
+        queue.cancel_by_log("L1", reason="cancelled_by_operator")
         return {"lesson": "too late"}
 
     queue.enqueue("compile", idempotency_key="k1", log_id="L1")

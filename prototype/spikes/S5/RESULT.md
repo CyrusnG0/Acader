@@ -7,7 +7,7 @@ Date: 2026-10-24 · Task: T-005 · Spec: [design/event-log.md](../../../design/e
 ## What was built (`prototype/server/engine/events/`, no FastAPI import)
 
 - `canonical.py`: canonical JSON (UTF-8, sorted keys, no whitespace) that **refuses floats** anywhere, and sha256.
-- `chain.py`: genesis `prev_hash = sha256("writing-room/" + log_id)`; `hash = sha256(prev_hash || canonical_json(envelope without hash))`; the post-seal whitelist (`receipt.issued`, `note.add`, `link.add`, `record.withdrawn`, `resubmit.open`); `build_event` refuses a non-whitelisted type on a sealed log (`SealedError`, the 409).
+- `chain.py`: genesis `prev_hash = sha256("writing-room/" + log_id)`; `hash = sha256(prev_hash || canonical_json(envelope without hash))`; the post-seal whitelist (`receipt.issued`, `note.add`, `link.add`, `resubmit.open`); `build_event` refuses a non-whitelisted type on a sealed log (`SealedError`, the 409). D-062 later removed the student removal event from the whitelist.
 - `store.py`: SQLite append under `BEGIN IMMEDIATE`, primary key `(log_id, seq)`, `client_seq` dedupe on retry. No staging or 5-minute merge (that is M1).
 - `verify.py`: `verify(events, seal, receipt=None, artifacts=None)` checks the chain (genesis, gap-free seq from 0, links, recomputed hashes, one `log_id`), that the seal is the hash of a `submit`, the post-seal whitelist (with a resubmission window from `resubmit.open` to the next `submit`), and, when given, stored AI outputs and receipt citations.
 - CLI: `python -m engine verify LOG.jsonl SEAL [--receipt R.json] [--artifacts A.json]` (exit 0 ok, 1 with the problems on stderr). The endpoint is left to M1.

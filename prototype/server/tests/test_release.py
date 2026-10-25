@@ -1,4 +1,4 @@
-"""Release boundaries and transactional withdrawal (T-021; receipt.md §7, D10).
+"""Release boundaries and refusal of the removed withdrawal path (T-021, T-025; D-062).
 
 Every test uses ROOM_LLM=stub, an injected clock and in-memory SQLite. No test sleeps and no
 test contacts a provider. The identities below are synthetic constructor arguments; they are
@@ -9,16 +9,14 @@ from datetime import datetime, timedelta, timezone
 import pytest
 from fastapi.testclient import TestClient
 
-from app.compile_jobs import (KIND_COMPILE, KIND_QUESTIONS, RECEIPT_V1, RECEIPT_V2,
-                              CompileJobs)
+from app.compile_jobs import KIND_QUESTIONS, RECEIPT_V1, RECEIPT_V2, CompileJobs
 from app.compile_service import list_alerts
 from app.events_service import EventService
-from app.jobs import JobQueue, JobRunner, LeaseLost
-from app.lifecycle import (AccessDenied, AfterRelease, Identity, PHASE_BASE, PHASE_CAP,
-                           RecordScope, ReceiptLifecycle, release_key)
+from app.jobs import JobQueue, JobRunner
+from app.lifecycle import (AccessDenied, Identity, PHASE_BASE, PHASE_CAP, RecordScope,
+                           ReceiptLifecycle, release_key)
 from app.main import create_app
 from app.receipt_service import llm_ask
-from app.withdrawal import RecordWithdrawn
 from engine.receipt import LLMUnavailable
 from tests.test_receipt_compile import FIXED_STAMP
 from tests.test_receipt_store import build_log
@@ -30,9 +28,7 @@ TENANT = "tenant-1"
 OWNER = "student-1"
 TEACHER = Identity(TENANT, "teacher")
 STUDENT = Identity(TENANT, "student", OWNER)
-STUDENT_OTHER = Identity(TENANT, "student", "student-2")
 TENANT2_TEACHER = Identity("tenant-2", "teacher")
-TENANT2_STUDENT = Identity("tenant-2", "student", "student-2")
 
 
 @pytest.fixture(autouse=True)
@@ -113,10 +109,6 @@ def issued_versions(svc, log_id=LOG):
     return [e["payload"]["version"] for e in svc.events(log_id)
             if e["type"] == "receipt.issued"]
 
-
-def job_states(jobs):
-    return {r[1]: r[0] for r in jobs.queue.db.execute(
-        "SELECT state, kind FROM jobs ORDER BY id")}
 
 
 def test_deadline_later_than_24h_sets_base_and_release_waits_for_it():
@@ -331,160 +323,6 @@ def test_lifecycle_refuses_a_queue_that_does_not_share_the_event_lock():
     svc.close()
 
 
-# ---------------------------------------------------------------- withdrawal
-def test_withdrawal_cancels_work_deletes_unreleased_outputs_and_keeps_submitted_work():
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    jobs.run_until_idle(max_jobs=1)  # v1 stored, questions queued
-    seal = submit_event(svc)["hash"]
-    assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1) is not None
-
-    result = lifecycle.withdraw(STUDENT, LOG, reason="changed my mind")
-    assert result["status"] == "record_removed" and result["replayed"] is False
-    assert result["event"]["type"] == "record.withdrawn"
-    assert result["event"]["payload"] == {"reason": "changed my mind"}
-
-    assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1) is None
-    assert lifecycle.receipts.artifacts(LOG) == {}
-    assert not ({r[0] for r in jobs.queue.db.execute(
-        "SELECT state FROM jobs")} & {"queued", "running"})
-    tomb = lifecycle._tombstone(LOG)
-    assert tomb is not None and tomb["withdrawn_at"] == result["withdrawn_at"]
-    assert all(r[0] is not None for r in svc.db.execute(
-        "SELECT withdrawn_at FROM release_records WHERE log_id = ?", (LOG,)))
-    # Submitted work stays submitted, and the withdrawal is a whitelisted post-seal event.
-    assert [e["type"] for e in svc.events(LOG)].count("submit") == 1
-    assert svc.verify(LOG)["ok"] is True
-    assert lifecycle.teacher_view(TEACHER, LOG) == {
-        "status": "record_removed", "withdrawn_at": result["withdrawn_at"]}
-
-
-def test_repeated_withdrawal_is_idempotent_and_keeps_one_event():
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    first = lifecycle.withdraw(STUDENT, LOG, reason="first")
-    events_after_first = [e["type"] for e in svc.events(LOG)]
-
-    second = lifecycle.withdraw(STUDENT, LOG, reason="second")
-
-    assert second["replayed"] is True
-    assert second["withdrawn_at"] == first["withdrawn_at"]
-    assert second["event"]["hash"] == first["event"]["hash"]
-    # The reason lives only in the student's chain event, never in the school-side tombstone.
-    assert "reason" not in lifecycle._tombstone(LOG)
-    columns = {row[1] for row in svc.db.execute("PRAGMA table_info(record_tombstones)")}
-    assert "reason" not in columns
-    assert first["event"]["payload"]["reason"] == "first"
-    assert [e["type"] for e in svc.events(LOG)] == events_after_first
-    assert [e["type"] for e in svc.events(LOG)].count("record.withdrawn") == 1
-
-
-def test_a_running_compile_cannot_publish_after_withdrawal():
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    claimed = jobs.queue.claim(worker_id="worker-a")
-    assert claimed.kind == KIND_COMPILE
-
-    lifecycle.withdraw(STUDENT, LOG)
-    assert jobs.queue.get(claimed.id).state == "cancelled"
-
-    with pytest.raises(RecordWithdrawn):
-        jobs.handle_compile(claimed)
-    assert lifecycle.receipts.get(LOG) is None
-    assert lifecycle.receipts.artifacts(LOG) == {}
-    with pytest.raises(LeaseLost):
-        jobs.queue.complete(claimed, {"late": True})
-
-
-def test_partial_question_outputs_cannot_be_stored_after_withdrawal():
-    clock = Clock()
-    calls = {"n": 0}
-
-    def one_then_down(messages):
-        calls["n"] += 1
-        if calls["n"] == 2:
-            raise LLMUnavailable("down")
-        return llm_ask(messages)
-
-    svc, jobs, lifecycle, _ = make_system(clock, ask=one_then_down)
-    build_log(svc, clock, LOG)
-    jobs.run_until_idle(max_jobs=1)  # v1; questions job queued
-    questions_id = jobs.queue.db.execute(
-        "SELECT id FROM jobs WHERE kind = ?", (KIND_QUESTIONS,)).fetchone()[0]
-    questions_job = jobs.queue.get(questions_id)
-
-    lifecycle.withdraw(STUDENT, LOG)
-    assert lifecycle.receipts.artifacts(LOG) == {}
-
-    with pytest.raises(RecordWithdrawn):
-        jobs.handle_questions(questions_job)
-    assert lifecycle.receipts.artifacts(LOG) == {}
-
-
-def test_a_running_release_cannot_publish_after_withdrawal():
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    jobs.run_until_idle(max_jobs=1)  # v1 and a queued questions job
-
-    clock.t = parse(record(lifecycle)["base_at"])
-    claimed = jobs.queue.claim(worker_id="worker-release")
-    assert claimed.kind == "receipt.release"
-
-    lifecycle.withdraw(STUDENT, LOG)
-    assert lifecycle.handle_release(claimed) == {"status": "withdrawn"}
-    assert record(lifecycle)["released_at"] is None
-    with pytest.raises(LeaseLost):
-        jobs.queue.complete(claimed, {"late": True})
-
-
-def test_withdrawal_rolls_back_atomically_when_cancellation_fails(monkeypatch):
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    jobs.run_until_idle(max_jobs=1)
-    seal = submit_event(svc)["hash"]
-    before = lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1)
-    queued = job_states(jobs)
-
-    def boom(*args, **kwargs):
-        raise RuntimeError("cancellation failed")
-
-    monkeypatch.setattr(lifecycle.queue, "cancel_by_log", boom)
-    with pytest.raises(RuntimeError):
-        lifecycle.withdraw(STUDENT, LOG)
-
-    assert not [e for e in svc.events(LOG) if e["type"] == "record.withdrawn"]
-    assert lifecycle._tombstone(LOG) is None
-    after = lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1)
-    assert after is not None and after.body == before.body
-    assert job_states(jobs) == queued
-    assert all(r[0] is None for r in svc.db.execute(
-        "SELECT withdrawn_at FROM release_records WHERE log_id = ?", (LOG,)))
-
-
-def test_after_release_withdrawal_is_refused_without_changes():
-    clock = Clock()
-    svc, jobs, lifecycle, _ = make_system(clock)
-    build_log(svc, clock, LOG)
-    jobs.run_until_idle()
-    clock.t = parse(record(lifecycle)["base_at"])
-    lifecycle.handle_release(release_job(jobs, lifecycle, PHASE_BASE))
-    seal = submit_event(svc)["hash"]
-    events_before = [e["type"] for e in svc.events(LOG)]
-
-    with pytest.raises(AfterRelease):
-        lifecycle.withdraw(STUDENT, LOG)
-
-    assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V2) is not None
-    assert lifecycle._tombstone(LOG) is None
-    assert [e["type"] for e in svc.events(LOG)] == events_before
-    assert {r[0] for r in svc.db.execute("SELECT state FROM jobs")} != {"cancelled"}
-
-
 # ---------------------------------------------------------------- scoping
 def test_cross_log_and_cross_tenant_access_is_rejected():
     clock = Clock()
@@ -495,112 +333,55 @@ def test_cross_log_and_cross_tenant_access_is_rejected():
     jobs.run_until_idle()
 
     with pytest.raises(AccessDenied):
-        lifecycle.withdraw(TENANT2_STUDENT, LOG)
-    with pytest.raises(AccessDenied):
-        lifecycle.withdraw(Identity("tenant-2", "student", OWNER), LOG)  # same owner, other tenant
-    with pytest.raises(AccessDenied):
-        lifecycle.withdraw(STUDENT_OTHER, LOG)
-    with pytest.raises(AccessDenied):
-        lifecycle.withdraw(Identity(TENANT, "teacher", OWNER), LOG)
-    with pytest.raises(AccessDenied):
         lifecycle.teacher_view(TENANT2_TEACHER, LOG)
     with pytest.raises(AccessDenied):
         lifecycle.teacher_view(STUDENT, LOG)  # a student does not get the teacher view
     with pytest.raises(AccessDenied):
         lifecycle.teacher_view(TENANT2_TEACHER, "no-such-log")
 
-    lifecycle.withdraw(STUDENT, LOG)
-    assert lifecycle._tombstone(LOG) is not None
-    assert lifecycle._tombstone(LOG2) is None
     seal2 = submit_event(svc, LOG2)["hash"]
     assert lifecycle.receipts.get(LOG2, seal_hash=seal2, version=RECEIPT_V1) is not None
     assert lifecycle.teacher_view(TENANT2_TEACHER, LOG2)["status"] == "compiling"
 
 
 # ---------------------------------------------------------------- routes
-def make_app(clock, *, identity_for=None, deadlines=None, scopes=None):
+def make_app(clock, *, deadlines=None, scopes=None):
     providers = Providers(deadlines, scopes)
     return create_app(":memory:", clock, sources_for=lambda log_id: make_sources(),
                       deadline_for=providers.deadline_for, scope_for=providers.scope_for,
-                      identity_for=identity_for, start_job_loop=False,
-                      enable_lifecycle=True)
+                      start_job_loop=False, enable_lifecycle=True)
 
 
-def test_generic_events_route_cannot_bypass_cancellation_and_deletion():
+def test_withdrawal_route_is_gone():
     clock = Clock()
-    app = make_app(clock, identity_for=lambda log_id: STUDENT)
+    app = make_app(clock)
+    with TestClient(app) as client:
+        build_log(app.state.events, clock, LOG)
+        response = client.post(f"/logs/{LOG}/withdraw", json={"reason": "my choice"})
+        assert response.status_code == 404
+
+
+def test_generic_events_route_refuses_withdrawal_after_the_seal():
+    clock = Clock()
+    app = make_app(clock)
     with TestClient(app) as client:
         svc, jobs = app.state.events, app.state.jobs
         lifecycle = app.state.lifecycle
         build_log(svc, clock, LOG)
         jobs.run_until_idle(max_jobs=1)
         seal = submit_event(svc)["hash"]
+        before = [e["type"] for e in svc.events(LOG)]
+        states = sorted(r[0] for r in jobs.queue.db.execute("SELECT state FROM jobs"))
 
         response = client.post(f"/logs/{LOG}/events",
                                json={"type": "record.withdrawn",
                                      "payload": {"reason": "changed my mind"}})
-        assert response.status_code == 200, response.text
-        assert response.json()["event"]["type"] == "record.withdrawn"
-        assert [e["type"] for e in svc.events(LOG)].count("record.withdrawn") == 1
-        assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1) is None
-        assert lifecycle._tombstone(LOG) is not None
-        assert not ({r[0] for r in jobs.queue.db.execute(
-            "SELECT state FROM jobs")} & {"queued", "running"})
-        assert svc.verify(LOG)["ok"] is True
 
-
-def test_generic_events_route_fails_closed_without_lifecycle():
-    clock = Clock()
-    app = create_app(":memory:", clock, sources_for=lambda log_id: make_sources(),
-                     start_job_loop=False, enable_lifecycle=False)
-    with TestClient(app) as client:
-        svc = app.state.events
-        build_log(svc, clock, LOG)
-
-        response = client.post(f"/logs/{LOG}/events",
-                               json={"type": "record.withdrawn", "payload": {}})
-        assert response.status_code == 403, response.text
-        assert response.json() == {"error": "access_denied"}
-        assert not [e for e in svc.events(LOG) if e["type"] == "record.withdrawn"]
-
-
-def test_dedicated_withdrawal_route_and_fail_closed_identity():
-    clock = Clock()
-    app = make_app(clock, identity_for=lambda log_id: STUDENT)
-    with TestClient(app) as client:
-        svc, jobs = app.state.events, app.state.jobs
-        build_log(svc, clock, LOG)
-        response = client.post(f"/logs/{LOG}/withdraw", json={"reason": "my choice"})
-        assert response.status_code == 200, response.text
-        assert response.json()["status"] == "record_removed"
-        assert response.json()["replayed"] is False
-        assert app.state.lifecycle._tombstone(LOG) is not None
-
-    no_identity = make_app(Clock(), identity_for=None)
-    with TestClient(no_identity) as client:
-        response = client.post(f"/logs/{LOG}/withdraw", json={})
-        assert response.status_code == 403
-        assert response.json() == {"error": "access_denied"}
-
-
-def test_withdrawal_route_after_release_returns_after_release():
-    clock = Clock()
-    app = make_app(clock, identity_for=lambda log_id: STUDENT)
-    with TestClient(app) as client:
-        svc, jobs = app.state.events, app.state.jobs
-        lifecycle = app.state.lifecycle
-        build_log(svc, clock, LOG)
-        jobs.run_until_idle()
-        clock.t = parse(record(lifecycle)["base_at"])
-        JobRunner(jobs.queue, {**jobs.handlers(), **lifecycle.handlers()},
-                  worker_id="release").run_until_idle()
-        seal = submit_event(svc)["hash"]
-
-        response = client.post(f"/logs/{LOG}/withdraw", json={})
         assert response.status_code == 409, response.text
-        assert response.json() == {"error": "after_release"}
-        assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V2) is not None
-        assert lifecycle._tombstone(LOG) is None
+        assert response.json() == {"error": "sealed"}
+        assert [e["type"] for e in svc.events(LOG)] == before
+        assert sorted(r[0] for r in jobs.queue.db.execute("SELECT state FROM jobs")) == states
+        assert lifecycle.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1) is not None
 
 
 def test_release_loop_runs_release_jobs_through_the_app_runner():

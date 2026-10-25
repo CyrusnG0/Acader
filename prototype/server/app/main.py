@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app(db_path: str | None = None, clock=None, *, sources_for=None,
-               start_job_loop=None, deadline_for=None, scope_for=None, identity_for=None,
+               start_job_loop=None, deadline_for=None, scope_for=None,
                enable_lifecycle=None) -> FastAPI:
     app = FastAPI(lifespan=lifespan)
     path = db_path if db_path is not None else os.environ.get("ROOM_DB_PATH", ":memory:")
@@ -53,10 +53,9 @@ def create_app(db_path: str | None = None, clock=None, *, sources_for=None,
     # Every submit schedules durable work, even when no source text is configured yet.
     app.state.jobs = CompileJobs(app.state.events,
                                  sources_for=sources_for or _unconfigured)
-    app.state.identity_for = identity_for
-    # Release and withdrawal need a deadline and record scope. Until an assignment/roster
-    # layer supplies them, the lifecycle is attached only when the app is given them (or
-    # explicitly asked). Existing apps keep the previous compile-only scheduling.
+    # Release needs a deadline and record scope. Until an assignment/roster layer supplies
+    # them, the lifecycle is attached only when the app is given them (or explicitly asked).
+    # Existing apps keep the previous compile-only scheduling.
     wanted = enable_lifecycle
     if wanted is None:
         wanted = deadline_for is not None or scope_for is not None

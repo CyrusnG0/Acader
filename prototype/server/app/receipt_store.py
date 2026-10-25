@@ -6,15 +6,14 @@ transactions as the event log. A stored receipt is immutable: `(log_id, seal_has
 names one receipt and its hash is checked against its canonical bytes on every read.
 
 Transaction conventions match `app/events_service.py`:
-- `store_in_tx`, `delete_log_in_tx` and `get`/`artifacts` do not begin or commit a transaction.
-  An event append and the rows it describes must share the caller's `BEGIN IMMEDIATE`.
-- `store` and `delete_log` are convenience wrappers that open their own transaction.
+- `store_in_tx` and `get`/`artifacts` do not begin or commit a transaction. An event append
+  and the rows it describes must share the caller's `BEGIN IMMEDIATE`.
+- `store` is a convenience wrapper that opens its own transaction.
 - No transaction is held while the compiler calls a model; `issue_receipt` compiles first,
   then writes the receipt, its artifacts and `receipt.issued` together.
 
-Reads and deletes are always scoped by `log_id`, so one student's stored outputs can never be
-read for, or removed with, another's. `delete_log_in_tx` is the hook for later withdrawal
-(T-021): it can run inside the caller's transaction that also appends `record.withdrawn`.
+Reads are always scoped by `log_id`, so one student's stored outputs can never be read for
+another's. There is no deletion path: students cannot remove the process record (D-062).
 """
 from __future__ import annotations
 
@@ -325,31 +324,6 @@ class ReceiptStore:
             created = self.store_in_tx(log_id, **kwargs)
             self.db.execute("COMMIT")
             return created
-        except BaseException:
-            self.db.execute("ROLLBACK")
-            raise
-
-    # ---- deletion -------------------------------------------------------------------------
-
-    def delete_log_in_tx(self, log_id: str) -> int:
-        """Delete this log's receipts and artifacts inside the caller's transaction.
-
-        No commit here, so a withdrawal event and the deletion can commit together. The
-        event chain itself is never touched.
-        """
-        deleted = 0
-        for table in ("receipts", "receipt_artifacts"):
-            cur = self.db.execute(f"DELETE FROM {table} WHERE log_id = ?", (log_id,))
-            deleted += cur.rowcount
-        return deleted
-
-    def delete_log(self, log_id: str) -> int:
-        """`delete_log_in_tx` in a transaction owned by this call."""
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
-            deleted = self.delete_log_in_tx(log_id)
-            self.db.execute("COMMIT")
-            return deleted
         except BaseException:
             self.db.execute("ROLLBACK")
             raise

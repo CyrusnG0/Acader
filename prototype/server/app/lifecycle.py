@@ -1,4 +1,4 @@
-"""Receipt release and transactional withdrawal (receipt.md §7; architecture.md §3; D10).
+"""Receipt release (receipt.md §7; architecture.md §3; D10, D-062).
 
 Release rule
 ------------
@@ -21,15 +21,9 @@ returned.
 Release is not an event: the post-seal whitelist (event-log.md §6) does not include one, so
 release state lives in the lifecycle table. The receipt stays sealed and verifiable.
 
-Withdrawal
-----------
-:meth:`ReceiptLifecycle.withdraw` runs one caller-owned ``BEGIN IMMEDIATE`` transaction that
-appends ``record.withdrawn``, cancels every queued and running job for the log, deletes the
-log's unreleased receipts and stored outputs, writes the teacher-side tombstone and marks the
-release records. A running worker checks :mod:`app.withdrawal` inside its own publication
-transaction, so a receipt or artifact cannot be written after the withdrawal commits.
-Submitted work (the event chain and snapshots) is never deleted, and withdrawal after release
-is refused with :class:`AfterRelease` rather than silently converted.
+Students cannot remove a submitted process record before or after release (D-062). The chain
+stays append-only and there is no deletion path here; the lifecycle only publishes release
+state.
 
 Every read and write is scoped by ``log_id`` and by an explicit :class:`Identity`
 (tenant + role + owner). Unknown records, unowned records and wrong roles fail closed with
@@ -48,7 +42,6 @@ from app.compile_service import ensure_alerts_table, insert_alert_in_tx
 from app.events_service import EventService
 from app.jobs import JobQueue, PermanentJobError, PRIORITY_NORMAL
 from app.receipt_store import ReceiptStore
-from app.withdrawal import is_withdrawn_in_tx
 from engine.events import ts_seconds
 
 KIND_RELEASE = "receipt.release"
@@ -76,23 +69,12 @@ CREATE TABLE IF NOT EXISTS release_records (
   released_at TEXT,
   released_version INTEGER,
   release_kind TEXT,
-  withdrawn_at TEXT,
   PRIMARY KEY (log_id, seal_hash)
-);
-CREATE TABLE IF NOT EXISTS record_tombstones (
-  log_id TEXT PRIMARY KEY,
-  seal_hash TEXT NOT NULL,
-  tenant_id TEXT,
-  owner_id TEXT,
-  withdrawn_at TEXT NOT NULL
 );
 """
 
 _RECORD_COLUMNS = ("log_id, seal_hash, tenant_id, owner_id, submit_at, deadline_at, base_at, "
-                   "cap_at, seal_seq, doc_rev, released_at, released_version, release_kind, "
-                   "withdrawn_at")
-
-_TOMBSTONE_COLUMNS = "log_id, seal_hash, tenant_id, owner_id, withdrawn_at"
+                   "cap_at, seal_seq, doc_rev, released_at, released_version, release_kind")
 
 
 class LifecycleError(Exception):
@@ -101,10 +83,6 @@ class LifecycleError(Exception):
 
 class AccessDenied(LifecycleError):
     """The identity or the log scope does not permit this operation (fail closed)."""
-
-
-class AfterRelease(LifecycleError):
-    """The record was already released; withdrawal is a different, unbuilt operation."""
 
 
 class LifecycleConflict(LifecycleError):
@@ -166,7 +144,7 @@ def _scope(value) -> RecordScope | None:
 
 
 class ReceiptLifecycle:
-    """Release scheduling and transactional withdrawal for sealed logs."""
+    """Release scheduling for sealed logs."""
 
     def __init__(self, service: EventService, *, queue: JobQueue,
                  receipts: ReceiptStore | None = None,
@@ -194,12 +172,7 @@ class ReceiptLifecycle:
     def _record(row) -> dict:
         keys = ("log_id", "seal_hash", "tenant_id", "owner_id", "submit_at", "deadline_at",
                 "base_at", "cap_at", "seal_seq", "doc_rev", "released_at",
-                "released_version", "release_kind", "withdrawn_at")
-        return dict(zip(keys, row))
-
-    @staticmethod
-    def _tombstone_row(row) -> dict:
-        keys = ("log_id", "seal_hash", "tenant_id", "owner_id", "withdrawn_at")
+                "released_version", "release_kind")
         return dict(zip(keys, row))
 
     def _release_row(self, log_id: str, seal_hash: str) -> dict | None:
@@ -213,12 +186,6 @@ class ReceiptLifecycle:
             f"SELECT {_RECORD_COLUMNS} FROM release_records WHERE log_id = ? "
             "ORDER BY seal_seq DESC LIMIT 1", (log_id,)).fetchone()
         return self._record(row) if row else None
-
-    def _tombstone(self, log_id: str) -> dict | None:
-        row = self.db.execute(
-            f"SELECT {_TOMBSTONE_COLUMNS} FROM record_tombstones WHERE log_id = ?",
-            (log_id,)).fetchone()
-        return self._tombstone_row(row) if row else None
 
     def _latest_receipt(self, log_id: str, seal_hash: str) -> tuple[int, dict] | None:
         row = self.db.execute(
@@ -269,7 +236,7 @@ class ReceiptLifecycle:
         """
         with self.service._lock:
             record = self._release_row(log_id, seal_hash)
-        if record is None or record["withdrawn_at"] is not None:
+        if record is None:
             return
         now = self.service.clock()
         try:
@@ -300,8 +267,6 @@ class ReceiptLifecycle:
         record = self._release_row(log_id, seal_hash)
         if record is None:
             raise PermanentJobError("release_record_missing")
-        if record["withdrawn_at"] is not None or is_withdrawn_in_tx(self.db, log_id):
-            return {"status": "withdrawn"}
         if record["released_at"] is not None:
             return {"status": "released", "released_at": record["released_at"],
                     "released_version": record["released_version"],
@@ -357,13 +322,8 @@ class ReceiptLifecycle:
         """The teacher-facing state. Before release it carries no receipt contents."""
         identity = _identity(identity)
         with self.service._lock:
-            tomb = self._tombstone(log_id)
-            if tomb is not None:
-                self._require_teacher(identity, tomb["tenant_id"])
-                return {"status": "record_removed", "withdrawn_at": tomb["withdrawn_at"]}
             record = self._latest_release_row(log_id)
-            if (record is None or record["withdrawn_at"] is not None
-                    or is_withdrawn_in_tx(self.db, log_id)):
+            if record is None:
                 raise AccessDenied("this identity cannot read that record")
             self._require_teacher(identity, record["tenant_id"])
             if record["released_at"] is None:
@@ -386,66 +346,3 @@ class ReceiptLifecycle:
                 "receipt": stored.receipt,
                 "late_questions": late,
             }
-
-    def is_withdrawn(self, log_id: str) -> bool:
-        """True when this log has a withdrawal event (used outside a transaction)."""
-        with self.service._lock:
-            return self._tombstone(log_id) is not None or is_withdrawn_in_tx(self.db, log_id)
-
-    # ---- withdrawal -----------------------------------------------------------------------
-
-    def withdraw(self, identity, log_id: str, *, reason: str | None = None) -> dict:
-        """Cancel work and remove the unreleased record atomically (D10).
-
-        The caller owns no transaction. A running worker's publication is blocked by
-        :func:`app.withdrawal.assert_not_withdrawn_in_tx`, which it calls inside its own
-        transaction.
-        """
-        identity = _identity(identity)
-        if identity.role != "student" or not identity.owner_id:
-            raise AccessDenied("only the student who owns the record can remove it")
-        if reason is not None and not isinstance(reason, str):
-            raise LifecycleConflict("reason must be text")
-        with self.service._lock, self.service._tx():
-            tomb = self._tombstone(log_id)
-            record = self._latest_release_row(log_id)
-            scope = tomb or record
-            if scope is None:
-                raise AccessDenied("this identity cannot remove that record")
-            if identity.tenant_id != scope["tenant_id"] or identity.owner_id != scope["owner_id"]:
-                raise AccessDenied("this identity cannot remove that record")
-            if tomb is not None:
-                event = self._withdrawal_event(log_id)
-                self.queue.cancel_by_log(log_id, reason="record.withdrawn", conn=self.db)
-                self.receipts.delete_log_in_tx(log_id)
-                return {"status": "record_removed", "withdrawn_at": tomb["withdrawn_at"],
-                        "replayed": True, "event": event}
-            released = self.db.execute(
-                "SELECT 1 FROM release_records WHERE log_id = ? AND released_at IS NOT NULL "
-                "LIMIT 1", (log_id,)).fetchone()
-            if released is not None:
-                raise AfterRelease("this record was already released; removal is a "
-                                   "different operation")
-            now_ts = ts_seconds(self.service.clock())
-            event = self.service.store.append_in_tx(
-                log_id, type="record.withdrawn", actor="student",
-                payload={"reason": reason} if reason else {}, ts=now_ts,
-                doc_rev=scope.get("doc_rev"))
-            self.queue.cancel_by_log(log_id, reason="record.withdrawn", conn=self.db)
-            self.receipts.delete_log_in_tx(log_id)
-            self.db.execute(
-                "INSERT INTO record_tombstones "
-                "(log_id, seal_hash, tenant_id, owner_id, withdrawn_at) "
-                "VALUES (?, ?, ?, ?, ?)",
-                (log_id, scope["seal_hash"], scope["tenant_id"], scope["owner_id"], now_ts))
-            self.db.execute(
-                "UPDATE release_records SET withdrawn_at = ? "
-                "WHERE log_id = ? AND withdrawn_at IS NULL", (now_ts, log_id))
-            return {"status": "record_removed", "withdrawn_at": now_ts,
-                    "replayed": False, "event": event}
-
-    def _withdrawal_event(self, log_id: str) -> dict | None:
-        row = self.db.execute(
-            "SELECT body FROM events WHERE log_id = ? AND type = 'record.withdrawn' "
-            "ORDER BY seq DESC LIMIT 1", (log_id,)).fetchone()
-        return json.loads(row[0]) if row else None

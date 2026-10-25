@@ -404,13 +404,14 @@ def test_whitelist_after_seal(clock):
     client, svc = sealed_client(clock)
     for t in ("note.add", "link.add"):
         assert post_ev(client, t).status_code == 200
-    # Withdrawal is whitelisted after the seal, but the HTTP route needs the lifecycle so
-    # that the event cannot be appended without cancelling work and deleting outputs
-    # (T-021, D10). With no lifecycle configured the route fails closed.
+    # Withdrawal was dropped from v1 (D-062). It is no longer whitelisted after the seal:
+    # the route returns 409 and the service refuses the append without writing anything.
     r = post_ev(client, "record.withdrawn")
-    assert r.status_code == 403 and r.json()["error"] == "access_denied"
-    ev = svc.append_event("L", type="record.withdrawn", actor="student", payload={})
-    assert ev["type"] == "record.withdrawn"
+    assert r.status_code == 409 and r.json()["error"] == "sealed"
+    before = len(svc.events("L"))
+    with pytest.raises(Conflict):
+        svc.append_event("L", type="record.withdrawn", actor="student", payload={})
+    assert len(svc.events("L")) == before
     for t in ("source.open", "card.create", "claim.edit"):
         r = post_ev(client, t)
         assert r.status_code == 409 and r.json()["error"] == "sealed"
