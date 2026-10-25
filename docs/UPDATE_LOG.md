@@ -14,6 +14,15 @@ Template:
 
 ---
 
+
+## 2026-10-25 — Checker accepts T-010/T-017 and publishes M2 pickup tickets
+**Summary:** Independently reviewed approved design promotion and actual twelve-receipt rendering/evidence navigation. No blocking findings in synthetic M1 scope. Accepted T-010/T-017 engineering work; human reading gate remains open. Added T-018/T-019 ready infrastructure tickets and blocked T-020…T-023 with file ownership, dependencies and checkable acceptance criteria.
+**Files touched:** docs/TASKS.md, STATUS.md, tickets/*, OPEN_LOOPS.md, DECISIONS.md, UPDATE_LOG.md, checker handoff, CHANGELOG.md; design/README.md, workspace.md, build-plan.md. T-010/T-017 implementation retained unchanged.
+**Validation:** Fresh independent prototype 840, web145 + typecheck/build, kit29; DESIGN parity/format and diff check pass. Local Python3.14.5/Node25.9.0; no new CI or browser run claimed. Prior browser221 checks remain attributed to implementation handoff.
+**Loops:** closed OL-048 by explicit T-021/T-022 ownership (features not yet implemented); opened OL-049 preview-order clarification; OL-047 remains pending.
+**Decisions:** D-052 records the founder's exact candidate approval already given.
+**Next:** worker claims T-018 or T-019; founder reads at least ten receipts separately.
+
 ## 2026-10-25 — Cold-worker tickets and pickup state
 **Summary:** Published repository-local tickets for all unfinished agent tasks, with inputs, outputs, scope, checks and review handoff. Released stale T-010 ownership for a new worker to resume the preserved proposal branch; T-007/T-009 are independently ready, T-017 remains blocked by T-010. Codex remains planner/checker. No feature implementation or new product approval.
 **Files touched:** docs/tickets/{README.md,T-007-preregistration.md,T-009-walkthrough.md,T-010-design-system.md,T-017-receipt-ui.md}, docs/TASKS.md, STATUS.md, OPEN_LOOPS.md, UPDATE_LOG.md, handoffs/README.md, CHANGELOG.md

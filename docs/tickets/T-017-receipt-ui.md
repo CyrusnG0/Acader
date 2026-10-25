@@ -1,5 +1,8 @@
 # T-017: receipt UI and chain view
 
+**Current status (2026-10-25): checker-accepted done. Do not claim again.** The brief below is retained as the implementation contract/history; superseded pickup and approval gates are resolved by D-052 and the [checker review](../handoffs/2026-10-25-T-010-T-017-checker.md). T-017 does not complete the separate M1 human reading gate.
+
+
 Blocked until T-010 and T-016 are checker-accepted done. Follow [pickup rules](README.md). This ticket is an execution brief; design docs remain authoritative.
 
 ## Then pickup: T-017 receipt UI and chain view

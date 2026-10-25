@@ -11,14 +11,16 @@ Status values: **validated** (tested) · **reviewed** (passed gstack review) · 
 | 2 | [event-log.md](event-log.md) | Event envelope and types, origin marks, batching, hash chain, sealing, who reads what | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
 | 3 | [provenance.md](provenance.md) | Chains, the claim map model, pipeline layers L0–L3, claim-level comparison, bands, signal register | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046; D-050 mechanics | 2026-10-25 |
 | 4 | [receipt.md](receipt.md) | Receipt layout, submissions list, chain view, question selection, wording filter, JSON format, student preview, P-15, nursing example | reviewed (CEO + eng + design; eng v2); D-041–D-046 | 2026-10-24 |
-| 4a | [workspace.md](workspace.md) | The student workspace and the live map: layout, map suggestions, states, trail toggle, widths, keyboard and screen readers | reviewed (design + eng v2); DESIGN.md pending; D-041–D-046 | 2026-10-24 |
+| 4a | [workspace.md](workspace.md) | The student workspace and the live map: layout, map suggestions, states, trail toggle, widths, keyboard and screen readers | reviewed (design + eng v2); DESIGN.md approved D-052; D-041–D-046 | 2026-10-25 |
 | 5 | [reading-aid.md](reading-aid.md) | Source origins, parsing into blocks, reading pins, reader actions, citation help | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
 | 6 | [coach-helper.md](coach-helper.md) | Helper vs Coach, policy modules, cases A–E, grounding, the Door, leak check, prompt hygiene | reviewed (CEO + eng; eng v2 2026-10-24); D-041–D-046 | 2026-10-24 |
 | 7 | [privacy.md](privacy.md) | Data inventory, provider question, consent text, student rights, pilot security | reviewed (CEO + eng); provider terms + school approval before real students | 2026-10-23 |
 | 8 | [evaluation.md](evaluation.md) | Spikes S1–S5, automated tests, golden receipts, pilot measures, nursing walkthrough | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
-| 9 | [build-plan.md](build-plan.md) | Milestones (re-baselined: engine + receipt + walkthrough ~11-08), cut lines, pilot gate | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-24 |
+| 9 | [build-plan.md](build-plan.md) | Milestones (re-baselined: engine + receipt + walkthrough ~11-08), cut lines, pilot gate | reviewed (CEO + eng; eng v2 2026-10-24) | 2026-10-25 |
 
 Review records: [../docs/designs/ceo-review-v1.md](../docs/designs/ceo-review-v1.md) (CEO-1 to CEO-24) [../docs/designs/eng-review-v1.md](../docs/designs/eng-review-v1.md) (D1 to D35) [../docs/designs/design-review-v1.md](../docs/designs/design-review-v1.md) (1A to 20A, D-036) and [../docs/designs/eng-review-v2.md](../docs/designs/eng-review-v2.md) (D1 to D21, D-037). Every decision in them is now written into the docs above; there are no override boxes.
+
+Presentation tokens: [DESIGN.md](../DESIGN.md), approved unchanged by the founder (D-052).
 
 ## Inputs these docs were built from
 

@@ -6,6 +6,8 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-25: approved DESIGN.md and twelve actual synthetic receipt views with sentence evidence navigation (T-010/T-017); checker accepted, human M1 reading still open.
+- 2026-10-25: executable worker tickets T-018…T-023 for storage, jobs, compile orchestration, lifecycle, preview and S3 harness, with separate ownership and dependency gates.
 - 2026-10-25: repository-local cold-worker tickets for T-007/T-009/T-010/T-017, claim/review instructions and refreshed pickup status; existing T-010 proposal preserved for resumption.
 - 2026-10-25: twelve executable golden sessions with real Chromium recordings, ingest/replay and receipt-compiler regression checks; CI regenerates recordings using pinned Playwright/Chromium (T-015).
 - 2026-10-24: receipt compiler (`engine/receipt/`, `app/receipt_service.py`): JSON receipt with integer counts, hash, question text via `complete()`, wording filter, "mechanics" count (T-016, D-050).

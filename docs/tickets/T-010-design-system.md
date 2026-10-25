@@ -1,5 +1,8 @@
 # T-010: resume and finalize the design system
 
+**Current status (2026-10-25): checker-accepted done. Do not claim again.** The brief below is retained as the implementation contract/history; superseded pickup and approval gates are resolved by D-052 and the [checker review](../handoffs/2026-10-25-T-010-T-017-checker.md). T-017 does not complete the separate M1 human reading gate.
+
+
 Ready for a new owner to resume. The prior codex-lead-T010 ownership has been released for pickup; the proposal work is preserved, not rejected or restarted.
 
 ## Starting point

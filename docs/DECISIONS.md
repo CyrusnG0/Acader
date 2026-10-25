@@ -312,3 +312,9 @@ Format: **D-xxx · date · title**. Context, then decision, then consequences.
 ### D-051 · 2026-10-24 · Golden set sources (T-008)
 - **Decision:** the golden corpus is three S2 papers (nursing, social science, CS, all CC BY 4.0) plus one Open Oregon textbook chapter (CC BY 4.0, original text only). OpenStax is excluded: its books are CC BY-NC-SA, and Biology 2e pages prohibit use in generative-AI offerings without written permission. Labels are `(paragraph_id, claim_id)` pairs (D-045). The 15 mapper-label seeds are drafts until a second person reviews them; holdout labels come from someone other than the prompt author (T-007 names that person).
 - **Consequences:** prototype/fixtures/{sources.yaml, README.md, mapper_seed_labels.yaml}; evaluation.md §2/§2a. Licence checks were read from the publisher pages by the T-008 lead on 2026-10-24; I did not re-check them, so confirm the licences before the corpus is used outside the repo.
+
+### D-052 · 2026-10-25 · Exact T-010 design candidate approved
+- **Context:** The founder answered “A — Approve exact candidate” and subsequently authorized T-017 to proceed on that candidate so both branches could be reviewed together.
+- **Decision:** Promote docs/designs/T-010-DESIGN.proposed.md unchanged to DESIGN.md. Approved tokens, Source Sans 3/Literata typography, focus, light/dark, patterns and motion rules govern receipt/workspace presentation.
+- **Validation:** Both files SHA256 `08a1c28cf47d36610d8e1dc6c069665fd7572b603f1359cc8f51f50e20267d18`; format validator passes. Checker accepted T-010/T-017 engineering scope, not the human M1 gate or outstanding T-015/T-016 proposals.
+- **Consequences:** design/workspace.md and design/build-plan.md no longer describe DESIGN.md as pending; index updated. Product intent and provenance rules unchanged.

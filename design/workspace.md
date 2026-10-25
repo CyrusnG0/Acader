@@ -1,6 +1,6 @@
 # The student workspace and the live map
 
-Status: **reviewed (design) 2026-10-24; DESIGN.md pending (/design-consultation, 13A)** · Last updated: 2026-10-24
+Status: **reviewed (design) 2026-10-24; DESIGN.md approved (D-052)** · Last updated: 2026-10-25
 Implements: D-035 (the live map is the product), laws 1–7 and 10; [reading-aid.md](reading-aid.md), [coach-helper.md](coach-helper.md), [receipt.md](receipt.md). Design review record: [docs/designs/design-review-v1.md](../docs/designs/design-review-v1.md).
 
 ## 1. Layout (design review 1A)

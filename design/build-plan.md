@@ -1,6 +1,6 @@
 # Build plan: prototype v1
 
-Status: **reviewed by /plan-ceo-review and /plan-eng-review 2026-10-23; re-baselined after the eng review (D25)** · Last updated: 2026-10-23
+Status: **reviewed by /plan-ceo-review and /plan-eng-review 2026-10-23; re-baselined after the eng review (D25)** · Last updated: 2026-10-25
 Implements: D-029, D-032, D-033, D-034 (CEO-1 to CEO-24 in [ceo-review-v1.md](../docs/designs/ceo-review-v1.md); D1 to D35 in [eng-review-v1.md](../docs/designs/eng-review-v1.md)).
 **Engine + receipt + nursing walkthrough ready: about 2026-11-08** (was 11-05; the eng review added about 8 build days, see §2). The writing UI follows around 11-14, human sessions around 11-17. Hosting is timed to the class's assignment window. Students start only when the pilot gate (§4) is green. §2a lists proposed ways to pull the milestone back toward 11-05; **none are applied**.
 
@@ -48,7 +48,7 @@ Build days are days with Claude; founder time for outreach, approvals and the wa
 | **H** | ~11-17 | 1 | **Human sessions (CEO-18):** 3–5 real people, ~500 words each; preregistered stop rule; **`mapper_enabled` off** so the stop rule measures the core flow (eng v2 D16) | Honest median untraced ≤ 40%, or stop and fix the flow |
 | **M5** | timed to the window | 3.25 (was 2.75) | Roster + magic link + email; consent; one machine in the consented region; SQLite backups + restore test (D3); monitoring + runbooks (D15); deploy-freeze rule; Playwright + axe; smoke test | Pilot gate green |
 
-**Design gate (design review 13A):** run /design-consultation to produce `DESIGN.md` (typefaces for draft/receipt text and UI, type scale, spacing, radius, focus ring, dark mode from the use scene) **before the receipt UI in M1 and before M3**. Until then the interim system is the demo.html tokens plus the rules in [workspace.md](workspace.md) and [receipt.md](receipt.md) (layout, band colours, motion, states).
+**Design gate (design review 13A): satisfied by T-010 / D-052.** The founder-approved [DESIGN.md](../DESIGN.md) now defines typography, scale, spacing, radius, focus and light/dark tokens. Receipt/workspace behavior still follows their design specs. T-017 engineering rendering is checker-accepted; the separate M1 person-reading gate remains open. T-018/T-019 synthetic infrastructure may proceed without representing that gate as complete.
 
 **Workspace design (D-036)** adds to M3/M4: the state table, trail toggle, widths incl. zoom mode, keyboard/screen-reader model and receipt layout (design-review-v1.md T2–T11) **[estimated: ~3–4 build days on top of the M3/M4 figures]**. With M4m (~4), the total rises to **≈ 35–36 build days**; M4m sits off the pilot-gate path (eng review v2, 2026-10-24). The line below is the D-034 baseline.
 
