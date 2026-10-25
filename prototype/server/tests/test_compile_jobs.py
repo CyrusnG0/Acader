@@ -9,8 +9,9 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
+import app.llm as app_llm
 from app.compile_jobs import (KIND_COMPILE, KIND_QUESTIONS, RECEIPT_V1, RECEIPT_V2, CompileJobs,
-                              compile_key)
+                              compile_key, questions_key)
 from app.compile_service import list_alerts
 from app.events_service import EventService
 from app.main import create_app
@@ -540,6 +541,73 @@ def test_a_non_retryable_compile_failure_writes_a_compile_failed_alert():
     assert detail["error_kind"] == "RuntimeError"
     assert detail["attempts"] == 1
     assert "unavailable" not in json.dumps(detail)  # never exception messages
+
+
+# ---- reconcile paths: startup, pending questions and lease recovery --------------------------
+def test_startup_reconcile_schedules_a_seal_committed_without_a_job(tmp_path, monkeypatch):
+    path = str(tmp_path / "room.db")
+    clock = Clock()
+    svc = EventService(path, clock)  # deliberately no CompileJobs attached
+    build_log(svc, clock, LOG)
+    seal = submit_event(svc)["hash"]
+    svc.close()
+
+    # The lifespan pings providers; keep it off the network even outside stub mode.
+    monkeypatch.setattr(app_llm, "ping_backends", lambda: [])
+    app = create_app(path, clock, sources_for=lambda log_id: make_sources(),
+                     start_job_loop=False)
+    assert not [r for r in jobs_table(app.state.jobs) if r[1] == KIND_COMPILE]
+
+    with TestClient(app):  # runs the lifespan, which reconciles
+        rows = [r for r in jobs_table(app.state.jobs) if r[1] == KIND_COMPILE]
+        assert [(r[2], r[3]) for r in rows] == [(compile_key(LOG, seal), "queued")]
+
+
+def test_reconcile_schedules_questions_for_a_pending_v1_without_v2():
+    clock = Clock()
+    svc = EventService(":memory:", clock)
+    jobs = make_jobs(svc)
+    build_log(svc, clock, LOG)
+    seal = submit_event(svc)["hash"]
+
+    jobs.run_until_idle(max_jobs=1)  # issue v1; its questions job is queued but not run
+    v1 = jobs.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V1)
+    assert v1 is not None and v1.receipt["questions_pending"] is True
+    assert jobs.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V2) is None
+
+    # Simulate a crash after v1 was issued but before the questions job survived.
+    jobs.queue.db.execute("DELETE FROM jobs WHERE kind = ?", (KIND_QUESTIONS,))
+    assert not [r for r in jobs_table(jobs) if r[1] == KIND_QUESTIONS]
+
+    assert jobs.reconcile() == 1
+    rows = [r for r in jobs_table(jobs) if r[1] == KIND_QUESTIONS]
+    assert [(r[2], r[3]) for r in rows] == [(questions_key(LOG, seal), "queued")]
+    assert jobs.reconcile() == 0
+    assert len([r for r in jobs_table(jobs) if r[1] == KIND_QUESTIONS]) == 1
+
+    # Once v2 is stored, the same missing row is not recreated.
+    jobs.run_until_idle()
+    assert jobs.receipts.get(LOG, seal_hash=seal, version=RECEIPT_V2) is not None
+    jobs.queue.db.execute("DELETE FROM jobs WHERE kind = ?", (KIND_QUESTIONS,))
+    assert jobs.reconcile() == 0
+    assert not [r for r in jobs_table(jobs) if r[1] == KIND_QUESTIONS]
+
+
+def test_reconcile_recovers_an_expired_lease():
+    clock = Clock()
+    svc = EventService(":memory:", clock)
+    jobs = make_jobs(svc)
+    build_log(svc, clock, LOG)
+
+    claimed = jobs.queue.claim(worker_id="worker-a")
+    assert claimed.kind == KIND_COMPILE and claimed.lease_token is not None
+
+    clock.advance(seconds=301)
+    assert jobs.reconcile() == 0
+    # Do not claim again: claim() recovers expired leases itself and would mask this.
+    recovered = jobs.queue.get(claimed.id)
+    assert recovered.state == "queued"
+    assert recovered.lease_token is None
 
 
 # ---- artifact storage helper ------------------------------------------------------------------
