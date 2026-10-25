@@ -120,6 +120,15 @@ def test_append_after_seal_is_refused_for_non_whitelisted(sealed):
     assert len(store.events(LOG)) == 6
 
 
+def test_store_refuses_withdrawal_after_the_seal(sealed):
+    """D-062 removed withdrawal; the store refuses it like any non-whitelisted event."""
+    store, _ = sealed
+    assert "record.withdrawn" not in POST_SEAL_WHITELIST
+    with pytest.raises(SealedError):
+        _append(store, "record.withdrawn", payload={"reason": "changed my mind"})
+    assert len(store.events(LOG)) == 6
+
+
 def test_client_seq_retry_is_deduplicated():
     s = EventStore()
     a = _append(s, "log.open", "system", client_seq=7)

@@ -49,7 +49,7 @@ Do not regenerate editor recordings for this UI-only change. Existing golden pro
 - Draft correspondence uses ProseMirror step maps, not paragraph order. A span whose boundaries cannot be mapped safely has an explicit unavailable-history note. Missing sentence IDs in historical snapshots, replaced/deleted boundaries and replay-mismatch copies are not guessed. Complete lineage through those cases would need an explicitly designed stable identity/mapping contract, outside this renderer.
 - Event references are real sequence IDs. Dates display only date/hour; no input timing is introduced. Diff snippets are from actual mapped spans; the display does not invent an original draft or a percentage of rewriting.
 - OL-047 remains open for the other T-015/T-016 proposals. D-055 removed the “Written on N days” clause; the renderer shows the compiled summary unchanged.
-- `Mark as discussed`, production student preview, withdrawal, release windows, persistence and jobs remain later implementation work. No inert control is presented as if it works.
+- `Mark as discussed`, production student preview, release windows, persistence and jobs remain later implementation work. No inert control is presented as if it works.
 - The human M1 reading gate is recorded separately in the task handoff. Do not treat an automated screenshot or an AI review as completion of that gate.
 
 ## Fonts

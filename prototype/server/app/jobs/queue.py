@@ -28,7 +28,7 @@ Design points T-020 and T-021 rely on:
   cannot be written.
 - **Cancellation.** ``cancel_by_log`` is a one-statement update that can join a caller-owned
   transaction. It fences running jobs too, so a result produced after cancellation is
-  rejected. T-021 uses this for ``record.withdrawn``.
+  rejected.
 - **Restart recovery.** ``recover_expired`` (also called at the start of every claim) returns
   expired ``running`` jobs to ``queued`` with ``run_after = now`` and no backoff. Lease
   recovery does not count toward the retry cap (D-054).
@@ -448,7 +448,7 @@ class JobQueue:
         """Cancel queued and running jobs for one log; return how many changed.
 
         Running jobs are fenced immediately, so a handler that finishes later cannot publish
-        its result. Pass ``conn`` to join a caller-owned transaction (T-021 withdrawal).
+        its result. Pass ``conn`` to join a caller-owned transaction.
         """
         if not isinstance(log_id, str) or not log_id:
             raise ValueError("log_id must be a non-empty string")

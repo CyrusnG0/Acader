@@ -323,7 +323,7 @@ def test_conflicting_receipt_under_the_same_key_is_rejected():
     assert stored.receipt == res.receipt
 
 
-# ---------------------------------------------------------------- isolation and deletion
+# ---------------------------------------------------------------- isolation
 def test_cross_log_isolation():
     clock = Clock()
     svc = EventService(":memory:", clock)
@@ -341,40 +341,4 @@ def test_cross_log_isolation():
     assert store.get(SECOND, seal_hash=a_seal) is None
     assert store.verify(LOG, seal_hash=a_seal).ok
     assert store.verify(SECOND, seal_hash=b_seal).ok
-
-    assert store.delete_log(LOG) > 0
-    assert store.get(LOG, seal_hash=a_seal) is None and store.artifacts(LOG) == {}
     assert store.get(SECOND, seal_hash=b_seal) is not None
-    assert store.verify(SECOND, seal_hash=b_seal).ok
-
-
-def test_transactional_deletion_can_roll_back_or_commit():
-    clock = Clock()
-    svc = EventService(":memory:", clock)
-    a_sources = build_log(svc, clock, LOG)
-    b_sources = build_log(svc, clock, SECOND)
-    a, _ = issued(svc, a_sources, LOG)
-    b, _ = issued(svc, b_sources, SECOND)
-    store = ReceiptStore(svc.db)
-    a_seal, b_seal = a.receipt["seal_hash"], b.receipt["seal_hash"]
-    before = len(svc.events(LOG))
-
-    svc.db.execute("BEGIN IMMEDIATE")
-    try:
-        assert store.delete_log_in_tx(LOG) > 0
-        svc.db.execute("ROLLBACK")
-    except BaseException:
-        svc.db.execute("ROLLBACK")
-        raise
-    assert store.get(LOG, seal_hash=a_seal) is not None
-    assert len(svc.events(LOG)) == before
-
-    svc.db.execute("BEGIN IMMEDIATE")
-    assert store.delete_log_in_tx(LOG) > 0
-    svc.db.execute("COMMIT")
-    assert store.get(LOG, seal_hash=a_seal) is None
-    assert store.artifacts(LOG) == {}
-    assert store.get(SECOND, seal_hash=b_seal) is not None
-    # The chain is untouched by withdrawal; events remain for the record.
-    assert len(svc.events(LOG)) == before
-    assert svc.verify(LOG)["ok"]

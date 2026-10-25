@@ -5,7 +5,7 @@ SCHEMA = 1
 
 # After a seal, only these may append (event-log.md §6, D8).
 POST_SEAL_WHITELIST = frozenset(
-    {"receipt.issued", "note.add", "link.add", "record.withdrawn", "resubmit.open"}
+    {"receipt.issued", "note.add", "link.add", "resubmit.open"}
 )
 
 
