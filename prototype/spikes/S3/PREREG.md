@@ -151,9 +151,10 @@ the evaluation set after model output is seen.
 - The manifest assigns each evaluation pair a stable ID before labelling.
 - Pair order for annotation and for model calls is the SHA-256 order of `pair_id` with the frozen
   seed string `s3-prereg-v1`; this prevents ordering by family.
-- No pair is selected or removed because of its model result. The only allowed exclusion after
-  freeze is a pair that fails the manifest-hash check (§4), and then the run is incomplete
-  under §11, not silently smaller.
+- No pair is selected or removed because of its model result. After freeze, a pair leaves a
+  primary denominator only because it is an error (§9) or unresolved after adjudication (§6.4);
+  both are counted and reported, and the incomplete rule applies. A manifest-hash mismatch aborts
+  the run under §9/§11; it is never a silently smaller set.
 
 ## 6. Independent human labels
 
@@ -421,8 +422,10 @@ rationale, before any evaluation output exists.
 2. Obtain the independent labeller assignment and the declaration; run calibration.
 3. Label evaluation pairs under §6; run the audit and adjudication; compute κ.
 4. Write `FROZEN.json` with every hash in §7; confirm the prompt and schema are the frozen ones.
-5. Run each backend once with `ROOM_LLM` set to the evaluation backend; no live call is made by
-   ordinary tests. Record the command, environment, model ID, start/end time and code commit.
+5. Run each backend once live: leave `ROOM_LLM` unset and set `ROOM_LLM_BACKEND` to that
+   backend (with the backend-2 variables configured for `openai_compat`). Ordinary tests use
+   `ROOM_LLM=stub`. Record the exact command, environment, model ID, start/end time and code
+   commit. No live call is made by ordinary tests or by this task.
 6. Validate every output against §8.3; apply §9; compute §10; apply §11 once.
 7. Write `prototype/spikes/S4`-style result note at `prototype/spikes/S3/RESULT.md` with:
    the frozen version and hashes; the verdict; the numerator/denominator and interval of every
