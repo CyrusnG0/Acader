@@ -1,7 +1,7 @@
 # Current Status
 
-**Last updated:** 2026-10-25 (T-025 and T-027 merged; founder decision D-063; tickets T-028, T-029)
-**Phase:** prototype v1; M1 engineering complete, human reading gate open. M2 service layer done through release (T-018…T-021), withdrawal removed (T-025), "More places to ask" built (T-027). Hardening T-028 in progress; T-029, T-026, T-022 ready.
+**Last updated:** 2026-10-25 (T-025, T-027, T-028 merged; founder decision D-063; ticket T-029)
+**Phase:** prototype v1; M1 engineering complete, human reading gate open. M2 service layer done through release (T-018…T-021), withdrawal removed (T-025), "More places to ask" built (T-027). Hardening T-028 done (engine `receipt/1 l1/2`); T-029, T-026, T-022 ready.
 
 ## What works
 
@@ -12,19 +12,15 @@
 - **T-025** student withdrawal removed (D-062): no `/withdraw` route, no tombstone, `record.withdrawn` off the post-seal whitelist; the chain stays append-only. A sealed log answers 409 `sealed` to any event type a client may not send (D-063).
 - **T-027** "More places to ask" (D-060): every grounded non-chosen candidate kept in receipt field `more_places` (inside `receipt_hash`, paragraph order, one per paragraph, no generated wording, no provider call) and rendered in one closed disclosure under the questions, open in print. Teacher receipt only.
 - **T-024** "Written on N days" removed (D-055). **T-007** S3/S4 preregistration (D-056) and **T-009** walkthrough + blind-question preregistration (D-057); documents only, nothing run.
-- **[VALIDATED]** Merged main b3e6900 (T-025 then T-027), Opus review MERGE with no blockers on each: checker re-ran merged main from a fresh clone and `--require-hashes` venv (Python 3.14.5, `ROOM_LLM=stub`): prototype 996 passed. The reviewers' per-branch runs: T-027 alone 1006 / kit 29 / web 150 with typecheck clean. T-025 alone, fresh `--require-hashes` venv, Python 3.14.5: 960 / 29 / 145; its whitelist, 24 h and 48 h mutations fail tests. T-027: 6 of 7 review mutations fail tests (the survivor is fixed in T-028). CI covers 3.12; no new CI result claimed. Local main is not yet pushed; the checker pushes.
+- **[VALIDATED]** Merged main (T-025, T-027, then T-028), Opus review MERGE with no blockers on each: checker re-ran merged main from a fresh clone and `--require-hashes` venv (Python 3.14.5, `ROOM_LLM=stub`): prototype 996 passed. The reviewers' per-branch runs: T-027 alone 1006 / kit 29 / web 150 with typecheck clean. T-025 alone, fresh `--require-hashes` venv, Python 3.14.5: 960 / 29 / 145; its whitelist, 24 h and 48 h mutations fail tests. T-027: 6 of 7 review mutations fail tests (the survivor is fixed in T-028). CI covers 3.12; no new CI result claimed. Local main is not yet pushed; the checker pushes.
 
 ## In progress
 
-| Ticket | Worktree | Branch | Owner |
-|---|---|---|---|
-| T-028 hardening: `ENGINE_VERSION` → `"receipt/1 l1/2"` and a one-per-paragraph test for `more_places` (D-063) | `../Acader-wt-T-028` | `task/T-028-hardening` | worker-T-028 (DeepSeek) |
-
-Not reviewed or merged. Check the worktree for a commit and a handoff before reading it as done.
+Nothing. No worker is running and no worktree holds unmerged work (T-025, T-027, T-028 are merged).
 
 ## Single next action
 
-**After T-028 is reviewed and merged, dispatch T-029 (`more_places` artifact ids) and T-026 (delayed state + re-check), then T-022 (student preview and teacher views).** Only T-026 must land before T-022 (both edit `app/lifecycle.py`); T-029 is independent of both. T-022 must add a real student-preview boundary test (OL-061) and leaves the More places parts out of the preview until OL-059 is answered.
+**Dispatch T-029 (`more_places` artifact ids) and T-026 (delayed state + re-check), then T-022 (student preview and teacher views).** Only T-026 must land before T-022 (both edit `app/lifecycle.py`); T-029 is independent of both. T-022 must add a real student-preview boundary test (OL-061) and leaves the More places parts out of the preview until OL-059 is answered.
 
 ## Founder decisions open
 

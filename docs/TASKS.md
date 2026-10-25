@@ -2,7 +2,7 @@
 
 One task = one lead conversation. A cold worker may pick **any unowned `ready` task whose dependencies are `done`**. Read the [pickup instructions and executable tickets](tickets/README.md), then write your conversation tag in **Owner** and set only your task to `in progress` before starting. Coordinate claims: edits on separate branches alone do not prevent duplicate ownership. Codex is the planner/checker; the founder supplies implementation workers.
 
-**Now (2026-10-25, after D-063):** T-025 and T-027 are done (reviewed and merged). T-028 (engine version bump + one-per-paragraph test) is in progress. Ready: T-026 (delayed state + release re-check), T-022 (student preview and teacher views). T-026 and T-022 both touch `app/lifecycle.py`: run T-026 before T-022, or rebase the later branch. T-022 must add a real student-preview boundary test for More places and must not list those parts until OL-059 is answered. T-023 still waits on OL-050 (PD-T007-4 schema + S3 prompt). Small engineering follow-ups OL-056, OL-057 can be ticketed by the checker. M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
+**Now (2026-10-25, after D-063):** T-025 and T-027 are done (reviewed and merged). T-028 (engine version bump `receipt/1 l1/2` + one-per-paragraph test) is done. Ready: T-029 (`artifact_ids` on More places), T-026 (delayed state + release re-check), T-022 (student preview and teacher views). T-026 and T-022 both touch `app/lifecycle.py`: run T-026 before T-022, or rebase the later branch. T-022 must add a real student-preview boundary test for More places and must not list those parts until OL-059 is answered. T-023 still waits on OL-050 (PD-T007-4 schema + S3 prompt). Small engineering follow-ups OL-056, OL-057 can be ticketed by the checker. M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
 
 **Only the checker changes a status to `done`.** A lead sets `review` and writes a handoff (docs/handoffs/). The checker reviews it against [EXPECTATIONS.md](../EXPECTATIONS.md).
 
@@ -63,8 +63,8 @@ These tasks prepare the existing M2 design. Ready infrastructure tasks are indep
 | [T-025](tickets/T-025-remove-withdrawal.md) | Remove student withdrawal: routes, service, tombstone, whitelist entry, tests (D-062); keep release | T-021 | O+S (D ok for the mechanical removal) | worker-T-025 | done |
 | [T-026](tickets/T-026-delayed-recheck.md) | Delayed state past the cap + scheduled release re-check + one operator alert (D-061) | T-021 | O+S | | ready |
 | [T-027](tickets/T-027-more-places.md) | "More places to ask": keep and render the full grounded candidate list (D-060) | T-016, T-017, T-020 | O+S | worker-T-027 | done |
-| [T-028](tickets/T-028-hardening.md) | Hardening after T-027: `ENGINE_VERSION` → `"receipt/1 l1/2"`; test that `more_places` keeps one place per paragraph (D-063) | T-025, T-027 | D | worker-T-028 | in progress |
-| [T-029](tickets/T-029-more-places-artifacts.md) | `artifact_ids` on `more_places` items from `source_artifact_ids`; extend the verifier fixture (D-063) | T-027, T-028 | D | | blocked (after T-028) |
+| [T-028](tickets/T-028-hardening.md) | Hardening after T-027: `ENGINE_VERSION` → `"receipt/1 l1/2"`; test that `more_places` keeps one place per paragraph (D-063) | T-025, T-027 | D | worker-T-028 | done |
+| [T-029](tickets/T-029-more-places-artifacts.md) | `artifact_ids` on `more_places` items from `source_artifact_ids`; extend the verifier fixture (D-063) | T-027, T-028 | D | | ready |
 
 ## Remaining wave planning
 
