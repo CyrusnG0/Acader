@@ -372,7 +372,11 @@ def test_repeated_withdrawal_is_idempotent_and_keeps_one_event():
     assert second["replayed"] is True
     assert second["withdrawn_at"] == first["withdrawn_at"]
     assert second["event"]["hash"] == first["event"]["hash"]
-    assert lifecycle._tombstone(LOG)["reason"] == "first"
+    # The reason lives only in the student's chain event, never in the school-side tombstone.
+    assert "reason" not in lifecycle._tombstone(LOG)
+    columns = {row[1] for row in svc.db.execute("PRAGMA table_info(record_tombstones)")}
+    assert "reason" not in columns
+    assert first["event"]["payload"]["reason"] == "first"
     assert [e["type"] for e in svc.events(LOG)] == events_after_first
     assert [e["type"] for e in svc.events(LOG)].count("record.withdrawn") == 1
 
@@ -492,6 +496,8 @@ def test_cross_log_and_cross_tenant_access_is_rejected():
 
     with pytest.raises(AccessDenied):
         lifecycle.withdraw(TENANT2_STUDENT, LOG)
+    with pytest.raises(AccessDenied):
+        lifecycle.withdraw(Identity("tenant-2", "student", OWNER), LOG)  # same owner, other tenant
     with pytest.raises(AccessDenied):
         lifecycle.withdraw(STUDENT_OTHER, LOG)
     with pytest.raises(AccessDenied):

@@ -31,9 +31,10 @@
     `record_removed`.
   - `withdraw` requires an owning student identity and runs one caller-owned
     `BEGIN IMMEDIATE` transaction: append `record.withdrawn`, `cancel_by_log(...,
-    conn=self.db)`, `delete_log_in_tx`, insert the `record_tombstones` row and mark the
-    release rows withdrawn. Replays return the first event/timestamp and do not add an
-    event. A released record raises `AfterRelease` before any change. The event chain and
+    conn=self.db)`, `delete_log_in_tx`, insert the `record_tombstones` row
+    `(log_id, seal_hash, tenant_id, owner_id, withdrawn_at; no reason)` and mark the release
+    rows withdrawn. Replays return the first event/timestamp and do not add an event. The
+    student's free-text reason stays only in the chain event, never on the school side. A released record raises `AfterRelease` before any change. The event chain and
     submitted snapshots are never touched.
   - Constructor refuses a queue or receipt store that does not share
     `EventService.db` / `EventService._lock`.
@@ -98,13 +99,13 @@ handoff); the uncommitted T-021 work already accounted for the rest.
 | Rollback atomicity | `test_withdrawal_rolls_back_atomically_when_cancellation_fails` |
 | Generic events route cannot bypass cancellation | `test_generic_events_route_cannot_bypass_cancellation_and_deletion`, `test_generic_events_route_fails_closed_without_lifecycle` |
 | No teacher payload before release | `test_no_teacher_receipt_contents_before_release` |
-| Cross-log access rejection | `test_cross_log_and_cross_tenant_access_is_rejected` |
+| Cross-log access rejection | `test_cross_log_and_cross_tenant_access_is_rejected` (wrong owner, wrong tenant with the same owner, wrong role, unknown log, and the other log left untouched) |
 | Other covered branches | `test_cap_with_no_receipt_alerts_and_never_invents_one`, `test_repeated_withdrawal_is_idempotent_and_keeps_one_event`, `test_a_failed_release_job_alerts_as_release_not_questions`, `test_lifecycle_refuses_a_queue_that_does_not_share_the_event_lock`, `test_dedicated_withdrawal_route_and_fail_closed_identity`, `test_withdrawal_route_after_release_returns_after_release`, `test_release_loop_runs_release_jobs_through_the_app_runner` |
 
 ## Mutation checks (temporary edits, all restored)
 
 Script `/tmp/mutate_t021.py` applied each break, ran the named test, and restored the file.
-`git status` was clean afterwards. **22/22 detected.**
+`git status` was clean afterwards. **All 22 mutations failed the tests as expected.**
 
 | Break | Test that failed |
 |---|---|
@@ -197,6 +198,24 @@ pilot gate.
 - **PD-T021-6: repeated withdrawal is idempotent.** It returns the first
   `record.withdrawn` event and timestamp, does not append a second event, and re-runs the
   cancellation/deletion cleanup. *Recommend:* accept.
+
+## Review follow-up (2026-10-25)
+
+Two fixes from the coordinator's review, both with the guarded line checked by breaking it
+and restoring it:
+
+1. **Tenant-only withdrawal rejection is tested.** `test_cross_log_and_cross_tenant_access_is_rejected`
+   adds `Identity("tenant-2", "student", OWNER)` (same owner, other tenant). Deleting the
+   tenant half of the withdraw check made that test fail; the check was restored.
+2. **No withdrawal reason on the school side.** `record_tombstones` no longer has a `reason`
+   column and the insert no longer writes one; the reason remains only in the student's
+   `record.withdrawn` payload. `test_repeated_withdrawal_is_idempotent_and_keeps_one_event`
+   asserts the mapped row has no `reason`, the table has no such column (`PRAGMA
+   table_info`), and the chain event carries it. Restoring the column made the test fail; it
+   was removed again.
+
+Results after the fixes: T-021 **23 passed**, full prototype **970 passed**, kit **29
+passed** (same commands/environment above).
 
 ## Checker review
 

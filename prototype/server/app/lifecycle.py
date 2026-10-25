@@ -84,8 +84,7 @@ CREATE TABLE IF NOT EXISTS record_tombstones (
   seal_hash TEXT NOT NULL,
   tenant_id TEXT,
   owner_id TEXT,
-  withdrawn_at TEXT NOT NULL,
-  reason TEXT
+  withdrawn_at TEXT NOT NULL
 );
 """
 
@@ -93,7 +92,7 @@ _RECORD_COLUMNS = ("log_id, seal_hash, tenant_id, owner_id, submit_at, deadline_
                    "cap_at, seal_seq, doc_rev, released_at, released_version, release_kind, "
                    "withdrawn_at")
 
-_TOMBSTONE_COLUMNS = "log_id, seal_hash, tenant_id, owner_id, withdrawn_at, reason"
+_TOMBSTONE_COLUMNS = "log_id, seal_hash, tenant_id, owner_id, withdrawn_at"
 
 
 class LifecycleError(Exception):
@@ -200,7 +199,7 @@ class ReceiptLifecycle:
 
     @staticmethod
     def _tombstone_row(row) -> dict:
-        keys = ("log_id", "seal_hash", "tenant_id", "owner_id", "withdrawn_at", "reason")
+        keys = ("log_id", "seal_hash", "tenant_id", "owner_id", "withdrawn_at")
         return dict(zip(keys, row))
 
     def _release_row(self, log_id: str, seal_hash: str) -> dict | None:
@@ -436,10 +435,9 @@ class ReceiptLifecycle:
             self.receipts.delete_log_in_tx(log_id)
             self.db.execute(
                 "INSERT INTO record_tombstones "
-                "(log_id, seal_hash, tenant_id, owner_id, withdrawn_at, reason) "
-                "VALUES (?, ?, ?, ?, ?, ?)",
-                (log_id, scope["seal_hash"], scope["tenant_id"], scope["owner_id"],
-                 now_ts, reason))
+                "(log_id, seal_hash, tenant_id, owner_id, withdrawn_at) "
+                "VALUES (?, ?, ?, ?, ?)",
+                (log_id, scope["seal_hash"], scope["tenant_id"], scope["owner_id"], now_ts))
             self.db.execute(
                 "UPDATE release_records SET withdrawn_at = ? "
                 "WHERE log_id = ? AND withdrawn_at IS NULL", (now_ts, log_id))
