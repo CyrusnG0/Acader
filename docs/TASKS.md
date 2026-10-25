@@ -54,7 +54,7 @@ These tasks prepare the existing M2 design. Ready infrastructure tasks are indep
 | ID | Task | Depends on | Model | Owner | Status |
 |---|---|---|---|---|---|
 | [T-018](tickets/T-018-receipt-storage.md) | Durable receipts and AI artifacts | T-012, T-016 | S | | ready |
-| [T-019](tickets/T-019-job-queue.md) | Bounded durable job queue | T-012, T-003 | S | worker-T-019 | in progress |
+| [T-019](tickets/T-019-job-queue.md) | Bounded durable job queue | T-012, T-003 | S | worker-T-019 | review |
 | [T-020](tickets/T-020-compile-jobs.md) | Submit and compile orchestration | T-018, T-019 | O+S | | blocked |
 | [T-021](tickets/T-021-release-withdrawal.md) | Release cap and transactional withdrawal | T-020 | O+S | | blocked |
 | [T-022](tickets/T-022-receipt-preview.md) | Student preview and teacher lifecycle views | T-017, T-021; OL-049 preview order clarification | O+S | | blocked |
