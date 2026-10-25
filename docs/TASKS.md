@@ -1,6 +1,8 @@
 # TASKS.md: the task board
 
-One task = one Opus lead conversation. Pick the first task whose status is `ready` and whose dependencies are `done`. Write your name/conversation tag in **Owner** before you start, so two leads never take the same task.
+One task = one lead conversation. A cold worker may pick **any unowned `ready` task whose dependencies are `done`**. Read the [pickup instructions and executable tickets](tickets/README.md), then write your conversation tag in **Owner** and set only your task to `in progress` before starting. Coordinate claims: edits on separate branches alone do not prevent duplicate ownership. Codex is the planner/checker; the founder supplies implementation workers.
+
+**Recommended next pickup: T-010** (resume its existing proposal branch; prior owner released for this handoff). **T-007 and T-009 are independently ready** and may run in parallel. T-017 is unowned but blocked; start only after T-010 is checked and merged. Founder-only work is never an empty agent ticket.
 
 **Only the checker changes a status to `done`.** A lead sets `review` and writes a handoff (docs/handoffs/). The checker reviews it against [EXPECTATIONS.md](../EXPECTATIONS.md).
 
@@ -18,10 +20,10 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | lead-opus-T004 | done |
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | lead-opus-T005 | done |
 | T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | lead-opus-T006 | done |
-| T-007 | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | | ready |
+| [T-007](tickets/T-007-preregistration.md) | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | | ready |
 | T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | codex-lead-T008 | done |
-| T-009 | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | | ready |
-| T-010 | /design-consultation → `DESIGN.md` (type, scale, spacing, focus ring, dark mode). Must finish before the receipt UI in M1 | design-review-v1.md 13A | A; G, H (tokens) | — | O | codex-lead-T010 | in progress |
+| [T-009](tickets/T-009-walkthrough.md) | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | | ready |
+| [T-010](tickets/T-010-design-system.md) | /design-consultation → `DESIGN.md` (type, scale, spacing, focus ring, dark mode). Must finish before the receipt UI in M1 | design-review-v1.md 13A | A; G, H (tokens) | — | O | codex-lead-T010 | in progress |
 
 ## Founder-only (agents can't do these)
 
@@ -43,7 +45,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-014 | L1 provenance: sentence split, origin mix, chains through paragraph links, bands in order (D13, D27, D-045), receipt facts §7 (no construction-order ratio, D-046), thresholds into the engine stamp | provenance.md §3–§7 | A; C; D | T-013 | O+S | lead-opus-T014 | done |
 | T-015 | Golden YAML scripts + Playwright generator + ingest builder (D19); 10 golden sessions incl. forged quote and coach marks and an elaborating honest writer | evaluation.md §2, §2a | A; C | T-008, T-011, T-012 | O+S | codex-lead-T015 | done |
 | T-016 | Receipt compiler: (first, per D-050: sentences made only of confirmed Helper text leave the word and claim counts and show as \"mechanics\"); JSON with integer counts, `event_ids` = seq, `receipt_hash`; pillar-form question rules with L3e stubbed and "questions pending" mode; wording filter; engine stamp (lock hash, editor pair) | receipt.md §4–§6; D-041, D-044, D-046 | A; B; H (data lines) | T-014 | O+S | lead-opus-T016 | done |
-| T-017 | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H; I-M1 | T-010, T-016 | O | | blocked |
+| [T-017](tickets/T-017-receipt-ui.md) | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H rendering lines (preview/withdrawal remain M2; OL-048); I-M1 human gate separate | T-010, T-016 | O | | blocked |
 
 ## Next waves (detail is added by the checker when M1 is done)
 

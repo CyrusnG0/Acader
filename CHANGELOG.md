@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-25: repository-local cold-worker tickets for T-007/T-009/T-010/T-017, claim/review instructions and refreshed pickup status; existing T-010 proposal preserved for resumption.
 - 2026-10-25: twelve executable golden sessions with real Chromium recordings, ingest/replay and receipt-compiler regression checks; CI regenerates recordings using pinned Playwright/Chromium (T-015).
 - 2026-10-24: receipt compiler (`engine/receipt/`, `app/receipt_service.py`): JSON receipt with integer counts, hash, question text via `complete()`, wording filter, "mechanics" count (T-016, D-050).
 - 2026-10-24: golden-set source manifest, D19 session script format and 15 draft mapper-label seeds (`prototype/fixtures/`, T-008).
@@ -25,6 +26,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 - 2026-10-23: `docs/designs/ceo-review-v1.md` (CEO review record, D-032); TODOS.md deferrals for v1.
 
 ### Changed
+- 2026-10-25: golden logs register licensed reading metadata before student actions, so compiled receipts show the correct source count and reading titles (T-015 followup).
 - 2026-10-24: links to claims move from an inline mark to the paragraph (D-045); construction order and answer grading dropped as signals (D-046); spike decisions D-041…D-044 folded into design/ (event-log, provenance, receipt, workspace, reading-aid, coach-helper). M1 tasks T-011…T-017 on the board.
 - 2026-10-24: Python deps for `prototype/` locked with hashes in `requirements.lock` (uv); `requirements.txt` removed; CI installs the lock (D-040, T-003).
 - 2026-10-24: D-038: Coach cases B and C run as one "new idea" case with one pillar question (reading, logic, writing, communication); coach-helper.md §3, event-log.md, PRODUCT.md §5, GLOSSARY.
