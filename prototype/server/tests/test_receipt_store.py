@@ -6,7 +6,7 @@ of the app. No model is contacted.
 import pytest
 
 from app.events_service import EventService
-from app.receipt_service import issue_receipt
+from app.receipt_service import _persist, issue_receipt
 from app.receipt_store import (CorruptArtifact, CorruptReceipt, ReceiptConflict, ReceiptStore)
 from engine.events import canonical_json, sha256_hex
 from engine.provenance import InMemorySources
@@ -252,6 +252,46 @@ def test_verify_accepts_outputs_supplied_by_the_caller():
     assert not store.verify(LOG).ok
     checked = store.verify(LOG, extra_artifacts={aid: artifact})
     assert checked.ok, checked.problems
+
+
+def test_verify_rejects_a_supplied_artifact_that_collides_with_a_stored_row():
+    """A caller-supplied output must never replace (and so hide) a damaged stored row."""
+    svc, sources = rich_log()
+    res, _ = issued(svc, sources)
+    store = ReceiptStore(svc.db)
+    aid = sorted(res.artifacts)[0]
+    good = store.artifacts(LOG)[aid]
+    svc.db.execute(
+        "UPDATE receipt_artifacts SET body = body || ? WHERE log_id = ? AND artifact_id = ?",
+        (" ", LOG, aid))
+    assert not store.verify(LOG).ok
+    with pytest.raises(ReceiptConflict):
+        store.verify(LOG, extra_artifacts={aid: good})
+
+
+def test_concurrent_issuance_with_a_different_stamp_returns_the_first_receipt():
+    """PD-T018-1 across the pre-check race: the first stored issuance wins."""
+    svc, sources = rich_log()
+    first, first_event = issued(svc, sources)
+    store = ReceiptStore(svc.db)
+    other_stamp = {**FIXED_STAMP, "git_sha": "other-sha"}
+    other = parts(svc, sources)
+    other["stamp"] = other_stamp
+    second = compile_receipt(ask=None, stored=store.stored_artifacts(LOG), **other)
+    assert second.receipt_hash != first.receipt_hash  # the stamp is part of the receipt
+
+    # Both callers passed the pre-check before either wrote; the transaction resolves it.
+    returned, event = _persist(svc, store, LOG, second, version=1)
+    assert returned.receipt_hash == first.receipt_hash
+    assert canonical_json(returned.receipt) == canonical_json(first.receipt)
+    assert event["seq"] == first_event["seq"]
+    assert len(receipt_events(svc)) == 1
+    assert store.get(LOG, seal_hash=first.receipt["seal_hash"]).receipt_hash == first.receipt_hash
+    assert store.artifacts(LOG) == first.artifacts
+
+    retry, retry_event = issue_receipt(svc, LOG, sources, stamp=other_stamp)
+    assert retry.receipt_hash == first.receipt_hash
+    assert retry_event["seq"] == first_event["seq"]
 
 
 def test_store_rejects_a_mismatched_hash_and_a_bad_artifact():

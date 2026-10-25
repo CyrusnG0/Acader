@@ -219,6 +219,11 @@ class ReceiptStore:
         events = self._events(log_id)
         artifacts = self.artifacts(log_id)
         if extra_artifacts:
+            clashes = sorted(set(artifacts) & set(extra_artifacts))
+            if clashes:
+                raise ReceiptConflict(
+                    f"artifact {clashes[0]} is both stored and supplied; a supplied output "
+                    "must not replace a stored one")
             artifacts = {**artifacts, **extra_artifacts}
         return verify(events, stored.seal_hash, receipt=stored.receipt, artifacts=artifacts)
 

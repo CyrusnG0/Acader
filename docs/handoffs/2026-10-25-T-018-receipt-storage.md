@@ -21,7 +21,8 @@
   - `verify(log_id, ...)` runs `engine.events.verify` with the stored receipt and every stored
     artifact, plus optional `extra_artifacts` for outputs stored by another component
     (for example mapper artifacts referenced by `map.finding`). Missing, corrupt or
-    hash-mismatched references fail.
+    hash-mismatched references fail. A supplied artifact whose id matches a stored row is
+    rejected with `ReceiptConflict`, so a caller cannot mask a damaged stored row.
   - `delete_log_in_tx(log_id)` deletes only that log's receipt and artifact rows inside the
     caller's transaction; `delete_log` is the self-owned wrapper. Events are never deleted.
 - `prototype/server/app/receipt_service.py`: narrow integration.
@@ -56,10 +57,11 @@ All methods take `log_id`, so reads and deletion cannot cross logs.
 - `artifacts(log_id) -> {artifact_id: artifact}` — raw rows (hashes not rechecked).
 - `stored_artifacts(log_id) -> {artifact_id: artifact}` — verified rows for compiler reuse.
 - `verify(log_id, *, seal_hash=None, version=1, extra_artifacts=None) -> VerifyResult` —
-  chain + receipt integrity + every referenced artifact hash.
+  chain + receipt integrity + every referenced artifact hash. Supplied artifacts may only add
+  ids that are not already stored; a collision raises `ReceiptConflict`.
 
 T-020 should pass mapper artifacts through `extra_artifacts` on issuance or `verify`, because
-no mapper job exists yet to store them itself.
+no mapper job exists yet to store them itself. They must use ids that are not in the store.
 
 ## Tests run
 
@@ -69,9 +71,9 @@ runs used `ROOM_LLM=stub`. The kit used the system Python 3.14.5. CI (Python 3.1
 not run here.
 
 - `cd prototype && ROOM_LLM=stub .venv/bin/python -m pytest -q server/tests/test_receipt_store.py`
-  → **16 passed in 0.13s**
+  → **18 passed in 0.13s**
 - `cd prototype && ROOM_LLM=stub .venv/bin/python -m pytest -q`
-  → **856 passed, 1 warning in 8.15s** (baseline before this ticket: 840)
+  → **858 passed, 1 warning in 7.78s** (baseline before this ticket: 840)
 - `cd writing-room-kit && ROOM_LLM=stub python3 -m pytest -q v04/tests web/tests`
   → **29 passed, 2 warnings in 0.13s**
 
@@ -87,7 +89,8 @@ Required evidence, all in `test_receipt_store.py`:
 | Stored-output rebuild is byte-identical with a failing model callable | `test_stored_output_rebuild_is_byte_identical_without_a_model` |
 | Transactional deletion | `test_transactional_deletion_can_roll_back_or_commit` |
 | No write transaction during a model call | `test_no_write_transaction_during_a_model_call` (`sqlite3.Connection.in_transaction`) |
-| Receipt integrity / supplied outputs | `test_issue_persists_canonical_bytes_hash_and_artifacts`, `test_corrupt_receipt_is_rejected`, `test_verify_accepts_outputs_supplied_by_the_caller` |
+| Receipt integrity / supplied outputs | `test_issue_persists_canonical_bytes_hash_and_artifacts`, `test_corrupt_receipt_is_rejected`, `test_verify_accepts_outputs_supplied_by_the_caller`, `test_verify_rejects_a_supplied_artifact_that_collides_with_a_stored_row` |
+| First issuance wins across a stamp race | `test_concurrent_issuance_with_a_different_stamp_returns_the_first_receipt` |
 
 Mutation spot checks (temporary edits, then restored):
 
@@ -99,6 +102,10 @@ Mutation spot checks (temporary edits, then restored):
   prevented model calls and the in-transaction check still prevented a duplicate
   `receipt.issued`. The lookup is an optimization and preserves the first issuance if the
   engine stamp changes; idempotency does not depend on it alone.
+- Restoring the old `{**stored, **supplied}` merge → the artifact-collision test failed
+  (`DID NOT RAISE ReceiptConflict`).
+- Restoring the old "raise on a different stored hash" branch → the stamp-race test failed
+  with `ReceiptConflict`.
 
 `git diff --check` is clean. No UI or `prototype/web/` change, so web tests, typecheck and
 browser checks were not applicable to this ticket.
@@ -129,8 +136,11 @@ browser checks were not applicable to this ticket.
 
 - **PD-T018-1: the first issuance wins.** `(log_id, seal_hash, version)` is the receipt key.
   If a retry arrives with a different engine stamp (for example a new commit sha), the stored
-  receipt is returned unchanged rather than overwritten or rejected. *Recommend:* accept; it
-  preserves the `receipt.issued` evidence and D20's "same stamp" condition.
+  receipt is returned unchanged rather than overwritten or rejected. This now also holds when
+  two issuances pass the pre-check concurrently: the transaction returns the first stored
+  receipt and the caller receives those bytes, not its locally compiled ones
+  (`_persist` returns the stored `ReceiptResult`). *Recommend:* accept; it preserves the
+  `receipt.issued` evidence and D20's "same stamp" condition.
 - **PD-T018-2: mapper artifacts are supplied, not guessed.** No mapper job exists to build
   them, so `verify` accepts them as `extra_artifacts`; a receipt or event that cites an
   artifact absent from both the store and that argument fails verification. *Recommend:*
@@ -141,6 +151,29 @@ browser checks were not applicable to this ticket.
 - **PD-T018-4: two API tiers.** `*_in_tx` methods participate in a caller transaction (for
   T-021); `store`/`delete_log` open their own. Calling the latter inside an open transaction
   is a programming error. *Recommend:* accept and document in T-020/T-021.
+
+## Follow-up review (2026-10-25)
+
+Two accepted follow-ups, both fixed with tests in this branch:
+
+1. **Supplied artifacts can no longer mask a stored row.** `verify` previously merged
+   `{**artifacts, **extra_artifacts}`, so a caller-supplied output with the same id replaced
+   a damaged stored row. It now raises `ReceiptConflict` on any id collision.
+   `test_verify_rejects_a_supplied_artifact_that_collides_with_a_stored_row` damages the
+   stored row, proves `verify` fails without the argument, and proves the collision is
+   rejected with it. Non-colliding supplied ids still work
+   (`test_verify_accepts_outputs_supplied_by_the_caller`).
+2. **PD-T018-1 now holds across the race.** `_persist` returned `ReceiptConflict` when a
+   concurrent issuance with a different engine stamp won the check. It now returns the first
+   stored receipt and event, and `issue_receipt` returns that stored `ReceiptResult` rather
+   than the locally compiled one. The test
+   `test_concurrent_issuance_with_a_different_stamp_returns_the_first_receipt` compiles with a
+   different `git_sha`, calls `_persist` as if both callers passed the pre-check, and asserts
+   the first bytes, hash, event and artifacts are returned with no duplicate event. A normal
+   retry with the other stamp is also asserted.
+
+Final counts after the follow-ups: new store tests **18 passed**, full prototype **858
+passed**, kit **29 passed** (commands and environment above).
 
 ## Checker review
 

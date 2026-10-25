@@ -79,15 +79,9 @@ def _issued_event(events: list, receipt_id: str, version: int) -> dict | None:
     return None
 
 
-def _stored_result(store: ReceiptStore, log_id: str, version: int,
-                   events: list) -> tuple | None:
-    """The already-issued receipt for the current seal, if there is one (model-free retry)."""
-    seal = _latest_submit(events)
-    if seal is None:
-        return None
-    receipt = store.get(log_id, seal_hash=seal["hash"], version=version)
-    if receipt is None:
-        return None
+def _issued_result(store: ReceiptStore, log_id: str, receipt, version: int,
+                   events: list) -> tuple:
+    """The ReceiptResult and event for an already stored receipt."""
     event = _issued_event(events, receipt.receipt_id, version)
     if event is None:
         raise ReceiptConflict("a stored receipt has no receipt.issued event")
@@ -97,21 +91,33 @@ def _stored_result(store: ReceiptStore, log_id: str, version: int,
                          receipt.receipt_hash), event
 
 
+def _stored_result(store: ReceiptStore, log_id: str, version: int,
+                   events: list) -> tuple | None:
+    """The already-issued receipt for the current seal, if there is one (model-free retry)."""
+    seal = _latest_submit(events)
+    if seal is None:
+        return None
+    receipt = store.get(log_id, seal_hash=seal["hash"], version=version)
+    if receipt is None:
+        return None
+    return _issued_result(store, log_id, receipt, version, events)
+
+
 def _persist(service: EventService, store: ReceiptStore, log_id: str, res: ReceiptResult,
-             *, version: int, extra_artifacts=None) -> dict:
-    """Store the receipt and artifacts with `receipt.issued`, atomically and idempotently."""
+             *, version: int, extra_artifacts=None) -> tuple:
+    """Store the receipt and artifacts with `receipt.issued`, atomically and idempotently.
+
+    The first issuance wins. If another caller stored this log/seal/version between our
+    pre-check and this transaction, return that stored receipt, even when the two engine
+    stamps differ (PD-T018-1).
+    """
     receipt = res.receipt
     seal_hash, seal_seq = receipt["seal_hash"], receipt["seal_seq"]
     with service._lock, service._tx():
         existing = store.get(log_id, seal_hash=seal_hash, version=version)
         if existing is not None:
-            if existing.receipt_hash != res.receipt_hash:
-                raise ReceiptConflict(
-                    "another receipt is already stored for this seal and version")
-            event = _issued_event(service.store.events(log_id), existing.receipt_id, version)
-            if event is None:
-                raise ReceiptConflict("a stored receipt has no receipt.issued event")
-            return event
+            return _issued_result(store, log_id, existing, version,
+                                  service.store.events(log_id))
         store.store_in_tx(log_id, receipt=receipt, receipt_hash=res.receipt_hash,
                           artifacts=res.artifacts, extra_artifacts=extra_artifacts,
                           seal_hash=seal_hash, seal_seq=seal_seq, version=version)
@@ -122,10 +128,11 @@ def _persist(service: EventService, store: ReceiptStore, log_id: str, res: Recei
         if event is not None:
             if event["payload"].get("receipt_hash") != res.receipt_hash:
                 raise ReceiptConflict("a receipt.issued event names different receipt bytes")
-            return event
-        return service.store.append_in_tx(
+            return res, event
+        event = service.store.append_in_tx(
             log_id, type="receipt.issued", actor="system", payload=res.issued_payload(),
             ts=ts_seconds(service.clock()))
+        return res, event
 
 
 def issue_receipt(service: EventService, log_id: str, sources, *, version: int = 1, stored=None,
@@ -146,6 +153,6 @@ def issue_receipt(service: EventService, log_id: str, sources, *, version: int =
     res: ReceiptResult = compile_receipt(
         events=events, l1=l1, doc=result.replay.doc, log_id=log_id, seal_hash=seal_hash,
         sources=sources, stamp=stamp or build_stamp(), ask=ask, stored=stored, version=version)
-    ev = _persist(service, store, log_id, res, version=version,
-                  extra_artifacts=extra_artifacts)
+    res, ev = _persist(service, store, log_id, res, version=version,
+                       extra_artifacts=extra_artifacts)
     return res, ev
