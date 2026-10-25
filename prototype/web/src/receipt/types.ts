@@ -1,0 +1,11 @@
+export type Band = 'traced_source' | 'traced_coach' | 'declared' | 'student_linked' | 'untraced' | 'mechanics';
+export type EventRef = {seq: number; type: string; at: string};
+export type EvidenceStep = {kind: 'source'|'card'|'claim'|'coach'|'import'|'helper'|'final'; id: string; label: string; text: string; events: EventRef[]; relationship: string};
+export type HistoryVersion = {doc_rev: number; text: string; events: EventRef[]; added: string; removed: string};
+export type SentenceView = {id: string; paragraph_id: string; from: number; to: number; text: string; band: Band; chain: {steps: EvidenceStep[]; notes: string[]; history: HistoryVersion[]; history_note: string}};
+export type ParagraphView = {id: string; text: string; sentence_ids: string[]};
+export type ViewContext = {synthetic: true; header: {student_name: string; assignment_title: string; submitted_at: string; source_count: number}; paragraphs: ParagraphView[]; sentences: SentenceView[]};
+export type ReceiptQuestion = {q: string|null; pillar: string|null; why: string; why_text: string; paragraph_id: string; span: {from:number;to:number}; grounding:string[]; event_ids:number[]; artifact_ids:string[]};
+export type Receipt = {receipt_id: string; log_id:string; seal_hash:string; seal_seq:number; status:'complete'|'questions_pending'|'replay_mismatch'; questions_pending:boolean; built_from:string; replay_note:string|null; summary:{text:string;event_ids:number[]};questions:ReceiptQuestion[];bands:{total_words:number;by_words:Record<string,number>;by_claims:Record<string,number>;mechanics:number;quoted_words:number;event_ids:number[]};moments:Record<string,unknown>[];coach:Record<string,unknown>;reading:{sources:{source_id:string;title:string|null;opened:Record<string,number>;anchored:Record<string,number>;event_ids:number[]}[]};declared:Record<string,unknown>;facts:Record<string,unknown>;inferred_links:number;map_suggestions:number;blind_spots:string[];engine:Record<string,unknown>};
+export type GoldenSession = {session_id:string;receipt:Receipt;receipt_hash:string;view_context:ViewContext};
+export type GoldenGallery = {schema_version:1;synthetic:true;sessions:GoldenSession[]};

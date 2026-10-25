@@ -45,7 +45,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-014 | L1 provenance: sentence split, origin mix, chains through paragraph links, bands in order (D13, D27, D-045), receipt facts §7 (no construction-order ratio, D-046), thresholds into the engine stamp | provenance.md §3–§7 | A; C; D | T-013 | O+S | lead-opus-T014 | done |
 | T-015 | Golden YAML scripts + Playwright generator + ingest builder (D19); 10 golden sessions incl. forged quote and coach marks and an elaborating honest writer | evaluation.md §2, §2a | A; C | T-008, T-011, T-012 | O+S | codex-lead-T015 | done |
 | T-016 | Receipt compiler: (first, per D-050: sentences made only of confirmed Helper text leave the word and claim counts and show as \"mechanics\"); JSON with integer counts, `event_ids` = seq, `receipt_hash`; pillar-form question rules with L3e stubbed and "questions pending" mode; wording filter; engine stamp (lock hash, editor pair) | receipt.md §4–§6; D-041, D-044, D-046 | A; B; H (data lines) | T-014 | O+S | lead-opus-T016 | done |
-| [T-017](tickets/T-017-receipt-ui.md) | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H rendering lines (preview/withdrawal remain M2; OL-048); I-M1 human gate separate | T-010, T-016 | O | | blocked |
+| [T-017](tickets/T-017-receipt-ui.md) | Receipt UI + chain view (HTML, print stylesheet, first screen) | receipt.md §2–§3; DESIGN.md | A; H rendering lines (preview/withdrawal remain M2; OL-048); I-M1 human gate separate | T-010, T-016 | O | codex-lead-T017 | review |
 
 ## Next waves (detail is added by the checker when M1 is done)
 

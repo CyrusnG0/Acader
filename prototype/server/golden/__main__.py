@@ -1,4 +1,4 @@
-"""python -m golden actions <id> | show <id|all>   (run with cwd prototype/server)."""
+"""python -m golden actions <id> | show <id|all> | export <output.json>   (run with cwd prototype/server)."""
 from __future__ import annotations
 
 import sys
@@ -39,12 +39,17 @@ def show(session_id: str) -> bool:
 def main(argv: list[str]) -> int:
     if len(argv) == 2 and argv[0] == "actions":
         return main_actions(argv[1])
+    if len(argv) == 2 and argv[0] == "export":
+        from .export import write_gallery
+        path = write_gallery(argv[1])
+        print(f"Exported synthetic golden gallery to {path}")
+        return 0
     if len(argv) == 2 and argv[0] == "show":
         matched = True
         for sid in (list_sessions() if argv[1] == "all" else [argv[1]]):
             matched = show(sid) and matched
         return 0 if matched else 1
-    print("usage: python -m golden actions <session_id> | show <session_id|all>",
+    print("usage: python -m golden actions <session_id> | show <session_id|all> | export <output.json>",
           file=sys.stderr)
     return 2
 

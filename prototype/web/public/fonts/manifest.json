@@ -1,0 +1,19 @@
+{
+  "checked": "2026-10-25",
+  "fonts": [
+    {
+      "family": "Source Sans 3",
+      "file": "source-sans-3.woff2",
+      "source_url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/OFL.txt",
+      "sha256": "587435ca9d90732b8c1ce4958222c6ad3ade2b875500188e1d318efbcb61f4c5"
+    },
+    {
+      "family": "Literata",
+      "file": "literata.woff2",
+      "source_url": "https://fonts.gstatic.com/s/literata/v40/or3PQ6P12-iJxAIgLa78DkTtAoDhk0oVpaK3YLanFLHpPf2TbLi4J_HWTEKVt8k.woff2",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/literata/OFL.txt",
+      "sha256": "33b49c485e21a38bbfe68de764cc5b329b82c74e6ae4dc0cd9ace5b349da25fe"
+    }
+  ]
+}

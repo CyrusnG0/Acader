@@ -10,7 +10,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "review:receipts": "node review/start.mjs"
   },
   "devDependencies": {
     "@types/node": "22.19.1",
