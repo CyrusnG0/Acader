@@ -2,7 +2,6 @@
 workers never change wording. Every string here still passes the wording filter at compile."""
 
 # ---- summary (receipt.md §2 item 2): built from facts only ------------------------------------
-SUMMARY_DAYS = {1: "Written on 1 day", "n": "Written on {n} days"}
 SUMMARY_SOURCES = {0: "with no sources", 1: "with 1 source", "n": "with {n} sources"}
 SUMMARY_CLAIMS_LEAD = {1: "Of 1 claim", "n": "Of {n} claims"}
 # one part per non-zero band count, in band order; {n} is the count

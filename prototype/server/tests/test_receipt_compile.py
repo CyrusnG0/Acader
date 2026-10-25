@@ -453,12 +453,16 @@ def test_reason_tag_is_swept():
     assert banned_in(res.receipt) == []
 
 
-def test_summary_cites_the_batches_behind_the_days():
+def test_summary_does_not_use_edit_batches_or_count_days():
     svc, sources = rich_log()
     r = issue_receipt(svc, LOG, sources, stamp=FIXED_STAMP)[0].receipt
-    batches = [e["seq"] for e in svc.events(LOG) if e["type"] == "editor.batch"
-               and e["seq"] <= r["seal_seq"]]
-    assert batches and set(batches) <= set(r["summary"]["event_ids"])
+    batches = {e["seq"] for e in svc.events(LOG) if e["type"] == "editor.batch"
+               and e["seq"] <= r["seal_seq"]}
+    assert batches
+    assert not (batches & set(r["summary"]["event_ids"]))
+    assert "Written on" not in r["summary"]["text"]
+    assert not re.search(r"\b(?:days?|sessions?|durations?|hours?|minutes?|weeks?)\b",
+                         r["summary"]["text"], re.I)
 
 
 def test_map_finding_question_with_mapper_artifact_verifies():

@@ -18,13 +18,10 @@ def _join(parts: list) -> str:
 def build_summary(l1: dict, events: list, *, seal_seq: int, wf: WordingFilter) -> dict:
     evs = sorted((e for e in events if e["seq"] <= seal_seq), key=lambda e: e["seq"])
     facts, bands = l1["facts"], l1["bands"]
-    batches = [e for e in evs if e["type"] == "editor.batch"]
-    days = len({e["ts"][:10] for e in batches})
     adds = [e for e in evs if e["type"] == "source.add"]
     n_sources = len({(e.get("payload") or {}).get("source_id") for e in adds})
     src = copy.plural(copy.SUMMARY_SOURCES, n_sources)
-    sentences = [(copy.plural(copy.SUMMARY_DAYS, days) + " " + src) if days > 0
-                 else "Written " + src]
+    sentences = ["Written " + src]
 
     total = sum(bands["by_claims"].values())
     if total > 0:
@@ -57,7 +54,7 @@ def build_summary(l1: dict, events: list, *, seal_seq: int, wf: WordingFilter) -
             sentences.append(copy.plural(copy.SUMMARY_MECHANICS, bands["mechanics"]))
 
     text = wf.apply(". ".join(sentences) + ".", copy.FALLBACK_SUMMARY)
-    ids = {seal_seq} | {e["seq"] for e in adds} | {e["seq"] for e in batches}
+    ids = {seal_seq} | {e["seq"] for e in adds}
     ids |= set(facts["pastes"]["editor"]["event_ids"]) | set(facts["declared"]["event_ids"])
     ids |= set(facts["coach"]["event_ids"])
     return {"text": text, "event_ids": sorted(ids)}
