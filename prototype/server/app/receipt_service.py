@@ -16,6 +16,7 @@ from app.compile_service import load_snapshot_fn
 from app.events_service import EventService
 from app.llm import LLMError, LLMSchema, Task, complete, default_backend
 from app.receipt_store import ReceiptConflict, ReceiptStore
+from app.withdrawal import assert_not_withdrawn_in_tx
 from engine.events import sha256_hex, ts_seconds
 from engine.provenance import CompileResult, compile_marks, l1_from_compile
 from engine.receipt import (ENGINE_VERSION, LLMUnavailable, OutputRejected, ReceiptResult,
@@ -114,6 +115,8 @@ def _persist(service: EventService, store: ReceiptStore, log_id: str, res: Recei
     receipt = res.receipt
     seal_hash, seal_seq = receipt["seal_hash"], receipt["seal_seq"]
     with service._lock, service._tx():
+        # A running worker re-checks the withdrawal inside its publication transaction (D10).
+        assert_not_withdrawn_in_tx(service.db, log_id)
         existing = store.get(log_id, seal_hash=seal_hash, version=version)
         if existing is not None:
             return _issued_result(store, log_id, existing, version,
@@ -181,6 +184,8 @@ def store_artifacts(service: EventService, store: ReceiptStore, log_id: str,
                     artifacts) -> int:
     """Store compile artifacts in a transaction owned by this call."""
     with service._lock, service._tx():
+        # Partial outputs from a running job are publication too; never resurrect them.
+        assert_not_withdrawn_in_tx(service.db, log_id)
         return store.store_artifacts_in_tx(log_id, artifacts)
 
 
