@@ -15,11 +15,18 @@
 
 ## In progress
 
-None.
+Two DeepSeek workers were launched 2026-10-25 and left running when the dispatcher stood down. Neither is reviewed or merged. Check each worktree for a commit and a handoff before reading anything as done.
+
+| Ticket | Worktree | Branch | Prompt / output |
+|---|---|---|---|
+| T-025 remove withdrawal (D-062) | `../Acader-wt-T-025` | `task/T-025-remove-withdrawal` | `T-025.txt` / `T-025.out` |
+| T-027 "More places to ask" (D-060) | `../Acader-wt-T-027` | `task/T-027-more-places` | `T-027.txt` / `T-027.out` |
+
+Prompt and output files are in the Claude scratchpad `/private/tmp/claude-501/-Users-micmic-Documents-GitHub-Acader/74bfa7cd-bd41-488f-9ab3-c5041518f7ec/scratchpad/`. A worker is finished only when no `cc-fleet subagent` process remains and the `.out` JSON envelope has a `.result`; the launcher shell exiting is not completion. An earlier T-021 worker died with `SUBAGENT_OUTPUT_TOO_LARGE` and left uncommitted work, so also look at `git status` in each worktree. The founder chose an outside conversation, not the dispatcher, to review these branches and plan next.
 
 ## Single next action
 
-**Start T-025 (remove student withdrawal, D-062)**; it clears `app/lifecycle.py` for T-026 (delayed state + re-check) and then T-022 (preview and teacher views). T-027 ("More places to ask") can run in parallel.
+**An outside reviewer reads the T-025 and T-027 branches (handoffs `docs/handoffs/2026-10-25-T-025-*.md` and `T-027-*.md`), re-runs the tests from a fresh `--require-hashes` venv, and merges if they pass.** T-025 clears `app/lifecycle.py` for T-026 (delayed state + re-check) and then T-022 (preview and teacher views). T-027 ("More places to ask") is independent of that chain. T-026 and T-022 have not been started.
 
 ## Outstanding and boundaries
 

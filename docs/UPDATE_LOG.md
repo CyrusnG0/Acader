@@ -12,6 +12,11 @@ Template:
 **Next:** the single most important next step
 ```
 
+## 2026-10-25 — dispatcher stands down; T-025 and T-027 workers in flight
+**Summary:** After the D-059…D-062 decisions (6b30778), the dispatcher created worktrees and launched DeepSeek workers for T-025 (remove withdrawal) and T-027 (More places to ask). The founder then said review and planning go to an outside conversation, so no review was dispatched and nothing was merged. T-026 and T-022 are not started. The dispatcher never writes code; workers did all of it. Nothing is pushed.
+**Files touched:** docs/STATUS.md (in-progress table, next action). Worker output lands only in their own branches.
+**Loops:** none opened or closed. Still owed by the founder: OL-058 (law 7 wording, unsubmitted drafts, deletion on request), OL-059 (should the preview list the More places parts), OL-050/OL-051 items, T-016 and T-015 decisions, whether to push main. Housekeeping: prune old worktrees under `../Acader-wt-*` and `.claude/worktrees/`, and scratch clones under `/private/tmp`.
+
 ---
 
 
