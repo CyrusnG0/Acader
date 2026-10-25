@@ -94,6 +94,9 @@ Compiled to JSON first, then rendered as HTML with a print stylesheet. **The rec
   "summary": {"text": "...", "event_ids": [...]},
   "questions": [{"q": "...", "span": {"from": 812, "to": 1004}, "why": "untraced_claim",
                  "grounding": ["b81", "c3"], "event_ids": [...], "artifact_ids": ["a_…"]}],
+  "more_places": [{"paragraph_id": "p4", "span": {"from": 812, "to": 1004},
+                   "why": "declared_not_anchored", "why_text": "...",
+                   "grounding": ["kd"], "event_ids": [...]}],
   "bands": {"total_words": 1500,
             "by_words": {"traced_source": 870, "traced_coach": 120, "declared": 150, "student_linked": 90, "untraced": 270},
             "by_claims": {"traced_source": 7, "traced_coach": 1, "declared": 1, "student_linked": 1, "untraced": 2}},
@@ -106,7 +109,7 @@ Compiled to JSON first, then rendered as HTML with a print stylesheet. **The rec
 
 **No floats anywhere in the receipt JSON** (D-041): shares are integer word counts and the renderer rounds, so `receipt_hash = sha256(canonical_json(receipt))` is well defined. An id in `event_ids` is the event's `seq`.
 
-Every element carries `event_ids`; AI-derived elements also carry `artifact_ids`. `verify` checks both. Same log + same engine stamp + stored outputs → a byte-identical receipt (D20, D31).
+Every element carries `event_ids`; AI-derived elements also carry `artifact_ids`. `verify` checks both. `more_places` (D-060) holds only grounded places the selected questions did not use, in paragraph order, with the existing plain reason copy and no generated question text; it is part of the receipt and its `receipt_hash`. Same log + same engine stamp + stored outputs → a byte-identical receipt (D20, D31).
 
 ## 7. Release and the student view
 

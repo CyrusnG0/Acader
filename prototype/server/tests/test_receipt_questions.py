@@ -81,7 +81,7 @@ def test_rule_order_and_at_most_three():
             para(t("Closing words stand here.")))
     evs = base_events() + [ev(5, "claim.extracted", claim_id="kd", text="Outside claim",
                               import_id="i1")]
-    out, skipped = cands(d, evs)
+    out, _, skipped = cands(d, evs)
     assert [c["why"] for c in out] == ["untraced_claim", "declared_not_anchored",
                                        "student_linked_claim"]
     assert [c["paragraph_id"] for c in out] == ["p3", "p2", "p1"]
@@ -98,7 +98,7 @@ def test_limit_three_even_with_more_candidates():
         evs.append(ev(10 + n, "claim.extracted", claim_id=f"kd{n}", text=f"Outside {n}",
                       import_id=f"i{n}"))
     paras.append(para(t("Closing words stand here.")))
-    out, _ = cands(doc(*paras), evs)
+    out, _, _ = cands(doc(*paras), evs)
     assert len(out) == 3
     assert [c["why"] for c in out] == ["untraced_claim", "declared_not_anchored",
                                        "declared_not_anchored"]
@@ -112,7 +112,7 @@ def test_at_most_one_candidate_per_paragraph():
     evs = base_events() + [
         ev(5, "claim.extracted", claim_id="kd1", text="Outside one", import_id="i1"),
         ev(6, "claim.extracted", claim_id="kd2", text="Outside two", import_id="i2")]
-    out, _ = cands(d, evs)
+    out, _, _ = cands(d, evs)
     pids = [c["paragraph_id"] for c in out]
     assert len(pids) == len(set(pids))
     assert pids.count("p2") == 1
@@ -123,11 +123,11 @@ def test_middle_untraced_unit_needs_dependents():
             para(t("Pasted middle passage here.", "paste_ext", "pp1"), links=[link("km")]),
             para_linked("Last point stands here.", "k1"))
     evs = base_events() + [claim_ev(5, "km", ())]
-    out, _ = cands(d, evs)
+    out, _, _ = cands(d, evs)
     assert "p2" not in [c["paragraph_id"] for c in out]
     child = ev(7, "claim.create", claim_id="kc", text="child claim", card_ids=["c1"],
                parent_claim_id="km")
-    out, _ = cands(d, evs + [child])
+    out, _, _ = cands(d, evs + [child])
     assert [c["why"] for c in out if c["paragraph_id"] == "p2"] == ["untraced_claim"]
 
 
@@ -135,14 +135,14 @@ def test_unit_without_grounding_is_skipped_and_counted():
     d = doc(para_linked("First point stands here.", "k1"),
             para(t("Closing words stand here.")))
     # no claims, cards or blocks at all: the unlinked closing paragraph has nothing to cite
-    out, skipped = cands(d, [])
+    out, _, skipped = cands(d, [])
     assert out == [] and skipped == 2  # the linked intro (claim unknown) and the closing paragraph
 
 
 def test_grounding_items_for_unlinked_and_linked_units():
     d = doc(para_linked("First point stands here.", "k1"),
             para(t("Closing words stand here.")))
-    out, _ = cands(d, base_events())
+    out, _, _ = cands(d, base_events())
     last = next(c for c in out if c["paragraph_id"] == "p2")
     assert [(i["label"], i["kind"], i["id"]) for i in last["grounding_items"]] == [
         ("g1", "claim", "k1"), ("g2", "block", "b1")]
@@ -165,7 +165,7 @@ def test_grounding_is_capped_and_truncated():
     evs.append(claim_ev(20))
     d = doc(para_linked("First point stands here.", "k1"))
     l1 = run(d, evs, srcs)
-    out, _ = select_candidates(l1, evs, d, seal_seq=99, sources=srcs)
+    out, _, _ = select_candidates(l1, evs, d, seal_seq=99, sources=srcs)
     items = out[0]["grounding_items"]
     assert len(items) == 6 and [i["label"] for i in items] == [f"g{n}" for n in range(1, 7)]
     assert all(len(i["text"]) <= 400 for i in items)
@@ -185,7 +185,7 @@ def finding_setup(kind="unconnected_paragraph", claim_id=None):
 
 
 def finding_cands(d, evs):
-    out, _ = cands(d, evs)
+    out, _, _ = cands(d, evs)
     return [c for c in out if c["why"].startswith("map_finding")]
 
 
@@ -232,26 +232,26 @@ def test_map_finding_claim_without_source():
     p2 = next(p for p in l1["paragraphs"] if p["id"] == "p2")
     fnd = ev(40, "map.finding", finding_id="f9", kind="claim_without_source", claim_id="km",
              span={"from": p2["from"], "to": p2["to"]})
-    out, _ = select_candidates(l1, evs + [fnd], d, seal_seq=99, sources=SRC)
+    out, _, _ = select_candidates(l1, evs + [fnd], d, seal_seq=99, sources=SRC)
     got = [c for c in out if c["why"] == "map_finding_claim_without_source"]
     assert len(got) == 1 and got[0]["claim_id"] == "km"
     # a claim that ends in a block is not "without a source"
     anchored = card_events(10, "c2") + [claim_ev(12, "km", ("c2",))]
     l1 = run(d, base + anchored, SRC)
-    out, _ = select_candidates(l1, base + anchored + [fnd], d, seal_seq=99, sources=SRC)
+    out, _, _ = select_candidates(l1, base + anchored + [fnd], d, seal_seq=99, sources=SRC)
     assert not [c for c in out if c["why"].startswith("map_finding")]
 
 
 def test_events_after_the_seal_are_ignored():
     d, evs = finding_setup()
-    out, _ = select_candidates(run(d, evs, SRC), evs, d, seal_seq=29, sources=SRC)
+    out, _, _ = select_candidates(run(d, evs, SRC), evs, d, seal_seq=29, sources=SRC)
     assert not [c for c in out if c["why"].startswith("map_finding")]
 
 
 # ---------------------------------------------------------------- prompt
 def sample_candidate():
     d = doc(para_linked("First point stands here.", "k1"), para(t("Closing words stand here.")))
-    out, _ = cands(d, base_events())
+    out, _, _ = cands(d, base_events())
     return next(c for c in out if c["paragraph_id"] == "p2")
 
 

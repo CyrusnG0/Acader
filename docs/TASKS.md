@@ -62,7 +62,7 @@ These tasks prepare the existing M2 design. Ready infrastructure tasks are indep
 | [T-024](tickets/T-024-drop-written-days.md) | Drop "Written on N days" from the receipt summary (D-055) | T-016 | S | worker-T-024 | done |
 | [T-025](tickets/T-025-remove-withdrawal.md) | Remove student withdrawal: routes, service, tombstone, whitelist entry, tests (D-062); keep release | T-021 | O+S (D ok for the mechanical removal) | worker-T-025 | review |
 | [T-026](tickets/T-026-delayed-recheck.md) | Delayed state past the cap + scheduled release re-check + one operator alert (D-061) | T-021 | O+S | | ready |
-| [T-027](tickets/T-027-more-places.md) | "More places to ask": keep and render the full grounded candidate list (D-060) | T-016, T-017, T-020 | O+S | | ready |
+| [T-027](tickets/T-027-more-places.md) | "More places to ask": keep and render the full grounded candidate list (D-060) | T-016, T-017, T-020 | O+S | worker-T-027 | review |
 
 ## Remaining wave planning
 

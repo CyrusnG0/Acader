@@ -1,4 +1,4 @@
-import type { Band, GoldenSession, Receipt, SentenceView } from './types';
+import type { Band, GoldenSession, Receipt, SentenceView, ViewContext } from './types';
 import './receipt.css';
 
 const BANDS: {id: Exclude<Band, 'mechanics'>; label: string}[] = [
@@ -78,6 +78,24 @@ function bandTable(receipt: Receipt): HTMLTableElement {
   }
   table.append(body); return table;
 }
+function renderMorePlaces(receipt: Receipt, context: ViewContext, onSentence: (sentenceId: string, trigger: HTMLElement) => void): HTMLDetailsElement | null {
+  const places = Array.isArray(receipt.more_places) ? receipt.more_places : [];
+  if (!places.length) return null;
+  const details = disclosure('More places to ask', 'receipt-more-places');
+  const list = el('ul', undefined, 'receipt-plain-list receipt-more-place-list');
+  for (const place of places) {
+    const item = el('li', undefined, 'receipt-more-place');
+    item.dataset.paragraphId = String(place.paragraph_id ?? '');
+    const span = record(place.span); const from = count(span.from); const to = count(span.to);
+    const targets = context.sentences.filter(sentence => sentence.from < to && sentence.to > from);
+    if (targets.length) { const quote = el('blockquote'); for (const sentence of targets) quote.append(sentenceButton(sentence, onSentence)); item.append(quote); }
+    else item.append(el('p', 'The question span has no matching final sentence in this view.', 'receipt-label receipt-muted'));
+    item.append(el('p', place.why_text, 'receipt-label receipt-muted'));
+    list.append(item);
+  }
+  details.append(list);
+  return details;
+}
 function renderMoments(receipt: Receipt): HTMLElement {
   const node = section('Thinking moments'); const list = el('ul', undefined, 'receipt-plain-list');
   for (const moment of receipt.moments) {
@@ -148,6 +166,7 @@ export function renderReceipt(session: GoldenSession, onSentence: (sentenceId: s
     item.append(el('p',q.q===null?'Question not ready.':q.q,'receipt-question-text'));
     item.append(el('p',q.why_text,'receipt-label receipt-muted'));questions.append(item);
   }
+  const morePlaces = renderMorePlaces(receipt, context, onSentence); if (morePlaces) questions.append(morePlaces);
   root.append(questions);
   const built=section('How the work was built','receipt-bands');built.append(bar(receipt.bands.by_words,'By words','words'),bar(receipt.bands.by_claims,'By claims','claims'));
   const gloss=el('p',BLIND_SPOT_GLOSS,'receipt-gloss');gloss.dataset.blindSpot='true';built.append(gloss,bandTable(receipt));
