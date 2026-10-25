@@ -1,6 +1,6 @@
 # Current Status
 
-**Last updated:** 2026-10-25 (T-015 checker passed; M1 engine and receipt compiler complete, rendering pending)
+**Last updated:** 2026-10-25 (cold-worker tickets published; implementation delegated to founder workers)
 **Phase:** prototype v1, M1. Work follows the lead/worker/checker roles in AGENTS.md §8.
 
 ## What works
@@ -19,15 +19,22 @@ A writing platform where the process is the evidence. The student builds a live 
 
 ## In progress / outstanding
 
-- T-010 is **in progress** on `task/T-010-design-system` in `.claude/worktrees/codex-T010-design-system/`. The complete candidate `docs/designs/T-010-DESIGN.proposed.md`, rationale and interactive `T-010-preview.html` are ready for founder feedback. Final root DESIGN.md is not written until this candidate is approved. Preview review covered light/dark, wide/narrow, focus, print and contrast; this is not production UI acceptance.
+- T-010 is **ready for a new owner to resume** on `task/T-010-design-system` in `.claude/worktrees/codex-T010-design-system/`. The prior owner has been released; preserve the existing proposal work. The complete candidate `docs/designs/T-010-DESIGN.proposed.md`, rationale and interactive `T-010-preview.html` already exist on that branch. Follow its ticket to prepare the final handoff; the checker verifies approval and accepts the design before T-017 starts. Preview review covered light/dark, wide/narrow, focus, print and contrast; this is not production UI acceptance.
 - T-017: receipt rendering and chain view. **M1 is not complete until at least ten golden receipts render and a person has read them.**
-- T-007/T-009: preregistration and the nursing walkthrough/blind-question protocol before M2.
+- T-007/T-009: **ready and unowned**, independently pickable now for preregistration and the nursing walkthrough/blind-question protocol before M2. Writing these protocols does not require running an experiment or recruiting participants.
 - OL-046: full mapper corpus, textbook coverage, parser block IDs and independent/held-out labels. The twelve M1 engineering sessions do not satisfy the mapper gate.
+- OL-048: map T-017 rendering coverage versus M2 preview/withdrawal requirements before task acceptance.
 - OL-047: founder disposition of outstanding T-015/T-016 proposals. No new product decisions were approved during this checker session.
 
 ## Single next action
 
-**Founder review of T-010:** open `.claude/worktrees/codex-T010-design-system/docs/designs/T-010-preview.html` and approve or revise the exact candidate `T-010-DESIGN.proposed.md` beside it. Then the lead can finalize DESIGN.md and hand off T-010 before T-017 starts.
+**A new worker claims T-010 and resumes its existing design proposal branch using [the ticket](tickets/T-010-design-system.md), then returns the final handoff to Codex for review.** Another worker may instead claim T-007 or T-009 immediately; see [all pickup tickets](tickets/README.md). Only claim an unowned ready task, and do not start blocked T-017 merely because its owner is blank.
+
+## Cold-worker pickup and reviewer boundary
+
+Read AGENTS.md → this status → TASKS.md → EXPECTATIONS.md → OPEN_LOOPS.md → your linked ticket and its cited specs. Claim only your own row, work on its branch/worktree, and return commits, a dated handoff and actual check results at `review`. Codex checks and merges; only the checker marks done and updates shared tracking. Existing test counts above are prior validated runs, not fresh runs for this documentation update.
+
+Tickets live in Git under docs/tickets; no /tmp file or previous conversation is needed for pickup. The twelve goldens are synthetic. M1 remains open until production receipt rendering works and a person has read at least ten.
 
 ## Founder actions and pilot blockers
 

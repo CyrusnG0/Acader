@@ -4,6 +4,10 @@ When a lead finishes a task, it writes one file here: `YYYY-MM-DD-T-0xx-short-na
 
 Leads never edit STATUS.md, TASKS.md statuses (except setting their own task to `in progress` / `review`), UPDATE_LOG.md, CHANGELOG.md or DECISIONS.md. The checker does that, so parallel conversations never collide on shared files.
 
+## Cold-start pickup
+
+Before starting, use [the ticket index](../tickets/README.md) and the live [task board](../TASKS.md). A handoff describes completed work; an execution ticket describes work still to do. Return branch/worktree, commit, ticket acceptance evidence, exact EXPECTATIONS lines covered, tests actually run and any pending human/founder gate. Codex is the planner/checker for the current wave.
+
 ## Template
 
 ```markdown

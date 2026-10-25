@@ -14,6 +14,14 @@ Template:
 
 ---
 
+## 2026-10-25 — Cold-worker tickets and pickup state
+**Summary:** Published repository-local tickets for all unfinished agent tasks, with inputs, outputs, scope, checks and review handoff. Released stale T-010 ownership for a new worker to resume the preserved proposal branch; T-007/T-009 are independently ready, T-017 remains blocked by T-010. Codex remains planner/checker. No feature implementation or new product approval.
+**Files touched:** docs/tickets/{README.md,T-007-preregistration.md,T-009-walkthrough.md,T-010-design-system.md,T-017-receipt-ui.md}, docs/TASKS.md, STATUS.md, OPEN_LOOPS.md, UPDATE_LOG.md, handoffs/README.md, CHANGELOG.md
+**Loops:** opened OL-048 (explicit T-017 versus M2 checklist accounting); no loops closed
+**Decisions:** none; continuation is not a new approval of pending T-015/T-016 proposals
+**Validation:** documentation links and git diff --check; application suites not rerun for documentation-only changes
+**Next:** a worker claims and resumes T-010, then returns the final design handoff for checker review; other workers may claim T-007/T-009.
+
 ## 2026-10-25 — T-010 proposal prepared on its task branch
 **Summary:** Delegated T-010 to a separate lead. The task branch contains the exact proposed DESIGN.md, rationale/contrast evidence and an interactive receipt/workspace/type preview, using synthetic golden data. Independent visual review found and the lead fixed dark-print palette and hidden-focus issues. Final design approval is still pending; no product decision or root DESIGN.md was written. Proposal files remain on `task/T-010-design-system` in `.claude/worktrees/codex-T010-design-system/`.
 **Files touched:** on the task branch: docs/designs/T-010-{design-proposal.md,DESIGN.proposed.md,preview.html}, task handoff and own task row; checker tracking: docs/TASKS.md, STATUS.md, UPDATE_LOG.md
