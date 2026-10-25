@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.events_service import Conflict, Invalid, LogNotFound
+from app.lifecycle import AccessDenied, AfterRelease, LifecycleConflict
 
 router = APIRouter()
 
@@ -71,8 +72,29 @@ class ResubmitBody(_Strict):
     reason: str
 
 
+class WithdrawBody(_Strict):
+    reason: str | None = None
+
+
 def _svc(request: Request):
     return request.app.state.events
+
+
+def _lifecycle(request: Request):
+    return getattr(request.app.state, "lifecycle", None)
+
+
+def _identity(request: Request, log_id: str):
+    """A synthetic, already-authenticated identity supplied by the app. Fail closed.
+
+    This is not a role selector or an authentication mechanism. The real roster/magic-link
+    layer supplies the identity; until then, an app without a provider can never withdraw.
+    """
+    provider = getattr(request.app.state, "identity_for", None)
+    identity = provider(log_id) if provider is not None else None
+    if identity is None:
+        raise AccessDenied("an authenticated identity is required")
+    return identity
 
 
 def install_error_handlers(app) -> None:
@@ -87,6 +109,18 @@ def install_error_handlers(app) -> None:
     @app.exception_handler(Invalid)
     async def _invalid(_req, exc: Invalid):
         return JSONResponse({"error": exc.code, "message": exc.message}, status_code=422)
+
+    @app.exception_handler(AccessDenied)
+    async def _denied(_req, _exc: AccessDenied):
+        return JSONResponse({"error": "access_denied"}, status_code=403)
+
+    @app.exception_handler(AfterRelease)
+    async def _after_release(_req, _exc: AfterRelease):
+        return JSONResponse({"error": "after_release"}, status_code=409)
+
+    @app.exception_handler(LifecycleConflict)
+    async def _lifecycle_conflict(_req, _exc: LifecycleConflict):
+        return JSONResponse({"error": "lifecycle_conflict"}, status_code=409)
 
 
 @router.post("/logs", status_code=201)
@@ -130,10 +164,31 @@ def submit(log_id: str, body: SubmitBody, request: Request):
 def post_event(log_id: str, body: EventBody, request: Request):
     if body.type not in CLIENT_EVENT_TYPES:
         raise Invalid("type_not_allowed", f"Event type {body.type!r} cannot be sent here.")
+    lifecycle = _lifecycle(request)
+    if body.type == "record.withdrawn":
+        # Never let the generic entry point append the event without cancelling work and
+        # deleting the unreleased record (D10). The lifecycle route owns that transaction.
+        # Without it, fail closed: a bare withdrawal event would leave queued compile work
+        # and unreleased outputs behind.
+        if lifecycle is None:
+            raise AccessDenied("withdrawal is not configured on this app")
+        reason = body.payload.get("reason")
+        if reason is not None and not isinstance(reason, str):
+            raise Invalid("bad_payload", "reason must be text.")
+        result = lifecycle.withdraw(_identity(request, log_id), log_id, reason=reason)
+        return {"event": result["event"]}
     ev = _svc(request).append_event(log_id, type=body.type, actor="student",
                                     payload=body.payload, client_seq=body.client_seq,
                                     doc_rev=body.doc_rev)
     return {"event": ev}
+
+
+@router.post("/logs/{log_id}/withdraw")
+def withdraw(log_id: str, body: WithdrawBody, request: Request):
+    lifecycle = _lifecycle(request)
+    if lifecycle is None:
+        raise AccessDenied("withdrawal is not configured on this app")
+    return lifecycle.withdraw(_identity(request, log_id), log_id, reason=body.reason)
 
 
 @router.post("/logs/{log_id}/resubmit")

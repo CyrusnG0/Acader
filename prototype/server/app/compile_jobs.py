@@ -65,10 +65,26 @@ class CompileJobs:
         self.backend = backend if backend is not None else default_backend()
         self.receipts = receipts or ReceiptStore(service.db)
         self.worker_id = worker_id
+        self._questions_hooks: list = []
         ensure_alerts_table(service)
         self.queue = JobQueue(service.db, lock=service._lock, clock=service.clock,
                               on_failed=self._on_failed, **queue_kwargs)
         service.add_seal_hook(self.on_seal)
+
+    def add_questions_hook(self, fn) -> None:
+        """Register ``fn(log_id, seal_hash)`` to run after a complete receipt version commits.
+
+        T-021 uses it to check release as soon as questions are ready instead of waiting for
+        the cap. A hook error must not fail the job that already stored the receipt.
+        """
+        self._questions_hooks.append(fn)
+
+    def _notify_questions_ready(self, log_id: str, seal_hash: str) -> None:
+        for hook in self._questions_hooks:
+            try:
+                hook(log_id, seal_hash)
+            except Exception:
+                continue
 
     # ---- scheduling -----------------------------------------------------------------------
 
@@ -166,6 +182,8 @@ class CompileJobs:
                 if seal is None:
                     raise PermanentJobError("seal_missing")
             self._enqueue_questions(log_id, seal)
+        else:
+            self._notify_questions_ready(log_id, seal_hash)
         return _identifiers(res)
 
     def handle_questions(self, job) -> dict:
@@ -177,6 +195,8 @@ class CompileJobs:
         issued = stored_receipt(self.service, self.receipts, log_id, seal_hash=seal_hash,
                                 version=RECEIPT_V2)
         if issued is not None:
+            if not issued[0].receipt["questions_pending"]:
+                self._notify_questions_ready(log_id, seal_hash)
             return _identifiers(issued[0])
 
         with self.service._lock:
@@ -207,12 +227,21 @@ class CompileJobs:
                 "doc_rev": payload.get("doc_rev"),
                 "seq": res.receipt["seal_seq"],
             }])
+        else:
+            self._notify_questions_ready(log_id, seal_hash)
         return _identifiers(res)
 
     def _on_failed(self, db, job) -> None:
         """Queue hook: runs inside the queue's transaction, so no transaction here."""
         payload = job.payload or {}
-        kind = "compile_failed" if job.kind == KIND_COMPILE else "questions_failed"
+        if job.kind == KIND_COMPILE:
+            kind = "compile_failed"
+        elif job.kind == KIND_QUESTIONS:
+            kind = "questions_failed"
+        elif job.kind == "receipt.release":
+            kind = "release_failed"
+        else:
+            kind = "job_failed"
         insert_alert_in_tx(db, job.log_id, {
             "kind": kind, "log_id": job.log_id,
             "seq": payload.get("seal_seq"), "doc_rev": payload.get("doc_rev"),
