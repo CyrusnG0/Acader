@@ -175,6 +175,10 @@ Two accepted follow-ups, both fixed with tests in this branch:
 Final counts after the follow-ups: new store tests **18 passed**, full prototype **858
 passed**, kit **29 passed** (commands and environment above).
 
-## Checker review
+## Checker review (2026-10-25): passed, merged to `main` (2b7b1a2)
 
-_Pending. Only the checker merges, marks done and updates shared tracking._
+- Independent read-only review by an Opus reviewer (fresh locked venvs, Python 3.14.5, `ROOM_LLM=stub`; no CI result claimed). Merged main: prototype suite **898 passed** (reported by the checker after all four merges); kit 29 per the handoffs.
+- Reviewer reproduced 16/16 new tests and 856 full before the follow-ups; both follow-ups (artifact-id collision, first-issuance-wins across the race) were fixed with tests on the branch (18 new tests, 858 full). Scope: own files and own TASKS row only; `shared/llm.py`, design docs and shared tracking untouched; no secrets or student data.
+- EXPECTATIONS A ticked; C (byte-identical rebuild from stored outputs; verify fails on missing/corrupt rows) ticked; H data lines unchanged.
+- Founder decisions: PD-T018-1…4 accepted as **D-053**.
+- Not covered (later): export (M4b), mapper persistence (T-020 supplies via `extra_artifacts`), receipt versions > 1.

@@ -67,7 +67,7 @@ A run that fails is treated as untraced, and the chain view says "this label cou
 
 L3b works per proposition: it lists the propositions, marks each `in_node` or `added`, and the receipt names the added proposition, not the whole sentence.
 
-**Elaboration is not a trace problem (D-046).** Students who think while they write add reasoning their cards don't hold, and often can't say how they got there. An `added` proposition is therefore never an accusation and never changes a link: the sentence stays in its band, and the proposition can only become an idea question in one of the four pillars (receipt §4), never "where did this come from?".
+**Elaboration is not a trace problem (D-046).** Students who think while they write add reasoning their cards don't hold, and often can't say how they got there. An `added` proposition is therefore never an accusation and never changes the paragraph link. It keeps the sentence out of the traced-source and traced-Coach bands (§6 bands 2–3; D-050 item 7), so the sentence takes its band under §6, and the proposition can only become an idea question in one of the four pillars (receipt §4), never "where did this come from?" (D-056).
 
 ```json
 {"sentence_id": "s14", "node_id": "c3",

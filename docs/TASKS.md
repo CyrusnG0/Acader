@@ -2,7 +2,7 @@
 
 One task = one lead conversation. A cold worker may pick **any unowned `ready` task whose dependencies are `done`**. Read the [pickup instructions and executable tickets](tickets/README.md), then write your conversation tag in **Owner** and set only your task to `in progress` before starting. Coordinate claims: edits on separate branches alone do not prevent duplicate ownership. Codex is the planner/checker; the founder supplies implementation workers.
 
-**Recommended next pickup: T-018 (receipt storage) or T-019 (job queue).** Both are unowned and ready with separate file boundaries. T-007/T-009 remain independently ready. T-010/T-017 passed checker review; M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
+**Recommended next pickup: T-020 (submit and compile orchestration, now including the five-try retry cap, D-054).** T-024 (drop "Written on N days", D-055) is small and can run in parallel; its files are separate. T-007/T-009/T-018/T-019 passed checker review on 2026-10-25. M1 still needs a person to read at least ten receipts. Synthetic infrastructure work may proceed while that gate is open; this is not M1 completion or permission for real student use.
 
 **Only the checker changes a status to `done`.** A lead sets `review` and writes a handoff (docs/handoffs/). The checker reviews it against [EXPECTATIONS.md](../EXPECTATIONS.md).
 
@@ -20,9 +20,9 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | lead-opus-T004 | done |
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | lead-opus-T005 | done |
 | T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | lead-opus-T006 | done |
-| [T-007](tickets/T-007-preregistration.md) | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | worker-T-007 | review |
+| [T-007](tickets/T-007-preregistration.md) | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | worker-T-007 | done |
 | T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | codex-lead-T008 | done |
-| [T-009](tickets/T-009-walkthrough.md) | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | worker-T-009 | review |
+| [T-009](tickets/T-009-walkthrough.md) | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | worker-T-009 | done |
 | [T-010](tickets/T-010-design-system.md) | /design-consultation → `DESIGN.md` (type, scale, spacing, focus ring, dark mode). Must finish before the receipt UI in M1 | design-review-v1.md 13A | A; G, H (tokens) | — | O | codex-lead-T010 | done |
 
 ## Founder-only (agents can't do these)
@@ -55,10 +55,11 @@ These tasks prepare the existing M2 design. Ready infrastructure tasks are indep
 |---|---|---|---|---|---|
 | [T-018](tickets/T-018-receipt-storage.md) | Durable receipts and AI artifacts | T-012, T-016 | S | worker-T-018 | done |
 | [T-019](tickets/T-019-job-queue.md) | Bounded durable job queue | T-012, T-003 | S | worker-T-019 | done |
-| [T-020](tickets/T-020-compile-jobs.md) | Submit and compile orchestration | T-018, T-019 | O+S | | ready |
+| [T-020](tickets/T-020-compile-jobs.md) | Submit and compile orchestration, incl. the five-try retry cap (D-054) | T-018, T-019 | O+S | | ready |
 | [T-021](tickets/T-021-release-withdrawal.md) | Release cap and transactional withdrawal | T-020 | O+S | | blocked |
 | [T-022](tickets/T-022-receipt-preview.md) | Student preview and teacher lifecycle views | T-017, T-021; OL-049 preview order clarification | O+S | | blocked |
-| [T-023](tickets/T-023-s3-harness.md) | Executable preregistered S3 evaluation harness | T-007 + frozen S3 protocol/threshold approval | O+S | | blocked |
+| [T-023](tickets/T-023-s3-harness.md) | Executable preregistered S3 evaluation harness | T-007 done, bar approved (D-056); still needs PD-T007-4 schema + S3 prompt approval (OL-050) | O+S | | blocked |
+| [T-024](tickets/T-024-drop-written-days.md) | Drop "Written on N days" from the receipt summary (D-055) | T-016 | S | | ready |
 
 ## Remaining wave planning
 

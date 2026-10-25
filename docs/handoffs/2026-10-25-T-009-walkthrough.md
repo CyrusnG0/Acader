@@ -76,3 +76,10 @@ No engine, UI, schema, fixture, design doc, `shared/llm.py`, dependency file or 
 - **PD-T009-8: teacher usefulness, not student understanding.** The test measures only whether a teacher would ask the question. No student study, no automated grading of Coach answers and no claim about understanding are made here; a future understanding study needs its own preregistration and consent. *Recommend:* accept.
 - **PD-T009-9: OL-047 remains open.** The walkthrough uses the receipt exactly as rendered, including any wording awaiting the founder's disposition ("Written on N days" included); no silent copy change. *Recommend:* accept and keep OL-047 open.
 - **PD-T009-10: plain text for blind essays.** Blind essays are the plain final document text from replay, with no origin marks, actions, expected bands, fixture metadata or receipt. *Recommend:* accept; it prevents the origin marks from revealing the trail.
+
+## Checker review (2026-10-25): passed, merged to `main` (fb89767)
+
+- Independent read-only review by an Opus reviewer (fresh locked venvs, Python 3.14.5, `ROOM_LLM=stub`; no CI result claimed). Merged main: prototype suite **898 passed** (reported by the checker after all four merges); kit 29 per the handoffs.
+- Cases synthetic and said so to the teacher; sealed key held apart from the facilitator; win rule fixed in advance; nothing grades Coach answers; results template empty. The banned-word scan hits only negated sentences ("never a …").
+- EXPECTATIONS A ticked; B as applied to a protocol ticked; I/M2 not claimed (no session run).
+- Founder decisions (**D-057**): PD-1 (50 pairs), PD-2 (win rule) and PD-9 (OL-047 stays open) accepted. PD-3…8 and 10 remain open (OL-050). Execution still needs the essay-only prompt, allocation and analysis scripts, live question artifacts, a teacher and approvals.

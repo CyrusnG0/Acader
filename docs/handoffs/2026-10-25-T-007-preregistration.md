@@ -156,3 +156,10 @@ regression evidence.
   `added` block the traced-source and traced-Coach bands. The built engine follows §6/D-050.
   *Recommend:* keep the engine behaviour and correct §5's wording to "never changes the paragraph
   link; it can only become a pillar question". S3 is written against the §6/D-050 behaviour.
+
+## Checker review (2026-10-25): passed, merged to `main` (8dd8db4)
+
+- Independent read-only review by an Opus reviewer (fresh locked venvs, Python 3.14.5, `ROOM_LLM=stub`; no CI result claimed). Merged main: prototype suite **898 passed** (reported by the checker after all four merges); kit 29 per the handoffs. Docs-only branch; the reviewer did not rerun suites for it.
+- Thresholds fixed before any data; labeller roles `pending-founder`; CSV header only; S4 labelled simulated; L3b stays off on any failure. Nit: S3/PREREG.md uses one judgement word for the experiment's PASS/FAIL, never about a student; "result" would be cleaner at the next version.
+- EXPECTATIONS A ticked.
+- Founder decisions (**D-056**): PD-1, -2, -3 accepted (bar, independent labelling with κ ≥ 0.60, both backends). **PD-5 rejected:** band 4 is not traced for C1; S4 needs s4-prereg-v2 (OL-051). PD-9: provenance.md §5 aligned to §6 (checker edit). The §6 "mechanics" line (D-050) was already present. PD-4, -6, -7, -8 and the S3 prompt remain open (OL-050); named labeller, second annotator and adjudicator still owed (OL-051). T-023 stays blocked on PD-4 and the prompt.

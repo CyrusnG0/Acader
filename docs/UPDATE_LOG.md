@@ -15,6 +15,14 @@ Template:
 ---
 
 
+## 2026-10-25 — Checker: T-007/T-009/T-018/T-019 merged; founder answers recorded
+**Summary:** Independent review of the four branches; T-018 follow-ups and the T-019 shared-lock fix landed before merge. All four merged to main and marked done; merged main runs 898 prototype tests. Founder answers recorded as D-053…D-057; the retry cap changes T-019's built behaviour and is folded into T-020. provenance.md §5 aligned to §6; receipt.md summary examples drop the session count. New ticket T-024 drops "Written on N days".
+**Files touched:** docs/DECISIONS.md, STATUS.md, TASKS.md, OPEN_LOOPS.md, UPDATE_LOG.md, CHANGELOG.md; docs/tickets/{README.md,T-020-compile-jobs.md,T-024-drop-written-days.md}; four 2026-10-25 handoffs (Checker review sections); design/provenance.md §5, design/receipt.md §2/§8, design/README.md.
+**Validation:** prototype 898 passed on merged main (`ROOM_LLM=stub`, Python 3.14.5); docs-only session, suites not rerun here.
+**Loops:** opened OL-050 (unasked PDs), OL-051 (S3 people, S4 v2); OL-047 narrowed (T-016 PD5 decided); OL-026 noted (50-vs-50 preregistered). None closed.
+**Decisions:** D-053 storage, D-054 queue + five-try cap, D-055 drop "Written on N days", D-056 S3 bar/labelling/band 4 not traced/§5 wording, D-057 blind-question win rule.
+**Next:** a worker claims T-020; T-024 in parallel; founder answers OL-050 and names the OL-051 people.
+
 ## 2026-10-25 — Checker accepts T-010/T-017 and publishes M2 pickup tickets
 **Summary:** Independently reviewed approved design promotion and actual twelve-receipt rendering/evidence navigation. No blocking findings in synthetic M1 scope. Accepted T-010/T-017 engineering work; human reading gate remains open. Added T-018/T-019 ready infrastructure tickets and blocked T-020…T-023 with file ownership, dependencies and checkable acceptance criteria.
 **Files touched:** docs/TASKS.md, STATUS.md, tickets/*, OPEN_LOOPS.md, DECISIONS.md, UPDATE_LOG.md, checker handoff, CHANGELOG.md; design/README.md, workspace.md, build-plan.md. T-010/T-017 implementation retained unchanged.

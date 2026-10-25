@@ -20,7 +20,7 @@ The questions come before the numbers, and the blind spot sits next to the bar, 
 **First screen (design review 2A):** items 1–4 only. Items 5–9 sit behind one disclosure, "How it was built (details)", closed by default and expanded in print. Item 10 and the seal live in "About this receipt" at the foot.
 
 1. **Header:** student, assignment, submitted date, words, number of sources used. No hash here: the seal hash and `verify` move to "About this receipt" (2A), so the first impression isn't a certificate.
-2. **Summary in one sentence**, generated from facts only. Example: "Built over 6 sessions from 4 sources; most claims trace to passages the student anchored; one paragraph was pasted from outside and partly rewritten; two Coach questions were declined."
+2. **Summary in one sentence**, generated from facts only. Example: "Built from 4 sources; most claims trace to passages the student anchored; one paragraph was pasted from outside and partly rewritten; two Coach questions were declined." No session, day or duration count appears (D-055).
 3. **Where to ask (2–3 questions).** Each shows the span it is about and why it was chosen ("this paragraph has no trace in the platform"). Each links to the chain. During an AI outage this section reads "questions pending" (CEO-7).
 4. **How the work was built: the bar.** Five bands by words, and the same five by claims, in two thin bars:
    - Traced to a source or lecture
@@ -135,7 +135,7 @@ Every element carries `event_ids`; AI-derived elements also carry `artifact_ids`
 
 Fictional reconstruction for the walkthrough. Not real data.
 - Assignment: a care-plan rationale, 1,200 words, 3 readings.
-- Summary: "Built over 4 sessions from 3 readings. 9 of 12 claims trace to passages the student anchored. One paragraph (¶4, 180 words) was pasted from outside on 3 Nov and about half rewritten. Copilot was declared for the outline."
+- Summary: "Built from 3 readings. 9 of 12 claims trace to passages the student anchored. One paragraph (¶4, 180 words) was pasted from outside on 3 Nov and about half rewritten. Copilot was declared for the outline."
 - Where to ask: (1) ¶4's mechanism for hypotension after rapid infusion, added beyond the student's card; (2) why the student chose the second reading over the guideline for the monitoring interval.
 - The teacher asks both in 5 minutes. The 40-page log is never needed; the declared Copilot outline appears in "Declared help", and its raw text stays with the student unless they share it.
 

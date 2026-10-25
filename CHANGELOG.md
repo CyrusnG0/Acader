@@ -6,6 +6,9 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- 2026-10-25: durable receipt and AI-artifact storage (`app/receipt_store.py`, T-018) and bounded durable job queue (`app/jobs/`, T-019); checker accepted.
+- 2026-10-25: S3/S4 preregistration (`prototype/spikes/S3/`, `S4/`, T-007) and nursing walkthrough + blind-question preregistration (`docs/research/`, T-009); protocols only, nothing run.
+- 2026-10-25: ticket T-024 (drop "Written on N days"); T-020 ticket now carries the five-try retry cap (D-054).
 - 2026-10-25: approved DESIGN.md and twelve actual synthetic receipt views with sentence evidence navigation (T-010/T-017); checker accepted, human M1 reading still open.
 - 2026-10-25: executable worker tickets T-018…T-023 for storage, jobs, compile orchestration, lifecycle, preview and S3 harness, with separate ownership and dependency gates.
 - 2026-10-25: repository-local cold-worker tickets for T-007/T-009/T-010/T-017, claim/review instructions and refreshed pickup status; existing T-010 proposal preserved for resumption.
@@ -28,6 +31,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 - 2026-10-23: `docs/designs/ceo-review-v1.md` (CEO review record, D-032); TODOS.md deferrals for v1.
 
 ### Changed
+- 2026-10-25: design/provenance.md §5 aligned to §6 on `added` propositions (D-056); design/receipt.md summary examples drop the session count (D-055).
 - 2026-10-25: golden logs register licensed reading metadata before student actions, so compiled receipts show the correct source count and reading titles (T-015 followup).
 - 2026-10-24: links to claims move from an inline mark to the paragraph (D-045); construction order and answer grading dropped as signals (D-046); spike decisions D-041…D-044 folded into design/ (event-log, provenance, receipt, workspace, reading-aid, coach-helper). M1 tasks T-011…T-017 on the board.
 - 2026-10-24: Python deps for `prototype/` locked with hashes in `requirements.lock` (uv); `requirements.txt` removed; CI installs the lock (D-040, T-003).
