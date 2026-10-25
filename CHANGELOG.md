@@ -6,6 +6,7 @@ Versions start when there is shippable code. Until then, everything goes under `
 ## [Unreleased]
 
 ### Added
+- T-028 merged (2026-10-25): `ENGINE_VERSION` is now `receipt/1 l1/2`; `more_places` one-place-per-paragraph rule is tested (mutation-checked); checker re-ran merged main, prototype 996 passed (fresh `--require-hashes` venv, Python 3.14.5).
 - 2026-10-25: "More places to ask": every grounded non-chosen candidate kept in receipt field `more_places` (inside `receipt_hash`) and shown in one closed disclosure on the teacher receipt (T-027, D-060); checker accepted.
 - 2026-10-25: tickets T-028 (engine version bump to `receipt/1 l1/2`, one-per-paragraph test) and T-029 (`artifact_ids` on `more_places`) (D-063).
 - 2026-10-25: tickets T-025 (remove student withdrawal), T-026 (delayed state + release re-check), T-027 ("More places to ask"); T-022 unblocked and rescoped (D-059…D-062).

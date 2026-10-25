@@ -6,6 +6,8 @@ Template:
 ```
 ## YYYY-MM-DD — <short title>
 **Summary:** what was done and why (2–5 lines)
+**Follow-up in the same session:** T-028 (worker, DeepSeek) merged after the checker re-ran it: `ENGINE_VERSION` `receipt/1 l1/2`; new two-candidate fixture so the one-place-per-paragraph test fails under the reviewer's mutation (checker repeated it on a scratch copy: 1 failed, 995 passed); full prototype suite 996 passed.
+
 **Files touched:** …
 **Loops:** opened OL-xxx … / closed OL-xxx …
 **Decisions:** D-xxx … (if any)
