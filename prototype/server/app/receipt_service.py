@@ -17,7 +17,7 @@ from app.events_service import EventService
 from app.llm import LLMError, LLMSchema, Task, complete, default_backend
 from app.receipt_store import ReceiptConflict, ReceiptStore
 from engine.events import sha256_hex, ts_seconds
-from engine.provenance import compile_marks, l1_from_compile
+from engine.provenance import CompileResult, compile_marks, l1_from_compile
 from engine.receipt import (ENGINE_VERSION, LLMUnavailable, OutputRejected, ReceiptResult,
                             compile_receipt, prompt_file_hash)
 
@@ -135,24 +135,76 @@ def _persist(service: EventService, store: ReceiptStore, log_id: str, res: Recei
         return res, event
 
 
+def _seal_for(events: list, seal_hash: str | None) -> dict:
+    """The submit event named by `seal_hash`, or the latest submit when it is None."""
+    submits = [e for e in events if e["type"] == "submit"]
+    if seal_hash is None:
+        if not submits:
+            raise ValueError("log has no submit event")
+        return submits[-1]
+    seal = next((e for e in submits if e["hash"] == seal_hash), None)
+    if seal is None:
+        raise ValueError("seal_hash does not name a submit event")
+    return seal
+
+
+def build_receipt(service: EventService, log_id: str, sources, *, seal_hash: str | None = None,
+                  version: int = 1, ask, stored, stamp=None,
+                  block_kinds=None) -> tuple[ReceiptResult, CompileResult]:
+    """Compile one receipt without writing anything. `seal_hash=None` means the latest submit.
+
+    Asking the model and reading snapshots happen with no write transaction open.
+    """
+    events = service.events(log_id)
+    seal = _seal_for(events, seal_hash)
+    result = compile_marks(events, load_snapshot_fn(service, log_id), sources,
+                           seal_seq=seal["seq"])
+    l1 = l1_from_compile(result, events, block_kinds=block_kinds)
+    res: ReceiptResult = compile_receipt(
+        events=events, l1=l1, doc=result.replay.doc, log_id=log_id, seal_hash=seal["hash"],
+        sources=sources, stamp=stamp or build_stamp(), ask=ask, stored=stored, version=version)
+    return res, result
+
+
+def stored_receipt(service: EventService, store: ReceiptStore, log_id: str, *,
+                   seal_hash: str, version: int) -> tuple | None:
+    """The already-issued receipt for an explicit seal, if there is one (model-free retry)."""
+    with service._lock:
+        receipt = store.get(log_id, seal_hash=seal_hash, version=version)
+        if receipt is None:
+            return None
+        events = service.store.events(log_id)
+        return _issued_result(store, log_id, receipt, version, events)
+
+
+def store_artifacts(service: EventService, store: ReceiptStore, log_id: str,
+                    artifacts) -> int:
+    """Store compile artifacts in a transaction owned by this call."""
+    with service._lock, service._tx():
+        return store.store_artifacts_in_tx(log_id, artifacts)
+
+
 def issue_receipt(service: EventService, log_id: str, sources, *, version: int = 1, stored=None,
                   ask=llm_ask, stamp=None, block_kinds=None, receipts: ReceiptStore | None = None,
-                  extra_artifacts=None) -> tuple:
+                  extra_artifacts=None, seal_hash: str | None = None) -> tuple:
     store = receipts or ReceiptStore(service.db)
-    events = service.events(log_id)
-    with service._lock:
-        issued = _stored_result(store, log_id, version, events)
+    if seal_hash is None:
+        events = service.events(log_id)
+        with service._lock:
+            issued = _stored_result(store, log_id, version, events)
+            if issued is not None:
+                return issued
+            if stored is None:
+                stored = store.stored_artifacts(log_id)
+    else:
+        issued = stored_receipt(service, store, log_id, seal_hash=seal_hash, version=version)
         if issued is not None:
             return issued
         if stored is None:
-            stored = store.stored_artifacts(log_id)
-    result = compile_marks(events, load_snapshot_fn(service, log_id), sources)
-    l1 = l1_from_compile(result, events, block_kinds=block_kinds)
-    seal_seq = result.replay.seal_seq
-    seal_hash = next(e["hash"] for e in events if e["seq"] == seal_seq)
-    res: ReceiptResult = compile_receipt(
-        events=events, l1=l1, doc=result.replay.doc, log_id=log_id, seal_hash=seal_hash,
-        sources=sources, stamp=stamp or build_stamp(), ask=ask, stored=stored, version=version)
+            with service._lock:
+                stored = store.stored_artifacts(log_id)
+    res, _ = build_receipt(service, log_id, sources, seal_hash=seal_hash, version=version,
+                           ask=ask, stored=stored, stamp=stamp, block_kinds=block_kinds)
     res, ev = _persist(service, store, log_id, res, version=version,
                        extra_artifacts=extra_artifacts)
     return res, ev

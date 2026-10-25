@@ -83,9 +83,17 @@ class EventService:
         self.db = self.store.db
         self.db.executescript(_DDL)
         self._lock = threading.Lock()
+        self._seal_hooks: list = []
 
     def close(self) -> None:
         self.store.close()
+
+    def add_seal_hook(self, fn) -> None:
+        """Register a hook called with (log_id, submit_event, db) inside the submit transaction.
+
+        A hook exception rolls the whole submit back: no seal without its scheduled work.
+        """
+        self._seal_hooks.append(fn)
 
     # ---- helpers -------------------------------------------------------------------------
 
@@ -259,6 +267,8 @@ class EventService:
             submits = [e for e in events if e["type"] == "submit"]
             for e in submits:
                 if e["payload"].get("idempotency_key") == idempotency_key:
+                    for hook in self._seal_hooks:
+                        hook(log_id, e, self.db)
                     return {"seal": e["hash"], "seal_seq": e["seq"],
                             "doc_rev": e["payload"]["doc_rev"], "replayed": True}
             self._check_lease(log_id, lease_token, now)
@@ -289,6 +299,8 @@ class EventService:
                 payload={"doc_rev": doc_rev, "doc_hash": doc_hash,
                          "idempotency_key": idempotency_key},
                 ts=ts_seconds(now), doc_rev=doc_rev)
+            for hook in self._seal_hooks:
+                hook(log_id, sub, self.db)
             return {"seal": sub["hash"], "seal_seq": sub["seq"], "doc_rev": doc_rev,
                     "replayed": False}
 
