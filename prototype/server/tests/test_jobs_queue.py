@@ -9,6 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
+from app.events_service import EventService
 from app.jobs import (PRIORITY_MAPPER, PRIORITY_NORMAL, IdempotencyConflict, JobQueue,
                       JobRunner, LeaseLost, PermanentJobError, RetryableJobError)
 from engine.events import ts_seconds
@@ -25,6 +26,36 @@ class Clock:
 
     def advance(self, **kw):
         self.t += timedelta(**kw)
+
+
+class CountingLock:
+    """Plain lock that signals when a second caller attempts to acquire it."""
+
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._guard = threading.Lock()
+        self._count = 0
+        self.second_acquire = threading.Event()
+
+    def acquire(self, blocking=True, timeout=-1):
+        with self._guard:
+            self._count += 1
+            if self._count >= 2:
+                self.second_acquire.set()
+        if timeout == -1:
+            return self._lock.acquire(blocking)
+        return self._lock.acquire(blocking, timeout)
+
+    def release(self):
+        self._lock.release()
+
+    def __enter__(self):
+        self.acquire()
+        return self
+
+    def __exit__(self, *exc):
+        self.release()
+        return False
 
 
 def connect():
@@ -142,6 +173,59 @@ def test_enqueue_can_join_a_caller_transaction(queue, db):
     db.execute("ROLLBACK")
     assert queue.get(job.id) is None
     assert queue.stats()["counts"]["queued"] == 0
+
+
+def test_injected_lock_serialises_two_components_on_one_connection(db, clock):
+    lock = CountingLock()
+    queue = JobQueue(db, clock=clock, lock=lock)
+    assert queue._lock is lock
+
+    # Component A (for example EventService) holds the shared lock and a transaction.
+    lock.acquire()
+    db.execute("BEGIN IMMEDIATE")
+    db.execute("CREATE TABLE probe (value INTEGER)")
+    result = {}
+
+    def component_b():
+        try:
+            result["job"] = queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+        except BaseException as e:  # recorded so the main thread can assert
+            result["error"] = e
+
+    thread = threading.Thread(target=component_b)
+    thread.start()
+    assert lock.second_acquire.wait(timeout=5)  # the queue is waiting on the shared lock
+    db.execute("COMMIT")
+    lock.release()
+    thread.join(timeout=5)
+
+    assert not thread.is_alive()
+    assert "error" not in result
+    assert queue.get(result["job"].id) is not None
+
+
+def test_caller_owned_transaction_does_not_reacquire_a_plain_lock(db, clock):
+    lock = threading.Lock()
+    queue = JobQueue(db, clock=clock, lock=lock)
+    with lock:
+        db.execute("BEGIN IMMEDIATE")
+        job = queue.enqueue("compile", idempotency_key="k1", log_id="L1", conn=db)
+        db.execute("COMMIT")
+    assert queue.get(job.id) is not None
+
+
+def test_caller_transaction_with_the_real_event_service_lock_and_connection(clock):
+    service = EventService(":memory:", clock)
+    try:
+        queue = JobQueue(service.db, clock=clock, lock=service._lock)
+        with service._lock:
+            service.db.execute("BEGIN IMMEDIATE")
+            job = queue.enqueue("compile", idempotency_key="k1", log_id="L1",
+                                conn=service.db)
+            service.db.execute("COMMIT")
+        assert queue.get(job.id) is not None
+    finally:
+        service.close()
 
 
 # ---- claim and lease ---------------------------------------------------------------------------

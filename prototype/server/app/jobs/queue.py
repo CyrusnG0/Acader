@@ -28,12 +28,15 @@ Design points T-020 and T-021 rely on:
 - **Restart recovery.** ``recover_expired`` (also called at the start of every claim) returns
   expired ``running`` jobs to ``queued``.
 
-Connection rules: the SQLite connection must be in autocommit mode
-(``isolation_level=None``, as ``EventStore`` creates it). A ``conn=`` argument means the
-caller already holds both the write transaction and the serialisation for that connection;
-the queue then neither begins, commits nor rolls back. Without ``conn`` the queue starts and
-finishes its own transaction. Never share one connection across threads without such a
-caller-held lock.
+Connection and lock rules: the SQLite connection must be in autocommit mode
+(``isolation_level=None``, as ``EventStore`` creates it). When the queue shares a connection
+with another service (``EventService.db``), pass that service's lock as ``lock=``. Every
+queue-started transaction then runs under the one shared lock, so two services cannot
+interleave transactions on the same connection. A ``conn=`` argument means the caller already
+holds that shared lock and the write transaction; the queue then neither acquires the lock
+again, begins, commits nor rolls back (the caller does). Without both, the queue uses its own
+``RLock``. Never share one connection across threads without the same lock protecting every
+transaction.
 """
 from __future__ import annotations
 
@@ -174,7 +177,7 @@ class JobQueue:
     """Durable queue storage. Construct with an existing autocommit SQLite connection."""
 
     def __init__(self, db: sqlite3.Connection, *, clock: Callable[[], datetime] | None = None,
-                 lease_seconds: int = 300, max_per_backend: int = 4,
+                 lock=None, lease_seconds: int = 300, max_per_backend: int = 4,
                  retry_delays_minutes: tuple[int, ...] = RETRY_DELAYS_MINUTES):
         if not isinstance(lease_seconds, int) or isinstance(lease_seconds, bool) \
                 or lease_seconds <= 0:
@@ -191,7 +194,8 @@ class JobQueue:
         self.lease_seconds = lease_seconds
         self.max_per_backend = max_per_backend
         self.retry_delays_minutes = delays
-        self._lock = threading.RLock()
+        # Share EventService._lock when both services use one connection (T-020/T-021).
+        self._lock = lock if lock is not None else threading.RLock()
         self.db.executescript(_DDL)
 
     @classmethod
@@ -217,7 +221,8 @@ class JobQueue:
     @contextmanager
     def _write(self, conn: sqlite3.Connection | None):
         if conn is not None:
-            yield conn  # the caller owns the transaction and its serialisation
+            # The caller owns the shared lock, the transaction and its commit/rollback.
+            yield conn
             return
         with self._lock:
             self.db.execute("BEGIN IMMEDIATE")
