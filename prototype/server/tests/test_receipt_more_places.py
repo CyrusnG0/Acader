@@ -52,6 +52,35 @@ def five_place_log():
     return rich_log(paras=paras, extra=extra)
 
 
+def two_candidate_log():
+    """Five places as above, but p1 (only in more_places) and p2 (chosen) each carry two
+    grounded candidates: two student claims on p1, two declared claims on p2."""
+    paras = [
+        ("Opening point stands here.", ["k1", "k1b"], "typed", None),
+        ("Declared one point here.", ["kd", "kd4"], "typed", None),
+        ("Declared two point here.", ["kd2"], "typed", None),
+        ("Declared three point here.", ["kd3"], "typed", None),
+        ("Closing words stand here.", [], "typed", None),
+    ]
+    extra = [
+        ("claim.create", "student", {"claim_id": "k1b", "text": "A second own claim",
+                                     "card_ids": ["c1"], "parent_claim_id": None}),
+        ("import.declared", "student", {"import_id": "i2", "tool_name": "ChatGPT",
+                                        "raw_text_ref": "r2", "size_chars": 80}),
+        ("claim.extracted", "system", {"claim_id": "kd2", "text": "Second outside claim",
+                                       "import_id": "i2"}),
+        ("import.declared", "student", {"import_id": "i3", "tool_name": "ChatGPT",
+                                        "raw_text_ref": "r3", "size_chars": 80}),
+        ("claim.extracted", "system", {"claim_id": "kd3", "text": "Third outside claim",
+                                       "import_id": "i3"}),
+        ("import.declared", "student", {"import_id": "i4", "tool_name": "ChatGPT",
+                                        "raw_text_ref": "r4", "size_chars": 80}),
+        ("claim.extracted", "system", {"claim_id": "kd4", "text": "Fourth outside claim",
+                                       "import_id": "i4"}),
+    ]
+    return rich_log(paras=paras, extra=extra)
+
+
 @functools.lru_cache(maxsize=None)
 def golden_built(session_id: str):
     return build_session(session_id)
@@ -99,11 +128,25 @@ def test_candidates_without_grounding_are_only_counted_and_never_listed():
     assert skipped == 2
 
 
+def claim_units_for(l1, paragraph_id):
+    sents = {s["id"]: s for s in l1["sentences"]}
+    return [u for u in l1["claims"]
+            if {sents[sid]["paragraph_id"] for sid in u["sentence_ids"]} == {paragraph_id}]
+
+
 def test_one_place_per_paragraph_never_repeats():
-    svc, sources = five_place_log()
-    res, _ = receipt_for()
+    svc, sources = two_candidate_log()
+    l1 = parts(svc, sources)["l1"]
+    res, _ = issue_receipt(svc, LOG, sources, stamp=FIXED_STAMP)
+    chosen = {q["paragraph_id"] for q in res.receipt["questions"]}
     pids = [p["paragraph_id"] for p in res.receipt["more_places"]]
+    # The fixture has two grounded candidates for p2 (chosen) and for p1 (not chosen).
+    assert len(claim_units_for(l1, "p2")) == 2
+    assert len(claim_units_for(l1, "p1")) == 2
+    assert "p2" in chosen and "p1" in pids
+    # At most one place per paragraph, and never one that already produced a question.
     assert len(pids) == len(set(pids))
+    assert not (set(pids) & chosen)
 
 
 # ---------------------------------------------------------------- compiled receipt
