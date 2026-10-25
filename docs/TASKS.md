@@ -20,7 +20,7 @@ Model hint: **S** = Sonnet worker is fine · **D** = DeepSeek worker is fine (we
 | T-004 | Spike S1 (widened): TipTap marks + input plugin + Python replay parity; write the go/no-go note | evaluation.md §1, event-log.md §4 | A; C (typed rules); I-M0 (S1 written) | T-001, T-002 | O+S | lead-opus-T004 | done |
 | T-005 | Spike S5: tamper-evident log, seal, whitelist, verify | event-log.md §6 | A; C (seal, verify) | T-001 | S | lead-opus-T005 | done |
 | T-006 | Spike S2: pick the PDF parser (Docling / GROBID / PyMuPDF) incl. one scanned PDF | reading-aid.md §3 | A | T-001 | S | lead-opus-T006 | done |
-| [T-007](tickets/T-007-preregistration.md) | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | | ready |
+| [T-007](tickets/T-007-preregistration.md) | Preregister S3 (≥ 40 pairs, labelled by someone other than the founder) and S4 | evaluation.md §1 | A | — | O | worker-T-007 | review |
 | T-008 | Golden set sources: choose real readings + an open-licence textbook (e.g. OpenStax), check licences, draft the D19 YAML format incl. `expected_links` | evaluation.md §2, §2a; D-035 | A; F (eval labels) | — | O | codex-lead-T008 | done |
 | [T-009](tickets/T-009-walkthrough.md) | Design the nursing walkthrough + blind question test | evaluation.md §5, receipt.md §8 | A | — | O | | ready |
 | [T-010](tickets/T-010-design-system.md) | /design-consultation → `DESIGN.md` (type, scale, spacing, focus ring, dark mode). Must finish before the receipt UI in M1 | design-review-v1.md 13A | A; G, H (tokens) | — | O | codex-lead-T010 | done |

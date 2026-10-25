@@ -1,0 +1,1 @@
+protocol_version,pair_id,split,family,source_id,source_version,sentence_id,claim_id,anchor_block_ids,pair_sha256,sentence_text,claim_text,anchor_text,proposition_id,proposition_text,label,evidence_block_id,unclear_reason,pair_label,annotator_role,annotator_id,annotation_date,revision,adjudicated_label,adjudicator_id,adjudication_date,notes
