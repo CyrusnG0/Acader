@@ -289,7 +289,21 @@ class ReceiptStore:
                 if aid in merged and merged[aid] != artifact:
                     raise ReceiptConflict(f"artifact {aid} is given twice with different bodies")
                 merged[aid] = artifact
-        for aid, artifact in merged.items():
+        self.store_artifacts_in_tx(log_id, merged)
+        return True
+
+    def store_artifacts_in_tx(self, log_id: str,
+                              artifacts: Mapping[str, Mapping]) -> int:
+        """Store compile artifacts inside the caller's transaction; return how many were new.
+
+        An identical existing row is skipped; a different row under the same key raises
+        ReceiptConflict. No commit here, so callers can commit the receipt and its outputs
+        together with the event that cites them.
+        """
+        if not isinstance(artifacts, Mapping):
+            raise ReceiptStoreError("artifacts must be an object")
+        inserted = 0
+        for aid, artifact in artifacts.items():
             row_data = artifact_row(aid, artifact)
             row = self.db.execute(
                 "SELECT task, prompt_hash, body, hash FROM receipt_artifacts "
@@ -301,7 +315,8 @@ class ReceiptStore:
             self.db.execute(
                 "INSERT INTO receipt_artifacts (log_id, artifact_id, task, prompt_hash, "
                 "body, hash) VALUES (?, ?, ?, ?, ?, ?)", (log_id, *row_data))
-        return True
+            inserted += 1
+        return inserted
 
     def store(self, log_id: str, **kwargs) -> bool:
         """`store_in_tx` in a transaction owned by this call."""

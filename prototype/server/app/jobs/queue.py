@@ -20,13 +20,18 @@ Design points T-020 and T-021 rely on:
   neither share one system bucket. Lowest priority is reserved for mapper jobs
   (:data:`PRIORITY_MAPPER`); the mapper itself is not implemented here.
 - **Retries.** A retryable failure returns the job to ``queued`` with the D23 schedule
-  1, 4, 16 minutes, then the last delay again. A non-retryable failure is terminal
-  (``failed``). The queue invents no attempt limit; T-021 owns the release cap.
+  1, 4, 16 minutes, then the last delay again. The cap counts *retryable failures only*
+  (``retry_failures``, default :data:`MAX_ATTEMPTS` = 5, D-054, founder decision
+  2026-10-25): after the fifth retryable failure, the job is terminal (``failed``), as is
+  every non-retryable failure. An optional ``on_failed`` hook runs inside the same
+  transaction for each job that becomes ``failed``, so an operator alert rolls back if it
+  cannot be written.
 - **Cancellation.** ``cancel_by_log`` is a one-statement update that can join a caller-owned
   transaction. It fences running jobs too, so a result produced after cancellation is
   rejected. T-021 uses this for ``record.withdrawn``.
 - **Restart recovery.** ``recover_expired`` (also called at the start of every claim) returns
-  expired ``running`` jobs to ``queued``.
+  expired ``running`` jobs to ``queued`` with ``run_after = now`` and no backoff. Lease
+  recovery does not count toward the retry cap (D-054).
 
 Connection and lock rules: the SQLite connection must be in autocommit mode
 (``isolation_level=None``, as ``EventStore`` creates it). When the queue shares a connection
@@ -55,6 +60,7 @@ STATES = ("queued", "running", "done", "failed", "cancelled")
 PRIORITY_NORMAL = 0
 PRIORITY_MAPPER = 100  # reserved: lowest priority for future mapper jobs (eng v2 D6)
 RETRY_DELAYS_MINUTES = (1, 4, 16)
+MAX_ATTEMPTS = 5  # D-054: retryable failures stop after five; lease recovery is not a try
 
 _DDL = """
 CREATE TABLE IF NOT EXISTS jobs (
@@ -76,7 +82,8 @@ CREATE TABLE IF NOT EXISTS jobs (
   error_kind TEXT,
   created_at TEXT NOT NULL,
   updated_at TEXT NOT NULL,
-  finished_at TEXT
+  finished_at TEXT,
+  retry_failures INTEGER NOT NULL DEFAULT 0
 );
 CREATE INDEX IF NOT EXISTS jobs_state_run_after ON jobs (state, run_after);
 CREATE INDEX IF NOT EXISTS jobs_log_state ON jobs (log_id, state);
@@ -91,7 +98,7 @@ CREATE TABLE IF NOT EXISTS job_submissions (
 _COLUMN_NAMES = ("id", "kind", "idempotency_key", "log_id", "submission_id", "priority",
                  "backend", "payload", "state", "attempts", "run_after", "lease_token",
                  "lease_until", "worker_id", "result", "error_kind", "created_at",
-                 "updated_at", "finished_at")
+                 "updated_at", "finished_at", "retry_failures")
 _COLUMNS = ", ".join(_COLUMN_NAMES)
 _JOB_COLUMNS = ", ".join(f"j.{name}" for name in _COLUMN_NAMES)
 
@@ -153,6 +160,7 @@ class Job:
     created_at: str
     updated_at: str
     finished_at: str | None
+    retry_failures: int
 
 
 def _default_clock() -> datetime:
@@ -166,7 +174,8 @@ def _job(row) -> Job:
         payload=json.loads(row[7]), state=row[8], attempts=row[9], run_after=row[10],
         lease_token=row[11], lease_until=row[12], worker_id=row[13],
         result=json.loads(row[14]) if row[14] is not None else None,
-        error_kind=row[15], created_at=row[16], updated_at=row[17], finished_at=row[18])
+        error_kind=row[15], created_at=row[16], updated_at=row[17], finished_at=row[18],
+        retry_failures=row[19])
 
 
 def _payload_json(payload: dict) -> str:
@@ -178,13 +187,18 @@ class JobQueue:
 
     def __init__(self, db: sqlite3.Connection, *, clock: Callable[[], datetime] | None = None,
                  lock=None, lease_seconds: int = 300, max_per_backend: int = 4,
-                 retry_delays_minutes: tuple[int, ...] = RETRY_DELAYS_MINUTES):
+                 retry_delays_minutes: tuple[int, ...] = RETRY_DELAYS_MINUTES,
+                 max_attempts: int = MAX_ATTEMPTS,
+                 on_failed: Callable[[sqlite3.Connection, Job], None] | None = None):
         if not isinstance(lease_seconds, int) or isinstance(lease_seconds, bool) \
                 or lease_seconds <= 0:
             raise ValueError("lease_seconds must be a positive integer")
         if not isinstance(max_per_backend, int) or isinstance(max_per_backend, bool) \
                 or max_per_backend <= 0:
             raise ValueError("max_per_backend must be a positive integer")
+        if not isinstance(max_attempts, int) or isinstance(max_attempts, bool) \
+                or max_attempts <= 0:
+            raise ValueError("max_attempts must be a positive integer")
         delays = tuple(retry_delays_minutes)
         if not delays or not all(isinstance(d, int) and not isinstance(d, bool) and d >= 0
                                  for d in delays):
@@ -194,9 +208,16 @@ class JobQueue:
         self.lease_seconds = lease_seconds
         self.max_per_backend = max_per_backend
         self.retry_delays_minutes = delays
+        self.max_attempts = max_attempts
+        self.on_failed = on_failed
         # Share EventService._lock when both services use one connection (T-020/T-021).
         self._lock = lock if lock is not None else threading.RLock()
         self.db.executescript(_DDL)
+        # Databases created before D-054 gain the counter in place, outside any transaction.
+        columns = {row[1] for row in self.db.execute("PRAGMA table_info(jobs)")}
+        if "retry_failures" not in columns:
+            self.db.execute("ALTER TABLE jobs ADD COLUMN "
+                            "retry_failures INTEGER NOT NULL DEFAULT 0")
 
     @classmethod
     def open(cls, path: str, **kwargs) -> "JobQueue":
@@ -373,7 +394,12 @@ class JobQueue:
 
     def fail(self, job: Job, *, error_kind: str, retryable: bool,
              conn: sqlite3.Connection | None = None) -> Job:
-        """Record a failure. Retryable jobs wait on the D23 schedule; others are terminal.
+        """Record a failure. Retryable jobs wait on the D23 schedule until D-054's cap.
+
+        The cap counts retryable failures only (``retry_failures``), not claims: lease
+        expiry does not use up a try. At ``max_attempts`` a retryable failure is terminal,
+        like any non-retryable failure. ``on_failed`` runs inside the same transaction for
+        every job that becomes ``failed``.
 
         ``error_kind`` must be a short internal label (for example an LLM error class). Never
         pass prompt text, student text or provider messages.
@@ -386,27 +412,33 @@ class JobQueue:
         now_ts = ts_seconds(now)
         with self._write(conn) as db:
             row = db.execute(
-                "SELECT attempts, state, lease_token FROM jobs WHERE id = ?",
+                "SELECT retry_failures, state, lease_token FROM jobs WHERE id = ?",
                 (job.id,)).fetchone()
             if row is None or row[1] != "running" or row[2] != job.lease_token:
                 raise LeaseLost(f"job {job.id} is not held by this worker")
-            attempts = row[0]
+            retry_failures = row[0]
             if retryable:
+                retry_failures += 1
+            if retryable and retry_failures < self.max_attempts:
                 delay = self.retry_delays_minutes[
-                    min(attempts - 1, len(self.retry_delays_minutes) - 1)]
+                    min(retry_failures - 1, len(self.retry_delays_minutes) - 1)]
                 run_after = ts_seconds(now + timedelta(minutes=delay))
                 db.execute(
-                    "UPDATE jobs SET state = 'queued', run_after = ?, "
+                    "UPDATE jobs SET state = 'queued', run_after = ?, retry_failures = ?, "
                     "lease_token = NULL, lease_until = NULL, worker_id = NULL, "
                     "error_kind = ?, updated_at = ? WHERE id = ? AND lease_token = ?",
-                    (run_after, error_kind, now_ts, job.id, job.lease_token))
+                    (run_after, retry_failures, error_kind, now_ts, job.id, job.lease_token))
             else:
                 db.execute(
-                    "UPDATE jobs SET state = 'failed', lease_token = NULL, lease_until = NULL, "
-                    "worker_id = NULL, error_kind = ?, updated_at = ?, finished_at = ? "
+                    "UPDATE jobs SET state = 'failed', retry_failures = ?, "
+                    "lease_token = NULL, lease_until = NULL, worker_id = NULL, "
+                    "error_kind = ?, updated_at = ?, finished_at = ? "
                     "WHERE id = ? AND lease_token = ?",
-                    (error_kind, now_ts, now_ts, job.id, job.lease_token))
-            return self._row(db, job.id)
+                    (retry_failures, error_kind, now_ts, now_ts, job.id, job.lease_token))
+            failed_job = self._row(db, job.id)
+            if failed_job.state == "failed" and self.on_failed is not None:
+                self.on_failed(db, failed_job)
+            return failed_job
 
     # ---- cancellation ---------------------------------------------------------------------
 
@@ -456,6 +488,7 @@ class JobQueue:
     # ---- recovery and observability -------------------------------------------------------
 
     def _recover_expired_in_tx(self, db: sqlite3.Connection, now_ts: str) -> int:
+        # D-054: lease expiry is not a try. Requeue with no backoff; never fail the job.
         cur = db.execute(
             "UPDATE jobs SET state = 'queued', run_after = ?, lease_token = NULL, "
             "lease_until = NULL, worker_id = NULL, updated_at = ? "
@@ -464,7 +497,11 @@ class JobQueue:
         return cur.rowcount
 
     def recover_expired(self, conn: sqlite3.Connection | None = None) -> int:
-        """Return every expired running job to ``queued``. Call once at boot and per claim."""
+        """Return every expired running job to ``queued`` with no backoff.
+
+        Call once at boot and per claim. D-054: this never fails a job and never counts
+        toward the retry cap.
+        """
         now_ts = ts_seconds(self._now())
         with self._write(conn) as db:
             return self._recover_expired_in_tx(db, now_ts)

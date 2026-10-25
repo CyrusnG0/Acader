@@ -10,8 +10,8 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from app.events_service import EventService
-from app.jobs import (PRIORITY_MAPPER, PRIORITY_NORMAL, IdempotencyConflict, JobQueue,
-                      JobRunner, LeaseLost, PermanentJobError, RetryableJobError)
+from app.jobs import (MAX_ATTEMPTS, PRIORITY_MAPPER, PRIORITY_NORMAL, IdempotencyConflict,
+                      JobQueue, JobRunner, LeaseLost, PermanentJobError, RetryableJobError)
 from engine.events import ts_seconds
 
 T0 = datetime(2026, 11, 2, 14, 0, 0, tzinfo=timezone.utc)
@@ -375,10 +375,236 @@ def test_retry_schedule_is_exactly_one_four_sixteen_then_sixteen(queue, clock):
         assert queue.claim(worker_id="w1") is None  # not due yet
         clock.advance(minutes=delay)
 
+
+def test_retry_stops_after_five_attempts(queue, clock):
+    assert MAX_ATTEMPTS == 5
+    queue.enqueue("compile", idempotency_key="k1", log_id="log-1")
+    for attempt, delay in enumerate((1, 4, 16, 16), start=1):
+        job = queue.claim(worker_id="w1")
+        assert job.attempts == attempt
+        failed = queue.fail(job, error_kind="timeout", retryable=True)
+        assert failed.state == "queued"
+        assert failed.run_after == ts_seconds(clock.t + timedelta(minutes=delay))
+        clock.advance(minutes=delay)
+
     fifth = queue.claim(worker_id="w1")
     assert fifth.attempts == 5
     failed = queue.fail(fifth, error_kind="timeout", retryable=True)
-    assert failed.run_after == ts_seconds(clock.t + timedelta(minutes=16))
+    assert failed.state == "failed"
+    assert failed.error_kind == "timeout"
+    assert failed.finished_at == ts_seconds(clock.t)
+    assert failed.lease_token is None
+    clock.advance(days=30)
+    assert queue.claim(worker_id="w1") is None
+
+
+def test_custom_attempt_limit(db, clock):
+    queue = JobQueue(db, clock=clock, max_attempts=2)
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    first = queue.claim(worker_id="w1")
+    assert queue.fail(first, error_kind="timeout", retryable=True).state == "queued"
+    clock.advance(minutes=1)
+    second = queue.claim(worker_id="w1")
+    assert second.attempts == 2
+    failed = queue.fail(second, error_kind="timeout", retryable=True)
+    assert failed.state == "failed"
+    assert failed.finished_at is not None
+
+
+@pytest.mark.parametrize("value", [0, -1, True, "5", None, 1.5])
+def test_invalid_attempt_limit_is_refused(db, clock, value):
+    with pytest.raises(ValueError):
+        JobQueue(db, clock=clock, max_attempts=value)
+
+
+def _exhaust(queue, clock):
+    """Drive one job through all five attempts; the fifth failure is terminal."""
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        job = queue.claim(worker_id="w1")
+        assert job.attempts == attempt
+        failed = queue.fail(job, error_kind="timeout", retryable=True)
+        if attempt < MAX_ATTEMPTS:
+            assert failed.state == "queued"
+            clock.advance(minutes=16)
+    return failed
+
+
+def test_on_failed_called_once_for_an_exhausted_job(db, clock):
+    seen = []
+    queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    failed = _exhaust(queue, clock)
+    assert len(seen) == 1
+    assert seen[0].id == failed.id
+    assert seen[0].state == "failed"
+    assert seen[0].attempts == MAX_ATTEMPTS
+
+
+def test_on_failed_called_once_for_a_non_retryable_failure(db, clock):
+    seen = []
+    queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    job = queue.claim(worker_id="w1")
+    queue.fail(job, error_kind="auth", retryable=False)
+    assert len(seen) == 1
+    assert seen[0].state == "failed"
+    assert seen[0].error_kind == "auth"
+
+
+def test_on_failed_not_called_for_retry_complete_or_cancel(db, clock):
+    seen = []
+    queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
+    queue.enqueue("compile", idempotency_key="retry", log_id="L1")
+    retried = queue.claim(worker_id="w1")
+    queue.fail(retried, error_kind="timeout", retryable=True)
+    assert seen == []
+
+    queue.enqueue("compile", idempotency_key="done", log_id="L2")
+    done = queue.claim(worker_id="w1")
+    queue.complete(done, {"ok": True})
+    assert seen == []
+
+    queue.enqueue("compile", idempotency_key="cancel", log_id="L3")
+    cancelled = queue.claim(worker_id="w1")
+    queue.cancel(cancelled)
+    queue.cancel_by_log("L1")
+    assert seen == []
+
+
+def test_on_failed_runs_inside_the_write_transaction(db, clock):
+    seen = {}
+
+    def hook(conn, job):
+        seen["in_transaction"] = conn.in_transaction
+        seen["job"] = job
+
+    queue = JobQueue(db, clock=clock, on_failed=hook)
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    job = queue.claim(worker_id="w1")
+    queue.fail(job, error_kind="auth", retryable=False)
+    assert seen["in_transaction"] is True
+    assert seen["job"].state == "failed"
+
+
+def test_on_failed_exception_rolls_back_the_failure(db, clock):
+    def hook(conn, job):
+        raise RuntimeError("operator alert not written")
+
+    queue = JobQueue(db, clock=clock, on_failed=hook)
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    job = queue.claim(worker_id="w1")
+    with pytest.raises(RuntimeError):
+        queue.fail(job, error_kind="auth", retryable=False)
+    stored = queue.get(job.id)
+    assert stored.state == "running"
+    assert stored.lease_token == job.lease_token
+    assert stored.finished_at is None
+
+
+def test_lease_recovery_does_not_count_toward_the_retry_cap(queue, clock):
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    running = queue.claim(worker_id="w1")
+    for _ in range(3):
+        clock.advance(seconds=301)  # expire the lease; the next claim recovers it
+        running = queue.claim(worker_id="w1")
+        assert running.id == 1 and running.retry_failures == 0
+    assert running.attempts == 4  # claims counted, retryable failures did not
+
+    for retry, delay in enumerate((1, 4, 16, 16), start=1):
+        failed = queue.fail(running, error_kind="timeout", retryable=True)
+        assert failed.state == "queued"
+        assert failed.retry_failures == retry
+        assert failed.run_after == ts_seconds(clock.t + timedelta(minutes=delay))
+        clock.advance(minutes=delay)
+        running = queue.claim(worker_id="w1")
+
+    failed = queue.fail(running, error_kind="timeout", retryable=True)
+    assert failed.state == "failed"
+    assert failed.attempts == 8
+    assert failed.retry_failures == MAX_ATTEMPTS
+    assert failed.finished_at is not None
+    clock.advance(days=30)
+    assert queue.claim(worker_id="w1") is None
+
+
+def test_lease_expiry_at_four_retry_failures_requeues_not_fails(db, clock):
+    seen = []
+    queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    for delay in (1, 4, 16, 16):
+        job = queue.claim(worker_id="w1")
+        failed = queue.fail(job, error_kind="timeout", retryable=True)
+        clock.advance(minutes=delay)
+    assert failed.state == "queued" and failed.retry_failures == 4
+
+    running = queue.claim(worker_id="w1")
+    assert running.attempts == 5 and running.retry_failures == 4
+    clock.advance(seconds=301)
+    assert queue.recover_expired() == 1
+    stored = queue.get(running.id)
+    assert stored.state == "queued"
+    assert stored.retry_failures == 4
+    assert stored.run_after == ts_seconds(clock.t)
+    assert seen == []
+
+
+def test_expired_lease_under_the_limit_is_requeued_without_the_hook(db, clock):
+    seen = []
+    queue = JobQueue(db, clock=clock, on_failed=lambda conn, job: seen.append(job))
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    queue.claim(worker_id="w1")
+    clock.advance(seconds=301)
+    assert queue.recover_expired() == 1
+    assert queue.get(1).state == "queued"
+    assert seen == []
+
+
+OLD_JOBS_DDL = """
+CREATE TABLE jobs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kind TEXT NOT NULL,
+  idempotency_key TEXT NOT NULL UNIQUE,
+  log_id TEXT,
+  submission_id TEXT,
+  priority INTEGER NOT NULL,
+  backend TEXT,
+  payload TEXT NOT NULL,
+  state TEXT NOT NULL,
+  attempts INTEGER NOT NULL DEFAULT 0,
+  run_after TEXT NOT NULL,
+  lease_token TEXT,
+  lease_until TEXT,
+  worker_id TEXT,
+  result TEXT,
+  error_kind TEXT,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  finished_at TEXT
+);
+"""
+
+
+def test_existing_database_gains_the_retry_failures_column(db, clock):
+    db.executescript(OLD_JOBS_DDL)
+    now_ts = ts_seconds(T0)
+    db.execute(
+        "INSERT INTO jobs (kind, idempotency_key, priority, payload, state, attempts, "
+        "run_after, created_at, updated_at) "
+        "VALUES ('compile', 'old', 0, '{}', 'queued', 0, ?, ?, ?)",
+        (now_ts, now_ts, now_ts))
+
+    queue = JobQueue(db, clock=clock)
+    columns = {row[1] for row in db.execute("PRAGMA table_info(jobs)")}
+    assert "retry_failures" in columns
+    old = queue.get(1)
+    assert old.retry_failures == 0
+
+    new = queue.enqueue("compile", idempotency_key="new", log_id="L1")
+    claimed = queue.claim(worker_id="w1")
+    assert claimed.id == old.id  # the migrated row is claimable
+    failed = queue.fail(claimed, error_kind="timeout", retryable=True)
+    assert failed.state == "queued" and failed.retry_failures == 1
+    assert queue.claim(worker_id="w1").id == new.id
 
 
 def test_non_retryable_failure_is_terminal(queue, clock):
@@ -541,6 +767,26 @@ def test_runner_retries_a_retryable_error(queue, clock):
     assert job.error_kind == "timeout"
     assert job.run_after == ts_seconds(clock.t + timedelta(minutes=1))
     assert job.attempts == 1
+
+
+def test_runner_stops_after_five_retryable_failures(queue, clock):
+    def handler(job):
+        raise RetryableJobError("llm_unavailable")
+
+    queue.enqueue("compile", idempotency_key="k1", log_id="L1")
+    runner = JobRunner(queue, {"compile": handler})
+    for _ in range(MAX_ATTEMPTS - 1):
+        runner.run_once()
+        assert queue.get(1).state == "queued"
+        clock.advance(minutes=17)
+
+    runner.run_once()
+    job = queue.get(1)
+    assert job.state == "failed"
+    assert job.attempts == MAX_ATTEMPTS
+    assert job.error_kind == "llm_unavailable"
+    assert job.finished_at is not None
+    assert runner.run_once() is None
 
 
 def test_runner_stops_on_a_permanent_error(queue):
